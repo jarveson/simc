@@ -126,17 +126,37 @@ RACE_INFO = [
 ]
 
 CLASS_INFO = [
-  { 'id':  1, 'bit':  0, 'name': 'Warrior',      'skill': 840,  'family': 4   },
-  { 'id':  2, 'bit':  1, 'name': 'Paladin',      'skill': 800,  'family': 10  },
-  { 'id':  3, 'bit':  2, 'name': 'Hunter',       'skill': 795,  'family': 9   },
-  { 'id':  4, 'bit':  3, 'name': 'Rogue',        'skill': 921,  'family': 8   },
-  { 'id':  5, 'bit':  4, 'name': 'Priest',       'skill': 804,  'family': 6   },
-  { 'id':  6, 'bit':  5, 'name': 'Death Knight', 'skill': 796,  'family': 15  },
-  { 'id':  7, 'bit':  6, 'name': 'Shaman',       'skill': 924,  'family': 11  },
-  { 'id':  8, 'bit':  7, 'name': 'Mage',         'skill': 904,  'family': 3   },
-  { 'id':  9, 'bit':  8, 'name': 'Warlock',      'skill': 849,  'family': 5   },
+  { 'id':  1, 'bit':  0, 'name': 'Warrior',      'skill': 256,  'family': 4   },
+  { 'id':  1, 'bit':  0, 'name': 'Warrior',      'skill': 26,  'family': 4   },
+  { 'id':  1, 'bit':  0, 'name': 'Warrior',      'skill': 257,  'family': 4   },
+  { 'id':  2, 'bit':  1, 'name': 'Paladin',      'skill': 184,  'family': 10  },
+  { 'id':  2, 'bit':  1, 'name': 'Paladin',      'skill': 56,  'family': 10  },
+  { 'id':  2, 'bit':  1, 'name': 'Paladin',      'skill': 267,  'family': 10  },
+  { 'id':  3, 'bit':  2, 'name': 'Hunter',       'skill': 163,  'family': 9   },
+  { 'id':  3, 'bit':  2, 'name': 'Hunter',       'skill': 50,  'family': 9   },
+  { 'id':  3, 'bit':  2, 'name': 'Hunter',       'skill': 51,  'family': 9   },
+  { 'id':  4, 'bit':  3, 'name': 'Rogue',        'skill': 39,  'family': 8   },
+  { 'id':  4, 'bit':  3, 'name': 'Rogue',        'skill': 38,  'family': 8   },
+  { 'id':  4, 'bit':  3, 'name': 'Rogue',        'skill': 253,  'family': 8   },
+  { 'id':  5, 'bit':  4, 'name': 'Priest',       'skill': 613,  'family': 6   },
+  { 'id':  5, 'bit':  4, 'name': 'Priest',       'skill': 78,  'family': 6   },
+  { 'id':  5, 'bit':  4, 'name': 'Priest',       'skill': 594,  'family': 6   },
+  { 'id':  6, 'bit':  5, 'name': 'Death Knight', 'skill': 772,  'family': 15  },
+  { 'id':  6, 'bit':  5, 'name': 'Death Knight', 'skill': 771,  'family': 15  },
+  { 'id':  6, 'bit':  5, 'name': 'Death Knight', 'skill': 770,  'family': 15  },
+  { 'id':  7, 'bit':  6, 'name': 'Shaman',       'skill': 373,  'family': 11  },
+  { 'id':  7, 'bit':  6, 'name': 'Shaman',       'skill': 375,  'family': 11  },
+  { 'id':  7, 'bit':  6, 'name': 'Shaman',       'skill': 374,  'family': 11  },
+  { 'id':  8, 'bit':  7, 'name': 'Mage',         'skill': 6,  'family': 3   },
+  { 'id':  8, 'bit':  7, 'name': 'Mage',         'skill': 8,  'family': 3   },
+  { 'id':  8, 'bit':  7, 'name': 'Mage',         'skill': 237,  'family': 3   },
+  { 'id':  9, 'bit':  8, 'name': 'Warlock',      'skill': 354,  'family': 5   },
+  { 'id':  9, 'bit':  8, 'name': 'Warlock',      'skill': 593,  'family': 5   },
+  { 'id':  9, 'bit':  8, 'name': 'Warlock',      'skill': 355,  'family': 5   },
   { 'id': 10, 'bit':  9, 'name': 'Monk',         'skill': 829,  'family': 53  },
-  { 'id': 11, 'bit': 10, 'name': 'Druid',        'skill': 798,  'family': 7   },
+  { 'id': 11, 'bit': 10, 'name': 'Druid',        'skill': 574,  'family': 7   },
+  { 'id': 11, 'bit': 10, 'name': 'Druid',        'skill': 134,  'family': 7   },
+  { 'id': 11, 'bit': 10, 'name': 'Druid',        'skill': 573,  'family': 7   },
   { 'id': 12, 'bit': 11, 'name': 'Demon Hunter', 'skill': 1848, 'family': 107 },
   { 'id': 13, 'bit': 12, 'name': 'Evoker',       'skill': 2810, 'family': 224 }
 ]
@@ -194,6 +214,7 @@ SPELL_NAME_BLACKLIST = [
   re.compile("^Transcendence"),
   re.compile("^Contract:"),
   re.compile("^Apply Equipment$"),
+  re.compile("^Curse of Idiocy$")
 ]
 
 SPELL_LABEL_BLACKLIST = [ ]

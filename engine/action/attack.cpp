@@ -479,6 +479,10 @@ double melee_attack_t::glance_chance( int delta_level ) const
   {
     glance += 0.10 + 0.10 * delta_level;
   }
+  else
+  {
+    glance = ( delta_level + 1 ) * 0.06;
+  }
 
   return glance;
 }

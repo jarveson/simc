@@ -23,7 +23,8 @@
 
 util::span<const spelllabel_data_t> spelllabel_data_t::data( bool ptr )
 {
-  return SC_DBC_GET_DATA( __spelllabel_data, __ptr_spelllabel_data, ptr );
+  //return SC_DBC_GET_DATA( __spelllabel_data, __ptr_spelllabel_data, ptr );
+  return {};
 }
 
 // ==========================================================================

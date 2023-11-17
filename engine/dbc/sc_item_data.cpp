@@ -548,6 +548,12 @@ int item_database::scaled_stat( const item_t& item, const dbc_t& dbc, size_t idx
     }
   }
 
+  auto bonus_amount = []( const dbc_item_data_t& item, size_t idx ) {
+    if ( idx < item._dbc_stats_count )
+      return item._dbc_stats[ idx ].bonus_amount;
+    return int16_t(0);
+  };
+
   // Precise stat scaling formula for ilevel increase, stats should be
   // spot on.
   if ( item.parsed.data.stat_alloc[ idx ] > 0 /* && orig_budget > 0 */ && item_budget > 0 )
@@ -578,7 +584,7 @@ int item_database::scaled_stat( const item_t& item, const dbc_t& dbc, size_t idx
   // TODO(?): Should we warn the user that we are using an approximation of
   // the upgraded stats, and that certain stats may be off by one?
   else
-    return static_cast<int>( floor( item.parsed.stat_val[ idx ] *
+    return static_cast<int>( floor( ( item.parsed.stat_val[ idx ] + bonus_amount(item.parsed.data, idx)) *
                                     approx_scale_coefficient( item.parsed.data.level, new_ilevel ) ) );
 }
 

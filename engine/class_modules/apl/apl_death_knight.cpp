@@ -8,86 +8,27 @@ namespace death_knight_apl {
 
 std::string potion( const player_t* p )
 {
-  std::string frost_potion = ( p->true_level >= 61 ) ? "elemental_potion_of_ultimate_power_3" : "potion_of_spectral_strength";
-
-  std::string unholy_potion = ( p->true_level >= 61 ) ? "elemental_potion_of_ultimate_power_3" : "potion_of_spectral_strength";
-
-  std::string blood_potion = ( p->true_level >= 61 ) ? "elemental_potion_of_ultimate_power_3" : "potion_of_spectral_strength";
-
-  switch ( p->specialization() )
-  {
-    case DEATH_KNIGHT_BLOOD:
-      return blood_potion;
-    case DEATH_KNIGHT_FROST:
-      return frost_potion;
-    default:
-      return unholy_potion;
-  }
+  return "disabled";
 }
 
 std::string flask( const player_t* p )
 {
-  std::string flask_name = ( p->true_level >= 61 ) ? "iced_phial_of_corrupting_rage_3" : "spectral_flask_of_power";
-
-  // All specs use a strength flask as default
-  return flask_name;
+  return "disabled";
 }
 
 std::string food( const player_t* p )
 {
-  std::string frost_food;
-  std::string unholy_food;
-  std::string blood_food;
-
-  if ( p->true_level >= 61 )
-  {
-    frost_food  = "sizzling_seafood_medley";
-    unholy_food = "sizzling_seafood_medley";
-    blood_food  = "great_cerulean_sea";
-  }
-  else
-  {
-    frost_food  = "feast_of_gluttonous_hedonism";
-    unholy_food = "feast_of_gluttonous_hedonism";
-    blood_food  = "feast_of_gluttonous_hedonism";
-  }
-
-  switch ( p->specialization() )
-  {
-    case DEATH_KNIGHT_BLOOD:
-      return blood_food;
-    case DEATH_KNIGHT_FROST:
-      return frost_food;
-
-    default:
-      return unholy_food;
-  }
+  return "disabled";
 }
 
 std::string rune( const player_t* p )
 {
-  return ( p->true_level >= 61 ) ? "draconic" : "veiled";
+  return "disabled";
 }
 
 std::string temporary_enchant( const player_t* p )
 {
-  std::string frost_temporary_enchant =
-      ( p->true_level >= 61 ) ? "main_hand:buzzing_rune_3/off_hand:buzzing_rune_3" : "main_hand:shaded_sharpening_stone/off_hand:shaded_sharpening_stone";
-
-  std::string unholy_temporary_enchant = ( p->true_level >= 61 ) ? "main_hand:howling_rune_3" : "main_hand:shaded_sharpening_stone";
-
-  std::string blood_temporary_enchant = ( p->true_level >= 60 ) ? "main_hand:howling_rune_3" : "disabled";
-
-  switch ( p->specialization() )
-  {
-    case DEATH_KNIGHT_BLOOD:
-      return blood_temporary_enchant;
-    case DEATH_KNIGHT_FROST:
-      return frost_temporary_enchant;
-
-    default:
-      return unholy_temporary_enchant;
-  }
+  return "disabled";
 }
 
 //blood_apl_start
@@ -247,7 +188,7 @@ void frost( player_t* p )
   breath->add_action( "frostscythe,if=variable.frostscythe_priority&(buff.killing_machine.react|runic_power>45)" );
   breath->add_action( "obliterate,target_if=max:(debuff.razorice.stack+1)%(debuff.razorice.remains+1)*death_knight.runeforge.razorice,if=runic_power.deficit>40|buff.pillar_of_frost.up" );
   breath->add_action( "remorseless_winter,if=runic_power<36&rune.time_to_2>runic_power%18" );
-  breath->add_action( "death_and_decay,if=variable.st_planning&talent.unholy_ground&!death_and_decay.ticking&runic_power.deficit>=10|runic_power<36&rune.time_to_2>runic_power%18" );
+  breath->add_action( "death_and_decay,if=talent.unholy_ground&!death_and_decay.ticking&runic_power.deficit>=10|runic_power<36&rune.time_to_2>runic_power%18" );
   breath->add_action( "howling_blast,if=runic_power<36&rune.time_to_2>runic_power%18" );
   breath->add_action( "obliterate,target_if=max:(debuff.razorice.stack+1)%(debuff.razorice.remains+1)*death_knight.runeforge.razorice,if=runic_power.deficit>25" );
   breath->add_action( "howling_blast,if=buff.rime.react" );

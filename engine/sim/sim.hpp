@@ -220,11 +220,12 @@ struct sim_t : private sc_thread_t
     int windfury_totem;
 
     // Debuff overrides
-    int chaos_brand;
-    int mystic_touch;
-    int hunters_mark;
-    int mortal_wounds;
+    int mangle;
     int bleeding;
+
+    int mystic_touch;
+    int mortal_wounds;
+    int chaos_brand;
 
     // Misc stuff needs resolving
     int    bloodlust;

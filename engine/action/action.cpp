@@ -1008,7 +1008,7 @@ bool action_t::verify_actor_level() const
 
 bool action_t::verify_actor_spec() const
 {
-  std::vector<specialization_e> spec_list;
+  /* std::vector<specialization_e> spec_list;
   specialization_e _s = player->specialization();
   if ( data().id() && player->dbc->ability_specialization( data().id(), spec_list ) &&
        range::find( spec_list, _s ) == spec_list.end() )
@@ -1018,7 +1018,7 @@ bool action_t::verify_actor_spec() const
     sim->errorf( "Player %s attempting to use action %s without the required spec.\n", player->name(), name() );
 
     return false;
-  }
+  }*/
 
   return true;
 }

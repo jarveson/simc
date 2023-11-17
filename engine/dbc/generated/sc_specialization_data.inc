@@ -44,4 +44,3 @@ enum specialization_e {
   EVOKER_PRESERVATION    = 1468,
   EVOKER_AUGMENTATION    = 1473,
 };
-

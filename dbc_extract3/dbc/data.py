@@ -697,8 +697,8 @@ def initialize_data_model(options):
         if options.build >= dbc.WowVersion(8, 2, 0, 30080):
             SpellName.link('azerite_essence', AzeriteEssencePower)
 
-    if 'SpellEffect' in dir(this_module) and options.build < 25600:
-        SpellEffect.link('scaling', SpellEffectScaling)
+    #if 'SpellEffect' in dir(this_module) and options.build < 25600:
+    #    SpellEffect.link('scaling', SpellEffectScaling)
 
     if 'SpellItemEnchantment' in dir(this_module):
         SpellItemEnchantment.link('spells', SpellName)

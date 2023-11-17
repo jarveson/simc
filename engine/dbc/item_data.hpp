@@ -19,6 +19,7 @@ struct dbc_item_data_t {
     int16_t type_e; // item_mod_type
     int     alloc;
     float   socket_mul;
+    int16_t bonus_amount;
   };
 
   const char* name;

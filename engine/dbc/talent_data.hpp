@@ -5,6 +5,7 @@
 #ifndef SC_TALENT_DATA_HPP
 #define SC_TALENT_DATA_HPP
 
+#include "client_data.hpp"
 #include "sc_enums.hpp"
 #include "specialization.hpp"
 #include "util/span.hpp"
@@ -23,6 +24,11 @@ struct talent_data_t
   unsigned     _row;         // Talent row
   unsigned     _spell_id;    // Talent spell
   unsigned     _replace_id;  // Talent replaces the following spell id
+
+  unsigned _tab_id;
+  unsigned _spell_ranks[ 9 ];
+  unsigned _prereq_talent[ 3 ];
+  unsigned _prereq_rank[ 3 ];
 
   // Pointers for runtime linking
   const spell_data_t* spell1;
@@ -83,5 +89,23 @@ struct talent_data_nil_t : public talent_data_t
 
 inline const talent_data_t& talent_data_t::nil()
 { return talent_data_nil_t::singleton; }
+
+struct talent_tab_data_t
+{
+  unsigned id;
+  const char* name;
+  unsigned order;
+  unsigned class_mask;
+  unsigned pet_talent_mask;
+
+  static util::span<const talent_tab_data_t> data( bool ptr = false );
+
+  static const talent_tab_data_t* find( unsigned id, bool ptr = false );
+
+  static const talent_tab_data_t& nil()
+  {
+    return dbc::nil<talent_tab_data_t>;
+  }
+};
 
 #endif // SC_TALENT_DATA_HPP

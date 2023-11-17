@@ -10,6 +10,7 @@
 
 #include "data_definitions.hh"
 #include "data_enums.hh"
+#include "dbc/ap_per_stat.hpp"
 #include "dbc/azerite.hpp"
 #include "dbc/expected_stat.hpp"
 #include "dbc/embellishment_data.hpp"
@@ -22,6 +23,7 @@
 #include "dbc/item_naming.hpp"
 #include "dbc/item_scaling.hpp"
 #include "dbc/item_weapon.hpp"
+#include "dbc/meta_gem_cond.hpp"
 #include "dbc/racial_spells.hpp"
 #include "dbc/rand_prop_points.hpp"
 #include "dbc/real_ppm_data.hpp"
@@ -330,11 +332,8 @@ public:
   { return dbc_item_data_t::data( ptr ); }
 
   // Gametables removed in Legion
-  double melee_crit_base( player_e, unsigned ) const
-  { return 0.05; }
-
-  double spell_crit_base( player_e, unsigned ) const
-  { return 0.05; }
+  double melee_crit_base( player_e, unsigned ) const;
+  double spell_crit_base( player_e, unsigned ) const;
 
   // Game data table access
   double combat_rating_multiplier( unsigned item_level, combat_rating_multiplier_type type ) const;
@@ -368,11 +367,15 @@ public:
   double get_armor_constant_mod( difficulty_e diff ) const;
   double npc_armor_value( unsigned level ) const;
 
+  double ranged_ap_per_agi( player_e t ) const;
+  double ap_per_agi( player_e t ) const;
+  double ap_per_str( player_e t ) const;
+
   double combat_rating( unsigned combat_rating_id, unsigned level ) const;
 
   int resolve_item_scaling( unsigned level ) const;
   double resolve_level_scaling( unsigned level ) const;
-  double avoid_per_str_agi_by_level( unsigned level ) const;
+  double avoid_per_agi_by_class( player_e t ) const;
 
   unsigned real_ppm_scale( unsigned ) const;
   double real_ppm_modifier( unsigned spell_id, player_t* player, unsigned item_level = 0 ) const;
@@ -409,6 +412,9 @@ public:
 
   const item_name_description_t& item_description( unsigned description_id ) const
   { return item_name_description_t::find( description_id, ptr ); }
+
+  const meta_gem_cond_t&     meta_gem_cond( unsigned gem_id ) const
+  { return meta_gem_cond_t::find( gem_id, ptr ); }
 
   const gem_property_data_t&     gem_property( unsigned gem_id ) const
   { return gem_property_data_t::find( gem_id, ptr ); }

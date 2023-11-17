@@ -9,6 +9,7 @@ include(../source_files/cmake_engine.txt)
 add_library(engine ${source_files})
 target_include_directories(engine PUBLIC . ./include ./lib)
 sc_common_compiler_options(engine)
+add_definitions(-D_SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING)
 
 # Make cmake selections visible to C++ code
 if(SC_NO_THREADING)

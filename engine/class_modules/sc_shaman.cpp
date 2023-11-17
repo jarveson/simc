@@ -9725,10 +9725,6 @@ void shaman_t::init_base_stats()
 
   player_t::init_base_stats();
 
-  base.attack_power_per_strength = 0.0;
-  base.attack_power_per_agility  = 1.0;
-  base.spell_power_per_intellect = 1.0;
-
   if ( specialization() == SHAMAN_ELEMENTAL )
   {
     resources.base[ RESOURCE_MAELSTROM ] = 100 + talent.swelling_maelstrom.spell()->effectN( 1 ).base_value();
@@ -12450,7 +12446,7 @@ struct shaman_module_t : public module_t
   {
     p->buffs.bloodlust = make_buff( p, "bloodlust", p->find_spell( 2825 ) )
           ->set_max_stack( 1 )
-          ->set_default_value_from_effect_type( A_HASTE_ALL )
+          ->set_default_value_from_effect_type( A_MOD_MELEE_RANGED_HASTE )
           ->add_invalidate( CACHE_HASTE );
 
     p->buffs.exhaustion = make_buff( p, "exhaustion", p->find_spell( 57723 ) )->set_max_stack( 1 )->set_quiet( true );

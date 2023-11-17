@@ -59,7 +59,7 @@ std::shared_ptr<xml_node_t> download_id( sim_t*             sim,
   if ( ! id )
     return {};
 
-  std::string url_www = "https://" + source_str( source ) + ".wowhead.com/item="
+  std::string url_www = "https://" + source_str( source ) + ".wowhead.com/cata/item="
                         + util::to_string( id ) + "&xml";
 
   auto node = xml_node_t::get( url_www, caching, "</json>" );

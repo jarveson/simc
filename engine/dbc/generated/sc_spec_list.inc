@@ -88,4 +88,3 @@ static constexpr specialization_e __class_spec_id[MAX_SPEC_CLASS][MAX_SPECS_PER_
     SPEC_NONE,
   },
 };
-

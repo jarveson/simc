@@ -7,7 +7,7 @@ action/attack.hpp
 action/dbc_proc_callback.hpp
 action/dot.hpp
 action/heal.hpp
-action/parse_effects.hpp
+action/parse_buff_effects.hpp
 action/residual_action.hpp
 action/sequence.hpp
 action/snapshot_stats.hpp
@@ -34,6 +34,7 @@ class_modules/warlock/sc_warlock.hpp
 class_modules/warlock/sc_warlock_pets.hpp
 config.hpp
 dbc/active_spells.hpp
+dbc/ap_per_stat.hpp
 dbc/azerite.hpp
 dbc/client_data.hpp
 dbc/client_hotfix_entry.hpp
@@ -44,6 +45,7 @@ dbc/dbc.hpp
 dbc/embellishment_data.hpp
 dbc/expected_stat.hpp
 dbc/gem_data.hpp
+dbc/glyph_data.hpp
 dbc/item_armor.hpp
 dbc/item_bonus.hpp
 dbc/item_child.hpp
@@ -57,6 +59,7 @@ dbc/item_scaling.hpp
 dbc/item_set_bonus.hpp
 dbc/item_weapon.hpp
 dbc/mastery_spells.hpp
+dbc/meta_gem_cond.hpp
 dbc/permanent_enchant.hpp
 dbc/racial_spells.hpp
 dbc/rand_prop_points.hpp
@@ -103,6 +106,7 @@ player/darkmoon_deck.hpp
 player/effect_callbacks.hpp
 player/expansion_effects.hpp
 player/gear_stats.hpp
+player/glyph.hpp
 player/ground_aoe.hpp
 player/instant_absorb.hpp
 player/pet.hpp
@@ -245,6 +249,7 @@ class_modules/warlock/sc_warlock_demonology.cpp
 class_modules/warlock/sc_warlock_destruction.cpp
 class_modules/warlock/sc_warlock_pets.cpp
 dbc/active_spells.cpp
+dbc/ap_per_stat.cpp
 dbc/azerite.cpp
 dbc/client_data.cpp
 dbc/client_hotfix_entry.cpp
@@ -252,6 +257,7 @@ dbc/covenant_data.cpp
 dbc/embellishment_data.cpp
 dbc/expected_stat.cpp
 dbc/gem_data.cpp
+dbc/glyph_data.cpp
 dbc/item_armor.cpp
 dbc/item_bonus.cpp
 dbc/item_child.cpp
@@ -265,6 +271,7 @@ dbc/item_scaling.cpp
 dbc/item_set_bonus.cpp
 dbc/item_weapon.cpp
 dbc/mastery_spells.cpp
+dbc/meta_gem_cond.cpp
 dbc/permanent_enchant.cpp
 dbc/racial_spells.cpp
 dbc/rand_prop_points.cpp
@@ -302,6 +309,7 @@ player/consumable.cpp
 player/covenant.cpp
 player/darkmoon_deck.cpp
 player/effect_callbacks.cpp
+player/glyph.cpp
 player/ground_aoe.cpp
 player/instant_absorb.cpp
 player/pet.cpp

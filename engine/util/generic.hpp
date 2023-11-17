@@ -148,6 +148,22 @@ struct begin_ {
   }
 };
 
+struct rbegin_
+{
+  template <typename R>
+  auto operator()( R&& r ) const
+  {
+    using std::rbegin;
+    return rbegin( std::forward<R>( r ) );
+  }
+  template <typename T>
+  auto operator()( const std::pair<T, T>& p ) const
+  {
+    return p.first;
+  }
+};
+
+
 struct end_ {
   template <typename R>
   auto operator()( R&& r ) const {
@@ -160,12 +176,33 @@ struct end_ {
   }
 };
 
+struct rend_
+{
+  template <typename R>
+  auto operator()( R&& r ) const
+  {
+    using std::rend;
+    return rend( std::forward<R>( r ) );
+  }
+  template <typename T>
+  auto operator()( const std::pair<T, T>& p ) const
+  {
+    return p.second;
+  }
+};
+
 } // namespace detail
 
 template <typename T>
 auto begin( T&& t )
 {
   return detail::begin_{}( std::forward<T>( t ) );
+}
+
+template <typename T>
+auto rbegin( T&& t )
+{
+  return detail::rbegin_{}( std::forward<T>( t ) );
 }
 
 template <typename T>
@@ -181,6 +218,12 @@ auto end( T&& t )
 }
 
 template <typename T>
+auto rend( T&& t )
+{
+  return detail::rend_{}( std::forward<T>( t ) );
+}
+
+template <typename T>
 auto cend( const T& t )
 {
   return range::end( t );
@@ -188,6 +231,10 @@ auto cend( const T& t )
 
 template <typename R>
 using iterator_t = decltype(range::begin(std::declval<R&>()));
+
+
+template <typename R>
+using reverse_iterator_t = decltype(range::rbegin(std::declval<R&>()));
 
 template <typename R>
 using value_type_t = typename std::iterator_traits<iterator_t<R>>::value_type;
@@ -286,6 +333,12 @@ template <typename Range, typename UnaryPredicate>
 inline iterator_t<Range> find_if( Range& r, UnaryPredicate p )
 {
   return std::find_if( range::begin( r ), range::end( r ), p );
+}
+
+template <typename Range, typename UnaryPredicate>
+inline reverse_iterator_t<Range> find_if_rev( Range& r, UnaryPredicate p )
+{
+  return std::find_if( range::rbegin( r ), range::rend( r ), p );
 }
 
 template <typename Range, typename UnaryPredicate>

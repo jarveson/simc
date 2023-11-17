@@ -2623,10 +2623,6 @@ void priest_t::init_base_stats()
 
   base_t::init_base_stats();
 
-  base.attack_power_per_strength = 0.0;
-  base.attack_power_per_agility  = 0.0;
-  base.spell_power_per_intellect = 1.0;
-
   if ( specialization() == PRIEST_SHADOW )
   {
     resources.base[ RESOURCE_INSANITY ] =

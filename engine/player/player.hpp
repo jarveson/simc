@@ -20,6 +20,7 @@
 #include "dbc/specialization.hpp"
 #include "assessor.hpp"
 #include "talent.hpp"
+#include "glyph.hpp"
 #include <map>
 #include <set>
 #include <unordered_map>
@@ -110,7 +111,7 @@ public:
 
 struct player_t : public actor_t
 {
-  static const int default_level = 70;
+  static const int default_level = 80;
 
   // static values
   player_e type;
@@ -189,6 +190,9 @@ struct player_t : public actor_t
 
   // Player selected (trait entry id, rank) tuples
   std::vector<std::tuple<talent_tree, unsigned, unsigned>> player_traits;
+
+  // player selected glyph ids, these are the 'raw' spell ids
+  std::vector<unsigned> player_glyphs;
 
   // Profs
   std::array<int, PROFESSION_MAX> profession;
@@ -560,15 +564,15 @@ struct player_t : public actor_t
     buff_t* vulnerable;
     buff_t* damage_taken;
 
-    // WoD debuffs
+    // Cata
+    buff_t* healing_reduc;
+    buff_t* bleed_dmg_taken;
+    buff_t* attack_spd_reduc;
+    buff_t* phys_dmg_output;
+
+    buff_t* mystic_touch;
     buff_t* mortal_wounds;
-
-    // BfA Raid Damage Modifier Debuffs
-    buff_t* chaos_brand;  // Demon Hunter
-    buff_t* mystic_touch; // Monk
-
-    // Dragonflight Raid Damage Modifier Debuffs
-    buff_t* hunters_mark;
+    buff_t* chaos_brand;
 
   } debuffs;
 
@@ -918,6 +922,8 @@ public:
   player_talent_t find_talent_spell( talent_tree tree, util::string_view name, specialization_e s = SPEC_NONE, bool name_tokenized = false ) const;
   player_talent_t find_talent_spell( talent_tree tree, unsigned spell_id, specialization_e s = SPEC_NONE  ) const;
   player_talent_t find_talent_spell( unsigned talent_entry_id, specialization_e s = SPEC_NONE ) const;
+
+  const player_glyph_t find_glyph_spell( util::string_view name ) const;
 
   const spell_data_t* find_specialization_spell( util::string_view name, specialization_e s = SPEC_NONE ) const;
   const spell_data_t* find_specialization_spell( util::string_view name, util::string_view desc, specialization_e s = SPEC_NONE ) const;

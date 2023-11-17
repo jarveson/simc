@@ -807,7 +807,7 @@ class WDC1Parser(DBCParserBase):
         HeaderFieldInfo('id_index',               'H' ),
         HeaderFieldInfo('total_fields',           'I' ),
         HeaderFieldInfo('packed_data_offset',     'I' ),
-        HeaderFieldInfo('wdc_unk1',               'I' ),
+        HeaderFieldInfo('lookup_column_count',    'I' ),
         HeaderFieldInfo('offset_map_offset',      'I' ),
         HeaderFieldInfo('id_block_size',          'I' ),
         HeaderFieldInfo('column_info_block_size', 'I' ),
@@ -1350,7 +1350,7 @@ class WDC1Parser(DBCParserBase):
         fields.append('total_fields={}'.format(self.total_fields))
 
         fields.append('ofs_record_packed_data={}'.format(self.packed_data_offset))
-        fields.append('wdc1_unk1={}'.format(self.wdc1_unk3))
+        fields.append('wdc1_unk3={}'.format(self.wdc1_unk3))
 
         if not self.has_offset_map():       fields.append('ofs_data={}'.format(self.data_offset))
         fields.append('id_block_size={}'.format(self.id_block_size))

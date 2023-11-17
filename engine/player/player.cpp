@@ -21,13 +21,16 @@
 #include "dbc/active_spells.hpp"
 #include "dbc/azerite.hpp"
 #include "dbc/dbc.hpp"
+#include "dbc/glyph_data.hpp"
 #include "dbc/item_database.hpp"
 #include "dbc/item_set_bonus.hpp"
+#include "dbc/meta_gem_cond.hpp"
 #include "dbc/rank_spells.hpp"
 #include "dbc/specialization_spell.hpp"
 #include "dbc/temporary_enchant.hpp"
 #include "dbc/trait_data.hpp"
 #include "dbc/covenant_data.hpp"
+#include "item/enchants.hpp"
 #include "item/item.hpp"
 #include "item/special_effect.hpp"
 #include "player/action_priority_list.hpp"
@@ -605,7 +608,7 @@ bool parse_talent_url( sim_t* sim, util::string_view name, util::string_view url
   else
   {
     if ( sim->talent_input_format == talent_format::UNCHANGED )
-        sim->talent_input_format = talent_format::BLIZZARD;
+        sim->talent_input_format = talent_format::WOWHEAD;
     return true;
   }
 
@@ -1540,6 +1543,10 @@ void player_t::init_base_stats()
     base.attack_crit_chance       = dbc->melee_crit_base( type, level() );
     base.spell_crit_per_intellect = dbc->spell_crit_scaling( type, level() );
     base.attack_crit_per_agility  = dbc->melee_crit_scaling( type, level() );
+    base.attack_power_per_agility = dbc->ap_per_agi(type);
+    base.attack_power_per_strength = dbc->ap_per_str(type);
+    if ( dbc->ranged_ap_per_agi(type) > base.attack_power_per_agility)
+      base.attack_power_per_agility = dbc->ranged_ap_per_agi( type );
     base.mastery                  = 8.0;
 
     resources.base[ RESOURCE_HEALTH ] = dbc->health_base( type, level() );
@@ -1567,8 +1574,8 @@ void player_t::init_base_stats()
     base.health_per_stamina = dbc->health_per_stamina( level() );
 
     // players have a base 7.5% hit/exp
-    base.hit       = 0.075;
-    base.expertise = 0.075;
+    //base.hit       = 0.075;
+    //base.expertise = 0.075;
 
     if ( base.distance < 1 )
       base.distance = 5;
@@ -1587,19 +1594,12 @@ void player_t::init_base_stats()
         spell_data_t::find_spelleffect( *spec_spell, E_APPLY_AURA, A_OVERRIDE_SP_PER_AP ).percent();
   }
 
-  // only certain classes get Agi->Dodge conversions, dodge_per_agility defaults to 0.00
-  if ( type == MONK || type == DRUID || type == ROGUE || type == HUNTER || type == SHAMAN || type == DEMON_HUNTER )
-    base.dodge_per_agility =
-        dbc->avoid_per_str_agi_by_level( level() ) / 100.0;  // exact values given by Blizzard, only have L90-L100 data
-
-  // only certain classes get Str->Parry conversions, parry_per_strength defaults to 0.00
-  if ( type == PALADIN || type == WARRIOR || type == DEATH_KNIGHT )
-    base.parry_per_strength =
-        dbc->avoid_per_str_agi_by_level( level() ) / 100.0;  // exact values given by Blizzard, only have L90-L100 data
+  base.dodge_per_agility =
+        dbc->avoid_per_agi_by_class( type ); 
 
   // All classes get 3% dodge and miss
-  base.dodge = 0.03;
-  base.miss = 0.03;
+  //base.dodge = 0.03;
+  //base.miss = 0.03;
 
   if (racials.quickness->ok()) // check spell data to avoid applying it to enemies.
   {
@@ -1650,7 +1650,7 @@ void player_t::init_base_stats()
   def_dr.block_factor           = dbc->block_factor( type );
 
   if ( ( meta_gem == META_EMBER_PRIMAL ) || ( meta_gem == META_EMBER_SHADOWSPIRIT ) ||
-       ( meta_gem == META_EMBER_SKYFIRE ) || ( meta_gem == META_EMBER_SKYFLARE ) )
+       ( meta_gem == META_EMBER_SKYFIRE ) || ( meta_gem == META_EMBER_SKYFLARE ) || meta_gem == META_BEAMING_EARTHSIEGE)
   {
     resources.base_multiplier[ RESOURCE_MANA ] *= 1.02;
   }
@@ -1975,7 +1975,35 @@ void player_t::init_meta_gem()
       throw std::invalid_argument(fmt::format( "Invalid meta gem '{}'.", meta_gem_str ));
     }
   }
+  else
+  {
+    // parse from items if no override
+    unsigned meta_id = 0;
+    std::vector<unsigned> gem_colors;
+    item_t* item{};
+    for (auto& i : items) {
+        for (size_t j=0; j < i.parsed.gem_color.size(); ++j) {
+            auto color = i.parsed.gem_color[ j ];
+            if (color == SOCKET_COLOR_META ) {
+                const auto& gem = dbc->item( i.parsed.gem_id[j] );
+                if ( gem.id == 0 )
+                {
+                  throw std::invalid_argument( fmt::format( "Invalid meta gem '{}'.", i.parsed.gem_id[ j ] ) );
+                }
+                meta_id = gem.id;
+                item = &i;
+            }
+            else if (color != SOCKET_COLOR_NONE)
+            {
+                gem_colors.push_back(i.parsed.gem_color[j]);
+            }
+        }
+    }
 
+    assert(item);
+    meta_id = enchant::initialize_meta_gem(*item, meta_id, gem_colors);
+    meta_gem = enchant::meta_gem_type(*dbc, meta_id);
+  }
 
   if ( ( meta_gem == META_AUSTERE_EARTHSIEGE ) || ( meta_gem == META_AUSTERE_SHADOWSPIRIT ) )
   {
@@ -2717,6 +2745,11 @@ static std::string generate_traits_hash( player_t* player )
   return export_str;
 }
 
+static void parse_wowhead_talents( const std::string& talents_str, player_t* player )
+{
+    assert(false);
+}
+
 static void parse_traits_hash( const std::string& talents_str, player_t* player )
 {
   auto do_error = [ player, &talents_str ]( std::string_view msg = {} ) {
@@ -2893,6 +2926,11 @@ void player_t::init_talents()
     if ( !talents_str.empty() && sim->talent_input_format == talent_format::BLIZZARD )
     {
       parse_traits_hash( talents_str, this );
+    }
+
+    else if ( !talents_str.empty() && sim->talent_input_format == talent_format::WOWHEAD )
+    {
+      parse_wowhead_talents(talents_str, this);
     }
 
     if ( !talent_overrides_str.empty() )
@@ -4056,23 +4094,12 @@ void player_t::create_buffs()
     debuffs.invulnerable  = new invulnerable_debuff_t( this );
     debuffs.vulnerable    = make_buff( this, "vulnerable" )->set_max_stack( 1 );
     debuffs.flying        = make_buff( this, "flying" )->set_max_stack( 1 );
-    debuffs.mortal_wounds = make_buff( this, "mortal_wounds", find_spell( 115804 ) )
-        ->set_default_value( std::fabs( find_spell( 115804 )->effectN( 1 ).percent() ) );
+    debuffs.healing_reduc = make_buff( this, "mortal_strike", find_spell( 65926 ) )
+                                ->set_default_value( std::fabs( find_spell( 65926 )->effectN( 1 ).percent() ) );
 
-    // BfA Raid Damage Modifier Debuffs
-    debuffs.chaos_brand = make_buff( this, "chaos_brand", find_spell( 1490 ) )
-        ->set_default_value_from_effect( 1 )
-        ->set_cooldown( timespan_t::from_seconds( 5.0 ) );
-    debuffs.mystic_touch = make_buff( this, "mystic_touch", find_spell( 113746 ) )
-        ->set_default_value_from_effect( 1 )
-        ->set_cooldown( timespan_t::from_seconds( 5.0 ) );
-
-    // Dragonflight Raid Damage Modifier Debuffs
-    auto buff_spell      = find_spell( 428402 );
-    debuffs.hunters_mark = make_buff( this, "hunters_mark", find_spell( 257284 ) )
-        ->set_period( 0_s )
-        ->set_default_value( buff_spell->effectN( 1 ).percent() )
-        ->set_schools( buff_spell->effectN( 1 ).affected_schools() );
+    // cata
+    debuffs.bleed_dmg_taken =
+        make_buff( this, "mangle", find_spell( 33876 ) )->set_default_value_from_effect( 2 );
   }
 
   // set up always since this can be applied by enemy actions and raid events.
@@ -4160,20 +4187,7 @@ double player_t::resource_regen_per_second( resource_e r ) const
 
 double player_t::apply_combat_rating_dr( rating_e rating, double value ) const
 {
-  switch ( rating )
-  {
-    case RATING_LEECH:
-    case RATING_SPEED:
-    case RATING_AVOIDANCE:
-      return item_database::curve_point_value( *dbc, DIMINISHING_RETURN_TERTIARY_CR_CURVE, value * 100.0 ) / 100.0;
-    case RATING_MASTERY:
-      return item_database::curve_point_value( *dbc, DIMINISHING_RETURN_SECONDARY_CR_CURVE, value );
-    case RATING_MITIGATION_VERSATILITY:
-      return item_database::curve_point_value( *dbc, DIMINISHING_RETURN_VERS_MITIG_CR_CURVE, value * 100.0 ) / 100.0;
-    default:
-      // Note, curve uses %-based values, not values divided by 100
-      return item_database::curve_point_value( *dbc, DIMINISHING_RETURN_SECONDARY_CR_CURVE, value * 100.0 ) / 100.0;
-  }
+  return value;
 }
 
 double player_t::composite_melee_haste() const
@@ -5246,16 +5260,6 @@ double player_t::composite_player_vulnerability( school_e school ) const
   // 1% damage taken per stack, arbitrary because this buff is completely fabricated!
   if ( debuffs.damage_taken && debuffs.damage_taken->check() )
     m *= 1.0 + debuffs.damage_taken->current_stack * 0.01;
-
-  if ( debuffs.mystic_touch && debuffs.mystic_touch->has_common_school( school ) )
-    m *= 1.0 + debuffs.mystic_touch->check_value();
-
-  if ( debuffs.chaos_brand && debuffs.chaos_brand->has_common_school( school ) )
-    m *= 1.0 + debuffs.chaos_brand->check_value();
-
-  if ( debuffs.hunters_mark && debuffs.hunters_mark->has_common_school( school ) &&
-       health_percentage() > debuffs.hunters_mark->data().effectN( 3 ).base_value() )
-    m *= 1.0 + debuffs.hunters_mark->check_value();
 
   return m;
 }
@@ -10720,6 +10724,17 @@ static player_talent_t create_talent_obj(
   return { player, trait, is_starter ? trait->max_ranks : std::get<2>( *it ) };
 }
 
+static player_glyph_t create_glyph_obj(const player_t* player, const glyph_property_data_t* glyph )
+{
+  auto it = range::find_if( player->player_glyphs, [glyph]( const auto& entry ) { return entry == glyph->spell_id;} );
+
+  if (it == player->player_glyphs.end()) {
+    return {player};
+  }
+
+  return { player, glyph, true };
+}
+
 player_talent_t player_t::find_talent_spell(
     talent_tree        tree,
     util::string_view name,
@@ -10733,11 +10748,11 @@ player_talent_t player_t::find_talent_spell(
 
   if ( name_tokenized )
   {
-    trait = trait_data_t::find_tokenized( tree, name, class_idx, s == SPEC_NONE ? _spec : s, dbc->ptr );
+    trait = trait_data_t::find_tokenized( tree, name, class_idx, s, dbc->ptr );
   }
   else
   {
-    trait = trait_data_t::find( tree, name, class_idx, s == SPEC_NONE ? _spec : s, dbc->ptr );
+    trait = trait_data_t::find( tree, name, class_idx, s, dbc->ptr );
   }
 
   if ( trait == &trait_data_t::nil() )
@@ -10759,7 +10774,7 @@ player_talent_t player_t::find_talent_spell(
 
   dbc->spec_idx( s == SPEC_NONE ? _spec : s, class_idx, spec_idx );
 
-  auto traits = trait_data_t::find_by_spell( tree, spell_id, class_idx, s == SPEC_NONE ? _spec : s, dbc->ptr );
+  auto traits = trait_data_t::find_by_spell( tree, spell_id, class_idx, s, dbc->ptr );
   if ( traits.size() == 0 )
   {
     sim->print_debug( "Player {}: Can't find {} talent with spell_id '{}'.", this->name(),
@@ -10781,6 +10796,18 @@ player_talent_t player_t::find_talent_spell( unsigned trait_node_entry_id, speci
   }
 
   return create_talent_obj( this, s, trait );
+}
+
+const player_glyph_t player_t::find_glyph_spell(util::string_view name) const
+{
+  const glyph_property_data_t* g = glyph_property_data_t::find(name, dbc->ptr);
+  if ( g == &glyph_property_data_t::nil() )
+  {
+    sim->print_debug( "Player {}: Can't find glyph with name '{}'.", this->name(), name );
+    return {};  // Invalid glyph
+  }
+
+  return create_glyph_obj(this, g);
 }
 
 const spell_data_t* player_t::find_specialization_spell( util::string_view name,

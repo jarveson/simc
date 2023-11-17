@@ -72,6 +72,7 @@ execute_process(
 # link in all activated targets
 add_subdirectory(engine)
 if (BUILD_GUI)
+SET(CMAKE_PREFIX_PATH "G:/Qt6/6.4.3/msvc2019_64/lib/cmake/Qt6")
   add_subdirectory(qt)
 endif()
 
@@ -79,6 +80,7 @@ endif()
 add_executable(simc engine/sc_main.cpp)
 target_link_libraries(simc engine)
 sc_common_compiler_options(simc)
+add_definitions(-D_SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING)
 
 install(TARGETS simc DESTINATION ${SIMC_INSTALL_BIN})
 

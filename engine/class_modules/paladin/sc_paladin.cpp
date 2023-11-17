@@ -2165,19 +2165,8 @@ void paladin_t::init_base_stats()
 
   player_t::init_base_stats();
 
-  base.attack_power_per_agility  = 0.0;
-  base.attack_power_per_strength = 1.0;
-  base.spell_power_per_intellect = 1.0;
-
   // Boundless Conviction raises max holy power to 5
   resources.base[ RESOURCE_HOLY_POWER ] = 3 + passives.boundless_conviction->effectN( 1 ).base_value();
-
-  // Ignore mana for non-holy
-  if ( specialization() != PALADIN_HOLY )
-  {
-    resources.base[ RESOURCE_MANA ]                  = 0;
-    resources.base_regen_per_second[ RESOURCE_MANA ] = 0;
-  }
 
   // Avoidance diminishing Returns constants/conversions now handled in player_t::init_base_stats().
   // Base miss, dodge, parry, and block are set in player_t::init_base_stats().
@@ -2384,92 +2373,29 @@ void paladin_t::create_buffs()
 
 std::string paladin_t::default_potion() const
 {
-  std::string retribution_pot = ( true_level > 60 ) ? "elemental_potion_of_ultimate_power_3" : "disabled";
-
-  std::string protection_pot = ( true_level > 60 ) ? "elemental_potion_of_ultimate_power_3" : "disabled";
-
-  std::string holy_dps_pot = ( true_level > 50 ) ? "spectral_intellect" : "disabled";
-
-  std::string holy_pot = ( true_level > 50 ) ? "spectral_intellect" : "disabled";
-
-  switch ( specialization() )
-  {
-    case PALADIN_RETRIBUTION:
-      return retribution_pot;
-    case PALADIN_PROTECTION:
-      return protection_pot;
-    case PALADIN_HOLY:
-      return primary_role() == ROLE_ATTACK ? holy_dps_pot : holy_pot;
-    default:
-      return "disabled";
-  }
+  return "disabled";
 }
 
 std::string paladin_t::default_food() const
 {
-  std::string retribution_food = ( true_level > 50 ) ? "fated_fortune_cookie" : "disabled";
-
-  std::string protection_food = ( true_level > 50 ) ? "fated_fortune_cookie" : "disabled";
-
-  std::string holy_dps_food = ( true_level > 50 ) ? "feast_of_gluttonous_hedonism" : "disabled";
-
-  std::string holy_food = ( true_level > 50 ) ? "feast_of_gluttonous_hedonism" : "disabled";
-
-  switch ( specialization() )
-  {
-    case PALADIN_RETRIBUTION:
-      return retribution_food;
-    case PALADIN_PROTECTION:
-      return protection_food;
-    case PALADIN_HOLY:
-      return primary_role() == ROLE_ATTACK ? holy_dps_food : holy_food;
-    default:
-      return "disabled";
-  }
+  return "disabled";
 }
 
 std::string paladin_t::default_flask() const
 {
-  std::string retribution_flask = ( true_level > 60 ) ? "iced_phial_of_corrupting_rage_3" : "disabled";
-
-  std::string protection_flask = ( true_level > 60 ) ? "phial_of_tepid_versatility_3" : "disabled";
-
-  std::string holy_dps_flask = ( true_level > 50 ) ? "spectral_flask_of_power" : "disabled";
-
-  std::string holy_flask = ( true_level > 50 ) ? "spectral_flask_of_power" : "disabled";
-
-  switch ( specialization() )
-  {
-    case PALADIN_RETRIBUTION:
-      return retribution_flask;
-    case PALADIN_PROTECTION:
-      return protection_flask;
-    case PALADIN_HOLY:
-      return primary_role() == ROLE_ATTACK ? holy_dps_flask : holy_flask;
-    default:
-      return "disabled";
-  }
+  return "disabled";
 }
 
 std::string paladin_t::default_rune() const
 {
-  return ( true_level > 50 ) ? "draconic_augment_rune" : "disabled";
+  return "disabled";
 }
 
 // paladin_t::default_temporary_enchant ================================
 
 std::string paladin_t::default_temporary_enchant() const
 {
-  switch ( specialization() )
-  {
-    case PALADIN_PROTECTION:
-      return "main_hand:howling_rune_3";
-    case PALADIN_RETRIBUTION:
-      return "main_hand:howling_rune_3";
-
-    default:
-      return "main_hand:howling_rune_3";
-  }
+  return "disabled";
 }
 
 // paladin_t::init_actions ==================================================
@@ -2477,8 +2403,7 @@ std::string paladin_t::default_temporary_enchant() const
 void paladin_t::init_action_list()
 {
   // sanity check - Prot/Ret can't do anything w/o main hand weapon equipped
-  if ( main_hand_weapon.type == WEAPON_NONE &&
-       ( specialization() == PALADIN_RETRIBUTION || specialization() == PALADIN_PROTECTION ) )
+  if ( main_hand_weapon.type == WEAPON_NONE)
   {
     if ( !quiet )
       sim->errorf( "Player %s has no weapon equipped at the Main-Hand slot.", name() );
@@ -2491,25 +2416,7 @@ void paladin_t::init_action_list()
   {
     clear_action_priority_lists();
 
-    switch ( specialization() )
-    {
-      case PALADIN_RETRIBUTION:
-        generate_action_prio_list_ret();  // RET
-        break;
-      case PALADIN_PROTECTION:
-        generate_action_prio_list_prot();  // PROT
-        break;
-      case PALADIN_HOLY:
-        if ( primary_role() == ROLE_HEAL )
-          generate_action_prio_list_holy();  // HOLY
-        else
-          generate_action_prio_list_holy_dps();
-        break;
-      default:
-        action_list_str += "/snapshot_stats";
-        action_list_str += "/auto_attack";
-        break;
-    }
+    action_list_str += "/auto_attack";
     use_default_action_list = true;
   }
   else
@@ -2566,9 +2473,6 @@ void paladin_t::init_rng()
 void paladin_t::init()
 {
   player_t::init();
-
-  if ( specialization() == PALADIN_HOLY && primary_role() != ROLE_ATTACK )
-    sim->errorf( "%s is using an unsupported spec.", name() );
 }
 
 void paladin_t::init_spells()
@@ -2645,15 +2549,7 @@ void paladin_t::init_spells()
   spells.judgment_2             = find_rank_spell( "Judgment", "Rank 2" );         // 327977
   spells.hammer_of_wrath_2      = find_rank_spell( "Hammer of Wrath", "Rank 2" );  // 326730
   spec.word_of_glory_2          = find_rank_spell( "Word of Glory", "Rank 2" );
-  spells.divine_purpose_buff    = find_spell( specialization() == PALADIN_RETRIBUTION ? 408458 : 223819 );
-
-  // Dragonflight Tier Sets
-  tier_sets.ally_of_the_light_2pc = sets->set( PALADIN_PROTECTION, T29, B2 );
-  tier_sets.ally_of_the_light_4pc = sets->set( PALADIN_PROTECTION, T29, B4 );
-  tier_sets.heartfire_sentinels_authority_2pc = sets->set( PALADIN_PROTECTION, T30, B2 );
-  tier_sets.heartfire_sentinels_authority_4pc = sets->set( PALADIN_PROTECTION, T30, B4 );
-  tier_sets.t31_2pc = sets->set( PALADIN_PROTECTION, T31, B2 );
-  tier_sets.t31_4pc = sets->set( PALADIN_PROTECTION, T31, B4 );
+  //spells.divine_purpose_buff    = find_spell( specialization() == PALADIN_RETRIBUTION ? 408458 : 223819 );
 }
 
 void paladin_t::init_items()
@@ -2706,69 +2602,13 @@ role_e paladin_t::primary_role() const
 
 resource_e paladin_t::primary_resource() const
 {
-  if ( specialization() == PALADIN_HOLY || specialization() == PALADIN_PROTECTION )
-    return RESOURCE_MANA;
-
-  if ( specialization() == PALADIN_RETRIBUTION )
-    return RESOURCE_HOLY_POWER;
-
-  return RESOURCE_NONE;
+  return RESOURCE_MANA;
 }
 
 // paladin_t::convert_hybrid_stat ===========================================
 
 stat_e paladin_t::convert_hybrid_stat( stat_e s ) const
 {
-  // Holy's primary stat is intellect
-  if ( specialization() == PALADIN_HOLY )
-  {
-    switch ( s )
-    {
-      case STAT_STR_AGI_INT:
-      case STAT_STR_INT:
-      case STAT_AGI_INT:
-        return STAT_INTELLECT;
-      case STAT_STR_AGI:
-      case STAT_STRENGTH:
-      case STAT_AGILITY:
-        return STAT_NONE;
-      default:
-        break;
-    }
-  }
-  // Protection and Retribution use strength
-  else
-  {
-    switch ( s )
-    {
-      case STAT_STR_AGI_INT:
-      case STAT_STR_INT:
-      case STAT_STR_AGI:
-        return STAT_STRENGTH;
-      case STAT_AGI_INT:
-      case STAT_INTELLECT:
-      case STAT_AGILITY:
-        return STAT_NONE;
-      default:
-        break;
-    }
-  }
-
-  // Handle non-primary stats
-  switch ( s )
-  {
-    case STAT_SPIRIT:
-      if ( specialization() != PALADIN_HOLY )
-        return STAT_NONE;
-      break;
-    case STAT_BONUS_ARMOR:
-      if ( specialization() != PALADIN_PROTECTION )
-        return STAT_NONE;
-      break;
-    default:
-      break;
-  }
-
   return s;
 }
 

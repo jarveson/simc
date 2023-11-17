@@ -39,6 +39,7 @@ void parsed_item_data_t::init( const dbc_item_data_t& raw, const dbc_t& dbc )
   {
     stat_type_e[ i ] = i < _dbc_stats_count ? _dbc_stats[ i ].type_e : -1;
     stat_alloc[ i ] = i < _dbc_stats_count ? _dbc_stats[ i ].alloc : 0;
+    stat_bonus_amount[ i ] = i < _dbc_stats_count ? _dbc_stats[ i ].bonus_amount : 0;
   }
 
   for ( const item_effect_t& effect : dbc.item_effects( id ) )

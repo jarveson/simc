@@ -2139,9 +2139,9 @@ struct mortal_strike_t : public warrior_attack_t
     }
     if ( result_is_hit( execute_state->result ) )
     {
-      if ( !sim->overrides.mortal_wounds && execute_state->target->debuffs.mortal_wounds )
+      if ( execute_state->target->debuffs.healing_reduc )
       {
-        execute_state->target->debuffs.mortal_wounds->trigger();
+        execute_state->target->debuffs.healing_reduc->trigger();
       }
     }
     if ( p()->talents.arms.exhilarating_blows->ok() && rng().roll( exhilarating_blows_chance ) )
@@ -7273,10 +7273,6 @@ void warrior_t::init_base_stats()
     resources.base[ RESOURCE_RAGE ] += find_spell( 382767 )->effectN( 1 ).base_value() / 10.0;
   }
   resources.max[ RESOURCE_RAGE ]  = resources.base[ RESOURCE_RAGE ];
-
-  base.attack_power_per_strength = 1.0;
-  base.attack_power_per_agility  = 0.0;
-  base.spell_power_per_intellect = 1.0;
 
   // Avoidance diminishing Returns constants/conversions now handled in player_t::init_base_stats().
   // Base miss, dodge, parry, and block are set in player_t::init_base_stats().

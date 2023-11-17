@@ -39,11 +39,7 @@ std::string rune( const player_t* p )
 
 std::string temporary_enchant( const player_t* p )
 {
-  std::string lvl70_temp_enchant = p->specialization() == MAGE_FIRE ? "main_hand:howling_rune_3" : "main_hand:buzzing_rune_3";
-
-  return p->true_level >= 70 ? lvl70_temp_enchant
-       : p->true_level >= 60 ? "main_hand:shadowcore_oil"
-       :                       "disabled";
+  return "disabled";
 }
 
 //arcane_apl_start

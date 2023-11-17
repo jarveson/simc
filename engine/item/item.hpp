@@ -43,6 +43,7 @@ struct parsed_item_data_t : dbc_item_data_t
 {
   std::array<int, MAX_ITEM_STAT> stat_type_e;
   std::array<int, MAX_ITEM_STAT> stat_alloc;
+  std::array<int, MAX_ITEM_STAT> stat_bonus_amount;
   std::array<item_effect_t, MAX_ITEM_EFFECT> effects;
   int bonus_level;
 
@@ -51,6 +52,7 @@ struct parsed_item_data_t : dbc_item_data_t
     range::fill( stat_type_e, -1 );
     range::fill( stat_alloc, 0 );
     range::fill( effects, item_effect_t::nil() );
+    range::fill( stat_bonus_amount, 0 );
     bonus_level = 0;
   }
 

@@ -48,7 +48,7 @@ parser.add_argument("-f",            dest = "format",
                     help = "DBC Format file")
 parser.add_argument("--delim",       dest = "delim",        default = ',',
                     help = "Delimiter for -t csv")
-parser.add_argument("-l", "--level", dest = "level",        default = 70, type = int,
+parser.add_argument("-l", "--level", dest = "level",        default = 80, type = int,
                     help = "Scaling values up to level [125]")
 parser.add_argument("-b", "--build", dest = "build",        default = None, type = parse_version,
                     help = "World of Warcraft build version (8.0.1.12345)")
@@ -366,10 +366,60 @@ elif options.type == 'scale':
     g.generate()
 
     g = CSVDataGenerator(options, {
-        'file': 'BaseMp.txt',
+        'file': 'octbasempbyclass.txt',
         'comment': '// Base mana points for levels 1 - %d, wow build %s\n' % (
             options.level, options.build),
         'values': DataGenerator._class_names
+    })
+    if not g.initialize():
+        sys.exit(1)
+    g.generate()
+
+    g = CSVDataGenerator(options, {
+        'file': 'chancetospellcrit.txt',
+        'comment': '// Chance to Spell Crit 1 - %d, wow build %s\n' % (
+            options.level, options.build),
+        'values': DataGenerator._class_names
+    })
+    if not g.initialize():
+        sys.exit(1)
+    g.generate()
+
+    g = CSVDataGenerator(options, {
+        'file': 'chancetospellcritbase.txt',
+        'comment': '// Spell Crit Base, wow build %s\n' % (options.build),
+        'values': DataGenerator._class_names,
+        'key': 'X'
+    })
+    if not g.initialize():
+        sys.exit(1)
+    g.generate()
+
+    g = CSVDataGenerator(options, {
+        'file': 'chancetomeleecrit.txt',
+        'comment': '// Chance to Melee Crit 1 - %d, wow build %s\n' % (
+            options.level, options.build),
+        'values': DataGenerator._class_names
+    })
+    if not g.initialize():
+        sys.exit(1)
+    g.generate()
+
+    g = CSVDataGenerator(options, {
+        'file': 'chancetomeleecritbase.txt',
+        'comment': '// Melee Crit Base, wow build %s\n' % (options.build),
+        'values': DataGenerator._class_names,
+        'key': 'X'
+    })
+    if not g.initialize():
+        sys.exit(1)
+    g.generate()
+
+    g = CSVDataGenerator(options, {
+        'file': 'octclasscombatratingscalar.txt',
+        'comment': '// Class Combat Rating Scalar, wow build %s\n' % (options.build),
+        'values': DataGenerator._class_names,
+        'key': 'Combat Rating'
     })
     if not g.initialize():
         sys.exit(1)
@@ -379,17 +429,15 @@ elif options.type == 'scale':
         'file': 'CombatRatings.txt',
         'comment': '// Combat rating values for level 1 - %d, wow build %s\n' % (
             options.level, options.build),
-        'values': [ 'Dodge', 'Parry', 'Block', 'Hit - Melee', 'Hit - Ranged',
-                    'Hit - Spell', 'Crit - Melee', 'Crit - Ranged', 'Crit - Spell',
-                    'Resilience - Player Damage', 'Lifesteal', 'Haste - Melee', 'Haste - Ranged',
-                    'Haste - Spell', 'Expertise', 'Mastery', 'PvP Power',
-                    'Versatility - Damage Done', 'Versatility - Healing Done',
-                    'Versatility - Damage Taken', 'Speed', 'Avoidance' ]
+        'values': [ 'weapon skill', 'defense skill', 'dodge', 'parry', 'block',
+                    'hit melee', 'hit ranged', 'hit spell', 'crit melee',
+                    'crit ranged', 'crit spell', 'crit taken melee', 'haste melee', 'haste ranged',
+                    'haste spell']
     }
 
     if options.build >= dbc.WowVersion(8, 3, 0, 0):
         args['values'] += ['Corruption', 'Corruption Resistance']
-    else:
+    elif options.build >= dbc.WowVersion(4, 0, 0, 0):
         args['values'] += ['Multi-Strike', 'Readiness']
 
     g = CSVDataGenerator(options, args)
@@ -417,36 +465,7 @@ elif options.type == 'scale':
             options.max_ilevel, options.build),
         'values': combat_rating_values,
         'max_rows': options.max_ilevel
-    }, {
-        'file': 'StaminaMultByILvl.txt',
-        'key': 'Item Level',
-        'comment': '// Stamina multipliers for item level 1 - %d, wow build %s\n' % (
-            options.max_ilevel, options.build),
-        'values': combat_rating_values,
-        'max_rows': options.max_ilevel
-    }, {
-        'file': 'ItemLevelSquish.txt',
-        'key': 0,
-        'comment': '// Item level translation for item level 1 - %d, wow build %s\n' % (
-            options.max_ilevel, options.build),
-        'values': [ 1 ],
-        'max_rows': options.max_ilevel,
-        'simple_reader': True
     }])
-    if not g.initialize():
-        sys.exit(1)
-
-    g.generate()
-
-    g = CSVDataGenerator(options, {
-        'file': 'AzeriteLevelToItemLevel.txt',
-        'key': 'Azerite Level',
-        'comment': '// Azerite level to item level 1 - %d, wow build %s\n' % (
-            300, options.build),
-        'values': [ 'Item Level' ],
-        'base_type': 'unsigned',
-        'max_rows': 300
-    })
     if not g.initialize():
         sys.exit(1)
 

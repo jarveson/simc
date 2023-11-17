@@ -103,7 +103,7 @@ KEY_FIELD_HOTFIX_RECORD = {
     'ItemModifiedAppearance'      : 'id_item',
     'JournalEncounterItem'        : 'id_encounter',
     'JournalEncounterCreature'    : 'id',
-    'AzeritePowerSetMember'       : 'unk_28366',
+    'AzeritePowerSetMember'       : 'id_azerite_power_set',
     'RenownRewards'               : 'id_covenant',
     'GarrTalent'                  : 'id_garr_talent_tree',
     'CurvePoint'                  : 'id_distribution',

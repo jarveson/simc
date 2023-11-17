@@ -8,6 +8,7 @@
 #include "dbc/dbc.hpp"
 #include "dbc/gem_data.hpp"
 #include "dbc/item_database.hpp"
+#include "dbc/meta_gem_cond.hpp"
 #include "dbc/permanent_enchant.hpp"
 #include "dbc/spell_item_enchantment.hpp"
 #include "item/item.hpp"
@@ -319,6 +320,38 @@ const item_enchantment_data_t& enchant::find_meta_gem( const dbc_t& dbc, util::s
   return dbc.item_enchantment( 0 );
 }
 
+
+const item_enchantment_data_t& enchant::find_meta_gem( const dbc_t& dbc, unsigned gem_id )
+{
+  for ( const auto& gem_property : gem_property_data_t::data( dbc.ptr ) )
+  {
+    if ( gem_property.color != SOCKET_COLOR_META )
+      continue;
+
+    const item_enchantment_data_t& data = dbc.item_enchantment( gem_property.enchant_id );
+    if ( data.id == 0 )
+      continue;
+
+    if ( data.id_gem == 0 )
+      continue;
+
+    if ( gem_id != data.id_gem )
+      continue;
+
+    const auto& gem = dbc.item( data.id_gem );
+    // A lot of the old meta gems no longer exist in game
+    if ( gem.id == 0 )
+      continue;
+
+    if ( gem.id != data.id_gem )
+      continue;
+
+    return data;
+  }
+
+  return dbc.item_enchantment( 0 );
+}
+
 /**
  * Translate meta gem item enchantment data entry into a meta_gem_e type for
  * simc.
@@ -328,7 +361,12 @@ meta_gem_e enchant::meta_gem_type( const dbc_t& dbc, const item_enchantment_data
   if ( data.id == 0 )
     return META_GEM_NONE;
 
-  const auto& gem = dbc.item( data.id_gem );
+  return enchant::meta_gem_type( dbc, data.id_gem );
+}
+
+meta_gem_e enchant::meta_gem_type( const dbc_t& dbc, unsigned gem_id )
+{
+  const auto& gem = dbc.item( gem_id );
   if ( gem.id == 0 )
     return META_GEM_NONE;
 
@@ -382,13 +420,13 @@ item_socket_color enchant::initialize_gem( item_t& item, size_t gem_idx )
 
   const item_enchantment_data_t& data = item.player->dbc->item_enchantment( gem_prop.enchant_id );
 
-  enchant::initialize_item_enchant(
-      item, gem_prop.color != SOCKET_COLOR_META ? item.parsed.gem_stats : item.parsed.meta_gem_stats,
-      SPECIAL_EFFECT_SOURCE_GEM, data );
-
-  // TODO: This should really be removed, as should player -> meta_gem
-  if ( gem_prop.color == SOCKET_COLOR_META )
-    item.player->meta_gem = enchant::meta_gem_type( *( item.player->dbc ), data );
+  // This should only exist for meta gems, which are handled else where
+  if ( data.id_cond == 0 )
+  {
+    enchant::initialize_item_enchant(
+        item, gem_prop.color != SOCKET_COLOR_META ? item.parsed.gem_stats : item.parsed.meta_gem_stats,
+        SPECIAL_EFFECT_SOURCE_GEM, data );
+  }
 
   if ( !dbc::valid_gem_color( gem_prop.color ) )
   {
@@ -396,6 +434,78 @@ item_socket_color enchant::initialize_gem( item_t& item, size_t gem_idx )
   }
 
   return static_cast<item_socket_color>( gem_prop.color );
+}
+
+unsigned enchant::initialize_meta_gem( item_t& item, unsigned gem_id, const std::vector<unsigned> gem_colors )
+{
+  const auto& cond = item.player->dbc->meta_gem_cond( gem_id );
+  if ( cond.gem_id == 0 )
+  {
+    return gem_id;
+  }
+
+  bool meta_active = true;
+
+  for ( size_t i = 0; i < 5; ++i )
+  {
+    const auto& c = cond.op[ i ];
+
+    const auto& lt  = cond.lt_operand[ i ];
+    const auto& ltt = cond.lt_operandtype[ i ];
+
+    const auto& rt  = cond.rt_operand[ i ];
+    const auto& rtt = cond.rt_operandtype[ i ];
+
+    if ( lt != 0 && ltt != 0 || (rt != 0 && rtt != 0))
+    {
+      throw std::invalid_argument( fmt::format( "Invalid gem cond from id {}.", gem_id ) );
+    }
+
+    if ( c == 0 )
+    {
+      continue;
+    }
+
+    // 'At least x gems'
+    if ( c == 5 )
+    {
+      // rt has num, ltt has gem color
+      auto gem = (item_socket_color)( 1 << ltt );
+      auto cnt =
+          std::count_if( gem_colors.begin(), gem_colors.end(), [ gem ]( const auto& g ) { return ( g & gem ) != 0; } );
+      if ( cnt < rt )
+      {
+        meta_active = false;
+        break;
+      }
+    }
+    // 'More x than y gems'
+    else if ( c == 3 )
+    {
+      auto lgem = (item_socket_color)( 1 << ltt );
+      auto rgem = (item_socket_color)( 1 << rtt );
+
+      auto lcnt = std::count_if( gem_colors.begin(), gem_colors.end(),
+                                 [ lgem ]( const auto& g ) { return ( lgem & g ) != 0; } );
+      auto rcnt = std::count_if( gem_colors.begin(), gem_colors.end(),
+                                 [ lgem ]( const auto& g ) { return ( lgem & g ) != 0; } );
+
+      if ( lcnt < rcnt )
+      {
+        meta_active = false;
+        break;
+      }
+    }
+    else
+    {
+      throw std::invalid_argument( fmt::format( "Invalid gem cond op {} from id {}.", c, gem_id ) );
+    }
+  }
+
+  if ( !meta_active )
+    return META_GEM_NONE;
+
+  return gem_id;
 }
 
 item_socket_color enchant::initialize_relic( item_t& item, size_t relic_idx, const gem_property_data_t& gem_property )

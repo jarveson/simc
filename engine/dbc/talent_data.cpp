@@ -113,3 +113,17 @@ talent_data_nil_t::talent_data_nil_t()
 }
 
 /* static */ const talent_data_nil_t talent_data_nil_t::singleton;
+
+const talent_tab_data_t* talent_tab_data_t::find( unsigned id, bool ptr )
+{
+  const auto __data = data( ptr );
+  auto it           = range::lower_bound( __data, id, {}, &talent_tab_data_t::id );
+  if ( it != __data.end() && it->id == id )
+    return &*it;
+  return &talent_tab_data_t::nil();
+}
+
+util::span<const talent_tab_data_t> talent_tab_data_t::data( bool ptr )
+{
+  return SC_DBC_GET_DATA( __talent_tab_data, __ptr_talent_tab_data, ptr );
+}

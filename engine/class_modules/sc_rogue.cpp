@@ -9698,10 +9698,6 @@ void rogue_t::init_base_stats()
 
   player_t::init_base_stats();
 
-  base.attack_power_per_strength = 0.0;
-  base.attack_power_per_agility  = 1.0;
-  base.spell_power_per_intellect = 1.0;
-
   resources.base[ RESOURCE_COMBO_POINT ] = 5;
   resources.base[ RESOURCE_COMBO_POINT ] += talent.rogue.deeper_stratagem->effectN( 2 ).base_value();
   resources.base[ RESOURCE_COMBO_POINT ] += talent.outlaw.devious_stratagem->effectN( 2 ).base_value();

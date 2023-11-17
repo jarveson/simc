@@ -953,27 +953,7 @@ std::vector<const spell_data_t*> dbc::class_passives( const player_t* p )
 
 double dbc::item_level_squish( unsigned source_ilevel, bool ptr )
 {
-  if ( source_ilevel == 0 )
-  {
-    return 1;
-  }
-
-#if SC_USE_PTR == 1
-  if ( ptr )
-  {
-    assert( std::size( _ptr__item_level_squish ) >= source_ilevel );
-    return _ptr__item_level_squish[ source_ilevel - 1 ];
-  }
-  else
-  {
-    assert( std::size( __item_level_squish ) >= source_ilevel );
-    return __item_level_squish[ source_ilevel - 1 ];
-  }
-#else
-  ( void ) ptr;
-  assert( std::size( __item_level_squish ) >= source_ilevel );
-  return __item_level_squish[ source_ilevel - 1 ];
-#endif
+  return 1;
 }
 
 uint32_t dbc_t::replaced_id( uint32_t id_spell ) const
@@ -1016,24 +996,14 @@ double dbc_t::combat_rating_multiplier( unsigned item_level, combat_rating_multi
 {
   assert( item_level > 0 && item_level <= MAX_ILEVEL );
   assert( type < CR_MULTIPLIER_MAX );
-#if SC_USE_PTR
-  return ptr ? _ptr__combat_ratings_mult_by_ilvl[ type ][ item_level - 1 ]
-             : __combat_ratings_mult_by_ilvl[type][ item_level - 1 ];
-#else
-  return __combat_ratings_mult_by_ilvl[type][ item_level - 1 ];
-#endif
+  return 1;
 }
 
 double dbc_t::stamina_multiplier( unsigned item_level, combat_rating_multiplier_type type ) const
 {
   assert( item_level > 0 && item_level <= MAX_ILEVEL );
   assert( type < CR_MULTIPLIER_MAX );
-#if SC_USE_PTR
-  return ptr ? _ptr__stamina_mult_by_ilvl[ type ][ item_level - 1 ]
-             : __stamina_mult_by_ilvl[type][ item_level - 1 ];
-#else
-  return __stamina_mult_by_ilvl[type][ item_level - 1 ];
-#endif
+  return 1;
 }
 
 double dbc_t::melee_crit_base( pet_e t, unsigned level ) const
@@ -1046,15 +1016,39 @@ double dbc_t::spell_crit_base( pet_e t, unsigned level ) const
   return spell_crit_base( util::pet_class_type( t ), level );
 }
 
-double dbc_t::dodge_base( player_e ) const
+double dbc_t::dodge_base( player_e t ) const
 {
-  // base dodge is now 3.0 for all classes
-  return 3.0;
+  uint32_t class_id = util::class_id( t );
+
+  assert( class_id < dbc_t::class_max_size() );
+#if SC_USE_PTR
+  return ptr ? __ptr_gt_chance_to_dodge_base[ class_id ] : __gt_chance_to_dodge_base[ class_id ];
+#else
+  return __gt_chance_to_dodge_base[ class_id ];
+#endif
 }
 
 double dbc_t::dodge_base( pet_e t ) const
 {
   return dodge_base( util::pet_class_type( t ) );
+}
+
+ double dbc_t::melee_crit_base( player_e t, unsigned lvl ) const
+{
+  uint32_t class_id = util::class_id( t );
+
+  assert( class_id < dbc_t::class_max_size() );
+
+  return _chancetomeleecritbase[ t ][ 0 ];
+ }
+
+double dbc_t::spell_crit_base( player_e t, unsigned lvl ) const
+{
+  uint32_t class_id = util::class_id( t );
+
+  assert( class_id < dbc_t::class_max_size() );
+
+  return _chancetospellcritbase[ t ][ 0 ];
 }
 
 const stat_data_t& dbc_t::race_base( race_e r ) const
@@ -1180,15 +1174,7 @@ double dbc_t::melee_crit_scaling( player_e t, unsigned level ) const
   ( void ) class_id; ( void ) level;
 
   assert( class_id < dbc_t::class_max_size() && level > 0 && level <= MAX_SCALING_LEVEL );
-  /*
-#if SC_USE_PTR
-  return ptr ? __ptr_gt_chance_to_melee_crit[ class_id ][ level - 1 ]
-             : __gt_chance_to_melee_crit[ class_id ][ level - 1 ];
-#else
-  return __gt_chance_to_melee_crit[ class_id ][ level - 1 ];
-#endif
-  */
-  return 0;
+  return _chancetomeleecrit[ class_id ][ level - 1 ];
 }
 
 double dbc_t::melee_crit_scaling( pet_e t, unsigned level ) const
@@ -1202,15 +1188,7 @@ double dbc_t::spell_crit_scaling( player_e t, unsigned level ) const
   ( void ) class_id; ( void ) level;
 
   assert( class_id < dbc_t::class_max_size() && level > 0 && level <= MAX_SCALING_LEVEL );
-  /*
-#if SC_USE_PTR
-  return ptr ? __ptr_gt_chance_to_spell_crit[ class_id ][ level - 1 ]
-             : __gt_chance_to_spell_crit[ class_id ][ level - 1 ];
-#else
-  return __gt_chance_to_spell_crit[ class_id ][ level - 1 ];
-#endif
-  */
-  return 0;
+  return _chancetospellcrit[ class_id ][ level - 1 ];
 }
 
 double dbc_t::spell_crit_scaling( pet_e t, unsigned level ) const
@@ -1240,31 +1218,49 @@ double dbc_t::resolve_level_scaling( unsigned level ) const
 #endif
 }
 
-double dbc_t::avoid_per_str_agi_by_level( unsigned level ) const
+double dbc_t::avoid_per_agi_by_class( player_e t ) const
 {
-  assert( level > 0 && level <= MAX_LEVEL );
-#if SC_USE_PTR
-  return ptr ? _ptr_gt_avoid_per_str_agi_by_level[level - 1]
-             : _gt_avoid_per_str_agi_by_level[level - 1];
-#else
-  return _gt_avoid_per_str_agi_by_level[level - 1];
-#endif
+  uint32_t class_id = util::class_id( t );
+  return _gt_avoid_per_agi_by_class[ class_id ];
 }
 
 double dbc_t::health_base( player_e t, unsigned level ) const
 {
   uint32_t class_id = util::class_id( t );
-  ( void ) class_id; ( void ) level;
+  ( void ) level;
 
   assert( class_id < MAX_CLASS && level > 0 && level <= MAX_SCALING_LEVEL );
-  /*
-#if SC_USE_PTR
-  return ptr ? __ptr_gt_octbase_hpby_class[ class_id ][ level - 1 ]
-             : __gt_octbase_hpby_class[ class_id ][ level - 1 ];
-#else
-  return __gt_octbase_hpby_class[ class_id ][ level - 1 ];
-#endif
-  */
+  return __basehpbyclass[ class_id ];
+}
+
+double dbc_t::ranged_ap_per_agi( player_e t ) const
+{
+  uint32_t class_id   = util::class_id( t );
+  auto ap = ap_per_stat_t::find( t );
+  if ( ap.size() )
+  {
+    return ap[ 0 ].ranged_attack_power_per_agility;
+  }
+  return 0;
+}
+double dbc_t::ap_per_agi( player_e t ) const
+{
+  uint32_t class_id = util::class_id( t );
+  auto ap           = ap_per_stat_t::find( t );
+  if ( ap.size() )
+  {
+    return ap[ 0 ].attack_power_per_agility;
+  }
+  return 0;
+}
+double dbc_t::ap_per_str( player_e t ) const
+{
+  uint32_t class_id = util::class_id( t );
+  auto ap           = ap_per_stat_t::find( t );
+  if ( ap.size() )
+  {
+    return ap[ 0 ].attack_power_per_strength;
+  }
   return 0;
 }
 
@@ -1277,19 +1273,14 @@ double dbc_t::resource_base( player_e t, unsigned level ) const
   return ptr ? _ptr__base_mp[ class_id ][ level - 1 ]
              : __base_mp[ class_id ][ level - 1 ];
 #else
-  return __base_mp[ class_id ][ level - 1 ];
+  return _octbasempbyclass[ class_id ][ level - 1 ];
 #endif
 }
 
 double dbc_t::health_per_stamina( unsigned level ) const
 {
   assert( level > 0 && level <= MAX_SCALING_LEVEL );
-#if SC_USE_PTR
-  return ptr ? _ptr__hp_per_sta[ level - 1 ]
-             : __hp_per_sta[ level - 1 ];
-#else
-  return __hp_per_sta[ level - 1 ];
-#endif
+  return 10;
 }
 
 
@@ -1309,7 +1300,9 @@ const stat_data_t& dbc_t::attribute_base( pet_e t, unsigned level ) const
 
 double dbc_t::combat_rating( unsigned combat_rating_id, unsigned level ) const
 {
-  assert( combat_rating_id < RATING_MAX );
+  if ( combat_rating_id > RATING_SPELL_HASTE )
+      return 0;
+  //assert( combat_rating_id < RATING_MAX );
   assert( level <= MAX_SCALING_LEVEL );
 #if SC_USE_PTR
   return ptr ? _ptr__combat_ratings[ combat_rating_id ][ level - 1 ] * 100.0
@@ -1321,24 +1314,7 @@ double dbc_t::combat_rating( unsigned combat_rating_id, unsigned level ) const
 
 unsigned dbc_t::azerite_item_level( unsigned power_level ) const
 {
-  if ( power_level == 0 )
-  {
-    return 0;
-  }
-
-#if SC_USE_PTR
-  auto arr = ptr ? _ptr__azerite_level_to_item_level
-                 : __azerite_level_to_item_level;
-#else
-  auto arr = __azerite_level_to_item_level;
-#endif
-
-  if ( power_level > MAX_AZERITE_LEVEL )
-  {
-    return 0;
-  }
-
-  return arr[ power_level - 1 ];
+  return 0;
 }
 
 const azerite_power_entry_t& dbc_t::azerite_power( unsigned power_id ) const
@@ -1459,29 +1435,24 @@ double dbc_t::real_ppm_modifier( unsigned spell_id, player_t* player, unsigned i
 double dbc_t::item_socket_cost( unsigned ilevel ) const
 {
   assert( ilevel > 0 && ( ilevel <= random_property_max_level() ) );
-#if SC_USE_PTR
-  return ptr ? _ptr__item_socket_cost_per_level[ ilevel - 1 ]
-             : __item_socket_cost_per_level[ ilevel - 1 ];
-#else
-  return __item_socket_cost_per_level[ ilevel - 1 ];
-#endif
+  return 0;
 }
 
 double dbc_t::armor_mitigation_constant( unsigned level ) const
 {
   assert( level > 0 && level <= ( MAX_SCALING_LEVEL + 3 ) );
-  return expected_stat( level ).armor_constant;
+  return 1;
 }
 
 double dbc_t::get_armor_constant_mod( difficulty_e diff ) const
 {
-  return expected_stat_mod( diff, &expected_stat_mod_t::armor_constant );
+  return 100; // todo
 }
 
 double dbc_t::npc_armor_value( unsigned level ) const
 {
   assert( level > 0 && level <= ( MAX_SCALING_LEVEL + 3 ) );
-  return expected_stat( level ).creature_armor;
+  return 100; // todo
 }
 
 /* Generic helper methods */
@@ -1676,7 +1647,7 @@ unsigned dbc_t::class_ability_id( player_e          c,
                                   bool              name_tokenized ) const
 {
   const active_class_spell_t* active_spell = nullptr;
-  if ( spec_id != SPEC_NONE )
+  /* if ( spec_id != SPEC_NONE )
   {
     active_spell = &active_class_spell_t::find( spell_name, spec_id, ptr, name_tokenized );
 
@@ -1695,7 +1666,7 @@ unsigned dbc_t::class_ability_id( player_e          c,
           util::translate_class_id( class_idx ), ptr, name_tokenized );
     }
   }
-  else if ( c != PLAYER_NONE )
+  else */if ( c != PLAYER_NONE )
   {
     active_spell = &active_class_spell_t::find( spell_name, c, ptr, name_tokenized );
   }

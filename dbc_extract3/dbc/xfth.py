@@ -104,12 +104,12 @@ class XFTHParser(DBCParserBase):
         if not super().parse_header():
             return False
 
-        if self.build != self.options.build.build():
+        '''if self.build != self.options.build.build():
             logging.error('Invalid hotfix file build version %d, expected %d' % (
                 self.build, self.options.build.build()
             ))
             return False
-
+        '''
         return True
 
     def parse_blocks(self):

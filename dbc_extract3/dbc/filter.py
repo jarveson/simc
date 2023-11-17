@@ -2,6 +2,7 @@ from collections import defaultdict
 import logging
 
 from dbc import db, util, constants
+import dbc
 
 # Simple cache for raw filter results
 _CACHE = { }
@@ -71,8 +72,10 @@ class ActiveClassSpellSet(DataSet):
         if m.flags_1 & 0x80:
             return False
 
-        if skill_line_ability and skill_line_ability.unk_13 not in [2, 4]:
-            return False
+        #if not m.flags_1 & 0x10:
+        #    return False
+        #if (skill_line_ability and skill_line_ability.unk_13 not in [2, 4]):
+        #    return False
 
         return True
 
@@ -100,6 +103,35 @@ class ActiveClassSpellSet(DataSet):
                 continue
 
             _data += [(data.ref('spec_id'), data.ref('spell_id'), data.ref('replace_spell_id'))]
+
+        for data in self.db('SpellClassOptions').values():
+            if data.family == 0:
+                continue
+
+            spell = data.ref('id_spell')
+            sla = spell.child_refs('SkillLineAbility', 'id_spell')
+            if len(sla) == 0:
+                continue;
+            for entry in sla:
+                sla = entry
+                break
+            if not self.valid_spell(sla, spell):
+                continue
+
+            if data.flags_1 == 0 and data.flags_2 == 0 and data.flags_3 == 0 and data.flags_4 == 0:
+                continue
+
+            class_id = util.class_id(family = data.family)
+            if class_id == -1:
+                continue
+
+            for effect in spell.children('SpellEffect'):
+                trigger_spells = self.get_trigger_spells(effect, trigger_spells)
+
+            if data.id_spell in trigger_spells:
+                continue
+
+            _data += [(class_id, spell, sla.ref('id_replace'))]
 
         for data in self.db('SkillLineAbility').values():
             if data.id_skill == 0 or data.id_skill not in util.class_skills():
@@ -263,6 +295,7 @@ class ConduitSet(DataSet):
 
 class SoulbindAbilitySet(DataSet):
     def _filter(self, **kwargs):
+        return list()
         _soulbinds = set()
 
         for entry in self.db('Soulbind').values():
@@ -320,12 +353,6 @@ class TalentSet(DataSet):
         talents = list()
 
         for entry in self.db('Talent').values():
-            if entry.id_spell == 0:
-                continue
-
-            if entry.ref('id_spell').id != entry.id_spell:
-                continue
-
             talents.append(entry)
 
         return talents
@@ -335,10 +362,10 @@ class TemporaryEnchantItemSet(DataSet):
         items = list()
 
         for effect in self.db('ItemEffect').values():
-            item = effect.child_ref('ItemXItemEffect').parent_record()
-            item2 = self.db('Item')[item.id]
-            if item.id == 0:
+            item_id = effect.parent_record().id
+            if item_id == 0:
                 continue
+            item = self.db('ItemSparse')[item_id]
 
             spell_effects = effect.ref('id_spell').children('SpellEffect')
 
@@ -374,7 +401,10 @@ class TemporaryEnchantItemSet(DataSet):
             if True in mod_skill_effects:
                 continue
 
-            items.append((item, effect.ref('id_spell'), enchant_id, item2.ref('id_crafting_quality').tier))
+            if self._options.build >= dbc.WowVersion(4, 0, 0, 0):
+                items.append((item, effect.ref('id_spell'), enchant_id, item2.ref('id_crafting_quality').tier))
+            else:
+                items.append((item, effect.ref('id_spell'), enchant_id, 0))
 
         return items
 
@@ -658,6 +688,8 @@ class PermanentEnchantItemSet(DataSet):
         if _item.id == 0:
             return None, None
 
+        return None, None
+
         for effect_map_ref in _item.children('ItemXItemEffect'):
             _effect = self.get_unranked_enchant_effect(effect_map_ref.ref('id_item_effect').id_spell)
             if _effect is None:
@@ -715,6 +747,7 @@ class PermanentEnchantItemSet(DataSet):
                     enchants[_key] = (_enchant, _enchant_sei)
 
             elif unranked_item is not None:
+                continue
                 for item_effect_map_ref in unranked_item.ref('item_type').children('ItemXItemEffect'):
                     _spell = item_effect_map_ref.ref('id_item_effect').ref('id_spell')
                     if _spell.id == 0:
@@ -769,6 +802,7 @@ class PermanentEnchantItemSet(DataSet):
                         continue
 
                     for item_effect_map_ref in entry.ref('id_item').children('ItemXItemEffect'):
+                        continue
                         _spell = item_effect_map_ref.ref('id_item_effect').ref('id_spell')
                         _spell_effects = _spell.children('SpellEffect')
                         _effects = [e.type == 53 for e in _spell_effects]
