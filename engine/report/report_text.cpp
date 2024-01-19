@@ -1190,6 +1190,7 @@ void print_player_sequence( std::ostream& os, sim_t* sim, const std::vector<play
 
 void print_profilesets( std::ostream& out, const profileset::profilesets_t& profilesets, const sim_t& sim )
 {
+#ifndef SC_NO_THREADING
   if ( profilesets.n_profilesets() == 0 )
   {
     return;
@@ -1203,6 +1204,7 @@ void print_profilesets( std::ostream& out, const profileset::profilesets_t& prof
   range::for_each( results, [ &out ]( const profileset::profile_set_t* profileset ) {
     fmt::print( out, "    {:-10.3f} : {:s}\n", profileset->result().median(), profileset->name() );
   } );
+#endif
 }
 
 void print_text_report( std::ostream& os, sim_t* sim, bool detail )

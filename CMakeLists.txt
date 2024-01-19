@@ -17,6 +17,7 @@ option(SC_NO_NETWORKING "Disable all networking related stuff." OFF)
 option(SC_USE_FLAT_INSTALL "Install files into a flat folder structure" ${WIN32})
 
 option(SC_EVENT_QUEUE_DEBUG "Enable Event Queue Debug Info" OFF)
+option(BUILD_TESTING "Build tests" ON)
 
 set(CMAKE_CXX_STANDARD 17 CACHE STRING "C++ standard to conform to")
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
@@ -42,6 +43,15 @@ endif()
 
 # output a compile_commands.json used for editor tooling
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# Detect whether we are compiling for the browser (wasm)
+if(CMAKE_SYSTEM_NAME STREQUAL "Emscripten")
+    set(SC_WASM ON)
+    set(SC_NO_THREADING ON)
+    set(SC_NO_NETWORKING ON)
+    set(BUILD_GUI OFF)
+    set(BUILD_TESTING OFF)
+endif()
 
 function(sc_common_compiler_options target)
   target_compile_options(${target} PRIVATE
@@ -77,11 +87,13 @@ SET(CMAKE_PREFIX_PATH "G:/Qt6/6.4.3/msvc2019_64/lib/cmake/Qt6")
 endif()
 
 # 'simc' command line interface target
-add_executable(simc engine/sc_main.cpp)
-target_link_libraries(simc engine)
-sc_common_compiler_options(simc)
-
-install(TARGETS simc DESTINATION ${SIMC_INSTALL_BIN})
+# Do not build when building WASM target
+if(NOT SC_WASM)
+    add_executable(simc engine/sc_main.cpp)
+    target_link_libraries(simc engine)
+    sc_common_compiler_options(simc)
+    install(TARGETS simc DESTINATION ${SIMC_INSTALL_BIN})
+endif()
 
 install(DIRECTORY profiles/ DESTINATION ${SIMC_INSTALL_SHARED}/profiles
     FILES_MATCHING PATTERN "*.simc" )
@@ -100,7 +112,6 @@ DESTINATION ${SIMC_INSTALL_SHARED})
 
 include(${PROJECT_SOURCE_DIR}/cmake/package.cmake)
 
-option(BUILD_TESTING "Build tests" ON)
 if (BUILD_TESTING)
   include(CTest)
   enable_testing()

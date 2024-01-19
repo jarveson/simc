@@ -1151,8 +1151,6 @@ void profilesets_t::initialize( sim_t* ) {}
 std::string profilesets_t::current_profileset_name() { return "DUMMY"; }
 void profilesets_t::cancel() {}
 bool profilesets_t::iterate( sim_t*  ) { return true ;}
-void profilesets_t::output_html( const sim_t&, std::ostream& ) const {}
-void profilesets_t::output_text( const sim_t&, std::ostream& ) const {}
 size_t profilesets_t::n_profilesets() const { return 0; }
 bool profilesets_t::is_running() const { return false; }
 }

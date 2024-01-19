@@ -16,6 +16,8 @@
 #include "scale_factor_control.hpp"
 #include "gsl-lite/gsl-lite.hpp"
 
+#include "wasm/sc_wasm.hpp"
+
 #include <iostream>
 #include <sstream>
 
@@ -128,6 +130,12 @@ bool progress_bar_t::update( bool finished, int index )
   }
 
   auto progress = sim.progress( nullptr, index );
+#ifdef SC_WASM
+  {
+    wasm_hooks::update_progress( progress, current_progress(), compute_total_phases(), base_str, phase_str );
+    return false;
+  }
+#endif
   if ( ! finished )
   {
     auto update_interval = last_update - chrono::wall_clock::now();
