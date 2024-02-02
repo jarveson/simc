@@ -48,7 +48,7 @@ parser.add_argument("-f",            dest = "format",
                     help = "DBC Format file")
 parser.add_argument("--delim",       dest = "delim",        default = ',',
                     help = "Delimiter for -t csv")
-parser.add_argument("-l", "--level", dest = "level",        default = 80, type = int,
+parser.add_argument("-l", "--level", dest = "level",        default = 85, type = int,
                     help = "Scaling values up to level [125]")
 parser.add_argument("-b", "--build", dest = "build",        default = None, type = parse_version,
                     help = "World of Warcraft build version (8.0.1.12345)")
@@ -376,6 +376,16 @@ elif options.type == 'scale':
     g.generate()
 
     g = CSVDataGenerator(options, {
+        'file': 'octbasehpbyclass.txt',
+        'comment': '// Base health points for levels 1 - %d, wow build %s\n' % (
+            options.level, options.build),
+        'values': DataGenerator._class_names
+    })
+    if not g.initialize():
+        sys.exit(1)
+    g.generate()
+
+    g = CSVDataGenerator(options, {
         'file': 'chancetospellcrit.txt',
         'comment': '// Chance to Spell Crit 1 - %d, wow build %s\n' % (
             options.level, options.build),
@@ -437,7 +447,7 @@ elif options.type == 'scale':
 
     if options.build >= dbc.WowVersion(8, 3, 0, 0):
         args['values'] += ['Corruption', 'Corruption Resistance']
-    elif options.build >= dbc.WowVersion(4, 0, 0, 0):
+    elif options.build >= dbc.WowVersion(6, 0, 0, 0):
         args['values'] += ['Multi-Strike', 'Readiness']
 
     g = CSVDataGenerator(options, args)

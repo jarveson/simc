@@ -375,7 +375,7 @@ public:
 
   int resolve_item_scaling( unsigned level ) const;
   double resolve_level_scaling( unsigned level ) const;
-  double avoid_per_agi_by_class( player_e t ) const;
+  double avoid_per_agi_by_class( player_e t, unsigned level) const;
 
   unsigned real_ppm_scale( unsigned ) const;
   double real_ppm_modifier( unsigned spell_id, player_t* player, unsigned item_level = 0 ) const;

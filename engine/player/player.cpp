@@ -1595,11 +1595,11 @@ void player_t::init_base_stats()
   }
 
   base.dodge_per_agility =
-        dbc->avoid_per_agi_by_class( type ); 
+        dbc->avoid_per_agi_by_class( type, level() ); 
 
   // All classes get 3% dodge and miss
-  //base.dodge = 0.03;
-  //base.miss = 0.03;
+  base.dodge = 0.03;
+  base.miss = 0.03;
 
   if (racials.quickness->ok()) // check spell data to avoid applying it to enemies.
   {

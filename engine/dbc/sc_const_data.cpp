@@ -1218,19 +1218,23 @@ double dbc_t::resolve_level_scaling( unsigned level ) const
 #endif
 }
 
-double dbc_t::avoid_per_agi_by_class( player_e t ) const
+double dbc_t::avoid_per_agi_by_class( player_e t, unsigned level ) const
 {
   uint32_t class_id = util::class_id( t );
-  return _gt_avoid_per_agi_by_class[ class_id ];
+  assert( class_id < MAX_CLASS && level > 0 && level <= MAX_SCALING_LEVEL );
+  return _gt_avoid_per_agi_by_class[ class_id ][level];
 }
 
 double dbc_t::health_base( player_e t, unsigned level ) const
 {
   uint32_t class_id = util::class_id( t );
-  ( void ) level;
 
   assert( class_id < MAX_CLASS && level > 0 && level <= MAX_SCALING_LEVEL );
-  return __basehpbyclass[ class_id ];
+#if SC_USE_PTR
+  return ptr ? _ptr__base_hp[ class_id ][ level - 1 ] : __base_hp[ class_id ][ level - 1 ];
+#else
+  return _octbasehpbyclass[ class_id ][ level - 1 ];
+#endif
 }
 
 double dbc_t::ranged_ap_per_agi( player_e t ) const
@@ -1280,7 +1284,7 @@ double dbc_t::resource_base( player_e t, unsigned level ) const
 double dbc_t::health_per_stamina( unsigned level ) const
 {
   assert( level > 0 && level <= MAX_SCALING_LEVEL );
-  return 10;
+  return __gt_octhp_per_stamina[ level ];
 }
 
 
