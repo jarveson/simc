@@ -1942,6 +1942,7 @@ void sim_t::combat_begin()
   if ( overrides.battle_shout ) auras.battle_shout->override_buff();
   if ( overrides.mark_of_the_wild ) auras.mark_of_the_wild->override_buff();
   if ( overrides.power_word_fortitude ) auras.power_word_fortitude -> override_buff();
+  if ( overrides.crit_chance ) auras.crit_chance->override_buff();
 
   for ( player_e i = PLAYER_NONE; i < PLAYER_MAX; ++i )
   {
@@ -2788,6 +2789,10 @@ void sim_t::init()
   auras.power_word_fortitude = make_buff( this, "power_word_fortitude", dbc::find_spell( this, 21562 ) )
                                    ->set_default_value( dbc::find_spell( this, 21562 )->effectN( 1 ).percent() )
                                    ->add_invalidate( CACHE_STAMINA );
+
+  auras.crit_chance = make_buff( this, "leader_of_the_pack", dbc::find_spell( this, 24932 ) )
+                          ->set_default_value( dbc::find_spell( this, 24932 )->effectN( 1 ).percent() )
+                          ->add_invalidate(CACHE_CRIT_CHANCE);
 
   // Fight style initialization must be performed before target creation and raid event initialization, since fight
   // styles may define/override these things.
