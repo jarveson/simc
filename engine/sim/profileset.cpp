@@ -1011,6 +1011,8 @@ void save_output_data( profile_set_t& profileset, const player_t* parent_player,
     }
   } else if ( option == "talents" ) {
     if ( parent_player -> talents_str != player -> talents_str ) {
+      assert( false );
+      /*
       std::vector<const talent_data_t*> saved_talents;
       for ( auto talent_row = 0; talent_row < MAX_TALENT_ROWS; talent_row++ )
       {
@@ -1036,7 +1038,7 @@ void save_output_data( profile_set_t& profileset, const player_t* parent_player,
       if ( !saved_talents.empty() )
       {
         profileset.output_data().talents( saved_talents );
-      }
+      }*/
     }
   } else if ( option == "gear" ) {
     const auto& parent_items = parent_player -> items;

@@ -127,3 +127,13 @@ util::span<const talent_tab_data_t> talent_tab_data_t::data( bool ptr )
 {
   return SC_DBC_GET_DATA( __talent_tab_data, __ptr_talent_tab_data, ptr );
 }
+
+bool talent_tab_data_t::is_class( player_e c ) const
+{
+  unsigned mask = util::class_id_mask( c );
+
+  if ( mask == 0 )
+    return false;
+
+  return ( ( class_mask & mask ) == mask );
+}

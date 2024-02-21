@@ -98,6 +98,8 @@ struct talent_tab_data_t
   unsigned class_mask;
   unsigned pet_talent_mask;
 
+  bool is_class( player_e c ) const;
+
   static util::span<const talent_tab_data_t> data( bool ptr = false );
 
   static const talent_tab_data_t* find( unsigned id, bool ptr = false );

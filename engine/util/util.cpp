@@ -2942,14 +2942,14 @@ std::string util::create_blizzard_talent_url( const player_t& p )
   url += dbc::specialization_string( p.specialization() );
   url += "/talents=";
 
-  for ( int i = 0; i < MAX_TALENT_ROWS; i++ )
+  /* for ( int i = 0; i < MAX_TALENT_ROWS; i++ )
   {
     if ( p.talent_points->choice( i ) >= 0 )
       url += util::to_string( p.talent_points->choice( i ) + 1 );
     else
       url += "0";
   }
-
+  */
   return url;
 }
 

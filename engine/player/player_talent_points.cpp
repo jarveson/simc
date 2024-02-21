@@ -7,24 +7,22 @@
 #include "util/util.hpp"
 #include "fmt/format.h"
 
-bool player_talent_points_t::validate( const spell_data_t* spell, int row, int col ) const
+bool player_talent_points_t::validate( const spell_data_t* spell, int tree, int row, int col ) const
 {
-  return has_row_col( row, col ) || range::any_of( _validity_fns, [spell]( const validity_fn_t& fn ) {
+  return has_row_col( tree, row, col ) || range::any_of( _validity_fns, [spell]( const validity_fn_t& fn ) {
                                       return fn( spell );
                                     } );
 }
 
 void player_talent_points_t::clear()
 {
-  range::fill( _choices, -1 );
+  for ( int j = 0; j < MAX_TALENT_TREES; ++j )
+  {
+    auto& c = _choices[ j ];
+    for ( int i = 0; i < c.size(); ++i )
+    {
+      range::fill( c[i], -1 );   
+    }
+  }
 }
 
-util::span<const int> player_talent_points_t::choices() const
-{
-  return util::make_span(_choices);
-}
-
-std::string player_talent_points_t::to_string() const
-{
-  return fmt::format("{{ {} }}", util::string_join(choices(), ", "));
-}
