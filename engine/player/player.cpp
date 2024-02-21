@@ -4100,6 +4100,8 @@ void player_t::create_buffs()
     // cata
     debuffs.bleed_dmg_taken =
         make_buff( this, "mangle", find_spell( 33876 ) )->set_default_value_from_effect( 2 );
+
+    debuffs.spell_dmg_taken = make_buff( this, "earth_and_moon", find_spell( 60433 ) )->set_default_value_from_effect(1);
   }
 
   // set up always since this can be applied by enemy actions and raid events.

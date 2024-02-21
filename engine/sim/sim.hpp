@@ -222,6 +222,7 @@ struct sim_t : private sc_thread_t
     // Debuff overrides
     int mangle;
     int bleeding;
+    int spell_dmg_taken;
 
     int mystic_touch;
     int mortal_wounds;

@@ -567,6 +567,7 @@ struct player_t : public actor_t
     // Cata
     buff_t* healing_reduc;
     buff_t* bleed_dmg_taken;
+    buff_t* spell_dmg_taken;
     buff_t* attack_spd_reduc;
     buff_t* phys_dmg_output;
 
