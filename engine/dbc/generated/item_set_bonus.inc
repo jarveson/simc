@@ -1,4 +1,4 @@
-// Set bonus data, wow build 3.4.3.51943
+// Set bonus data, wow build 4.4.0.53627
 static const std::array<item_set_bonus_t, 6> __set_bonus_data { {
   // SetBonusName                               , OptName              , EnumID, SetID, Tier, Bns, Cls, Spec, SpellID, ItemIDs
   { "Lasherweave Regalia"                       , "tier10"             ,     22,   888,   10,   2,  11,   -1,   70718, {  51706,  51705,  51704,  51703,  51702,  0 } },

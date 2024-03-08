@@ -2002,9 +2002,12 @@ void player_t::init_meta_gem()
         }
     }
 
-    assert(item);
-    meta_id = enchant::initialize_meta_gem(*item, meta_id, gem_colors);
-    meta_gem = enchant::meta_gem_type(*dbc, meta_id);
+    if (!item)
+        meta_gem = META_GEM_NONE;
+    else {
+        meta_id = enchant::initialize_meta_gem(*item, meta_id, gem_colors);
+        meta_gem = enchant::meta_gem_type(*dbc, meta_id);
+    }
   }
 
   if ( ( meta_gem == META_AUSTERE_EARTHSIEGE ) || ( meta_gem == META_AUSTERE_SHADOWSPIRIT ) )
@@ -4450,7 +4453,7 @@ double player_t::composite_melee_crit_chance() const
       composite_melee_crit_rating() / current.rating.attack_crit );
 
   if ( current.attack_crit_per_agility )
-    ac += ( cache.agility() / current.attack_crit_per_agility / 100.0 );
+    ac += ( cache.agility() * current.attack_crit_per_agility );
 
   for ( auto b : buffs.stat_pct_buffs[ STAT_PCT_BUFF_CRIT ] )
     ac += b->check_stack_value();
@@ -4760,7 +4763,7 @@ double player_t::composite_spell_crit_chance() const
 
   if ( current.spell_crit_per_intellect > 0 )
   {
-    sc += ( cache.intellect() / current.spell_crit_per_intellect / 100.0 );
+    sc += ( cache.intellect() * current.spell_crit_per_intellect );
   }
 
   for ( auto b : buffs.stat_pct_buffs[ STAT_PCT_BUFF_CRIT ] )
@@ -10660,7 +10663,7 @@ void player_t::replace_spells()
   }
 
   // Search talents for spells to replace.
-  for ( int k = 0; k < MAX_TALENT_COLS; ++k )
+  for ( int k = 0; k < MAX_TALENT_TREES; ++k )
   {
     for ( int j = 0; j < MAX_TALENT_ROWS; j++ )
     {

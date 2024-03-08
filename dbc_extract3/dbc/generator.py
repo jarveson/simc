@@ -620,7 +620,11 @@ class TalentDataGenerator(DataGenerator):
             self.output_record(fields)
         self.output_footer()
 
-        data = self.db('TalentTab').values()
+        data = []
+        for e in self.db('TalentTab').values():
+            if e.order_index < 0:
+                continue
+            data.append(e)
 
         self.output_header(
                 header = 'Talent Tabs',
@@ -948,7 +952,7 @@ class ItemDataGenerator(DataGenerator):
                 fields += item.field('class_mask', 'race_mask')
                 fields += [ '{ %s }' % ', '.join(item.field('socket_color_1', 'socket_color_2', 'socket_color_3')) ]
                 fields += item.field('gem_props', 'socket_bonus', 'item_set', 'id_curve', 'id_artifact' )
-                if self._options.build >= dbc.WowVersion(4, 0, 0, 0):
+                if self._options.build >= dbc.WowVersion(5, 0, 0, 0):
                     fields += item2.ref('id_crafting_quality').field('tier')
 
                 self.output_record(fields)
@@ -3319,11 +3323,15 @@ class SpellDataGenerator(DataGenerator):
             fields += [ u'%#.16x' % ids.get(id, { 'mask_class' : 0, 'mask_race': 0 })['mask_race'] ]
             fields += [ u'%#.8x' % ids.get(id, { 'mask_class' : 0, 'mask_race': 0 })['mask_class'] ]
 
-            scaling_entry = spell.get_link('scaling')
-            fields += scaling_entry.field('max_scaling_level')
-            hotfix.add(scaling_entry, ('max_scaling_level', 8))
-
             level_entry = spell.get_link('level')
+
+            if self._options.build >= dbc.WowVersion(8, 2, 0, 30080):
+                scaling_entry = spell.get_link('scaling')
+                fields += scaling_entry.field('max_scaling_level')
+                hotfix.add(scaling_entry, ('max_scaling_level', 8))
+            else:
+                fields += level_entry.field('max_level')
+                hotfix.add(level_entry, ('max_level', 8))
 
             # Simulationcraft does not really support the concept of "Learn"
             # and "Required" level, so grab the highest of the two for level
@@ -3403,7 +3411,7 @@ class SpellDataGenerator(DataGenerator):
             hotfix.add(shapeshif_entry, ('flags_1', 38))
 
             mechanic = category.ref('id_mechanic')
-            fields += mechanic.field('mechanic')
+            fields += category.field('id_mechanic')
             hotfix.add(mechanic, ('mechanic', 39))
 
             power = spell.get_link('azerite_power')
@@ -3512,9 +3520,8 @@ class SpellDataGenerator(DataGenerator):
                 ('points_per_combo_points', 20), ('real_ppl', 21))
 
             mechanic = effect.ref('id_mechanic')
-            if mechanic != None:
-                fields += mechanic.field('mechanic')
-                hotfix.add(mechanic, ('mechanic', 22))
+            fields += effect.field('id_mechanic')
+            hotfix.add(mechanic, ('mechanic', 22))
 
             fields += effect.field('chain_target', 'implicit_target_1', 'implicit_target_2', 'val_mul', 'pvp_coefficient')
             hotfix.add(effect, ('chain_target', 23), ('implicit_target_1', 24),
@@ -3574,7 +3581,7 @@ class SpellDataGenerator(DataGenerator):
                 index = [ e[1] for e in sorted(spellpower_id_index, key = lambda e: e[0]) ],
                 array = 'spellpower')
 
-        if self._options.build >= dbc.WowVersion(4, 0, 0, 0):
+        if self._options.build >= dbc.WowVersion(5, 0, 0, 0):
             # Write out labels
             self.output_header(
                     header = 'Applied spell labels',
@@ -4951,7 +4958,7 @@ class ExpectedStatGenerator(DataGenerator):
 
     def generate(self, data = None):
         self.output_header(
-            header = 'Expected stat for levels 1-{}'.format(data[-1].id_parent),
+            header = 'Expected stat for levels 1-{}'.format(data[-1].id_parent if data else 0),
             type = 'expected_stat_t',
             array = 'expected_stat',
             length = len(data))

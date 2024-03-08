@@ -439,9 +439,9 @@ elif options.type == 'scale':
         'file': 'CombatRatings.txt',
         'comment': '// Combat rating values for level 1 - %d, wow build %s\n' % (
             options.level, options.build),
-        'values': [ 'weapon skill', 'defense skill', 'dodge', 'parry', 'block',
-                    'hit melee', 'hit ranged', 'hit spell', 'crit melee',
-                    'crit ranged', 'crit spell', 'crit taken melee', 'haste melee', 'haste ranged',
+        'values': [ 'dodge', 'parry', 'block', 'hit melee', 'hit ranged', 
+                    'hit spell', 'crit melee', 'crit ranged', 'crit spell',
+                    'crit taken melee', 'weapon skill', 'haste melee', 'haste ranged',
                     'haste spell']
     }
 

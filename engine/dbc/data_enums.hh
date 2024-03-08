@@ -1108,7 +1108,7 @@ enum effect_subtype_t : unsigned {
     A_X_RAY = 273,
     A_274 = 274,
     A_MOD_IGNORE_SHAPESHIFT = 275,
-    A_276 = 276, // Only "Test Mod Damage % Mechanic" spell, possible mod damage done
+    A_MOD_DAMAGE_DONE_FOR_MECHANIC = 276, // Only "Test Mod Damage % Mechanic" spell, possible mod damage done
     A_MOD_MAX_AFFECTED_TARGETS = 277,
     A_MOD_DISARM_RANGED = 278,
     A_279 = 279,

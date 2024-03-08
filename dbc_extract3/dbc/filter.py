@@ -353,6 +353,10 @@ class TalentSet(DataSet):
         talents = list()
 
         for entry in self.db('Talent').values():
+            if entry.ref('id_tab').order_index < 0:
+                continue
+            if not entry.ref('spell_rank_1').name:
+                continue
             talents.append(entry)
 
         return talents
@@ -401,7 +405,7 @@ class TemporaryEnchantItemSet(DataSet):
             if True in mod_skill_effects:
                 continue
 
-            if self._options.build >= dbc.WowVersion(4, 0, 0, 0):
+            if self._options.build >= dbc.WowVersion(5, 0, 0, 0):
                 items.append((item, effect.ref('id_spell'), enchant_id, item2.ref('id_crafting_quality').tier))
             else:
                 items.append((item, effect.ref('id_spell'), enchant_id, 0))
