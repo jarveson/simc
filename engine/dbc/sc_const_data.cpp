@@ -1861,6 +1861,8 @@ unsigned dbc_t::mastery_ability_id( specialization_e spec ) const
 
 bool dbc_t::is_specialization_ability( specialization_e spec, unsigned spell_id ) const
 {
+    // TODO: fix me
+  return true;
   for ( const auto& spec_spell : specialization_spell_entry_t::data( ptr ) )
   {
     if ( spec != SPEC_NONE && spec_spell.specialization_id != spec )
