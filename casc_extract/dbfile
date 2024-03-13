@@ -1099,6 +1099,7 @@
 5330797, DBFilesClient\PerksActivityXHolidays.db2
 5345180, DBFilesClient\ConditionalItemAppearance.db2
 5347591, DBFilesClient\ChrCustomizationGlyphPet.db2
+5633983, DBFilesClient\ItemReforge.db2
 5386256, DBFilesClient\PerksVendorItemUIGroup.db2
 5387095, DBFilesClient\ChrCustGeoComponentLink.db2
 5389878, DBFilesClient\PerksUITheme.db2

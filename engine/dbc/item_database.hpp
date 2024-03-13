@@ -19,6 +19,7 @@ struct item_t;
 struct dbc_item_data_t;
 struct item_enchantment_data_t;
 struct item_bonus_entry_t;
+struct item_reforge_data_t;
 struct special_effect_t;
 struct stat_pair_t;
 struct player_t;
@@ -64,6 +65,7 @@ inline bool warforged( unsigned f ) { return ( f & RAID_TYPE_WARFORGED ) == RAID
 inline bool mythic( unsigned f ) { return ( f & RAID_TYPE_MYTHIC ) == RAID_TYPE_MYTHIC; }
 
 bool apply_item_bonus( item_t& item, const item_bonus_entry_t& entry );
+bool apply_reforge( item_t& item, const item_reforge_data_t& reforge );
 
 double curve_point_value( dbc_t& dbc, unsigned curve_id, double point_value );
 void apply_item_scaling( item_t& item, unsigned curve_id, unsigned player_level );

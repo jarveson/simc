@@ -503,6 +503,9 @@ void sc_format_to( const item_t& item, fmt::format_context::iterator out )
     }
     fmt::format_to( out, " }}" );
   }
+
+  if ( item.parsed.reforge_id > 0 )
+    fmt::format_to( out, " reforge_id={}", item.parsed.reforge_id );
 }
 
 // item_t::has_item_stat ====================================================
@@ -823,7 +826,7 @@ void item_t::parse_options()
     option_name_str = options_str.substr( 0, cut_pt );
   }
 
-  std::array<std::unique_ptr<option_t>, 35> options { {
+  std::array<std::unique_ptr<option_t>, 36> options { {
     opt_uint("id", parsed.data.id),
     opt_obsoleted("upgrade"),
     opt_string("stats", option_stats_str),
@@ -858,7 +861,8 @@ void item_t::parse_options()
     opt_string("azerite_level", option_azerite_level_str),
     opt_string("context", DUMMY_CONTEXT),
     opt_string("crafted_stats", option_crafted_stat_str),
-    opt_string("crafting_quality", DUMMY_CRAFTING_QUALITY)
+    opt_string("crafting_quality", DUMMY_CRAFTING_QUALITY),
+    opt_string("reforge_id", option_reforge_id_str )
   } };
 
   try
@@ -1060,6 +1064,9 @@ void item_t::parse_options()
       std::throw_with_nested( std::runtime_error( "Crafted Stats" ) );
     }
   }
+
+  if ( !option_reforge_id_str.empty() )
+    parsed.reforge_id = util::to_unsigned( option_reforge_id_str );
 }
 
 // item_t::initialize_data ==================================================
@@ -1281,6 +1288,11 @@ std::string item_t::encoded_item() const
     } );
 
     s << ",crafted_stats=" << util::string_join( strs, "/" );
+  }
+
+  if ( parsed.reforge_id > 0 )
+  {
+    s << ",reforge_id=" << parsed.reforge_id;
   }
 
   return s.str();

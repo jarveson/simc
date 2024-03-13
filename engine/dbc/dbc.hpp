@@ -21,6 +21,7 @@
 #include "dbc/item_data.hpp"
 #include "dbc/item_effect.hpp"
 #include "dbc/item_naming.hpp"
+#include "dbc/item_reforge_data.hpp"
 #include "dbc/item_scaling.hpp"
 #include "dbc/item_weapon.hpp"
 #include "dbc/meta_gem_cond.hpp"
@@ -451,6 +452,9 @@ public:
 
   util::span<const item_bonus_entry_t> item_bonus( unsigned bonus_id ) const
   { return item_bonus_entry_t::find( bonus_id, ptr ); }
+
+  const item_reforge_data_t& item_reforge(unsigned reforge_id ) const
+  { return item_reforge_data_t::find(reforge_id, ptr);}
 
   util::span<const item_effect_t> item_effects( unsigned item_id ) const
   { return item_effect_t::find_for_item( item_id, ptr ); }

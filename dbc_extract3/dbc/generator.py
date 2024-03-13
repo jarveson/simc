@@ -504,6 +504,28 @@ class MetaGemConditionsGenerator(DataGenerator):
 
         self.output_footer()
 
+class ReforgeDataGenerator(DataGenerator):
+    def filter(self):
+        data = []
+        for d in self.db('ItemReforge').values():
+            if d.orig_cata_id != 0:
+                continue
+            data.append(d)
+        return data;
+
+    def generate(self, data = None):
+        self.output_header(
+            header = 'Item Reforge Data',
+            type = 'item_reforge_data_t',
+            array = 'item_reforge',
+            length = len(data))
+
+        for entry in data:
+            fields = entry.field('id', 'source_stat', 'source_multiplier', 'target_stat')
+            self.output_record(fields)
+
+        self.output_footer()
+
 class RealPPMModifierGenerator(DataGenerator):
     def generate(self, ids = None):
         output_data = []
@@ -633,7 +655,7 @@ class TalentDataGenerator(DataGenerator):
                 length = len(data))
 
         for entry in data:
-            fields = entry.field('id', 'name_lang', 'order_index', 'class_mask', 'pet_talent_mask');
+            fields = entry.field('id', 'name_lang', 'order_index', 'class_mask', 'id_category_enum');
 
             self.output_record(fields)
 

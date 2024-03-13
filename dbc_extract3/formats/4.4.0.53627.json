@@ -10207,17 +10207,17 @@
         "elements": 5
       },
       {
-        "data_type": "h",
+        "data_type": "i",
         "field": "resistances",
         "elements": 7
       },
       {
-        "data_type": "H",
+        "data_type": "i",
         "field": "min_damage",
         "elements": 5
       },
       {
-        "data_type": "H",
+        "data_type": "i",
         "field": "max_damage",
         "elements": 5
       }
@@ -10960,23 +10960,23 @@
     "fields": [
       {
         "data_type": "H",
-        "field": "field_4_4_0_53627_000"
+        "field": "source_stat"
       },
       {
         "data_type": "f",
-        "field": "field_4_4_0_53627_001"
+        "field": "source_multiplier"
       },
       {
         "data_type": "H",
-        "field": "field_4_4_0_53627_002"
+        "field": "target_stat"
       },
       {
         "data_type": "f",
-        "field": "field_4_4_0_53627_003"
+        "field": "target_multiplier"
       },
       {
         "data_type": "H",
-        "field": "field_4_4_0_53627_004"
+        "field": "orig_cata_id"
       }
     ]
   },
@@ -14096,19 +14096,19 @@
     "fields": [
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_001"
+        "field": "num_talents"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_002"
+        "field": "num_talents_death_knight"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_003"
+        "field": "num_talents_demon_hunter"
       },
       {
         "data_type": "f",
-        "field": "field_4_4_0_53627_004"
+        "field": "number_of_talents"
       }
     ]
   },
@@ -15911,7 +15911,7 @@
     "fields": [
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_000",
+        "field": "difficulty",
         "elements": 10
       }
     ]
@@ -17968,7 +17968,8 @@
     "fields": [
       {
         "data_type": "h",
-        "field": "field_4_4_0_53627_000"
+        "field": "id_spell_aura_visibility",
+        "ref": "SpellAuraVisibility"
       }
     ]
   },
@@ -18778,7 +18779,7 @@
       },
       {
         "data_type": "h",
-        "field": "field_4_4_0_53627_009",
+        "field": "effect_points_max",
         "elements": 3
       },
       {
@@ -19317,7 +19318,8 @@
       },
       {
         "data_type": "i",
-        "field": "id_class"
+        "field": "id_class",
+        "ref": "ChrClasses"
       },
       {
         "data_type": "I",
@@ -20264,7 +20266,7 @@
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_004"
+        "field": "pet_talent_mask"
       },
       {
         "data_type": "i",
@@ -20272,11 +20274,12 @@
       },
       {
         "data_type": "i",
-        "field": "pet_talent_mask"
+        "field": "id_category_enum"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_007"
+        "field": "id_spell_icon",
+        "ref": "SpellIcon"
       },
       {
         "data_type": "i",
@@ -20294,15 +20297,17 @@
     "fields": [
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_000"
+        "field": "id_talent_tab",
+        "ref": "TalentTab"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_001"
+        "field": "id_spell",
+        "ref": "SpellName"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_002"
+        "field": "flags"
       }
     ]
   },
@@ -22121,7 +22126,7 @@
     "fields": [
       {
         "data_type": "S",
-        "field": "field_4_4_0_53627_000_lang"
+        "field": "title_text_lang"
       },
       {
         "data_type": "S",
@@ -22129,35 +22134,40 @@
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_002"
+        "field": "id"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_003"
+        "field": "id_ui_widget_set",
+        "ref": "UiWidgetSet"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_004"
+        "field": "id_victory_ui_model_scene",
+        "ref": "UiModelScene"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_005"
+        "field": "id_defeat_ui_model_scene",
+        "ref": "UiModelScene"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_006"
+        "field": "id_victory_sound_kit",
+        "ref": "SoundKit"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_007"
+        "field": "id_defeat_sound_kit",
+        "ref": "SoundKit"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_008"
+        "field": "field_10_1_0_48480_007"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_009"
+        "field": "field_10_1_0_48480_008"
       }
     ]
   },
@@ -22404,27 +22414,30 @@
     "fields": [
       {
         "data_type": "S",
-        "field": "field_4_4_0_53627_000"
+        "field": "widget_tag"
       },
       {
         "data_type": "H",
-        "field": "field_4_4_0_53627_001"
+        "field": "id_parent_set"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_002"
+        "field": "id_vis",
+        "ref": "UiWidgetVisualization"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_003"
+        "field": "id_map",
+        "ref": "Map"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_004"
+        "field": "id_player_condition",
+        "ref": "PlayerCondition"
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_005"
+        "field": "order_index"
       }
     ]
   },
