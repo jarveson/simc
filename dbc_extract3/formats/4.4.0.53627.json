@@ -251,6 +251,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "world_position",
         "elements": 2
       },
@@ -421,10 +424,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_001"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_002"
       },
       {
@@ -433,10 +442,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_004"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_005"
       },
       {
@@ -462,90 +477,156 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_011"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_012"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_013"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_014"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_015"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_016"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_017"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_018"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_019"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_020"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_021"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_022"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_023"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_024"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_025"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_026"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_027"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_028"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_029"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_030"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_031"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_032"
       },
       {
@@ -554,6 +635,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_34972_034"
       }
     ]
@@ -572,10 +656,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_002"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_003"
       },
       {
@@ -596,98 +686,170 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_000"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_001"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_002"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_003"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_004"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_005"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_006"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_007"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_008"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_009"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_010"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_011"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_012"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_013"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_014"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_015"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_016"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_017"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_018"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_019"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_020"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_021"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_022"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_023"
       },
       {
@@ -697,10 +859,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_025"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_026"
       },
       {
@@ -713,6 +881,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_029"
       },
       {
@@ -896,6 +1067,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "speed"
       },
       {
@@ -954,6 +1128,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "bounds",
         "elements": 6
       },
@@ -1003,10 +1180,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_far_clip"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_horizon_start"
       },
       {
@@ -1040,6 +1223,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 3
       },
@@ -1198,6 +1384,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ambient_multiplier"
       },
       {
@@ -1243,6 +1432,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 3
       },
@@ -1271,22 +1463,37 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "radius"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "box_length"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "box_width"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "box_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "box_yaw"
       },
       {
@@ -1320,6 +1527,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "extents",
         "elements": 3
       }
@@ -1345,14 +1555,23 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "radius"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "z_offset"
       }
     ]
@@ -1361,6 +1580,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_radius"
       }
     ]
@@ -1394,22 +1616,37 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v_1"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v_2"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v_3"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v_4"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v_5"
       }
     ]
@@ -1501,10 +1738,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ui_model_saturation"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ui_model_opacity"
       },
       {
@@ -1589,6 +1832,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "display_pos",
         "elements": 2
       },
@@ -1658,6 +1904,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "aura_points_override"
       }
     ]
@@ -1886,6 +2135,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "multiplier"
       }
     ]
@@ -2028,6 +2280,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "cost__modifier"
       },
       {
@@ -2268,6 +2523,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "state_multiplier"
       },
       {
@@ -2481,10 +2739,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "source_min_distance"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fixed_length"
       },
       {
@@ -2535,11 +2799,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "multiplier",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "phase_multiplier"
       }
     ]
@@ -2685,34 +2955,58 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_1_15_1_53009_002"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_1_15_1_53009_003"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_1_15_1_53009_004"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_1_15_1_53009_005"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_1_15_1_53009_006"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_1_15_1_53009_007"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_1_15_1_53009_008"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_1_15_1_53009_009"
       },
       {
@@ -2741,11 +3035,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "position_offset",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "target_offset",
         "elements": 3
       },
@@ -2759,14 +3059,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "position_smoothing"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "rotation_smoothing"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_of_view"
       },
       {
@@ -2866,6 +3175,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "position",
         "elements": 3
       },
@@ -2880,6 +3192,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "body_base_scale"
       },
       {
@@ -2894,10 +3209,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "rotate_rate"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "atmospheric_mask_scale"
       },
       {
@@ -2917,6 +3238,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "glow_mask_scale",
         "elements": 2
       },
@@ -2928,11 +3252,17 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scroll_u_rate",
         "elements": 2
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scroll_v_rate",
         "elements": 2
       }
@@ -2982,6 +3312,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_damage_reduction_pct_physical"
       }
     ]
@@ -3889,6 +4222,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_distance_offset"
       }
     ]
@@ -4012,14 +4348,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "barber_shop_min_camera_distance"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "barber_shop_height_offset"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_10_2_0_51825_004"
       }
     ]
@@ -4194,6 +4539,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "barber_shop_cost_modifier"
       },
       {
@@ -4315,11 +4663,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "face_customization_offset",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "customize_offset",
         "elements": 3
       },
@@ -4364,26 +4718,44 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "customize_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "customize_facing"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_distance_offset"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "barber_shop_camera_offset_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "barber_shop_camera_rotation_facing"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "barber_shop_camera_rotation_offset"
       }
     ]
@@ -4615,20 +4987,32 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "altered_form_customize_offset_fallback",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "altered_form_customize_rotation_fallback"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_35256_033",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_35256_034",
         "elements": 3
       },
@@ -4856,6 +5240,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "origin",
         "elements": 3
       },
@@ -4866,6 +5253,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "origin_facing"
       },
       {
@@ -4903,33 +5293,54 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "tabard_angle"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "tabard_dampening"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "expected_weapon_size"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "angle",
         "elements": 5
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "dampening",
         "elements": 5
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "tail_angle",
         "elements": 2
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "tail_dampening",
         "elements": 2
       }
@@ -5051,6 +5462,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 3
       },
@@ -5401,6 +5815,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "display_probability",
         "elements": 4
       },
@@ -5460,6 +5877,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "creature_model_scale"
       },
       {
@@ -5516,10 +5936,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "player_override_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pet_instance_scale"
       },
       {
@@ -5727,6 +6153,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_time"
       },
       {
@@ -5758,6 +6187,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_scale"
       },
       {
@@ -5766,6 +6198,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_scale"
       },
       {
@@ -5844,6 +6279,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "geo_box",
         "elements": 6
       },
@@ -5868,14 +6306,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "footprint_texture_length"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "footprint_texture_width"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "footprint_particle_scale"
       },
       {
@@ -5904,14 +6351,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "collision_width"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "collision_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "world_effect_scale"
       },
       {
@@ -5920,46 +6376,79 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "hover_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "attached_effect_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "model_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "missile_collision_radius"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "missile_collision_push"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "missile_collision_raise"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "mount_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "override_loot_effect_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "override_name_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "override_selection_radius"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "tamed_pet_base_scale"
       }
     ]
@@ -5968,6 +6457,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "smooth_facing_chase_rate"
       }
     ]
@@ -6129,10 +6621,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fidget_delay_seconds_min"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fidget_delay_seconds_max"
       },
       {
@@ -6219,10 +6717,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "probability"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       },
       {
@@ -6445,11 +6949,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "val",
         "elements": 2
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "level",
         "elements": 2
       },
@@ -6508,22 +7018,37 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "mod_x"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "inner_radius"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "outer_radius"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "rim"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "gain"
       },
       {
@@ -6532,14 +7057,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fade_in"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fade_out"
       },
       {
@@ -6560,6 +7094,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "arbitrary_box_height"
       }
     ]
@@ -6783,26 +7320,44 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ramp"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "start_value"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "end_value"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fade_in_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fade_out_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duration"
       },
       {
@@ -6820,6 +7375,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       },
       {
@@ -6837,26 +7395,44 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fresnel_intensity"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_1_5_40496_014"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_1_5_40496_015"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_1_5_40496_016"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_1_5_40496_017"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_1_5_40496_018"
       },
       {
@@ -6957,6 +7533,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "data"
       }
     ]
@@ -6965,38 +7544,65 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fade_in"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fade_out"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fresnel_coefficient"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "glow_red"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "glow_green"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "glow_blue"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "glow_alpha"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "glow_multiplier"
       },
       {
@@ -7005,6 +7611,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "initial_delay"
       },
       {
@@ -7145,18 +7754,30 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "factor"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "outdoor_hours"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "inn_hours"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "threshold"
       }
     ]
@@ -7169,38 +7790,65 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "creature_health"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "player_health"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "creature_auto_attack_dps"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "creature_armor"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "player_mana"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "player_primary_stat"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "player_secondary_stat"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "armor_constant"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "creature_spell_damage"
       }
     ]
@@ -7209,38 +7857,65 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "creature_health_mod"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "player_health_mod"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "creature_auto_attack_dps_mod"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "creature_armor_mod"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "player_mana_mod"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "player_primary_stat_mod"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "player_secondary_stat_mod"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "armor_constant_mod"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "creature_spell_damage_mod"
       }
     ]
@@ -7322,6 +7997,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "parent_faction_mod",
         "elements": 2
       },
@@ -7487,78 +8165,135 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "saturation"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "gamma_red"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "gamma_green"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "gamma_blue"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "mask_offset_y"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "mask_size_multiplier"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "mask_power"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_multiply_red"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_multiply_green"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_multiply_blue"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_multiply_offset_y"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_multiply_multiplier"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_multiply_power"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_addition_red"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_addition_green"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_addition_blue"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_addition_offset_y"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_addition_multiplier"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_addition_power"
       },
       {
@@ -7568,18 +8303,30 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "blur_intensity"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "blur_offset_y"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "blur_multiplier"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "blur_power"
       },
       {
@@ -7668,6 +8415,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "geo_box",
         "elements": 6
       },
@@ -7683,10 +8433,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "override_loot_effect_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "override_name_scale"
       }
     ]
@@ -7712,11 +8468,17 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "rot",
         "elements": 4
       },
@@ -7736,6 +8498,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       },
       {
@@ -7852,14 +8617,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "combat_weight_base"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "combat_weight_max"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "action_value_flat"
       },
       {
@@ -8019,6 +8793,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "map_offset",
         "elements": 2
       },
@@ -8140,10 +8917,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ui_anim_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ui_anim_height"
       }
     ]
@@ -8440,6 +9223,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       },
       {
@@ -8512,6 +9298,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "factor"
       },
       {
@@ -8571,11 +9360,17 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "map_pos",
         "elements": 2
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "world_pos",
         "elements": 2
       },
@@ -8683,6 +9478,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 2
       },
@@ -8760,6 +9558,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "radius"
       },
       {
@@ -8846,6 +9647,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "town_hall_ui_pos",
         "elements": 2
       },
@@ -8890,6 +9694,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ui_marker_pos",
         "elements": 2
       },
@@ -8938,6 +9745,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "param",
         "elements": 2
       }
@@ -9119,6 +9929,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "impact_delay_secs"
       },
       {
@@ -9143,50 +9956,86 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "male_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "male_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "female_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "female_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "male_single_model_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "male_single_model_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "female_single_model_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "female_single_model_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "male_follower_page_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "male_follower_page_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "female_follower_page_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "female_follower_page_height"
       }
     ]
@@ -9433,58 +10282,100 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "colors0_r"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "colors0_g"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "colors0_b"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "colors1_r"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "colors1_g"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "colors1_b"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "colors2_r"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "colors2_g"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "colors2_b"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "alpha1"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "alpha2"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "edge_color_r"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "edge_color_g"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "edge_color_b"
       },
       {
@@ -9497,10 +10388,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_10_0_5_47118_016"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_10_0_5_47118_017"
       }
     ]
@@ -9518,10 +10415,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "animscale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pushscale"
       }
     ]
@@ -9895,6 +10798,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "amount"
       }
     ]
@@ -10044,18 +10950,30 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "cloth_modifier"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "leather_modifier"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "chain_modifier"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "plate_modifier"
       }
     ]
@@ -10064,6 +10982,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "data"
       }
     ]
@@ -10072,6 +10993,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "data"
       }
     ]
@@ -10080,6 +11004,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "data"
       }
     ]
@@ -10092,6 +11019,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "icon_location",
         "elements": 2
       },
@@ -10263,6 +11193,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v",
         "elements": 7
       }
@@ -10272,6 +11205,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v",
         "elements": 7
       },
@@ -10289,18 +11225,30 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v_1"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v_2"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v_3"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v_4"
       }
     ]
@@ -10396,6 +11344,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "price_modifier"
       },
       {
@@ -10446,6 +11397,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "quality",
         "elements": 7
       }
@@ -10459,6 +11413,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v",
         "elements": 7
       }
@@ -10472,6 +11429,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v",
         "elements": 7
       }
@@ -10485,6 +11445,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v",
         "elements": 7
       }
@@ -10498,6 +11461,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "v",
         "elements": 7
       }
@@ -10891,10 +11857,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "armor"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "weapon"
       }
     ]
@@ -10964,6 +11936,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "source_multiplier"
       },
       {
@@ -10972,6 +11947,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "target_multiplier"
       },
       {
@@ -11123,6 +12101,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "dmg_range"
       },
       {
@@ -11131,6 +12112,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "item_damage_modifier"
       },
       {
@@ -11144,10 +12128,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ranged_mod_range"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "stat_socket_mul",
         "elements": 10
       },
@@ -11186,10 +12176,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "price_variance"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "price_random_value"
       },
       {
@@ -11577,6 +12573,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       }
     ]
@@ -11602,6 +12601,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "map",
         "elements": 2
       },
@@ -11789,6 +12791,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "map",
         "elements": 2
       },
@@ -11857,6 +12862,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "position",
         "elements": 3
       },
@@ -11879,6 +12887,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "position",
         "elements": 3
       },
@@ -12128,6 +13139,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_gear"
       },
       {
@@ -12242,15 +13256,24 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "game_coords",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "game_falloff_start"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "game_falloff_end"
       },
       {
@@ -12351,46 +13374,79 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fog_end"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fog_scaler"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fog_density"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fog_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fog_height_scaler"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fog_height_density"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fog_z_scalar"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "main_fog_start_dist"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "main_fog_end_dist"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "sun_fog_angle"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "cloud_density"
       },
       {
@@ -12417,10 +13473,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "end_fog_color_distance"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fog_start_offset"
       },
       {
@@ -12429,6 +13491,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "sun_fog_strength"
       },
       {
@@ -12445,16 +13510,25 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fog_height_coefficients",
         "elements": 4
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "main_fog_coefficients",
         "elements": 4
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "height_density_fog_coeff",
         "elements": 4
       }
@@ -12464,6 +13538,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "bolt_direction",
         "elements": 2
       },
@@ -12475,42 +13552,72 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "bolt_direction_variance"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_divergence"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_divergence"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_convergence_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_convergence_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "segment_size"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_bolt_width"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_bolt_width"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_bolt_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_bolt_height"
       },
       {
@@ -12519,34 +13626,58 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_strike_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_strike_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_end_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_end_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_fade_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_fade_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_interval_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_interval_time"
       },
       {
@@ -12559,46 +13690,79 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "brightness"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_cloud_depth"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_cloud_depth"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_fade_in_strength"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_fade_in_strength"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_strike_strength"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_strike_strength"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ground_brightness_scalar"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "bolt_brightness_scalar"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "cloud_brightness_scalar"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "sound_emitter_distance"
       }
     ]
@@ -12607,6 +13771,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "override_celestial_sphere",
         "elements": 3
       },
@@ -12629,22 +13796,37 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "glow"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "water_shallow_alpha"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "water_deep_alpha"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ocean_shallow_alpha"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ocean_deep_alpha"
       },
       {
@@ -12696,10 +13878,16 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "flow_direction"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "flow_speed"
       },
       {
@@ -12748,18 +13936,30 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_darken_depth"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fog_darken_intensity"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "amb_darken_intensity"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "dir_darken_intensity"
       },
       {
@@ -12769,6 +13969,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "particle_scale"
       },
       {
@@ -12800,6 +14003,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "float",
         "elements": 18
       },
@@ -12810,6 +14016,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "coefficient",
         "elements": 4
       }
@@ -12852,11 +14061,17 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "locx",
         "elements": 10
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "locy",
         "elements": 10
       }
@@ -12888,11 +14103,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "rot",
         "elements": 3
       }
@@ -12950,6 +14171,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "reaction_enable_distance"
       },
       {
@@ -12966,6 +14190,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "reaction_giveup_distance"
       },
       {
@@ -13010,10 +14237,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "torso_speed_factor"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "head_speed_factor"
       },
       {
@@ -13206,6 +14439,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "minimap_icon_scale"
       },
       {
@@ -13363,11 +14599,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min",
         "elements": 2
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max",
         "elements": 2
       },
@@ -13455,34 +14697,58 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "turn_lingering"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch_lingering"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "mouse_lingering"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "end_opacity"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "arc_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "arc_repeat"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "arc_width"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "impact_tex_radius"
       },
       {
@@ -13497,6 +14763,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "impact_radius",
         "elements": 2
       },
@@ -13732,6 +15001,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "mount_fly_ride_height"
       },
       {
@@ -13873,6 +15145,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "offset",
         "elements": 3
       },
@@ -13890,6 +15165,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "facing"
       },
       {
@@ -14108,6 +15386,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "number_of_talents"
       }
     ]
@@ -14116,6 +15397,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "offset",
         "elements": 3
       },
@@ -14156,6 +15440,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "param",
         "elements": 4
       },
@@ -14261,11 +15548,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "rot",
         "elements": 3
       },
@@ -14319,6 +15612,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "range"
       },
       {
@@ -14553,6 +15849,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "happiness_damage",
         "elements": 3
       },
@@ -14563,11 +15862,17 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "damage_modifier",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_1_13_0_28211_003",
         "elements": 8
       }
@@ -15087,6 +16392,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "start_life"
       },
       {
@@ -15127,6 +16435,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "end_life"
       },
       {
@@ -15139,10 +16450,16 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "param_a"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "param_b"
       },
       {
@@ -15248,10 +16565,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "regen_peace"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "regen_combat"
       },
       {
@@ -15391,6 +16714,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "value"
       }
     ]
@@ -16231,6 +17557,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "artifact_xp_multiplier"
       },
       {
@@ -16277,14 +17606,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_sample_time_delta"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "angle_threshold"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_distance_per_slice"
       },
       {
@@ -16725,18 +18063,30 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "value"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fade_in_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fade_out_time"
       },
       {
@@ -16749,14 +18099,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "inner_strength"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "outer_strength"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "initial_delay"
       },
       {
@@ -17088,6 +18447,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "default_volume"
       },
       {
@@ -17118,6 +18480,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "volume"
       },
       {
@@ -17134,6 +18499,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "position",
         "elements": 3
       },
@@ -17152,11 +18520,17 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "position",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "direction",
         "elements": 3
       },
@@ -17244,6 +18618,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "params",
         "elements": 9
       },
@@ -17261,6 +18638,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "volume_float"
       },
       {
@@ -17269,10 +18649,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_distance"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "distance_cutoff"
       },
       {
@@ -17286,18 +18672,30 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "volume_variation_plus"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "volume_variation_minus"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch_variation_plus"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch_variation_minus"
       },
       {
@@ -17306,6 +18704,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch_adjust"
       },
       {
@@ -17331,10 +18732,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "inner_radius2_d"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "outer_radius2_d"
       },
       {
@@ -17383,38 +18790,65 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duck_to_sfx"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duck_to_music"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duck_to_ambience"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duck_to_dialog"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duck_to_suppressors"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duck_to_cinematic_sfx"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duck_to_cinematic_music"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "inner_radius_of_influence"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "outer_radius_of_influence"
       },
       {
@@ -17427,14 +18861,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "inside_angle"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "outside_angle"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "outside_volume"
       },
       {
@@ -17493,6 +18936,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "chance_to_play"
       }
     ]
@@ -17529,6 +18975,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "volume"
       }
     ]
@@ -17575,6 +19024,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_10_0_2_45779_004"
       }
     ]
@@ -17618,14 +19070,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax_decay_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax2_environment_size"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax2_environment_diffusion"
       },
       {
@@ -17638,6 +19099,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax2_decay_hf_ratio"
       },
       {
@@ -17646,6 +19110,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax2_reflections_delay"
       },
       {
@@ -17654,14 +19121,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax2_reverb_delay"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax2_room_rolloff"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax2_air_absorption"
       },
       {
@@ -17670,30 +19146,51 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax3_decay_lf_ratio"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax3_echo_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax3_echo_depth"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax3_modulation_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax3_modulation_depth"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax3_hf_reference"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "eax3_lf_reference"
       },
       {
@@ -17856,6 +19353,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       },
       {
@@ -18097,14 +19597,23 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "avg_seg_len"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "noise_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "tex_coord_scale"
       },
       {
@@ -18125,6 +19634,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "joint_offset_radius"
       },
       {
@@ -18137,106 +19649,184 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "minor_joint_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "major_joint_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "joint_move_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "joint_smoothness"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_duration_between_joint_jumps"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_duration_between_joint_jumps"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "wave_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "wave_freq"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "wave_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_wave_angle"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_wave_angle"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_wave_spin"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_wave_spin"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "arc_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_arc_angle"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_arc_angle"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_arc_spin"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_arc_spin"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "delay_between_effects"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_flicker_on_duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_flicker_on_duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_flicker_off_duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_flicker_off_duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pulse_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pulse_on_length"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pulse_fade_length"
       },
       {
@@ -18265,14 +19855,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "wave_phase"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "time_per_flip_frame"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "variance_per_flip_frame"
       },
       {
@@ -18282,10 +19881,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "start_width"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "end_width"
       },
       {
@@ -18308,10 +19913,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "particle_scale_multiplier"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "particle_emission_rate_multiplier"
       },
       {
@@ -18321,21 +19932,33 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_coord_scale_u",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_coord_scale_v",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_repeat_length_u",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_repeat_length_v",
         "elements": 3
       },
@@ -18465,6 +20088,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "val_mul"
       },
       {
@@ -18485,10 +20111,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "sp_coefficient"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "dmg_multiplier"
       },
       {
@@ -18511,14 +20143,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "points_per_combo_points"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "effect_pos_facing"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "real_ppl"
       },
       {
@@ -18528,26 +20169,44 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ap_coefficient"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pvp_coefficient"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "coefficient"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "delta"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "bonus"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "group_size_base_points_coefficient"
       },
       {
@@ -18618,10 +20277,16 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "emission_rate"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "model_scale"
       },
       {
@@ -18750,6 +20415,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "coeff",
         "elements": 3
       },
@@ -18985,14 +20653,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "proj_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "proj_delay"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "proj_min_duration"
       },
       {
@@ -19031,54 +20708,93 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "default_pitch_min"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "default_pitch_max"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "default_speed_min"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "default_speed_max"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "randomize_facing_min"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "randomize_facing_max"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "randomize_pitch_min"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "randomize_pitch_max"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "randomize_speed_min"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "randomize_speed_max"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "gravity"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "collision_radius"
       }
     ]
@@ -19144,14 +20860,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pct_cost"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pct_cost_max"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pct_cost_per_second"
       },
       {
@@ -19192,6 +20917,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "value",
         "elements": 4
       }
@@ -19201,6 +20929,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ppm"
       },
       {
@@ -19221,6 +20952,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "coeff"
       }
     ]
@@ -19229,18 +20963,30 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "radius_1"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "radius_per_level"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "radius_2"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "radius_3"
       }
     ]
@@ -19261,11 +21007,17 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_range",
         "elements": 2
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_range",
         "elements": 2
       }
@@ -19347,6 +21099,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "nerf_factor"
       },
       {
@@ -19412,6 +21167,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "damage_variance"
       },
       {
@@ -19456,6 +21214,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "cone"
       },
       {
@@ -19476,6 +21237,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "width"
       }
     ]
@@ -19504,11 +21268,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "missile_cast_offset",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "missile_impact_offset",
         "elements": 3
       },
@@ -19604,6 +21374,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duration"
       },
       {
@@ -19645,6 +21418,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "color_multiplier"
       },
       {
@@ -19663,22 +21439,37 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "base_missile_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_allowed_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_allowed_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "alpha"
       },
       {
@@ -19692,6 +21483,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "effect_radius"
       },
       {
@@ -19771,6 +21565,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fallback_priority"
       },
       {
@@ -19797,14 +21594,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "emission_rate"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "spacing"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "model_scale"
       }
     ]
@@ -19825,11 +21631,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "offset",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "offset_variation",
         "elements": 3
       },
@@ -19853,34 +21665,58 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "yaw"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "roll"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "yaw_variation"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch_variation"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "roll_variation"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale_variation"
       },
       {
@@ -19913,6 +21749,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "start_delay"
       }
     ]
@@ -19921,11 +21760,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "cast_offset",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "impact_offset",
         "elements": 3
       },
@@ -20015,6 +21860,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "probability"
       },
       {
@@ -20061,18 +21909,30 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_8_2_0_30080_001"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_8_2_0_30080_002"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_8_2_0_30080_003"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "radius"
       }
     ]
@@ -20319,16 +22179,25 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "map_offset",
         "elements": 2
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "flight_map_offset",
         "elements": 2
       },
@@ -20361,6 +22230,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "facing"
       },
       {
@@ -20403,6 +22275,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "loc",
         "elements": 3
       },
@@ -20527,26 +22402,41 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_scroll_rate_u",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_scroll_rate_v",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_scale_u",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_scale_v",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "mod_x",
         "elements": 4
       }
@@ -20582,6 +22472,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_9_0_1_33978_003_milliseconds"
       }
     ]
@@ -21126,10 +23019,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_10_0_0_45697_006"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "field_10_0_0_45697_007"
       }
     ]
@@ -21211,23 +23110,38 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "yaw"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "roll"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       }
     ]
@@ -21322,6 +23236,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 3
       },
@@ -21339,42 +23256,72 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "wave_amp"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "wave_time_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "roll_amp"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "roll_time_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch_amp"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch_time_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_bank"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_bank_turn_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "speed_damp_thresh"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "speed_damp"
       }
     ]
@@ -21383,6 +23330,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "rot",
         "elements": 4
       },
@@ -21463,16 +23413,25 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "look_at",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "up",
         "elements": 3
       },
@@ -21763,10 +23722,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_scale"
       },
       {
@@ -21800,16 +23765,25 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ui_min",
         "elements": 2
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ui_max",
         "elements": 2
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "region",
         "elements": 6
       },
@@ -21878,6 +23852,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "mask_scalar"
       }
     ]
@@ -21911,11 +23888,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ui_min",
         "elements": 2
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "ui_max",
         "elements": 2
       },
@@ -21987,6 +23970,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "position",
         "elements": 3
       },
@@ -22005,18 +23991,30 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "orientation_yaw"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "orientation_pitch"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "orientation_roll"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "normalized_scale"
       }
     ]
@@ -22044,14 +24042,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "alpha"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "anim_speed"
       }
     ]
@@ -22064,11 +24071,17 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "target",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "zoomed_target_offset",
         "elements": 3
       },
@@ -22086,38 +24099,65 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "yaw"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "roll"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "zoomed_yaw_offset"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "zoomed_pitch_offset"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "zoomed_roll_offset"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "zoom_distance"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_zoom_distance"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_zoom_distance"
       }
     ]
@@ -22214,30 +24254,51 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "yaw_radians"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch_radians"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "roll_radians"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "offset_x"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "offset_y"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "offset_z"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "animation_speed"
       },
       {
@@ -22589,10 +24650,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "regeneration_peace"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "regeneration_combat"
       },
       {
@@ -22605,10 +24672,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "start_inset"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "end_inset"
       },
       {
@@ -22636,46 +24709,79 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "turn_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch_min"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch_max"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "mouse_look_offset_pitch"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_fade_dist_scalar_min"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_fade_dist_scalar_max"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_pitch_offset"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "facing_limit_right"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "facing_limit_left"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_yaw_offset"
       },
       {
@@ -22741,11 +24847,17 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "attachment_offset",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_offset",
         "elements": 3
       },
@@ -22767,30 +24879,51 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "enter_pre_delay"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "enter_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "enter_gravity"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "enter_min_duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "enter_max_duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "enter_min_arc_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "enter_max_arc_height"
       },
       {
@@ -22819,30 +24952,51 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "exit_pre_delay"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "exit_speed"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "exit_gravity"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "exit_min_duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "exit_max_duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "exit_min_arc_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "exit_max_arc_height"
       },
       {
@@ -22887,22 +25041,37 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "passenger_yaw"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "passenger_pitch"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "passenger_roll"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "vehicle_enter_anim_delay"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "vehicle_exit_anim_delay"
       },
       {
@@ -22930,38 +25099,65 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_entering_delay"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_entering_duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_exiting_delay"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_exiting_duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_pos_chase_rate"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_facing_chase_rate"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_entering_zoom"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_seat_zoom_min"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "camera_seat_zoom_max"
       },
       {
@@ -23018,10 +25214,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "x_pos"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "y_pos"
       }
     ]
@@ -23053,10 +25255,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_height"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "min_height"
       },
       {
@@ -23151,10 +25359,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "when_false"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "when_true"
       }
     ]
@@ -23247,14 +25461,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "roll"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pitch"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "yaw"
       },
       {
@@ -23265,21 +25488,33 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_scroll_rate_u",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_scroll_rate_v",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_scale_u",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "texture_scale_v",
         "elements": 3
       }
@@ -23307,22 +25542,37 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duration"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fade_out_time"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "edge_life_span"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "initial_delay"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "smooth_sample_angle"
       },
       {
@@ -23347,6 +25597,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "transition_sky_box"
       },
       {
@@ -23375,22 +25628,37 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "scale"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "volatility"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "twinkle_intensity"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "fall_modifier"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "rotational_speed"
       },
       {
@@ -23400,6 +25668,9 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "volume_edge_fade_start"
       },
       {
@@ -23408,14 +25679,23 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "override_color_intensity"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "override_count"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "override_opacity"
       },
       {
@@ -23429,11 +25709,17 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "intensity",
         "elements": 2
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "effect_color",
         "elements": 3
       }
@@ -23452,41 +25738,68 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "base_dir",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "variance_dir",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_step_dir",
         "elements": 3
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "base_mag"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "variance_mag_over"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "variance_mag_under"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "max_step_mag"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "frequency"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "duration"
       },
       {
@@ -23989,10 +26302,16 @@
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "zmin"
       },
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "zmax"
       },
       {
@@ -24005,6 +26324,9 @@
     "fields": [
       {
         "data_type": "f",
+        "formats": {
+          "cpp:": "%ff"
+        },
         "field": "pos",
         "elements": 2
       },
