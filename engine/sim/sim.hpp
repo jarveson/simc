@@ -218,7 +218,9 @@ struct sim_t : private sc_thread_t
     int mark_of_the_wild;
     int power_word_fortitude;
     int windfury_totem;
+
     int crit_chance;
+    int melee_attack_speed;
 
     // Debuff overrides
     int mangle;
@@ -241,7 +243,9 @@ struct sim_t : private sc_thread_t
     buff_t* battle_shout;
     buff_t* mark_of_the_wild;
     buff_t* power_word_fortitude;
+
     buff_t* crit_chance;
+    buff_t* melee_attack_speed;
   } auras;
 
   // Expansion specific custom parameters. Defaults in the constructor.

@@ -4336,6 +4336,9 @@ double player_t::composite_melee_speed() const
   if ( buffs.heavens_nemesis && buffs.heavens_nemesis->data().effectN( 1 ).subtype() == A_MOD_RANGED_AND_MELEE_ATTACK_SPEED && buffs.heavens_nemesis->check() )
     h *= 1.0 / ( 1.0 + buffs.heavens_nemesis->check_stack_value() );
 
+  if (sim->auras.melee_attack_speed && sim->auras.melee_attack_speed->check())
+    h *= 1.0 / ( 1.0 + sim->auras.melee_attack_speed->check_value() );
+
   return h;
 }
 
