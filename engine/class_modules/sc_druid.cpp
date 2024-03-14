@@ -2675,26 +2675,30 @@ struct pulverize_t : public bear_attack_t
   int dmg;
 
   DRUID_ABILITY( pulverize_t, bear_attack_t, "pulverize", p->find_class_spell( "Pulverize" ) ),
-      wpn_percent( as<int>( data().effectN( 1 ).base_value() ) ), dmg( as<int>( data().effectN( 2 ).base_value() ) )
-  {}
-
-  void impact( action_state_t* s ) override
+      wpn_percent( as<int>( data().effectN( 1 ).base_value() ) ), dmg( as<int>( data().effectN( 3 ).average( p )) ) )
   {
-    bear_attack_t::impact( s );
+  }
 
-    if ( !result_is_hit( s->result ) )
-      return;
-
-    // fix me
-    assert( false );
+  void execute() override
+  {
     auto t_td   = td( s->target );
     auto stacks = t_td->dots.lacerate->current_stack();
 
+    // todo: is this right?
+    base_dd_adder = ( dmg * wpn_percent / 100.0 ) * stacks;
+
+    bear_attack_t::execute();
+
     if ( stacks > 0 )
     {
-      p()->buff.pulverize->trigger(stacks);
+      p()->buff.pulverize->trigger( stacks );
       t_td->dots.lacerate->cancel();
     }
+  }
+
+  bool target_ready( player_t* t ) override
+  {
+    return bear_attack_t::target_ready( t ) && ( td( t )->dots.lacerate->current_stack() > 0 );
   }
 };
 
