@@ -451,6 +451,9 @@ struct player_t : public actor_t
     buff_t* bloodlust;
     buff_t* windfury_totem;
 
+    // cata
+    buff_t* unholy_frenzy;
+
     // Legendary meta stuff
     buff_t* courageous_primal_diamond_lucidity;
     buff_t* tempus_repit;
@@ -584,6 +587,7 @@ struct player_t : public actor_t
     bool focus_magic;
     double blessing_of_summer_duration_multiplier;
     std::vector<timespan_t> power_infusion;
+    std::vector<timespan_t> unholy_frenzy;
     std::vector<timespan_t> symbol_of_hope;
     std::vector<timespan_t> blessing_of_summer;
     std::vector<timespan_t> blessing_of_autumn;

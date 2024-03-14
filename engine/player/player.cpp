@@ -4078,14 +4078,19 @@ void player_t::create_buffs()
         ->set_chance( as<double>( sim->overrides.windfury_totem ) );
 
       // 9.0 class buffs
-      buffs.focus_magic = make_buff( this, "focus_magic", find_spell( 321358 ) )
+      buffs.focus_magic = make_buff( this, "focus_magic", find_spell( 54646 ) )
         ->set_default_value_from_effect( 1 )
         ->add_invalidate( CACHE_SPELL_CRIT_CHANCE );
 
       buffs.power_infusion = make_buff( this, "power_infusion", find_spell( 10060 ) )
         ->set_default_value_from_effect( 1 )
         ->set_cooldown( 0_ms )
-        ->add_invalidate( CACHE_HASTE );
+        ->add_invalidate( CACHE_SPELL_HASTE );
+
+      buffs.unholy_frenzy = make_buff( this, "unholy_frenzy", find_spell( 49016 ) )
+                                ->set_default_value_from_effect( 1 )
+                                ->set_cooldown( 0_ms )
+                                ->add_invalidate( CACHE_ATTACK_HASTE );
 
       // External trinkets
       if ( external_buffs.soleahs_secret_technique )
@@ -4304,6 +4309,9 @@ double player_t::composite_melee_haste() const
     if ( buffs.bloodlust->check() )
       h *= 1.0 / ( 1.0 + buffs.bloodlust->check_stack_value() );
 
+    if (buffs.unholy_frenzy->check())
+      h *= 1.0 / ( 1.0 + buffs.unholy_frenzy->check_value() );
+
     if ( buffs.berserking->check() )
       h *= 1.0 / ( 1.0 + buffs.berserking->data().effectN( 1 ).percent() );
 
@@ -4312,9 +4320,6 @@ double player_t::composite_melee_haste() const
 
     if ( timeofday == NIGHT_TIME )
       h *= 1.0 / ( 1.0 + racials.touch_of_elune->effectN( 1 ).percent() );
-
-    if ( buffs.power_infusion )
-      h *= 1.0 / ( 1.0 + buffs.power_infusion->check_value() );
   }
 
   return h;
@@ -4674,6 +4679,8 @@ double player_t::composite_spell_haste() const
 
     if ( buffs.bloodlust->check() )
       h *= 1.0 / ( 1.0 + buffs.bloodlust->check_stack_value() );
+    else if ( buffs.power_infusion->check() )
+      h *= 1.0 / ( 1.0 + buffs.power_infusion->check_value() );
 
     if ( buffs.berserking->check() )
       h *= 1.0 / ( 1.0 + buffs.berserking->data().effectN( 1 ).percent() );
@@ -4683,9 +4690,6 @@ double player_t::composite_spell_haste() const
 
     if ( timeofday == NIGHT_TIME )
       h *= 1.0 / ( 1.0 + racials.touch_of_elune->effectN( 1 ).percent() );
-
-    if ( buffs.power_infusion )
-      h *= 1.0 / ( 1.0 + buffs.power_infusion->check_value() );
   }
 
   return h;
@@ -5629,6 +5633,7 @@ void player_t::combat_begin()
         make_event( *sim, t, [ buff, duration ] { buff->trigger( duration ); } );
   };
 
+  add_timed_buff_triggers( external_buffs.unholy_frenzy, buffs.unholy_frenzy);
   add_timed_buff_triggers( external_buffs.power_infusion, buffs.power_infusion );
   add_timed_buff_triggers( external_buffs.symbol_of_hope, buffs.symbol_of_hope );
   add_timed_buff_triggers( external_buffs.conquerors_banner, buffs.conquerors_banner );
@@ -12897,6 +12902,7 @@ void player_t::create_options()
     } );
   };
 
+  add_option( opt_external_buff_times( "external_buffs.unholy_frenzy", external_buffs.unholy_frenzy));
   add_option( opt_external_buff_times( "external_buffs.power_infusion", external_buffs.power_infusion ) );
   add_option( opt_external_buff_times( "external_buffs.symbol_of_hope", external_buffs.symbol_of_hope ) );
   add_option( opt_external_buff_times( "external_buffs.blessing_of_summer", external_buffs.blessing_of_summer ) );
