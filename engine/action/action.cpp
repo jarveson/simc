@@ -1134,6 +1134,10 @@ double action_t::cost() const
     sim->out_debug.print( "{} action_t::cost: base={} add={} mul={} secondary_cost={} cost={} resource={}", *this, base,
                           add, mul, secondary_costs[ cr ], c, cr );
   }
+  else if (cr == RESOURCE_MANA && player->buffs.power_infusion && player->buffs.power_infusion->check())
+  {
+    c *= 0.20;
+  }
 
   return c;
 }
