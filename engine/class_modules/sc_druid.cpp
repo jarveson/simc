@@ -439,7 +439,7 @@ public:
     unsigned mf_extensions;
 
     // Guardian
-    buff_t* blood_frenzy;
+    buff_t* savage_defense;
     buff_t* stampede_bear;
     buff_t* pulverize;
     buff_t* enrage;
@@ -890,16 +890,23 @@ std::function<void( pet_t* )> parent_pet_action_fn( action_t* parent )
     {
       auto it = range::find( parent->child_action, a->name_str, &action_t::name_str );
       if ( it != parent->child_action.end() )
-        a->stats = ( *it )->stats;
+      {
+        if ( a->stats != ( *it )->stats )
+        {
+          range::erase_remove( p->stats_list, a->stats );
+          delete a->stats;
+          a->stats = ( *it )->stats;
+        }
+      }
       else
+      {
         parent->add_child( a );
+      }
     }
   };
 }
 }  // end namespace pets
 
-namespace buffs
-{
 template <typename Base = buff_t>
 struct druid_buff_base_t : public Base
 {
@@ -912,19 +919,84 @@ public:
   druid_buff_base_t( druid_t* p, std::string_view name, const spell_data_t* s = spell_data_t::nil(),
                      const item_t* item = nullptr )
     : Base( p, name, s, item )
-  {}
+  {
+  }
 
   druid_buff_base_t( druid_td_t& td, std::string_view name, const spell_data_t* s = spell_data_t::nil(),
                      const item_t* item = nullptr )
     : Base( td, name, s, item )
-  {}
+  {
+  }
 
-  druid_t* p() { return static_cast<druid_t*>( Base::source ); }
+  druid_t* p()
+  {
+    return static_cast<druid_t*>( Base::source );
+  }
 
-  const druid_t* p() const { return static_cast<druid_t*>( Base::source ); }
+  const druid_t* p() const
+  {
+    return static_cast<druid_t*>( Base::source );
+  }
 };
 
+namespace buffs
+{
 using druid_buff_t = druid_buff_base_t<>;
+
+struct druid_absorb_buff_t : public druid_buff_base_t<absorb_buff_t>
+{
+protected:
+  using base_t = druid_absorb_buff_t;
+
+public:
+  druid_absorb_buff_t( druid_t* p, std::string_view n, const spell_data_t* s ) : druid_buff_base_t( p, n, s )
+  {
+    set_absorb_gain( p->get_gain( absorb_name() ) );
+    set_absorb_source( p->get_stats( absorb_name() ) );
+  }
+
+  bool trigger( int s, double v, double c, timespan_t d ) override
+  {
+    auto ret = druid_buff_base_t::trigger( s, v, c, d );
+    if ( ret && !quiet )
+      absorb_source->add_execute( 0_ms, player );
+
+    return ret;
+  }
+
+  std::string absorb_name() const
+  {
+    return util::inverse_tokenize( name_str ) + " (absorb)";
+  }
+
+  double attack_power() const
+  {
+    return p()->composite_total_attack_power_by_type( p()->default_ap_type() );
+  }
+};
+
+struct savage_defense_buff_t : public druid_absorb_buff_t
+{
+  double coeff;
+
+  savage_defense_buff_t( druid_t* p ) 
+      : base_t( p, "savage_defense", p->find_spell( 62600 ) )
+  {
+    //set_quiet( true );
+    set_absorb_school(SCHOOL_PHYSICAL);
+    coeff = find_trigger( data() ).trigger()->effectN( 1 ).base_value();
+    // Not sure if this is true
+    set_absorb_high_priority(true);
+  }
+
+  bool trigger( int s, double v, double c, timespan_t d ) override
+  {
+    double amount = v * attack_power() * coeff;
+    if ( p()->specialization() == DRUID_FERAL )
+      amount *= 1.0 + ( p()->mastery.savage_defender->effectN( 1 ).percent() * p()->composite_mastery() );
+    return base_t::trigger( s, amount, c, d );
+  }
+};
 
 // Shapeshift Form Buffs ====================================================
 
@@ -1097,6 +1169,22 @@ public:
     if ( !dot )
       dot = t->get_dot( dot_name, ab::player );
     return dot;
+  }
+
+  void replace_stats( action_t* a, bool add = true )
+  {
+    if ( add )
+    {
+      range::erase_remove( ab::stats->action_list, a );
+      ab::stats->action_list.push_back( a );
+    }
+
+    if ( a->stats == ab::stats )
+      return;
+
+    range::erase_remove( ab::player->stats_list, a->stats );
+    delete a->stats;
+    a->stats = ab::stats;
   }
 
   bool ready() override
@@ -1551,8 +1639,10 @@ T* druid_t::get_secondary_action( std::string_view n, Ts&&... args )
 
   if constexpr ( std::is_constructible_v<T, druid_t*, std::string_view, Ts...> )
     a = new T( this, n, std::forward<Ts>( args )... );
-  else
+  else if constexpr ( std::is_constructible_v<T, druid_t*, Ts...> )
     a = new T( this, std::forward<Ts>( args )... );
+  else
+    static_assert( static_false<T>, "Invalid constructor arguments to get_secondary_action" );
 
   secondary_action_list.push_back( a );
   return a;
@@ -2226,7 +2316,8 @@ struct pounce_t : public cat_attack_t
   struct pounce_bleed_t : public cat_attack_t
   {
     pounce_t* pounce = nullptr;
-    pounce_bleed_t( druid_t* p, std::string_view n, const spell_data_t* s ) : cat_attack_t( n, p, s )
+    pounce_bleed_t( druid_t* p, std::string_view n, pounce_t* r )
+      : cat_attack_t( n, p, find_trigger( this ).trigger() ), pounce(r)
     {
       background = true;
       dot_name = "pounce";
@@ -2252,10 +2343,8 @@ struct pounce_t : public cat_attack_t
   {
     if ( data().ok() )
     {
-      bleed         = p->get_secondary_action<pounce_bleed_t>( name_str + "_bleed", find_trigger( this ).trigger() );
-      bleed->stats  = stats;
-      bleed->pounce = this;
-      stats->action_list.push_back( bleed );
+      bleed         = p->get_secondary_action<pounce_bleed_t>( name_str + "_bleed", this );
+      replace_stats( bleed );
     }
 
     dot_name = "pounce";
@@ -2518,11 +2607,23 @@ struct bear_attack_t : public druid_attack_t<melee_attack_t>
 
     base_t::execute();
 
-    if ( energize_resource == RESOURCE_COMBO_POINT && energize_amount > 0 && hit_any_target )
+    if ( hit_any_target )
     {
       trigger_primal_fury();
       trigger_lotp();
+      trigger_sd();
     }
+  }
+
+  void trigger_sd()
+  {
+    if ( proc || !attack_critical )
+      return;
+
+    if ( attack_type != result_amount_type::DMG_DIRECT )
+      return;
+
+    p()->buff.savage_defense->trigger();
   }
 
   void trigger_primal_fury()
@@ -2675,13 +2776,13 @@ struct pulverize_t : public bear_attack_t
   int dmg;
 
   DRUID_ABILITY( pulverize_t, bear_attack_t, "pulverize", p->find_class_spell( "Pulverize" ) ),
-      wpn_percent( as<int>( data().effectN( 1 ).base_value() ) ), dmg( as<int>( data().effectN( 3 ).average( p )) ) )
+      wpn_percent( as<int>( data().effectN( 1 ).base_value() ) ), dmg( as<int>( data().effectN( 3 ).average( p )) )
   {
   }
 
   void execute() override
   {
-    auto t_td   = td( s->target );
+    auto t_td    = td( p()->target );
     auto stacks = t_td->dots.lacerate->current_stack();
 
     // todo: is this right?
@@ -2721,7 +2822,7 @@ struct swipe_bear_t : public bear_attack_t
     // target hit data stored in cat swipe
     //reduced_aoe_targets = p->apply_override( p->spec.swipe, p->spec.cat_form_override )->effectN( 4 ).base_value();
 
-    if ( p->specialization() == DRUID_GUARDIAN )
+    if ( p->specialization() == DRUID_FERAL )
       name_str_reporting = "swipe";
   }
 };
@@ -2795,8 +2896,7 @@ struct lifebloom_t : public druid_heal_t
     if ( data().ok() )
     {
       bloom        = p->get_secondary_action<lifebloom_bloom_t>( "lifebloom_bloom" );
-      bloom->stats = stats;
-      stats->action_list.push_back( bloom );
+      replace_stats(bloom);
     }
   }
 
@@ -2982,6 +3082,7 @@ struct tranquility_t : public druid_heal_t
     channeled = true;
 
     tick_action = p->get_secondary_action<tranquility_tick_t>( "tranquility_tick" );
+    replace_stats(tick_action);
   }
 
   void init() override
@@ -3404,9 +3505,8 @@ struct starfall_t : public druid_spell_t
     {
       driver = p->get_secondary_action<starfall_driver_t>( name_str + "_driver" );
       assert( driver->damage );
-      driver->stats         = stats;
-      driver->damage->stats = stats;
-      stats->action_list.push_back( driver->damage );
+      replace_stats(driver, false);
+      replace_stats(driver->damage);
     }
   }
 
@@ -3825,7 +3925,7 @@ struct feral_charge_bear_t : public feral_charge_base_t
     apply_affecting_aura( p->glyphs.feral_charge );
     form_mask = BEAR_FORM;
 
-    if ( p->specialization() == DRUID_GUARDIAN )
+    if ( p->specialization() == DRUID_FERAL )
       name_str_reporting = "feral_charge";
   }
 
@@ -4285,8 +4385,8 @@ void druid_t::init_spells()
 
   // Masteries ==============================================================
   mastery.harmony             = find_mastery_spell( DRUID_RESTORATION );
-  mastery.savage_defender     = find_mastery_spell( DRUID_GUARDIAN );
-  mastery.razor_claws         = find_mastery_spell( DRUID_FERAL );
+  mastery.savage_defender     = find_spell( 77494 );
+  mastery.razor_claws         = find_spell( 77493 );
   mastery.total_eclipse       = find_mastery_spell( DRUID_BALANCE );
 }
 
@@ -4308,8 +4408,8 @@ void druid_t::init_base_stats()
   resources.base[ RESOURCE_ENERGY ]       = 100;
 
   // only activate other resources if you have the affinity and affinity_resources = true
-  resources.active_resource[ RESOURCE_HEALTH ]       = specialization() == DRUID_GUARDIAN;
-  resources.active_resource[ RESOURCE_RAGE ]         = specialization() == DRUID_GUARDIAN;
+  resources.active_resource[ RESOURCE_HEALTH ]       = specialization() == DRUID_FERAL;
+  resources.active_resource[ RESOURCE_RAGE ]         = specialization() == DRUID_FERAL;
   resources.active_resource[ RESOURCE_MANA ]         = specialization() == DRUID_RESTORATION;
   resources.active_resource[ RESOURCE_COMBO_POINT ]  = specialization() == DRUID_FERAL;
   resources.active_resource[ RESOURCE_ENERGY ]       = specialization() == DRUID_FERAL;
@@ -4492,14 +4592,17 @@ void druid_t::create_buffs()
           ->set_duration( find_spell( "Pulverize" )->duration() + talent.endless_carnage->effectN( 2 ).time_value() );
 
   buff.primal_fury_bear = make_buff_fallback( talent.primal_fury.ok(), this, "primal_fury_bear",
-                                              find_spell( talent.primal_fury->effectN( 1 ).trigger_spell_id() ) );
-  buff.primal_fury_cat  = make_buff_fallback( talent.primal_fury.ok(), this, "primal_fury_cat",
-                                              find_spell( talent.primal_fury->effectN( 2 ).trigger_spell_id() ) );
+                                              find_trigger( talent.primal_fury->effectN( 1 ).trigger() ) );
+  buff.primal_fury_cat =
+      make_buff_fallback( talent.primal_fury.ok(), this, "primal_fury_cat",
+                                              find_trigger(talent.primal_fury->effectN( 2 )).trigger() ) );
 
   buff.leader_of_the_pack =
       make_buff_fallback( talent.leader_of_the_pack.ok(), this, "leader_of_the_pack", find_spell( 17007 ) )
           ->set_cooldown( 6_s );
 
+  buff.savage_defense = make_buff_fallback<savage_defense_buff_t>( find_spell( 62600 ), this, "savage_defense" )
+                            ->set_chance( find_spell( 62600 )->effectN( 2 ).base_value() );
 
   // Restoration buffs
   // todo: malfurions gift trigger
@@ -5410,7 +5513,7 @@ bool druid_t::uses_cat_form() const
 
 bool druid_t::uses_bear_form() const
 {
-  return uses_form( DRUID_GUARDIAN, "bear_form", active.shift_to_bear );
+  return uses_form( DRUID_FERAL, "bear_form", active.shift_to_bear );
 }
 
 bool druid_t::uses_moonkin_form() const
@@ -5499,7 +5602,7 @@ public:
                "<td class=\"right\">{:.2f}</td><td class=\"right\">{:.1f}%</td>"
                "<td class=\"right\">{:.2f}</td><td class=\"right\">{:.1f}%</td>"
                "<td class=\"right\">{:.2f}</td><td class=\"right\">{:.1f}%</td></tr>",
-               report_decorators::decorated_spell_data( p.sim, spell ),
+               report_decorators::decorated_spell_data( *p.sim, spell ),
                none / iter, none / total * 100,
                solar / iter, solar / total * 100,
                lunar / iter, lunar / total * 100,
