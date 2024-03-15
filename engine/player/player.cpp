@@ -10813,24 +10813,21 @@ const spell_data_t* player_t::find_talent_spell( util::string_view n, specializa
 static player_talent_t create_talent_obj(
     const player_t*     player,
     specialization_e    spec,
-    const trait_data_t* trait )
+    const talent_data_t* tdt )
 {
-  auto it = range::find_if( player->player_traits, [trait]( const auto& entry ) {
-    return std::get<1>( entry ) == trait->id_trait_node_entry;
-  } );
 
-  // check if the trait is a free class trait for the spec, or the initial starting node on the spec tree (1,1)
-  bool is_starter =
-      range::find( trait->id_spec_starter, spec == SPEC_NONE ? player->_spec : spec ) != trait->id_spec_starter.end() ||
-      trait->tree_index == static_cast<unsigned>( talent_tree::SPECIALIZATION ) && trait->col == 1 && trait->row == 1;
+  auto ttd = talent_tab_data_t::find( tdt->_tab_id );
+  if ( ttd == &talent_tab_data_t::nil() )
+    return { player };
 
-  if ( ( it != player->player_traits.end() && std::get<2>( *it ) == 0U ) ||
-      ( it == player->player_traits.end() && !is_starter ) )
-  {
-    return { player };  // Trait not found on player
+  unsigned c = player->talent_points->choice( ttd->order, tdt->col(), tdt->row() );
+  if (!c) {
+    return { player };
   }
 
-  return { player, trait, is_starter ? trait->max_ranks : std::get<2>( *it ) };
+  auto s = player->dbc->spell( tdt->_spell_ranks[c] );
+
+  return { player, s, c };
 }
 
 static player_glyph_t create_glyph_obj(const player_t* player, const glyph_property_data_t* glyph )
@@ -10871,7 +10868,9 @@ player_talent_t player_t::find_talent_spell(
     return {};  // Invalid trait
   }
 
-  return create_talent_obj( this, s, trait );
+  assert(false);
+  return {};
+  //return create_talent_obj( this, s, trait );
 }
 
 player_talent_t player_t::find_talent_spell(
@@ -10890,8 +10889,9 @@ player_talent_t player_t::find_talent_spell(
         util::talent_tree_string( tree ), spell_id );
     return {};  // Invalid trait
   }
-
-  return create_talent_obj( this, s, traits[ 0 ] );
+  assert( false );
+  return {};
+  //return create_talent_obj( this, s, traits[ 0 ] );
 }
 
 player_talent_t player_t::find_talent_spell( unsigned trait_node_entry_id, specialization_e s ) const
@@ -10904,7 +10904,9 @@ player_talent_t player_t::find_talent_spell( unsigned trait_node_entry_id, speci
     return {};  // Invalid trait
   }
 
-  return create_talent_obj( this, s, trait );
+  assert(false);
+  return {};
+  //return create_talent_obj( this, s, trait );
 }
 
 const player_glyph_t player_t::find_glyph_spell(util::string_view name) const

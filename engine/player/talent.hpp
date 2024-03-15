@@ -21,6 +21,7 @@ public:
   player_talent_t();
   player_talent_t( const player_t* );
   player_talent_t( const player_t*, const trait_data_t*, unsigned rank );
+  player_talent_t( const player_t*, const spell_data_t*, unsigned rank );
 
   bool enabled() const
   { return m_rank > 0 && m_spell->ok(); }

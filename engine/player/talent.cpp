@@ -24,6 +24,11 @@ player_talent_t::player_talent_t( const player_t* player, const trait_data_t* tr
   m_rank ( rank )
 { }
 
+player_talent_t::player_talent_t( const player_t* player, const spell_data_t* spell, unsigned rank )
+  : m_player( player ), m_trait( &trait_data_t::nil()), m_spell( spell ), m_rank( rank )
+{
+}
+
 const spell_data_t* player_talent_t::find_override_spell( bool require_talent ) const
 {
   return ( !require_talent || enabled() ) ? m_player->find_spell( m_trait->id_override_spell ) : spell_data_t::not_found();
