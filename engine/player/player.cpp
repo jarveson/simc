@@ -1603,13 +1603,6 @@ void player_t::init_base_stats()
   base.dodge = 0.03;
   base.miss = 0.03;
 
-  if (racials.quickness->ok()) // check spell data to avoid applying it to enemies.
-  {
-    // Dodge from base agillity isn't affected by diminishing returns and is added here
-    base.dodge += racials.quickness->effectN(1).percent() +
-      (dbc->race_base(race).agility + dbc->attribute_base(type, level()).agility) * base.dodge_per_agility;
-  }
-
   // Only Warriors and Paladins (and enemies) can block, defaults to 0
   if ( type == WARRIOR || type == PALADIN || type == ENEMY || type == TANK_DUMMY )
   {
@@ -4543,6 +4536,11 @@ double player_t::composite_miss() const
 
   // bonus_miss is miss from rating or other sources subject to DR
   double bonus_miss = 0.0;
+
+  if ( racials.quickness->ok() )  // check spell data to avoid applying it to enemies.
+  {
+       bonus_miss += std::abs(racials.quickness->effectN( 1 ).base_value());
+  }
 
   // if we have any bonus_miss, apply diminishing returns and add it to total_miss
   if ( bonus_miss > 0 )
