@@ -2784,9 +2784,12 @@ void sim_t::init()
                            ->set_default_value( dbc::find_spell( this, 6673 )->effectN( 1 ).percent() )
                            ->add_invalidate( CACHE_ATTACK_POWER );
 
-  auras.mark_of_the_wild = make_buff( this, "mark_of_the_wild", dbc::find_spell( this, 1126 ) )
-                               ->set_default_value( dbc::find_spell( this, 1126 )->effectN( 1 ).percent() )
-                               ->add_invalidate( CACHE_VERSATILITY );
+  auras.mark_of_the_wild = make_buff( this, "mark_of_the_wild", dbc::find_spell( this, 79060 ) )
+                               ->set_default_value( dbc::find_spell( this, 79060 )->effectN( 1 ).percent() )
+                               ->set_pct_buff_type( STAT_PCT_BUFF_STRENGTH )
+                               ->set_pct_buff_type( STAT_PCT_BUFF_AGILITY )
+                               ->set_pct_buff_type( STAT_PCT_BUFF_STAMINA )
+                               ->set_pct_buff_type( STAT_PCT_BUFF_INTELLECT );
 
   auras.power_word_fortitude = make_buff( this, "power_word_fortitude", dbc::find_spell( this, 21562 ) )
                                    ->set_default_value( dbc::find_spell( this, 21562 )->effectN( 1 ).percent() )
@@ -2794,7 +2797,7 @@ void sim_t::init()
 
   auras.crit_chance = make_buff( this, "leader_of_the_pack", dbc::find_spell( this, 24932 ) )
                           ->set_default_value( dbc::find_spell( this, 24932 )->effectN( 1 ).percent() )
-                          ->add_invalidate(CACHE_CRIT_CHANCE);
+                          ->set_pct_buff_type(STAT_PCT_BUFF_CRIT);
 
   auras.melee_attack_speed = make_buff( this, "hunting_party", dbc::find_spell( this, 53290 ) )
                                  ->set_default_value( dbc::find_spell( this, 53290 )->effectN( 2 ).percent() )

@@ -4835,11 +4835,6 @@ double player_t::composite_damage_versatility() const
   for ( auto b : buffs.stat_pct_buffs[ STAT_PCT_BUFF_VERSATILITY ] )
     cdv += b->check_stack_value();
 
-  if ( !is_pet() && !is_enemy() && type != HEALING_ENEMY )
-  {
-    cdv += sim->auras.mark_of_the_wild->check_value();
-  }
-
   if ( buffs.dmf_well_fed )
     cdv += buffs.dmf_well_fed->check_value();
 
@@ -4857,11 +4852,6 @@ double player_t::composite_heal_versatility() const
   for ( auto b : buffs.stat_pct_buffs[ STAT_PCT_BUFF_VERSATILITY ] )
     chv += b->check_stack_value();
 
-  if ( !is_pet() && !is_enemy() && type != HEALING_ENEMY )
-  {
-    chv += sim->auras.mark_of_the_wild->check_value();
-  }
-
   if ( buffs.dmf_well_fed )
     chv += buffs.dmf_well_fed->check_value();
 
@@ -4878,11 +4868,6 @@ double player_t::composite_mitigation_versatility() const
 
   for ( auto b : buffs.stat_pct_buffs[ STAT_PCT_BUFF_VERSATILITY ] )
     cmv += b->check_stack_value() / 2;
-
-  if ( !is_pet() && !is_enemy() && type != HEALING_ENEMY )
-  {
-    cmv += sim->auras.mark_of_the_wild->check_value() / 2;
-  }
 
   if ( buffs.dmf_well_fed )
     cmv += buffs.dmf_well_fed->check_value() / 2;
@@ -5233,8 +5218,6 @@ double player_t::composite_attribute_multiplier( attribute_e attr ) const
       break;
     case ATTR_INTELLECT:
       pct_type = STAT_PCT_BUFF_INTELLECT;
-      if ( sim->auras.arcane_intellect->check() )
-        m *= 1.0 + sim->auras.arcane_intellect->current_value;
       break;
     case ATTR_SPIRIT:
       pct_type = STAT_PCT_BUFF_SPIRIT;
@@ -5243,10 +5226,6 @@ double player_t::composite_attribute_multiplier( attribute_e attr ) const
       break;
     case ATTR_STAMINA:
       pct_type = STAT_PCT_BUFF_STAMINA;
-      if ( sim->auras.power_word_fortitude->check() )
-      {
-        m *= 1.0 + sim->auras.power_word_fortitude->current_value;
-      }
       break;
     default:
       break;
