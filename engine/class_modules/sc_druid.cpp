@@ -984,7 +984,7 @@ struct savage_defense_buff_t : public druid_absorb_buff_t
   {
     //set_quiet( true );
     set_absorb_school(SCHOOL_PHYSICAL);
-    coeff = find_trigger( data() ).trigger()->effectN( 1 ).base_value();
+    coeff = find_trigger( this ).trigger()->effectN( 1 ).base_value();
     // Not sure if this is true
     set_absorb_high_priority(true);
   }
@@ -4592,10 +4592,10 @@ void druid_t::create_buffs()
           ->set_duration( find_spell( "Pulverize" )->duration() + talent.endless_carnage->effectN( 2 ).time_value() );
 
   buff.primal_fury_bear = make_buff_fallback( talent.primal_fury.ok(), this, "primal_fury_bear",
-                                              find_trigger( talent.primal_fury->effectN( 1 ).trigger() ) );
+                                              find_spell( talent.primal_fury->effectN( 1 ).trigger_spell_id() ) );
   buff.primal_fury_cat =
       make_buff_fallback( talent.primal_fury.ok(), this, "primal_fury_cat",
-                                              find_trigger(talent.primal_fury->effectN( 2 )).trigger() ) );
+                                              find_spell(talent.primal_fury->effectN( 2 ).trigger_spell_id()) );
 
   buff.leader_of_the_pack =
       make_buff_fallback( talent.leader_of_the_pack.ok(), this, "leader_of_the_pack", find_spell( 17007 ) )
