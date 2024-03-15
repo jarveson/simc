@@ -1360,6 +1360,21 @@ public:
     s->target->debuffs.bleed_dmg_taken->trigger();
   }
 
+  void trigger_ff(action_state_t* s, unsigned stacks)
+  {
+    if ( ab::sim->overrides.armor_reduc )
+    {
+      return;
+    }
+
+    if ( ab::result_is_miss( s->result ) )
+    {
+      return;
+    }
+
+    // todo: do something based on stacks
+  }
+
   void trigger_bleed( action_state_t* s, timespan_t d )
   {
     if ( ab::sim->overrides.bleeding )
@@ -3832,6 +3847,142 @@ struct mangle_proxy_t : public druid_spell_t
   }
 };
 
+struct faerie_fire_t : public druid_spell_t
+{
+  DRUID_ABILITY( faerie_fire_t, druid_spell_t, "faerie_fire", p->find_spell( 770 ) )
+  {
+  }
+
+  void impact( action_state_t* s ) override
+  {
+    druid_spell_t::impact( s );
+    trigger_ff( s, 1 );
+  };
+};
+
+struct faerie_fire_feral_cat_t : public druid_spell_t
+{
+  DRUID_ABILITY( faerie_fire_feral_cat_t, druid_spell_t, "faerie_fire_feral", p->find_spell( 16857 ) )
+  {
+  }
+
+  void impact( action_state_t* s ) override
+  {
+    druid_spell_t::impact( s );
+    int stacks = 1;
+    if ( p()->talent.feral_aggression->ok() )
+      stacks = p()->talent.feral_aggression->effectN( 1 ).base_value();
+    trigger_ff( s, stacks );
+  };
+};
+
+struct faerie_fire_feral_bear_t : public druid_spell_t
+{
+  DRUID_ABILITY( faerie_fire_feral_bear_t, druid_spell_t, "faerie_fire_feral", p->find_spell( 60089 ) )
+  {
+    attack_power_mod.direct = 1;
+    spell_power_mod.direct  = 0;
+
+    cooldown->duration = p->dbc->spell( 16857 )->cooldown();
+    min_gcd            = p->dbc->spell( 16857 )->gcd();
+  }
+
+  void impact( action_state_t* s ) override
+  {
+    druid_spell_t::impact( s );
+    trigger_ff( s, 1 );
+  };
+};
+
+struct faerie_fire_feral_proxy_t : public druid_spell_t
+{
+  action_t* ff_cat;
+  action_t* ff_bear;
+
+  faerie_fire_feral_proxy_t( druid_t* p )
+    : druid_spell_t( "fearie_fire_feral", p, p->find_spell( 16857 ) ),
+      ff_cat( new faerie_fire_feral_cat_t( p ) ),
+      ff_bear( new faerie_fire_feral_bear_t( p ) )
+  {
+  }
+
+  void parse_options( util::string_view opt ) override
+  {
+    druid_spell_t::parse_options( opt );
+
+    ff_cat->parse_options( opt );
+    ff_bear->parse_options( opt );
+  }
+
+  timespan_t gcd() const override
+  {
+    if ( p()->buff.cat_form->check() )
+      return ff_cat->gcd();
+    else if ( p()->buff.bear_form->check() )
+      return ff_bear->gcd();
+
+    return druid_spell_t::gcd();
+  }
+
+  void execute() override
+  {
+    if ( p()->buff.cat_form->check() )
+      ff_cat->execute();
+    else if ( p()->buff.bear_form->check() )
+      ff_bear->execute();
+
+    if ( pre_execute_state )
+      action_state_t::release( pre_execute_state );
+  }
+
+  bool action_ready() override
+  {
+    if ( p()->buff.cat_form->check() )
+      return ff_cat->action_ready();
+    else if ( p()->buff.bear_form->check() )
+      return ff_bear->action_ready();
+
+    return false;
+  }
+
+  bool target_ready( player_t* candidate_target ) override
+  {
+    if ( p()->buff.cat_form->check() )
+      return ff_cat->target_ready( candidate_target );
+    else if ( p()->buff.bear_form->check() )
+      return ff_bear->target_ready( candidate_target );
+
+    return false;
+  }
+
+  bool ready() override
+  {
+    if ( p()->buff.cat_form->check() )
+      return ff_cat->ready();
+    else if ( p()->buff.bear_form->check() )
+      return ff_bear->ready();
+
+    return false;
+  }
+
+  double cost() const override
+  {
+    if ( p()->buff.cat_form->check() )
+      return ff_cat->cost();
+    else if ( p()->buff.bear_form->check() )
+      return ff_bear->cost();
+
+    return 0;
+  }
+
+  void impact( action_state_t* s ) override
+  {
+    if ( p()->buff.cat_form->check() )
+      return ff_cat->impact( s );
+    else if ( p()->buff.bear_form->check() )
+      return ff_bear->impact( s );
+  }
+};
 
 // Stampeding Roar ==========================================================
 struct stampeding_roar_t : public druid_spell_t
@@ -4194,8 +4345,8 @@ action_t* druid_t::create_action( std::string_view name, std::string_view opt )
   else if ( name == "starfire" )              a = new              starfire_t( this );
   else if ( name == "stampeding_roar" )       a = new       stampeding_roar_t( this );
   else if ( name == "savage_roar" )           a = new           savage_roar_t( this );
-  //else if ( name == "faerie_fire"           ) a = new           faerie_fire_t( this );
-  //else if ( name == "faerie_fire_feral"     ) a = new     faerie_fire_feral_t( this );
+  else if ( name == "faerie_fire"           ) a = new           faerie_fire_t( this );
+  else if ( name == "faerie_fire_feral"     ) a = new faerie_fire_feral_proxy_t( this );
 
   // Class Talents
   else if ( name == "barkskin"              ) a = new              barkskin_t( this );
