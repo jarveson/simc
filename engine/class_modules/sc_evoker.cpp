@@ -6516,11 +6516,11 @@ struct evoker_module_t : public module_t
     if ( p->is_enemy() || p->type == HEALING_ENEMY || p->is_pet() )
       return;
 
-    new spells::infernos_blessing_t( p );
-    new spells::blistering_scales_damage_t( p );
-    new spells::fate_mirror_damage_t( p );
-    new spells::fate_mirror_heal_t( p );
-    new spells::breath_of_eons_damage_t( p );
+    //new spells::infernos_blessing_t( p );
+    //new spells::blistering_scales_damage_t( p );
+    //new spells::fate_mirror_damage_t( p );
+    //new spells::fate_mirror_heal_t( p );
+    //new spells::breath_of_eons_damage_t( p );
   }
 
 

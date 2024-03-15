@@ -3939,6 +3939,11 @@ class SetBonusListGenerator(DataGenerator):
             'name': 'tier10',
             'bonuses': [ 887, 888, 889 ],
             'tier': 10,
+        },
+        {
+            'name': 'tier11_melee',
+            'bonuses': [ 927 ],
+            'tier': 10,
         }
     ]
 

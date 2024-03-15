@@ -81,6 +81,7 @@ item_t::parsed_input_t::parsed_input_t()
     data(),
     initial_cd( timespan_t::zero() ),
     drop_level( 0 ),
+    reforge_id(0),
     base_level_priority( std::numeric_limits<int>::max() ),
     scaling_level_priority( std::numeric_limits<int>::max() )
 {

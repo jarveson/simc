@@ -1011,7 +1011,11 @@ bool item_database::load_item_from_data( item_t& item )
   {
     auto &reforge = item.player->dbc->item_reforge( item.parsed.reforge_id );
     if ( &reforge == &item_reforge_data_t::nil() )
+    {
+      item.player->sim->error( "Player {} item '{}' unknown item reforge id {}", item.player->name(),
+                               item.name(), item.parsed.reforge_id );
       return false;
+    }
     apply_reforge( item, reforge);
   }
 

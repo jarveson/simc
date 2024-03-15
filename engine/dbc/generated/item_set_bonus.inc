@@ -1,5 +1,5 @@
 // Set bonus data, wow build 4.4.0.53627
-static const std::array<item_set_bonus_t, 6> __set_bonus_data { {
+static const std::array<item_set_bonus_t, 8> __set_bonus_data { {
   // SetBonusName                               , OptName              , EnumID, SetID, Tier, Bns, Cls, Spec, SpellID, ItemIDs
   { "Lasherweave Regalia"                       , "tier10"             ,     22,   888,   10,   2,  11,   -1,   70718, {  51706,  51705,  51704,  51703,  51702,  0 } },
   { "Lasherweave Garb"                          , "tier10"             ,     22,   887,   10,   2,  11,   -1,   70658, {  51696,  51695,  51694,  51693,  51692,  0 } },
@@ -7,4 +7,6 @@ static const std::array<item_set_bonus_t, 6> __set_bonus_data { {
   { "Lasherweave Regalia"                       , "tier10"             ,     22,   888,   10,   4,  11,   -1,   70723, {  51706,  51705,  51704,  51703,  51702,  0 } },
   { "Lasherweave Garb"                          , "tier10"             ,     22,   887,   10,   4,  11,   -1,   70664, {  51696,  51695,  51694,  51693,  51692,  0 } },
   { "Lasherweave Battlegear"                    , "tier10"             ,     22,   889,   10,   4,  11,   -1,   70726, {  51701,  51700,  51699,  51698,  51697,  0 } },
+  { "Stormrider's Battlegarb"                   , "tier11"             ,     23,   927,   11,   2,  11,   -1,   90162, {  60290,  60286,  60288,  60287,  60289,  0 } },
+  { "Stormrider's Battlegarb"                   , "tier11"             ,     23,   927,   11,   4,  11,   -1,   90165, {  60290,  60286,  60288,  60287,  60289,  0 } },
 } };

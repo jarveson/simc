@@ -4416,11 +4416,6 @@ void druid_t::init_spells()
   // Talents ================================================================
 
   auto CT  = [ this ]( std::string_view n ) { return find_talent_spell( talent_tree::CLASS, n ); };
-  auto ST  = [ this ]( std::string_view n ) { return find_talent_spell( talent_tree::SPECIALIZATION, n ); };
-  auto STS = [ this ]( std::string_view n, specialization_e s ) {
-    return find_talent_spell( talent_tree::SPECIALIZATION, n, s );
-  };
-
   auto GS = [ this ]( std::string_view n ) { return find_glyph_spell( n ); };
 
   talent.balance_of_power        = CT( "Balance of Power" );
