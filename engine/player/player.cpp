@@ -5234,6 +5234,8 @@ double player_t::composite_attribute_multiplier( attribute_e attr ) const
       break;
     case ATTR_SPIRIT:
       pct_type = STAT_PCT_BUFF_SPIRIT;
+      if (racials.the_human_spirit->ok())
+          m *= 1.0 + racials.the_human_spirit->effectN(1).percent();
       break;
     case ATTR_STAMINA:
       pct_type = STAT_PCT_BUFF_STAMINA;
@@ -5267,24 +5269,20 @@ double player_t::composite_rating_multiplier( rating_e rating ) const
     case RATING_RANGED_HASTE:
       v *= 1.0 + passive_values.amplification_1;
       v *= 1.0 + passive_values.amplification_2;
-      v *= 1.0 + racials.the_human_spirit->effectN( 1 ).percent();
       break;
     case RATING_MASTERY:
       v *= 1.0 + passive_values.amplification_1;
       v *= 1.0 + passive_values.amplification_2;
-      v *= 1.0 + racials.the_human_spirit->effectN( 1 ).percent();
       break;
     case RATING_SPELL_CRIT:
     case RATING_MELEE_CRIT:
     case RATING_RANGED_CRIT:
-      v *= 1.0 + racials.the_human_spirit->effectN( 1 ).percent();
       break;
     case RATING_DAMAGE_VERSATILITY:
     case RATING_HEAL_VERSATILITY:
     case RATING_MITIGATION_VERSATILITY:
       v *= 1.0 + passive_values.amplification_1;
       v *= 1.0 + passive_values.amplification_2;
-      v *= 1.0 + racials.the_human_spirit->effectN( 1 ).percent();
       break;
     default:
       break;
