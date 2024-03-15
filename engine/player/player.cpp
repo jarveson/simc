@@ -4195,6 +4195,9 @@ void player_t::create_buffs()
         make_buff( this, "mangle", find_spell( 33876 ) )->set_default_value_from_effect( 2 );
 
     debuffs.spell_dmg_taken = make_buff( this, "earth_and_moon", find_spell( 60433 ) )->set_default_value_from_effect(1);
+
+    debuffs.armor_reduc = make_buff( this, "expose_armor", find_spell( 8647 ) )->set_default_value_from_effect(1);
+    debuffs.phys_dmg_taken = make_buff( this, "savage_combat", find_spell( 58683 ) )->set_default_value_from_effect(1);
   }
 
   // set up always since this can be applied by enemy actions and raid events.
@@ -4520,6 +4523,9 @@ double player_t::composite_base_armor_multiplier() const
 double player_t::composite_armor_multiplier() const
 {
   double a = current.armor_multiplier;
+
+  if ( debuffs.armor_reduc->check() )
+    a *= 1.0 - std::abs(debuffs.armor_reduc->value());
 
   return a;
 }
@@ -6548,6 +6554,12 @@ void player_t::arise()
       debuffs.bleeding->override_buff( 1, 1.0 );
     if ( sim->overrides.mortal_wounds && debuffs.mortal_wounds )
       debuffs.mortal_wounds->override_buff();
+    if (sim->overrides.spell_dmg_taken && debuffs.spell_dmg_taken )
+      debuffs.spell_dmg_taken->override_buff();
+    if (sim->overrides.armor_reduc && debuffs.armor_reduc)
+      debuffs.armor_reduc->override_buff();
+    if (sim->overrides.phys_dmg && debuffs.phys_dmg_taken)
+      debuffs.phys_dmg_taken->override_buff();
   }
   else
   {

@@ -1347,7 +1347,7 @@ public:
 
   void trigger_mangle( action_state_t* s )
   {
-    if ( ab::sim->overrides.mangle )
+    if ( ab::sim->overrides.bleed_dmg )
     {
       return;
     }

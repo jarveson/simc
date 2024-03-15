@@ -1265,6 +1265,10 @@ void to_json( const ::report::json::report_configuration_t& report_configuration
   add_non_zero( overrides, "mortal_wounds", sim.overrides.mortal_wounds );
   add_non_zero( overrides, "bleeding", sim.overrides.bleeding );
   add_non_zero( overrides, "bloodlust", sim.overrides.bloodlust );
+  add_non_zero( overrides, "bleed_dmg", sim.overrides.bleed_dmg );
+  add_non_zero( overrides, "spell_dmg_taken", sim.overrides.spell_dmg_taken );
+  add_non_zero( overrides, "armor_reduc", sim.overrides.armor_reduc );
+  add_non_zero( overrides, "phys_dmg_taken", sim.overrides.phys_dmg );
   if ( sim.overrides.bloodlust )
   {
     add_non_zero( overrides, "bloodlust_percent", sim.bloodlust_percent );

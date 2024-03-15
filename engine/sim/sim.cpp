@@ -3436,6 +3436,10 @@ void sim_t::use_optimal_buffs_and_debuffs( int value )
   overrides.windfury_totem          = optimal_raid;
 
   overrides.bleeding                = optimal_raid;
+  overrides.bleed_dmg               = optimal_raid;
+  overrides.spell_dmg_taken         = optimal_raid;
+  overrides.armor_reduc             = optimal_raid;
+  overrides.phys_dmg                = optimal_raid;
 
   overrides.bloodlust               = optimal_raid;
 }
