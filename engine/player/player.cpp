@@ -4447,7 +4447,11 @@ double player_t::composite_attack_power_multiplier() const
 
   double m = current.attack_power_multiplier;
 
-  m *= 1.0 + sim->auras.battle_shout->check_value();
+  // todo: hacky hacky
+  if (type == HUNTER)
+    m *= 1.0 + (sim->auras.attack_power->check_value() / 2);
+  else
+    m *= 1.0 + sim->auras.attack_power->check_value();
 
   // multiplier is rounded to 3 digits
   return std::round( m * 1000 ) * 0.001;

@@ -221,6 +221,7 @@ struct sim_t : private sc_thread_t
 
     int crit_chance;
     int melee_attack_speed;
+    int attack_power;
 
     // Debuff overrides
     int mangle;
@@ -246,6 +247,7 @@ struct sim_t : private sc_thread_t
 
     buff_t* crit_chance;
     buff_t* melee_attack_speed;
+    buff_t* attack_power;
   } auras;
 
   // Expansion specific custom parameters. Defaults in the constructor.

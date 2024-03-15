@@ -1944,6 +1944,7 @@ void sim_t::combat_begin()
   if ( overrides.power_word_fortitude ) auras.power_word_fortitude -> override_buff();
   if ( overrides.crit_chance ) auras.crit_chance->override_buff();
   if ( overrides.melee_attack_speed ) auras.melee_attack_speed->override_buff();
+  if (overrides.attack_power) auras.attack_power->override_buff();
 
   for ( player_e i = PLAYER_NONE; i < PLAYER_MAX; ++i )
   {
@@ -2798,6 +2799,10 @@ void sim_t::init()
   auras.melee_attack_speed = make_buff( this, "hunting_party", dbc::find_spell( this, 53290 ) )
                                  ->set_default_value( dbc::find_spell( this, 53290 )->effectN( 2 ).percent() )
                                  ->add_invalidate( CACHE_ATTACK_SPEED );
+
+  auras.attack_power = make_buff( this, "trueshot aura", dbc::find_spell(this, 19506 ))
+                           ->set_default_value( dbc::find_spell( this, 53290 )->effectN( 2 ).percent() )
+                           ->add_invalidate(CACHE_ATTACK_POWER);
 
   // Fight style initialization must be performed before target creation and raid event initialization, since fight
   // styles may define/override these things.
