@@ -1,6 +1,5 @@
 SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA
 Name             : Demoralizing Roar (desc=Bear Form) (id=99) [Spell Family (7)] 
-Talent Entry     : Generic [tree=class, row=8, col=1, max_rank=1, req_points=20, select_idx=100, name="Incapacitating Roar"]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -86,7 +85,6 @@ Tooltip          : Causes $w1 Nature damage to attackers.
 Variables        : $mult=$?s16913[${1.10}][${1.0}]
 
 Name             : Tranquility (id=740) [Spell Family (7)] 
-Talent Entry     : Restoration [tree=spec, row=5, col=2, max_rank=1, req_points=8]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -177,7 +175,6 @@ Effects          :
 Description      : Decreases the armor of the target by $91565s1% for $91565d.  While affected, the target cannot stealth or turn invisible.  Stacks up to $91565u times.
 
 Name             : Rejuvenation (id=774) [Spell Family (7)] 
-Talent Entry     : Generic [free=(Restoration), tree=class, row=1, col=3, max_rank=1, req_points=0]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -304,7 +301,6 @@ The act of shapeshifting frees the caster of movement slowing effects.
 Tooltip          : Immune to Polymorph effects.  Increases swim speed by $w3% and allows underwater breathing.
 
 Name             : Rip (desc=Cat Form) (id=1079) [Spell Family (7)] 
-Talent Entry     : Generic [free=(Feral), tree=class, row=3, col=1, max_rank=1, req_points=0]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -349,6 +345,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 40 Energy (3) (id=169889)
 Spell Level      : 8 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1 seconds
 Stance Mask      : 0x00000001
@@ -416,7 +413,6 @@ Effects          :
                    Base Value: 20 | Scaled Value: 20 | PvP Coefficient: 1.00000 | Misc Value: 2 | Misc Value 2: 0x4 | Target: Self (1)
 
 Name             : Rake (desc=Cat Form) (id=1822) [Spell Family (7)] 
-Talent Entry     : Generic [free=(Feral), tree=class, row=1, col=1, max_rank=1, req_points=0]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -474,7 +470,6 @@ Description      : Increases movement speed by $s1% while in Cat Form for $d.  D
 Tooltip          : Increases movement speed by $s1% while in Cat Form.
 
 Name             : Hibernate (id=2637) [Spell Family (7)] 
-Talent Entry     : Generic [tree=class, row=4, col=5, max_rank=1, req_points=0]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -503,9 +498,6 @@ Description      : Forces the enemy target to sleep for up to $d.  Any damage wi
 Tooltip          : Asleep.
 
 Name             : Remove Corruption (id=2782) [Spell Family (7)] 
-Talent Entry     : Feral [tree=class, row=3, col=5, max_rank=1, req_points=0]
-                 : Balance [tree=class, row=3, col=5, max_rank=1, req_points=0]
-                 : Guardian [tree=class, row=3, col=5, max_rank=1, req_points=0]
 Class            : Druid
 School           : Arcane
 Spell Type       : None
@@ -534,7 +526,6 @@ Effects          :
 Description      : Nullifies corrupting effects on the friendly target, $?s88423[removing $s1 Magic, $s2 Curse, and $s3 Poison effect.][removing $s2 Curse and $s3 Poison effect.]
 
 Name             : Soothe (id=2908) [Spell Family (7)] 
-Talent Entry     : Generic [tree=class, row=6, col=3, max_rank=1, req_points=8]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -691,7 +682,6 @@ Description      : Forces all nearby enemies within $a1 yards to focus attacks o
 Tooltip          : Taunted.
 
 Name             : Bash (desc=Bear Form) (id=5211) [Spell Family (7)] 
-Talent Entry     : Generic [tree=class, row=8, col=1, max_rank=1, req_points=20, select_idx=200, name="Mighty Bash"]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -749,7 +739,6 @@ Description      : Allows the Druid to prowl around, but reduces your movement s
 Tooltip          : Stealthed.  Movement speed slowed by $s2%.
 
 Name             : Tiger's Fury (desc=Cat Form) (id=5217) [Spell Family (7)] 
-Talent Entry     : Feral [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -783,6 +772,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 40 Energy (3) (id=172903)
 Spell Level      : 46 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1 seconds
 Stance Mask      : 0x00000001
@@ -841,6 +831,7 @@ Class            : Druid
 School           : Nature
 Spell Type       : None
 Spell Level      : 16 (max 200)
+Max Scaling Level: 200
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -885,6 +876,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 5% Base Mana (0) (id=173780)
 Spell Level      : 15 (max 40)
+Max Scaling Level: 40
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
 Affecting spells : Natural Shapeshifter (16833 effect#1), Natural Shapeshifter (16834 effect#1), Wolfshead Helm (17768 effect#1), Metamorphosis Rune (23724 effect#1), Cheaper Druid Shapeshifting (38314 effect#1), Shapeshifter (87793 effect#1)
@@ -947,6 +939,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 60 Energy (3) (id=174170)
 Spell Level      : 22 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1 seconds
 Stance Mask      : 0x00000001
@@ -1000,7 +993,6 @@ Description      : Taunts the target to attack you, but has no effect if the tar
 Tooltip          : Taunted.
 
 Name             : Maul (desc=Bear Form) (id=6807) [Spell Family (7)] 
-Talent Entry     : Guardian [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -1464,7 +1456,6 @@ Effects          :
 Description      : Increases the damage caused by your Ferocious Bite by $s2% and causes Faerie Fire (Feral) to apply $s1 stacks of the Faerie Fire effect when cast.
 
 Name             : Omen of Clarity (desc=Passive) (id=16864) [Spell Family (7), Passive] 
-Talent Entry     : Feral [tree=spec, row=2, col=1, max_rank=1, req_points=0]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -1665,9 +1656,6 @@ Effects          :
 Description      : Increases your Armor contribution from cloth and leather items by $s1%, increases armor while in Bear Form by an additional $s2%, and reduces the chance you'll be critically hit by melee attacks by $s3%.
 
 Name             : Thick Hide (desc=Rank 3) (id=16931) [Passive, Hidden] 
-Talent Entry     : Generic [tree=class, row=5, col=2, max_rank=2, req_points=8]
-                 : Effect#1 [op=set]
-                 : Effect#2 [op=set]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -1894,7 +1882,6 @@ Description      : Increases the critical strike chance of your Ravage by $s1% o
 Your finishing moves have a $b3% chance per combo point to make your next non-instant Nature spell with a base casting time of less than 10 sec. become an instant cast spell and cost no mana.
 
 Name             : Predatory Strikes (desc=Rank 2) (id=16974) [Spell Family (7), Passive, Hidden] 
-Talent Entry     : Feral [tree=spec, row=6, col=2, max_rank=1, req_points=8, name="Predatory Swiftness"]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -2392,7 +2379,6 @@ Description      : When activated, your next Nature spell with a base casting ti
 Tooltip          : Your next Nature spell will be an instant cast spell with $s2% increased healing.
 
 Name             : Swiftmend (id=18562) [Spell Family (7)] 
-Talent Entry     : Generic [free=(Restoration), tree=class, row=2, col=3, max_rank=1, req_points=0]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -2565,7 +2551,6 @@ Description      : Finishing move that causes damage per combo point$?s67598 [ a
 Variables        : $mult=$?s16859[${1.10}]?s16858[${1.05}][${1.00}]
 
 Name             : Maim (desc=Cat Form) (id=22570) [Spell Family (7)] 
-Talent Entry     : Generic [tree=class, row=4, col=1, max_rank=1, req_points=0]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -2631,7 +2616,6 @@ Description      : The Druid's skin becomes as tough as bark.  All damage taken 
 Tooltip          : All damage taken is reduced by $s2%.  While protected, damaging attacks will not cause spellcasting delays.
 
 Name             : Frenzied Regeneration (desc=Bear Form) (id=22842) [Spell Family (7)] 
-Talent Entry     : Generic [free=(Guardian), tree=class, row=1, col=2, max_rank=1, req_points=0]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -2681,7 +2665,6 @@ Effects          :
 Description      : Increases maximum health by $22842s2%, increases health to $22842s2% (if below that value), and converts up to 10 Rage per second into health for $22842d.  Each point of Rage is converted into ${$22842m2/100}.1% of max health.
 
 Name             : Moonkin Form (desc=Shapeshift) (id=24858) [Spell Family (7)] 
-Talent Entry     : Balance [tree=class, row=3, col=6, max_rank=1, req_points=0]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -2882,7 +2865,6 @@ Effects          :
 Description      : Reduces the mana cost of your Wrath spell by $s2%, and when you deal damage with your Wrath spell you have a $h% chance to cause your next Starfire to be instant cast within $81093d.
 
 Name             : Innervate (id=29166) [Spell Family (7)] 
-Talent Entry     : Generic [tree=class, row=9, col=4, max_rank=1, req_points=20]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -3110,7 +3092,6 @@ Description      : Lacerates the enemy target, dealing ${$m2+($AP*0.0552)} damag
 Tooltip          : Suffering $w1 damage every $t1 sec.
 
 Name             : Lifebloom (id=33763) [Spell Family (7)] 
-Talent Entry     : Restoration [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -3156,7 +3137,6 @@ $gift=$?s87305[${1.25}][${1}]
 $bloom=${$<gift>*$<genesis3>*$<mstrshape>*$<gotem3>*$<tol>}
 
 Name             : Cyclone (id=33786) [Spell Family (7)] 
-Talent Entry     : Generic [tree=class, row=5, col=5, max_rank=1, req_points=8]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -3237,9 +3217,6 @@ Effects          :
 Description      : Increases your healing spells by up to $s1% of your Agility, and increases healing done to you by $47179s1% while in Cat Form.
 
 Name             : Nurturing Instinct (desc=Rank 2) (id=33873) [Spell Family (7), Passive, Hidden] 
-Talent Entry     : Generic [tree=class, row=4, col=4, max_rank=2, req_points=0]
-                 : Effect#1 [op=set]
-                 : Effect#2 [op=set]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -3263,6 +3240,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 35 Energy (3) (id=220548)
 Spell Level      : 10 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 60 seconds
@@ -3295,6 +3273,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 15 Rage (1) (id=220550)
 Spell Level      : 10 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1.5 seconds
 Duration         : 60 seconds
@@ -3454,7 +3433,6 @@ Effects          :
 Description      : The bonus healing effects of your healing over time spells and Swiftmend is increased by $s1%.
 
 Name             : Tree of Life (desc=Shapeshift) (id=33891) [Spell Family (7)] 
-Talent Entry     : Restoration [tree=spec, row=8, col=2, max_rank=1, req_points=20, select_idx=100, name="Incarnation: Tree of Life"]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -4246,7 +4224,6 @@ Effects          :
 Description      : Increases the critical effect chance of your Swiftmend and Nourish spells by $s1%.
 
 Name             : Wild Growth (id=48438) [Spell Family (7)] 
-Talent Entry     : Generic [tree=class, row=3, col=4, max_rank=1, req_points=0]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -4313,7 +4290,6 @@ Effects          :
 Description      : Your Shred, Maul, Ravage and Mangle attacks cause an Infected Wound in the target. The Infected Wound reduces the movement speed of the target by $58179s1% and the attack speed by $58179s2%. Lasts $58179d.
 
 Name             : Infected Wounds (desc=Rank 2) (id=48484) [Spell Family (7), Passive, Hidden] 
-Talent Entry     : Feral [tree=spec, row=5, col=4, max_rank=1, req_points=8]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -4805,6 +4781,7 @@ Class            : Druid
 School           : Arcane
 Spell Type       : None
 Spell Level      : 60 (max 69)
+Max Scaling Level: 69
 GCD              : 1.5 seconds
 Affecting spells : Glyph of Focus (62080 effect#1)
 Triggered by     : Starfall (48505)
@@ -4931,7 +4908,6 @@ Effects          :
 Tooltip          : Dazed.
 
 Name             : Nourish (id=50464) [Spell Family (7)] 
-Talent Entry     : Restoration [tree=spec, row=6, col=2, max_rank=1, req_points=8, select_idx=100]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -6556,8 +6532,6 @@ Description      : Your Wrath, Starfire and Wild Mushroom: Detonate spells apply
 Tooltip          : Increases spell damage taken by $s1%.
 
 Name             : Survival Instincts (desc=Cat or Bear Form) (id=61336) [Spell Family (7)] 
-Talent Entry     : Feral [tree=spec, row=5, col=3, max_rank=1, req_points=8]
-                 : Guardian [tree=spec, row=2, col=2, max_rank=1, req_points=0]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -6705,6 +6679,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 45 Energy (3) (id=233034)
 Spell Level      : 36 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1 seconds
 Stance Mask      : 0x00000001
@@ -7091,6 +7066,7 @@ Class            : Druid
 School           : Nature
 Spell Type       : None
 Spell Level      : 80 (max 84)
+Max Scaling Level: 84
 Range            : 100 yards
 Affecting spells : Tree of Life (5420 effects: #1, #2), Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Improved Rejuvenation (17111 effect#1), Improved Rejuvenation (17112 effect#1), Improved Rejuvenation (17113 effect#1), Nimble Healing Touch (24542 effect#2), Swift Rejuvenation (33886 effect#1), Empowered Rejuvenation (33888 effect#1), Blessing of Lower City (37878 effect#1), Revitalize (48539 effect#1), Revitalize (48544 effect#1), Gift of the Earthmother (51180 effect#1), Gift of the Earthmother (51181 effect#1), Glyph of Rejuvenation (54754 effect#1), Genesis (57810 effect#1), Genesis (57811 effect#1), Genesis (57812 effect#1), Item - Druid T10 Restoration 4P Bonus (Rejuvenation) (70664 effect#1), Blessing of the Grove (78784 effect#1), Blessing of the Grove (78785 effect#1), Gift of Nature (87305 effect#2), Shooting Stars (93398 effect#1), Shooting Stars (93399 effect#1), Sunfire (93401 effect#1), Harmony (100977 effect#1), Increased Rejuvenation (352508 effect#1), Increased Rejuvenation Healing (388427 effect#1)
 Family Flags     : 4
@@ -7420,7 +7396,6 @@ Description      : The Druid roars, increasing the movement speed of all friendl
 Tooltip          : Movement speed increased by $s1%.
 
 Name             : Starsurge (id=78674) [Spell Family (7)] 
-Talent Entry     : Balance [free=(Balance), tree=class, row=2, col=5, max_rank=1, req_points=0]
 Class            : Druid
 School           : Astral
 Spell Type       : None
@@ -7453,7 +7428,6 @@ Effects          :
 Description      : You fuse the power of the moon and sun, launching a devastating blast of energy at the target. Causes $78674s1 Spellstorm damage to the target and generates $78674s2 Lunar or Solar energy, whichever is more beneficial to you.
 
 Name             : Solar Beam (id=78675) [Spell Family (7)] 
-Talent Entry     : Balance [tree=spec, row=2, col=2, max_rank=1, req_points=0]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -7730,7 +7704,6 @@ Tooltip          : Strength, Agility, Stamina, and Intellect increased by $s1%.
 All magical resistances increased by $w2.
 
 Name             : Eclipse Mastery Driver Passive (id=79577) [Spell Family (7), Passive, Hidden] 
-Talent Entry     : Balance [tree=spec, row=1, col=1, max_rank=1, req_points=0, name="Eclipse"]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -7751,7 +7724,6 @@ Effects          :
                    Base Value: -100 | Scaled Value: -100 | PvP Coefficient: 1.00000 | Misc Value: 26 | Misc Value 2: 0x1 | Trigger Spell: 48518 | Target: Self (1)
 
 Name             : Pulverize (desc=Bear Form) (id=80313) [Spell Family (7)] 
-Talent Entry     : Guardian [tree=spec, row=10, col=1, max_rank=1, req_points=20]
 Class            : Druid
 School           : Physical
 Spell Type       : None
@@ -8354,6 +8326,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 60 Energy (3) (id=283533)
 Spell Level      : 22 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1 seconds
 Stance Mask      : 0x00000001
@@ -9035,7 +9008,6 @@ Effects          :
 Description      : Empowers your Remove Corruption spell to also remove a magic effect from a friendly target.
 
 Name             : Wild Mushroom (id=88747) [Spell Family (7)] 
-Talent Entry     : Balance [tree=spec, row=8, col=1, max_rank=1, req_points=20]
 Class            : Druid
 School           : Nature
 Spell Type       : None
@@ -9274,7 +9246,6 @@ Effects          :
 Description      : While in Solar Eclipse, your Moonfire spell will morph into Sunfire.
 
 Name             : Sunfire (id=93402) [Spell Family (7)] 
-Talent Entry     : Generic [tree=class, row=2, col=4, max_rank=1, req_points=0]
 Class            : Druid
 School           : Nature
 Spell Type       : None

@@ -5,6 +5,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 60 Energy (3) (id=169274)
 Spell Level      : 18 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1 seconds
 Requires weapon  : Dagger
@@ -205,6 +206,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 45 Energy (3) (id=170879)
 Spell Level      : 1 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
@@ -255,7 +257,6 @@ Effects          :
 Description      : A quick kick that interrupts spellcasting and prevents any spell in that school from being cast for $d.
 
 Name             : Gouge (id=1776) [Spell Family (8)] 
-Talent Entry     : Generic [tree=class, row=2, col=2, max_rank=1, req_points=0, select_idx=100]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -514,7 +515,6 @@ Description      : Performs a feint, causing no damage but lowering your threat 
 Tooltip          : $s2% reduced damage taken from area of effect attacks.
 
 Name             : Blind (id=2094) [Spell Family (8)] 
-Talent Entry     : Generic [free=(Outlaw), tree=class, row=1, col=2, max_rank=1, req_points=0]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -699,7 +699,6 @@ $mult1=$?s14165[${25}][${0}]
 $mult=$?s14166[${50}][${$<mult1>}]
 
 Name             : Evasion (id=5277) [Spell Family (8)] 
-Talent Entry     : Generic [tree=class, row=2, col=1, max_rank=1, req_points=0]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -733,6 +732,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 Requires weapon  : Dagger
 Affecting spells : Puncturing Wounds (13733 effect#2), Puncturing Wounds (13865 effect#2), Puncturing Wounds (13866 effect#2), Opportunity (14057 effect#1), Opportunity (14072 effect#1), Lethality (14128 effect#1), Lethality (14132 effect#1), Lethality (14135 effect#1), Cold Blood (14177 effect#1), Shadowstep (36554 effect#2), Main Gauche (76806 effect#1), Enhanced Elements (77223 effect#1), Vendetta (79140 effect#1), Opportunity (79141 effect#1), Deadly Momentum (84590 effect#1), Hemorrhage (89775 effect#1)
@@ -755,7 +755,6 @@ Effects          :
 Description      : Instantly attacks with both weapons for $5374m2% weapon damage plus an additional $5374s1 with each weapon.  Awards 2 combo points.
 
 Name             : Shiv (id=5938) [Spell Family (8)] 
-Talent Entry     : Generic [free=(Assassination), tree=class, row=1, col=1, max_rank=1, req_points=0]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -867,6 +866,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 60 Energy (3) (id=175441)
 Spell Level      : 8 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
@@ -1055,7 +1055,6 @@ Effects          :
 Description      : Gives a $s1% chance to remove all movement-impairing effects when you activate your Sprint ability.
 
 Name             : Adrenaline Rush (id=13750) [Spell Family (8)] 
-Talent Entry     : Outlaw [tree=spec, row=2, col=1, max_rank=1, req_points=0]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -1498,8 +1497,6 @@ Effects          :
 Description      : Increases the damage dealt with your Backstab, Mutilate, Garrote, and Ambush abilities by $s1%.
 
 Name             : Nightstalker (desc=Rank 2) (id=14062) [Spell Family (8), Passive, Hidden] 
-Talent Entry     : Generic [tree=class, row=9, col=3, max_rank=2, req_points=20]
-                 : Effect#1 [op=set]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -1803,7 +1800,6 @@ Effects          :
 Description      : Gives your melee finishing moves a $h% chance to add a combo point to your target.
 
 Name             : Ruthlessness (desc=Rank 3) (id=14161) [Spell Family (8), Passive, Hidden] 
-Talent Entry     : Outlaw [tree=spec, row=6, col=1, max_rank=1, req_points=8]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -2156,7 +2152,6 @@ Effects          :
                    Base Value: 1 | Scaled Value: 1 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 
 Name             : Seal Fate (desc=Rank 2) (id=14190) [Spell Family (8), Passive, Hidden] 
-Talent Entry     : Assassination [tree=spec, row=4, col=2, max_rank=1, req_points=0]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -2198,6 +2193,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 35 Energy (3) (id=181408)
 Spell Level      : 29 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 60 seconds
@@ -2409,9 +2405,9 @@ Attributes       : ....x... ........ ........ ........   .....x.. ..x..... .....
                  : Is Ability (4), Allow While Stealthed (37), No Threat (42), Allow While Invisible (78), Do Not Reset Combat Timers (81)
 Effects          :
 #1 (id=698685)   : Apply Aura (6) | Modify Attack Power (99) | Scaling Class: -1
-                   Base Value: 6 | Scaled Value: 0 (coefficient=2.64) | Points Per Level: 4 | PvP Coefficient: 1.00000 | Target: Self (1)
+                   Base Value: 6 | Scaled Value: 1169.52 (coefficient=2.64) | Points Per Level: 4 | PvP Coefficient: 1.00000 | Target: Self (1)
 #2 (id=870824)   : Apply Aura (6) | Modify Ranged Attack Power (124) | Scaling Class: -1
-                   Base Value: 6 | Scaled Value: 0 (coefficient=2.64) | Points Per Level: 4 | PvP Coefficient: 1.00000 | Target: Self (1)
+                   Base Value: 6 | Scaled Value: 1169.52 (coefficient=2.64) | Points Per Level: 4 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Increases attack power by $s1. Lasts $d.
 Tooltip          : Attack power increased by $s1.
 
@@ -2500,6 +2496,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 0 Energy (3) (id=215768)
 Spell Level      : 1 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 Requires weapon  : Dagger
 Affecting spells : Puncturing Wounds (13733 effect#2), Puncturing Wounds (13865 effect#2), Puncturing Wounds (13866 effect#2), Opportunity (14057 effect#1), Opportunity (14072 effect#1), Lethality (14128 effect#1), Lethality (14132 effect#1), Lethality (14135 effect#1), Cold Blood (14177 effect#1), Main Gauche (76806 effect#1), Enhanced Elements (77223 effect#1), Vendetta (79140 effect#1), Opportunity (79141 effect#1), Deadly Momentum (84590 effect#1), Hemorrhage (89775 effect#1)
@@ -2751,7 +2748,6 @@ Effects          :
 Description      : Attacks made while stealthed and for 6 seconds after breaking stealth cause an additional $s1% damage.
 
 Name             : Cloak of Shadows (id=31224) [Spell Family (8)] 
-Talent Entry     : Generic [free=(Subtlety), tree=class, row=1, col=3, max_rank=1, req_points=0]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -2827,7 +2823,6 @@ Effects          :
 Description      : You have a $s1% chance that an attack which would otherwise kill you will instead reduce you to 10% of your maximum health. In addition, all damage taken will be reduced by $45182s1% for $45182d.  This effect cannot occur more than once per 90 seconds.
 
 Name             : Cheat Death (desc=Rank 3) (id=31230) [Spell Family (8), Passive, Hidden] 
-Talent Entry     : Generic [tree=class, row=3, col=2, max_rank=1, req_points=0, select_idx=200]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -3073,7 +3068,6 @@ Effects          :
 Description      : Gives your successful off-hand melee attacks  and Main Gauche attacks a $h% chance to generate $35545s1 Energy.
 
 Name             : Combat Potency (desc=Rank 3) (id=35551) [Spell Family (8), Passive, Hidden] 
-Talent Entry     : Outlaw [tree=spec, row=5, col=4, max_rank=1, req_points=8, name="Fatal Flourish"]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -3348,7 +3342,6 @@ Effects          :
 Description      : Your Eviscerate and Envenom abilities have a $h% chance to refresh your Slice and Dice duration to its 5 combo point maximum.
 
 Name             : Cut to the Chase (desc=Rank 3) (id=51667) [Spell Family (8), Passive, Hidden] 
-Talent Entry     : Assassination [tree=spec, row=3, col=1, max_rank=1, req_points=0]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -3436,7 +3429,6 @@ Effects          :
 Description      : Increases your total attack power by $s2% and all physical damage caused to enemies you have poisoned is increased by $58684s1%.
 
 Name             : Killing Spree (id=51690) [Spell Family (8)] 
-Talent Entry     : Outlaw [tree=spec, row=10, col=4, max_rank=1, req_points=20]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -4652,7 +4644,6 @@ Description      : The current party or raid member becomes the target of your T
 Tooltip          : All damage caused increased by $w1%.  All threat transferred from rogue to target.
 
 Name             : Tricks of the Trade (id=57934) [Spell Family (8)] 
-Talent Entry     : Generic [tree=class, row=3, col=3, max_rank=1, req_points=0, select_idx=100]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -4986,7 +4977,6 @@ Effects          :
 Description      : Your finishing moves have a $b1% chance per combo point to restore $14181s1 Energy.
 
 Name             : Relentless Strikes (desc=Rank 3) (id=58423) [Spell Family (8), Passive, Hidden] 
-Talent Entry     : Subtlety [tree=spec, row=5, col=6, max_rank=1, req_points=8]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -5093,7 +5083,6 @@ Effects          :
 Tooltip          : Increases physical damage taken by $s1%.
 
 Name             : Vitality (desc=Passive) (id=61329) [Passive] 
-Talent Entry     : Outlaw [tree=spec, row=3, col=3, max_rank=1, req_points=0, name="Combat Potency"]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -5758,7 +5747,6 @@ Effects          :
 Description      : Causes your Recuperate ability to restore an additional ${$m1/1000}.1% of your maximum health and reduces all damage taken by $s2% while your Recuperate ability is active.
 
 Name             : Improved Recuperate (desc=Rank 2) (id=79008) [Spell Family (8), Passive, Hidden] 
-Talent Entry     : Generic [tree=class, row=3, col=2, max_rank=1, req_points=0, select_idx=100, name="Elusiveness"]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -6001,7 +5989,6 @@ Effects          :
 Description      : Each time your Rupture or Garrote deals damage to an enemy that you have poisoned, you have a $h% chance to deal $79136s1 additional Nature damage and to regain $s2 Energy.  If an enemy dies while afflicted by your Rupture, you regain energy proportional to the remaining Rupture duration.
 
 Name             : Venomous Wounds (desc=Rank 2) (id=79134) [Spell Family (8), Passive, Hidden] 
-Talent Entry     : Assassination [tree=spec, row=2, col=2, max_rank=1, req_points=0]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
@@ -6311,6 +6298,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 40 Energy (3) (id=286630)
 Spell Level      : 29 (max 80)
+Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 15 seconds
@@ -6698,7 +6686,6 @@ Description      : Your Ambush, Garrote, and Cheap Shot abilities reveal a flaw 
 Tooltip          : Armor $w1% less effective against the attacking rogue.
 
 Name             : Find Weakness (desc=Rank 2) (id=91023) [Spell Family (8), Passive, Hidden] 
-Talent Entry     : Subtlety [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Rogue
 School           : Physical
 Spell Type       : None

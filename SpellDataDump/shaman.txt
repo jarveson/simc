@@ -73,7 +73,6 @@ Effects          :
 Description      : Heals a friendly target for $s1.$?s55440[  When you heal someone other than yourself, you are also healed for $55440s1% of the spell's effect.][]
 
 Name             : Purge (id=370) [Spell Family (11)] 
-Talent Entry     : Generic [tree=class, row=4, col=6, max_rank=1, req_points=0, select_idx=100]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -173,7 +172,6 @@ Effects          :
 Description      : Hurls a lightning bolt at the enemy, dealing $s1 Nature damage and then jumping to additional nearby enemies.  Each jump reduces the damage by 30%.  Affects $x1 total targets.
 
 Name             : Earth Shield (id=974) [Spell Family (11)] 
-Talent Entry     : Generic [tree=class, row=3, col=1, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -204,7 +202,6 @@ Triggers a heal when struck by an attacker.
 Variables        : $heal=$?a63279[${$m1*1.2}][${$m1}]
 
 Name             : Chain Heal (id=1064) [Spell Family (11)] 
-Talent Entry     : Generic [free=(Restoration), tree=class, row=1, col=1, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -596,7 +593,7 @@ Attributes       : ......x. ........ ........ ........   ........ ........ .....
                  : Passive (6), Disable Tied Effect Points (222), Aura Points On Client (268)
 Effects          :
 #1 (id=684614)   : Apply Raid Aura (65) | Restore Power (85) | Scaling Class: -1
-                   Base Value: 16 | Scaled Value: 0 (coefficient=0.736) | PvP Coefficient: 1.00000 | Radius: 40 yards | Target: Self (1)
+                   Base Value: 16 | Scaled Value: 326.048 (coefficient=0.736) | PvP Coefficient: 1.00000 | Radius: 40 yards | Target: Self (1)
 Tooltip          : Gain $w1 mana every 5 seconds.
 
 Name             : Stoneclaw Totem Passive (id=5728) [Passive] 
@@ -665,7 +662,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Can Be Multi Cast (229), Ignore Totem Requirements for Casting (293)
 Effects          :
 #1 (id=683411)   : Summon (28) | Scaling Class: -1
-                   Base Value: 50 | Scaled Value: 0 (coefficient=13.965) | Points Per Level: 3 | PvP Coefficient: 1.00000 | Misc Value: 3579 | Misc Value 2: 0x51 | Target: Unknown(41)
+                   Base Value: 50 | Scaled Value: 6186.495 (coefficient=13.965) | Points Per Level: 3 | PvP Coefficient: 1.00000 | Misc Value: 3579 | Misc Value 2: 0x51 | Target: Unknown(41)
 Description      : Summons a Stoneclaw Totem with $s1 health at the feet of the caster for $d that taunts creatures within $5729a1 yards to attack it.  Enemies attacking the Stoneclaw Totem have a $5728h% chance to be stunned for $39796d.  The Stoneclaw Totem also protects your other active totems with a shield that absorbs up to $55328s1 damage$?s63298[ and grants you a shield that absorbs up to ${$55328m1*4} damage][].
 Tooltip          : Taunting creatures.
 
@@ -834,7 +831,6 @@ Description      : Imbue the Shaman's weapon with frost.  Each hit has a chance 
 Tooltip          : Movement slowed by $s1%.
 
 Name             : Earth Shock (id=8042) [Spell Family (11)] 
-Talent Entry     : Elemental [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -966,7 +962,7 @@ Attributes       : ......x. x....... ........ ........   ........ ........ .....
                  : Passive (6), Do Not Log (8), Not On Player Controlled NPC (168), Vehicle Immunity Category (218), Aura Points On Client (268)
 Effects          :
 #1 (id=686416)   : Apply Raid Aura (65) | Resistance (22) | Scaling Class: -1
-                   Base Value: 95 | Scaled Value: 0 (coefficient=9.2) | PvP Coefficient: 1.00000 | Misc Value: 1 | Radius: 40 yards | Target: Self (1)
+                   Base Value: 95 | Scaled Value: 4075.6 (coefficient=9.2) | PvP Coefficient: 1.00000 | Misc Value: 1 | Radius: 40 yards | Target: Self (1)
 Tooltip          : Increases armor by $w1.
 
 Name             : Strength of Earth Totem (id=8075) [Spell Family (11)] 
@@ -1011,13 +1007,12 @@ Attributes       : ......x. x....... ........ ........   ........ ........ .....
                  : Passive (6), Do Not Log (8), Not On Player Controlled NPC (168), Vehicle Immunity Category (218), Disable Tied Effect Points (222), Use Target's Level for Spell Scaling (264), Aura Points On Client (268)
 Effects          :
 #1 (id=686185)   : Apply Raid Aura (65) | Attribute (29) | Scaling Class: -1
-                   Base Value: 10 | Scaled Value: 0 (coefficient=1.24) | PvP Coefficient: 1.00000 | Radius: 40 yards | Target: Self (1)
+                   Base Value: 10 | Scaled Value: 549.32 (coefficient=1.24) | PvP Coefficient: 1.00000 | Radius: 40 yards | Target: Self (1)
 #2 (id=909306)   : Apply Raid Aura (65) | Attribute (29) | Scaling Class: -1
-                   Base Value: 10 | Scaled Value: 0 (coefficient=1.24) | PvP Coefficient: 1.00000 | Misc Value: 1 | Radius: 40 yards | Target: Self (1)
+                   Base Value: 10 | Scaled Value: 549.32 (coefficient=1.24) | PvP Coefficient: 1.00000 | Misc Value: 1 | Radius: 40 yards | Target: Self (1)
 Tooltip          : Increases Strength and Agility by $w1.
 
 Name             : Tremor Totem (id=8143) [Spell Family (11)] 
-Talent Entry     : Generic [tree=class, row=4, col=4, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
@@ -1251,7 +1246,7 @@ Effects          :
 #1 (id=686257)   : Unknown(54) | Scaling Class: -1
                    Base Value: 1800 | Scaled Value: 1800 | PvP Coefficient: 1.00000 | Misc Value: 283
 #2 (id=1004207)  : Dummy (3) | Scaling Class: -1
-                   Base Value: 46 | Scaled Value: 0 (coefficient=10) | PvP Coefficient: 1.00000
+                   Base Value: 46 | Scaled Value: 4430 (coefficient=10) | PvP Coefficient: 1.00000
 Description      : Imbue the Shaman's weapon with wind.  Each hit has a $33757h% chance of triggering three extra attacks with $s2 bonus attack power.  Lasts 30 minutes.$?s73680[
 
 Unleashing this enchantment deals $73681s3% of weapon damage to the target enemy and increases the Shaman's melee attack speed for the next 6 swings or until $73681d have elapsed.][]
@@ -1283,7 +1278,6 @@ Effects          :
 Description      : Causes the shaman's Flame Shocked targets to emit a wave of flames, inflicting $s2 Fire damage to enemies within $A2 yards of each.
 
 Name             : Windfury Totem (id=8512) [Spell Family (11)] 
-Talent Entry     : Enhancement [tree=spec, row=4, col=2, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
@@ -1608,9 +1602,6 @@ Effects          :
 Description      : After landing a non-periodic critical strike with a Fire, Frost, or Nature damage spell, you enter a Clearcasting state.  The Clearcasting state reduces the mana cost of your next $16246n damage or healing spells by $16246s1%.
 
 Name             : Elemental Mastery (id=16166) [Spell Family (11)] 
-Talent Entry     : Elemental [tree=spec, row=7, col=4, max_rank=2, req_points=8, name="Master of the Elements"]
-                 : Effect#2 [op=set]
-                 : Restoration [tree=spec, row=5, col=3, max_rank=1, req_points=8, select_idx=300, name="Master of the Elements"]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -1830,7 +1821,6 @@ Effects          :
 Description      : Summons a Mana Tide Totem with $16190s2% of the caster's health at the feet of the caster for $16190d.  Party and raid members within $16191a1 yards of the totem gain $16191s1% of the caster's Spirit (excluding short-duration Spirit bonuses).
 
 Name             : Mana Tide (id=16191) [Spell Family (11)] 
-Talent Entry     : Restoration [tree=spec, row=6, col=4, max_rank=1, req_points=8, name="Mana Tide Totem"]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -1856,7 +1846,6 @@ Description      : Summons a Mana Tide Totem with $16190s2% of the caster's heal
 Tooltip          : Spirit increased by $w1.
 
 Name             : Resurgence (desc=Rank 2) (id=16196) [Spell Family (11), Passive, Hidden] 
-Talent Entry     : Restoration [tree=spec, row=3, col=3, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
@@ -2408,7 +2397,6 @@ Effects          :
 Description      : When you successfully interrupt an enemy spellcast with Wind Shear, you gain ${$cond($lte($PL,70),$PL,$cond($lte($PL,80),$PL+($PL-70)*5,$PL+($PL-70)*5+($PL-80)*7))} resistance to that spell's magical school for $97621d.
 
 Name             : Stormstrike (id=17364) [Spell Family (11)] 
-Talent Entry     : Enhancement [tree=spec, row=1, col=1, max_rank=1, req_points=0, replace="Primal Strike" (id=73899)]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
@@ -3110,8 +3098,6 @@ Effects          :
 Description      : Whenever a damaging attack brings you below $s2% health, your maximum health is increased by $s1% for $31616d and your threat level towards the attacker is reduced.  30 second cooldown.
 
 Name             : Nature's Guardian (desc=Rank 3) (id=30884) [Spell Family (11), Passive, Hidden] 
-Talent Entry     : Generic [tree=class, row=6, col=3, max_rank=2, req_points=8]
-                 : Effect#2 [op=set]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
@@ -3214,6 +3200,7 @@ School           : Nature
 Spell Type       : None
 Resource         : 26% Base Mana (0) (id=219233)
 Spell Level      : 70 (max 74)
+Max Scaling Level: 74
 GCD              : 1.5 seconds
 Duration         : 40 seconds
 Cooldown         : 300 seconds
@@ -3259,12 +3246,12 @@ Attributes       : ....x... ........ x....... ........   .....x.. ..x..... .....
                  : Is Ability (4), Not Shapeshifted (16), Allow While Stealthed (37), No Threat (42), Allow While Invisible (78), Do Not Reset Combat Timers (81)
 Effects          :
 #1 (id=853159)   : Apply Aura (6) | Modify Attack Power (99) | Scaling Class: -1
-                   Base Value: 6 | Scaled Value: 0 (coefficient=2.64) | Points Per Level: 4 | PvP Coefficient: 1.00000 | Target: Self (1)
+                   Base Value: 6 | Scaled Value: 1169.52 (coefficient=2.64) | Points Per Level: 4 | PvP Coefficient: 1.00000 | Target: Self (1)
 #2 (id=853160)   : Apply Aura (6) | Damage Done (13) | Scaling Class: -1
-                   Base Value: 5 | Scaled Value: 0 (coefficient=1.32) | PvP Coefficient: 1.00000 | Misc Value: 0x7e | Target: Self (1)
+                   Base Value: 5 | Scaled Value: 584.76 (coefficient=1.32) | PvP Coefficient: 1.00000 | Misc Value: 0x7e | Target: Self (1)
                    Affected School(s): Arcane, Fire, Frost, Holy, Nature, Shadow
 #3 (id=116811)   : Apply Aura (6) | Modify Healing Power (135) | Scaling Class: -1
-                   Base Value: 5 | Scaled Value: 0 (coefficient=1.32) | PvP Coefficient: 1.00000 | Misc Value: 126 | Target: Self (1)
+                   Base Value: 5 | Scaled Value: 584.76 (coefficient=1.32) | PvP Coefficient: 1.00000 | Misc Value: 126 | Target: Self (1)
 Description      : Increases your melee attack power by $s1 and your spell power by $s2. Lasts $d.
 Tooltip          : Melee attack power increased by $s1.
 Spell power increased by $s2.
@@ -3292,7 +3279,6 @@ Effects          :
 Description      : Imbue the Shaman's weapon with wind.  Each hit has a 20% chance of dealing additional damage equal to two extra attacks with extra attack power.  Lasts 30 minutes.
 
 Name             : Windfury Weapon (Passive) (id=33757) [Spell Family (11), Passive, Hidden] 
-Talent Entry     : Enhancement [tree=spec, row=2, col=1, max_rank=1, req_points=0, name="Windfury Weapon"]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -3462,6 +3448,7 @@ Class            : Shaman
 School           : Nature
 Spell Type       : None
 Spell Level      : 32 (max 37)
+Max Scaling Level: 37
 Range            : 100 yards
 Affecting spells : Concussion (16035 effect#1), Seasoned Winds (16086 effect#1), Concussion (16105 effect#1), Concussion (16106 effect#1), Seasoned Winds (16544 effect#1), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Glyph of Chain Lightning (55449 effect#1), Elemental Fury (60188 effect#1), Shamanism (62099 effect#2), Elemental Overload (77222 effect#1), Seasoned Winds (97621 effect#1)
 Family Flags     : 63, 79
@@ -3691,7 +3678,6 @@ Effects          :
 Description      : Grants your Earthbind Totem a $s2% chance to root nearby targets for $64695d when cast.
 
 Name             : Earth's Grasp (desc=Rank 2) (id=51485) [Spell Family (11), Passive, Hidden] 
-Talent Entry     : Generic [tree=class, row=5, col=3, max_rank=1, req_points=8, select_idx=100, name="Earthgrab Totem", replace="Earthbind Totem" (id=2484)]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
@@ -3713,7 +3699,6 @@ Effects          :
 Description      : Grants your Earthbind Totem a $s2% chance to root nearby targets for $64695d when cast.
 
 Name             : Thunderstorm (id=51490) [Spell Family (11)] 
-Talent Entry     : Generic [tree=class, row=7, col=2, max_rank=1, req_points=8]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -3742,7 +3727,6 @@ Effects          :
 Description      : You call down a bolt of lightning, energizing you and damaging nearby enemies within $a1 yards. Restores $s2% mana to you and deals $s1 Nature damage to all nearby enemies, reducing their movement speed by $100955s1% for $100955d$?s62132[][ and knocking them back 20 yards]. This spell is usable while stunned.
 
 Name             : Lava Burst (id=51505) [Spell Family (11)] 
-Talent Entry     : Generic [free=(Elemental, Restoration), tree=class, row=1, col=2, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Fire
 Spell Type       : None
@@ -3963,7 +3947,6 @@ Effects          :
 Description      : When you deal damage with a melee weapon, you have a chance (higher than rank 2) to reduce the cast time and mana cost of your next Lightning Bolt, Chain Lightning, Hex, or any healing spell by $53817s1%. Stacks up to 5 times. Lasts $53817d.
 
 Name             : Feral Spirit (id=51533) [Spell Family (11)] 
-Talent Entry     : Enhancement [tree=spec, row=8, col=2, max_rank=1, req_points=20]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -4126,7 +4109,6 @@ Effects          :
 Description      : When you cast Chain Heal or Riptide, you gain the Tidal Waves effect, which reduces the cast time of your Healing Wave and Greater Healing Wave spells by $s1% and increases the critical effect chance of your Healing Surge spell by $s2%. $53390n charges.
 
 Name             : Tidal Waves (desc=Rank 3) (id=51564) [Spell Family (11), Passive, Hidden] 
-Talent Entry     : Restoration [tree=spec, row=3, col=4, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
@@ -4203,7 +4185,6 @@ Effects          :
 Description      : Increases the damage done by your Lightning Shield orbs by $s1%, increases the amount of mana gained from your Water Shield orbs by $s2%, and increases the amount of healing done by your Earth Shield orbs by $s2%.
 
 Name             : Cleanse Spirit (id=51886) [Spell Family (11)] 
-Talent Entry     : Elemental, Enhancement [tree=class, row=5, col=2, max_rank=1, req_points=8]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -4274,7 +4255,7 @@ Effects          :
 #1 (id=957343)   : Apply Aura (6) | Proc Trigger Spell (42): Earthliving | Scaling Class: -1
                    Base Value: 780 | Scaled Value: 1003.2 | Points Per Level: 7.2 | PvP Coefficient: 1.00000 | Trigger Spell: 51945 | Target: Friend (21)
 #2 (id=957344)   : Apply Aura (6) | Modify Healing Power (135) | Scaling Class: -1
-                   Base Value: 110 | Scaled Value: 0 (coefficient=1.2) | PvP Coefficient: 1.00000 | Misc Value: 126 | Target: Self (1)
+                   Base Value: 110 | Scaled Value: 531.6 (coefficient=1.2) | PvP Coefficient: 1.00000 | Misc Value: 126 | Target: Self (1)
 
 Name             : Healing Stream Totem (id=52041) [Spell Family (11), Hidden] 
 Class            : Shaman
@@ -4341,7 +4322,7 @@ Effects          :
 #1 (id=980041)   : Apply Aura (6) | Proc Trigger Spell (42): Water Shield | Scaling Class: -1
                    Base Value: 40 | Scaled Value: 235 | Points Per Level: 3 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Trigger Spell: 52128 | Target: Self (1)
 #2 (id=980042)   : Apply Aura (6) | Restore Power (85) | Scaling Class: -1
-                   Base Value: 10 | Scaled Value: 0 (coefficient=0.8) | PvP Coefficient: 1.00000 | Target: Self (1)
+                   Base Value: 10 | Scaled Value: 354.4 (coefficient=0.8) | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : The caster is surrounded by $52127n globes of water, granting $52127s2 mana per 5 sec.  When a spell, melee or ranged attack hits the caster, $52128s1 mana is restored to the caster. This expends one water globe.  Only one globe will activate every few seconds.  Lasts $52127d.  Only one Elemental Shield can be active on the Shaman at any one time.
 Tooltip          : Grants $w2 mana per 5 sec.
 Attacks against you trigger additional mana restoration.
@@ -4365,7 +4346,7 @@ Attributes       : ........ ........ ..x..... x..x.x..   ........ ........ .....
                  : Do Not Sheath (18), Allow While Mounted (24), Allow While Sitting (27), No Immunities (29), Not an Action (92), Can't Crit (93), Suppress Caster Procs (112), Allow Cast While Casting (135)
 Effects          :
 #1 (id=956982)   : Energize Power (30) | Scaling Class: -1
-                   Base Value: 40 | Scaled Value: 0 (coefficient=1.712) | Points Per Level: 3 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: mana | Target: Self (1)
+                   Base Value: 40 | Scaled Value: 758.416 (coefficient=1.712) | Points Per Level: 3 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: mana | Target: Self (1)
 Description      : The caster is surrounded by $52127n globes of water, granting $52127s2 mana per 5 sec.  When a spell, melee or ranged attack hits the caster, $52128s1 mana is restored to the caster. This expends one water globe.  Only one globe will activate every few seconds.  Lasts $52127d.  Only one Elemental Shield can be active on the Shaman at any one time.
 
 Name             : Tidal Waves (id=53390) [Spell Family (11)] 
@@ -4448,7 +4429,7 @@ Attributes       : ........ x....... ........ .....x..   .......x ..x..... .....
                  : Do Not Log (8), No Immunities (29), No Reflection (39), No Threat (42), Ignore Line of Sight (66), No School Immunities (90), Not an Action (92)
 Effects          :
 #1 (id=960422)   : Server Side Script (77) | Scaling Class: -1
-                   Base Value: 21 | Scaled Value: 0 (coefficient=9.353) | PvP Coefficient: 1.00000 | Target: Unknown(27)
+                   Base Value: 21 | Scaled Value: 4143.379 (coefficient=9.353) | PvP Coefficient: 1.00000 | Target: Unknown(27)
 #2 (id=960423)   : Apply Aura (6) | Dummy (4) | Scaling Class: -1
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
 Tooltip          : Taunting creatures.
@@ -5452,7 +5433,6 @@ Description      : Cannot benefit from Bloodlust or other similar effects.
 Tooltip          : Cannot benefit from Bloodlust or other similar effects.
 
 Name             : Wind Shear (id=57994) [Spell Family (11)] 
-Talent Entry     : Generic [tree=class, row=2, col=1, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -5744,7 +5724,6 @@ Description      : Heals the target for $s2% of their total health over $d.
 Tooltip          : Healing $/5;s2% every $t1 seconds.
 
 Name             : Lava Lash (id=60103) [Spell Family (11)] 
-Talent Entry     : Enhancement [tree=spec, row=2, col=3, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Fire
 Spell Type       : None
@@ -5773,7 +5752,6 @@ Effects          :
 Description      : You charge your off-hand weapon with lava, instantly dealing $s1% of that weapon's damage to an enemy target.  Damage is increased by $s2% if your off-hand weapon is enchanted with Flametongue.
 
 Name             : Elemental Fury (desc=Passive) (id=60188) [Spell Family (11), Passive] 
-Talent Entry     : Elemental [tree=spec, row=2, col=2, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
@@ -5815,7 +5793,6 @@ Effects          :
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
 
 Name             : Riptide (id=61295) [Spell Family (11)] 
-Talent Entry     : Restoration [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -5868,7 +5845,6 @@ Effects          :
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Target: Self (1)
 
 Name             : Earthquake (id=61882) [Spell Family (11)] 
-Talent Entry     : Elemental [tree=spec, row=2, col=1, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -6649,7 +6625,6 @@ Description      : Unleashes the Rockbiter enchantment upon the Shaman's weapon,
 Tooltip          : Taunted.
 
 Name             : Unleash Life (id=73685) [Spell Family (11)] 
-Talent Entry     : Restoration [tree=spec, row=7, col=1, max_rank=1, req_points=8, select_idx=200]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -6710,7 +6685,6 @@ Effects          :
 Description      : An instant weapon strike that causes $m1 additional damage.
 
 Name             : Healing Rain (id=73920) [Spell Family (11)] 
-Talent Entry     : Restoration [tree=spec, row=3, col=1, max_rank=1, req_points=0]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -6901,7 +6875,6 @@ Effects          :
 Description      : You hurl molten lava at the target, dealing $s1 Fire damage. If your Flame Shock is on the target, Lava Burst will deal a critical strike.
 
 Name             : Greater Healing Wave (id=77472) [Spell Family (11)] 
-Talent Entry     : Restoration [tree=spec, row=2, col=2, max_rank=1, req_points=0, name="Healing Wave"]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -7222,8 +7195,6 @@ Effects          :
 Description      : Gives your Flame Shock periodic damage ticks a $h% chance to reset the cooldown of your Lava Burst spell.
 
 Name             : Lava Surge (desc=Rank 2) (id=77756) [Spell Family (11), Passive, Hidden] 
-Talent Entry     : Elemental [tree=spec, row=4, col=3, max_rank=1, req_points=0]
-                 : Restoration [tree=spec, row=6, col=3, max_rank=1, req_points=8]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
@@ -7358,7 +7329,6 @@ Effects          :
 Description      : Reduces damage taken while casting spells by $s1%.
 
 Name             : Spiritwalker's Grace (id=79206) [Spell Family (11)] 
-Talent Entry     : Generic [tree=class, row=7, col=1, max_rank=1, req_points=8]
 Class            : Shaman
 School           : Nature
 Spell Type       : None
@@ -8250,7 +8220,6 @@ Tooltip          : Damage taken reduced by $s1%.
 Health periodically normalized among other affected party and raid members.
 
 Name             : Spirit Link Totem (id=98008) [Spell Family (11)] 
-Talent Entry     : Restoration [tree=spec, row=5, col=2, max_rank=1, req_points=8]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
@@ -8353,7 +8322,7 @@ Attributes       : ........ ........ ..x..... x..x.x..   ........ ........ .....
                  : Do Not Sheath (18), Allow While Mounted (24), Allow While Sitting (27), No Immunities (29), Not an Action (92), Can't Crit (93), Suppress Caster Procs (112), Allow Cast While Casting (135)
 Effects          :
 #1 (id=109233)   : Energize Power (30) | Scaling Class: -1
-                   Base Value: 40 | Scaled Value: 0 (coefficient=5.175) | Points Per Level: 3 | PvP Coefficient: 1.00000 | Misc Value: mana | Target: Self (1)
+                   Base Value: 40 | Scaled Value: 2292.525 (coefficient=5.175) | Points Per Level: 3 | PvP Coefficient: 1.00000 | Misc Value: mana | Target: Self (1)
 Description      : Restores mana to the Shaman following a critical direct heal.
 
 Name             : Unleashed Lightning (id=101051) 

@@ -1159,7 +1159,7 @@ double dbc_t::spell_scaling( player_e t, unsigned level ) const
 {
   uint32_t class_id = util::class_id( t );
 
-  assert( class_id < dbc_t::class_max_size() + 7 && level > 0 && level <= MAX_SCALING_LEVEL );
+  assert( class_id < dbc_t::class_max_size() + 1 && level > 0 && level <= MAX_SCALING_LEVEL );
 #if SC_USE_PTR
   return ptr ? _ptr__spell_scaling[ class_id ][ level - 1 ]
              : __spell_scaling[ class_id ][ level - 1 ];
@@ -1472,13 +1472,13 @@ double dbc_t::effect_average( const spelleffect_data_t* e, unsigned level ) cons
 
   auto scale = e->scaling_class();
 
-  if ( scale == PLAYER_NONE && e->spell()->max_scaling_level() > 0 )
-    scale = PLAYER_SPECIAL_SCALE8;
+  //if ( scale == PLAYER_NONE && e->spell()->max_scaling_level() > 0 )
+  //  scale = PLAYER_SPECIAL_SCALE8;
 
   if ( e->m_coefficient() != 0 && scale != PLAYER_NONE )
   {
-    if ( e->spell()->max_scaling_level() > 0 )
-      level = std::min( level, e->spell()->max_scaling_level() );
+    //if ( e->spell()->max_scaling_level() > 0 )
+    //  level = std::min( level, e->spell()->max_scaling_level() );
 
     return e->m_coefficient() * spell_scaling( scale, level );
   }
@@ -1524,8 +1524,8 @@ double dbc_t::effect_bonus( const spelleffect_data_t* e, unsigned level ) const
   if ( e -> m_unk() != 0 && e->scaling_class() != 0 )
   {
     unsigned scaling_level = level;
-    if ( e->spell()->max_scaling_level() > 0 )
-      scaling_level = std::min( scaling_level, e->spell()->max_scaling_level() );
+    //if ( e->spell()->max_scaling_level() > 0 )
+    //  scaling_level = std::min( scaling_level, e->spell()->max_scaling_level() );
     double m_scale = spell_scaling( e->scaling_class(), scaling_level );
 
     return e -> m_unk() * m_scale;

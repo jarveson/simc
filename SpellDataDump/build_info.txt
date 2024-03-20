@@ -1,1 +1,1 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA (git build jake/rawr-rebase2 2e2696f8dc)
+SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA (hotfix 2024-03-15/53750, git build jake/rawr-rebase3 c3a926acf9)

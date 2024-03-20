@@ -38,7 +38,6 @@ $spirit=$?s87336[${((100+$87336m1)/100)}][${1.00}]
 $shield=${((($SP*0.87)+$m1)*$<mastery>*$<spirit>*$<twin3>*$<ipws2>)}
 
 Name             : Renew (id=139) [Spell Family (6)] 
-Talent Entry     : Generic [free=(Discipline, Holy), tree=class, row=1, col=1, max_rank=1, req_points=0]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -94,7 +93,6 @@ Effects          :
 Description      : Dispels magic on the target, removing $527s1 harmful $lspell:spells; from $?s33167[a friend][yourself] or $527s2 beneficial $lspell:spells; from an enemy.$?s55677[  When used on an ally or yourself, also restores $55677s1% of the target's maximum health when successfully dispelling a magical effect.][]
 
 Name             : Cure Disease (id=528) [Spell Family (6)] 
-Talent Entry     : Generic [tree=class, row=1, col=2, max_rank=1, req_points=0, name="Dispel Magic"]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -194,9 +192,9 @@ Effects          :
 #1 (id=239)      : Apply Aura (6) | Modify Armor% (101) | Scaling Class: -1
                    Base Value: 60 | Scaled Value: 60 | PvP Coefficient: 1.00000 | Misc Value: 1 | Target: Self (1)
 #2 (id=240)      : Apply Aura (6) | Modify Healing Power (135) | Scaling Class: -1
-                   Base Value: 0 | Scaled Value: 0 (coefficient=1.2) | PvP Coefficient: 1.00000 | Misc Value: 127 | Target: Self (1)
+                   Base Value: 0 | Scaled Value: 531.6 (coefficient=1.2) | PvP Coefficient: 1.00000 | Misc Value: 127 | Target: Self (1)
 #3 (id=241)      : Apply Aura (6) | Damage Done (13) | Scaling Class: -1
-                   Base Value: 0 | Scaled Value: 0 (coefficient=1.2) | PvP Coefficient: 1.00000 | Misc Value: 0x7e | Target: Self (1)
+                   Base Value: 0 | Scaled Value: 531.6 (coefficient=1.2) | PvP Coefficient: 1.00000 | Misc Value: 0x7e | Target: Self (1)
                    Affected School(s): Arcane, Fire, Frost, Holy, Nature, Shadow
 Description      : A burst of Holy energy fills the caster, increasing the armor value from items by $<innerfire>% and spell power by $s2. $?s73413[
 
@@ -232,7 +230,6 @@ Description      : A word of darkness that causes $o1 Shadow damage over $d.
 Tooltip          : $s1 Shadow damage every $t1 seconds.
 
 Name             : Prayer of Healing (id=596) [Spell Family (6)] 
-Talent Entry     : Holy [tree=spec, row=3, col=1, max_rank=1, req_points=0]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -261,7 +258,6 @@ Effects          :
 Description      : A powerful prayer heals the friendly target's party members within $a1 yards for $s1$?s55680[ and an additional $55680s1% over $56161d.][.]
 
 Name             : Mind Control (id=605) [Spell Family (6)] 
-Talent Entry     : Generic [tree=class, row=4, col=6, max_rank=1, req_points=0, select_idx=100]
 Class            : Priest
 School           : Shadow
 Spell Type       : None
@@ -354,7 +350,6 @@ Description      : Allows the friendly party or raid target to levitate, floatin
 Tooltip          : Levitating.
 
 Name             : Heal (id=2050) [Spell Family (6)] 
-Talent Entry     : Holy [tree=spec, row=1, col=1, max_rank=1, req_points=0, name="Holy Word: Serenity"]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -669,7 +664,6 @@ Effects          :
 Description      : Destroy $m1% of the target's mana (up to a maximum of ${$m1*2}% of your own maximum mana). For each mana destroyed in this way, the target takes 0.5 Shadow damage.
 
 Name             : Shackle Undead (id=9484) [Spell Family (6)] 
-Talent Entry     : Generic [tree=class, row=4, col=4, max_rank=1, req_points=0]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -698,7 +692,6 @@ Description      : Shackles the target undead enemy for up to $d.  The shackled 
 Tooltip          : Shackled.
 
 Name             : Power Infusion (id=10060) [Spell Family (6)] 
-Talent Entry     : Generic [tree=class, row=5, col=4, max_rank=1, req_points=8]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -1178,7 +1171,6 @@ Effects          :
 Description      : Increases the damage of your Shadow Word: Pain spell by $s1%.
 
 Name             : Vampiric Embrace (id=15286) [Spell Family (6)] 
-Talent Entry     : Generic [tree=class, row=5, col=5, max_rank=1, req_points=8, select_idx=200]
 Class            : Priest
 School           : Shadow
 Spell Type       : None
@@ -1474,7 +1466,6 @@ Description      : Assume a Shadowform, increasing your Shadow damage by $s2%, r
 Tooltip          : Shadow damage you deal increased by $s2%. All damage you take reduced by $s3%.
 
 Name             : Silence (id=15487) [Spell Family (6)] 
-Talent Entry     : Shadow [tree=spec, row=2, col=3, max_rank=1, req_points=0]
 Class            : Priest
 School           : Shadow
 Spell Type       : None
@@ -1971,7 +1962,6 @@ Effects          :
 Description      : Increases your chance to hit with all spells and attacks by $s1%.
 
 Name             : Mass Dispel (id=32375) [Spell Family (6)] 
-Talent Entry     : Generic [tree=class, row=5, col=2, max_rank=1, req_points=8]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -2002,7 +1992,6 @@ Effects          :
 Description      : Dispels magic in a $32375a1 yard radius, removing $32375s1 harmful $lspell:spells; from each friendly target and $32375s1 beneficial $lspell:spells; from each enemy target.  Affects a maximum of 10 friendly targets and 10 enemy targets.  This dispel is potent enough to remove Magic effects that are normally undispellable.
 
 Name             : Shadow Word: Death (id=32379) [Spell Family (6)] 
-Talent Entry     : Generic [free=(Shadow), tree=class, row=2, col=5, max_rank=1, req_points=0]
 Class            : Priest
 School           : Shadow
 Spell Type       : None
@@ -2129,7 +2118,6 @@ Effects          :
 Tooltip          : Interrupted.
 
 Name             : Prayer of Mending (id=33076) [Spell Family (6)] 
-Talent Entry     : Generic [free=(Holy), tree=class, row=2, col=1, max_rank=1, req_points=0]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -2474,7 +2462,6 @@ Effects          :
 Description      : Causes $s1% of the damage you absorb with Power Word: Shield to reflect back at the attacker.  This damage causes no threat.
 
 Name             : Pain Suppression (id=33206) [Spell Family (6)] 
-Talent Entry     : Discipline [tree=spec, row=2, col=2, max_rank=1, req_points=0]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -2548,7 +2535,6 @@ Effects          :
 Description      : Causes a percentage of the damage absorbed by your Power Word: Shield to reflect back at the attacker. This damage causes no threat.
 
 Name             : Shadowfiend (id=34433) [Spell Family (6)] 
-Talent Entry     : Generic [free=(Discipline, Shadow), tree=class, row=1, col=3, max_rank=1, req_points=0]
 Class            : Priest
 School           : Shadow
 Spell Type       : None
@@ -2639,7 +2625,6 @@ Effects          :
 Description      : Increases the amount of mana regeneration from Spirit while in combat by an additional $s1%.
 
 Name             : Circle of Healing (id=34861) [Spell Family (6)] 
-Talent Entry     : Holy [tree=spec, row=2, col=1, max_rank=1, req_points=0, name="Holy Word: Sanctify"]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -2782,6 +2767,7 @@ Class            : Priest
 School           : Holy
 Spell Type       : None
 Spell Level      : 68 (max 74)
+Max Scaling Level: 74
 Range            : 50000 yards
 GCD              : 1.5 seconds
 Duration         : 30 seconds
@@ -2981,7 +2967,6 @@ Effects          :
 Description      : Critical heals and all heals from Prayer of Healing create a protective shield on the target, absorbing $s1% of the amount healed. Lasts $47753d.
 
 Name             : Divine Aegis (desc=Rank 3) (id=47515) [Spell Family (6), Passive, Hidden] 
-Talent Entry     : Discipline [tree=spec, row=9, col=1, max_rank=1, req_points=20]
 Class            : Priest
 School           : Physical
 Spell Type       : None
@@ -3064,7 +3049,6 @@ Effects          :
 Description      : When your Power Word: Shield is completely absorbed or dispelled you are instantly energized with $s1% of your total mana. This effect can only occur once every $63853d.
 
 Name             : Rapture (desc=Rank 2) (id=47536) [Spell Family (6), Passive, Hidden] 
-Talent Entry     : Discipline [tree=spec, row=5, col=2, max_rank=1, req_points=8]
 Class            : Priest
 School           : Physical
 Spell Type       : None
@@ -3343,7 +3327,6 @@ Effects          :
 Description      : Your Mind Flay has a $h% chance to refresh the duration of your Shadow Word: Pain on the target, and reduces the damage you take from your own Shadow Word: Death by $s2%.
 
 Name             : Dispersion (id=47585) [Spell Family (6)] 
-Talent Entry     : Shadow [tree=spec, row=2, col=1, max_rank=1, req_points=0]
 Class            : Priest
 School           : Physical
 Spell Type       : None
@@ -3570,7 +3553,6 @@ Effects          :
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Trigger Spell: 47666 | Target: Self (1)
 
 Name             : Guardian Spirit (id=47788) [Spell Family (6)] 
-Talent Entry     : Holy [tree=spec, row=2, col=2, max_rank=1, req_points=0]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -3940,7 +3922,6 @@ Effects          :
 Description      : Your Circle of Healing spell heals $55675s1 additional target, but its mana cost is increased by $55675s2%.
 
 Name             : Glyph of Psychic Scream (id=55676) [Spell Family (6), Passive, Hidden] 
-Talent Entry     : Generic [tree=class, row=2, col=4, max_rank=1, req_points=0, select_idx=200, name="Petrifying Scream"]
 Class            : Priest
 School           : Physical
 Spell Type       : None
@@ -5274,7 +5255,6 @@ Dispersion can be cast while stunned, feared or silenced. Clears all snare and m
 Tooltip          : Reduces all damage by and you regenerate $s1% mana every $t1 sec for $d.  Cannot attack or cast spells.
 
 Name             : Power Word: Barrier (id=62618) [Spell Family (6)] 
-Talent Entry     : Discipline [tree=spec, row=4, col=3, max_rank=1, req_points=0, select_idx=200]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -5771,7 +5751,6 @@ Effects          :
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: 713
 
 Name             : Psychic Horror (id=64044) [Spell Family (6)] 
-Talent Entry     : Shadow [tree=spec, row=3, col=3, max_rank=1, req_points=0, select_idx=200]
 Class            : Priest
 School           : Shadow
 Spell Type       : None
@@ -5871,7 +5850,6 @@ Description      : When you cast Power Word: Shield or Leap of Faith, you increa
 Tooltip          : Movement speed increased by $s1%.
 
 Name             : Body and Soul (desc=Rank 2) (id=64129) [Spell Family (6), Passive, Hidden] 
-Talent Entry     : Generic [tree=class, row=6, col=3, max_rank=1, req_points=8]
 Class            : Priest
 School           : Physical
 Spell Type       : None
@@ -5896,7 +5874,6 @@ Effects          :
 Description      : When you cast Power Word: Shield or Leap of Faith, you increase the target's movement speed by $64129s1% for $64128d, and you have a $64129s2% chance when you cast Cure Disease on yourself to also cleanse 1 poison effect in addition to diseases.
 
 Name             : Divine Hymn (id=64843) [Spell Family (6)] 
-Talent Entry     : Holy [tree=spec, row=5, col=4, max_rank=1, req_points=8]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -5956,7 +5933,6 @@ Description      : Heals $64843s2 nearby lowest health friendly party or raid ta
 Tooltip          : Healing received increased by $s2%.
 
 Name             : Hymn of Hope (id=64901) [Spell Family (6)] 
-Talent Entry     : Holy [tree=spec, row=6, col=4, max_rank=1, req_points=8, name="Symbol of Hope"]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -6119,7 +6095,6 @@ Effects          :
 Description      : Dispels magic in a $32375a1 yard radius, removing $32375s1 harmful $lspell:spells; from each friendly target and $32375s1 beneficial $lspell:spells; from each enemy target.  Affects a maximum of $32375i friendly targets and $32375i enemy targets.  This dispel is potent enough to remove Magic effects that are normally undispellable.
 
 Name             : Leap of Faith (id=73325) [Spell Family (6)] 
-Talent Entry     : Generic [tree=class, row=4, col=3, max_rank=1, req_points=0]
 Class            : Priest
 School           : Holy
 Spell Type       : None
@@ -6177,7 +6152,6 @@ You can only have Inner Will or Inner Fire active at a time.
 Tooltip          : Reduces the mana cost of instant cast spells by $s1% and increases movement speed by $s2%.
 
 Name             : Mind Spike (id=73510) [Spell Family (6)] 
-Talent Entry     : Shadow [tree=spec, row=5, col=5, max_rank=1, req_points=8, replace="Mind Flay" (id=15407)]
 Class            : Priest
 School           : Shadowfrost
 Spell Type       : None
@@ -6504,7 +6478,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .x...
                  : Not Shapeshifted (16), No AutoCast (AI) (49), Allow While Not Shapeshifted (caster form) (83), Not On Player Controlled NPC (168), Do Not Count For PvP Scoreboard (252), Use Target's Level for Spell Scaling (264), Aura Points On Client (268)
 Effects          :
 #1 (id=68372)    : Apply Aura (6) | Attribute (29) | Scaling Class: -1
-                   Base Value: 43 | Scaled Value: 0 (coefficient=1.32) | PvP Coefficient: 1.00000 | Misc Value: 2 | Target: Friend (21)
+                   Base Value: 43 | Scaled Value: 584.76 (coefficient=1.32) | PvP Coefficient: 1.00000 | Misc Value: 2 | Target: Friend (21)
 Description      : Power infuses all party and raid members, increasing their Stamina by $s1 for $d.  If the target is in your party or raid, all party and raid members will be affected.
 Tooltip          : Increases Stamina by $w1.
 
@@ -6769,7 +6743,6 @@ Effects          :
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Target: Self (1)
 
 Name             : Atonement (desc=Rank 2) (id=81749) [Spell Family (6), Passive, Hidden] 
-Talent Entry     : Discipline [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Priest
 School           : Physical
 Spell Type       : None
@@ -7603,7 +7576,6 @@ Description      : Drop to all fours to run as fast as a wild animal.
 Tooltip          : $?j2g[Increases ground speed by $j2g%. ][]$?j2f[Increases flight speed by $j2f%. ][]$?j2s[Increases swim speed by $j2s%. ][]
 
 Name             : Holy Word: Chastise (id=88625) [Spell Family (6)] 
-Talent Entry     : Holy [tree=spec, row=2, col=3, max_rank=1, req_points=0]
 Class            : Paladin, Priest
 School           : Holy
 Spell Type       : None

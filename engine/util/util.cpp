@@ -1949,17 +1949,17 @@ int util::class_id( player_e type )
     case WARLOCK:      return  9;
     case MONK:         return 10;
     case DRUID:        return 11;
-    case DEMON_HUNTER: return 12;
-    case EVOKER:       return 13;
-    case PLAYER_SPECIAL_SCALE: return 14;
-    case PLAYER_SPECIAL_SCALE2: return 15;
-    case PLAYER_SPECIAL_SCALE3: return 16;
-    case PLAYER_SPECIAL_SCALE4: return 17;
-    case PLAYER_SPECIAL_SCALE5: return 18;
-    case PLAYER_SPECIAL_SCALE6: return 19;
-    case PLAYER_SPECIAL_SCALE7: return 14;
-    case PLAYER_SPECIAL_SCALE8: return 20;
-    case PLAYER_SPECIAL_SCALE9: return 20;
+    //case DEMON_HUNTER: return 12;
+    //case EVOKER:       return 13;
+    case PLAYER_SPECIAL_SCALE: return 12;
+    //case PLAYER_SPECIAL_SCALE2: return 15;
+    //case PLAYER_SPECIAL_SCALE3: return 16;
+    //case PLAYER_SPECIAL_SCALE4: return 17;
+    //case PLAYER_SPECIAL_SCALE5: return 18;
+    //case PLAYER_SPECIAL_SCALE6: return 19;
+    //case PLAYER_SPECIAL_SCALE7: return 14;
+    //case PLAYER_SPECIAL_SCALE8: return 20;
+    //case PLAYER_SPECIAL_SCALE9: return 20;
     default:           return 0;
   }
 }

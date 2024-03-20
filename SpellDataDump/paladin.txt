@@ -39,7 +39,7 @@ Attributes       : ........ ........ x.x..... x..x....   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18), Allow While Mounted (24), Allow While Sitting (27), Allow Dead Target (64), Use Shapeshift Bar (68), Suppress Caster Procs (112), Allow Aura While Dead (116), Aura Never Bounces (148), Allow Entering Arena (149), Not On Player Controlled NPC (168), Vehicle Immunity Category (218), Disable Aura While Dead (226), Aura Points On Client (268)
 Effects          :
 #1 (id=679080)   : Apply Raid Aura (65) | Resistance (22) | Scaling Class: -1
-                   Base Value: 55 | Scaled Value: 0 (coefficient=9.2) | PvP Coefficient: 1.00000 | Misc Value: 1 | Radius: 40 yards | Target: Self (1)
+                   Base Value: 55 | Scaled Value: 4075.6 (coefficient=9.2) | PvP Coefficient: 1.00000 | Misc Value: 1 | Radius: 40 yards | Target: Self (1)
 Description      : Gives $s1 additional armor to party and raid members within $a1 yards.  Players may only have one Aura on them per time per Paladin at any one time.
 Tooltip          : Increases armor by $w1.
 
@@ -77,7 +77,6 @@ Description      : $?s54924[Reduces magical damage taken by $s3% for $d.][Reduce
 Tooltip          : Damage taken reduced by $s2%.
 
 Name             : Lay on Hands (id=633) [Spell Family (10)] 
-Talent Entry     : Generic [free=(Holy, Protection), tree=class, row=1, col=1, max_rank=1, req_points=0]
 Class            : Paladin
 School           : Holy
 Spell Type       : None
@@ -217,7 +216,6 @@ Description      : Causes ${(($m1+$M1)/2)+(0.344*$cond($gt($SP,$AP),$SP,$AP))} H
 Tooltip          : Suffering $w2 Holy damage per $t2 sec.
 
 Name             : Hand of Protection (id=1022) [Spell Family (10)] 
-Talent Entry     : Generic [tree=class, row=6, col=5, max_rank=1, req_points=8, name="Blessing of Protection"]
 Class            : Paladin
 School           : Holy
 Spell Type       : None
@@ -276,7 +274,6 @@ Description      : $?s63225[Places a Hand on the party or raid member, removing 
 Tooltip          : $?$w2!=0[Threat temporarily reduced.][Reduces total threat by $53055s1% each second.]
 
 Name             : Hand of Freedom (id=1044) [Spell Family (10)] 
-Talent Entry     : Generic [free=(Holy, Retribution), tree=class, row=1, col=2, max_rank=1, req_points=0, name="Blessing of Freedom"]
 Class            : Paladin
 School           : Holy
 Spell Type       : None
@@ -385,7 +382,6 @@ Effects          :
 Description      : Increases your chance to hit with all spells and attacks by $s1%.
 
 Name             : Hand of Sacrifice (id=6940) [Spell Family (10)] 
-Talent Entry     : Generic [tree=class, row=6, col=3, max_rank=1, req_points=8, name="Blessing of Sacrifice"]
 Class            : Paladin
 School           : Holy
 Spell Type       : None
@@ -461,7 +457,6 @@ Effects          :
 Description      : All magic attacks against you have a $h% chance to cause $s1% of the damage taken back to the attacker as well.
 
 Name             : Turn Evil (id=10326) [Spell Family (10)] 
-Talent Entry     : Generic [tree=class, row=2, col=5, max_rank=1, req_points=0]
 Class            : Paladin
 School           : Holy
 Spell Type       : None
@@ -666,12 +661,11 @@ Attributes       : ........ ........ x.x..... x..x....   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18), Allow While Mounted (24), Allow While Sitting (27), Allow Dead Target (64), Use Shapeshift Bar (68), Suppress Caster Procs (112), Allow Aura While Dead (116), Aura Never Bounces (148), Allow Entering Arena (149), Not On Player Controlled NPC (168), Vehicle Immunity Category (218), Disable Tied Effect Points (222), Disable Aura While Dead (226), Aura Points On Client (268)
 Effects          :
 #1 (id=697556)   : Apply Raid Aura (65) | Unknown(558) | Scaling Class: -1
-                   Base Value: 30 | Scaled Value: 0 (coefficient=1.04) | PvP Coefficient: 1.00000 | Misc Value: 52 | Radius: 40 yards | Target: Self (1)
+                   Base Value: 30 | Scaled Value: 460.72 (coefficient=1.04) | PvP Coefficient: 1.00000 | Misc Value: 52 | Radius: 40 yards | Target: Self (1)
 Description      : Gives ${$cond($lte($PL,70),$PL,$cond($lte($PL,80),$PL+($PL-70)*5,$PL+($PL-70)*5+($PL-80)*7))} additional Fire, Frost and Shadow resistance to all party and raid members within $a1 yards.  Players may only have one Aura on them per Paladin at any one time.
 Tooltip          : Increases Fire, Frost and Shadow resistance by $w1.
 
 Name             : Repentance (id=20066) [Spell Family (10)] 
-Talent Entry     : Generic [tree=class, row=4, col=1, max_rank=1, req_points=0, select_idx=100]
 Class            : Paladin
 School           : Holy
 Spell Type       : None
@@ -1313,7 +1307,6 @@ Effects          :
 Description      : Your Seal of Righteousness, Seal of Truth, and Seal of Justice now also deal $s1% weapon damage when triggered.
 
 Name             : Holy Shock (id=20473) [Spell Family (10)] 
-Talent Entry     : Holy [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Paladin
 School           : Holy
 Spell Type       : None
@@ -1475,7 +1468,6 @@ Description      : Summons a Charger, which serves as a mount.
 Tooltip          : $?j1g[Increases ground speed by $j1g%. ][]$?j1f[Increases flight speed by $j1f%. ][]$?j1s[Increases swim speed by $j1s%. ][]
 
 Name             : Hammer of Wrath (id=24275) [Spell Family (10)] 
-Talent Entry     : Generic [free=(Retribution), tree=class, row=1, col=3, max_rank=1, req_points=0]
 Class            : Paladin
 School           : Holy
 Spell Type       : None
@@ -1679,6 +1671,7 @@ Class            : Paladin
 School           : Holy
 Spell Type       : None
 Spell Level      : 20 (max 80)
+Max Scaling Level: 80
 Range            : 100 yards
 Duration         : 30 seconds
 Triggered by     : Vindication (26016)
@@ -1899,7 +1892,6 @@ Effects          :
 Description      : Deals ${1+0.223*$SPH+0.142*$AP} Holy damage to an enemy, increased by 20% for each application of Censure on the target.
 
 Name             : Aura Mastery (id=31821) [Spell Family (10)] 
-Talent Entry     : Holy [tree=spec, row=3, col=2, max_rank=1, req_points=0]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
@@ -2075,7 +2067,6 @@ Effects          :
 Description      : Reduces the cooldown of Avenging Wrath by $/1000;s3 sec and Guardian of Ancient Kings by $/1000;s1 sec.  In addition, your Divine Plea will generate $s2 Holy Power.
 
 Name             : Ardent Defender (id=31850) [Spell Family (10)] 
-Talent Entry     : Protection [tree=spec, row=4, col=3, max_rank=1, req_points=0]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
@@ -2287,7 +2278,6 @@ Description      : Gain $s1% of your base mana over $d.
 Tooltip          : Regaining ${$m1/10}% of your base mana per second.
 
 Name             : Avenger's Shield (id=31935) [Spell Family (10)] 
-Talent Entry     : Protection [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Paladin
 School           : Holy
 Spell Type       : None
@@ -2678,8 +2668,6 @@ Effects          :
 Description      : Increases the critical strike chance of Hammer of Wrath by $s2%, reduces the cooldown of Avenging Wrath by $/1000;s1 secs and allows the use of Hammer of Wrath at all times during Avenging Wrath.
 
 Name             : Sanctified Wrath (desc=Rank 3) (id=53376) [Spell Family (10), Passive, Hidden] 
-Talent Entry     : Holy [tree=spec, row=10, col=3, max_rank=1, req_points=20, select_idx=100]
-                 : Protection [tree=spec, row=8, col=4, max_rank=1, req_points=20, override="Avenging Wrath" (id=31884)]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
@@ -2776,7 +2764,6 @@ Effects          :
 Description      : Increases the periodic damage done by your Seal of Truth by $m1%, and the duration of your Inquisition by $s2%.
 
 Name             : Divine Storm (id=53385) [Spell Family (10)] 
-Talent Entry     : Retribution [tree=spec, row=2, col=1, max_rank=1, req_points=0]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
@@ -3043,7 +3030,6 @@ Effects          :
 Description      : Increases your total Stamina by $s3%, increases your spell hit by $31878s3%, and increases your spell power by an amount equal to $s1% of your Strength.
 
 Name             : Hammer of the Righteous (id=53595) [Spell Family (10)] 
-Talent Entry     : Protection [tree=spec, row=3, col=1, max_rank=1, req_points=0, select_idx=100, replace="Crusader Strike" (id=35395)]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
@@ -5493,7 +5479,7 @@ Effects          :
 #1 (id=68350)    : Apply Aura (6) | Modify Total Stat% (137) | Scaling Class: -1
                    Base Value: 5 | Scaled Value: 5 | PvP Coefficient: 1.00000 | Misc Value: -1 | Misc Value 2: 0xf | Target: Friend (21)
 #2 (id=68351)    : Apply Aura (6) | Unknown(558) | Scaling Class: -1
-                   Base Value: 1 | Scaled Value: 0 (coefficient=0.608) | PvP Coefficient: 1.00000 | Misc Value: 124 | Target: Friend (21)
+                   Base Value: 1 | Scaled Value: 269.344 (coefficient=0.608) | PvP Coefficient: 1.00000 | Misc Value: 124 | Target: Friend (21)
 Description      : Places a Blessing on the friendly target, increasing Strength, Agility, Stamina, and Intellect by $s1%, and all magical resistances by ${$cond($lte($PL,70),$PL/2,$cond($lte($PL,80),$PL/2+($PL-70)/2*5,$PL/2+($PL-70)/2*5+($PL-80)/2*7))-0.5}, for $d.  If target is in your party or raid, all party and raid members will be affected.  Players may only have one Blessing on them per Paladin at any one time.
 Tooltip          : Strength, Agility, Stamina, and Intellect increased by $s1%.
 All magical resistances increased by $w2.
@@ -5523,7 +5509,7 @@ Effects          :
 #2 (id=68367)    : Apply Aura (6) | Modify Ranged Attack Power% (167) | Scaling Class: -1
                    Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Target: Friend (21)
 #3 (id=68368)    : Apply Aura (6) | Restore Power (85) | Scaling Class: -1
-                   Base Value: 1 | Scaled Value: 0 (coefficient=0.736) | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 1 | Scaled Value: 326.048 (coefficient=0.736) | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Places a Blessing on the friendly target, increasing melee attack power by $s1%, ranged attack power by $s2%, and restoring $s3 mana every 5 seconds for $d.  If target is in your party or raid, all party and raid members will be affected.  Players may only have one Blessing on them per Paladin at any one time.
 Tooltip          : Increases melee attack power by $s1%, ranged attack power by $s2%, and restores $s3 mana every 5 sec.
 
@@ -6085,7 +6071,6 @@ Description      : Consumes all Holy Power to increase your Holy Damage by $s1%.
 Tooltip          : Increases Holy damage done by $s1%.
 
 Name             : Grand Crusader (desc=Rank 2) (id=85043) [Spell Family (10), Passive, Hidden] 
-Talent Entry     : Protection [tree=spec, row=3, col=2, max_rank=1, req_points=0]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
@@ -6185,7 +6170,6 @@ Effects          :
 Description      : Your Seal of Righteousness, Seal of Truth, and Seal of Justice now also deal $s1% weapon damage when triggered. In addition, your Seal of Righteousness now hits all enemy targets within melee range.
 
 Name             : Light of Dawn (id=85222) [Spell Family (10)] 
-Talent Entry     : Holy [tree=spec, row=2, col=2, max_rank=1, req_points=0]
 Class            : Paladin
 School           : Holy
 Spell Type       : None
@@ -6873,7 +6857,6 @@ Description      : Reduces all damage taken by $s2%.
 Tooltip          : The Guardian of Ancient Kings is protecting you, reducing all damage taken by $s2%.
 
 Name             : Guardian of Ancient Kings (id=86659) [Spell Family (10)] 
-Talent Entry     : Protection [tree=spec, row=7, col=3, max_rank=1, req_points=8]
 Class            : Paladin
 School           : Holy
 Spell Type       : None
@@ -7405,7 +7388,6 @@ Effects          :
 Description      : Hammer the current target for $53595s1% weapon damage, causing a wave of light that hits all targets within $88263A1 yards for $88263s1 Holy damage. Grants a charge of Holy Power.
 
 Name             : Holy Word: Chastise (id=88625) [Spell Family (6)] 
-Talent Entry     : Holy [tree=spec, row=2, col=3, max_rank=1, req_points=0]
 Class            : Paladin, Priest
 School           : Holy
 Spell Type       : None
@@ -7796,7 +7778,6 @@ Effects          :
 Description      : Allows $s1% of your mana regeneration from Spirit to continue while in combat.
 
 Name             : Rebuke (id=96231) [Spell Family (10)] 
-Talent Entry     : Generic [tree=class, row=4, col=4, max_rank=1, req_points=0]
 Class            : Paladin
 School           : Physical
 Spell Type       : None

@@ -186,6 +186,6 @@ constexpr double m_pi = 3.14159265358979323846;
 constexpr int MAX_LEVEL = 85;
 constexpr int MAX_SCALING_LEVEL = 85;
 constexpr int MAX_ILEVEL = 1300;
-constexpr int MAX_CLASS = 14;
+constexpr int MAX_CLASS = 12;
 
 #endif // CONFIG_H

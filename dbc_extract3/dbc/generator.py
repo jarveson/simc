@@ -264,8 +264,8 @@ class CSVDataGenerator(object):
         return True
 
 class DataGenerator(object):
-    _class_names = [ None, 'Warrior', 'Paladin', 'Hunter', 'Rogue',     'Priest', 'Death Knight', 'Shaman', 'Mage',  'Warlock', 'Monk',      'Druid',  'Demon Hunter',     'Evoker' ]
-    _class_masks = [ None, 0x1,       0x2,       0x4,      0x8,         0x10,     0x20,           0x40,     0x80,    0x100,     0x200,       0x400,     0x800,             0x1000 ]
+    _class_names = [ None, 'Warrior', 'Paladin', 'Hunter', 'Rogue',     'Priest', 'Death Knight', 'Shaman', 'Mage',  'Warlock', 'Monk',      'Druid']
+    _class_masks = [ None, 0x1,       0x2,       0x4,      0x8,         0x10,     0x20,           0x40,     0x80,    0x100,     0x200,       0x400 ]
     _race_names  = [ None, 'Human',   'Orc',     'Dwarf',  'Night Elf', 'Undead', 'Tauren',       'Gnome',  'Troll', 'Goblin',  'Blood Elf', 'Draenei', 'Dark Iron Dwarf', 'Vulpera', 'Mag\'har Orc', 'Mechagnome', 'Dracthyr' ] + [ None ] * 5 + [ 'Worgen', None, None, 'Pandaren', None, 'Nightborne', 'Highmountain Tauren', 'Void Elf', 'Lightforged Draenei', 'Zandalari Troll', 'Kul Tiran' ]
     _race_masks  = [ None, 0x1,       0x2,       0x4,      0x8,         0x10,     0x20,           0x40,     0x80,    0x100,     0x200,       0x400,     0x800,             0x1000,    0x2000,         0x4000,       0x8000,    ] + [ None ] * 5 + [ 0x200000, None, None, 0x1000000,  None, 0x4000000,    0x8000000,             0x10000000, 0x20000000,            0x40000000,        0x80000000  ]
     _pet_names   = [ None, 'Ferocity', 'Tenacity', None, 'Cunning' ]
@@ -558,9 +558,9 @@ class SpecializationEnumGenerator(DataGenerator):
 
         max_specialization = 0
         for spec_id, spec_data in sorted(self.db('ChrSpecialization').items()):
-            # Ignore "Initial" and "Adventurer" specializations for now
+            # Ignore "Initial" specializations for now
             # TODO: Revisit
-            if spec_data.name == 'Initial' or spec_data.name == 'Adventurer':
+            if spec_data.name == 'Initial':
                 continue
 
             if spec_data.class_id > 0:
@@ -1580,10 +1580,6 @@ class SpellDataGenerator(DataGenerator):
          426474, # Verdant Tether embellishment stat buff
          424051, 424057, # String of Delicacies
          417138, # Fyr'alath the Dreamrender
-         # 10.2.6
-         433889, 433930, 433954, 433957, 433958, 434021, 434070, 434071, 434072, # reworked Tome of Unstable Power
-         433826, 433829, 433830, # reworked globe of jagged ice
-         433768, 433786, # reworked umbrelskul's fractured heart
         ),
 
         # Warrior:
@@ -2377,83 +2373,7 @@ class SpellDataGenerator(DataGenerator):
           ( 400360, 3 ), # Moonless Night
           ( 425441, 3 ), ( 425448, 3 ), # Blazing Thorns (4t31)
           # Restoration
-        ),
-        # Demon Hunter:
-        (
-          # General
-          ( 225102, 0 ), # Fel Eruption damage
-          ( 339229, 0 ), # Serrated Glaive conduit debuff
-          ( 337849, 0 ), ( 345604, 0 ), ( 346664, 0 ), # Fel Bombardment legendary spells
-          ( 347765, 0 ), # Fodder to the Flame Empowered Demon Soul buff
-          ( 355894, 0 ), ( 356070, 0 ), # Blind Faith legendary spells
-          ( 355892, 0 ), # Blazing Slaughter legendary buff
-
-          # Havoc
-          ( 236167, 1 ), # Felblade proc rate
-          ( 208605, 1 ), # Nemesis player buff
-          ( 203796, 1 ), # Demon Blade proc
-          ( 217070, 1 ), # Rage of the Illidari explosion
-          ( 217060, 1 ), # Rage of the Illidari buff
-          ( 202446, 1 ), # Anguish damage spell
-          ( 222703, 1 ), # Fel Barrage proc rate
-          ( 247938, 1 ), # Chaos Blades primary spell, still used by Chaos Theory
-          ( 211796, 1 ), # Chaos Blades MH damage spell
-          ( 211797, 1 ), # Chaos Blades OH damage spell
-          ( 275148, 1 ), # Unbound Chaos Azerite damage spell
-          ( 337313, 1 ), # Inner Demon aura for Unbound Chaos talent
-          ( 275147, 1 ), # Unbound Chaos delayed trigger aura
-          ( 333105, 1 ), ( 333110, 1 ), # Sigil of the Illidari Legendary fake Fel Devastation spells
-          ( 346502, 1 ), ( 346503, 1 ), # New Sigil of the Illidari Legendary fake Fel Devastation spells
-          ( 337567, 1 ), # Chaotic Blades legendary buff
-          ( 390197, 1 ), # Ragefire talent damage spell
-          ( 390195, 1 ), # Chaos Theory talent buff
-          ( 390145, 1 ), # Inner Demon talent buff
-          ( 391374, 1 ), ( 391378, 1 ), ( 393054, 1 ), ( 393055, 1 ), # First Blood Chaos spells
-          ( 393628, 1 ), ( 393629, 0 ), # T29 Set Bonus Spells
-          ( 408754, 1 ), # T30 4pc Seething Potential damage buff
-          ( 228532, 1 ), # Consume Lesser Soul heal
-          ( 328953, 1 ), # Consume Demon Soul heal
-          ( 328951, 1 ), # New Shattered Souls area trigger
-          ( 428493, 1 ), # Chaotic Disposition Damage
-
-          # Vengeance
-          ( 203557, 2 ), # Felblade proc rate
-          ( 209245, 2 ), # Fiery Brand damage reduction
-          ( 213011, 2 ), # Charred Warblades heal
-          ( 212818, 2 ), # Fiery Demise debuff
-          ( 207760, 2 ), # Burning Alive spread radius
-          ( 333386, 2 ), ( 333389, 2 ), # Sigil of the Illidari Legendary fake Eye Beam spells
-          ( 346504, 2 ), ( 346505, 2 ), # New Sigil of the Illidari Legendary fake Eye Beam spells
-          ( 336640, 2 ), # Charred Flesh
-          ( 203981, 2 ), # Soul Fragments
-          ( 409877, 2 ), # T30 4pc Recrimination buff
-       ),
-
-       # Evoker:
-       (
-          # General
-          ( 372470, 0 ), # Scarlet Adaptation buff
-          ( 370901, 0 ), ( 370917, 0 ), # Leaping Flames buff
-          ( 359115, 0 ), # Empower Triggered GCD
-          ( 361519, 0 ), # Essence Burst
-          # Devastation
-          ( 386399, 1 ), ( 399370, 1 ), # Iridescence: Blue
-          ( 375802, 1 ), # Burnout buff
-          ( 376850, 1 ), # Power Swell buff
-          ( 397870, 1 ), # Titanic Wrath
-          ( 405651, 1 ), # Imminent Destruction Player Buff
-          ( 409848, 1 ), # 4t30 buff
-          # Preservation
-          ( 369299, 2 ), # Preservation Essence Burst
-          # Augmentation
-          ( 392268, 3 ), # Augmentation Essence Burst
-          ( 404908, 3 ), ( 413786, 3 ), # Fate Mirror Damage/Heal
-          ( 409632, 3 ), # Breath of Eons Damage
-          ( 360828, 3 ), # Blistering Scales
-          ( 410265, 3 ), # Inferno's Blessing
-          ( 424368, 3 ), # T31 4pc Buff Trembling Earth
-          ( 409276, 3 ), # Motes of Possibility Buff
-       ),
+        )
     ]
 
     _profession_enchant_categories = [
@@ -3818,122 +3738,117 @@ class SetBonusListGenerator(DataGenerator):
         {
             'name'   : 'march_of_the_legion',
             'bonuses': [ 1293 ],
-            'tier'   : 'T19_MOTL'
+            'tier'   : 19
         },
         # Legion Dungeon, Journey Through Time
         {
             'name'   : 'journey_through_time',
             'bonuses': [ 1294 ],
-            'tier'   : 'T19_JTT'
+            'tier'   : 19
         },
         # Legion Dungeon, Cloth
         {
             'name'   : 'tier19p_cloth',
             'bonuses': [ 1295 ],
-            'tier'   : 'T19_C'
+            'tier'   : 19
         },
         # Legion Dungeon, Leather
         {
             'name'   : 'tier19p_leather',
             'bonuses': [ 1296 ],
-            'tier'   : 'T19_L'
+            'tier'   : 19
         },
         # Legion Dungeon, Mail
         {
             'name'   : 'tier19p_mail',
             'bonuses': [ 1297 ],
-            'tier'   : 'T19_M'
+            'tier'   : 19
         },
         # Legion Dungeon, Plate
         {
             'name'   : 'tier19p_plate',
             'bonuses': [ 1298 ],
-            'tier'   : 'T19_P'
+            'tier'   : 19
         },
         {
             'name'   : 'waycrests_legacy',
             'bonuses': [ 1439 ],
-            'tier'   : 'T21_WL'
+            'tier'   : 21
         },
         {
             'name'   : 'gift_of_the_loa',
             'bonuses': [ 1442 ],
-            'tier'   : 'T23_GOTL'
+            'tier'   : 23
         },
         {
             'name'   : 'keepsakes',
             'bonuses': [ 1443 ],
-            'tier'   : 'T23_KS'
+            'tier'   : 23
         },
         {
             'name'   : 'titanic_empowerment',
             'bonuses': [ 1452 ],
-            'tier'   : 'T24_TE'
+            'tier'   : 24
         },
         {
             'name'   : 'hack_and_gore',
             'bonuses': [ 1457 ],
-            'tier'   : 'T26_HG'
+            'tier'   : 26
         },
         {
             'name'   : 'tier28',
             'bonuses': [ 1496, 1497, 1498, 1499, 1500, 1501, 1502, 1503, 1504, 1505, 1506, 1507],
-            'tier'   : 'T28'
+            'tier'   : 28
         },
         {
             'name'   : 'ripped_secrets',
             'bonuses': [ 1508 ],
-            'tier'   : 'T28_RS'
+            'tier'   : 28
         },
         {
             'name'   : 'tier29',
             'bonuses': [ 1526, 1527, 1528, 1529, 1530, 1531, 1532, 1533, 1534, 1535, 1536, 1537, 1538 ],
-            'tier'   : 'T29'
+            'tier'   : 29
         },
         {
             'name'   : 'playful_spirits_fur',
             'bonuses': [ 1509 ],
-            'tier'   : 'T29_PSF'
+            'tier'   : 29
         },
         {
             'name'   : 'horizon_striders_garments',
             'bonuses': [ 1510 ],
-            'tier'   : 'T29_HSG'
+            'tier'   : 29
         },
         {
             'name'   : 'azureweave_vestments',
             'bonuses': [ 1516 ],
-            'tier'   : 'T29_AV'
+            'tier'   : 29
         },
         {
             'name'   : 'woven_chronocloth',
             'bonuses': [ 1515 ],
-            'tier'   : 'T29_WC'
+            'tier'   : 29
         },
         {
             'name'   : 'raging_tempests',
             'bonuses': [ 1521, 1523, 1524, 1525 ],
-            'tier'   : 'T29_RT'
+            'tier'   : 29
         },
         {
             'name'   : 'tier30',
             'bonuses': [ 1540, 1541, 1542, 1543, 1544, 1545, 1546, 1547, 1548, 1549, 1550, 1551, 1552 ],
-            'tier'   : 'T30'
+            'tier'   : 30
         },
         {
             'name'   : 'might_of_the_drogbar',
             'bonuses': [ 1539 ],
-            'tier'   : 'T30_MOTD'
+            'tier'   : 30
         },
         {
             'name'   : 'tier31',
             'bonuses': [ 1557, 1558, 1559, 1560, 1561, 1562, 1563, 1564, 1565, 1566, 1567, 1568, 1569 ],
-            'tier'   : 'T31'
-        },
-        {
-            'name'   : 'dragonflight_season_4',
-            'bonuses': [ 1594, 1595, 1596, 1597, 1598, 1599, 1600, 1601, 1602, 1603, 1604, 1605, 1606 ],
-            'tier'   : 'DF4'
+            'tier'   : 31
         },
         {
             'name': 'tier10',
@@ -4020,15 +3935,17 @@ class SetBonusListGenerator(DataGenerator):
                 length = len(data))
 
         _hdr_specifiers = (
-            '{: <43}', '{: <27}', '{: <10}', '{: <6}', '{: <5}', '{: <3}', '{: <3}', '{: <4}', '{: <7}', '{}'
+            '{: <43}', '{: <21}', '{: <6}', '{: <5}', '{: <4}', '{: <3}', '{: <3}', '{: <4}', '{: <7}', '{}'
         )
 
         _data_specifiers = (
-            '{: <44}', '{: <27}', '{: >10}', '{: >6}', '{: >5}', '{: >3}', '{: >3}', '{: >4}', '{: >7}', '{}'
+            '{: <44}', '{: <21}', '{: >6}', '{: >5}', '{: >4}', '{: >3}', '{: >3}', '{: >4}', '{: >7}', '{}'
         )
 
         _hdr_format = ', '.join(_hdr_specifiers)
-        _hdr = _hdr_format.format('SetBonusName', 'OptName', 'Tier', 'EnumID', 'SetID', 'Bns', 'Cls', 'Spec', 'SpellID', 'ItemIDs')
+        _hdr = _hdr_format.format(
+            'SetBonusName', 'OptName', 'EnumID', 'SetID', 'Tier', 'Bns', 'Cls', 'Spec',
+            'SpellID', 'ItemIDs')
 
         _data_format = ', '.join(_data_specifiers)
 
@@ -4057,9 +3974,9 @@ class SetBonusListGenerator(DataGenerator):
             self._out.write('  {{ {} }},\n'.format(_data_format.format(
                 '"%s"' % item_set.name.replace('"', '\\"'),
                 '"%s"' % map_entry['name'].replace('"', '\\"'),
-                '"%s"' % map_entry['tier'].replace('"', '\\"'),
                 entry['index'],
                 set_id,
+                map_entry['tier'],
                 entry['bonus'],
                 entry['class'],
                 entry['spec'],

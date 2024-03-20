@@ -91,8 +91,8 @@ double spelleffect_data_t::delta( const player_t* p, unsigned level ) const
   if ( _m_delta != 0 && scaling_class() != 0 )
   {
     unsigned scaling_level = level ? level : p->level();
-    if ( _spell->max_scaling_level() > 0 )
-      scaling_level = std::min( scaling_level, _spell->max_scaling_level() );
+    //if ( _spell->max_scaling_level() > 0 )
+    //  scaling_level = std::min( scaling_level, _spell->max_scaling_level() );
     m_scale = p->dbc->spell_scaling( scaling_class(), scaling_level );
   }
 
@@ -161,13 +161,13 @@ double spelleffect_data_t::average( const player_t* p, unsigned level ) const
 
   auto scale = scaling_class();
 
-  if ( scale == PLAYER_NONE && _spell->max_scaling_level() > 0 )
-    scale = PLAYER_SPECIAL_SCALE8;
+  //if ( scale == PLAYER_NONE && _spell->max_scaling_level() > 0 )
+  //  scale = PLAYER_SPECIAL_SCALE8;
 
   if ( _m_coeff != 0 && scale != PLAYER_NONE )
   {
-    if ( _spell->max_scaling_level() > 0 )
-      level = std::min( level, _spell->max_scaling_level() );
+    //if ( _spell->max_scaling_level() > 0 )
+    //  level = std::min( level, _spell->max_scaling_level() );
 
     double value = _m_coeff * p->dbc->spell_scaling( scale, level );
 

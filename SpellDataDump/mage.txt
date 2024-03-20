@@ -203,7 +203,6 @@ Effects          :
 Description      : Hurls a fiery ball that causes $s1 Fire damage.
 
 Name             : Remove Curse (id=475) [Spell Family (3)] 
-Talent Entry     : Generic [tree=class, row=3, col=5, max_rank=1, req_points=0]
 Class            : Mage
 School           : Arcane
 Spell Type       : None
@@ -259,7 +258,6 @@ Description      : Absorbs ${$m1+0.807*$SPA} Fire, Frost or Arcane damage.  Last
 Tooltip          : Absorbs $w1 Fire, Frost or Arcane damage.
 
 Name             : Conjure Mana Gem (id=759) [Spell Family (3)] 
-Talent Entry     : Arcane [tree=spec, row=7, col=6, max_rank=1, req_points=20]
 Class            : Mage
 School           : Arcane
 Spell Type       : None
@@ -333,7 +331,6 @@ Effects          :
 Description      : Infuses all party and raid members with brilliance, increasing their maximum mana by $79057s1 and spell power by $79057s2% for $79057d.  If target is in your party or raid, all party and raid members will be affected.
 
 Name             : Mana Shield (id=1463) [Spell Family (3)] 
-Talent Entry     : Generic [tree=class, row=2, col=3, max_rank=1, req_points=0, name="Incanter's Flow"]
 Class            : Mage
 School           : Arcane
 Spell Type       : None
@@ -471,7 +468,6 @@ Effects          :
 Description      : Counters the enemy's spellcast, preventing any spell from that school of magic from being cast for $d.
 
 Name             : Scorch (id=2948) [Spell Family (3)] 
-Talent Entry     : Fire [tree=spec, row=3, col=1, max_rank=1, req_points=0]
 Class            : Mage
 School           : Fire
 Spell Type       : None
@@ -520,7 +516,6 @@ Effects          :
 Description      : Attack with an equipped wand.
 
 Name             : Arcane Missiles (id=5143) [Spell Family (3)] 
-Talent Entry     : Arcane [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Mage
 School           : Arcane
 Spell Type       : None
@@ -1100,7 +1095,6 @@ Effects          :
 Description      : Your Counterspell also silences the target for $18469d.
 
 Name             : Pyroblast (id=11366) [Spell Family (3)] 
-Talent Entry     : Fire [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Mage
 School           : Fire
 Spell Type       : None
@@ -1152,7 +1146,6 @@ Effects          :
 Description      : Reduces the mana cost of your Scorch spell by $s1%.
 
 Name             : Ice Barrier (id=11426) [Spell Family (3)] 
-Talent Entry     : Frost [free=(Frost), tree=class, row=1, col=1, max_rank=1, req_points=0]
 Class            : Mage
 School           : Frost
 Spell Type       : None
@@ -1267,7 +1260,6 @@ Description      : When activated, your next Mage spell with a casting time less
 Tooltip          : Your next Mage spell with a casting time less than 10 sec will be an instant cast spell.
 
 Name             : Evocation (id=12051) [Spell Family (3)] 
-Talent Entry     : Arcane [tree=spec, row=7, col=1, max_rank=1, req_points=20]
 Class            : Mage
 School           : Arcane
 Spell Type       : None
@@ -1339,7 +1331,6 @@ Effects          :
 Description      : Gives your damaging spells a $h% chance to reset the cooldown on Fire Blast and to cause the next Fire Blast you cast to stun the target for $12355d and spread any Fire damage over time effects to nearby enemy targets within $12355a2 yards.
 
 Name             : Icy Veins (id=12472) [Spell Family (3)] 
-Talent Entry     : Frost [tree=spec, row=7, col=2, max_rank=1, req_points=8]
 Class            : Mage
 School           : Frost
 Spell Type       : None
@@ -1773,7 +1764,6 @@ Effects          :
 Description      : Increases the critical strike chance of your spells by $s1%.
 
 Name             : Shatter (desc=Rank 2) (id=12982) [Spell Family (3), Passive, Hidden] 
-Talent Entry     : Frost [tree=spec, row=3, col=2, max_rank=1, req_points=0]
 Class            : Mage
 School           : Physical
 Spell Type       : None
@@ -1923,7 +1913,7 @@ Attributes       : ........ ........ ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
 Effects          :
 #1 (id=846952)   : Energize Power (30) | Scaling Class: -1
-                   Base Value: 2339 | Scaled Value: 0 (coefficient=27.32) | PvP Coefficient: 1.00000 | Misc Value: mana | Target: Self (1)
+                   Base Value: 2339 | Scaled Value: 12102.76 (coefficient=27.32) | PvP Coefficient: 1.00000 | Misc Value: mana | Target: Self (1)
 Description      : Restores $s1 mana.
 
 Name             : Arcane Torrent (desc=Racial) (id=28730) 
@@ -2075,7 +2065,6 @@ Effects          :
 Description      : Blasts the target with energy, dealing $s1 Arcane damage.  Each time you cast Arcane Blast, the damage of Arcane Blast and Arcane Explosion is increased by $36032s1%, Arcane Blast casting time is reduced by ${$36032m3/-1000}.1 sec and Arcane Blast mana cost is increased by $36032s2%.  Effect stacks up to $36032u times and lasts $36032d or until any Arcane damage spell except Arcane Blast or Arcane Explosion is cast.
 
 Name             : Ice Lance (id=30455) [Spell Family (3)] 
-Talent Entry     : Frost [tree=spec, row=1, col=1, max_rank=1, req_points=0]
 Class            : Mage
 School           : Frost
 Spell Type       : None
@@ -2309,7 +2298,6 @@ Effects          :
 Description      : Mana gained from your Mana Gem also increases your spell power by $s1% of your maximum mana for $83098d.
 
 Name             : Slow (id=31589) [Spell Family (3)] 
-Talent Entry     : Generic [tree=class, row=5, col=5, max_rank=1, req_points=8]
 Class            : Mage
 School           : Arcane
 Spell Type       : None
@@ -2417,7 +2405,6 @@ Description      : Gives you a chance when hit by a melee or ranged attack to in
 Tooltip          : Movement speed increased by $s1%.
 
 Name             : Dragon's Breath (id=31661) [Spell Family (3)] 
-Talent Entry     : Generic [tree=class, row=9, col=7, max_rank=1, req_points=20]
 Class            : Mage
 School           : Fire
 Spell Type       : None
@@ -2752,9 +2739,9 @@ Attributes       : ....x... ........ ........ ........   .....x.. ..x..... .....
                  : Is Ability (4), Allow While Stealthed (37), No Threat (42), Allow While Invisible (78), Do Not Reset Combat Timers (81)
 Effects          :
 #1 (id=118955)   : Apply Aura (6) | Modify Healing Power (135) | Scaling Class: -1
-                   Base Value: 5 | Scaled Value: 0 (coefficient=1.32) | PvP Coefficient: 1.00000 | Target: Self (1)
+                   Base Value: 5 | Scaled Value: 584.76 (coefficient=1.32) | PvP Coefficient: 1.00000 | Target: Self (1)
 #2 (id=909832)   : Apply Aura (6) | Damage Done (13) | Scaling Class: -1
-                   Base Value: 5 | Scaled Value: 0 (coefficient=1.32) | Points Per Level: 2 | PvP Coefficient: 1.00000 | Misc Value: 0x7e | Target: Self (1)
+                   Base Value: 5 | Scaled Value: 584.76 (coefficient=1.32) | Points Per Level: 2 | PvP Coefficient: 1.00000 | Misc Value: 0x7e | Target: Self (1)
                    Affected School(s): Arcane, Fire, Frost, Holy, Nature, Shadow
 Description      : Increases your spell power by $s2.  Lasts $d.
 Tooltip          : Spell power increased by $s2.
@@ -3207,7 +3194,6 @@ Effects          :
 Description      : Any time you score 2 non-periodic critical strikes in a row with your Fireball, Frostfire Bolt, Scorch, Pyroblast, or Fire Blast spells, you have a $m1% chance to trigger your Hot Streak effect.
 
 Name             : Living Bomb (id=44457) [Spell Family (3)] 
-Talent Entry     : Fire [tree=spec, row=6, col=3, max_rank=1, req_points=8]
 Class            : Mage
 School           : Fire
 Spell Type       : None
@@ -3477,7 +3463,6 @@ $piercing3=$?s12953[${1.06}][${$<piercing2>}]
 $mult=${$<arctic5>*$<piercing3>}
 
 Name             : Frostfire Bolt (id=44614) [Spell Family (3)] 
-Talent Entry     : Frost [tree=spec, row=3, col=1, max_rank=1, req_points=0, name="Flurry"]
 Class            : Mage
 School           : Frostfire
 Spell Type       : None
@@ -3537,7 +3522,6 @@ Effects          :
 Description      : Gives your Ice Barrier spell a $h% chance to freeze all enemies within $55080a1 yds for $55080d when it is destroyed.
 
 Name             : Ice Block (id=45438) [Spell Family (3)] 
-Talent Entry     : Generic [tree=class, row=2, col=1, max_rank=1, req_points=0]
 Class            : Mage
 School           : Frost
 Spell Type       : None
@@ -3925,7 +3909,6 @@ Effects          :
 Description      : Your Arcane damage spells deal $s1% more damage to snared or slowed targets.
 
 Name             : Mirror Image (id=55342) [Spell Family (3)] 
-Talent Entry     : Generic [tree=class, row=4, col=1, max_rank=1, req_points=0]
 Class            : Mage
 School           : Arcane
 Spell Type       : None
@@ -4177,7 +4160,6 @@ Effects          :
 Description      : Your Frost Nova targets can take an additional $56376s1% damage before the Frost Nova effect automatically breaks.
 
 Name             : Glyph of Ice Lance (id=56377) [Spell Family (3), Passive, Hidden] 
-Talent Entry     : Frost [tree=spec, row=8, col=5, max_rank=1, req_points=20, name="Splitting Ice"]
 Class            : Mage
 School           : Physical
 Spell Type       : None
@@ -5612,7 +5594,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Not On Player Controlled NPC (168), Vehicle Immunity Category (218), Do Not Count For PvP Scoreboard (252), Use Target's Level for Spell Scaling (264)
 Effects          :
 #1 (id=68344)    : Apply Aura (6) | Increase Energy (35) | Scaling Class: -1
-                   Base Value: 2 | Scaled Value: 0 (coefficient=4.8) | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 2 | Scaled Value: 2126.4 (coefficient=4.8) | PvP Coefficient: 1.00000 | Target: Friend (21)
 #2 (id=90962)    : Apply Aura (6) | Unknown(317) | Scaling Class: -1
                    Base Value: 6 | Scaled Value: 6 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Infuses all  party and raid members with brilliance, increasing their maximum mana by $s1 and their spell power by $s2% for $d.  If target is in your party or raid, all party and raid members will be affected.
@@ -5664,6 +5646,7 @@ School           : Arcane
 Spell Type       : None
 Resource         : 26% Base Mana (0) (id=282796)
 Spell Level      : 85 (max 85)
+Max Scaling Level: 85
 GCD              : 1.5 seconds
 Duration         : 40 seconds
 Cooldown         : 300 seconds
