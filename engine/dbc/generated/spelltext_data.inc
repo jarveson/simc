@@ -1,5 +1,5 @@
 // Spell text, wow build 4.4.0.53627
-static const std::array<spelltext_data_t, 7600> __spelltext_data { {
+static const std::array<spelltext_data_t, 7601> __spelltext_data { {
   {     10, "Ice shards pelt the target area doing ${$42208m1*8*$<mult>} Frost damage over $10d.", "$42208s1 Frost damage every $42208t1 $lsecond:seconds;.", 0 },
   {     17, "Draws on the soul of the friendly target to shield them, absorbing $<shield> damage$?s55672[ and healing them for $55672s1% of the absorption amount][].  Lasts $d.  While the shield holds, spellcasting will not be interrupted by damage.  Once shielded, the target cannot be shielded again for $6788d.", "Absorbs $w1 damage.", 0 },
   {     53, "Backstab the target, causing $m2% weapon damage plus $m1 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.", 0, 0 },
@@ -6790,6 +6790,7 @@ static const std::array<spelltext_data_t, 7600> __spelltext_data { {
   {  89906, "Gain $s1% of your base mana over $d.", "Regaining ${$m1/10}% of your base mana per second.", 0 },
   {  89920, "Reduces the pushback suffered from damaging attacks while casting any Shaman spell by $s1%.", 0, 0 },
   {  89926, "Increases the damage of your Living Bomb spell by $s1%.", 0, 0 },
+  {  90166, "Increases your attack power by $s1% for $d when you use Mangle (Cat).  Stacks up to $u times.", "Attack power increased by $s1%.", 0 },
   {  90286, "Increases the critical strike chance of Hammer of Wrath by $s2%, reduces the cooldown of Avenging Wrath by $/1000;s1 secs and allows the use of Hammer of Wrath at all times during Avenging Wrath.", 0, "Rank 2" },
   {  90309, "The devilsaur lets out a terrifying roar, increasing the critical strike chance of all party and raid members by $s1%.", "Increases critical strike chance by $s1%.", "Special Ability" },
   {  90314, "Your fox twirls its tail around, kicking up an obscuring cloud of dust, causing all enemies within $90314a1 yards to have their melee and ranged attack speed reduced by $90315s1% for $90315d.", 0, "Special Ability" },

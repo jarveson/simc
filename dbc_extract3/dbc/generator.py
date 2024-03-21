@@ -2273,7 +2273,11 @@ class SpellDataGenerator(DataGenerator):
         ),
 
         # Druid:
-        ( (  93402, 1, True ), # Sunfire
+        ( 
+          # Cataclysm
+          (  90166, 0), # 4pt11 Strength of the Panther
+
+          (  93402, 1, True ), # Sunfire
           ( 106996, 1, True ), # Astral Storm
           ( 112071, 1, True ), # Celestial Alignment
           ( 122114, 1, True ), # Chosen of Elune

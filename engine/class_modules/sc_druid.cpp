@@ -433,6 +433,7 @@ public:
     buff_t* leader_of_the_pack;
     buff_t* primal_fury_bear;
     buff_t* primal_fury_cat;
+    buff_t* strength_of_the_panther; // 4pt11
 
     // This just functions as pseudo counters for glyphs
     unsigned rip_extensions;
@@ -1073,6 +1074,7 @@ struct cat_form_buff_t : public druid_buff_t, public swap_melee_t
     add_invalidate( CACHE_ATTACK_POWER );
     add_invalidate( CACHE_EXP );
     add_invalidate( CACHE_HIT );
+    add_invalidate( CACHE_CRIT_CHANCE );
   }
 
   void expire_override( int expiration_stacks, timespan_t remaining_duration ) override
@@ -1098,6 +1100,8 @@ struct moonkin_form_buff_t : public druid_buff_t
     add_invalidate( CACHE_ARMOR );
     add_invalidate( CACHE_EXP );
     add_invalidate( CACHE_HIT );
+    add_invalidate( CACHE_PLAYER_DAMAGE_MULTIPLIER );
+    add_invalidate( CACHE_SPELL_HASTE );
   }
 };
 }  // end namespace buffs
@@ -1125,7 +1129,7 @@ public:
   position_e requires_position = POSITION_NONE;
   bool ignore_stealth          = false;
 
-  double ooc_chance{ 3.5 };
+  double ooc_chance{ 0 };
 
   druid_action_t( std::string_view n, druid_t* player, const spell_data_t* s = spell_data_t::nil() )
     : ab( n, player, s ),
@@ -1676,7 +1680,9 @@ private:
   using ab = druid_spell_base_t<spell_t>;
 
 public:
-  druid_spell_t( std::string_view n, druid_t* p, const spell_data_t* s = spell_data_t::nil() ) : ab( n, p, s ) {}
+  druid_spell_t( std::string_view n, druid_t* p, const spell_data_t* s = spell_data_t::nil() ) : ab( n, p, s ) {
+    ooc_chance = 3.5;
+  }
 };  // end druid_spell_t
 
 // Form Spells ==============================================================
@@ -1817,6 +1823,8 @@ public:
     : base_t( n, p, s ),
       snapshots()
   {
+    if (p->specialization() == DRUID_FERAL)
+        ooc_chance = 3.5;
 
     if ( data().ok() )
     {
@@ -2205,8 +2213,8 @@ struct ferocious_bite_t : public cat_finisher_t
 
       if ( p()->talent.blood_in_the_water->ok() )
       {
-        double hp = p()->sets->has_set_bonus( DRUID_FERAL, T13, set_bonus_e::B2 )
-                        ? 60.f
+            double hp = p()->sets->has_set_bonus( DRUID_FERAL, T13, set_bonus_e::B2 )
+                ? p()->sets->set( DRUID_FERAL, T13, set_bonus_e::B4 )->effectN( 2 ).base_value()
                         : p()->talent.blood_in_the_water->effectN( 1 ).base_value();
         if ( target->health_percentage() <= hp )
         {
@@ -2526,6 +2534,7 @@ struct mangle_cat_t : public cat_attack_t
     }
 
     trigger_mangle( s );
+    p()->buff.strength_of_the_panther->trigger();
   }
 };
 
@@ -2600,6 +2609,9 @@ struct bear_attack_t : public druid_attack_t<melee_attack_t>
   bear_attack_t( std::string_view n, druid_t* p, const spell_data_t* s = spell_data_t::nil() )
     : base_t( n, p, s )
   {
+    if ( p->specialization() == DRUID_FERAL )
+      ooc_chance = 3.5;
+
     if ( p->specialization() == DRUID_BALANCE || p->specialization() == DRUID_RESTORATION )
       ap_type = attack_power_type::NO_WEAPON;
   }
@@ -3871,7 +3883,7 @@ struct faerie_fire_feral_cat_t : public druid_spell_t
     druid_spell_t::impact( s );
     int stacks = 1;
     if ( p()->talent.feral_aggression->ok() )
-      stacks = p()->talent.feral_aggression->effectN( 1 ).base_value();
+      stacks = as<int>(p()->talent.feral_aggression->effectN( 1 ).base_value());
     trigger_ff( s, stacks );
   };
 };
@@ -4750,6 +4762,10 @@ void druid_t::create_buffs()
   buff.savage_defense = make_buff_fallback<savage_defense_buff_t>( find_spell( 62600 ), this, "savage_defense" )
                             ->set_chance( find_spell( 62600 )->effectN( 2 ).base_value() );
 
+  buff.strength_of_the_panther = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T11, B4 ), this,
+                                                     "strength_of_the_panther", find_spell( 90166 ) )
+                                     ->add_invalidate( CACHE_ATTACK_POWER );
+
   // Restoration buffs
   // todo: malfurions gift trigger
   /* buff.clearcasting_tree = make_buff_fallback( talent.omen_of_clarity_tree.ok(),
@@ -5198,6 +5214,9 @@ double druid_t::composite_attack_power_multiplier() const
 
   if ( specialization() == DRUID_FERAL )
     ap *= 1.0 + spec.aggression->effectN(1).percent();
+
+  if ( buff.strength_of_the_panther->check() )
+    ap *= 1.0 + buff.strength_of_the_panther->current_stack;
 
   return ap;
 }
@@ -5689,6 +5708,10 @@ void druid_t::apply_affecting_auras( action_t& action )
   action.apply_affecting_aura( talent.earth_and_moon );
   action.apply_affecting_aura( talent.balance_of_power );
   action.apply_affecting_aura( talent.gale_winds );
+
+  // Feral
+  action.apply_affecting_aura( sets->set( DRUID_FERAL, T11, B2 ) );
+  action.apply_affecting_aura( sets->set( DRUID_FERAL, T11, B4) );
 }
 
 
