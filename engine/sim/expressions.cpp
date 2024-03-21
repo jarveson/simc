@@ -1412,10 +1412,10 @@ std::unique_ptr<expr_t> expr_t::parse( action_t* action, util::string_view expr_
 
     throw std::invalid_argument("Unable to build expression tree.");
   }
-  catch (const std::exception& )
+  catch (const std::exception& e)
   {
-    std::throw_with_nested(std::runtime_error(fmt::format("Cannot parse expression from '{}'",
-        expr_str)));
+    std::throw_with_nested(std::runtime_error(fmt::format("Cannot parse expression from '{}': {}",
+        expr_str, e.what())));
   }
 }
 
