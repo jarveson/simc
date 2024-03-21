@@ -434,6 +434,9 @@ public:
     buff_t* primal_fury_bear;
     buff_t* primal_fury_cat;
     buff_t* strength_of_the_panther; // 4pt11
+    buff_t* t12_2p_melee;
+    buff_t* t12_4p_melee;
+    buff_t* smokescreen; // 4pt12
 
     // This just functions as pseudo counters for glyphs
     unsigned rip_extensions;
@@ -716,9 +719,9 @@ public:
   double composite_melee_crit_chance() const override;
   double composite_spell_crit_chance() const override;
   double composite_block() const override { return 0; }
-  double composite_spell_hit_rating() const override;
+  double composite_spell_hit() const override;
   double composite_crit_avoidance() const override;
-  double composite_dodge_rating() const override;
+  double composite_dodge() const override;
   double composite_parry() const override { return 0; }
   double composite_attribute_multiplier( attribute_e attr ) const override;
   double matching_gear_multiplier( attribute_e attr ) const override;
@@ -2005,9 +2008,6 @@ public:
       return;
 
     p()->buff.primal_fury_cat->trigger();
-
-    //p()->proc.primal_fury->occur();
-    //p()->resource_gain( RESOURCE_COMBO_POINT, primal_fury_cp, p()->gain.primal_fury );
   }
 
   void trigger_lotp()
@@ -2111,11 +2111,19 @@ public:
     p()->buff.predatory_swiftness->trigger( 1, buff_t::DEFAULT_VALUE(),
                                             consumed * p()->talent.predatory_strikes->effectN( 3 ).percent() );
 
+    if ( p()->buff.t12_4p_melee->check() && p()->buff.berserk->check() )
+    {
+      if ( p()->buff.t12_4p_melee->trigger( 1, buff_t::DEFAULT_VALUE(), consumed / 5.0 ) )
+      {
+        p()->buff.berserk->extend_duration( p(), p()->buff.t12_4p_melee->data().effectN( 1 ).time_value() * 1_s );
+      }
+    }
+
     p()->resource_loss( RESOURCE_COMBO_POINT, consumed, nullptr, this );
 
     if ( sim->log )
     {
-    sim->print_log( "{} consumes {} {} for {} (0)", player->name(), consumed,
+        sim->print_log( "{} consumes {} {} for {} (0)", player->name(), consumed,
                     util::resource_type_string( RESOURCE_COMBO_POINT ), name() );
     }
 
@@ -2204,28 +2212,28 @@ struct ferocious_bite_t : public cat_finisher_t
   {
     cat_finisher_t::impact( s );
 
-    if ( result_is_hit( s->result ) )
-    {
-      if ( p()->glyphs.ferocious_bite->ok() )
-      {
-        // todo: heal amount
-      }
+    if ( result_is_hit(s->result) )
+        return;
 
-      if ( p()->talent.blood_in_the_water->ok() )
-      {
-            double hp = p()->sets->has_set_bonus( DRUID_FERAL, T13, set_bonus_e::B2 )
-                ? p()->sets->set( DRUID_FERAL, T13, set_bonus_e::B4 )->effectN( 2 ).base_value()
-                        : p()->talent.blood_in_the_water->effectN( 1 ).base_value();
-        if ( target->health_percentage() <= hp )
+    if ( p()->glyphs.ferocious_bite->ok() )
+    {
+        // todo: heal amount
+    }
+
+    if ( p()->talent.blood_in_the_water->ok() )
+    {
+        double hp = p()->sets->has_set_bonus( DRUID_FERAL, T13, set_bonus_e::B2 )
+            ? p()->sets->set( DRUID_FERAL, T13, set_bonus_e::B4 )->effectN( 2 ).base_value()
+                    : p()->talent.blood_in_the_water->effectN( 1 ).base_value();
+    if ( target->health_percentage() <= hp )
+    {
+        auto td_d = td( s->target );
+        if ( td_d->dots.rip->is_ticking() &&
+            ( p()->talent.blood_in_the_water.rank() == 2 || p()->rng().roll( 0.5 ) ) )
         {
-          auto td_d = td( s->target );
-          if ( td_d->dots.rip->is_ticking() &&
-               ( p()->talent.blood_in_the_water.rank() == 2 || p()->rng().roll( 0.5 ) ) )
-          {
-            td_d->dots.rip->refresh_duration();
-          }
+        td_d->dots.rip->refresh_duration();
         }
-      }
+    }
     }
   }
 
@@ -2638,7 +2646,6 @@ struct bear_attack_t : public druid_attack_t<melee_attack_t>
     {
       trigger_primal_fury();
       trigger_lotp();
-      trigger_sd();
     }
   }
 
@@ -2737,6 +2744,9 @@ struct mangle_bear_t : public bear_attack_t
     bear_attack_t::execute();
     if ( p()->buff.berserk->check() )
       p()->cooldown.mangle->reset( true );
+
+    if (hit_any_target && attack_critical && p()->sets->has_set_bonus(DRUID_FERAL, T13, set_bonus_e::B2) )
+      trigger_sd();
   }
 
   int n_targets() const override
@@ -4248,9 +4258,12 @@ struct bear_melee_t : public druid_melee_t<bear_attacks::bear_attack_t>
     if (!hit_any_target)
         return;
 
+    trigger_sd();
+
     if ( p()->buff.fury_swipes->trigger() )
         p()->active.fury_swipes->execute_on_target( p()->target );
   }
+
 };
 
 // Cat Melee Attack =========================================================
@@ -4766,6 +4779,14 @@ void druid_t::create_buffs()
                                                      "strength_of_the_panther", find_spell( 90166 ) )
                                      ->add_invalidate( CACHE_ATTACK_POWER );
 
+  buff.t12_2p_melee = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T13, B2 ), this, "t12_2p_melee",
+                                          sets->set( DRUID_FERAL, T13, B2 ) );
+  buff.t12_4p_melee = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T13, B4 ), this, "t12_4p_melee",
+                                          sets->set( DRUID_FERAL, T13, B4 ) );
+
+  buff.smokescreen = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T13, B4 ), this, "smokescreen", find_spell( 99011 ) )
+          ->add_invalidate(CACHE_DODGE);
+
   // Restoration buffs
   // todo: malfurions gift trigger
   /* buff.clearcasting_tree = make_buff_fallback( talent.omen_of_clarity_tree.ok(),
@@ -5051,6 +5072,98 @@ void druid_t::init_special_effects()
       } );
   }
 
+  // Fix me when tier is actually in db
+  if ( sets->has_set_bonus(DRUID_FERAL, T12, set_bonus_e::B2) )
+  {
+    {
+      struct t12_2p_melee_cat_cb_t : public druid_cb_t
+      {
+            struct fiery_claws_t : public residual_action::residual_periodic_action_t<cat_attacks::cat_attack_t>
+            {
+          fiery_claws_t( druid_t* p ) : residual_action_t( "fiery_claws_cat", p, p->find_spell( 99002 ) )
+          {
+            proc = true;
+          }
+            };
+
+            action_t* damage;
+            double mul;
+
+            t12_2p_melee_cat_cb_t( druid_t* p, const special_effect_t& e )
+              : druid_cb_t( p, e ), mul( p->buff.t12_2p_melee->data().effectN( 1 ).percent() )
+            {
+          damage = p->get_secondary_action<fiery_claws_t>( "fiery_claws_cat" );
+            }
+
+            void trigger( action_t* a, action_state_t* s ) override
+            {
+          // Too lazy, 5221 is shred
+          if ( a->id == p()->spec.mangle_cat->id() || a->id == 5221 )
+          {
+            dbc_proc_callback_t::trigger( a, s );
+          }
+            }
+
+            void execute( action_t*, action_state_t* s ) override
+            {
+          residual_action::trigger( damage, s->target, s->result_amount * mul );
+            }
+      };
+
+      const auto driver    = new special_effect_t( this );
+      driver->name_str     = buff.t12_2p_melee->data().name_cstr();
+      driver->spell_id     = buff.t12_2p_melee->data().id();
+      driver->proc_flags2_ = PF2_ALL_HIT;
+      special_effects.push_back( driver );
+
+      new t12_2p_melee_cat_cb_t( this, *driver );
+    }
+
+    {
+      struct t12_2p_melee_bear_cb_t : public druid_cb_t
+      {
+            struct fiery_claws_t : public residual_action::residual_periodic_action_t<cat_attacks::cat_attack_t>
+            {
+          fiery_claws_t( druid_t* p ) : residual_action_t( "fiery_claws_bear", p, p->find_spell( 99002 ) )
+          {
+            proc = true;
+          }
+            };
+
+            action_t* damage;
+            double mul;
+
+            t12_2p_melee_bear_cb_t( druid_t* p, const special_effect_t& e )
+              : druid_cb_t( p, e ), mul( p->buff.t12_2p_melee->data().effectN( 1 ).percent() )
+            {
+          damage = p->get_secondary_action<fiery_claws_t>( "fiery_claws_bear" );
+            }
+
+            void trigger( action_t* a, action_state_t* s ) override
+            {
+          // Too lazy, but maul / mangle
+          if ( a->id == p()->spec.mangle_bear->id() || a->id == 6807 )
+          {
+            dbc_proc_callback_t::trigger( a, s );
+          }
+            }
+
+            void execute( action_t*, action_state_t* s ) override
+            {
+          residual_action::trigger( damage, s->target, s->result_amount * mul );
+            }
+      };
+
+      const auto driver    = new special_effect_t( this );
+      driver->name_str     = buff.t12_2p_melee->data().name_cstr();
+      driver->spell_id     = buff.t12_2p_melee->data().id();
+      driver->proc_flags2_ = PF2_ALL_HIT;
+      special_effects.push_back( driver );
+
+      new t12_2p_melee_bear_cb_t( this, *driver );
+    }
+  }
+
   // blanket proc callback initialization happens here. anything further needs to be individually initialized
   player_t::init_special_effects();
 }
@@ -5163,16 +5276,16 @@ void druid_t::invalidate_cache( cache_e c )
   switch ( c )
   {
     case CACHE_ATTACK_POWER:
-      if ( specialization() == DRUID_GUARDIAN || specialization() == DRUID_FERAL )
-        invalidate_cache( CACHE_SPELL_POWER );
+      //if ( specialization() == DRUID_GUARDIAN || specialization() == DRUID_FERAL )
+      //  invalidate_cache( CACHE_SPELL_POWER );
       break;
     case CACHE_SPELL_POWER:
       if ( specialization() == DRUID_BALANCE || specialization() == DRUID_RESTORATION )
         invalidate_cache( CACHE_ATTACK_POWER );
       break;
     case CACHE_CRIT_CHANCE:
-      if ( specialization() == DRUID_GUARDIAN )
-        invalidate_cache( CACHE_DODGE );
+      //if ( specialization() == DRUID_GUARDIAN )
+      //  invalidate_cache( CACHE_DODGE );
       break;
     case CACHE_SPIRIT:
       if ( specialization() == DRUID_BALANCE )
@@ -5191,12 +5304,12 @@ double druid_t::composite_player_multiplier( school_e school ) const
   return m;
 }
 
-double druid_t::composite_spell_hit_rating() const
+double druid_t::composite_spell_hit() const
 {
-  double r = player_t::composite_spell_hit_rating();
+  double r = player_t::composite_spell_hit();
   if ( talent.balance_of_power->ok() )
   {
-    auto gear_spi = composite_attribute( ATTR_SPIRIT) - base.stats.attribute[ATTR_SPIRIT];
+    auto gear_spi = composite_attribute( ATTR_SPIRIT ) - base.stats.attribute[ATTR_SPIRIT];
     gear_spi = std::max(gear_spi, 0.0);
     
     r += talent.balance_of_power->effectN( 2 ).percent() * gear_spi;
@@ -5264,15 +5377,17 @@ double druid_t::composite_crit_avoidance() const
   return c;
 }
 
-double druid_t::composite_dodge_rating() const
+double druid_t::composite_dodge() const
 {
-  double dr = player_t::composite_dodge_rating();
+  double dr = player_t::composite_dodge();
 
-  // Theres no effect listed for this??
+  // Dodge is in 24864/24867
   if (buff.bear_form->check() || buff.cat_form->check())
-    dr += talent.feral_swiftness.rank() * 2;
+    dr += talent.feral_swiftness.rank() * 0.02;
   if ( buff.bear_form->check() )
     dr += talent.natural_reaction->effectN(1).percent();
+  if ( buff.smokescreen->check() )
+    dr += buff.smokescreen->data().effectN( 1 ).percent();
   return dr;
 }
 

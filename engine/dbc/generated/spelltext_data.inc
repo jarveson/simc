@@ -1,5 +1,5 @@
 // Spell text, wow build 4.4.0.53627
-static const std::array<spelltext_data_t, 7601> __spelltext_data { {
+static const std::array<spelltext_data_t, 7607> __spelltext_data { {
   {     10, "Ice shards pelt the target area doing ${$42208m1*8*$<mult>} Frost damage over $10d.", "$42208s1 Frost damage every $42208t1 $lsecond:seconds;.", 0 },
   {     17, "Draws on the soul of the friendly target to shield them, absorbing $<shield> damage$?s55672[ and healing them for $55672s1% of the absorption amount][].  Lasts $d.  While the shield holds, spellcasting will not be interrupted by damage.  Once shielded, the target cannot be shielded again for $6788d.", "Absorbs $w1 damage.", 0 },
   {     53, "Backstab the target, causing $m2% weapon damage plus $m1 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.", 0, 0 },
@@ -6790,6 +6790,8 @@ static const std::array<spelltext_data_t, 7601> __spelltext_data { {
   {  89906, "Gain $s1% of your base mana over $d.", "Regaining ${$m1/10}% of your base mana per second.", 0 },
   {  89920, "Reduces the pushback suffered from damaging attacks while casting any Shaman spell by $s1%.", 0, 0 },
   {  89926, "Increases the damage of your Living Bomb spell by $s1%.", 0, 0 },
+  {  90162, "Increases the periodic damage done by your Rake and Lacerate abilities by $s1%.", 0, 0 },
+  {  90165, "Each time you use Mangle (Cat) you gain a $90166s1% increase to attack power for $90166d stacking up to $90166u times, and the duration of your Survival Instinct ability is increased by $s1%.", 0, 0 },
   {  90166, "Increases your attack power by $s1% for $d when you use Mangle (Cat).  Stacks up to $u times.", "Attack power increased by $s1%.", 0 },
   {  90286, "Increases the critical strike chance of Hammer of Wrath by $s2%, reduces the cooldown of Avenging Wrath by $/1000;s1 secs and allows the use of Hammer of Wrath at all times during Avenging Wrath.", 0, "Rank 2" },
   {  90309, "The devilsaur lets out a terrifying roar, increasing the critical strike chance of all party and raid members by $s1%.", "Increases critical strike chance by $s1%.", "Special Ability" },
@@ -7246,6 +7248,10 @@ static const std::array<spelltext_data_t, 7601> __spelltext_data { {
   {  98275, "Calls forth 3 Voodoo Gnomes to destroy your enemies.", 0, 0 },
   {  98397, "Your Frost Armor also causes you to regenerate $s1% of your maximum mana every 5 sec.", 0, 0 },
   {  98681, "See what's inside the box!", 0, 0 },
+  {  99001, "Your attacks with Mangle, Maul, and Shred deal $s1% additional damage as Fire damage over $99002d.", 0, 0 },
+  {  99002, "Your attacks with Mangle, Maul, and Shred cause your target to burn for an additional percentage of your attack's damage over $d.", "Deals Fire damage every $t1 sec.", 0 },
+  {  99009, "Your finishing moves have a 20% chance per combo point to extend the duration of Berserk by $s1 sec and when your Barkskin ability expires you gain an additional $99011s1% chance to dodge for $99011d.", 0, 0 },
+  {  99011, "Increases dodge chance by $s1% for $d after Barkskin expires.", "Dodge chance increased by $s1%.", 0 },
   {  99064, "Your spells have an increased chance to trigger Brain Freeze or Hot Streak.  In addition, Arcane Power decreases the cost of your damaging spells by 10% instead of increasing their cost.", 0, 0 },
   {  99245, 0, "You appear as a Druid of the Flame while in Cat Form.", 0 },
   {  99621, 0, "Agility increased by $s2.", 0 },

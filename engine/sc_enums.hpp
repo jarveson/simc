@@ -855,6 +855,7 @@ enum set_bonus_type_e
   T31,
 
   T11,
+  T12,
   T13,
 
   SET_BONUS_MAX

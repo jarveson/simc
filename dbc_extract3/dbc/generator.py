@@ -2275,9 +2275,18 @@ class SpellDataGenerator(DataGenerator):
         # Druid:
         ( 
           # Cataclysm
-          (  90166, 0), # 4pt11 Strength of the Panther
 
+          # remove me when sets are in db
+          (  90162, 0), # t11 set bonus
+          (  90165, 0), # t11 4p
+          (  99001, 0), # t12 2pc
+          (  99009, 0), # t12 4pc
+
+          (  90166, 0), # 4pt11 Strength of the Panther
           (  93402, 1, True ), # Sunfire
+          (  99002, 0), # T12 2p Fiery Claws
+          (  99011, 0), # T12 4p Smokescreen, barkskin dodge
+
           ( 106996, 1, True ), # Astral Storm
           ( 112071, 1, True ), # Celestial Alignment
           ( 122114, 1, True ), # Chosen of Elune
