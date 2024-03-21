@@ -9,4 +9,6 @@ static const std::array<item_set_bonus_t, 8> __set_bonus_data { {
   { "Lasherweave Battlegear"                    , "tier10"             ,     22,   889,   10,   4,  11,   -1,   70726, {  51701,  51700,  51699,  51698,  51697,  0 } },
   { "Stormrider's Battlegarb"                   , "tier11"             ,     23,   927,   11,   2,  11,   -1,   90162, {  60290,  60286,  60288,  60287,  60289,  0 } },
   { "Stormrider's Battlegarb"                   , "tier11"             ,     23,   927,   11,   4,  11,   -1,   90165, {  60290,  60286,  60288,  60287,  60289,  0 } },
+  { "Obsidian Arborweave Battlegarb"            , "tier12"             ,     24,  1002,   12,   2,  11,   -1,   99001, {  71097,  71098,  71099,  71100,  71101,  0 } },
+  { "Obsidian Arborweave Battlegarb"            , "tier12"             ,     24,  1002,   12,   4,  11,   -1,   99009, {  71097,  71098,  71099,  71100,  71101,  0 } },
 } };
