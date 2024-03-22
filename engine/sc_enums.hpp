@@ -854,6 +854,7 @@ enum set_bonus_type_e
   T30_MIGHT_OF_THE_DROGBAR,
   T31,
 
+  T10,
   T11,
   T12,
   T13,

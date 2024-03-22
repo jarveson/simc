@@ -2286,6 +2286,8 @@ class SpellDataGenerator(DataGenerator):
           (  93402, 1, True ), # Sunfire
           (  99002, 0), # T12 2p Fiery Claws
           (  99011, 0), # T12 4p Smokescreen, barkskin dodge
+          ( 105725, 0), # T13 2p
+          ( 105735, 0), # T13 4p
 
           ( 106996, 1, True ), # Astral Storm
           ( 112071, 1, True ), # Celestial Alignment
