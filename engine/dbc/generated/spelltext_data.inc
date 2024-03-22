@@ -1,5 +1,5 @@
 // Spell text, wow build 4.4.0.53627
-static const std::array<spelltext_data_t, 7607> __spelltext_data { {
+static const std::array<spelltext_data_t, 7609> __spelltext_data { {
   {     10, "Ice shards pelt the target area doing ${$42208m1*8*$<mult>} Frost damage over $10d.", "$42208s1 Frost damage every $42208t1 $lsecond:seconds;.", 0 },
   {     17, "Draws on the soul of the friendly target to shield them, absorbing $<shield> damage$?s55672[ and healing them for $55672s1% of the absorption amount][].  Lasts $d.  While the shield holds, spellcasting will not be interrupted by damage.  Once shielded, the target cannot be shielded again for $6788d.", "Absorbs $w1 damage.", 0 },
   {     53, "Backstab the target, causing $m2% weapon damage plus $m1 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.", 0, 0 },
@@ -7373,6 +7373,8 @@ static const std::array<spelltext_data_t, 7607> __spelltext_data { {
   { 105139, "Increases Strength by $s1 for $d.", "Increases Strength by $s1.", 0 },
   { 105140, "When you deal damage you have a chance to gain $105139s1 Strength for $105139d.", 0, 0 },
   { 105144, "Increases maximum health by $s1 for $d. Shares cooldown with other Battlemaster's trinkets.", "Health increased by $s1.", 0 },
+  { 105725, "While you have Pulverize active, your Mangle (Bear) critical strikes have a $s1% chance to trigger Savage Defense, and your Blood in the Water talent now causes Ferocious Bite to refresh the duration of your Rip on targets with $s2% or less health.", 0, 0 },
+  { 105735, "Frenzied Regeneration also affects all raid and party members.  This effect cannot be triggered if you have been in Bear Form for less than $s2 sec.  In addition, using Tiger's Fury will also trigger your Stampede talent as if you used Feral Charge (Cat).", 0, 0 },
   { 107785, "Deals $s1 fire damage.", 0, 0 },
   { 107786, "Your melee attacks have a chance to blast your enemy with Fire, Shadow, or Frost, dealing $107785s1 damage.", 0, 0 },
   { 107789, "Deals $s1 frost damage.", 0, 0 },

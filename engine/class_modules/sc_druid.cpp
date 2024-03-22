@@ -485,7 +485,7 @@ public:
     // Feral (Cat)
     gain_t* energy_refund;
     gain_t* primal_fury;
-    gain_t* tigers_tenacity;
+    gain_t* king_of_the_jungle;
 
     // Guardian (Bear)
     gain_t* bear_form;
@@ -2133,7 +2133,7 @@ public:
 
 using cat_finisher_t = cp_spender_t<>;
 
-// Berserk (Cat) ==============================================================
+// Berserk ==============================================================
 struct berserk_t : public cat_attack_t
 {
   buff_t* buff;
@@ -2580,7 +2580,12 @@ struct tigers_fury_t : public cat_attack_t
 
     if (p()->talent.king_of_the_jungle->ok())
     {
-      p()->resource_gain( RESOURCE_ENERGY, p()->talent.king_of_the_jungle->effectN( 2 ).base_value() );
+      p()->resource_gain( RESOURCE_ENERGY, p()->talent.king_of_the_jungle->effectN( 2 ).base_value(),
+                          p()->gain.king_of_the_jungle );
+    }
+    if ( p()->sets->has_set_bonus( DRUID_FERAL, T13, set_bonus_e::B4 ) )
+    {
+      p()->buff.stampede_cat->trigger();
     }
   }
 
@@ -4779,10 +4784,10 @@ void druid_t::create_buffs()
                                                      "strength_of_the_panther", find_spell( 90166 ) )
                                      ->add_invalidate( CACHE_ATTACK_POWER );
 
-  buff.t12_2p_melee = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T13, B2 ), this, "t12_2p_melee",
-                                          sets->set( DRUID_FERAL, T13, B2 ) );
-  buff.t12_4p_melee = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T13, B4 ), this, "t12_4p_melee",
-                                          sets->set( DRUID_FERAL, T13, B4 ) );
+  buff.t12_2p_melee = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T12, B2 ), this, "t12_2p_melee",
+                                          sets->set( DRUID_FERAL, T12, B2 ) );
+  buff.t12_4p_melee = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T12, B4 ), this, "t12_4p_melee",
+                                          sets->set( DRUID_FERAL, T12, B4 ) );
 
   buff.smokescreen = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T13, B4 ), this, "smokescreen", find_spell( 99011 ) )
           ->add_invalidate(CACHE_DODGE);
@@ -4992,7 +4997,10 @@ void druid_t::init_gains()
 
     gain.energy_refund       = get_gain( "Energy Refund" );
     gain.primal_fury         = get_gain( "Primal Fury" );
-    gain.tigers_tenacity     = get_gain( "Tiger's Tenacity" );
+    gain.king_of_the_jungle  = get_gain( "King of the Jungle" );
+
+    gain.lotp_hp   = get_gain( "Lotp Hp" );
+    gain.lotp_mana = get_gain( "Lotp Mana" );
 
     gain.bear_form           = get_gain( "Bear Form" );
     gain.rage_from_melees    = get_gain( "Rage from Melees" );
