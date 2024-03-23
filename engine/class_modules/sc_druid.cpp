@@ -4782,12 +4782,7 @@ void druid_t::create_buffs()
                                            find_spell( talent.stampede.rank() > 1 ? 81017 : 81016 ) )
                            ->apply_affecting_aura( glyphs.feral_charge );
 
-  buff.enrage        = make_buff( this, "enrage", find_class_spell( "Enrage" ) )
-                    ->set_default_value_from_effect_type( A_MOD_DAMAGE_PERCENT_TAKEN )
-                    ->set_tick_callback( [ this ]( buff_t*, int, timespan_t ) { 
-                        resource_gain( RESOURCE_RAGE, 1, gain.enrage );
-                    } );
-
+  buff.enrage        = make_buff( this, "enrage", find_class_spell( "Enrage" ) );
   buff.pulverize =
       make_buff_fallback( talent.pulverize.ok(), this, "pulverize", find_spell( "Pulverize" ) )
           ->set_duration( find_spell( "Pulverize" )->duration() + talent.endless_carnage->effectN( 2 ).time_value() );
@@ -5664,9 +5659,6 @@ void druid_t::target_mitigation( school_e school, result_amount_type type, actio
   s->result_amount *= 1.0 + buff.survival_instincts->value();
 
   s->result_amount *= 1.0 + talent.thick_hide->effectN( 1 ).percent();
-
-  if ( school == school_e::SCHOOL_PHYSICAL )
-    s->result_amount *= 1.0 + buff.enrage->value();
 
   player_t::target_mitigation( school, type, s );
 }
