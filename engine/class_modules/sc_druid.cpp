@@ -433,6 +433,7 @@ public:
     buff_t* leader_of_the_pack;
     buff_t* primal_fury_bear;
     buff_t* primal_fury_cat;
+    buff_t* primal_madness;
     buff_t* strength_of_the_panther; // 4pt11
     buff_t* t12_2p_melee;
     buff_t* t12_4p_melee;
@@ -1275,7 +1276,6 @@ public:
     // Guardian
     parse_effects( p()->buff.bear_form );
     parse_effects( p()->buff.stampede_bear );
-    parse_effects( p()->buff.enrage );
     //parse_effects( p()->buff.furious_regeneration );
 
     // Restoration
@@ -2115,7 +2115,8 @@ public:
     {
       if ( p()->buff.t12_4p_melee->trigger( 1, buff_t::DEFAULT_VALUE(), consumed / 5.0 ) )
       {
-        p()->buff.berserk->extend_duration( p(), p()->buff.t12_4p_melee->data().effectN( 1 ).time_value() * 1_s );
+        auto dur_ = timespan_t::from_seconds( p()->buff.t12_4p_melee->data().effectN( 1 ).base_value() );
+        p()->buff.berserk->extend_duration( p(), dur_ );
       }
     }
 
@@ -2140,6 +2141,7 @@ struct berserk_t : public cat_attack_t
 
   DRUID_ABILITY( berserk_t, cat_attack_t, "berserk", p->talent.berserk ), buff( p->buff.berserk )
   {
+    apply_affecting_aura(p->glyphs.berserk);
     harmful     = false;
     form_mask   = CAT_FORM | BEAR_FORM;
     use_off_gcd = true;
@@ -2157,6 +2159,11 @@ struct berserk_t : public cat_attack_t
         {
             p()->resource_gain( RESOURCE_RAGE, p()->talent.primal_madness->effectN( 1 ).resource( RESOURCE_RAGE ),
                                 p()->gain.primal_madness );
+        }
+        else
+        {
+            p()->buff.primal_madness->modify_duration( data().duration() );
+            p()->buff.primal_madness->trigger();
         }
     }
   }
@@ -2565,6 +2572,8 @@ struct tigers_fury_t : public cat_attack_t
 {
   DRUID_ABILITY( tigers_fury_t, cat_attack_t, "tigers_fury", p->find_class_spell( "Tiger's Fury" ) )
   {
+    apply_affecting_aura( p->glyphs.tigers_fury );
+
     harmful = false;
     energize_type = action_energize::ON_CAST;
     track_cd_waste = true;
@@ -2586,6 +2595,12 @@ struct tigers_fury_t : public cat_attack_t
     if ( p()->sets->has_set_bonus( DRUID_FERAL, T13, set_bonus_e::B4 ) )
     {
       p()->buff.stampede_cat->trigger();
+    }
+
+    if ( p()->talent.primal_madness.ok() )
+    {
+      p()->buff.primal_madness->modify_duration( data().duration() );
+      p()->buff.primal_madness->trigger();
     }
   }
 
@@ -4761,7 +4776,11 @@ void druid_t::create_buffs()
 
   buff.stampede_bear = make_buff_fallback( talent.stampede.ok(), this, "stampede_bear",
                                            find_spell( talent.stampede.rank() > 1 ? 81017 : 81016 ) );
-  buff.enrage        = make_buff( this, "enrage", find_class_spell( "Enrage" ) );
+  buff.enrage        = make_buff( this, "enrage", find_class_spell( "Enrage" ) )
+                    ->set_default_value_from_effect_type( A_MOD_DAMAGE_PERCENT_TAKEN )
+                    ->set_tick_callback( [ this ]( buff_t*, int, timespan_t ) { 
+                        resource_gain( RESOURCE_RAGE, 1, gain.enrage );
+                    } );
 
   buff.pulverize =
       make_buff_fallback( talent.pulverize.ok(), this, "pulverize", find_spell( "Pulverize" ) )
@@ -4779,6 +4798,10 @@ void druid_t::create_buffs()
 
   buff.savage_defense = make_buff_fallback<savage_defense_buff_t>( find_spell( 62600 ), this, "savage_defense" )
                             ->set_chance( find_spell( 62600 )->effectN( 2 ).base_value() );
+
+  buff.primal_madness =
+      make_buff_fallback( talent.primal_madness.ok(), this, "primal_madness",
+                          talent.primal_madness.rank() == 2 ? find_spell( 80879 ) : find_spell( 80886 ) );
 
   buff.strength_of_the_panther = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T11, B4 ), this,
                                                      "strength_of_the_panther", find_spell( 90166 ) )
@@ -5635,6 +5658,9 @@ void druid_t::target_mitigation( school_e school, result_amount_type type, actio
   s->result_amount *= 1.0 + buff.survival_instincts->value();
 
   s->result_amount *= 1.0 + talent.thick_hide->effectN( 1 ).percent();
+
+  if ( school == school_e::SCHOOL_PHYSICAL )
+    s->result_amount *= 1.0 + buff.enrage->value();
 
   player_t::target_mitigation( school, type, s );
 }
