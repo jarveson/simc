@@ -487,11 +487,13 @@ public:
     gain_t* energy_refund;
     gain_t* primal_fury;
     gain_t* king_of_the_jungle;
+    gain_t* primal_madness_energy;
+    gain_t* primal_madness_energy_expiry;
 
     // Guardian (Bear)
     gain_t* bear_form;
     gain_t* rage_from_melees;
-    gain_t* primal_madness;
+    gain_t* primal_madness_rage;
     gain_t* enrage;
   } gain;
 
@@ -1108,6 +1110,38 @@ struct moonkin_form_buff_t : public druid_buff_t
     add_invalidate( CACHE_SPELL_HASTE );
   }
 };
+
+
+struct primal_madness_buff_t : public druid_buff_t
+{
+  primal_madness_buff_t( druid_t* p )
+    : druid_buff_t( p, "primal_madness",
+                    p->talent.primal_madness.rank() == 2   ? p->find_spell( 80879 )
+                    : p->talent.primal_madness.rank() == 1 ? p->find_spell( 80886 )
+                                                           : p->talent.primal_madness )
+  {
+    set_cooldown( timespan_t::zero() );
+  }
+
+  void start( int stacks, double value, timespan_t duration ) override
+  {
+    buff_t::start( stacks, value, duration );
+
+    p()->resources.temporary[ RESOURCE_ENERGY ] += data()
+                                                       .effectN( 1 )
+                                                       .base_value();
+    p()->recalculate_resource_max( RESOURCE_ENERGY );
+  }
+
+  void expire_override( int expiration_stacks, timespan_t remaining_duration ) override
+  {
+    buff_t::expire_override( expiration_stacks, remaining_duration );
+
+    p()->resources.temporary[ RESOURCE_ENERGY ] -= data().effectN( 1 ).base_value();
+    p()->recalculate_resource_max( RESOURCE_ENERGY, p()->gain.primal_madness_energy_expiry );
+  }
+};
+
 }  // end namespace buffs
 
 // Template for common druid action code. See priest_action_t.
@@ -2158,7 +2192,7 @@ struct berserk_t : public cat_attack_t
         if ( p()->buff.bear_form->check() )
         {
             p()->resource_gain( RESOURCE_RAGE, p()->talent.primal_madness->effectN( 1 ).resource( RESOURCE_RAGE ),
-                                p()->gain.primal_madness );
+                                p()->gain.primal_madness_rage );
         }
         else
         {
@@ -2822,7 +2856,7 @@ struct enrage_t : public bear_attack_t
     if ( p()->talent.primal_madness->ok() )
     {
       p()->resource_gain( RESOURCE_RAGE, p()->talent.primal_madness->effectN( 1 ).resource( RESOURCE_RAGE ),
-                          p()->gain.primal_madness ); 
+                          p()->gain.primal_madness_rage ); 
     }
   }
 };
@@ -4801,8 +4835,7 @@ void druid_t::create_buffs()
                             ->set_chance( find_spell( 62600 )->effectN( 2 ).base_value() );
 
   buff.primal_madness =
-      make_buff_fallback( talent.primal_madness.ok(), this, "primal_madness",
-                          talent.primal_madness.rank() == 2 ? find_spell( 80879 ) : find_spell( 80886 ) );
+      make_buff_fallback<primal_madness_buff_t>( talent.primal_madness.ok(), this, "primal_madness" );
 
   buff.strength_of_the_panther = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T11, B4 ), this,
                                                      "strength_of_the_panther", find_spell( 90166 ) )
@@ -5019,16 +5052,17 @@ void druid_t::init_gains()
     gain.natures_balance     = get_gain( "Natures Balance" );
     gain.stellar_innervation = get_gain( "Stellar Innervation" );
 
-    gain.energy_refund       = get_gain( "Energy Refund" );
-    gain.primal_fury         = get_gain( "Primal Fury" );
-    gain.king_of_the_jungle  = get_gain( "King of the Jungle" );
+    gain.energy_refund                = get_gain( "Energy Refund" );
+    gain.primal_fury                  = get_gain( "Primal Fury" );
+    gain.king_of_the_jungle           = get_gain( "King of the Jungle" );
+    gain.primal_madness_energy_expiry = get_gain( "Primal Madness Energy (Expiry)" );
 
     gain.lotp_hp   = get_gain( "Lotp Hp" );
     gain.lotp_mana = get_gain( "Lotp Mana" );
 
     gain.bear_form           = get_gain( "Bear Form" );
     gain.rage_from_melees    = get_gain( "Rage from Melees" );
-    gain.primal_madness      = get_gain( "Primal Madness" );
+    gain.primal_madness_rage = get_gain( "Primal Madness Rage" );
     gain.enrage              = get_gain( "Enrage" );
   
     // Multi-spec
