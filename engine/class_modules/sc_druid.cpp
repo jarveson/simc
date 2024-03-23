@@ -2442,6 +2442,7 @@ struct rip_t : public cat_finisher_t
 {
   DRUID_ABILITY( rip_t, base_t, "rip", p->find_class_spell( "Rip" ) )
   {
+    apply_affecting_aura( p->glyphs.rip );
     dot_name = "rip";
     may_crit = false;
   }
@@ -2914,7 +2915,9 @@ struct lacerate_t : public bear_attack_t
     }
   };
 
-  DRUID_ABILITY( lacerate_t, bear_attack_t, "lacerate", p->find_class_spell( "Lacerate" ) ) {}
+  DRUID_ABILITY( lacerate_t, bear_attack_t, "lacerate", p->find_class_spell( "Lacerate" ) ) {
+    apply_affecting_aura(p->glyphs.lacerate);
+  }
 };
 } // end namespace bear_attacks
 
@@ -3482,7 +3485,7 @@ struct insect_swarm_t : public druid_spell_t
 {
   DRUID_ABILITY(insect_swarm_t, druid_spell_t, "insect_swarm", p->find_class_spell("Insect Swarm"))
   {
-    apply_affecting_aura( p->glyphs.insect_swarm.spell() );
+    apply_affecting_aura( p->glyphs.insect_swarm );
     may_crit = false;
   }
 
@@ -4772,10 +4775,13 @@ void druid_t::create_buffs()
 
   buff.stampede_cat = make_buff_fallback( talent.stampede.ok(), this, "stampede_cat",
                                           find_spell( talent.stampede.rank() > 1 ? 81022 : 81021 ) )
-                          ->set_default_value_from_effect( 2 );
+                          ->set_default_value_from_effect( 2 )
+                          ->apply_affecting_aura(glyphs.feral_charge);
 
   buff.stampede_bear = make_buff_fallback( talent.stampede.ok(), this, "stampede_bear",
-                                           find_spell( talent.stampede.rank() > 1 ? 81017 : 81016 ) );
+                                           find_spell( talent.stampede.rank() > 1 ? 81017 : 81016 ) )
+                           ->apply_affecting_aura( glyphs.feral_charge );
+
   buff.enrage        = make_buff( this, "enrage", find_class_spell( "Enrage" ) )
                     ->set_default_value_from_effect_type( A_MOD_DAMAGE_PERCENT_TAKEN )
                     ->set_tick_callback( [ this ]( buff_t*, int, timespan_t ) { 
