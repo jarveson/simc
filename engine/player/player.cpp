@@ -3160,6 +3160,7 @@ void player_t::init_spells()
   racials.mountaineer           = find_racial_spell( "Mountaineer" );
   racials.brush_it_off          = find_racial_spell( "Brush It Off" );
   racials.awakened              = find_racial_spell( "Awakened" );
+  racials.beast_slaying         = find_racial_spell( "Beast Slaying" );
 
   if ( is_player() )
   {
@@ -4992,6 +4993,9 @@ double player_t::composite_player_target_multiplier( player_t* target, school_e 
     // stat buffs.
     m *= 1.0 + buffs.demon_damage_buff->data().effectN( 2 ).percent();
   }
+
+  if ( target->race == RACE_BEAST )
+    m *= 1.0 + racials.beast_slaying->effectN(1).percent();
 
   if ( target->race == RACE_ABERRATION && buffs.damage_to_aberrations && buffs.damage_to_aberrations->check() )
     m *= 1.0 + buffs.damage_to_aberrations->stack_value();
