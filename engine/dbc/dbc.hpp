@@ -368,6 +368,8 @@ public:
   double get_armor_constant_mod( difficulty_e diff ) const;
   double npc_armor_value( unsigned level ) const;
 
+  double mana_per_intellect_by_class( player_e t ) const;
+
   double ranged_ap_per_agi( player_e t ) const;
   double ap_per_agi( player_e t ) const;
   double ap_per_str( player_e t ) const;

@@ -1287,6 +1287,11 @@ double dbc_t::health_per_stamina( unsigned level ) const
   return __gt_octhp_per_stamina[ level ];
 }
 
+double dbc_t::mana_per_intellect_by_class(player_e t) const {
+  uint32_t class_id = util::class_id( t );
+  assert( class_id < MAX_CLASS );
+  return __mana_per_intellect_by_class[class_id];
+}
 
 const stat_data_t& dbc_t::attribute_base( player_e t, unsigned level ) const
 {

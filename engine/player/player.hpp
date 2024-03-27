@@ -217,6 +217,7 @@ struct player_t : public actor_t
     double attack_power_per_strength, attack_power_per_agility, attack_crit_per_agility, attack_power_per_spell_power;
     double dodge_per_agility, parry_per_strength;
     double health_per_stamina;
+    double mana_per_intellect;
     std::array<double, SCHOOL_MAX> resource_reduction;
     double miss, dodge, parry, block;
     double hit, expertise;

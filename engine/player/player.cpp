@@ -1353,6 +1353,7 @@ player_t::base_initial_current_t::base_initial_current_t() :
   dodge_per_agility( 0 ),
   parry_per_strength( 0 ),
   health_per_stamina( 0 ),
+  mana_per_intellect(0),
   resource_reduction(),
   miss( 0 ),
   dodge( 0 ),
@@ -1396,6 +1397,7 @@ void sc_format_to( const player_t::base_initial_current_t& s, fmt::format_contex
   fmt::format_to( out, " dodge_per_agility={}", s.dodge_per_agility );
   fmt::format_to( out, " parry_per_strength={}", s.parry_per_strength );
   fmt::format_to( out, " health_per_stamina={}", s.health_per_stamina );
+  fmt::format_to( out, " mana_per_intellect={}", s.mana_per_intellect );
   // resource_reduction
   fmt::format_to( out, " miss={}", s.miss );
   fmt::format_to( out, " dodge={}", s.dodge );
@@ -1570,6 +1572,7 @@ void player_t::init_base_stats()
     }
 
     base.health_per_stamina = dbc->health_per_stamina( level() );
+    base.mana_per_intellect = dbc->mana_per_intellect_by_class( type );
 
     // players have a base 7.5% hit/exp
     //base.hit       = 0.075;
@@ -2191,6 +2194,9 @@ double compute_max_resource( player_t* p, resource_e r )
   // re-ordered 2016-06-19 by Theck - initial_multiplier should do something for RESOURCE_HEALTH
   if ( r == RESOURCE_HEALTH )
     value += std::floor( p->stamina() ) * p->current.health_per_stamina;
+
+  if ( r == RESOURCE_MANA )
+    value += std::floor( p->intellect() * p->current.mana_per_intellect);
 
   value *= p->resources.initial_multiplier[ r ];
   value = std::floor( value );
