@@ -1309,7 +1309,7 @@ const stat_data_t& dbc_t::attribute_base( pet_e t, unsigned level ) const
 
 double dbc_t::combat_rating( unsigned combat_rating_id, unsigned level ) const
 {
-  if ( combat_rating_id > RATING_SPELL_HASTE )
+  if ( combat_rating_id > RATING_MASTERY )
       return 0;
   //assert( combat_rating_id < RATING_MAX );
   assert( level <= MAX_SCALING_LEVEL );

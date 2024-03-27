@@ -1001,7 +1001,7 @@ struct savage_defense_buff_t : public druid_absorb_buff_t
   {
     double amount = v * attack_power() * coeff;
     if ( p()->specialization() == DRUID_FERAL )
-      amount *= 1.0 + ( p()->mastery.savage_defender->effectN( 1 ).percent() * p()->composite_mastery() );
+      amount *= 1.0 + ( p()->mastery.savage_defender->effectN( 1 ).mastery_value() * p()->composite_mastery() );
     return base_t::trigger( s, amount, c, d );
   }
 };
@@ -1829,7 +1829,7 @@ struct druid_heal_t : public druid_spell_base_t<heal_t>
 
     if ( s->result_type == result_amount_type::HEAL_DIRECT )
     {
-      p()->buff.harmony->trigger(1, p()->mastery.harmony->effectN(1).percent() * p()->composite_mastery());
+      p()->buff.harmony->trigger(1, p()->mastery.harmony->effectN(1).mastery_value() * p()->composite_mastery());
     }
   }
 
@@ -2379,7 +2379,7 @@ struct rake_t : public cat_attack_t
   {
     auto da = base_t::composite_ta_multiplier( s );
     if ( p()->specialization() == DRUID_FERAL )
-      da *= 1.0 + p()->mastery.razor_claws->effectN( 1 ).m_coefficient() * 0.01 * p()->composite_mastery();
+      da *= 1.0 + p()->mastery.razor_claws->effectN( 1 ).mastery_value() * p()->composite_mastery();
     return da;
   }
 };
@@ -2406,7 +2406,7 @@ struct pounce_t : public cat_attack_t
     {
       auto da = base_t::composite_ta_multiplier( s );
       if ( p()->specialization() == DRUID_FERAL )
-        da *= 1.0 + p()->mastery.razor_claws->effectN( 1 ).m_coefficient() * 0.01 * p()->composite_mastery();
+        da *= 1.0 + p()->mastery.razor_claws->effectN( 1 ).mastery_value() * p()->composite_mastery();
       return da;
     }
   };
@@ -2493,7 +2493,7 @@ struct rip_t : public cat_finisher_t
   {
     auto da = base_t::composite_ta_multiplier( s );
     if ( p()->specialization() == DRUID_FERAL )
-        da *= 1.0 + p()->mastery.razor_claws->effectN( 1 ).m_coefficient() * 0.01 * p()->composite_mastery();
+        da *= 1.0 + p()->mastery.razor_claws->effectN( 1 ).mastery_value() * p()->composite_mastery();
     return da;
   }
 

@@ -427,7 +427,7 @@ elif options.type == 'scale':
         sys.exit(1)
     g.generate()
 
-    g = CSVDataGenerator(options, {
+    '''g = CSVDataGenerator(options, {
         'file': 'octclasscombatratingscalar.txt',
         'comment': '// Class Combat Rating Scalar, wow build %s\n' % (options.build),
         'values': DataGenerator._class_names,
@@ -435,16 +435,15 @@ elif options.type == 'scale':
     })
     if not g.initialize():
         sys.exit(1)
-    g.generate()
+    g.generate()'''
 
     args = {
         'file': 'CombatRatings.txt',
         'comment': '// Combat rating values for level 1 - %d, wow build %s\n' % (
             options.level, options.build),
-        'values': [ 'dodge', 'parry', 'block', 'hit melee', 'hit ranged', 
-                    'hit spell', 'crit melee', 'crit ranged', 'crit spell',
-                    'crit taken melee', 'weapon skill', 'haste melee', 'haste ranged',
-                    'haste spell']
+        'simple_reader': True,
+        'key': 0,
+        'values': [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 27, 27, 18, 19, 20, 24, 26 ]
     }
 
     if options.build >= dbc.WowVersion(8, 3, 0, 0):
