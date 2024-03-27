@@ -149,6 +149,7 @@ struct player_t : public actor_t
   std::string region_str, server_str, origin_str;
   std::string race_str, professions_str, position_str;
   std::string class_talents_str, spec_talents_str;
+  std::string glyphs_str;
   enum timeofday_e { NIGHT_TIME, DAY_TIME, } timeofday; // Specify InGame time of day to determine Night Elf racial
   enum zandalari_loa_e {AKUNDA, BWONSAMDI, GONK, KIMBUL, KRAGWA, PAKU} zandalari_loa; //Specify which loa zandalari has chosen to determine racial
   enum vulpera_tricks_e { CORROSIVE, FLAMES, SHADOWS, HEALING, HOLY } vulpera_tricks; //Specify which trick to use for vulpera bag of tricks
@@ -847,6 +848,7 @@ public:
   void create_talents_numbers();
   void create_talents_armory();
   void create_talents_blizzard();
+  void create_glyphs_str();
   void clear_action_priority_lists() const;
   void copy_action_priority_list( util::string_view old_list, util::string_view new_list );
   void change_position( position_e );
@@ -1230,7 +1232,7 @@ public:
   virtual std::unique_ptr<expr_t> create_resource_expression( util::string_view expression_str );
 
   virtual void create_options();
-  void recreate_talent_str( talent_format format = talent_format::BLIZZARD );
+  void recreate_talent_str( talent_format format = talent_format::WOWHEAD );
   virtual std::string create_profile( save_e = SAVE_ALL );
 
   virtual void copy_from( player_t* source );

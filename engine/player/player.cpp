@@ -611,6 +611,7 @@ bool parse_talent_url( sim_t* sim, util::string_view name, util::string_view url
   {
     if ( sim->talent_input_format == talent_format::UNCHANGED )
         sim->talent_input_format = talent_format::WOWHEAD;
+    parse_wowhead_talents(p->talents_str, p);
     return true;
   }
 
@@ -2792,7 +2793,7 @@ static void parse_wowhead_talents( const std::string& talents_str, player_t* pla
                         msg.empty() ? "" : ": ", msg );
   };
 
-  auto glyph_split = talents_str.find( '_' );
+  auto glyph_split = talents_str.find( '_0' );
   std::string glyph_part = "";
   std::string tlt_part   = talents_str;
   if (glyph_split != std::string::npos) { 
@@ -2803,9 +2804,9 @@ static void parse_wowhead_talents( const std::string& talents_str, player_t* pla
   size_t pos = 0;
   size_t last = 0;
   std::vector<std::string> tokens;
-  while ( ( pos = talents_str.find( '-', last ) ) != std::string::npos )
+  while ( ( pos = tlt_part.find( '-', last ) ) != std::string::npos )
   {
-      tokens.emplace_back( talents_str.substr( last, pos - last ) );
+      tokens.emplace_back( tlt_part.substr( last, pos - last ) );
       last = pos + 1;
   }
 
@@ -2839,7 +2840,34 @@ static void parse_wowhead_talents( const std::string& talents_str, player_t* pla
             break;
       }
   }
-  player->create_talents_numbers();
+  //player->create_talents_numbers();
+
+  // parse out glyphs
+  if (glyph_split == std::string::npos) {
+      return;
+  }
+
+  player->player_glyphs.clear();
+
+  static std::array<char, 32> lut = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f',
+                                         'g', 'h', 'j', 'k', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z' };
+  
+
+  // Should be in lengths of 5
+  assert( (glyph_part.length() % 5) == 0);
+  for ( size_t i = 0; i < glyph_part.length(); i += 5) {
+      // first char is index, dont really care about it, wowhead seems to always order them anyway
+      size_t spellId = 0;
+      for (size_t j = 1; j < 5; ++j ) {
+        auto it = range::find( lut, glyph_part[i] );
+        if (it == lut.end())
+            continue;
+        spellId += ((uint64_t)*it) << ( 5 * (4 - j) );
+      }
+      player->player_glyphs.push_back(spellId);
+  }
+
+  player->create_glyphs_str();
 }
 
 static void parse_traits_hash( const std::string& talents_str, player_t* player )
@@ -10658,14 +10686,35 @@ void player_t::create_talents_numbers()
   talents_str.clear();
 
   for (int t = 0; t < MAX_TALENT_TREES; t++) { 
+    bool has_selection = false;
+    std::string tree_str;
     for ( int j = 0; j < MAX_TALENT_COLS; j++ )
     {
       for ( int k = 0; k < MAX_TALENT_ROWS; ++k )
       {
-        talents_str += util::to_string( talent_points->choice( t, j, k ) + 1 );
+        int choice = talent_points->choice( t, j, k ) + 1;
+        if (choice > 0)
+            has_selection = true;
+        tree_str += util::to_string( choice );
       }
     }
+    if (has_selection)
+      talents_str += tree_str;
+    talents_str += "-";
   }
+}
+
+void player_t::create_glyphs_str()
+{
+    glyphs_str.clear();
+    bool first = true;
+    for (const auto& g : player_glyphs) {
+        if (!first)
+            glyphs_str += "/";
+        else
+            first = false;
+        glyphs_str += util::to_string(g);
+    }
 }
 
 static bool parse_min_gcd( sim_t* sim, util::string_view name, util::string_view value )
@@ -12272,6 +12321,7 @@ void player_t::recreate_talent_str( talent_format format )
       create_talents_armory();
       break;
     case talent_format::WOWHEAD:
+      create_talents_numbers();
       break;
     default:
       create_talents_blizzard();
@@ -12344,6 +12394,10 @@ std::string player_t::create_profile( save_e stype )
     {
       recreate_talent_str( sim->talent_input_format );
       profile_str += "talents=" + talents_str + term;
+    }
+
+    if (!glyphs_str.empty()) {
+      profile_str += "glyphs=" + glyphs_str + term;
     }
 
     if ( !class_talents_str.empty() )
@@ -12662,8 +12716,9 @@ void player_t::copy_from( player_t* source )
   base.distance     = source->base.distance;
   position_str      = source->position_str;
   professions_str   = source->professions_str;
-  this->recreate_talent_str( talent_format::UNCHANGED );
+  this->recreate_talent_str( talent_format::WOWHEAD );
   parse_talent_url( sim, "talents", source->talents_str );
+  glyphs_str        = source->glyphs_str;
   class_talents_str = source->class_talents_str;
   spec_talents_str  = source->spec_talents_str;
   player_traits     = source->player_traits;
@@ -12738,6 +12793,7 @@ void player_t::create_options()
   add_option( opt_string( "id", id_str ) );
   add_option( opt_func( "talents", parse_talent_url ) );
   add_option( opt_func( "talent_override", parse_talent_override ) );
+  add_option( opt_string( "glyphs", glyphs_str ) );
   add_option( opt_string( "race", race_str ) );
   add_option( opt_func( "timeofday", parse_timeofday ) );
   add_option( opt_func( "zandalari_loa", parse_loa ) );
