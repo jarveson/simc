@@ -223,7 +223,8 @@
     "fields": [
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_000"
+        "field": "id_item",
+        "ref": "Item"
       },
       {
         "data_type": "i",
@@ -231,7 +232,8 @@
       },
       {
         "data_type": "i",
-        "field": "field_4_4_0_53627_002"
+        "field": "id_player_condition",
+        "ref": "PlayerCondition"
       },
       {
         "data_type": "i",
@@ -3464,7 +3466,7 @@
       },
       {
         "data_type": "i",
-        "field": "field_1_14_1_40666_003"
+        "field": "service_type"
       },
       {
         "data_type": "i",
@@ -4365,7 +4367,7 @@
         "formats": {
           "cpp:": "%ff"
         },
-        "field": "field_10_2_0_51825_004"
+        "field": "barber_shop_camera_zoom_offset"
       }
     ]
   },
@@ -17264,17 +17266,17 @@
       },
       {
         "data_type": "I",
-        "field": "epic",
+        "field": "epic_points",
         "elements": 5
       },
       {
         "data_type": "I",
-        "field": "superior",
+        "field": "rare_points",
         "elements": 5
       },
       {
         "data_type": "I",
-        "field": "good",
+        "field": "uncm_points",
         "elements": 5
       }
     ]
@@ -22126,7 +22128,7 @@
       },
       {
         "data_type": "i",
-        "field": "pet_talent_mask"
+        "field": "field_4_4_0_53627_004"
       },
       {
         "data_type": "i",
@@ -23369,11 +23371,11 @@
     "fields": [
       {
         "data_type": "S",
-        "field": "field_10_1_0_48480_000_lang"
+        "field": "callout_text_lang"
       },
       {
         "data_type": "S",
-        "field": "field_10_1_0_48480_001"
+        "field": "callout_frame"
       },
       {
         "data_type": "i",
@@ -23381,11 +23383,11 @@
       },
       {
         "data_type": "B",
-        "field": "field_10_1_0_48480_003"
+        "field": "type"
       },
       {
         "data_type": "B",
-        "field": "field_10_1_0_48480_004"
+        "field": "direction"
       },
       {
         "data_type": "i",
@@ -23393,15 +23395,16 @@
       },
       {
         "data_type": "i",
-        "field": "field_10_1_0_48480_006"
+        "field": "id_ui_widget_set",
+        "ref": "UiWidgetSet"
       },
       {
         "data_type": "i",
-        "field": "field_10_1_0_48480_007"
+        "field": "offset_x"
       },
       {
         "data_type": "i",
-        "field": "field_10_1_0_48480_008"
+        "field": "offset_y"
       }
     ]
   },
