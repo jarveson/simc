@@ -2092,9 +2092,11 @@ void player_t::init_weapon( weapon_t& w )
     return;
 
   if ( w.slot == SLOT_MAIN_HAND )
-    assert( w.type >= WEAPON_NONE && w.type < WEAPON_RANGED );
+    assert( w.type >= WEAPON_NONE && w.type < WEAPON_2H );
   if ( w.slot == SLOT_OFF_HAND )
     assert( w.type >= WEAPON_NONE && w.type < WEAPON_2H );
+  if ( w.slot == SLOT_RANGED )
+    assert( w.type >= WEAPON_BOW && w.type < WEAPON_RANGED );
 }
 
 void player_t::create_special_effects()
@@ -4479,11 +4481,55 @@ double player_t::composite_melee_crit_chance() const
   return ac;
 }
 
-double player_t::composite_melee_expertise( const weapon_t* ) const
+double player_t::composite_melee_expertise( const weapon_t* w) const
 {
   double e = current.expertise;
 
   e += composite_expertise_rating() / current.rating.expertise;
+
+  if (w) {
+      if (race == RACE_ORC) {
+          switch ( w->type )
+          {
+            case WEAPON_AXE:
+            case WEAPON_AXE_2H:
+            case WEAPON_FIST:
+              e += 0.03;
+              break;
+          }
+      }
+      else if (race == RACE_HUMAN) {
+          switch ( w->type )
+          {
+            case WEAPON_MACE:
+            case WEAPON_MACE_2H:
+            case WEAPON_SWORD:
+            case WEAPON_SWORD_2H:
+              e += 0.03;
+              break;
+          }
+      }
+      else if ( race == RACE_DWARF )
+      {
+          switch ( w->type )
+          {
+            case WEAPON_MACE:
+            case WEAPON_MACE_2H:
+              e += 0.03;
+              break;
+          }
+      }
+      else if ( race == RACE_GNOME )
+      {
+          switch ( w->type )
+          {
+            case WEAPON_DAGGER:
+            case WEAPON_SWORD:
+              e += 0.03;
+              break;
+          }
+      }
+  }
 
   return e;
 }
