@@ -717,6 +717,7 @@ public:
   void datacollection_end() override;
   timespan_t available() const override;
   double composite_attack_power_multiplier() const override;
+  double composite_melee_attack_power() const override;
   double composite_player_multiplier(school_e school) const override;
   double composite_armor_multiplier() const override;
   double composite_melee_crit_chance() const override;
@@ -4567,7 +4568,6 @@ void druid_t::init_spells()
   // Passive Auras
   spec.leather_specialization   = find_specialization_spell( "Leather Specialization" );
 
-  // todo: ap bonus?
   spec.cat_form_passive = find_spell( 3025 );
   spec.bear_form_passive = find_spell( 1178 );
 
@@ -5395,8 +5395,16 @@ double druid_t::composite_attack_power_multiplier() const
     ap *= 1.0 + spec.aggression->effectN(1).percent();
 
   if ( buff.strength_of_the_panther->check() )
-    ap *= 1.0 + buff.strength_of_the_panther->current_stack;
+    ap *= 1.0 + (buff.strength_of_the_panther->current_stack / 100);
 
+  return ap;
+}
+
+double druid_t::composite_melee_attack_power() const
+{
+  double ap = player_t::composite_melee_attack_power();
+  if ( buff.cat_form->check() )
+    ap += player_t::agility();
   return ap;
 }
 
