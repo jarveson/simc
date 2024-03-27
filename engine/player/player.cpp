@@ -1534,10 +1534,6 @@ void player_t::init_base_stats()
         dbc->race_base( race ).intellect + dbc->attribute_base( type, level() ).intellect;
     base.stats.attribute[ STAT_SPIRIT ] = dbc->race_base( race ).spirit + dbc->attribute_base( type, level() ).spirit;
 
-    // heroic presence is treated like base stats, floored before adding in; tested 2014-07-20
-    base.stats.attribute[ STAT_STRENGTH ] += util::floor( racials.heroic_presence->effectN( 1 ).average( this ) );
-    base.stats.attribute[ STAT_AGILITY ] += util::floor( racials.heroic_presence->effectN( 2 ).average( this ) );
-    base.stats.attribute[ STAT_INTELLECT ] += util::floor( racials.heroic_presence->effectN( 3 ).average( this ) );
     // Endurance seems to be using ceiling
     base.stats.attribute[ STAT_STAMINA ] += util::ceil( racials.endurance->effectN( 1 ).average( this ) );
 
@@ -1651,7 +1647,7 @@ void player_t::init_base_stats()
   }
 
   // Expansive Mind
-  for ( auto& r : { RESOURCE_MANA, RESOURCE_RAGE, RESOURCE_ENERGY, RESOURCE_RUNIC_POWER, RESOURCE_FOCUS} )
+  for ( auto& r : { RESOURCE_MANA } )
   {
     resources.base_multiplier[ r ] *= 1.0 + racials.expansive_mind->effectN( 1 ).percent();
   }
@@ -4312,7 +4308,6 @@ double player_t::composite_melee_haste() const
       h *= 1.0 / ( 1.0 + buffs.berserking->data().effectN( 1 ).percent() );
 
     h *= 1.0 / ( 1.0 + racials.nimble_fingers->effectN( 1 ).percent() );
-    h *= 1.0 / ( 1.0 + racials.time_is_money->effectN( 1 ).percent() );
 
     if ( timeofday == NIGHT_TIME )
       h *= 1.0 / ( 1.0 + racials.touch_of_elune->effectN( 1 ).percent() );
@@ -4339,6 +4334,8 @@ double player_t::composite_melee_speed() const
 
   if (sim->auras.melee_attack_speed && sim->auras.melee_attack_speed->check())
     h *= 1.0 / ( 1.0 + sim->auras.melee_attack_speed->check_value() );
+
+  h *= 1.0 / ( 1.0 + racials.time_is_money->effectN( 1 ).percent() );
 
   return h;
 }
@@ -4489,6 +4486,8 @@ double player_t::composite_melee_hit() const
   double ah = current.hit;
 
   ah += composite_melee_hit_rating() / current.rating.attack_hit;
+
+  ah += racials.heroic_presence->effectN(1).percent();
 
   return ah;
 }
@@ -4804,7 +4803,7 @@ double player_t::composite_spell_hit() const
 
   sh += composite_spell_hit_rating() / current.rating.spell_hit;
 
-  //sh += composite_melee_expertise();
+  sh += racials.heroic_presence->effectN( 1 ).percent();
 
   return sh;
 }
