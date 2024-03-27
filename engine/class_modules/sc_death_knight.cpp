@@ -11347,7 +11347,9 @@ struct death_knight_module_t : public module_t {
       .verification_value( 70 );
   }*/
   
-  void init( player_t* ) const override {}
+  void init( player_t* p) const override {
+    p->buffs.battle_shout = make_buff<stat_buff_t>( p, "horn_of_winter", p->find_spell( 57330 ) );
+  }
   bool valid() const override { return true; }
   void combat_begin( sim_t* ) const override {}
   void combat_end( sim_t* ) const override {}

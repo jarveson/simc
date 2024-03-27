@@ -1938,13 +1938,11 @@ void sim_t::combat_begin()
   for ( auto& target : target_list )
     target -> combat_begin();
 
-  if ( overrides.arcane_intellect ) auras.arcane_intellect->override_buff();
-  if ( overrides.battle_shout ) auras.battle_shout->override_buff();
-  if ( overrides.mark_of_the_wild ) auras.mark_of_the_wild->override_buff();
-  if ( overrides.power_word_fortitude ) auras.power_word_fortitude->override_buff();
   if ( overrides.crit_chance ) auras.crit_chance->override_buff();
   if ( overrides.melee_attack_speed ) auras.melee_attack_speed->override_buff();
   if ( overrides.attack_power ) auras.attack_power->override_buff();
+  if ( overrides.spell_haste ) auras.spell_haste->override_buff();
+  if ( overrides.all_damage ) auras.all_damage->override_buff();
 
   for ( player_e i = PLAYER_NONE; i < PLAYER_MAX; ++i )
   {
@@ -2776,39 +2774,24 @@ void sim_t::init()
 
   auras.fallback = make_buff<fallback_buff_t>( this );
 
-  auras.arcane_intellect = make_buff( this, "arcane_intellect", dbc::find_spell( this, 79057 ) )
-                               ->set_default_value( dbc::find_spell( this, 79057 )->effectN( 1 ).percent(), 1 )
-                               ->add_invalidate( CACHE_SPELL_POWER );
-
-  auras.battle_shout =
-      make_buff( this, "battle_shout", dbc::find_spell( this, 6673 ) )
-          ->set_default_value( dbc::find_spell( this, 6673 )->effectN( 1 ).average( nullptr, MAX_SCALING_LEVEL ) )
-          ->add_invalidate( CACHE_STRENGTH )
-          ->add_invalidate( CACHE_AGILITY );
-
-  auras.mark_of_the_wild = make_buff( this, "mark_of_the_wild", dbc::find_spell( this, 79060 ) )
-                               ->set_default_value( dbc::find_spell( this, 79060 )->effectN( 1 ).percent() )
-                               ->set_pct_buff_type( STAT_PCT_BUFF_STRENGTH )
-                               ->set_pct_buff_type( STAT_PCT_BUFF_AGILITY )
-                               ->set_pct_buff_type( STAT_PCT_BUFF_STAMINA )
-                               ->set_pct_buff_type( STAT_PCT_BUFF_INTELLECT );
-
-  auras.power_word_fortitude =
-      make_buff( this, "power_word_fortitude", dbc::find_spell( this, 79104 ) )
-                                   ->set_default_value( dbc::find_spell( this, 79104 )->effectN( 1 ).average(nullptr, MAX_SCALING_LEVEL) )
-                                   ->add_invalidate( CACHE_STAMINA );
-
   auras.crit_chance = make_buff( this, "leader_of_the_pack", dbc::find_spell( this, 24932 ) )
                           ->set_default_value( dbc::find_spell( this, 24932 )->effectN( 1 ).percent() )
-                          ->set_pct_buff_type(STAT_PCT_BUFF_CRIT);
+                          ->add_invalidate( CACHE_CRIT_CHANCE );
 
   auras.melee_attack_speed = make_buff( this, "hunting_party", dbc::find_spell( this, 53290 ) )
                                  ->set_default_value( dbc::find_spell( this, 53290 )->effectN( 2 ).percent() )
                                  ->add_invalidate( CACHE_ATTACK_SPEED );
 
-  auras.attack_power = make_buff( this, "trueshot aura", dbc::find_spell(this, 19506 ))
+  auras.attack_power = make_buff( this, "trueshot_aura", dbc::find_spell(this, 19506 ))
                            ->set_default_value( dbc::find_spell( this, 53290 )->effectN( 2 ).percent() )
                            ->add_invalidate(CACHE_ATTACK_POWER);
+
+  auras.spell_haste = make_buff( this, "moonkin_aura", dbc::find_spell( this, 24907 ) )
+                          ->set_default_value( dbc::find_spell( this, 24907 )->effectN( 1 ).percent() )
+                          ->add_invalidate( CACHE_SPELL_HASTE );
+
+  auras.all_damage = make_buff( this, "arcante_tactics", dbc::find_spell( this, 82930 ) )
+                         ->set_default_value( dbc::find_spell( this, 82930 )->effectN( 1 ).percent() );
 
   // Fight style initialization must be performed before target creation and raid event initialization, since fight
   // styles may define/override these things.
@@ -3439,7 +3422,12 @@ void sim_t::use_optimal_buffs_and_debuffs( int value )
   overrides.battle_shout            = optimal_raid;
   overrides.mark_of_the_wild        = optimal_raid;
   overrides.power_word_fortitude    = optimal_raid;
-  overrides.windfury_totem          = optimal_raid;
+
+  overrides.attack_power            = optimal_raid;
+  overrides.crit_chance             = optimal_raid;
+  overrides.melee_attack_speed      = optimal_raid;
+
+  overrides.all_damage = optimal_raid;
 
   overrides.bleeding                = optimal_raid;
   overrides.bleed_dmg               = optimal_raid;

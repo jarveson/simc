@@ -455,6 +455,10 @@ struct player_t : public actor_t
 
     // cata
     buff_t* unholy_frenzy;
+    buff_t* mark_of_the_wild;
+    buff_t* arcane_intellect;
+    buff_t* battle_shout;
+    buff_t* power_word_fortitude;
 
     // Legendary meta stuff
     buff_t* courageous_primal_diamond_lucidity;

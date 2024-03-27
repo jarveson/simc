@@ -3728,7 +3728,7 @@ struct mark_of_the_wild_t : public druid_spell_t
     druid_spell_t::execute();
 
     if ( !sim->overrides.mark_of_the_wild )
-      sim->auras.mark_of_the_wild->trigger();
+      p()->buffs.mark_of_the_wild->trigger();
   }
 };
 
@@ -6115,6 +6115,12 @@ struct druid_module_t : public module_t
 
   void init( player_t* p ) const override
   {
+    p->buffs.mark_of_the_wild = make_buff( p, "mark_of_the_wild", p->find_spell( 79060 ) )
+                                    ->set_default_value_from_effect_type( A_MOD_TOTAL_STAT_PERCENTAGE )
+                                    ->set_pct_buff_type( STAT_PCT_BUFF_STRENGTH )
+                                    ->set_pct_buff_type( STAT_PCT_BUFF_AGILITY )
+                                    ->set_pct_buff_type( STAT_PCT_BUFF_STAMINA )
+                                    ->set_pct_buff_type( STAT_PCT_BUFF_INTELLECT );
   }
 
   void static_init() const override {}

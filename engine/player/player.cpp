@@ -4098,6 +4098,18 @@ void player_t::create_buffs()
 
     if ( !is_pet() )
     {
+      if ( sim->overrides.mark_of_the_wild )
+          buffs.mark_of_the_wild->trigger();
+
+      if ( sim->overrides.arcane_intellect )
+          buffs.arcane_intellect->trigger();
+
+      if ( sim->overrides.battle_shout )
+          buffs.battle_shout->trigger();
+
+      if (sim->overrides.power_word_fortitude )
+          buffs.power_word_fortitude->trigger();
+
       buffs.windfury_totem = make_buff<buff_t>( this, "windfury_totem", find_spell( 327942 ) )
         ->set_duration( sim->max_time * 3 )
         ->set_chance( as<double>( sim->overrides.windfury_totem ) );
@@ -4499,6 +4511,9 @@ double player_t::composite_melee_crit_chance() const
   for ( auto b : buffs.stat_pct_buffs[ STAT_PCT_BUFF_CRIT ] )
     ac += b->check_stack_value();
 
+  if ( !is_pet() )
+    ac += sim->auras.crit_chance->check_value();
+
   ac += racials.viciousness->effectN( 1 ).percent();
   ac += racials.arcane_acuity->effectN( 1 ).percent();
 
@@ -4772,6 +4787,8 @@ double player_t::composite_spell_haste() const
     if ( buffs.berserking->check() )
       h *= 1.0 / ( 1.0 + buffs.berserking->data().effectN( 1 ).percent() );
 
+    h *= 1.0 / ( 1.0 + sim->auras.spell_haste->check_value() );
+
     h *= 1.0 / ( 1.0 + racials.nimble_fingers->effectN( 1 ).percent() );
     h *= 1.0 / ( 1.0 + racials.time_is_money->effectN( 1 ).percent() );
 
@@ -4846,8 +4863,8 @@ double player_t::composite_spell_power_multiplier() const
 
   double spm = current.spell_power_multiplier;
 
-  if ( sim->auras.arcane_intellect && sim->auras.arcane_intellect->check() )
-    spm *= 1.0 + sim->auras.arcane_intellect->data().effectN(2).percent();
+  if ( buffs.arcane_intellect && buffs.arcane_intellect->check() )
+    spm *= 1.0 + buffs.arcane_intellect->data().effectN(2).percent();
 
   // multiplier is rounded to 3 digits
   return std::round( spm * 1000 ) * 0.001;
@@ -4864,6 +4881,9 @@ double player_t::composite_spell_crit_chance() const
   {
     sc += ( cache.intellect() * current.spell_crit_per_intellect );
   }
+
+  if ( !is_pet() )
+    sc += sim->auras.crit_chance->check_value();
 
   for ( auto b : buffs.stat_pct_buffs[ STAT_PCT_BUFF_CRIT ] )
     sc += b->check_stack_value();
@@ -5045,6 +5065,8 @@ double player_t::composite_player_multiplier( school_e school ) const
 
   if ( school != SCHOOL_PHYSICAL )
     m *= 1.0 + racials.magical_affinity->effectN( 1 ).percent();
+
+  m *= 1.0 + sim->auras.all_damage->check_value();
 
   if ( buffs.echo_of_eonar && buffs.echo_of_eonar->check() )
     m *= 1 + buffs.echo_of_eonar->check_value();
@@ -5291,7 +5313,7 @@ double player_t::composite_attribute_multiplier( attribute_e attr ) const
   if ( is_pet() || is_enemy() || type == HEALING_ENEMY )
     return m;
 
-  if ( ( true_level >= 27 ) && matching_gear )
+  if ( ( true_level >= 50 ) && matching_gear )
     m *= 1.0 + matching_gear_multiplier( attr );
 
   stat_pct_buff_type pct_type = STAT_PCT_BUFF_MAX;

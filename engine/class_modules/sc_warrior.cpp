@@ -6070,13 +6070,11 @@ struct battle_shout_t : public warrior_spell_t
 
   void execute() override
   {
-    sim->auras.battle_shout->trigger();
+    warrior_spell_t::execute();
+    
+    player->buffs.battle_shout->trigger();
   }
 
-  bool ready() override
-  {
-    return warrior_spell_t::ready() && !sim->auras.battle_shout->check();
-  }
 };
 
 // Berserker Rage ===========================================================

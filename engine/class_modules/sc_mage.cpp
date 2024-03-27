@@ -2975,7 +2975,7 @@ struct arcane_intellect_t final : public mage_spell_t
     mage_spell_t::execute();
 
     if ( !sim->overrides.arcane_intellect )
-      sim->auras.arcane_intellect->trigger();
+      player->buffs.arcane_intellect->trigger();
   }
 };
 
@@ -7973,7 +7973,12 @@ public:
   }
 
   bool valid() const override { return true; }
-  void init( player_t* ) const override {}
+  void init( player_t* p) const override {
+    p->buffs.arcane_intellect = make_buff<stat_buff_t>( p, "arcane_intellect", p->find_spell( 79057 ) )
+                                    ->add_stat( STAT_MAX_MANA, p->find_spell(79057)->effectN(1).average(p) )
+                                    ->set_default_value_from_effect_type( A_MOD_SPELL_POWER_PCT )
+                                    ->add_invalidate( CACHE_SPELL_POWER );
+  }
   void combat_begin( sim_t* ) const override {}
   void combat_end( sim_t* ) const override {}
 };

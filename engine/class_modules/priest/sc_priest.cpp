@@ -549,7 +549,7 @@ struct power_word_fortitude_t final : public priest_spell_t
 
     if ( !sim->overrides.power_word_fortitude )
     {
-      sim->auras.power_word_fortitude->trigger();
+      player->buffs.power_word_fortitude->trigger();
     }
   }
 };
@@ -3347,6 +3347,8 @@ struct priest_module_t final : public module_t
     p->buffs.pain_suppression = make_buff( p, "pain_suppression",
                                            p->find_spell( 33206 ) );  // Let the ability handle the CD
     p->buffs.symbol_of_hope   = make_buff<buffs::symbol_of_hope_t>( p );
+
+    p->buffs.power_word_fortitude = make_buff<stat_buff_t>( p, "power_word_fortitude", p->find_spell( 79104 ) );
   }
   void static_init() const override
   {

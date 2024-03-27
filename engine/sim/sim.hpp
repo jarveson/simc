@@ -222,6 +222,9 @@ struct sim_t : private sc_thread_t
     int crit_chance;
     int melee_attack_speed;
     int attack_power;
+    int spell_haste;
+
+    int all_damage;
 
     // Debuff overrides
     int bleed_dmg;
@@ -242,15 +245,14 @@ struct sim_t : private sc_thread_t
   struct auras_t
   {
     buff_t* fallback; // generic global fallback buff
-    buff_t* arcane_intellect;
-    buff_t* battle_shout;
-    buff_t* mark_of_the_wild;
-    buff_t* power_word_fortitude;
 
     buff_t* crit_chance;
     buff_t* melee_attack_speed;
     buff_t* attack_power;
-    buff_t* armor_inc;
+    buff_t* spell_haste;
+
+    buff_t* all_damage;
+
   } auras;
 
   // Expansion specific custom parameters. Defaults in the constructor.
