@@ -1078,6 +1078,7 @@ struct cat_form_buff_t : public druid_buff_t, public swap_melee_t
 {
   cat_form_buff_t( druid_t* p ) : base_t( p, "cat_form", p->find_class_spell( "Cat Form" ) ), swap_melee_t( p )
   {
+    add_invalidate( CACHE_AGILITY );
     add_invalidate( CACHE_ATTACK_POWER );
     add_invalidate( CACHE_EXP );
     add_invalidate( CACHE_HIT );
@@ -1115,6 +1116,7 @@ struct moonkin_form_buff_t : public druid_buff_t
 
 struct primal_madness_buff_t : public druid_buff_t
 {
+  double energy_gain = 0;
   primal_madness_buff_t( druid_t* p )
     : druid_buff_t( p, "primal_madness",
                     p->talent.primal_madness.rank() == 2   ? p->find_spell( 80879 )
@@ -1122,24 +1124,20 @@ struct primal_madness_buff_t : public druid_buff_t
                                                            : p->talent.primal_madness )
   {
     set_cooldown( timespan_t::zero() );
+    if ( data().ok() )
+      energy_gain = data().effectN( 1 ).base_value();
   }
 
   void start( int stacks, double value, timespan_t duration ) override
   {
     buff_t::start( stacks, value, duration );
-
-    p()->resources.temporary[ RESOURCE_ENERGY ] += data()
-                                                       .effectN( 1 )
-                                                       .base_value();
-    p()->recalculate_resource_max( RESOURCE_ENERGY );
+    p()->stat_gain( STAT_MAX_ENERGY, energy_gain, p()->gain.primal_madness_energy);
   }
 
   void expire_override( int expiration_stacks, timespan_t remaining_duration ) override
   {
     buff_t::expire_override( expiration_stacks, remaining_duration );
-
-    p()->resources.temporary[ RESOURCE_ENERGY ] -= data().effectN( 1 ).base_value();
-    p()->recalculate_resource_max( RESOURCE_ENERGY, p()->gain.primal_madness_energy_expiry );
+    p()->stat_loss( STAT_MAX_ENERGY, energy_gain, p()->gain.primal_madness_energy_expiry );
   }
 };
 
@@ -2378,6 +2376,14 @@ struct rake_t : public cat_attack_t
   double composite_ta_multiplier( const action_state_t* s ) const override
   {
     auto da = base_t::composite_ta_multiplier( s );
+    if ( p()->specialization() == DRUID_FERAL )
+      da *= 1.0 + p()->mastery.razor_claws->effectN( 1 ).mastery_value() * p()->composite_mastery();
+    return da;
+  }
+
+  double composite_da_multiplier(const action_state_t* s) const override
+  {
+    auto da = base_t::composite_da_multiplier( s );
     if ( p()->specialization() == DRUID_FERAL )
       da *= 1.0 + p()->mastery.razor_claws->effectN( 1 ).mastery_value() * p()->composite_mastery();
     return da;
@@ -5055,6 +5061,7 @@ void druid_t::init_gains()
     gain.energy_refund                = get_gain( "Energy Refund" );
     gain.primal_fury                  = get_gain( "Primal Fury" );
     gain.king_of_the_jungle           = get_gain( "King of the Jungle" );
+    gain.primal_madness_energy        = get_gain( "Primal Madness Energy" );
     gain.primal_madness_energy_expiry = get_gain( "Primal Madness Energy (Expiry)" );
 
     gain.lotp_hp   = get_gain( "Lotp Hp" );
@@ -5311,12 +5318,6 @@ double druid_t::resource_regen_per_second( resource_e r ) const
 {
   double reg = player_t::resource_regen_per_second( r );
 
-  if ( r == RESOURCE_MANA )
-  {
-    if ( specialization() == DRUID_BALANCE && buff.moonkin_form->check() )
-      reg *= ( 1.0 + buff.moonkin_form->data().effectN( 5 ).percent() ) / cache.spell_haste();
-  }
-
   return reg;
 }
 
@@ -5487,17 +5488,22 @@ double druid_t::composite_attribute_multiplier( attribute_e attr ) const
 
 double druid_t::matching_gear_multiplier( attribute_e attr ) const
 {
-  unsigned idx;
-
-  switch ( attr )
+  double pct = spec.leather_specialization->effectN( 1 ).percent();
+  switch ( specialization() )
   {
-    case ATTR_AGILITY: idx = 1; break;
-    case ATTR_INTELLECT: idx = 2; break;
-    case ATTR_STAMINA: idx = 3; break;
-    default: return 0;
+    case DRUID_GUARDIAN:
+    case DRUID_FERAL:
+      switch ( attr )
+      {
+        case ATTR_AGILITY:
+          return buff.cat_form->check() ? pct : 0.0;
+        case ATTR_STAMINA:
+          return buff.bear_form->check() ? pct : 0.0;
+        default: return 0.0;
+      }
+    default:
+      return attr == ATTR_INTELLECT ? pct : 0.0;
   }
-
-  return spec.leather_specialization->effectN( idx ).percent();
 }
 
 double druid_t::composite_melee_expertise( const weapon_t* ) const
