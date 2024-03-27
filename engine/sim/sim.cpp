@@ -1941,10 +1941,10 @@ void sim_t::combat_begin()
   if ( overrides.arcane_intellect ) auras.arcane_intellect->override_buff();
   if ( overrides.battle_shout ) auras.battle_shout->override_buff();
   if ( overrides.mark_of_the_wild ) auras.mark_of_the_wild->override_buff();
-  if ( overrides.power_word_fortitude ) auras.power_word_fortitude -> override_buff();
+  if ( overrides.power_word_fortitude ) auras.power_word_fortitude->override_buff();
   if ( overrides.crit_chance ) auras.crit_chance->override_buff();
   if ( overrides.melee_attack_speed ) auras.melee_attack_speed->override_buff();
-  if (overrides.attack_power) auras.attack_power->override_buff();
+  if ( overrides.attack_power ) auras.attack_power->override_buff();
 
   for ( player_e i = PLAYER_NONE; i < PLAYER_MAX; ++i )
   {
@@ -2776,13 +2776,15 @@ void sim_t::init()
 
   auras.fallback = make_buff<fallback_buff_t>( this );
 
-  auras.arcane_intellect = make_buff( this, "arcane_intellect", dbc::find_spell( this, 1459 ) )
-                               ->set_default_value( dbc::find_spell( this, 1459 )->effectN( 1 ).percent() )
-                               ->add_invalidate( CACHE_INTELLECT );
+  auras.arcane_intellect = make_buff( this, "arcane_intellect", dbc::find_spell( this, 79057 ) )
+                               ->set_default_value( dbc::find_spell( this, 79057 )->effectN( 1 ).percent(), 1 )
+                               ->add_invalidate( CACHE_SPELL_POWER );
 
-  auras.battle_shout = make_buff( this, "battle_shout", dbc::find_spell( this, 6673 ) )
-                           ->set_default_value( dbc::find_spell( this, 6673 )->effectN( 1 ).percent() )
-                           ->add_invalidate( CACHE_ATTACK_POWER );
+  auras.battle_shout =
+      make_buff( this, "battle_shout", dbc::find_spell( this, 6673 ) )
+          ->set_default_value( dbc::find_spell( this, 6673 )->effectN( 1 ).average( nullptr, MAX_SCALING_LEVEL ) )
+          ->add_invalidate( CACHE_STRENGTH )
+          ->add_invalidate( CACHE_AGILITY );
 
   auras.mark_of_the_wild = make_buff( this, "mark_of_the_wild", dbc::find_spell( this, 79060 ) )
                                ->set_default_value( dbc::find_spell( this, 79060 )->effectN( 1 ).percent() )
@@ -2791,8 +2793,9 @@ void sim_t::init()
                                ->set_pct_buff_type( STAT_PCT_BUFF_STAMINA )
                                ->set_pct_buff_type( STAT_PCT_BUFF_INTELLECT );
 
-  auras.power_word_fortitude = make_buff( this, "power_word_fortitude", dbc::find_spell( this, 21562 ) )
-                                   ->set_default_value( dbc::find_spell( this, 21562 )->effectN( 1 ).percent() )
+  auras.power_word_fortitude =
+      make_buff( this, "power_word_fortitude", dbc::find_spell( this, 79104 ) )
+                                   ->set_default_value( dbc::find_spell( this, 79104 )->effectN( 1 ).average(nullptr, MAX_SCALING_LEVEL) )
                                    ->add_invalidate( CACHE_STAMINA );
 
   auras.crit_chance = make_buff( this, "leader_of_the_pack", dbc::find_spell( this, 24932 ) )

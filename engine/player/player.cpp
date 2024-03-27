@@ -611,7 +611,6 @@ bool parse_talent_url( sim_t* sim, util::string_view name, util::string_view url
   {
     if ( sim->talent_input_format == talent_format::UNCHANGED )
         sim->talent_input_format = talent_format::WOWHEAD;
-    parse_wowhead_talents(p->talents_str, p);
     return true;
   }
 
@@ -4845,8 +4844,13 @@ double player_t::composite_spell_power_multiplier() const
     return 1.0;
   }
 
+  double spm = current.spell_power_multiplier;
+
+  if ( sim->auras.arcane_intellect && sim->auras.arcane_intellect->check() )
+    spm *= 1.0 + sim->auras.arcane_intellect->data().effectN(2).percent();
+
   // multiplier is rounded to 3 digits
-  return std::round( current.spell_power_multiplier * 1000 ) * 0.001;
+  return std::round( spm * 1000 ) * 0.001;
 }
 
 double player_t::composite_spell_crit_chance() const

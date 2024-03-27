@@ -973,7 +973,7 @@ static constexpr auto _effect_subtype_strings = util::make_static_map<unsigned, 
   {  32, "Increase Mounted Speed%"                      },
   {  33, "Decrease Movement Speed%"                     },
   {  34, "Increase Health"                              },
-  {  35, "Increase Energy"                              },
+  {  35, "Modify Max Power"                             },
   {  36, "Shapeshift"                                   },
   {  37, "Immunity Against External Movement"           },
   {  39, "School Immunity"                              },
@@ -1104,6 +1104,7 @@ static constexpr auto _effect_subtype_strings = util::make_static_map<unsigned, 
   { 305, "Modify Min Speed%"                            },
   { 306, "Modify Crit Chance% from Caster"              },
   { 308, "Modify Crit Chance% from Caster's Spells"     },
+  { 317, "Modify Spell Power%"                          },
   { 318, "Modify Mastery%"                              },
   { 319, "Modify Melee Attack Speed%"                   },
   { 320, "Modify Ranged Attack Speed%"                  },
@@ -1393,6 +1394,10 @@ std::ostringstream& spell_info::effect_to_str( const dbc_t& dbc, const spell_dat
       case A_ADD_PCT_LABEL_MODIFIER:
       case A_ADD_FLAT_LABEL_MODIFIER:
         s << ": " << map_string( _property_type_strings, e->misc_value1() );
+        break;
+      case A_MOD_MAX_POWER_FLAT:
+        s << " (" << util::resource_type_string( util::translate_power_type( static_cast<power_e>( e->misc_value1() ) ) )
+          << ")";
         break;
       default:
         break;
@@ -2580,6 +2585,9 @@ void spell_info::effect_to_xml( const dbc_t& dbc, const spell_data_t* spell, con
         {
           node->add_parm( "modifier_text", map_string( _property_type_strings, e->misc_value1() ) );
         }
+        break;
+      case A_MOD_MAX_POWER_FLAT:
+        node->add_parm( "power", e->misc_value1() );
         break;
       default:
         break;
