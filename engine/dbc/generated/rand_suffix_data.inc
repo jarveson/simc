@@ -1,4 +1,4 @@
-// Random suffix data, wow build 4.4.0.53627
+// Random suffix data, wow build 4.4.0.53863
 static const std::array<random_suffix_data_t, 276> __rand_suffix_data { {
   {   5, "of the Monkey", { 2802, 2803, 0, 0, 0 }, { 6666, 10000, 0, 0, 0 } },
   {   6, "of the Eagle", { 2804, 2803, 0, 0, 0 }, { 6666, 10000, 0, 0, 0 } },

@@ -1,4 +1,4 @@
-// Ap Per Stat, wow build 4.4.0.53627
+// Ap Per Stat, wow build 4.4.0.53863
 static const std::array<ap_per_stat_t, 11> __ap_per_stat_data { {
   { 0, 0, 0, 0 },
   { 1, 1, 0, 2 },

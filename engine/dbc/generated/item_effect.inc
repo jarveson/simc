@@ -1,4 +1,4 @@
-// Item effects, wow build 4.4.0.53627
+// Item effects, wow build 4.4.0.53863
 static const std::array<item_effect_t, 4055> __item_effect_data { {
 } };
 

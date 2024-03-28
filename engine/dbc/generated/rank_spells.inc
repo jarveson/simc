@@ -1,4 +1,4 @@
-// Rank class spells, wow build 4.4.0.53627
+// Rank class spells, wow build 4.4.0.53863
 static const std::array<rank_class_spell_t, 1101> __rank_spells_data { {
   {  6,    0,  53137,      0, "Abomination's Might", "Rank 1" },
   {  6,    0,  53138,      0, "Abomination's Might", "Rank 2" },
