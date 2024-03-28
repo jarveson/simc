@@ -82,6 +82,7 @@ SRC += \
     dbc$(PATHSEP)permanent_enchant.cpp \
     dbc$(PATHSEP)racial_spells.cpp \
     dbc$(PATHSEP)rand_prop_points.cpp \
+    dbc$(PATHSEP)rand_suffix_data.cpp \
     dbc$(PATHSEP)rank_spells.cpp \
     dbc$(PATHSEP)real_ppm_data.cpp \
     dbc$(PATHSEP)sc_const_data.cpp \

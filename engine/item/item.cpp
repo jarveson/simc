@@ -82,6 +82,7 @@ item_t::parsed_input_t::parsed_input_t()
     initial_cd( timespan_t::zero() ),
     drop_level( 0 ),
     reforge_id(0),
+    suffix_id(0),
     base_level_priority( std::numeric_limits<int>::max() ),
     scaling_level_priority( std::numeric_limits<int>::max() )
 {
@@ -506,7 +507,9 @@ void sc_format_to( const item_t& item, fmt::format_context::iterator out )
   }
 
   if ( item.parsed.reforge_id > 0 )
-    fmt::format_to( out, " reforge_id={}", item.parsed.reforge_id );
+    fmt::format_to( out, " reforge={}", item.parsed.reforge_id );
+  if ( item.parsed.suffix_id > 0 )
+    fmt::format_to( out, " suffix={}", item.parsed.suffix_id );
 }
 
 // item_t::has_item_stat ====================================================
@@ -844,7 +847,6 @@ void item_t::parse_options()
     opt_string("mythic", option_mythic_str),
     opt_string("type", option_armor_type_str),
     opt_string("reforge", DUMMY_REFORGE),
-    opt_deprecated("suffix", "bonus_id"),
     opt_string("ilevel", option_ilevel_str),
     opt_string("quality", option_quality_str),
     opt_string("source", option_data_source_str),
@@ -863,7 +865,8 @@ void item_t::parse_options()
     opt_string("context", DUMMY_CONTEXT),
     opt_string("crafted_stats", option_crafted_stat_str),
     opt_string("crafting_quality", DUMMY_CRAFTING_QUALITY),
-    opt_string("reforge_id", option_reforge_id_str )
+    opt_string("reforge", option_reforge_str ),
+    opt_string("suffix", option_suffix_str ),
   } };
 
   try
@@ -1066,8 +1069,11 @@ void item_t::parse_options()
     }
   }
 
-  if ( !option_reforge_id_str.empty() )
-    parsed.reforge_id = util::to_unsigned( option_reforge_id_str );
+  if ( !option_reforge_str.empty() )
+    parsed.reforge_id = util::to_unsigned( option_reforge_str );
+
+  if ( !option_suffix_str.empty() )
+    parsed.suffix_id = util::to_unsigned( option_suffix_str );
 }
 
 // item_t::initialize_data ==================================================
@@ -1293,7 +1299,12 @@ std::string item_t::encoded_item() const
 
   if ( parsed.reforge_id > 0 )
   {
-    s << ",reforge_id=" << parsed.reforge_id;
+    s << ",reforge=" << parsed.reforge_id;
+  }
+
+  if ( parsed.suffix_id > 0 )
+  {
+    s << ",suffix=" << parsed.suffix_id;
   }
 
   return s.str();
@@ -1711,6 +1722,34 @@ void item_t::decode_stats()
       else
         parsed.armor = static_cast<int>( tokens[ i ].value );
     }
+  }
+
+  if ( parsed.suffix_id > 0 )
+  {
+    auto& suffix = player->dbc->item_suffix( parsed.suffix_id );
+    if ( &suffix == &random_suffix_data_t::nil() )
+    {
+      throw std::invalid_argument(
+          fmt::format( "Player {} item '{}' unknown suffix id {}", player->name(), name(), parsed.suffix_id ) );
+    }
+
+    if ( !item_database::apply_suffix( *this, suffix ) )
+      throw std::invalid_argument(
+          fmt::format( "Player {} item '{}' suffix id {} failed", player->name(), name(), parsed.suffix_id ) );
+  }
+
+  if ( parsed.reforge_id > 0 )
+  {
+    auto& reforge = player->dbc->item_reforge( parsed.reforge_id );
+    if ( &reforge == &item_reforge_data_t::nil() )
+    {
+      throw std::invalid_argument(
+          fmt::format( "Player {} item '{}' unknown item reforge id {}", player->name(), name(), parsed.reforge_id ) );
+    }
+
+    if (!item_database::apply_reforge( *this, reforge ) )
+      throw std::invalid_argument(
+          fmt::format( "Player {} item '{}' reforge id {} failed", player->name(), name(), parsed.reforge_id ) );
   }
 
   // If scaling fails, then there's some issue with the scaling data, and the item stats will be

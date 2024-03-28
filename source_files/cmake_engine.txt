@@ -64,6 +64,7 @@ dbc/meta_gem_cond.hpp
 dbc/permanent_enchant.hpp
 dbc/racial_spells.hpp
 dbc/rand_prop_points.hpp
+dbc/rand_suffix_data.hpp
 dbc/rank_spells.hpp
 dbc/real_ppm_data.hpp
 dbc/sc_spell_info.hpp
@@ -277,6 +278,7 @@ dbc/meta_gem_cond.cpp
 dbc/permanent_enchant.cpp
 dbc/racial_spells.cpp
 dbc/rand_prop_points.cpp
+dbc/rand_suffix_data.cpp
 dbc/rank_spells.cpp
 dbc/real_ppm_data.cpp
 dbc/sc_const_data.cpp

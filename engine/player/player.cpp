@@ -4618,7 +4618,7 @@ double player_t::composite_armor_multiplier() const
 {
   double a = current.armor_multiplier;
 
-  if ( debuffs.armor_reduc->check() )
+  if ( debuffs.armor_reduc && debuffs.armor_reduc->check() )
     a *= 1.0 - std::abs(debuffs.armor_reduc->value());
 
   return a;
@@ -12350,7 +12350,7 @@ void player_t::recreate_talent_str( talent_format format )
       create_talents_numbers();
       break;
     default:
-      create_talents_blizzard();
+      create_talents_numbers();
       break;
   }
 }

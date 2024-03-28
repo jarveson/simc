@@ -27,6 +27,7 @@
 #include "dbc/meta_gem_cond.hpp"
 #include "dbc/racial_spells.hpp"
 #include "dbc/rand_prop_points.hpp"
+#include "dbc/rand_suffix_data.hpp"
 #include "dbc/real_ppm_data.hpp"
 #include "dbc/spell_data.hpp"
 #include "dbc/spell_item_enchantment.hpp"
@@ -457,6 +458,9 @@ public:
 
   const item_reforge_data_t& item_reforge(unsigned reforge_id ) const
   { return item_reforge_data_t::find(reforge_id, ptr);}
+
+  const random_suffix_data_t& item_suffix(unsigned suffix_id) const
+  { return random_suffix_data_t::find(suffix_id, ptr); }
 
   util::span<const item_effect_t> item_effects( unsigned item_id ) const
   { return item_effect_t::find_for_item( item_id, ptr ); }

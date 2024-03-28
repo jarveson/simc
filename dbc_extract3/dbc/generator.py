@@ -4073,7 +4073,7 @@ class RandomPropertyPointsGenerator(DataGenerator):
                 length = len(data))
 
         for rpp in sorted(data, key = lambda e: e.id):
-            fields = rpp.field('id', 'damage_replace_stat', 'damage_secondary')
+            fields = rpp.field('id', 'damage_replace_stat', 'damage_replace_stat')
             fields += [ '{ %s }' % ', '.join( rpp.field('epic_points_1', 'epic_points_2', 'epic_points_3', 'epic_points_4', 'epic_points_5')) ]
             fields += [ '{ %s }' % ', '.join( rpp.field('rare_points_1', 'rare_points_2', 'rare_points_3', 'rare_points_4', 'rare_points_5')) ]
             fields += [ '{ %s }' % ', '.join( rpp.field('uncm_points_1', 'uncm_points_2', 'uncm_points_3', 'uncm_points_4', 'uncm_points_5')) ]
@@ -5020,6 +5020,27 @@ class TraitLoadoutGenerator(DataGenerator):
 
             fields += node_entry.field('id_trait_node_entry')
             fields += entry.field('num_points', 'order_index')
+
+            self.output_record(fields)
+
+        self.output_footer()
+
+class RandomSuffixDataGenerator(DataGenerator):
+    def filter(self):
+        return self.db('ItemRandomSuffix').values()
+
+    def generate(self, data = None):
+        self.output_header(
+                header   = 'Random suffix data'.format(
+                    self._options.scale_ilevel),
+                type = 'random_suffix_data_t',
+                array = 'rand_suffix',
+                length = len(data))
+
+        for rpp in sorted(data, key = lambda e: e.id):
+            fields = rpp.field('id', 'name_lang')
+            fields += [ '{ %s }' % ', '.join( rpp.field('enchantment_1', 'enchantment_2', 'enchantment_3', 'enchantment_4', 'enchantment_5')) ]
+            fields += [ '{ %s }' % ', '.join( rpp.field('allocation_pct_1', 'allocation_pct_2', 'allocation_pct_3', 'allocation_pct_4', 'allocation_pct_5')) ]
 
             self.output_record(fields)
 

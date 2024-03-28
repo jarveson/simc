@@ -70,6 +70,7 @@ To change the list of source files run synchronize.py
 		<ClInclude Include="..\engine\dbc\permanent_enchant.hpp" />
 		<ClInclude Include="..\engine\dbc\racial_spells.hpp" />
 		<ClInclude Include="..\engine\dbc\rand_prop_points.hpp" />
+		<ClInclude Include="..\engine\dbc\rand_suffix_data.hpp" />
 		<ClInclude Include="..\engine\dbc\rank_spells.hpp" />
 		<ClInclude Include="..\engine\dbc\real_ppm_data.hpp" />
 		<ClInclude Include="..\engine\dbc\sc_spell_info.hpp" />
@@ -283,6 +284,7 @@ To change the list of source files run synchronize.py
 		<ClCompile Include="..\engine\dbc\permanent_enchant.cpp" />
 		<ClCompile Include="..\engine\dbc\racial_spells.cpp" />
 		<ClCompile Include="..\engine\dbc\rand_prop_points.cpp" />
+		<ClCompile Include="..\engine\dbc\rand_suffix_data.cpp" />
 		<ClCompile Include="..\engine\dbc\rank_spells.cpp" />
 		<ClCompile Include="..\engine\dbc\real_ppm_data.cpp" />
 		<ClCompile Include="..\engine\dbc\sc_const_data.cpp" />

@@ -123,6 +123,7 @@ struct item_t
     std::vector<unsigned>                            azerite_ids;
     std::vector<int>                                 crafted_stat_mod;
     unsigned                                         reforge_id;
+    unsigned                                         suffix_id;
 
     // Priority state tracking for item bonuses
     int base_level_priority;
@@ -167,7 +168,8 @@ struct item_t
   std::string option_azerite_powers_str;
   std::string option_azerite_level_str;
   std::string option_crafted_stat_str;
-  std::string option_reforge_id_str;
+  std::string option_reforge_str;
+  std::string option_suffix_str;
   double option_initial_cd;
 
   // Extracted data

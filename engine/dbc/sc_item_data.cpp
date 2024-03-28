@@ -225,6 +225,83 @@ bool item_database::apply_reforge( item_t& item, const item_reforge_data_t& refo
   return true;
 }
 
+bool item_database::apply_suffix( item_t& item, const random_suffix_data_t& suffix )
+{
+  int slot_type = random_suffix_type( item.parsed.data );
+  if ( slot_type == -1 )
+  {
+    item.sim->error( "Player {} item '{}' doesnt support suffix", item.player->name(), item.name() );
+    return false;
+  }
+
+  const auto& rpp = item.player->dbc->random_property( item.parsed.data.level );
+  for ( size_t i = 0; i < 5; ++i )
+  {
+    unsigned enchant_id = suffix.enchant_id[ i ];
+    if ( !enchant_id )
+      continue;
+
+    const auto& enchant_data = item.player->dbc->item_enchantment( enchant_id );
+    if ( !enchant_data.id )
+    {
+      item.sim->error( "Player {} item '{}' suffix {} enchant id {} missing", item.player->name(), item.name(),
+                       suffix.id, enchant_id );
+      continue;
+    }
+
+    double amt = 0.0;
+    switch ( item.parsed.data.quality )
+    {
+      case 4:
+        amt = rpp.p_epic[ slot_type ] * suffix.enchant_alloc[ i ] / 10000.0;
+        break;
+      case 3:
+        amt = rpp.p_rare[ slot_type ] * suffix.enchant_alloc[ i ] / 10000.0;
+        break;
+      case 2:
+        amt = rpp.p_uncommon[ slot_type ] * suffix.enchant_alloc[ i ] / 10000.0;
+        break;
+      default:
+        continue;
+    }
+
+    for ( size_t j = 0; j < 3; ++j )
+    {
+      if ( enchant_data.ench_type[ j ] != ITEM_ENCHANTMENT_STAT )
+        continue;
+
+      auto stat = util::translate_item_mod( enchant_data.ench_prop[ j ] );
+      if ( stat == STAT_NONE )
+        continue;
+
+      auto find_empty_mod = [&](int item_mod) {
+        size_t i = 0;
+        for ( const auto& ste : item.parsed.data.stat_type_e )
+        {
+          if ( ste == ITEM_MOD_NONE )
+            return i;
+          ++i;
+        }
+        return std::numeric_limits<size_t>::max();
+      };
+
+      auto idx = find_empty_mod( enchant_data.ench_prop[ j ] );
+
+      if ( idx > item.parsed.data.stat_type_e.size() )
+      {
+        item.sim->error( "Player {} item '{}' suffix {} doesnt have room for item_mod {}", item.player->name(),
+                         item.name(), suffix.id, enchant_data.ench_prop[ j ] );
+        continue;
+      }
+
+
+      item.parsed.data.stat_type_e[ idx ] = enchant_data.ench_prop[ j ];
+      item.parsed.data.stat_alloc[ idx ]  = static_cast<int>(amt);
+    }
+  }
+  return true;
+}
+
 bool item_database::apply_item_bonus( item_t& item, const item_bonus_entry_t& entry )
 {
   switch ( entry.type )
@@ -1005,18 +1082,6 @@ bool item_database::load_item_from_data( item_t& item )
     {
       item.parsed.bonus_id.push_back( power.bonus_id );
     }
-  }
-
-  if ( item.parsed.reforge_id > 0 )
-  {
-    auto &reforge = item.player->dbc->item_reforge( item.parsed.reforge_id );
-    if ( &reforge == &item_reforge_data_t::nil() )
-    {
-      item.player->sim->error( "Player {} item '{}' unknown item reforge id {}", item.player->name(),
-                               item.name(), item.parsed.reforge_id );
-      return false;
-    }
-    apply_reforge( item, reforge);
   }
 
   // Item bonus for local source only. TODO: BCP API and Wowhead will need ..
