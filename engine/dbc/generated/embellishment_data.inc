@@ -1,1 +1,1 @@
-static const std::array<embellishment_data_t, 17> __embellishment_data { {}};
+static const std::array<embellishment_data_t, 0> __embellishment_data { {}};

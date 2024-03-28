@@ -687,30 +687,6 @@ class PermanentEnchantItemSet(DataSet):
 
         return _spell_effects[_effects.index(True)]
 
-    def _get_item_enchant(self, item_id):
-        _item = self.db('ItemSparse')[item_id]
-        if _item.id == 0:
-            return None, None
-
-        return None, None
-
-        for effect_map_ref in _item.children('ItemXItemEffect'):
-            _effect = self.get_unranked_enchant_effect(effect_map_ref.ref('id_item_effect').id_spell)
-            if _effect is None:
-                continue
-
-            _enchant = self.db('SpellItemEnchantment')[_effect.misc_value_1]
-            if _enchant.id == 0:
-                continue
-
-            _enchant_sei = _spell.child_ref('SpellEquippedItems')
-            if _enchant_sei.id == 0:
-                continue
-
-            return _enchant, _enchant_sei
-
-        return None, None
-
     def _filter(self, **kwargs):
         items = set()
 

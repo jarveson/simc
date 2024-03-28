@@ -317,7 +317,7 @@ class DataGenerator(object):
         l = kwargs.get('length', None)
         arrayname = kwargs.get('array', None)
 
-        if not l or not isinstance(l, int):
+        if l < 0 or not isinstance(l, int):
             logging.error('Array length for {} must be a postive integer, not {}. header {}'.format(
                 self.__class__.__name__, l, header_str))
             return
@@ -789,7 +789,7 @@ class ItemDataGenerator(DataGenerator):
                     continue
                     # Finally, check consumable whitelist
                     map_ = constants.CONSUMABLE_ITEM_WHITELIST.get(classdata.subclass, {})
-                    item = item_effect.child_ref('ItemXItemEffect').parent_record()
+                    item = item_effect.parent_record()
                     if item.id in map_:
                         filter_ilevel = False
                     else:
@@ -2997,7 +2997,7 @@ class SpellDataGenerator(DataGenerator):
                     # Finally, check consumable whitelist
                     continue
                     map_ = constants.CONSUMABLE_ITEM_WHITELIST.get(classdata.subclass, {})
-                    item = item_effect.child_ref('ItemXItemEffect').parent_record()
+                    item = item_effect.parent_record()
                     if item.id in map_:
                         self.process_spell(spell.id, ids, 0, 0)
 
@@ -4443,15 +4443,15 @@ class ItemEffectGenerator(ItemDataGenerator):
                 array = 'item_effect',
                 length = len(data))
 
-        '''for index, entry in enumerate(sorted(data, key = lambda e: (e.child_ref('ItemXItemEffect').parent_record().id, e.index, e.id))):
+        for index, entry in enumerate(sorted(data, key = lambda e: (e.parent_record().id, e.index, e.id))):
             item_effect_id_index.append((entry.id, index))
-            item = entry.child_ref('ItemXItemEffect').parent_record()
+            item = entry.parent_record()
 
             fields = entry.field('id', 'id_spell')
             fields += item.field('id')
             fields += entry.field('index', 'trigger_type', 'cooldown_group', 'cooldown_duration', 'cooldown_group_duration')
 
-            self.output_record(fields, comment = entry.ref('id_spell').name)'''
+            self.output_record(fields, comment = entry.ref('id_spell').name)
 
         self.output_footer()
 
