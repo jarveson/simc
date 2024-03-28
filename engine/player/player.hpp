@@ -580,6 +580,7 @@ struct player_t : public actor_t
     buff_t* attack_spd_reduc;
     buff_t* phys_dmg_taken;
     buff_t* armor_reduc;
+    buff_t* faerie_fire;
 
     buff_t* mystic_touch;
     buff_t* mortal_wounds;

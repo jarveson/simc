@@ -1412,7 +1412,8 @@ public:
       return;
     }
 
-    // todo: do something based on stacks
+    if (!( s->target->debuffs.armor_reduc && s->target->debuffs.armor_reduc->check() ))
+        s->target->debuffs.faerie_fire->trigger(stacks);
   }
 
   void trigger_bleed( action_state_t* s, timespan_t d )
@@ -6120,6 +6121,11 @@ struct druid_module_t : public module_t
                                     ->set_pct_buff_type( STAT_PCT_BUFF_AGILITY )
                                     ->set_pct_buff_type( STAT_PCT_BUFF_STAMINA )
                                     ->set_pct_buff_type( STAT_PCT_BUFF_INTELLECT );
+
+    p->debuffs.faerie_fire =
+        make_buff( p, "faerie_fire", p->find_spell( 91565 ) )
+        ->set_chance(1)
+        ->add_invalidate( CACHE_ARMOR );
   }
 
   void static_init() const override {}

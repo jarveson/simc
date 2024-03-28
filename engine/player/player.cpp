@@ -4620,6 +4620,8 @@ double player_t::composite_armor_multiplier() const
 
   if ( debuffs.armor_reduc && debuffs.armor_reduc->check() )
     a *= 1.0 - std::abs(debuffs.armor_reduc->value());
+  else if ( debuffs.faerie_fire && debuffs.faerie_fire->check() )
+    a *= 1.0 - std::abs( debuffs.faerie_fire->stack_value() );
 
   return a;
 }

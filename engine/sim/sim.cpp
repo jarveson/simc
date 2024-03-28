@@ -2790,7 +2790,7 @@ void sim_t::init()
                           ->set_default_value( dbc::find_spell( this, 24907 )->effectN( 1 ).percent() )
                           ->add_invalidate( CACHE_SPELL_HASTE );
 
-  auras.all_damage = make_buff( this, "arcante_tactics", dbc::find_spell( this, 82930 ) )
+  auras.all_damage = make_buff( this, "arcane_tactics", dbc::find_spell( this, 82930 ) )
                          ->set_default_value( dbc::find_spell( this, 82930 )->effectN( 1 ).percent() );
 
   // Fight style initialization must be performed before target creation and raid event initialization, since fight
