@@ -1860,9 +1860,6 @@ public:
     : base_t( n, p, s ),
       snapshots()
   {
-    if (p->specialization() == DRUID_FERAL)
-        ooc_chance = 3.5;
-
     if ( data().ok() )
     {
       snapshots.tigers_fury =
@@ -2680,9 +2677,6 @@ struct bear_attack_t : public druid_attack_t<melee_attack_t>
   bear_attack_t( std::string_view n, druid_t* p, const spell_data_t* s = spell_data_t::nil() )
     : base_t( n, p, s )
   {
-    if ( p->specialization() == DRUID_FERAL )
-      ooc_chance = 3.5;
-
     if ( p->specialization() == DRUID_BALANCE || p->specialization() == DRUID_RESTORATION )
       ap_type = attack_power_type::NO_WEAPON;
   }
@@ -4285,8 +4279,8 @@ struct druid_melee_t : public Base
     // Auto attack mods
     ab::parse_effects( p->spec_spell );
 
-    if (p->specialization() != DRUID_FERAL)
-        ab::ooc_chance = 0.0;
+    if (p->specialization() == DRUID_FERAL)
+        ab::ooc_chance = 3.5;
   }
 
   timespan_t execute_time() const override
@@ -4824,9 +4818,7 @@ void druid_t::create_buffs()
                            ->apply_affecting_aura( glyphs.feral_charge );
 
   buff.enrage        = make_buff( this, "enrage", find_class_spell( "Enrage" ) );
-  buff.pulverize =
-      make_buff_fallback( talent.pulverize.ok(), this, "pulverize", find_spell( "Pulverize" ) )
-          ->set_duration( find_spell( "Pulverize" )->duration() + talent.endless_carnage->effectN( 2 ).time_value() );
+  buff.pulverize = make_buff_fallback( talent.pulverize.ok(), this, "pulverize", find_spell( "Pulverize" ) );
 
   buff.primal_fury_bear = make_buff_fallback( talent.primal_fury.ok(), this, "primal_fury_bear",
                                               find_spell( talent.primal_fury->effectN( 1 ).trigger_spell_id() ) );
