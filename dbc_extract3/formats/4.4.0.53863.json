@@ -19408,8 +19408,7 @@
         "field": "proc_flags",
         "elements": 2
       }
-    ],
-    "parent": "SpellName"
+    ]
   },
   "SpellAuraRestrictions": {
     "fields": [
@@ -19453,8 +19452,7 @@
         "field": "exclude_target_aura_spell",
         "ref": "SpellName"
       }
-    ],
-    "parent": "SpellName"
+    ]
   },
   "SpellAuraVisibility": {
     "fields": [
@@ -19576,8 +19574,7 @@
         "field": "id_charge_category",
         "ref": "SpellCategory"
       }
-    ],
-    "parent": "SpellName"
+    ]
   },
   "SpellCategory": {
     "fields": [
@@ -20031,8 +20028,7 @@
         "field": "id_buff_spell",
         "ref": "SpellName"
       }
-    ],
-    "parent": "SpellName"
+    ]
   },
   "SpellCraftUI": {
     "fields": [
@@ -20410,8 +20406,7 @@
         "field": "channel_interrupt_flags",
         "elements": 2
       }
-    ],
-    "parent": "SpellName"
+    ]
   },
   "SpellItemEnchantment": {
     "fields": [
@@ -21256,8 +21251,7 @@
         },
         "field": "width"
       }
-    ],
-    "parent": "SpellName"
+    ]
   },
   "SpellTotems": {
     "fields": [
