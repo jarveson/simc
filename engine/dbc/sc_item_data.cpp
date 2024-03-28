@@ -234,6 +234,12 @@ bool item_database::apply_suffix( item_t& item, const random_suffix_data_t& suff
     return false;
   }
 
+  if ( item.parsed.data.quality < 0 )
+    return false;
+
+  // Parse and 'overwrite' the hopefully empty stat_type_e with enchant values
+  // scaling code in scaled_stat should then handle this correctly like any other item
+
   const auto& rpp = item.player->dbc->random_property( item.parsed.data.level );
   for ( size_t i = 0; i < 5; ++i )
   {
@@ -248,22 +254,8 @@ bool item_database::apply_suffix( item_t& item, const random_suffix_data_t& suff
                        suffix.id, enchant_id );
       continue;
     }
-
-    double amt = 0.0;
-    switch ( item.parsed.data.quality )
-    {
-      case 4:
-        amt = rpp.p_epic[ slot_type ] * suffix.enchant_alloc[ i ] / 10000.0;
-        break;
-      case 3:
-        amt = rpp.p_rare[ slot_type ] * suffix.enchant_alloc[ i ] / 10000.0;
-        break;
-      case 2:
-        amt = rpp.p_uncommon[ slot_type ] * suffix.enchant_alloc[ i ] / 10000.0;
-        break;
-      default:
-        continue;
-    }
+        
+    double amt = suffix.enchant_alloc[ i ];
 
     for ( size_t j = 0; j < 3; ++j )
     {
