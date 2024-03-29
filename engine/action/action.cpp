@@ -887,7 +887,12 @@ void action_t::parse_effect_data( const spelleffect_data_t& spelleffect_data )
     case E_179: // Spawn Area Triggers
       ground_aoe_duration = spelleffect_data.spell()->duration();
       break;
-
+    case E_ADD_COMBO_POINTS:
+    case E_ADD_COMBO_POINTS2:
+      energize_type     = action_energize::ON_HIT;
+      energize_resource = resource_e::RESOURCE_COMBO_POINT;
+      energize_amount   = spelleffect_data.base_value();
+      break;
     default:
       break;
   }
