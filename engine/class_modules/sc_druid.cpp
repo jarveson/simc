@@ -416,6 +416,7 @@ public:
 
     // Balance
     buff_t* eclipse_lunar;
+    buff_t* lunar_shower;
     buff_t* eclipse_solar;
     buff_t* natures_grace;
     buff_t* owlkin_frenzy;
@@ -1068,7 +1069,21 @@ struct bear_form_buff_t : public druid_buff_t, public swap_melee_t
 
     base_t::start( stacks, value, duration );
 
-    p()->resource_gain( RESOURCE_RAGE, rage_gain, p()->gain.bear_form );
+    // Kinda hacky but ignoring it for precombat
+    if ( !p()->in_combat )
+    {
+      p()->resource_gain( RESOURCE_RAGE, rage_gain, p()->gain.bear_form );
+    }
+    else if ( p()->talent.furor.rank() > 0)
+    {
+      double furorChance = p()->talent.furor->effectN( 1 ).percent();
+
+      if ( furorChance > 0.9 || rng().roll( furorChance ))
+      {
+        p()->resource_gain( RESOURCE_RAGE, rage_gain, p()->gain.bear_form );
+      }
+    }
+
     p()->recalculate_resource_max( RESOURCE_HEALTH );
   }
 };
@@ -1097,6 +1112,19 @@ struct cat_form_buff_t : public druid_buff_t, public swap_melee_t
     swap_melee( p()->cat_melee_attack, p()->cat_weapon );
 
     base_t::start( stacks, value, duration );
+
+    if ( !p()->in_combat )
+      return;
+
+    if ( p()->talent.furor.rank() == 3 )
+        return;
+
+    double limit = std::floor(p()->talent.furor.rank() * 33.4);
+
+    double cure = p()->resources.current[RESOURCE_ENERGY];
+    if (cure > limit) {
+        p()->resource_loss(RESOURCE_ENERGY, cure-limit);
+    }
   }
 };
 
@@ -1119,8 +1147,8 @@ struct primal_madness_buff_t : public druid_buff_t
   double energy_gain = 0;
   primal_madness_buff_t( druid_t* p )
     : druid_buff_t( p, "primal_madness",
-                    p->talent.primal_madness.rank() == 2   ? p->find_spell( 80879 )
-                    : p->talent.primal_madness.rank() == 1 ? p->find_spell( 80886 )
+                    p->talent.primal_madness.rank() == 2   ? p->find_spell( 80886 )
+                    : p->talent.primal_madness.rank() == 1 ? p->find_spell( 80879 )
                                                            : p->talent.primal_madness )
   {
     set_cooldown( timespan_t::zero() );
@@ -1131,13 +1159,13 @@ struct primal_madness_buff_t : public druid_buff_t
   void start( int stacks, double value, timespan_t duration ) override
   {
     buff_t::start( stacks, value, duration );
-    p()->stat_gain( STAT_MAX_ENERGY, energy_gain, p()->gain.primal_madness_energy);
+    p()->stat_gain( STAT_MAX_ENERGY, energy_gain, p()->gain.primal_madness_energy, nullptr, true);
   }
 
   void expire_override( int expiration_stacks, timespan_t remaining_duration ) override
   {
     buff_t::expire_override( expiration_stacks, remaining_duration );
-    p()->stat_loss( STAT_MAX_ENERGY, energy_gain, p()->gain.primal_madness_energy_expiry );
+    p()->stat_loss( STAT_MAX_ENERGY, energy_gain, p()->gain.primal_madness_energy_expiry, nullptr, true );
   }
 };
 
@@ -1298,6 +1326,12 @@ public:
     //parse_effects( p()->buff.incarnation_moonkin, p()->talent.elunes_guidance );
     parse_effects( p()->buff.owlkin_frenzy );
     parse_effects( p()->buff.shooting_stars );
+    parse_effects( p()->buff.lunar_shower, 0b011U, USE_CURRENT);
+
+    if ( p()->specialization() == DRUID_BALANCE )
+    {
+      parse_effects( p()->spec.moonfury);
+    }
 
     // Feral
     parse_effects( p()->buff.berserk );
@@ -1315,6 +1349,7 @@ public:
     parse_effects( p()->buff.tree_of_life );
     parse_effects( p()->buff.natures_swiftness );
     parse_effects( p()->buff.harmony );
+    parse_effects( p()->talent.blessing_of_the_grove, 0b1, USE_CURRENT );
   }
 
   template <typename T>
@@ -1429,6 +1464,9 @@ public:
 
   void trigger_earth_and_moon( action_state_t* s )
   {
+    if (!( p()->talent.earth_and_moon.ok() ))
+        return;
+
     if ( ab::sim->overrides.spell_dmg_taken )
       return;
 
@@ -1719,6 +1757,27 @@ private:
 public:
   druid_spell_t( std::string_view n, druid_t* p, const spell_data_t* s = spell_data_t::nil() ) : ab( n, p, s ) {
     ooc_chance = 3.5;
+  }
+
+  void consume_resource() override
+  {
+    double eff_cost = cost();
+
+    base_t::consume_resource();
+
+    // Treat Omen of Clarity savings like a gain for tracking purposes.
+    if ( p()->buff.clearcasting->up() )
+    {
+      p()->buff.clearcasting->decrement();
+      p()->gain.clearcasting->add( RESOURCE_MANA, eff_cost );
+    }
+  }
+
+  double action_multiplier() const override {
+    auto am = ab::action_multiplier(); 
+    if ( p()->talent.master_shapeshifter.ok() && p()->get_form() == MOONKIN_FORM )
+      return am * ( 1.0 + p()->talent.master_shapeshifter->effectN( 1 ).percent() );
+    return am;
   }
 };  // end druid_spell_t
 
@@ -2193,8 +2252,7 @@ struct berserk_t : public cat_attack_t
         }
         else
         {
-            p()->buff.primal_madness->modify_duration( data().duration() );
-            p()->buff.primal_madness->trigger();
+            p()->buff.primal_madness->trigger( data().duration() );
         }
     }
   }
@@ -2348,7 +2406,7 @@ struct savage_roar_t : public cat_finisher_t
     auto dur = s_data->duration() + ( 5_s * cps );
     dur += tdur;
 
-    p()->buff.savage_roar->trigger( 1, gval );
+    p()->buff.savage_roar->trigger( 1, gval, -1.0, dur );
   }
 };
 
@@ -2515,7 +2573,7 @@ struct rip_t : public cat_finisher_t
 // Shred ====================================================================
 struct shred_t : public cat_attack_t
 {
-  bool extend_rip;
+  bool extend_rip{};
 
   DRUID_ABILITY( shred_t, cat_attack_t, "shred", p->find_class_spell( "Shred" ) )
   {
@@ -2563,7 +2621,8 @@ struct shred_t : public cat_attack_t
 
 struct mangle_cat_t : public cat_attack_t
 {
-  bool extend_rip;
+  bool extend_rip{};
+
   DRUID_ABILITY( mangle_cat_t, cat_attack_t, "mangle_cat", p->spec.mangle_cat )
   {
     add_option( opt_bool( "extend_rip", extend_rip ) );
@@ -2639,8 +2698,7 @@ struct tigers_fury_t : public cat_attack_t
 
     if ( p()->talent.primal_madness.ok() )
     {
-      p()->buff.primal_madness->modify_duration( data().duration() );
-      p()->buff.primal_madness->trigger();
+      p()->buff.primal_madness->trigger( data().duration() );
     }
   }
 
@@ -2690,6 +2748,20 @@ struct bear_attack_t : public druid_attack_t<melee_attack_t>
       if ( s->result == RESULT_CRIT )
         attack_critical = true;
       attack_type = report_amount_type( s );
+    }
+  }
+
+  void consume_resource() override
+  {
+    double eff_cost = cost();
+
+    base_t::consume_resource();
+
+    // Treat Omen of Clarity savings like a gain for tracking purposes.
+    if ( p()->buff.clearcasting->up() )
+    {
+      p()->buff.clearcasting->decrement();
+      p()->gain.clearcasting->add( RESOURCE_RAGE, eff_cost );
     }
   }
 
@@ -3277,9 +3349,7 @@ struct moonfire_t : public druid_spell_t
   DRUID_ABILITY( moonfire_t, druid_spell_t, "moonfire", p->find_class_spell( "Moonfire" ) )
   {
     form_mask = NO_FORM | MOONKIN_FORM;
-    // is this additive?
-    if ( p->glyphs.moonfire->ok() )
-        druid_spell_t::base_ta_adder = p->glyphs.moonfire.spell()->effectN( 1 ).base_value();
+    apply_affecting_aura( p->glyphs.moonfire );
   }
 
   void tick( dot_t* d ) override
@@ -3331,9 +3401,6 @@ struct sunfire_t : public druid_spell_t
   DRUID_ABILITY( sunfire_t, druid_spell_t, "sunfire", p->talent.sunfire )
   {
     form_mask = NO_FORM | MOONKIN_FORM;
-    // is this additive?
-    if ( p->glyphs.moonfire->ok() )
-        druid_spell_t::base_ta_adder = p->glyphs.moonfire.spell()->effectN( 1 ).base_value();
   }
 
   void tick( dot_t* d ) override
@@ -3386,6 +3453,7 @@ struct wrath_t : public druid_spell_t
     form_mask = NO_FORM | MOONKIN_FORM;
 
     apply_affecting_aura(p->talent.starlight_wrath);
+    apply_affecting_aura(p->glyphs.wrath);
   }
 
   timespan_t gcd() const override
@@ -3418,10 +3486,7 @@ struct wrath_t : public druid_spell_t
          td( p()->target )->dots.insect_swarm->is_ticking() )
         t132p = 1.03;
 
-    if ( p()->talent.master_shapeshifter.ok() && p()->get_form() == MOONKIN_FORM )
-        return t132p * druid_spell_t::action_multiplier() *
-               ( 1.0 + p()->talent.master_shapeshifter->effectN( 2 ).percent() );
-    else if ( p()->buff.tree_of_life->check() )
+    if ( p()->buff.tree_of_life->check() )
         return t132p * druid_spell_t::action_multiplier() * 1.3;
     else
         return t132p * druid_spell_t::action_multiplier();
@@ -4132,8 +4197,7 @@ struct feral_charge_base_t : public druid_spell_t
 
 struct feral_charge_cat_t : public feral_charge_base_t
 {
-  DRUID_ABILITY( feral_charge_cat_t, feral_charge_base_t, "feral_charge_cat",
-                 p->find_class_spell( "Feral Charge (Cat)" ) )
+  DRUID_ABILITY( feral_charge_cat_t, feral_charge_base_t, "feral_charge_cat", p->find_spell( 49376 ) )
   {
     apply_affecting_aura( p->glyphs.feral_charge );
     form_mask = CAT_FORM;
@@ -4151,8 +4215,7 @@ struct feral_charge_cat_t : public feral_charge_base_t
 
 struct feral_charge_bear_t : public feral_charge_base_t
 {
-  DRUID_ABILITY( feral_charge_bear_t, feral_charge_base_t, "feral_charge_bear",
-                 p->find_class_spell( "Feral Charge (Bear)" ) )
+  DRUID_ABILITY( feral_charge_bear_t, feral_charge_base_t, "feral_charge_bear", p->find_spell( 16979 ) )
   {
     apply_affecting_aura( p->glyphs.feral_charge );
     form_mask = BEAR_FORM;
@@ -4173,7 +4236,7 @@ struct feral_charge_proxy_t : public druid_spell_t
   action_t* fc_bear;
 
   feral_charge_proxy_t( druid_t* p )
-    : druid_spell_t( "feral_charge", p, p->find_class_spell( "Feral Charge (Cat)" ) ),
+    : druid_spell_t( "feral_charge", p, p->find_spell( 49376 ) ),
       fc_cat( new feral_charge_cat_t( p ) ),
       fc_bear( new feral_charge_bear_t( p ) )
   {
@@ -4739,6 +4802,10 @@ void druid_t::create_buffs()
 
   // Balance buffs
 
+  buff.lunar_shower =
+     make_buff_fallback( talent.lunar_shower.ok(), this, "lunar_shower", find_trigger( talent.lunar_shower ).trigger() )
+        ->set_default_value_from_effect_type(A_ADD_PCT_MODIFIER);
+
   /* buff.eclipse_lunar = make_buff_fallback( talent.eclipse.ok(), this, "eclipse_lunar", spec.eclipse_lunar )
     ->set_default_value_from_effect_type( A_ADD_PCT_MODIFIER, P_GENERIC )
     ->set_stack_change_callback( [ this ]( buff_t*, int old_, int new_ ) {
@@ -4817,8 +4884,10 @@ void druid_t::create_buffs()
                                            find_spell( talent.stampede.rank() > 1 ? 81017 : 81016 ) )
                            ->apply_affecting_aura( glyphs.feral_charge );
 
-  buff.enrage        = make_buff( this, "enrage", find_class_spell( "Enrage" ) );
-  buff.pulverize = make_buff_fallback( talent.pulverize.ok(), this, "pulverize", find_spell( "Pulverize" ) );
+  buff.enrage    = make_buff( this, "enrage", find_class_spell( "Enrage" ) );
+  buff.pulverize =
+      make_buff_fallback( talent.pulverize.ok(), this, "pulverize", find_spell( "Pulverize" ) )
+          ->modify_duration( talent.endless_carnage->effectN( 2 ).time_value() );
 
   buff.primal_fury_bear = make_buff_fallback( talent.primal_fury.ok(), this, "primal_fury_bear",
                                               find_spell( talent.primal_fury->effectN( 1 ).trigger_spell_id() ) );
@@ -5430,6 +5499,7 @@ double druid_t::composite_spell_crit_chance() const
   double scc = player_t::composite_spell_crit_chance();
   if ( buff.cat_form->check() )
     scc += talent.master_shapeshifter->effectN( 1 ).percent();
+  scc += talent.natures_majesty->effectN(1).percent();
   return scc;
 }
 
@@ -5887,7 +5957,6 @@ void druid_t::apply_affecting_auras( action_t& action )
   // Spec-wide auras
   action.apply_affecting_aura( spec_spell );
 
-  action.apply_affecting_aura( spec.moonfury );
   action.apply_affecting_aura( talent.natural_shapeshifter );
   action.apply_affecting_aura( talent.genesis );
   action.apply_affecting_aura( talent.feral_aggression );
@@ -5895,6 +5964,8 @@ void druid_t::apply_affecting_auras( action_t& action )
   action.apply_affecting_aura( talent.earth_and_moon );
   action.apply_affecting_aura( talent.balance_of_power );
   action.apply_affecting_aura( talent.gale_winds );
+  action.apply_affecting_aura( talent.moonglow );
+  action.apply_affecting_aura( talent.blessing_of_the_grove);
 
   // Feral
   action.apply_affecting_aura( sets->set( DRUID_FERAL, T11, B2 ) );
@@ -6116,7 +6187,6 @@ struct druid_module_t : public module_t
 
     p->debuffs.faerie_fire =
         make_buff( p, "faerie_fire", p->find_spell( 91565 ) )
-        ->set_chance(1)
         ->add_invalidate( CACHE_ARMOR );
   }
 
