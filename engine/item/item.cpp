@@ -315,6 +315,29 @@ std::string item_t::item_stats_str() const
   return str;
 }
 
+std::string item_t::reforge_stats_str() const
+{
+  std::ostringstream ss;
+  for ( const auto& s : parsed.reforge_stats )
+  {
+    if ( s.value < 0 )
+      ss << "-";
+    else
+      ss << "+";
+
+    ss << s.value << " " << util::stat_type_abbrev( s.stat );
+    ss << ", ";
+  }
+
+  std::string str = ss.str();
+  if ( str.size() > 2 )
+  {
+    str.erase( str.end() - 2, str.end() );
+  }
+
+  return str;
+}
+
 std::string item_t::weapon_stats_str() const
 {
   if ( ! weapon() )
@@ -445,6 +468,9 @@ void sc_format_to( const item_t& item, fmt::format_context::iterator out )
 
   if ( item.has_stats() )
     fmt::format_to( out, " stats={{ {} }}", item.item_stats_str() );
+
+  if ( !item.parsed.reforge_stats.empty() )
+    fmt::format_to( out, " reforge={{ {} }}", item.reforge_stats_str() );
 
   if ( !item.parsed.gem_stats.empty() )
     fmt::format_to( out, " gems={{ {} }}", item.gem_stats_str() );

@@ -123,6 +123,7 @@ struct item_t
     std::vector<unsigned>                            azerite_ids;
     std::vector<int>                                 crafted_stat_mod;
     unsigned                                         reforge_id;
+    std::vector<stat_pair_t>                         reforge_stats;
     unsigned                                         suffix_id;
 
     // Priority state tracking for item bonuses
@@ -244,6 +245,7 @@ struct item_t
   static std::string stat_pairs_to_str( const std::vector<stat_pair_t>& stat_pairs );
 
   std::string item_stats_str() const;
+  std::string reforge_stats_str() const;
   std::string weapon_stats_str() const;
   std::string gem_stats_str() const;
   std::string socket_bonus_stats_str() const;

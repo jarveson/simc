@@ -1289,6 +1289,13 @@ void print_html_gear( report::sc_html_stream& os, const player_t& p )
       item_sim_desc += " }";
     }
 
+    if (!item.parsed.reforge_stats.empty())
+    {
+      item_sim_desc += ", reforge: { ";
+      item_sim_desc += item.reforge_stats_str();
+      item_sim_desc += " }";
+    }
+
     if ( !item.parsed.gem_stats.empty() )
     {
       item_sim_desc += ", gems: { ";

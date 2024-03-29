@@ -198,6 +198,10 @@ bool item_database::apply_reforge( item_t& item, const item_reforge_data_t& refo
   item.base_stats.add_stat( dst_stat, stat_alloc * 1.0 );
   item.stats.add_stat(dst_stat, stat_alloc * 1.0);
 
+  item.parsed.reforge_stats.clear();
+  item.parsed.reforge_stats.push_back( { src_stat, as<int>(stat_alloc * -1.0) } );
+  item.parsed.reforge_stats.push_back( { dst_stat, as<int>(stat_alloc * 1.0) } );
+
   return true;
 }
 
