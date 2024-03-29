@@ -941,7 +941,8 @@ void profileset_fetch_output_data( const profileset::profile_output_data_t& outp
   }
   if ( !output_data.talents().empty() )
   {
-    const auto& talents = output_data.talents();
+    assert( false );
+    /* const auto& talents = output_data.talents();
     auto ovr_talents = ovr[ "talents" ].make_array();
     for ( auto talent : talents )
     {
@@ -950,7 +951,7 @@ void profileset_fetch_output_data( const profileset::profile_output_data_t& outp
       ovr_talent[ "id" ] = talent->id();
       ovr_talent[ "spell_id" ] = talent->spell_id();
       ovr_talent[ "name" ] = talent->name_cstr();
-    }
+    }*/
   }
   if ( !output_data.gear().empty() )
   {

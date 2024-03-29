@@ -44,13 +44,13 @@ public:
 
   bool has_row_col( int tree, int col, int row ) const
   {
-    return choice( tree, col, row ) > 0;
+    return choice( tree, col, row ) >= 0;
   }
 
   void select_row_col(int tree, int col, int row, int rank)
   {
     row_col_check( row, col );
-    _choices[ tree ][ col ][ row ] = rank;
+    _choices[ tree ][ col ][ row ] = rank - 1;
   }
 
   void clear();

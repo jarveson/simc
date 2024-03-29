@@ -43,7 +43,7 @@ const talent_data_t* talent_data_t::find( util::string_view name, specialization
 {
   for ( const talent_data_t& td : data( ptr ) )
   {
-    if ( td.specialization() == spec && name == td.name_cstr() )
+    if ( name == td.name_cstr() )
       return &td;
   }
   return nullptr;
@@ -54,22 +54,25 @@ const talent_data_t* talent_data_t::find_tokenized( util::string_view name, spec
   for ( const talent_data_t& td : data( ptr ) )
   {
     auto tokenized_name = util::tokenize_fn( td.name_cstr() );
-    if ( td.specialization() == spec && util::str_compare_ci( name, tokenized_name ) )
+    if ( util::str_compare_ci( name, tokenized_name ) )
       return &td;
   }
 
   return nullptr;
 }
 
-const talent_data_t* talent_data_t::find( player_e c, unsigned int row, unsigned int col, specialization_e spec, bool ptr )
+const talent_data_t* talent_data_t::find( player_e c, unsigned int row, unsigned int col, unsigned int tree, bool ptr )
 {
   for ( const talent_data_t& td : data( ptr ) )
   {
-    if ( td.is_class( c ) && ( row == td.row() ) && ( col == td.col() ) && spec == td.specialization() )
+    if ( td.is_class( c ) && ( row == td.row() ) && ( col == td.col() ) && (tree == td._tab_id ))
     {
       return &td;
     }
   }
+  return nullptr;
+
+  /*
 
   // Second round to check all talents, either with a none spec, or no spec check at all,
   // depending on what the caller gave in "spec" parameter
@@ -87,7 +90,7 @@ const talent_data_t* talent_data_t::find( player_e c, unsigned int row, unsigned
     }
   }
 
-  return nullptr;
+  return nullptr;*/
 }
 
 util::span<const talent_data_t> talent_data_t::data( bool ptr )
@@ -97,8 +100,8 @@ util::span<const talent_data_t> talent_data_t::data( bool ptr )
 
 void talent_data_t::link( bool ptr )
 {
-  for ( talent_data_t& td : _data( ptr ) )
-    td.spell1 = spell_data_t::find( td.spell_id(), ptr );
+  //for ( talent_data_t& td : _data( ptr ) )
+  //  td.spell1 = spell_data_t::find( td.spell_id(), ptr );
 }
 
 util::span<talent_data_t> talent_data_t::_data( bool ptr )
@@ -109,7 +112,7 @@ util::span<talent_data_t> talent_data_t::_data( bool ptr )
 talent_data_nil_t::talent_data_nil_t()
   : talent_data_t()
 {
-  spell1 = spell_data_t::not_found();
+  invalid_spell = spell_data_t::not_found();
 }
 
 /* static */ const talent_data_nil_t talent_data_nil_t::singleton;

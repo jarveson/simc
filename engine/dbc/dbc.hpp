@@ -508,7 +508,7 @@ public:
   double   effect_bonus( unsigned effect_id, unsigned level ) const;
   double   effect_bonus( const spelleffect_data_t* effect, unsigned level ) const;
 
-  unsigned talent_ability_id( player_e c, specialization_e spec_id, util::string_view spell_name, bool tokenized = false ) const;
+  unsigned talent_ability_id( player_e c, specialization_e spec_id, util::string_view spell_name, int rank = -1, bool tokenized = false ) const;
   unsigned class_ability_id( player_e c, specialization_e spec_id, util::string_view spell_name, bool tokenized = false ) const;
   unsigned pet_ability_id( player_e c, util::string_view spell_name, bool tokenized = false ) const;
   unsigned race_ability_id( player_e c, race_e r, util::string_view spell_name ) const;

@@ -1621,7 +1621,7 @@ double dbc_t::effect_max( const spelleffect_data_t* e, unsigned level ) const
   return result;
 }
 
-unsigned dbc_t::talent_ability_id( player_e c, specialization_e spec, util::string_view spell_name, bool name_tokenized ) const
+unsigned dbc_t::talent_ability_id( player_e c, specialization_e spec, util::string_view spell_name, int rank, bool name_tokenized ) const
 {
   uint32_t cid = util::class_id( c );
 
@@ -1642,9 +1642,28 @@ unsigned dbc_t::talent_ability_id( player_e c, specialization_e spec, util::stri
       t = talent_data_t::find( spell_name, SPEC_NONE, ptr ); // now with SPEC_NONE
   }
 
-  if ( t && t -> is_class( c ) && ! replaced_id( t -> spell_id() ) )
+  if ( !t )
+    return 0;
+
+  auto spell_id = 0;
+  if ( rank < 0 )
   {
-    return t -> spell_id();
+    for ( int i = 8; i > 0; --i )
+    {
+      if (t->_spell_ranks[i] != 0) {
+        spell_id = t->_spell_ranks[ i ];
+        break;
+      }
+    }
+  }
+  else if ( rank > 8 )
+    return 0;
+  else
+    spell_id = t->_spell_ranks[ rank ];
+
+  if ( t->is_class( c ) && !replaced_id( spell_id ) )
+  {
+     return spell_id;
   }
 
   return 0;
@@ -1909,10 +1928,10 @@ unsigned dbc_t::replace_spell_id( unsigned spell_id ) const
   if ( spec_entry != spec_spells.end() )
     return spec_entry -> override_spell_id;
 
-  auto talent_spells = talent_data_t::data( ptr );
+  /* auto talent_spells = talent_data_t::data( ptr );
   auto talent_entry = range::find( talent_spells, spell_id, &talent_data_t::spell_id );
   if ( talent_entry != talent_spells.end() )
-    return talent_entry -> replace_id();
+    return talent_entry -> replace_id();*/
 
   return 0;
 }

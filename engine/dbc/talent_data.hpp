@@ -22,8 +22,8 @@ struct talent_data_t
   unsigned     _spec;        // Specialization
   unsigned     _col;         // Talent column
   unsigned     _row;         // Talent row
-  unsigned     _spell_id;    // Talent spell
-  unsigned     _replace_id;  // Talent replaces the following spell id
+  unsigned     _empty;       // Talent spell
+  unsigned     _empty2;      // Talent replaces the following spell id
 
   unsigned _tab_id;
   unsigned _spell_ranks[ 9 ];
@@ -31,7 +31,7 @@ struct talent_data_t
   unsigned _prereq_rank[ 3 ];
 
   // Pointers for runtime linking
-  const spell_data_t* spell1;
+  const spell_data_t* invalid_spell;
 
   // Direct member access functions
   unsigned id() const
@@ -46,12 +46,12 @@ struct talent_data_t
   unsigned row() const
   { return _row; }
 
-  unsigned spell_id() const
+  /* unsigned spell_id() const
   { return _spell_id; }
 
   unsigned replace_id() const
   { return _replace_id; }
-
+  */
   unsigned mask_class() const
   { return _m_class; }
 
@@ -63,8 +63,8 @@ struct talent_data_t
 
   // composite access functions
 
-  const spell_data_t* spell() const
-  { assert(spell1); return spell1; }
+  //const spell_data_t* spell() const
+  //{ assert(spell1); return spell1; }
 
   bool is_class( player_e c ) const;
 
@@ -74,7 +74,7 @@ struct talent_data_t
   static const talent_data_t* find( unsigned, util::string_view confirmation, bool ptr = false );
   static const talent_data_t* find( util::string_view name, specialization_e spec, bool ptr = false );
   static const talent_data_t* find_tokenized( util::string_view name, specialization_e spec, bool ptr = false );
-  static const talent_data_t* find( player_e c, unsigned int row, unsigned int col, specialization_e spec, bool ptr = false );
+  static const talent_data_t* find( player_e c, unsigned int row, unsigned int col, unsigned tree, bool ptr = false );
   static util::span<const talent_data_t> data( bool ptr = false );
   static void link( bool ptr = false );
 private:

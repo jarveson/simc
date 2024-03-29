@@ -2447,6 +2447,11 @@ void player_t::override_talent( util::string_view override_str )
     }
   }*/
 
+  /* const auto td = find_talent_spell( talent_tree::CLASS, override_str );
+
+  const talent_data_t* t = talent_data_t::find(override_str, specialization());
+
+
   unsigned spell_id = dbc->talent_ability_id( type, specialization(), override_str, true );
 
   if ( !spell_id || dbc->spell( spell_id )->id() != spell_id )
@@ -2463,6 +2468,18 @@ void player_t::override_talent( util::string_view override_str )
         const talent_data_t* t = talent_data_t::find( type, j, i, specialization(), dbc->ptr );
         if ( t && ( t->spell_id() == spell_id ) )
         {
+          int rank = -1;
+          for ( int i = 0; i < 9; ++i )
+          {
+            if (t->_spell_ranks[i] == spell_id) {
+              rank = i;
+              break;
+            }
+          }
+
+          if (rank == -1)
+              continue;
+          
           if ( true_level < 20 + ( j == 0 ? -1 : j ) * 5 )
           {
                   throw std::invalid_argument(
@@ -2479,11 +2496,11 @@ void player_t::override_talent( util::string_view override_str )
                   sim->error( "talent_override: talent '{}' for {}s replaced talent {} in tier {}.\n", override_str,
                               *this, talent_points->choice(k, i, j ) + 1, j + 1 );
           }
-          talent_points->select_row_col(k, j, i, 1 );
+          talent_points->select_row_col( k, j, i, rank );
         }
       }
     }
-  }
+  }*/
 }
 
 static void parse_traits(
@@ -2751,34 +2768,39 @@ static std::string generate_traits_hash( player_t* player )
 
 // returns map of valid col/rows for selected class
 static std::array<std::map<int, std::map<int, int>>, 3> get_talent_table(player_t* p ) {
-  auto c = (player_e)util::class_id( p->type );
-  assert(c > PLAYER_NONE);
+  assert( p->type > PLAYER_NONE );
+  std::array<std::map<int, std::map<int, int>>, 3> rtn;
 
-  auto tab_data = talent_tab_data_t::data();
+  if ( p->type > WARRIOR ) {
+    return rtn;
+  }
+
   std::map<int, int> tabs;
+  auto tab_data = talent_tab_data_t::data();
   for (const auto& td : tab_data) {
-    if (td.is_class(c)) {
+    if ( td.is_class( p->type ) )
+    {
       tabs[td.order] = td.id;
     }
     if (tabs.size() == 3)
-        break;
+      break;
   }
 
-  assert(tabs.size() == 3);
+  assert( tabs.size() == 3 );
 
-  std::array<std::map<int, std::map<int, int>>, 3> rtn;
   for ( const auto& t : tabs )
   {
-    rtn[t.first] = {};
+    rtn[ t.first ] = {};
     for ( unsigned int r = 0; r < MAX_TALENT_ROWS; ++r )
     {
-        for (unsigned int col = 0; col < MAX_TALENT_COLS; ++c) {
-            auto td = talent_data_t::find( c, r, col, (specialization_e)t.second, p->is_ptr() );
-            if (td != nullptr)
-                rtn[ t.first ][col][r] = td->id();
-            else
-                rtn[ t.first ][ col ][ r ] = -1;
-        }
+      for ( unsigned int col = 0; col < MAX_TALENT_COLS; ++col )
+      {
+        auto td = talent_data_t::find( p->type, r, col, t.second, p->is_ptr() );
+        if ( td != nullptr )
+          rtn[ t.first ][ col ][ r ] = td->id();
+        else
+          rtn[ t.first ][ col ][ r ] = -1;
+      }
     }
   }
 
@@ -2792,11 +2814,11 @@ static void parse_wowhead_talents( const std::string& talents_str, player_t* pla
                         msg.empty() ? "" : ": ", msg );
   };
 
-  auto glyph_split = talents_str.find( '_0' );
+  auto glyph_split = talents_str.find( "_0" );
   std::string glyph_part = "";
   std::string tlt_part   = talents_str;
   if (glyph_split != std::string::npos) { 
-      glyph_part = talents_str.substr(glyph_split+1);
+      glyph_part = talents_str.substr(glyph_split+2);
       tlt_part = talents_str.substr(0, glyph_split);
   }
 
@@ -2808,9 +2830,13 @@ static void parse_wowhead_talents( const std::string& talents_str, player_t* pla
       tokens.emplace_back( tlt_part.substr( last, pos - last ) );
       last = pos + 1;
   }
+  tokens.emplace_back(tlt_part.substr(last));
 
-  if (tokens.size() > 3)
-      do_error("invalid talent split");
+  if ( tokens.size() > 3 )
+  {
+      do_error( "invalid talent split" );
+      return;
+  }
 
   player->talent_points->clear();
 
@@ -2823,15 +2849,18 @@ static void parse_wowhead_talents( const std::string& talents_str, player_t* pla
       const auto& vt = tt[t];
       int i_max = std::min( (int)tokens[ t ].size(), MAX_TALENT_SLOTS);
       if (i_max == 0)
-          break;
+          continue;
       int i = 0;
       for (int r = 0; r < MAX_TALENT_ROWS; ++r ) {
           for (int c = 0; c < MAX_TALENT_COLS; ++c ) {
-              char selection = tokens[ t ][ i++ ];
-            if (c < '0')
-                throw std::runtime_error( fmt::format( "Illegal character '{}' in talent encoding.", c ) );
-            if ( c > '0' )
-                player->talent_points->select_row_col( t, c, r, selection - '1' );
+            if ( vt.at(c).at(r) <= 0 )
+               continue;
+
+            char selection = tokens[ t ][ i++ ];
+            if ( selection < '0' || selection > '9' )
+                throw std::runtime_error( fmt::format( "Illegal character '{}' in talent encoding.", selection ) );
+            if ( selection > '0' )
+                player->talent_points->select_row_col( t, c, r, selection - '0' );
             if ( i == i_max )
                 break;
           }
@@ -2858,10 +2887,10 @@ static void parse_wowhead_talents( const std::string& talents_str, player_t* pla
       // first char is index, dont really care about it, wowhead seems to always order them anyway
       size_t spellId = 0;
       for (size_t j = 1; j < 5; ++j ) {
-        auto it = range::find( lut, glyph_part[i] );
+        auto it = range::find( lut, glyph_part[i + j] );
         if (it == lut.end())
             continue;
-        spellId += ((uint64_t)*it) << ( 5 * (4 - j) );
+        spellId += (uint64_t)std::distance(lut.begin(), it) << ( 5 * (4 - j) );
       }
       player->player_glyphs.push_back(spellId);
   }
@@ -10713,22 +10742,28 @@ void player_t::create_talents_numbers()
 {
   talents_str.clear();
 
+  auto tt = get_talent_table( this );
+
   for (int t = 0; t < MAX_TALENT_TREES; t++) { 
     bool has_selection = false;
     std::string tree_str;
-    for ( int j = 0; j < MAX_TALENT_COLS; j++ )
+    for ( int k = 0; k < MAX_TALENT_ROWS; ++k )
     {
-      for ( int k = 0; k < MAX_TALENT_ROWS; ++k )
+      for ( int j = 0; j < MAX_TALENT_COLS; j++ )
       {
         int choice = talent_points->choice( t, j, k ) + 1;
         if (choice > 0)
             has_selection = true;
+        if ( tt[t][j][k] <= 0 )
+            continue;
         tree_str += util::to_string( choice );
       }
     }
+    tree_str.erase( range::find_if_rev( tree_str, [] (char c){ return c != '0';} ).base(), tree_str.end());
     if (has_selection)
       talents_str += tree_str;
-    talents_str += "-";
+    if (t < MAX_TALENT_TREES - 1)
+        talents_str += "-";
   }
 }
 
@@ -10794,7 +10829,7 @@ void player_t::replace_spells()
   }
 
   // Search talents for spells to replace.
-  for ( int k = 0; k < MAX_TALENT_TREES; ++k )
+  /*for ( int k = 0; k < MAX_TALENT_TREES; ++k )
   {
     for ( int j = 0; j < MAX_TALENT_ROWS; j++ )
     {
@@ -10811,7 +10846,7 @@ void player_t::replace_spells()
         }
       }
     }
-  }
+  }*/
 
   // Search general spells for spells to replace (a spell you learn earlier might be
   // replaced by one you learn later)
@@ -10902,44 +10937,33 @@ const spell_data_t* player_t::find_talent_spell( util::string_view n, specializa
     s = specialization();
   }
 
-  // Get a talent's spell id for a given talent name
-  unsigned spell_id = dbc->talent_ability_id( type, s, n, name_tokenized );
+  const talent_data_t* td{};
+  if ( name_tokenized )
+    td = talent_data_t::find_tokenized( n, s );
+  else
+    td = talent_data_t::find( n, s );
 
-  if ( !spell_id )
-  {
+  if (!td) {
     sim->print_debug( "Player {}: Can't find talent with name '{}'.", name(), n );
     return spell_data_t::not_found();
   }
 
-  for ( int t = 0; t < MAX_TALENT_TREES; t++ )
-  {
-    for ( int j = 0; j < MAX_TALENT_ROWS; j++ )
-    {
-      for ( int i = 0; i < MAX_TALENT_COLS; i++ )
-      {
-        auto td = talent_data_t::find( type, j, i, s, dbc->ptr );
-        if ( !td )
-          continue;
-        auto spell = dbc::find_spell( this, td->spell_id() );
-
-        // Loop through all our classes talents, and check if their spell's id match the one we maped to the given
-        // talent name
-        if ( td && ( td->spell_id() == spell_id ) )
-        {
-          // check if we have the talent enabled or not
-          // Level tiers are hardcoded here which means they will need to changed when levels change
-          if ( check_validity &&
-               ( !talent_points->validate( spell, t, j, i ) || true_level < 20 + ( j == 0 ? -1 : j ) * 5 ) )
-            return spell_data_t::not_found();
-
-          return spell;
-        }
-      }
-    }
+  auto ttd = talent_tab_data_t::find( td->_tab_id );
+  if (ttd == &talent_tab_data_t::nil()) {
+    sim->print_debug( "Player {}: Can't find talent with name '{}'.", name(), n );
+    return spell_data_t::not_found();
   }
 
-  /* Talent not enabled */
-  return spell_data_t::not_found();
+  auto c = talent_points->choice( ttd->order, td->col(), td->row() );
+  if ( c < 0 )
+    return spell_data_t::not_found();
+
+  auto spell = dbc->spell( td->_spell_ranks[ c ] );
+
+  // check if we have the talent enabled or not
+  if ( check_validity && ( !talent_points->validate( spell, ttd->order, td->col(), td->row() ) ) )
+    return spell_data_t::not_found();
+  return spell;
 }
 
 static player_talent_t create_talent_obj(
@@ -10952,14 +10976,14 @@ static player_talent_t create_talent_obj(
   if ( ttd == &talent_tab_data_t::nil() )
     return { player };
 
-  unsigned c = player->talent_points->choice( ttd->order, tdt->col(), tdt->row() );
-  if (!c) {
+  auto c = player->talent_points->choice( ttd->order, tdt->col(), tdt->row() );
+  if ( c < 0 ) {
     return { player };
   }
 
   auto s = player->dbc->spell( tdt->_spell_ranks[c] );
 
-  return { player, s, c };
+  return { player, s, (unsigned)c+1 };
 }
 
 static player_glyph_t create_glyph_obj(const player_t* player, const glyph_property_data_t* glyph )
@@ -10975,34 +10999,28 @@ static player_glyph_t create_glyph_obj(const player_t* player, const glyph_prope
 
 player_talent_t player_t::find_talent_spell(
     talent_tree        tree,
-    util::string_view name,
+    util::string_view n,
     specialization_e  s,
     bool              name_tokenized ) const
 {
-  const trait_data_t* trait;
-  uint32_t class_idx, spec_idx;
-
-  dbc->spec_idx( s == SPEC_NONE ? _spec : s, class_idx, spec_idx );
-
-  if ( name_tokenized )
+  if ( s == SPEC_NONE )
   {
-    trait = trait_data_t::find_tokenized( tree, name, class_idx, s, dbc->ptr );
-  }
-  else
-  {
-    trait = trait_data_t::find( tree, name, class_idx, s, dbc->ptr );
+    s = specialization();
   }
 
-  if ( trait == &trait_data_t::nil() )
-  {
-    sim->print_debug( "Player {}: Can't find {} talent with name '{}'.", this->name(),
-        util::talent_tree_string( tree ), name );
-    return {};  // Invalid trait
+  if (name_tokenized) {
+    auto td = talent_data_t::find_tokenized( n, s, dbc->ptr );
+    if ( td )
+      return create_talent_obj( this, s, td );
+  }
+  else {
+    auto td = talent_data_t::find( n, s, dbc->ptr );
+    if ( td )
+      return create_talent_obj( this, s, td );
   }
 
-  assert(false);
+  sim->print_debug( "Player {}: Can't find talent with name '{}'.", name(), n );
   return {};
-  //return create_talent_obj( this, s, trait );
 }
 
 player_talent_t player_t::find_talent_spell(
@@ -11010,6 +11028,8 @@ player_talent_t player_t::find_talent_spell(
   unsigned         spell_id,
   specialization_e s ) const
 {
+  assert(false);
+
   uint32_t class_idx, spec_idx;
 
   dbc->spec_idx( s == SPEC_NONE ? _spec : s, class_idx, spec_idx );
@@ -11028,6 +11048,7 @@ player_talent_t player_t::find_talent_spell(
 
 player_talent_t player_t::find_talent_spell( unsigned trait_node_entry_id, specialization_e s ) const
 {
+  assert(false);
   const trait_data_t* trait = trait_data_t::find( trait_node_entry_id, dbc->ptr );
   if ( trait == &trait_data_t::nil() )
   {
