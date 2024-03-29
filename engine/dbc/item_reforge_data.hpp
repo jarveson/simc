@@ -17,4 +17,5 @@ struct item_reforge_data_t
 
   static const item_reforge_data_t& find( unsigned, bool ptr = false );
   static util::span<const item_reforge_data_t> data( bool ptr = false );
+  static const item_reforge_data_t& find( unsigned src_stat, unsigned dst_stat, bool ptr = false );
 };

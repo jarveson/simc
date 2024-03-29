@@ -171,57 +171,33 @@ void item_database::apply_item_scaling( item_t& item, unsigned curve_id, unsigne
 
 bool item_database::apply_reforge( item_t& item, const item_reforge_data_t& reforge )
 {
-  int found = -1;
-  int found2 = -1;
-  int offset = -1;
-  for ( size_t i = 0, end = item.parsed.data.stat_type_e.size(); i < end; i++ )
-  {
-    if ( found == -1 && item.parsed.data.stat_type_e[ i ] == reforge.source_stat )
-    {
-      found = static_cast<int>( i );
-    }
-    if ( found2 == -1 && item.parsed.data.stat_type_e[ i ] == reforge.target_stat )
-    {
-      found2 = static_cast<int>( i );
-    }
-    // Put the new stat in first available slot
-    if ( offset == -1 && item.parsed.data.stat_type_e[ i ] == ITEM_MOD_NONE )
-      offset = static_cast<int>( i );
-  }
+  auto src_stat = util::translate_item_mod( reforge.source_stat );
+  auto dst_stat = util::translate_item_mod( reforge.target_stat );
 
-  if ( found == -1 || (item.parsed.data.stat_alloc[found] == 0 ))
+  auto src_amount = item.base_stats.get_stat( src_stat );
+
+  if ( src_amount <= 0.1 )
   {
     item.sim->error( "Player {} item '{}' reforge id {} source_stat {} not found.", item.player->name(), item.name(),
-                     reforge.id, reforge.source_stat );
+                     reforge.id, util::stat_type_abbrev(src_stat) );
     return false;
   }
 
-  if ( found2 != -1 )
+  if ( item.base_stats.get_stat( dst_stat ) > 0.0 )
   {
-    item.sim->error( "Player {} item '{}' reforge id {} target_stat {} already exists.", item.player->name(), item.name(),
-                     reforge.id, reforge.target_stat );
+    item.sim->error( "Player {} item '{}' reforge id {} target_stat {} already exists.", item.player->name(),
+                     item.name(), reforge.id, util::stat_type_abbrev( src_stat ) );
     return false;
   }
 
-  if ( offset == -1 )
-  {
-    item.sim->error( "Player {} item '{}' reforge id {}, no room for new stat", item.player->name(), item.name(),
-                     reforge.id );
-    return false;
-  }
+  auto stat_alloc = util::floor( src_amount * reforge.source_multiplier );
 
-  auto stat_alloc = util::floor(item.parsed.data.stat_alloc[ found ] * reforge.source_multiplier);
-  item.parsed.data.stat_alloc[ found ] -= stat_alloc;
+  item.base_stats.add_stat( src_stat, stat_alloc * -1.0 );
+  item.stats.add_stat( src_stat, stat_alloc * -1.0 );
 
-  if ( item.sim->debug )
-  {
-    item.sim->print_debug( "Player {} item '{}' reforging {} stat type '{}' to '{}' (index={})", item.player->name(),
-                           item.name(), stat_alloc,
-                           util::stat_type_abbrev( util::translate_item_mod( reforge.source_stat ) ),
-                           util::stat_type_abbrev( util::translate_item_mod( reforge.target_stat ) ), offset );
-  }
-  item.parsed.data.stat_type_e[ offset ] = reforge.target_stat;
-  item.parsed.data.stat_alloc[ offset ] = stat_alloc;
+  item.base_stats.add_stat( dst_stat, stat_alloc * 1.0 );
+  item.stats.add_stat(dst_stat, stat_alloc * 1.0);
+
   return true;
 }
 

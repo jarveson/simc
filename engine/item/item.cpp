@@ -818,7 +818,6 @@ void item_t::parse_options()
 
   option_name_str = options_str;
   std::string remainder;
-  std::string DUMMY_REFORGE; // TODO-WOD: Remove once profiles update
   std::string DUMMY_CONTEXT; // not used by simc but used by 3rd parties (raidbots)
   std::string DUMMY_CRAFTING_QUALITY; // not used by simc but used by 3rd parties (raidbots)
 
@@ -846,7 +845,6 @@ void item_t::parse_options()
     opt_string("heroic", option_heroic_str),
     opt_string("mythic", option_mythic_str),
     opt_string("type", option_armor_type_str),
-    opt_string("reforge", DUMMY_REFORGE),
     opt_string("ilevel", option_ilevel_str),
     opt_string("quality", option_quality_str),
     opt_string("source", option_data_source_str),
@@ -866,7 +864,8 @@ void item_t::parse_options()
     opt_string("crafted_stats", option_crafted_stat_str),
     opt_string("crafting_quality", DUMMY_CRAFTING_QUALITY),
     opt_string("reforge", option_reforge_str ),
-    opt_string("suffix", option_suffix_str ),
+    opt_string("reforge_id", option_reforge_id_str ),
+    opt_string("suffix_id", option_suffix_id_str ),
   } };
 
   try
@@ -1069,11 +1068,11 @@ void item_t::parse_options()
     }
   }
 
-  if ( !option_reforge_str.empty() )
-    parsed.reforge_id = util::to_unsigned( option_reforge_str );
+  if ( !option_reforge_id_str.empty() )
+    parsed.reforge_id = util::to_unsigned( option_reforge_id_str );
 
-  if ( !option_suffix_str.empty() )
-    parsed.suffix_id = util::to_unsigned( option_suffix_str );
+  if ( !option_suffix_id_str.empty() )
+    parsed.suffix_id = util::to_unsigned( option_suffix_id_str );
 }
 
 // item_t::initialize_data ==================================================
@@ -1569,6 +1568,7 @@ void item_t::init()
 
   // Gems need to be processed first, because in Legion, they may affect the item level of the item
   decode_gems();
+  decode_reforge();
   decode_stats();
   decode_weapon();
   decode_equip_effect();
@@ -1738,20 +1738,6 @@ void item_t::decode_stats()
           fmt::format( "Player {} item '{}' suffix id {} failed", player->name(), name(), parsed.suffix_id ) );
   }
 
-  if ( parsed.reforge_id > 0 )
-  {
-    auto& reforge = player->dbc->item_reforge( parsed.reforge_id );
-    if ( &reforge == &item_reforge_data_t::nil() )
-    {
-      throw std::invalid_argument(
-          fmt::format( "Player {} item '{}' unknown item reforge id {}", player->name(), name(), parsed.reforge_id ) );
-    }
-
-    if (!item_database::apply_reforge( *this, reforge ) )
-      throw std::invalid_argument(
-          fmt::format( "Player {} item '{}' reforge id {} failed", player->name(), name(), parsed.reforge_id ) );
-  }
-
   // If scaling fails, then there's some issue with the scaling data, and the item stats will be
   // wrong.
   if ( ! has_scaling_stat_bonus_id() )
@@ -1792,6 +1778,20 @@ void item_t::decode_stats()
 
     base_stats.add_stat( s, stat_value( i ) );
     stats.add_stat( s, stat_value( i ) );
+  }
+
+  if ( parsed.reforge_id > 0 )
+  {
+    auto& reforge = player->dbc->item_reforge( parsed.reforge_id );
+    if ( &reforge == &item_reforge_data_t::nil() )
+    {
+      throw std::invalid_argument(
+          fmt::format( "Player {} item '{}' unknown item reforge id {}", player->name(), name(), parsed.reforge_id ) );
+    }
+
+    if ( !item_database::apply_reforge( *this, reforge ) )
+      throw std::invalid_argument(
+          fmt::format( "Player {} item '{}' reforge id {} failed", player->name(), name(), parsed.reforge_id ) );
   }
 
   // Hardcoded armor value in stats, use the approximation coefficient to do
@@ -1976,6 +1976,37 @@ void item_t::decode_enchant()
   {
     throw std::invalid_argument(fmt::format("Cannot find item enchant '{}'.", option_enchant_str));
   }
+}
+
+void item_t::decode_reforge()
+{
+  if ( option_reforge_str.empty() || option_reforge_str == "none" )
+    return;
+
+  // Trying to parse out legacy <source>_<target>
+  std::vector<stat_pair_t> stats;
+
+  auto tokens = item_database::parse_tokens( option_reforge_str );
+  for ( auto& t : tokens )
+  {
+    stat_e s = STAT_NONE;
+    if ( ( s = util::parse_stat_type( t.name ) ) != STAT_NONE )
+      stats.emplace_back( s, static_cast<int>( t.value ) );
+  }
+
+  if ( stats.size() != 2 )
+  {
+    throw std::invalid_argument( fmt::format( "Invalid reforge str '{}'.", option_reforge_str ) );
+  }
+
+  const auto& rfg = item_reforge_data_t::find( util::translate_stat( stats[ 0 ].stat ),
+                                               util::translate_stat( stats[ 1 ].stat ), player->is_ptr() );
+  if ( !rfg.id )
+  {
+    throw std::invalid_argument( fmt::format( "Invalid reforge str '{}'.", option_reforge_str ) );
+  }
+
+  parsed.reforge_id = rfg.id;
 }
 
 // item_t::decode_addon =====================================================
