@@ -7556,7 +7556,7 @@ void player_t::stat_loss( stat_e stat, double amount, gain_t* gain, action_t* ac
 
       resources.temporary[ r ] -= temp_value * amount;
       recalculate_resource_max( r );
-      double delta = resources.current[ r ] - resources.max[ r ];
+      double delta = temp_value * amount;
       if ( delta > 0 )
         resource_loss( r, delta, gain, action );
     }
