@@ -1,8 +1,8 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
 Name             : Block (desc=Passive) (id=107) [Passive] 
 Class            : Warrior, Paladin, Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Requires armor   : Cosmetic, Shield 
 Attributes       : ....x.x. ........ ..x..... ........   ........ ........ ........ ........ 
@@ -22,7 +22,7 @@ Description      : Gives a chance to block enemy melee and ranged attacks.
 Name             : Devotion Aura (id=465) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 5
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
@@ -79,10 +79,11 @@ Tooltip          : Damage taken reduced by $s2%.
 Name             : Lay on Hands (id=633) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 16
 Range            : 40 yards
 Cooldown         : 600 seconds
+Category         : 56
 Category Cooldown: 600 seconds
 Affecting spells : Seal of Insight (20165 effect#2), Glyph of Divinity (54939 effect#1), Glyph of Lay on Hands (57955 effect#1)
 Family Flags     : 15
@@ -103,7 +104,7 @@ Description      : Heals a friendly target for an amount equal to your maximum h
 Name             : Holy Light (id=635) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 12% Base Mana (0) (id=169246)
 Spell Level      : 7
 Range            : 40 yards
@@ -128,12 +129,13 @@ Description      : Heals a friendly target for $s1.
 Name             : Divine Shield (id=642) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 3% Base Mana (0) (id=169256)
 Spell Level      : 48
 GCD              : 1.5 seconds
 Duration         : 8 seconds
 Cooldown         : 300 seconds
+Mechanic         : Unknown(29)
 Affecting spells : Ardent Defender (31850 effect#1), Vengeance (84839 effect#1)
 Family Flags     : 22
 Attributes       : ........ ........ x.x..... ........   ........ ..x....x ........ ........ 
@@ -161,14 +163,17 @@ Tooltip          : Immune to all attacks and spells, but reduces all damage you 
 Name             : Hammer of Justice (id=853) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 3% Base Mana (0) (id=169390)
 Spell Level      : 14
 Range            : 10 yards
 GCD              : 1.5 seconds
 Duration         : 6 seconds
 Cooldown         : 60 seconds
+Category         : 32
 Category Cooldown: 60 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(12)
 Affecting spells : Improved Hammer of Justice (20487 effect#1), Improved Hammer of Justice (20488 effect#1), Improved Hammer of Justice (24188 effect#1), Touched by the Light (53592 effect#1), Glyph of Hammer of Justice (54923 effect#1), Divine Guardian (70940 effect#1)
 Family Flags     : 11
 Attributes       : ........ ........ x.x..... ........   ........ ........ ..x..... ........ 
@@ -189,13 +194,14 @@ Tooltip          : Stunned.
 Name             : Exorcism (id=879) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 30% Base Mana (0) (id=169608)
 Spell Level      : 18
 Range            : 30 yards
 Cast Time        : 1.5 seconds
 GCD              : 1.5 seconds
 Duration         : 6 seconds
+Category         : 19
 Affecting spells : Blazing Light (20237 effects: #1, #2), Blazing Light (20238 effects: #1, #2), Denounce (31825 effect#2), Glyph of Exorcism (54934 effect#1), The Art of War (59578 effects: #1, #2, #3), Item - Paladin T8 Holy 2P Bonus (64890 effect#1), Denounce (85509 effect#1), Denounce (85510 effect#2)
 Family Flags     : 33
 Attributes       : ........ ........ x.x..... ........   ........ ........ ........ ........ 
@@ -218,14 +224,16 @@ Tooltip          : Suffering $w2 Holy damage per $t2 sec.
 Name             : Hand of Protection (id=1022) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=170477)
 Spell Level      : 18
 Range            : 30 yards
 GCD              : 1.5 seconds
 Duration         : 10 seconds
 Cooldown         : 300 seconds
+Category         : 20
 Category Cooldown: 300 seconds
+Mechanic         : Unknown(29)
 Affecting spells : Guardian's Favor (20174 effect#1), Guardian's Favor (20175 effect#1)
 Family Flags     : 7
 Attributes       : ........ ........ x.x..... ........   ........ .......x ........ ........ 
@@ -247,7 +255,7 @@ Tooltip          : Immune to physical attacks.  Cannot attack or use physical ab
 Name             : Hand of Salvation (id=1038) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=170479)
 Spell Level      : 66
 Range            : 30 yards
@@ -276,7 +284,7 @@ Tooltip          : $?$w2!=0[Threat temporarily reduced.][Reduces total threat by
 Name             : Hand of Freedom (id=1044) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=169683)
 Spell Level      : 52
 Range            : 30 yards
@@ -305,13 +313,14 @@ Tooltip          : Immune to movement impairing effects.
 Name             : Holy Wrath (id=2812) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 20% Base Mana (0) (id=171295)
 Spell Level      : 28
 GCD              : 1.5 seconds
 Velocity         : 20 yards/sec
 Duration         : 3 seconds
 Cooldown         : 15 seconds
+Category         : 35
 Category Cooldown: 15 seconds
 Affecting spells : Glyph of Holy Wrath (56420 effect#1), Wrath of the Lightbringer (84635 effect#2), Wrath of the Lightbringer (84636 effect#2)
 Family Flags     : 53
@@ -335,7 +344,7 @@ Tooltip          : Stunned.
 Name             : Cleanse (id=4987) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 14% Base Mana (0) (id=172291)
 Spell Level      : 34
 Range            : 40 yards
@@ -384,13 +393,17 @@ Description      : Increases your chance to hit with all spells and attacks by $
 Name             : Hand of Sacrifice (id=6940) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=173730)
 Spell Level      : 80
 Range            : 30 yards
 GCD              : 1.5 seconds
 Duration         : 12 seconds
 Cooldown         : 120 seconds
+Category         : 1186
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x.x.x.x .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Heal Taken, Generic Hostile Spell Taken, Magic Heal Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Acts of Sacrifice (85446 effects: #1, #2), Acts of Sacrifice (85795 effects: #1, #2), Daybreak (88820 effect#1), Daybreak (88821 effect#1), Paragon of Virtue (93417 effect#3), Paragon of Virtue (93418 effect#3)
 Family Flags     : 13
 Attributes       : ........ ........ x.x..... ........   ........ ........ .x.x.... ........ 
@@ -415,7 +428,7 @@ Tooltip          : Transfers $s1% damage taken to the paladin.
 Name             : Retribution Aura (id=7294) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 26
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
@@ -442,6 +455,10 @@ Name             : Eye for an Eye (desc=Rank 1) (id=9799) [Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 2 seconds
+Proc Chance      : 20%
+Proc Flags       : ........ ........ .x...... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -459,13 +476,18 @@ Description      : All magic attacks against you have a $h% chance to cause $s1%
 Name             : Turn Evil (id=10326) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 9% Base Mana (0) (id=177908)
 Spell Level      : 78
 Range            : 20 yards
+Max Targets      : 1
 Cast Time        : 1.5 seconds
 GCD              : 1.5 seconds
 Duration         : 20 seconds
+Proc Chance      : 100%
+Mechanic         : Unknown(23)
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Glyph of Turn Evil (54931 effects: #1, #2)
 Family Flags     : 55
 Attributes       : ........ ........ x....... ......x.   ........ ........ ........ ........ 
@@ -483,36 +505,16 @@ Effects          :
 Description      : The targeted undead or demon enemy will be compelled to flee for up to $d.  Damage caused may interrupt the effect.  Only one target can be turned at a time.
 Tooltip          : Compelled to flee.
 
-Name             : Summon Warhorse (desc=Summon) (id=13819) [Spell Family (10)] 
-Class            : Paladin
-Race             : Human, Dwarf, Undead (0x15)
-School           : Holy
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Family Flags     : 60
-Attributes       : ........ .......x x.x.x... ....x...   ........ ..x..... .x...... ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ .......x ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Only Outdoors (15), Not Shapeshifted (16), Do Not Sheath (18), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), No Threat (42), No AutoCast (AI) (49), Ignore Caster Modifiers (125), Not In Spellbook (143), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#2 (id=690980)   : Server Side Script (77)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Summons a Warhorse, which serves as a mount.
-Tooltip          : $?j1g[Increases ground speed by $j1g%. ][]$?j1f[Increases flight speed by $j1f%. ][]$?j1s[Increases swim speed by $j1s%. ][]
-
 Name             : Chakra (id=14751) [Spell Family (6)] 
 Class            : Paladin
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Duration         : Aura (infinite)
 Cooldown         : 30 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Inner Will (73413 effect#1), Dark Thoughts (84734 effect#1)
 Family Flags     : 35
 Attributes       : ........ ........ ..x..... .x......   ........ ..x..... ........ ........ 
@@ -553,6 +555,7 @@ Name             : Tome of Light (desc=Rank 1) (id=14898) [Spell Family (6), Pas
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -572,7 +575,7 @@ Description      : Reduces the cooldown of your Holy Word spells by $s1%.
 Name             : Blessing of Might (id=19740) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 19% Base Mana (0) (id=183935)
 Spell Level      : 56
 Range            : 30 yards
@@ -596,7 +599,7 @@ Description      : Places a Blessing on the friendly target, increasing melee at
 Name             : Concentration Aura (id=19746) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 42
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
@@ -619,7 +622,7 @@ Tooltip          : Reduces casting or channeling time lost when damaged by $s1%.
 Name             : Flash of Light (id=19750) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 31% Base Mana (0) (id=184055)
 Spell Level      : 16
 Range            : 40 yards
@@ -644,7 +647,7 @@ Description      : A quick, expensive heal that heals a friendly target for $s1.
 Name             : Resistance Aura (id=19891) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 76
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
@@ -668,13 +671,18 @@ Tooltip          : Increases Fire, Frost and Shadow resistance by $w1.
 Name             : Repentance (id=20066) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 9% Base Mana (0) (id=184507)
 Spell Level      : 20
 Range            : 30 yards
 GCD              : 1.5 seconds
 Duration         : 60 seconds
 Cooldown         : 60 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
+Mechanic         : Unknown(14)
+Proc Flags       : ...x.x.x .x.x.x.x .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Heal Taken, Generic Hostile Spell Taken, Magic Heal Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Family Flags     : 2
 Attributes       : ........ ........ x...x... ........   ........ ..x..... ..x..... ........ 
                  : ........ ........ ........ ........   x....... ........ ........ ........ 
@@ -772,11 +780,14 @@ Description      : Increases your armor value from items by $s1%.
 Name             : Seal of Righteousness (id=20154) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 14% Base Mana (0) (id=184532)
 Spell Level      : 3
 GCD              : 1.5 seconds
 Duration         : 1800 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Seals of the Pure (20224 effect#1), Seals of the Pure (20225 effect#1), Glyph of Dazing Shield (56414 effect#1), Glyph of Seal of Truth (56416 effect#1), Seals of Command (85126 effect#2), Glyph of Righteousness (89401 effect#1)
 Family Flags     : 61
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -809,11 +820,14 @@ $sop=$?s20330[${115}][${$<sop2>}]
 Name             : Seal of Justice (id=20164) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 14% Base Mana (0) (id=184858)
 Spell Level      : 64
 GCD              : 1.5 seconds
 Duration         : 1800 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Glyph of Justice (57954 effect#1)
 Family Flags     : 63
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -842,11 +856,14 @@ $sop=$?s20330[${115}][${$<sop2>}]
 Name             : Seal of Insight (id=20165) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 14% Base Mana (0) (id=184713)
 Spell Level      : 32
 GCD              : 1.5 seconds
 Duration         : 1800 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Glyph of Seal of Insight (54943 effect#1), Glyph of Insight (57979 effect#1)
 Family Flags     : 57
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -899,7 +916,7 @@ Unleashing this Seal's energy will deal ${1+0.25*$SPH+0.16*$AP} Holy damage to a
 Name             : Seal of Justice (id=20170) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 22
 Range            : 100 yards
 Duration         : 5 seconds
@@ -977,6 +994,9 @@ Name             : Reckoning (desc=Rank 1) (id=20177) [Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -996,6 +1016,11 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Duration         : 8 seconds
+Internal Cooldown: 1 seconds
+Stacks           : 4 initial, 4 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Triggered by     : Reckoning (20177), Reckoning (20179)
 Attributes       : ........ ........ ........ x..x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
@@ -1016,6 +1041,9 @@ Name             : Reckoning (desc=Rank 2) (id=20179) [Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 20%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -1033,7 +1061,7 @@ Description      : You have a $h% chance after blocking an attack for your next 
 Name             : Judgement of Righteousness (id=20187) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 1
 Range            : 100 yards
 Affecting spells : Seal of Righteousness (20154 effect#2), Arbiter of the Light (20359 effect#1), Arbiter of the Light (20360 effect#1), Seal of the Crusader Judgement Increase (23300 effect#1), Spell Damage (37197 effect#1), Bonus Mana Regen (37655 effect#1), Lightning Capacitor (37657 effect#1), Healing Discount (37705 effect#1), Blessing of Faith (37877 effect#1), HoTs on Heals (38299 effect#1), Blessing of Life (38332 effect#1), Proc Mana Regen (38334 effect#1), Crit Proc Spell Damage (38347 effect#1), Bonus Healing (40971 effect#1), Bonus Mana Regen (49622 effect#1), Enlightened Judgements (53556 effects: #1, #2), Enlightened Judgements (53557 effects: #1, #2), Infusion of Light (53569 effect#1), Infusion of Light (53576 effect#1), Thunder Capacitor (54841 effect#1), Glyph of Judgement (54922 effect#1), Judgement Anti-Parry/Dodge Passive (60091 effects: #1, #2), Soul Preserver (60510 effect#1), Talisman of Troll Divinity (60517 effect#1), Spark of Life (60519 effect#1), Forethought Talisman (60529 effect#1), Show of Faith (64738 effect#1), Bonus Mana Regen (65002 effect#1), Item - Coliseum 25 Normal Caster Trinket (67712 effect#1), Item - Coliseum 25 Heroic Caster Trinket (67758 effect#1), Anger Capacitor (71406 effect#1), Anger Capacitor (71545 effect#1), Item - Icecrown 25 Emblem Healer Trinket (71585 effect#1), Item - Icecrown 25 Normal Healer Trinket 2 (71611 effect#1), Item - Icecrown 25 Heroic Healer Trinket 2 (71642 effect#1), Item - Icecrown 25 Normal Healer Weapon Proc (71865 effect#1), Item - Icecrown 25 Heroic Healer Weapon Proc (71868 effect#1), Item - Icecrown 25 Normal Tank Weapon Proc (71871 effect#1), Item - Icecrown 25 Normal Slow Melee Weapon Proc (71876 effect#1), Item - Icecrown 25 Heroic Slow Melee Weapon Proc (71878 effect#1), Item - Icecrown 25 Normal Dagger Proc (71880 effect#1), Item - Icecrown 25 Heroic Dagger Proc (71892 effect#1), Item - Chamber of Aspects 25 Nuker Trinket (75465 effect#1), Item - Chamber of Aspects 25 Heroic Nuker Trinket (75474 effect#1), Eyes of Twilight (75490 effect#1), Eyes of Twilight (75495 effect#1), Wrath of the Lightbringer (84635 effect#1), Wrath of the Lightbringer (84636 effect#1), Long Arm of the Law (87172 effect#1), Improved Judgement (87174 effect#1), Improved Judgement (87175 effect#1), Item - Proc Spell Power (90848 effect#1), Item - Stacking Spell Power (90855 effect#1), Item - Proc Haste Rating (90886 effect#1), Item - Proc Haste Rating (90888 effect#1), Item - Proc Crit Rating (90892 effect#1), Item - Proc Spell Power (90897 effect#1), Item - Proc Spell Power (90899 effect#1), Item - Proc Stacking Spell Power (90943 effect#1), Item - Proc Stacking Spell Power (90986 effect#1), Item - Proc Spell Power (90990 effect#1), Item - Proc Spell Power (90993 effect#1), Song of Sorrow (90998 effect#1), Song of Sorrow (91003 effect#1), Item - Proc Spell Power On Dmg (91011 effect#1), Item - Proc Mastery (91025 effect#1), Item - Proc Stacking Spell Power (91031 effect#1), Item - Proc Spell Power (91048 effect#1), Item - Proc Wandering DoT (91080 effect#1), Item - Proc Spirit On Crit (91137 effect#1), Item - Proc Spirit On Crit (91140 effect#1), Item - Proc Haste Rating (91142 effect#1), Item - Proc Haste Rating (91144 effect#1), Item - Proc Spirit (91148 effect#1), Item - Proc Spirit (91150 effect#1), Item - Proc Spirit (91186 effect#1), Item - Proc Intellect (91193 effect#1), Item - Proc Stacking Spirit (91321 effect#1), Item - Proc Haste On Crit (91353 effect#1), Item - Proc Strength (91361 effect#1), Item - Proc Strength (91365 effect#1), Item - Proc Strength On Crit (91366 effect#1), Item - Proc Strength On Crit (91369 effect#1), Item - Proc Strength (91817 effect#1), Item - Proc Haste Rating (91822 effect#1), Item - Proc Stacking Activator (5) (91833 effect#1), Item - Proc Haste Rating (92044 effect#1), Item - Proc Crit Rating (92054 effect#1), Item - Proc Haste On Crit (92056 effect#1), Item - Proc Agility (92070 effect#1), Item - Proc Crit Rating (92088 effect#1), Item - Proc Agility (92093 effect#1), Item - Proc Agility On Crit (92095 effect#1), Item - Proc Agility On Crit (92097 effect#1), Item - Proc Haste Rating (92125 effect#1), Item - Proc Crit Rating (92127 effect#1), Item - Proc Mastery Rating (92164 effect#1), Item - Proc Mastery Rating (92175 effect#1), Item - Proc Armor (92180 effect#1), Item - Proc Armor (92185 effect#1), Item - Proc Dodge (92207 effect#1), Item - Proc Dodge (92209 effect#1), Item - Proc Dodge Below 35% (92234 effect#1), Item - Proc Mastery Below 35% (92236 effect#1), Item - Collecting Mana (92272 effect#1), Item - Proc Spell Power On Dmg (92319 effect#1), Item - Proc Mastery (92322 effect#1), Item - Proc Stacking Spell Power (92326 effect#1), Item - Proc Stacking Spirit (92330 effect#1), Item - Proc Spirit (92333 effect#1), Item - Proc Haste Rating (92343 effect#1), Item - Proc Strength (92346 effect#1), Item - Proc Haste Rating (92350 effect#1), Item - Proc Crit Rating (92353 effect#1), Item - Proc Mastery Below 35% (92356 effect#1), Meteor Magnet (95871 effect#1), Item - Proc Mastery Rating (95878 effect#1), Variable Pulse Lightning Capacitor (96887 effect#1), Eye of Blazing Power (96967 effect#1), Variable Pulse Lightning Capacitor (97119 effect#1), Eye of Blazing Power (97137 effect#1), Nick of Time (108002 effect#1), Nick of Time (109823 effect#1), Nick of Time (109826 effect#1)
@@ -1057,7 +1085,7 @@ Description      : Unleashing this Seal's energy will cause ${1+0.2*$AP+0.32*$SP
 Name             : Blessing of Kings (id=20217) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 19% Base Mana (0) (id=184202)
 Spell Level      : 22
 Range            : 30 yards
@@ -1130,6 +1158,7 @@ Name             : Last Word (desc=Rank 1) (id=20234) [Spell Family (10), Passiv
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1150,6 +1179,7 @@ Name             : Last Word (desc=Rank 2) (id=20235) [Spell Family (10), Passiv
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1217,12 +1247,13 @@ Description      : Increases the damage of your Holy Shock and Exorcism by $s1%.
 Name             : Judgement (id=20271) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 5% Base Mana (0) (id=183481)
 Spell Level      : 3
 Range            : 10 yards
 GCD              : 1.5 seconds
 Cooldown         : 8 seconds
+Category         : 1210
 Category Cooldown: 8 seconds
 Affecting spells : Seal of Righteousness (20154 effect#2), Arbiter of the Light (20359 effect#1), Arbiter of the Light (20360 effect#1), Seal of the Crusader Judgement Increase (23300 effect#1), Spell Damage (37197 effect#1), Bonus Mana Regen (37655 effect#1), Lightning Capacitor (37657 effect#1), Healing Discount (37705 effect#1), Blessing of Faith (37877 effect#1), HoTs on Heals (38299 effect#1), Blessing of Life (38332 effect#1), Proc Mana Regen (38334 effect#1), Crit Proc Spell Damage (38347 effect#1), Bonus Healing (40971 effect#1), Bonus Mana Regen (49622 effect#1), Enlightened Judgements (53556 effects: #1, #2), Enlightened Judgements (53557 effects: #1, #2), Infusion of Light (53569 effect#1), Infusion of Light (53576 effect#1), Thunder Capacitor (54841 effect#1), Glyph of Judgement (54922 effect#1), Judgement Anti-Parry/Dodge Passive (60091 effects: #1, #2), Soul Preserver (60510 effect#1), Talisman of Troll Divinity (60517 effect#1), Spark of Life (60519 effect#1), Forethought Talisman (60529 effect#1), Show of Faith (64738 effect#1), Bonus Mana Regen (65002 effect#1), Item - Coliseum 25 Normal Caster Trinket (67712 effect#1), Item - Coliseum 25 Heroic Caster Trinket (67758 effect#1), Anger Capacitor (71406 effect#1), Anger Capacitor (71545 effect#1), Item - Icecrown 25 Emblem Healer Trinket (71585 effect#1), Item - Icecrown 25 Normal Healer Trinket 2 (71611 effect#1), Item - Icecrown 25 Heroic Healer Trinket 2 (71642 effect#1), Item - Icecrown 25 Normal Healer Weapon Proc (71865 effect#1), Item - Icecrown 25 Heroic Healer Weapon Proc (71868 effect#1), Item - Icecrown 25 Normal Tank Weapon Proc (71871 effect#1), Item - Icecrown 25 Normal Slow Melee Weapon Proc (71876 effect#1), Item - Icecrown 25 Heroic Slow Melee Weapon Proc (71878 effect#1), Item - Icecrown 25 Normal Dagger Proc (71880 effect#1), Item - Icecrown 25 Heroic Dagger Proc (71892 effect#1), Item - Chamber of Aspects 25 Nuker Trinket (75465 effect#1), Item - Chamber of Aspects 25 Heroic Nuker Trinket (75474 effect#1), Eyes of Twilight (75490 effect#1), Eyes of Twilight (75495 effect#1), Wrath of the Lightbringer (84635 effect#1), Wrath of the Lightbringer (84636 effect#1), Long Arm of the Law (87172 effect#1), Improved Judgement (87174 effect#1), Improved Judgement (87175 effect#1), Item - Proc Spell Power (90848 effect#1), Item - Stacking Spell Power (90855 effect#1), Item - Proc Haste Rating (90886 effect#1), Item - Proc Haste Rating (90888 effect#1), Item - Proc Crit Rating (90892 effect#1), Item - Proc Spell Power (90897 effect#1), Item - Proc Spell Power (90899 effect#1), Item - Proc Stacking Spell Power (90943 effect#1), Item - Proc Stacking Spell Power (90986 effect#1), Item - Proc Spell Power (90990 effect#1), Item - Proc Spell Power (90993 effect#1), Song of Sorrow (90998 effect#1), Song of Sorrow (91003 effect#1), Item - Proc Spell Power On Dmg (91011 effect#1), Item - Proc Mastery (91025 effect#1), Item - Proc Stacking Spell Power (91031 effect#1), Item - Proc Spell Power (91048 effect#1), Item - Proc Wandering DoT (91080 effect#1), Item - Proc Spirit On Crit (91137 effect#1), Item - Proc Spirit On Crit (91140 effect#1), Item - Proc Haste Rating (91142 effect#1), Item - Proc Haste Rating (91144 effect#1), Item - Proc Spirit (91148 effect#1), Item - Proc Spirit (91150 effect#1), Item - Proc Spirit (91186 effect#1), Item - Proc Intellect (91193 effect#1), Item - Proc Stacking Spirit (91321 effect#1), Item - Proc Haste On Crit (91353 effect#1), Item - Proc Strength (91361 effect#1), Item - Proc Strength (91365 effect#1), Item - Proc Strength On Crit (91366 effect#1), Item - Proc Strength On Crit (91369 effect#1), Item - Proc Strength (91817 effect#1), Item - Proc Haste Rating (91822 effect#1), Item - Proc Stacking Activator (5) (91833 effect#1), Item - Proc Haste Rating (92044 effect#1), Item - Proc Crit Rating (92054 effect#1), Item - Proc Haste On Crit (92056 effect#1), Item - Proc Agility (92070 effect#1), Item - Proc Crit Rating (92088 effect#1), Item - Proc Agility (92093 effect#1), Item - Proc Agility On Crit (92095 effect#1), Item - Proc Agility On Crit (92097 effect#1), Item - Proc Haste Rating (92125 effect#1), Item - Proc Crit Rating (92127 effect#1), Item - Proc Mastery Rating (92164 effect#1), Item - Proc Mastery Rating (92175 effect#1), Item - Proc Armor (92180 effect#1), Item - Proc Armor (92185 effect#1), Item - Proc Dodge (92207 effect#1), Item - Proc Dodge (92209 effect#1), Item - Proc Dodge Below 35% (92234 effect#1), Item - Proc Mastery Below 35% (92236 effect#1), Item - Collecting Mana (92272 effect#1), Item - Proc Spell Power On Dmg (92319 effect#1), Item - Proc Mastery (92322 effect#1), Item - Proc Stacking Spell Power (92326 effect#1), Item - Proc Stacking Spirit (92330 effect#1), Item - Proc Spirit (92333 effect#1), Item - Proc Haste Rating (92343 effect#1), Item - Proc Strength (92346 effect#1), Item - Proc Haste Rating (92350 effect#1), Item - Proc Crit Rating (92353 effect#1), Item - Proc Mastery Below 35% (92356 effect#1), Meteor Magnet (95871 effect#1), Item - Proc Mastery Rating (95878 effect#1), Variable Pulse Lightning Capacitor (96887 effect#1), Eye of Blazing Power (96967 effect#1), Variable Pulse Lightning Capacitor (97119 effect#1), Eye of Blazing Power (97137 effect#1), Nick of Time (108002 effect#1), Nick of Time (109823 effect#1), Nick of Time (109826 effect#1)
 Family Flags     : 23
@@ -1287,7 +1318,7 @@ Description      : Increases the critical effect chance of your Judgement and Te
 Name             : Seals of Command (id=20424) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Range            : 100 yards
 Affecting spells : Illuminated Healing (76669 effect#1), Hand of Light (76672 effect#1), Seal Cost Reduced (352580 effect#1)
 Triggered by     : Seals of Command (85126)
@@ -1315,6 +1346,7 @@ Spell Level      : 10
 Range            : 20 yards
 GCD              : 1.5 seconds
 Cooldown         : 6 seconds
+Category         : 892
 Category Cooldown: 6 seconds
 Affecting spells : Blazing Light (20237 effect#1), Blazing Light (20238 effect#1), Divine Favor (31842 effect#1), Crusade (31866 effects: #1, #2), Crusade (31867 effects: #1, #2), Crusade (31868 effects: #1, #2), Infusion of Light (53569 effect#4), Infusion of Light (53576 effect#4), Judgements of the Pure (53671 effect#1), Judgements of the Pure (53673 effect#1), Judgements of the Pure (54151 effect#1), Glyph of Holy Shock (63224 effect#1), Glyph of Salvation (63225 effect#1), Tower of Radiance (84800 effect#1), Tower of Radiance (85511 effect#1), Tower of Radiance (85512 effect#1), Daybreak (88819 effect#1)
 Family Flags     : 21
@@ -1377,6 +1409,9 @@ Class            : Paladin
 School           : Holy
 Spell Type       : None
 Spell Level      : 29
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Attributes       : ......xx x....... x.x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ x....... ........ ........ 
@@ -1401,13 +1436,15 @@ Description      : Reduces the chance you'll be critically hit by melee attacks 
 Name             : Holy Shield (id=20925) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 3% Base Mana (0) (id=185892)
 Spell Level      : 1
 Duration         : 10 seconds
 Requires armor   : Shield 
 Cooldown         : 30 seconds
+Category         : 931
 Category Cooldown: 30 seconds
+Proc Chance      : 101%
 Family Flags     : 38
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1443,40 +1480,17 @@ Effects          :
                    Base Value: 5 | Scaled Value: 5 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Damage dealt by pets increased by $s1%.
 
-Name             : Summon Charger (desc=Summon) (id=23214) [Spell Family (10)] 
-Class            : Paladin
-Race             : Human, Dwarf, Undead (0x15)
-School           : Holy
-Spell Type       : None
-Spell Level      : 40
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Family Flags     : 60
-Attributes       : ........ .......x x.x.x... ....x...   ........ ..x..... .x...... ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ .......x ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Only Outdoors (15), Not Shapeshifted (16), Do Not Sheath (18), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), No Threat (42), No AutoCast (AI) (49), Ignore Caster Modifiers (125), Not In Spellbook (143), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#2 (id=700371)   : Server Side Script (77)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Summons a Charger, which serves as a mount.
-Tooltip          : $?j1g[Increases ground speed by $j1g%. ][]$?j1f[Increases flight speed by $j1f%. ][]$?j1s[Increases swim speed by $j1s%. ][]
-
 Name             : Hammer of Wrath (id=24275) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 12% Base Mana (0) (id=188346)
 Spell Level      : 46
 Range            : 30 yards
 GCD              : 1.5 seconds
 Velocity         : 50 yards/sec
 Cooldown         : 6 seconds
+Category         : 1131
 Category Cooldown: 6 seconds
 Affecting spells : Avenging Wrath (31884 effect#3), Sanctified Wrath (53375 effect#2), Sanctified Wrath (53376 effect#2), Glyph of Hammer of Wrath (54926 effect#1), Item - Paladin T8 Holy 2P Bonus (64890 effect#1), Wrath of the Lightbringer (84635 effect#2), Wrath of the Lightbringer (84636 effect#2), Sanctified Wrath (90286 effect#2)
 Family Flags     : 39
@@ -1500,6 +1514,7 @@ School           : Holy
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 60 seconds
+Mechanic         : Unknown(25)
 Family Flags     : 71
 Attributes       : ........ ........ ........ ..x..x..   ...x...x ..x..... xx...... ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -1519,10 +1534,11 @@ Tooltip          : Cannot be affected by Divine Shield, Hand of Protection or La
 Name             : Righteous Fury (id=25780) [Spell Family (10)] 
 Class            : Paladin
 School           : None
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 12
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
+Proc Chance      : 101%
 Affecting spells : Increased Ferocious Bite Damage (32410 effect#1), Speed of Light (85495 effect#1), Speed of Light (85498 effect#1), Speed of Light (85499 effect#1), Increased Flash of Light Healing (352512 effect#1), Increased Flash of Light Healing (388426 effect#1)
 Family Flags     : 0
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -1565,7 +1581,7 @@ Effects          :
 Name             : Holy Shock (id=25912) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 40
 Range            : 100 yards
 Affecting spells : Blazing Light (20237 effect#1), Blazing Light (20238 effect#1), Divine Favor (31842 effect#1), Crusade (31866 effects: #1, #2), Crusade (31867 effects: #1, #2), Crusade (31868 effects: #1, #2), Infusion of Light (53569 effect#4), Infusion of Light (53576 effect#4), Judgements of the Pure (53671 effect#1), Judgements of the Pure (53673 effect#1), Judgements of the Pure (54151 effect#1), Glyph of Holy Shock (63224 effect#1), Glyph of Salvation (63225 effect#1), Tower of Radiance (84800 effect#1), Tower of Radiance (85511 effect#1), Tower of Radiance (85512 effect#1), Daybreak (88819 effect#1)
@@ -1589,7 +1605,7 @@ Description      : Blasts the target with Holy energy, causing $25912s1 Holy dam
 Name             : Holy Shock (id=25914) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 40
 Range            : 100 yards
 Affecting spells : Seal of Insight (20165 effect#2), Divine Favor (31842 effect#1), Crusade (31866 effects: #1, #2), Crusade (31867 effects: #1, #2), Crusade (31868 effects: #1, #2), Infusion of Light (53569 effect#4), Infusion of Light (53576 effect#4), Judgements of the Pure (53671 effect#1), Judgements of the Pure (53673 effect#1), Judgements of the Pure (54151 effect#1), Divine Plea (54428 effect#2), Glyph of Holy Shock (63224 effect#1), Glyph of Salvation (63225 effect#1), Tower of Radiance (84800 effect#1), Walk in the Light (85102 effects: #1, #2), Tower of Radiance (85511 effect#1), Tower of Radiance (85512 effect#1)
@@ -1634,6 +1650,10 @@ Name             : Eye for an Eye (desc=Rank 2) (id=25988) [Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 2 seconds
+Proc Chance      : 40%
+Proc Flags       : ........ ........ .x...... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -1652,6 +1672,9 @@ Name             : Vindication (id=26016) [Spell Family (10), Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1669,7 +1692,7 @@ Description      : Your Crusader Strike and Hammer of the Righteous reduce physi
 Name             : Vindication (id=26017) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20 (max 80)
 Max Scaling Level: 80
 Range            : 100 yards
@@ -1695,6 +1718,9 @@ Name             : Pursuit of Justice (desc=Rank 1) (id=26022) [Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1715,6 +1741,9 @@ Name             : Pursuit of Justice (desc=Rank 2) (id=26023) [Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : .....x.. .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : Yellow Melee Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1734,12 +1763,13 @@ Description      : You have a $h% chance to gain a charge of Holy Power when str
 Name             : Consecration (id=26573) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 55% Base Mana (0) (id=190377)
 Spell Level      : 24
 GCD              : 1.5 seconds
 Duration         : 10 seconds
 Cooldown         : 30 seconds
+Category         : 932
 Affecting spells : Denounce (31825 effect#1), Blessed Life (31828 effect#1), Blessed Life (31829 effect#1), Glyph of Consecration (54928 effects: #1, #2), Hallowed Ground (84631 effects: #1, #2), Hallowed Ground (84633 effects: #1, #2), Denounce (85510 effect#1)
 Family Flags     : 5
 Attributes       : ........ ........ x....... ........   ...x...x ..x..... ........ ....x... 
@@ -1763,9 +1793,10 @@ Name             : Arcane Torrent (desc=Racial) (id=28730)
 Class            : Paladin, Priest, Mage, Warlock
 Race             : Blood Elf (0x200)
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 2 seconds
 Cooldown         : 120 seconds
+Mechanic         : Unknown(9)
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1811,11 +1842,14 @@ Description      : Come to the defense of a friendly target, commanding up to 3 
 Name             : Seal of Truth (id=31801) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 14% Base Mana (0) (id=217951)
 Spell Level      : 44
 GCD              : 1.5 seconds
 Duration         : 1800 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x... x....... x....... ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, Yellow Ranged, Magic Hostile Spell
 Affecting spells : Seals of the Pure (20224 effects: #1, #2), Seals of the Pure (20225 effects: #1, #2), Glyph of Seal of Truth (56416 effect#1), Glyph of Truth (57947 effect#1)
 Family Flags     : 43
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -1847,10 +1881,11 @@ Name             : Censure (id=31803) [Spell Family (10)]
 Class            : Paladin
 Race             : Blood Elf (0x200)
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 64
 Range            : 100 yards
 Duration         : 15 seconds
+Stacks           : 5 maximum
 Affecting spells : Seals of the Pure (20224 effects: #1, #2), Seals of the Pure (20225 effects: #1, #2), Inquiry of Faith (53380 effect#1), Inquiry of Faith (53381 effect#1), Inquiry of Faith (53382 effect#1), Glyph of Seal of Truth (56416 effect#1), Glyph of Truth (57947 effect#1)
 Family Flags     : 29, 43
 Attributes       : ........ ........ ..x..x.. ........   ...x.... ........ ........ ........ 
@@ -1872,9 +1907,10 @@ Name             : Judgement of Truth (id=31804) [Spell Family (10)]
 Class            : Paladin
 Race             : Human, Dwarf, Tauren, Blood Elf, Draenei (0x625)
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 64
 Range            : 100 yards
+Proc Chance      : 101%
 Affecting spells : Seal of Righteousness (20154 effect#2), Arbiter of the Light (20359 effect#1), Arbiter of the Light (20360 effect#1), Seal of the Crusader Judgement Increase (23300 effect#1), Spell Damage (37197 effect#1), Bonus Mana Regen (37655 effect#1), Lightning Capacitor (37657 effect#1), Healing Discount (37705 effect#1), Blessing of Faith (37877 effect#1), HoTs on Heals (38299 effect#1), Blessing of Life (38332 effect#1), Proc Mana Regen (38334 effect#1), Crit Proc Spell Damage (38347 effect#1), Bonus Healing (40971 effect#1), Bonus Mana Regen (49622 effect#1), Enlightened Judgements (53556 effects: #1, #2), Enlightened Judgements (53557 effects: #1, #2), Infusion of Light (53569 effect#1), Infusion of Light (53576 effect#1), Thunder Capacitor (54841 effect#1), Glyph of Judgement (54922 effect#1), Judgement Anti-Parry/Dodge Passive (60091 effects: #1, #2), Soul Preserver (60510 effect#1), Talisman of Troll Divinity (60517 effect#1), Spark of Life (60519 effect#1), Forethought Talisman (60529 effect#1), Show of Faith (64738 effect#1), Bonus Mana Regen (65002 effect#1), Item - Coliseum 25 Normal Caster Trinket (67712 effect#1), Item - Coliseum 25 Heroic Caster Trinket (67758 effect#1), Anger Capacitor (71406 effect#1), Anger Capacitor (71545 effect#1), Item - Icecrown 25 Emblem Healer Trinket (71585 effect#1), Item - Icecrown 25 Normal Healer Trinket 2 (71611 effect#1), Item - Icecrown 25 Heroic Healer Trinket 2 (71642 effect#1), Item - Icecrown 25 Normal Healer Weapon Proc (71865 effect#1), Item - Icecrown 25 Heroic Healer Weapon Proc (71868 effect#1), Item - Icecrown 25 Normal Tank Weapon Proc (71871 effect#1), Item - Icecrown 25 Normal Slow Melee Weapon Proc (71876 effect#1), Item - Icecrown 25 Heroic Slow Melee Weapon Proc (71878 effect#1), Item - Icecrown 25 Normal Dagger Proc (71880 effect#1), Item - Icecrown 25 Heroic Dagger Proc (71892 effect#1), Item - Chamber of Aspects 25 Nuker Trinket (75465 effect#1), Item - Chamber of Aspects 25 Heroic Nuker Trinket (75474 effect#1), Eyes of Twilight (75490 effect#1), Eyes of Twilight (75495 effect#1), Wrath of the Lightbringer (84635 effect#1), Wrath of the Lightbringer (84636 effect#1), Long Arm of the Law (87172 effect#1), Improved Judgement (87174 effect#1), Improved Judgement (87175 effect#1), Daybreak (88820 effect#1), Daybreak (88821 effect#1), Item - Proc Spell Power (90848 effect#1), Item - Stacking Spell Power (90855 effect#1), Item - Proc Haste Rating (90886 effect#1), Item - Proc Haste Rating (90888 effect#1), Item - Proc Crit Rating (90892 effect#1), Item - Proc Spell Power (90897 effect#1), Item - Proc Spell Power (90899 effect#1), Item - Proc Stacking Spell Power (90943 effect#1), Item - Proc Stacking Spell Power (90986 effect#1), Item - Proc Spell Power (90990 effect#1), Item - Proc Spell Power (90993 effect#1), Song of Sorrow (90998 effect#1), Song of Sorrow (91003 effect#1), Item - Proc Spell Power On Dmg (91011 effect#1), Item - Proc Mastery (91025 effect#1), Item - Proc Stacking Spell Power (91031 effect#1), Item - Proc Spell Power (91048 effect#1), Item - Proc Wandering DoT (91080 effect#1), Item - Proc Spirit On Crit (91137 effect#1), Item - Proc Spirit On Crit (91140 effect#1), Item - Proc Haste Rating (91142 effect#1), Item - Proc Haste Rating (91144 effect#1), Item - Proc Spirit (91148 effect#1), Item - Proc Spirit (91150 effect#1), Item - Proc Spirit (91186 effect#1), Item - Proc Intellect (91193 effect#1), Item - Proc Stacking Spirit (91321 effect#1), Item - Proc Haste On Crit (91353 effect#1), Item - Proc Strength (91361 effect#1), Item - Proc Strength (91365 effect#1), Item - Proc Strength On Crit (91366 effect#1), Item - Proc Strength On Crit (91369 effect#1), Item - Proc Strength (91817 effect#1), Item - Proc Haste Rating (91822 effect#1), Item - Proc Stacking Activator (5) (91833 effect#1), Item - Proc Haste Rating (92044 effect#1), Item - Proc Crit Rating (92054 effect#1), Item - Proc Haste On Crit (92056 effect#1), Item - Proc Agility (92070 effect#1), Item - Proc Crit Rating (92088 effect#1), Item - Proc Agility (92093 effect#1), Item - Proc Agility On Crit (92095 effect#1), Item - Proc Agility On Crit (92097 effect#1), Item - Proc Haste Rating (92125 effect#1), Item - Proc Crit Rating (92127 effect#1), Item - Proc Mastery Rating (92164 effect#1), Item - Proc Mastery Rating (92175 effect#1), Item - Proc Armor (92180 effect#1), Item - Proc Armor (92185 effect#1), Item - Proc Dodge (92207 effect#1), Item - Proc Dodge (92209 effect#1), Item - Proc Dodge Below 35% (92234 effect#1), Item - Proc Mastery Below 35% (92236 effect#1), Item - Collecting Mana (92272 effect#1), Item - Proc Spell Power On Dmg (92319 effect#1), Item - Proc Mastery (92322 effect#1), Item - Proc Stacking Spell Power (92326 effect#1), Item - Proc Stacking Spirit (92330 effect#1), Item - Proc Spirit (92333 effect#1), Item - Proc Haste Rating (92343 effect#1), Item - Proc Strength (92346 effect#1), Item - Proc Haste Rating (92350 effect#1), Item - Proc Crit Rating (92353 effect#1), Item - Proc Mastery Below 35% (92356 effect#1), Meteor Magnet (95871 effect#1), Item - Proc Mastery Rating (95878 effect#1), Variable Pulse Lightning Capacitor (96887 effect#1), Eye of Blazing Power (96967 effect#1), Variable Pulse Lightning Capacitor (97119 effect#1), Eye of Blazing Power (97137 effect#1), Nick of Time (108002 effect#1), Nick of Time (109823 effect#1), Nick of Time (109826 effect#1)
 Family Flags     : 23, 35, 54
 Attributes       : ........ ...x.... x.x..x.. ........   ........ ........ ........ ........ 
@@ -1918,6 +1954,9 @@ Name             : Denounce (desc=Rank 1) (id=31825) [Spell Family (10), Passive
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1942,6 +1981,9 @@ Name             : Blessed Life (desc=Rank 1) (id=31828) [Spell Family (10), Pas
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1964,6 +2006,9 @@ Name             : Blessed Life (desc=Rank 2) (id=31829) [Spell Family (10), Pas
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1985,7 +2030,7 @@ Description      : You have a $h% chance to gain a charge of Holy Power whenever
 Name             : Divine Favor (id=31842) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 20 seconds
 Cooldown         : 180 seconds
 Affecting spells : Glyph of Divine Favor (54937 effect#1)
@@ -2072,6 +2117,7 @@ School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
 Cooldown         : 180 seconds
+Category         : 1262
 Category Cooldown: 180 seconds
 Family Flags     : 87
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
@@ -2099,6 +2145,9 @@ Name             : Crusade (desc=Rank 1) (id=31866) [Spell Family (10), Passive,
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2125,6 +2174,9 @@ Name             : Crusade (desc=Rank 2) (id=31867) [Spell Family (10), Passive,
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2151,6 +2203,9 @@ Name             : Crusade (desc=Rank 3) (id=31868) [Spell Family (10), Passive,
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2177,6 +2232,7 @@ Name             : Communion (id=31876) [Spell Family (10), Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2203,6 +2259,9 @@ Name             : Judgements of the Wise (desc=Passive) (id=31878) [Spell Famil
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2280,7 +2339,7 @@ Tooltip          : Regaining ${$m1/10}% of your base mana per second.
 Name             : Avenger's Shield (id=31935) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 6% Base Mana (0) (id=219068)
 Spell Level      : 10
 Range            : 30 yards
@@ -2289,6 +2348,7 @@ Velocity         : 35 yards/sec
 Duration         : 3 seconds
 Requires armor   : Shield 
 Cooldown         : 15 seconds
+Category         : 1158
 Category Cooldown: 15 seconds
 Affecting spells : Glyph of Focused Shield (54930 effects: #1, #2), Grand Crusader (85416 effect#1)
 Family Flags     : 14
@@ -2314,7 +2374,7 @@ Tooltip          : Silenced.
 Name             : Crusader Aura (id=32223) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 62
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
@@ -2360,6 +2420,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 3 seconds
+Mechanic         : Unknown(26)
 Attributes       : ........ ........ .......x ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2378,6 +2439,7 @@ Name             : Absolution (id=33167) [Spell Family (6), Passive, Hidden]
 Class            : Paladin, Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2394,64 +2456,17 @@ Effects          :
                    Family Flags: 32, 39
 Description      : Enables your Dispel Magic spell to be cast on friendly targets to remove $s1 harmful magical effects.
 
-Name             : Summon Charger (desc=Summon) (id=34767) [Spell Family (10)] 
-Class            : Paladin
-Race             : Blood Elf (0x200)
-School           : Holy
-Spell Type       : None
-Spell Level      : 40
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Family Flags     : 60
-Attributes       : ........ .......x x.x.x... ....x...   ........ ..x..... .x...... ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ .......x ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ x....... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Only Outdoors (15), Not Shapeshifted (16), Do Not Sheath (18), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), No Threat (42), No AutoCast (AI) (49), Ignore Caster Modifiers (125), Not In Spellbook (143), Allow Equip While Casting (209), Horde Specific Spell (232), Aura Points On Client (268)
-Effects          :
-#2 (id=853252)   : Server Side Script (77)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Summons a Charger, which serves as a mount.
-Tooltip          : $?j1g[Increases ground speed by $j1g%. ][]$?j1f[Increases flight speed by $j1f%. ][]$?j1s[Increases swim speed by $j1s%. ][]
-
-Name             : Summon Warhorse (desc=Summon) (id=34769) [Spell Family (10)] 
-Class            : Paladin
-Race             : Blood Elf (0x200)
-School           : Holy
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Family Flags     : 60
-Attributes       : ........ .......x x.x.x... ....x...   ........ ..x..... .x...... ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ .......x ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ x....... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Only Outdoors (15), Not Shapeshifted (16), Do Not Sheath (18), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), No Threat (42), No AutoCast (AI) (49), Ignore Caster Modifiers (125), Not In Spellbook (143), Allow Equip While Casting (209), Horde Specific Spell (232), Aura Points On Client (268)
-Effects          :
-#2 (id=853341)   : Server Side Script (77)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Summons a warhorse, which serves as a mount.
-Tooltip          : $?j1g[Increases ground speed by $j1g%. ][]$?j1f[Increases flight speed by $j1f%. ][]$?j1s[Increases swim speed by $j1s%. ][]
-
 Name             : Crusader Strike (id=35395) [Spell Family (10)] 
 Class            : Paladin
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 10% Base Mana (0) (id=221466)
 Spell Level      : 1
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 4.5 seconds
+Category         : 1264
 Category Cooldown: 4.5 seconds
 Affecting spells : Sanctity of Battle (25956 effect#1), Crusade (31866 effects: #1, #2), Crusade (31867 effects: #1, #2), Crusade (31868 effects: #1, #2), Judgements of the Wise (31878 effect#2), Improved Crusader Strike (44300 effect#1), Glyph of Crusader Strike (54927 effect#1), Glyph of the Ascetic Crusader (54938 effect#1), Grand Crusader (75806 effect#1), Wrath of the Lightbringer (84635 effect#1), Wrath of the Lightbringer (84636 effect#1), Grand Crusader (85043 effect#1), Rule of Law (85457 effect#1), Rule of Law (85458 effect#1), Zealotry (85696 effect#1), Rule of Law (87461 effect#1)
 Family Flags     : 47
@@ -2478,6 +2493,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2496,6 +2512,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2514,6 +2531,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2531,9 +2549,10 @@ Name             : Seal of Truth (id=42463) [Spell Family (10)]
 Class            : Paladin
 Race             : Blood Elf (0x200)
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 44
 Range            : 100 yards
+Proc Chance      : 101%
 Affecting spells : Seals of the Pure (20224 effects: #1, #2), Seals of the Pure (20225 effects: #1, #2), Glyph of Seal of Truth (56416 effect#1), Glyph of Truth (57947 effect#1)
 Family Flags     : 43
 Attributes       : ........ ........ x.x..... ........   ...x.... ........ ........ ........ 
@@ -2557,6 +2576,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2575,6 +2595,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2593,6 +2614,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2611,6 +2633,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2647,6 +2670,7 @@ Name             : Sanctified Wrath (desc=Rank 1) (id=53375) [Spell Family (10),
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2671,6 +2695,7 @@ Name             : Sanctified Wrath (desc=Rank 3) (id=53376) [Spell Family (10),
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2695,6 +2720,7 @@ Name             : Inquiry of Faith (desc=Rank 1) (id=53380) [Spell Family (10),
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2719,6 +2745,7 @@ Name             : Inquiry of Faith (desc=Rank 2) (id=53381) [Spell Family (10),
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2743,6 +2770,7 @@ Name             : Inquiry of Faith (desc=Rank 3) (id=53382) [Spell Family (10),
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2766,13 +2794,16 @@ Description      : Increases the periodic damage done by your Seal of Truth by $
 Name             : Divine Storm (id=53385) [Spell Family (10)] 
 Class            : Paladin
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 5% Base Mana (0) (id=239832)
 Spell Level      : 1
+Max Targets      : 255
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 4.5 seconds
+Category         : 1264
 Category Cooldown: 4.5 seconds
+Proc Chance      : 101%
 Affecting spells : Sanctity of Battle (25956 effect#1)
 Family Flags     : 49
 Attributes       : ........ ........ x.x..... ........   ....x... ........ ........ ........ 
@@ -2797,6 +2828,9 @@ Name             : The Art of War (desc=Rank 1) (id=53486) [Spell Family (10), P
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 7%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2815,6 +2849,9 @@ Name             : The Art of War (desc=Rank 2) (id=53488) [Spell Family (10), P
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 14%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2833,6 +2870,7 @@ Name             : Sheath of Light (desc=Passive) (id=53503) [Spell Family (10),
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2855,6 +2893,7 @@ Name             : Sacred Cleansing (desc=Rank 1) (id=53551) [Spell Family (10),
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2875,6 +2914,9 @@ Name             : Enlightened Judgements (desc=Rank 1) (id=53556) [Spell Family
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x.x. ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2901,6 +2943,9 @@ Name             : Enlightened Judgements (desc=Rank 2) (id=53557) [Spell Family
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x....... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2932,6 +2977,7 @@ Spell Level      : 39
 Range            : 60 yards
 GCD              : 1.5 seconds
 Duration         : 300 seconds
+Proc Chance      : 101%
 Affecting spells : Glyph of Beacon of Light (63218 effect#1)
 Family Flags     : 56
 Attributes       : ........ ........ x.x..... .....x..   ........ ........ .x...... ........ 
@@ -2953,6 +2999,9 @@ Name             : Infusion of Light (desc=Rank 1) (id=53569) [Spell Family (10)
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2981,6 +3030,9 @@ Name             : Infusion of Light (desc=Rank 2) (id=53576) [Spell Family (10)
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3009,6 +3061,7 @@ Name             : Touched by the Light (desc=Passive) (id=53592) [Spell Family 
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3032,13 +3085,14 @@ Description      : Increases your total Stamina by $s3%, increases your spell hi
 Name             : Hammer of the Righteous (id=53595) [Spell Family (10)] 
 Class            : Paladin
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 10% Base Mana (0) (id=239574)
 Spell Level      : 1
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, One-handed Mace, One-handed Sword, Fist Weapon, Dagger
 Cooldown         : 4.5 seconds
+Category         : 1264
 Category Cooldown: 4.5 seconds
 Affecting spells : Crusade (31866 effects: #1, #2), Crusade (31867 effects: #1, #2), Crusade (31868 effects: #1, #2), Judgements of the Wise (31878 effect#2), Glyph of Hammer of the Righteous (63219 effect#1), Rule of Law (85457 effect#1), Rule of Law (85458 effect#1), Rule of Law (87461 effect#1)
 Family Flags     : 50
@@ -3067,12 +3121,13 @@ Description      : Hammer the current target for $53595s1% weapon damage, causin
 Name             : Shield of the Righteous (id=53600) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Holy Power (9) (id=239667)
 Spell Level      : 1
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires armor   : Shield 
+Proc Chance      : 101%
 Affecting spells : Glyph of Shield of the Righteous (63222 effect#1), Sacred Duty (85433 effect#1)
 Family Flags     : 52
 Attributes       : ........ ........ x.x..... ........   ........ .x...... ........ ...x.... 
@@ -3104,6 +3159,9 @@ Spell Type       : None
 Spell Level      : 39
 Range            : 60 yards
 Duration         : 2 seconds
+Proc Chance      : 100%
+Proc Flags       : .....x.. .x.x...x ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee Taken, Yellow Ranged Taken, Generic Heal Taken, Magic Heal Taken
 Triggered by     : Beacon of Light (53563)
 Attributes       : .......x x....... x.x..... ...x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
@@ -3126,6 +3184,7 @@ School           : Holy
 Spell Type       : None
 Spell Level      : 1
 Range            : 60 yards
+Proc Chance      : 101%
 Affecting spells : Glyph of Beacon of Light (63218 effect#1)
 Family Flags     : 56
 Attributes       : ........ ........ x.x..... ...x....   ........ ........ ........ ........ 
@@ -3218,6 +3277,10 @@ Name             : Judgements of the Pure (desc=Rank 1) (id=53671) [Spell Family
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 1 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3239,6 +3302,10 @@ Class            : Paladin
 School           : Holy
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Triggered by     : Infusion of Light (53569)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3261,6 +3328,10 @@ Name             : Judgements of the Pure (desc=Rank 2) (id=53673) [Spell Family
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 1 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3281,6 +3352,9 @@ Name             : Judgements of the Just (desc=Rank 1) (id=53695) [Spell Family
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3305,6 +3379,9 @@ Name             : Judgements of the Just (desc=Rank 2) (id=53696) [Spell Family
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3329,6 +3406,9 @@ Name             : Sacred Duty (desc=Rank 1) (id=53709) [Spell Family (10), Pass
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 25%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3347,6 +3427,9 @@ Name             : Sacred Duty (desc=Rank 2) (id=53710) [Spell Family (10), Pass
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3366,6 +3449,10 @@ Class            : Paladin
 School           : Holy
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Triggered by     : Infusion of Light (53576)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3388,6 +3475,10 @@ Name             : Judgements of the Pure (desc=Rank 3) (id=54151) [Spell Family
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 1 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3440,6 +3531,7 @@ Name             : Glyph of Judgement (id=54922) [Spell Family (10), Passive, Hi
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3460,6 +3552,7 @@ Name             : Glyph of Hammer of Justice (id=54923) [Spell Family (10), Pas
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3480,6 +3573,7 @@ Name             : Glyph of Divine Protection (id=54924) [Spell Family (10), Pas
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3504,6 +3598,9 @@ Name             : Glyph of Rebuke (id=54925) [Spell Family (10), Passive, Hidde
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3524,6 +3621,7 @@ Name             : Glyph of Hammer of Wrath (id=54926) [Spell Family (10), Passi
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3544,6 +3642,7 @@ Name             : Glyph of Crusader Strike (id=54927) [Spell Family (10), Passi
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3564,6 +3663,7 @@ Name             : Glyph of Consecration (id=54928) [Spell Family (10), Passive,
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3588,6 +3688,7 @@ Name             : Glyph of Focused Shield (id=54930) [Spell Family (10), Passiv
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3612,6 +3713,7 @@ Name             : Glyph of Turn Evil (id=54931) [Spell Family (10), Passive, Hi
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3636,6 +3738,7 @@ Name             : Glyph of Exorcism (id=54934) [Spell Family (10), Passive, Hid
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3656,6 +3759,7 @@ Name             : Glyph of Cleansing (id=54935) [Spell Family (10), Passive, Hi
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3676,6 +3780,9 @@ Name             : Glyph of Word of Glory (id=54936) [Spell Family (10), Passive
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3696,6 +3803,7 @@ Name             : Glyph of Divine Favor (id=54937) [Spell Family (10), Passive,
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3716,6 +3824,7 @@ Name             : Glyph of the Ascetic Crusader (id=54938) [Spell Family (10), 
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3736,6 +3845,7 @@ Name             : Glyph of Divinity (id=54939) [Spell Family (10), Passive, Hid
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3756,6 +3866,7 @@ Name             : Glyph of Light of Dawn (id=54940) [Spell Family (10), Passive
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3780,6 +3891,7 @@ Name             : Glyph of Seal of Insight (id=54943) [Spell Family (10), Passi
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3802,6 +3914,8 @@ School           : Holy
 Spell Type       : None
 Spell Level      : 1
 Range            : 100 yards
+Max Targets      : 5
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ .....x..   ........ ........ ........ .....x.. 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -3822,6 +3936,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3841,6 +3956,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3859,6 +3975,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3877,6 +3994,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3895,6 +4013,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3914,6 +4033,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3932,6 +4052,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3950,6 +4071,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3968,6 +4090,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3986,6 +4109,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4005,6 +4129,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4023,6 +4148,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4042,6 +4168,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4060,6 +4187,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4078,6 +4206,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4096,6 +4225,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4114,6 +4244,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4132,6 +4263,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4149,6 +4281,9 @@ Name             : Glyph of Dazing Shield (id=56414) [Spell Family (10), Passive
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4169,6 +4304,7 @@ Name             : Glyph of Seal of Truth (id=56416) [Spell Family (10), Passive
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4189,6 +4325,7 @@ Name             : Glyph of Holy Wrath (id=56420) [Spell Family (10), Passive, H
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4210,6 +4347,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4228,6 +4366,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4288,6 +4427,7 @@ Name             : Glyph of Blessing of Kings (id=57937) [Spell Family (10), Pas
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4308,6 +4448,7 @@ Name             : Glyph of Truth (id=57947) [Spell Family (10), Passive, Hidden
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4328,6 +4469,7 @@ Name             : Glyph of Justice (id=57954) [Spell Family (10), Passive, Hidd
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4348,6 +4490,7 @@ Name             : Glyph of Lay on Hands (id=57955) [Spell Family (10), Passive,
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4368,6 +4511,7 @@ Name             : Glyph of Blessing of Might (id=57958) [Spell Family (10), Pas
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4388,6 +4532,7 @@ Name             : Glyph of Insight (id=57979) [Spell Family (10), Passive, Hidd
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4409,6 +4554,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4428,6 +4574,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4447,6 +4594,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4465,6 +4613,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4484,6 +4633,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4502,6 +4652,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4520,6 +4671,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4538,6 +4690,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4556,6 +4709,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4575,6 +4729,7 @@ Race             : Draenei (0x400)
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4597,7 +4752,7 @@ Name             : Gift of the Naaru (desc=Racial) (id=59542) [Spell Family (10)
 Class            : Paladin
 Race             : Draenei (0x400)
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 40 yards
 Duration         : 15 seconds
@@ -4631,6 +4786,10 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Triggered by     : The Art of War (53486), The Art of War (53488), The Art of War (87138)
 Family Flags     : 65
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
@@ -4662,6 +4821,7 @@ Name             : Judgement Anti-Parry/Dodge Passive (id=60091) [Spell Family (
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4686,6 +4846,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 2 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4702,12 +4863,13 @@ Effects          :
 Name             : Hand of Reckoning (id=62124) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 3% Base Mana (0) (id=256447)
 Spell Level      : 14
 Range            : 30 yards
 Duration         : 3 seconds
 Cooldown         : 8 seconds
+Proc Chance      : 101%
 Family Flags     : 62
 Attributes       : ....x... ........ x.x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ..x.....   ........ ........ x.x..... ........ 
@@ -4731,6 +4893,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4748,6 +4911,7 @@ Name             : Glyph of Beacon of Light (id=63218) [Spell Family (10), Passi
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4768,6 +4932,7 @@ Name             : Glyph of Hammer of the Righteous (id=63219) [Spell Family (10
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4788,6 +4953,7 @@ Name             : Glyph of Templar's Verdict (id=63220) [Spell Family (10), Pas
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4808,6 +4974,7 @@ Name             : Glyph of Shield of the Righteous (id=63222) [Spell Family (10
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4828,6 +4995,7 @@ Name             : Glyph of Divine Plea (id=63223) [Spell Family (10), Passive, 
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4848,6 +5016,7 @@ Name             : Glyph of Holy Shock (id=63224) [Spell Family (10), Passive, H
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4868,6 +5037,7 @@ Name             : Glyph of Salvation (id=63225) [Spell Family (10), Passive, Hi
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4891,6 +5061,8 @@ Spell Type       : None
 Resource         : 0 Energy (3) (id=246528)
 Range            : 50000 yards
 Duration         : 10 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(11)
 Triggered by     : Glyph of Dazing Shield (56414)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -4910,9 +5082,10 @@ Tooltip          : Dazed.
 Name             : Divine Touch (id=63544) [Spell Family (6)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
+Proc Chance      : 101%
 Stance Mask      : 0x80000000
 Affecting spells : Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1)
 Family Flags     : 76
@@ -4934,6 +5107,7 @@ Name             : Divinity (desc=Rank 1) (id=63646) [Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4954,6 +5128,7 @@ Name             : Divinity (desc=Rank 2) (id=63647) [Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4974,6 +5149,7 @@ Name             : Divinity (desc=Rank 3) (id=63648) [Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4995,6 +5171,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5014,6 +5191,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5032,6 +5210,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5050,6 +5229,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5068,6 +5248,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5086,6 +5267,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5104,6 +5286,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5121,6 +5304,9 @@ Name             : Item - Paladin T8 Holy 2P Bonus (id=64890) [Spell Family (10)
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5140,10 +5326,11 @@ Description      : Your Holy Shock critical heals now also place a periodic heal
 Name             : Holy Mending (id=64891) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 80
 Range            : 100 yards
 Duration         : 9 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   .......x ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -5162,10 +5349,11 @@ Tooltip          : Healing every $t1 seconds.
 Name             : Judgements of the Just (id=68055) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 30
 Range            : 100 yards
 Duration         : 20 seconds
+Proc Chance      : 101%
 Affecting spells : Judgements of the Just (53695 effect#1), Judgements of the Just (53696 effect#1)
 Family Flags     : 19, 70
 Attributes       : ........ ...x.... x.x..x.. ........   ........ ........ ........ ........ 
@@ -5248,54 +5436,6 @@ Effects          :
 Description      : Activates your true form, increasing current movement speed by an additional $s1% for $d.
 Tooltip          : True form activated, movement speed increased by an additional $s1%.
 
-Name             : Summon Sunwalker Kodo (desc=Summon) (id=69820) [Spell Family (10)] 
-Class            : Paladin
-Race             : Tauren (0x20)
-School           : Holy
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Family Flags     : 60
-Attributes       : ........ .......x x.x.x... ....x...   ........ ..x..... .x...... ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ x....... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Only Outdoors (15), Not Shapeshifted (16), Do Not Sheath (18), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), No Threat (42), No AutoCast (AI) (49), Ignore Caster Modifiers (125), Allow Equip While Casting (209), Horde Specific Spell (232), Aura Points On Client (268)
-Effects          :
-#2 (id=72138)    : Server Side Script (77)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Summons a Sunwalker Kodo, which serves as a mount.
-Tooltip          : $?j1g[Increases ground speed by $j1g%. ][]$?j1f[Increases flight speed by $j1f%. ][]$?j1s[Increases swim speed by $j1s%. ][]
-
-Name             : Summon Great Sunwalker Kodo (desc=Summon) (id=69826) [Spell Family (10)] 
-Class            : Paladin
-Race             : Tauren (0x20)
-School           : Holy
-Spell Type       : None
-Spell Level      : 40
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Family Flags     : 60
-Attributes       : ........ .......x x.x.x... ....x...   ........ ..x..... .x...... ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ x....... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Only Outdoors (15), Not Shapeshifted (16), Do Not Sheath (18), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), No Threat (42), No AutoCast (AI) (49), Ignore Caster Modifiers (125), Allow Equip While Casting (209), Horde Specific Spell (232), Aura Points On Client (268)
-Effects          :
-#2 (id=72143)    : Server Side Script (77)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Summons a Great Sunwalker Kodo, which serves as a mount.
-Tooltip          : $?j1g[Increases ground speed by $j1g%. ][]$?j1f[Increases flight speed by $j1f%. ][]$?j1s[Increases swim speed by $j1s%. ][]
-
 Name             : Divine Guardian (id=70940) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
@@ -5303,6 +5443,7 @@ Spell Type       : None
 Range            : 100 yards
 Duration         : 6 seconds
 Cooldown         : 180 seconds
+Proc Chance      : 101%
 Family Flags     : 86
 Attributes       : ........ ........ ........ ........   ........ ..x..... ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ......x. 
@@ -5322,59 +5463,14 @@ Effects          :
 Description      : All party or raid members within $a1 yards, excluding the Paladin, take $s1% reduced damage for $d.
 Tooltip          : Damage taken reduced by $s1%.
 
-Name             : Summon Exarch's Elekk (desc=Summon) (id=73629) [Spell Family (10)] 
-Class            : Paladin
-Race             : Draenei (0x400)
-School           : Holy
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Family Flags     : 60
-Attributes       : ........ .......x x.x.x... ....x...   ........ ..x..... .x...... ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Only Outdoors (15), Not Shapeshifted (16), Do Not Sheath (18), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), No Threat (42), No AutoCast (AI) (49), Ignore Caster Modifiers (125), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#2 (id=73691)    : Server Side Script (77)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Summons an Exarch's Elekk, which serves as a mount.
-Tooltip          : $?j1g[Increases ground speed by $j1g%. ][]$?j1f[Increases flight speed by $j1f%. ][]$?j1s[Increases swim speed by $j1s%. ][]
-
-Name             : Summon Great Exarch's Elekk (desc=Summon) (id=73630) [Spell Family (10)] 
-Class            : Paladin
-Race             : Draenei (0x400)
-School           : Holy
-Spell Type       : None
-Spell Level      : 40
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Family Flags     : 60
-Attributes       : ........ .......x x.x.x... ....x...   ........ ..x..... .x...... ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Only Outdoors (15), Not Shapeshifted (16), Do Not Sheath (18), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), No Threat (42), No AutoCast (AI) (49), Ignore Caster Modifiers (125), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#2 (id=73694)    : Server Side Script (77)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Summons an Great Exarch's Elekk, which serves as a mount.
-Tooltip          : $?j1g[Increases ground speed by $j1g%. ][]$?j1f[Increases flight speed by $j1f%. ][]$?j1s[Increases swim speed by $j1s%. ][]
-
 Name             : Grand Crusader (desc=Rank 1) (id=75806) [Spell Family (10), Passive, Hidden] 
 Class            : Paladin
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 10%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5395,6 +5491,9 @@ Name             : Illuminated Healing (id=76669) [Spell Family (10), Passive, H
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ....x... ........   ........ ........ ........ ........ 
@@ -5438,6 +5537,9 @@ Name             : Hand of Light (id=76672) [Spell Family (10), Passive, Hidden]
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5459,7 +5561,7 @@ Description      : $?s76672[Your Templar's Verdict, Crusader Strike, and Divine 
 Name             : Blessing of Kings (id=79062) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 22
 Range            : 30 yards
 GCD              : 1.5 seconds
@@ -5487,7 +5589,7 @@ All magical resistances increased by $w2.
 Name             : Blessing of Might (id=79101) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 56
 Range            : 30 yards
 GCD              : 1.5 seconds
@@ -5549,6 +5651,9 @@ Class            : Paladin
 School           : Holy
 Spell Type       : None
 Duration         : Aura (infinite)
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Family Flags     : 44
 Attributes       : ........ ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
@@ -5606,7 +5711,7 @@ Tooltip          : Increases the damage done by your Shadow and Holy spells by $
 Name             : Consecration (id=81297) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 6
 Range            : 50000 yards
 Affecting spells : Denounce (31825 effect#1), Blessed Life (31828 effect#1), Blessed Life (31829 effect#1), Glyph of Consecration (54928 effects: #1, #2), Hallowed Ground (84631 effects: #1, #2), Hallowed Ground (84633 effects: #1, #2), Denounce (85510 effect#1)
@@ -5653,6 +5758,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
+Mechanic         : Unknown(28)
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5671,6 +5777,7 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
+Mechanic         : Unknown(28)
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5687,7 +5794,7 @@ Effects          :
 Name             : Parry (desc=Passive) (id=82242) [Passive] 
 Class            : Paladin
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
@@ -5707,7 +5814,7 @@ Description      : Gives a chance to parry enemy melee attacks.
 Name             : Divine Light (id=82326) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 35% Base Mana (0) (id=284553)
 Spell Level      : 62
 Range            : 40 yards
@@ -5732,7 +5839,7 @@ Description      : A large heal that heals a friendly target for $s1. Good for p
 Name             : Holy Radiance (id=82327) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 40% Base Mana (0) (id=284554)
 Spell Level      : 83
 Range            : 40 yards
@@ -5829,6 +5936,9 @@ Class            : Paladin
 School           : Holy
 Spell Type       : None
 Spell Level      : 30
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Attributes       : ......xx x....... x.x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ x....... ........ ........ 
@@ -5853,6 +5963,9 @@ Class            : Paladin
 School           : Holy
 Spell Type       : None
 Spell Level      : 30
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Attributes       : ......xx x....... x.x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ x....... ........ ........ 
@@ -5996,6 +6109,9 @@ Name             : Vengeance (desc=Passive) (id=84839) [Spell Family (10), Passi
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.x. ........ ........ x..x....   ........ ........ ........ ........ 
                  : ........ ........ ........ ....x...   ........ ........ xx...... ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6075,6 +6191,9 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 20%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6149,6 +6268,9 @@ Name             : Seals of Command (id=85126) [Spell Family (10), Passive, Hidd
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6195,10 +6317,11 @@ Description      : Consumes all Holy Power to send a wave of healing energy befo
 Name             : Templar's Verdict (id=85256) [Spell Family (10)] 
 Class            : Paladin
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Holy Power (9) (id=287217)
 Spell Level      : 1
 Range            : 5 yards
+Max Targets      : 255
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Affecting spells : Arbiter of the Light (20359 effect#1), Arbiter of the Light (20360 effect#1), Crusade (31866 effect#2), Crusade (31867 effect#2), Crusade (31868 effect#2), Glyph of Templar's Verdict (63220 effect#1)
@@ -6233,6 +6356,10 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Cooldown         : 30 seconds
+Internal Cooldown: 60 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6253,6 +6380,10 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 6 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Triggered by     : Grand Crusader (75806), Grand Crusader (85043)
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6277,6 +6408,10 @@ School           : Physical
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x.x. ....x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Generic Hostile Spell, Magic Hostile Spell
 Triggered by     : Sacred Duty (53709), Sacred Duty (53710)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -6390,6 +6525,9 @@ Name             : Denounce (desc=Rank 2) (id=85510) [Spell Family (10), Passive
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6482,6 +6620,9 @@ Name             : Guarded by the Light (desc=Rank 2) (id=85646) [Spell Family (
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6501,7 +6642,7 @@ Description      : Increases your Word of Glory by $s1% when used to heal yourse
 Name             : Word of Glory (id=85673) [Spell Family (10)] 
 Class            : Paladin, Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Holy Power (9) (id=287640)
 Spell Level      : 9
 Range            : 40 yards
@@ -6581,6 +6722,9 @@ Name             : Selfless Healer (desc=Rank 1) (id=85803) [Spell Family (10), 
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6607,6 +6751,9 @@ Name             : Selfless Healer (desc=Rank 2) (id=85804) [Spell Family (10), 
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6729,7 +6876,7 @@ Description      : The following attacks have a $s1% chance to cause your next H
 Name             : Illuminated Healing (desc=Rank 1) (id=86273) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 100 yards
 Duration         : 15 seconds
@@ -6752,7 +6899,7 @@ Tooltip          : Absorbs $w damage.
 Name             : Holy Radiance (id=86452) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 83
 Range            : 100 yards
 Affecting spells : Seal of Insight (20165 effect#2), Infusion of Light (53672 effect#1), Infusion of Light (54149 effect#1), Divine Plea (54428 effect#2), Tower of Radiance (84800 effect#2), Walk in the Light (85102 effects: #1, #2), Clarity of Purpose (85462 effect#1), Clarity of Purpose (85463 effect#1), Clarity of Purpose (85464 effect#1), Tower of Radiance (85511 effect#2), Tower of Radiance (85512 effect#2)
@@ -6835,7 +6982,7 @@ Description      : Increases your Strength by $s1% while wearing only Plate armo
 Name             : Ancient Guardian (id=86657) [Spell Family (10), Hidden] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 3% Base Mana (0) (id=288618)
 Range            : 50 yards
 Duration         : 40 seconds
@@ -6918,7 +7065,7 @@ The Guardian will heal the target of your next 5 single-target heals, and nearby
 Name             : Light of the Ancient Kings (id=86678) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=288638)
 Spell Level      : 14
 Range            : 100 yards
@@ -6973,6 +7120,8 @@ Class            : Paladin
 School           : Holy
 Spell Type       : None
 Duration         : 30 seconds
+Stacks           : 20 maximum
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7009,6 +7158,9 @@ Name             : The Art of War (desc=Rank 3) (id=87138) [Spell Family (10), P
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 20%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7107,6 +7259,7 @@ School           : Holy
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 4 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7317,37 +7470,13 @@ Effects          :
                    Base Value: 5 | Scaled Value: 5 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Grants a $s1% increase to your primary attribute for wearing plate in all armor slots.
 
-Name             : Running Wild (desc=Racial) (id=87840) 
-Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Druid
-Race             : Worgen (0x200000)
-School           : Physical
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Attributes       : ....x... .......x x...x... ....x...   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ...x....   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Is Ability (4), Only Outdoors (15), Not Shapeshifted (16), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), Ignore Caster Modifiers (125), Force Display Castbar (155), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#1 (id=89943)    : Apply Aura (6) | Dummy (4)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000
-#3 (id=104313)   : Apply Aura (6) | Unknown(358)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Drop to all fours to run as fast as a wild animal.
-Tooltip          : $?j2g[Increases ground speed by $j2g%. ][]$?j2f[Increases flight speed by $j2f%. ][]$?j2s[Increases swim speed by $j2s%. ][]
-
 Name             : Guarded by the Light (id=88063) 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Range            : 40 yards
 Duration         : 6 seconds
+Proc Chance      : 101%
 Attributes       : ........ ...x.... x.x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ...x.x.. ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7366,7 +7495,7 @@ Tooltip          : Absorbs damage.
 Name             : Hammer of the Righteous (id=88263) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Requires weapon  : One-handed Axe, One-handed Mace, One-handed Sword, Fist Weapon, Dagger
@@ -7390,7 +7519,7 @@ Description      : Hammer the current target for $53595s1% weapon damage, causin
 Name             : Holy Word: Chastise (id=88625) [Spell Family (6)] 
 Class            : Paladin, Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 15% Base Mana (0) (id=290638)
 Spell Level      : 1
 Range            : 30 yards
@@ -7420,6 +7549,9 @@ Name             : Revelations (desc=Passive) (id=88627) [Spell Family (6), Pass
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x.x..x.. ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7445,7 +7577,7 @@ Blesses the ground with Divine light, healing all within it for $88686s1 every $
 Name             : Holy Word: Serenity (id=88684) [Spell Family (6)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 8% Base Mana (0) (id=290688)
 Spell Level      : 20
 Range            : 40 yards
@@ -7507,7 +7639,7 @@ Description      : Blesses the ground with divine light, healing all within it f
 Name             : Holy Word: Sanctuary (id=88686) [Spell Family (6)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 100 yards
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Tome of Light (14898 effect#1), Focused Will (45241 effect#1), Focused Will (45242 effect#1), Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1), Twin Disciplines (47586 effect#1), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Inner Will (73413 effect#1), Tome of Light (81625 effect#1), Spiritual Healing (87336 effects: #1, #2)
@@ -7591,6 +7723,9 @@ Name             : Judgements of the Bold (desc=Passive) (id=89901) [Spell Famil
 Class            : Paladin
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x....... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7656,6 +7791,8 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
+Stacks           : 1 maximum
+Proc Chance      : 101%
 Triggered by     : Selfless Healer (85803), Selfless Healer (85804)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7677,6 +7814,9 @@ Name             : Glyph of the Long Word (id=93466) [Spell Family (10), Passive
 Class            : Paladin, Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7737,6 +7877,10 @@ Class            : Paladin
 School           : Physical
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Triggered by     : Crusade (31866), Crusade (31867), Crusade (31868)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7780,12 +7924,13 @@ Description      : Allows $s1% of your mana regeneration from Spirit to continue
 Name             : Rebuke (id=96231) [Spell Family (10)] 
 Class            : Paladin
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 10% Base Mana (0) (id=296764)
 Spell Level      : 54
 Range            : 5 yards
 Duration         : 4 seconds
 Cooldown         : 10 seconds
+Category         : 88
 Category Cooldown: 10 seconds
 Affecting spells : Glyph of Rebuke (54925 effect#1)
 Family Flags     : 84
@@ -7806,7 +7951,7 @@ Description      : Interrupts spellcasting and prevents any spell in that school
 Name             : Sacred Shield (id=96263) [Spell Family (10)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Duration         : 15 seconds
 Triggered by     : Sacred Shield (85285)
@@ -7852,7 +7997,7 @@ Description      : Your Avenger's Shield generates a charge of Holy Power.
 Name             : Flash Heal (id=101062) [Spell Family (6)] 
 Class            : Paladin
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 3
 Range            : 40 yards
 GCD              : 1.5 seconds
@@ -7877,11 +8022,14 @@ Name             : Seal of Corruption (id=348704) [Spell Family (10)]
 Class            : Paladin
 Race             : Blood Elf (0x200)
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 14% Base Mana (0) (id=232155)
 Spell Level      : 68
 GCD              : 1.5 seconds
 Duration         : 1800 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Seals of the Pure (20224 effects: #1, #2), Seals of the Pure (20225 effects: #1, #2), Glyph of Seal of Truth (56416 effect#1), Glyph of Truth (57947 effect#1)
 Family Flags     : 43
 Attributes       : ........ ........ x.x..... ........   ........ ........ ........ ........ 
@@ -7910,10 +8058,11 @@ Name             : Blood Corruption (id=356110) [Spell Family (10)]
 Class            : Paladin
 Race             : Blood Elf (0x200)
 School           : Holy
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 64
 Range            : 100 yards
 Duration         : 15 seconds
+Stacks           : 5 maximum
 Affecting spells : Seals of the Pure (20224 effects: #1, #2), Seals of the Pure (20225 effects: #1, #2), Glyph of Seal of Truth (56416 effect#1), Glyph of Truth (57947 effect#1)
 Family Flags     : 43
 Attributes       : ........ ........ ..x..... ........   ...x.... ........ ........ ........ 
@@ -7935,9 +8084,10 @@ Name             : Judgement of Corruption (desc=Rank 1) (id=356112) [Spell Fami
 Class            : Paladin
 Race             : Blood Elf (0x200)
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 64
 Range            : 100 yards
+Proc Chance      : 101%
 Affecting spells : Daybreak (88820 effect#1), Daybreak (88821 effect#1)
 Family Flags     : 35
 Attributes       : ........ ...x.... x.x..... ........   ........ ........ ........ ........ 

@@ -1,8 +1,8 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
 Name             : Block (desc=Passive) (id=107) [Passive] 
 Class            : Warrior, Paladin, Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Requires armor   : Cosmetic, Shield 
 Attributes       : ....x.x. ........ ..x..... ........   ........ ........ ........ ........ 
@@ -22,10 +22,15 @@ Description      : Gives a chance to block enemy melee and ranged attacks.
 Name             : Lightning Shield (id=324) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 8
 GCD              : 1.5 seconds
 Duration         : 600 seconds
+Internal Cooldown: 3.5 seconds
+Stacks           : 3 initial, 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Improved Shields (16261 effect#1), Improved Shields (16290 effect#1), Stormstrike (17364 effect#1), Energized Shield (24499 effect#1), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Mental Quickness (30814 effect#2), Shamanistic Rage (30823 effect#1), Shaman Lightning Shield Bonus (33020 effect#1), Improved Shields (51881 effect#1), Glyph of Lightning Shield (55448 effect#1), Elemental Fury (60188 effect#1)
 Family Flags     : 10
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -50,7 +55,7 @@ $bonus=$?s51881[${1.15}][${$<mult2>}]
 Name             : Healing Wave (id=331) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 9% Base Mana (0) (id=169692)
 Spell Level      : 7
 Range            : 40 yards
@@ -75,7 +80,7 @@ Description      : Heals a friendly target for $s1.$?s55440[  When you heal some
 Name             : Purge (id=370) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 14% Base Mana (0) (id=169603)
 Spell Level      : 12
 Range            : 30 yards
@@ -102,6 +107,9 @@ School           : Nature
 Spell Type       : None
 Spell Level      : 1
 Range            : 50000 yards
+Proc Chance      : 101%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Affecting spells : Deep Healing (77226 effect#1)
 Family Flags     : 70
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
@@ -121,7 +129,7 @@ Description      : Protects the target with an earthen shield, giving a chance o
 Name             : Lightning Bolt (id=403) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=169133)
 Spell Level      : 1
 Range            : 30 yards
@@ -147,13 +155,14 @@ Description      : Casts a bolt of lightning at the target for $s1 Nature damage
 Name             : Chain Lightning (id=421) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 26% Base Mana (0) (id=169329)
 Spell Level      : 28
 Range            : 30 yards
 Cast Time        : 2 seconds
 GCD              : 1.5 seconds
 Cooldown         : 3 seconds
+Category         : 85
 Category Cooldown: 3 seconds
 Affecting spells : Frostbrand Attack (8034 effect#3), Concussion (16035 effect#1), Convection (16039 effect#1), Concussion (16105 effect#1), Concussion (16106 effect#1), Convection (16109 effect#1), Elemental Mastery (16166 effects: #1, #2), Nature's Swiftness (16188 effect#1), Clearcasting (16246 effects: #1, #2), Stormstrike (17364 effect#1), Elemental Reach (28999 effect#1), Elemental Reach (29000 effect#1), Elemental Precision (30672 effects: #1, #2), Elemental Precision (30673 effects: #1, #2), Elemental Precision (30674 effects: #1, #2), Shamanistic Rage (30823 effect#1), Increased Lightning Damage (34230 effect#1), Static Shock (51525 effect#1), Static Shock (51526 effect#1), Static Shock (51527 effect#1), Maelstrom Weapon (53817 effects: #1, #2, #3), Glyph of Chain Lightning (55449 effects: #1, #2), Elemental Fury (60188 effects: #1, #2), Shamanism (62099 effects: #1, #3), Spiritwalker's Grace (79206 effect#1), Rolling Thunder (88756 effect#1), Rolling Thunder (88764 effect#1), Rolling Thunder (88765 effect#1), Fulmination (88766 effect#1), Fulmination (88767 effect#1), Ancestral Focus (89920 effect#1), Increased Lightning Damage (352516 effect#1)
 Family Flags     : 1
@@ -174,12 +183,18 @@ Description      : Hurls a lightning bolt at the enemy, dealing $s1 Nature damag
 Name             : Earth Shield (id=974) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 19% Base Mana (0) (id=170220)
 Spell Level      : 10
 Range            : 40 yards
 GCD              : 1.5 seconds
 Duration         : 600 seconds
+Category         : 1195
+Internal Cooldown: 3.5 seconds
+Stacks           : 9 initial, 9 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.x .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Heal Taken, Magic Hostile Spell Taken
 Affecting spells : Tidal Focus (16179 effect#1), Tidal Focus (16214 effect#1), Tidal Focus (16215 effect#1), Clearcasting (16246 effect#1), Improved Shields (16261 effect#2), Improved Shields (16290 effect#2), Improved Shields (51881 effect#2), Glyph of Earth Shield (63279 effect#1)
 Family Flags     : 42
 Attributes       : ........ ........ x.x..... ........   ........ ........ ........ ........ 
@@ -204,7 +219,7 @@ Variables        : $heal=$?a63279[${$m1*1.2}][${$m1}]
 Name             : Chain Heal (id=1064) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 20% Base Mana (0) (id=170020)
 Spell Level      : 40
 Range            : 40 yards
@@ -254,7 +269,7 @@ Description      : Ignites your Flame Shock spell on any nearby enemies, causing
 Name             : Earth Elemental Totem (id=2062) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 24% Base Mana (0) (id=169851)
 Spell Level      : 56
 GCD              : 1 seconds
@@ -279,7 +294,7 @@ Description      : Summons an elemental totem that calls forth a Greater Earth E
 Name             : Earthbind Totem (id=2484) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 5% Base Mana (0) (id=171174)
 Spell Level      : 18
 GCD              : 1 seconds
@@ -304,7 +319,7 @@ Description      : Summons an Earthbind Totem with $s1 health at the feet of the
 Name             : Ghost Wolf (id=2645) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=171027)
 Spell Level      : 15
 Cast Time        : 2 seconds
@@ -366,7 +381,7 @@ Tooltip          : Melee, ranged, and spell casting speed increased by $s1%.
 Name             : Fire Elemental Totem (id=2894) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 23% Base Mana (0) (id=170634)
 Spell Level      : 66
 GCD              : 1 seconds
@@ -391,7 +406,7 @@ Description      : Summons an elemental totem that calls forth a greater fire el
 Name             : Wrath of Air Totem (id=2895) [Spell Family (11), Passive] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 44
 Affecting spells : Shamanistic Rage (30823 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 40
@@ -436,9 +451,10 @@ Description      : Summons a Searing Totem with $s1 health at your feet for $d t
 Name             : Earthbind (id=3600) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 6
 Duration         : 5 seconds
+Mechanic         : Unknown(11)
 Affecting spells : Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 32
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
@@ -459,7 +475,7 @@ Tooltip          : Movement speed reduced by $s1%.
 Name             : Searing Bolt (id=3606) [Spell Family (11)] 
 Class            : Shaman
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 20 yards
 Cast Time        : 1.5 seconds
@@ -482,7 +498,7 @@ Description      : Deals Fire damage to the target.
 Name             : Wrath of Air Totem (id=3738) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 11% Base Mana (0) (id=170893)
 Spell Level      : 44
 GCD              : 1 seconds
@@ -506,7 +522,7 @@ Description      : Summons a Wrath of Air Totem with $s1 health at the feet of t
 Name             : Healing Stream Totem (id=5394) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 3% Base Mana (0) (id=173294)
 Spell Level      : 20
 GCD              : 1 seconds
@@ -533,7 +549,7 @@ $bonus=${($<purification>*$<soothe>)}
 Name             : Healing Stream (id=5672) [Spell Family (11), Passive] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20
 Affecting spells : Glyph of Healing Stream Totem (55456 effect#1), Deep Healing (77226 effect#1)
 Family Flags     : 13
@@ -554,7 +570,7 @@ Tooltip          : Heals $s1 every $t1 seconds.
 Name             : Mana Spring Totem (id=5675) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 4% Base Mana (0) (id=174631)
 Spell Level      : 42
 GCD              : 1 seconds
@@ -578,7 +594,7 @@ Description      : Summons a Mana Spring Totem with $s1 health at the feet of th
 Name             : Mana Spring (id=5677) [Spell Family (11), Passive] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 42
 Affecting spells : Soothing Rains (16187 effect#1), Soothing Rains (16205 effect#1), Shamanistic Rage (30823 effect#1), Glyph of Water Shield (55436 effect#2), Glyph of Totemic Recall (55438 effect#2), Glyph of Earthliving Weapon (55439 effect#2), Glyph of Healing Wave (55440 effect#2), Glyph of Grounding Totem (55441 effect#2), Glyph of Shocking (55442 effect#2), Glyph of Frost Shock (55443 effect#2), Glyph of Lava Lash (55444 effect#2), Glyph of Windfury Weapon (55445 effect#2), Glyph of Stormstrike (55446 effect#2), Glyph of Flame Shock (55447 effect#2), Glyph of Lightning Shield (55448 effect#2), Glyph of Chain Lightning (55449 effect#2), Glyph of Fire Nova (55450 effect#2), Glyph of Flametongue Weapon (55451 effect#2), Glyph of Elemental Mastery (55452 effect#2), Glyph of Lightning Bolt (55453 effect#2), Glyph of Fire Elemental Totem (55455 effect#2), Glyph of Healing Stream Totem (55456 effect#2), Glyph of Thunderstorm (62132 effect#2), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1), Glyph of Unleashed Lightning (101052 effect#2)
 Family Flags     : 14
@@ -599,8 +615,11 @@ Tooltip          : Gain $w1 mana every 5 seconds.
 Name             : Stoneclaw Totem Passive (id=5728) [Passive] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 58
+Proc Chance      : 50%
+Proc Flags       : ........ ........ ....x... ........   ........ ........ ........ ........   
+                 : Any Damage Taken
 Attributes       : ......x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -620,7 +639,7 @@ Tooltip          : Taunting creatures.
 Name             : Stoneclaw Totem Effect (id=5729) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 58
 Affecting spells : Shamanistic Rage (30823 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Triggered by     : Stoneclaw Totem Passive (5728)
@@ -642,12 +661,13 @@ Tooltip          : Taunting creatures.
 Name             : Stoneclaw Totem (id=5730) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=173115)
 Spell Level      : 58
 GCD              : 1 seconds
 Duration         : 15 seconds
 Cooldown         : 20 seconds
+Category         : 45
 Category Cooldown: 20 seconds
 Affecting spells : Totemic Focus (16173 effects: #1, #2), Totemic Focus (16222 effects: #1, #2), Mental Quickness (30814 effect#2), Shamanistic Rage (30823 effect#1)
 Family Flags     : 3
@@ -669,7 +689,7 @@ Tooltip          : Taunting creatures.
 Name             : Far Sight (id=6196) 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 3% Base Mana (0) (id=175785)
 Spell Level      : 36
 Range            : 50000 yards
@@ -696,7 +716,7 @@ Tooltip          : Cannot move while using Farsight.
 Name             : Healing Surge (id=8004) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 27% Base Mana (0) (id=175091)
 Spell Level      : 20
 Range            : 40 yards
@@ -721,7 +741,7 @@ Description      : Heals a friendly target for $s1.
 Name             : Rockbiter Weapon (id=8017) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 8% Base Mana (0) (id=175051)
 Spell Level      : 75
 GCD              : 1.5 seconds
@@ -749,7 +769,7 @@ Unleashing this enchantment forces the target enemy to attack you for $73684d.][
 Name             : Flametongue Weapon (id=8024) [Spell Family (11)] 
 Class            : Shaman
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=175208)
 Spell Level      : 10
 GCD              : 1.5 seconds
@@ -777,7 +797,7 @@ Unleashing this enchantment deals $73683s1 Fire damage to an enemy target and in
 Name             : Frostbrand Weapon (id=8033) [Spell Family (11)] 
 Class            : Shaman
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=175655)
 Spell Level      : 26
 GCD              : 1.5 seconds
@@ -803,7 +823,7 @@ Unleashing this enchantment deals $73682s1 Frost damage to a target enemy and re
 Name             : Frostbrand Attack (id=8034) [Spell Family (11)] 
 Class            : Shaman
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 26
 Range            : 100 yards
 Duration         : 8 seconds
@@ -833,13 +853,14 @@ Tooltip          : Movement slowed by $s1%.
 Name             : Earth Shock (id=8042) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 18% Base Mana (0) (id=175998)
 Spell Level      : 5
 Range            : 25 yards
 GCD              : 1.5 seconds
 Duration         : 8 seconds
 Cooldown         : 6 seconds
+Category         : 19
 Category Cooldown: 6 seconds
 Affecting spells : Frostbrand Attack (8034 effect#3), Concussion (16035 effect#1), Convection (16039 effect#1), Reverberation (16040 effect#1), Concussion (16105 effect#1), Concussion (16106 effect#1), Convection (16109 effect#1), Reverberation (16113 effect#1), Elemental Mastery (16166 effect#1), Clearcasting (16246 effects: #1, #2), Stormstrike (17364 effect#1), Elemental Reach (28999 effect#3), Elemental Reach (29000 effect#3), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Mental Quickness (30814 effect#2), Shamanistic Rage (30823 effect#1), Shaman Shock Range Bonus (32973 effect#1), Earth's Grasp (51483 effect#1), Earth's Grasp (51485 effect#1), Glyph of Shocking (55442 effect#1), Elemental Fury (60188 effect#1)
 Family Flags     : 20
@@ -863,13 +884,14 @@ Tooltip          : Time between attacks increased by $w1%.
 Name             : Flame Shock (id=8050) [Spell Family (11)] 
 Class            : Shaman
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 17% Base Mana (0) (id=176025)
 Spell Level      : 14
 Range            : 25 yards
 GCD              : 1.5 seconds
 Duration         : 18 seconds
 Cooldown         : 6 seconds
+Category         : 19
 Category Cooldown: 6 seconds
 Affecting spells : Frostbrand Attack (8034 effect#3), Concussion (16035 effects: #1, #2), Convection (16039 effect#1), Reverberation (16040 effect#1), Concussion (16105 effects: #1, #2), Concussion (16106 effects: #1, #2), Convection (16109 effect#1), Reverberation (16113 effect#1), Elemental Mastery (16166 effect#1), Clearcasting (16246 effects: #1, #2), Elemental Reach (28999 effect#3), Elemental Reach (29000 effect#3), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Mental Quickness (30814 effect#2), Shamanistic Rage (30823 effect#1), Shaman Shock Range Bonus (32973 effect#1), Lava Flows (51480 effects: #1, #3), Lava Flows (51481 effects: #1, #3), Lava Flows (51482 effects: #1, #3), Glyph of Shocking (55442 effect#1), Glyph of Flame Shock (55447 effect#1), Elemental Fury (60188 effect#1), Lava Flows (65264 effect#1), Unleash Flame (73683 effects: #2, #3)
 Family Flags     : 28
@@ -893,13 +915,14 @@ Tooltip          : $w2 Fire damage every $t2 seconds.
 Name             : Frost Shock (id=8056) [Spell Family (11)] 
 Class            : Shaman
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 18% Base Mana (0) (id=175802)
 Spell Level      : 22
 Range            : 25 yards
 GCD              : 1.5 seconds
 Duration         : 8 seconds
 Cooldown         : 6 seconds
+Category         : 19
 Category Cooldown: 6 seconds
 Affecting spells : Frostbrand Attack (8034 effect#3), Concussion (16035 effect#1), Convection (16039 effect#1), Reverberation (16040 effect#1), Concussion (16105 effect#1), Concussion (16106 effect#1), Convection (16109 effect#1), Reverberation (16113 effect#1), Elemental Mastery (16166 effect#1), Clearcasting (16246 effects: #1, #2), Elemental Reach (28999 effect#3), Elemental Reach (29000 effect#3), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Mental Quickness (30814 effect#2), Shamanistic Rage (30823 effect#1), Shaman Shock Range Bonus (32973 effect#1), Glyph of Shocking (55442 effect#1), Glyph of Frost Shock (55443 effect#1), Elemental Fury (60188 effect#1)
 Family Flags     : 31
@@ -923,7 +946,7 @@ Tooltip          : Movement slowed by $s1%.
 Name             : Stoneskin Totem (id=8071) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 10% Base Mana (0) (id=175994)
 Spell Level      : 48
 GCD              : 1 seconds
@@ -947,7 +970,7 @@ Description      : Summons a Stoneskin Totem with $s1 health at the feet of the 
 Name             : Stoneskin (id=8072) [Spell Family (11), Passive] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 4
 Affecting spells : Shamanistic Rage (30823 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 15
@@ -968,7 +991,7 @@ Tooltip          : Increases armor by $w1.
 Name             : Strength of Earth Totem (id=8075) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 10% Base Mana (0) (id=175575)
 Spell Level      : 4
 GCD              : 1 seconds
@@ -992,7 +1015,7 @@ Description      : Summons a Strength of Earth Totem with $s1 health at the feet
 Name             : Strength of Earth (id=8076) [Spell Family (11), Passive] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Affecting spells : Shamanistic Rage (30823 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 16
@@ -1015,7 +1038,7 @@ Tooltip          : Increases Strength and Agility by $w1.
 Name             : Tremor Totem (id=8143) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 2% Base Mana (0) (id=176649)
 Spell Level      : 52
 GCD              : 1 seconds
@@ -1066,12 +1089,13 @@ Effects          :
 Name             : Grounding Totem (id=8177) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 5% Base Mana (0) (id=176233)
 Spell Level      : 38
 GCD              : 1 seconds
 Duration         : 45 seconds
 Cooldown         : 25 seconds
+Category         : 230
 Category Cooldown: 25 seconds
 Affecting spells : Totemic Focus (16173 effects: #1, #2), Totemic Focus (16222 effects: #1, #2), Mental Quickness (30814 effect#2), Shamanistic Rage (30823 effect#1), Glyph of Grounding Totem (55441 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 18, 29
@@ -1092,7 +1116,7 @@ Description      : Summons a Grounding Totem with $s1 health at the feet of the 
 Name             : Elemental Resistance Totem (id=8184) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 8% Base Mana (0) (id=176590)
 Spell Level      : 62
 GCD              : 1 seconds
@@ -1116,7 +1140,7 @@ Description      : Summons an Elemental Resistance Totem with $s1 health at the 
 Name             : Elemental Resistance (id=8185) [Spell Family (11)] 
 Class            : Shaman
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Duration         : Aura (infinite)
 Affecting spells : Shamanistic Rage (30823 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
@@ -1138,7 +1162,7 @@ Tooltip          : Fire, Frost, and Nature Resistance increased by $w1.
 Name             : Magma Totem (id=8187) [Spell Family (11)] 
 Class            : Shaman
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 36
 Affecting spells : Call of Flame (16038 effect#1), Call of Flame (16160 effect#1), Elemental Reach (28999 effect#3), Elemental Reach (29000 effect#3), Elemental Devastation (29178 effect#1), Elemental Devastation (29179 effect#1), Elemental Devastation (29180 effect#1), Elemental Devastation (30160 effect#1), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Elemental Fury (60188 effect#1), Totemic Reach (86935 effects: #1, #2), Totemic Reach (86936 effects: #1, #2)
 Triggered by     : Magma Totem Passive (8188)
@@ -1160,7 +1184,7 @@ Description      : Summons a Magma Totem with $8190s1 health at the feet of the 
 Name             : Magma Totem Passive (id=8188) [Passive, Hidden] 
 Class            : Shaman
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 36
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1178,7 +1202,7 @@ Effects          :
 Name             : Magma Totem (id=8190) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 18% Base Mana (0) (id=175848)
 Spell Level      : 36
 GCD              : 1 seconds
@@ -1202,7 +1226,7 @@ Description      : Summons a Magma Totem with $s1 health at the feet of the cast
 Name             : Flametongue Totem (id=8227) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 11% Base Mana (0) (id=176671)
 Spell Level      : 12
 GCD              : 1 seconds
@@ -1226,7 +1250,7 @@ Description      : Summons a Flametongue Totem with $s1 health at the feet of th
 Name             : Windfury Weapon (id=8232) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 7% Base Mana (0) (id=175566)
 Spell Level      : 32
 GCD              : 1.5 seconds
@@ -1254,7 +1278,7 @@ Unleashing this enchantment deals $73681s3% of weapon damage to the target enemy
 Name             : Fire Nova (id=8349) [Spell Family (11)] 
 Class            : Shaman
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 12
 Range            : 100 yards
 Affecting spells : Call of Flame (16038 effect#1), Call of Flame (16160 effect#1), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Glyph of Fire Nova (55450 effect#1), Elemental Fury (60188 effect#1), Unleash Flame (73683 effect#2)
@@ -1280,7 +1304,7 @@ Description      : Causes the shaman's Flame Shocked targets to emit a wave of f
 Name             : Windfury Totem (id=8512) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 11% Base Mana (0) (id=175477)
 Spell Level      : 30
 GCD              : 1 seconds
@@ -1305,7 +1329,7 @@ Tooltip          : Increases melee and ranged attack speed by $8515s1%.
 Name             : Windfury Totem (id=8515) [Spell Family (11), Passive] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 30
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 53
@@ -1330,6 +1354,9 @@ Class            : Shaman
 School           : Nature
 Spell Type       : None
 Spell Level      : 10
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Elemental Weapons (16266 effect#1), Elemental Weapons (29079 effect#1), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Elemental Oath (51466 effect#3), Elemental Oath (51470 effect#3), Glyph of Flametongue Weapon (55451 effect#1), Elemental Fury (60188 effect#1)
 Family Flags     : 21
 Attributes       : ......xx x....... ..x..... ........   ........ ........ ........ ........ 
@@ -1448,6 +1475,9 @@ Name             : Seasoned Winds (desc=Rank 1) (id=16086) [Spell Family (11), P
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1587,6 +1617,10 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1604,11 +1638,16 @@ Description      : After landing a non-periodic critical strike with a Fire, Fro
 Name             : Elemental Mastery (id=16166) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Duration         : 30 seconds
 Cooldown         : 180 seconds
+Category         : 1202
 Category Cooldown: 180 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ....x... x....... ........   ........ ........ ........ ........   
+                 : Generic Hostile Spell, Magic Hostile Spell
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Family Flags     : 46
 Attributes       : ........ ........ x.x..... .x......   ........ ..x..... ........ ........ 
@@ -1660,6 +1699,9 @@ Name             : Ancestral Healing (desc=Rank 1) (id=16176) [Spell Family (11)
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x.x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1681,6 +1723,9 @@ Class            : Shaman
 School           : Holy
 Spell Type       : None
 Duration         : 15 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Triggered by     : Ancestral Healing (16176)
 Family Flags     : 58
@@ -1724,6 +1769,9 @@ Name             : Resurgence (desc=Rank 1) (id=16180) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1767,11 +1815,16 @@ Description      : Increases the amount healed by your Healing Stream Totem by $
 Name             : Nature's Swiftness (id=16188) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Duration         : Aura (infinite)
 Cooldown         : 120 seconds
+Category         : 1202
 Category Cooldown: 120 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Family Flags     : 39
 Attributes       : ........ ........ x.x..... .x......   ........ ..x..... .x...... ........ 
@@ -1794,11 +1847,12 @@ Tooltip          : Your next Nature spell with a casting time less than 10 secs 
 Name             : Mana Tide Totem (id=16190) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 39
 GCD              : 1 seconds
 Duration         : 12 seconds
 Cooldown         : 180 seconds
+Category         : 591
 Category Cooldown: 180 seconds
 Affecting spells : Totemic Focus (16173 effects: #1, #2), Totemic Focus (16222 effects: #1, #2), Mental Quickness (30814 effect#2), Shamanistic Rage (30823 effect#1)
 Family Flags     : 29
@@ -1823,9 +1877,10 @@ Description      : Summons a Mana Tide Totem with $16190s2% of the caster's heal
 Name             : Mana Tide (id=16191) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 40
 Duration         : Aura (infinite)
+Proc Chance      : 100%
 Affecting spells : Shamanistic Rage (30823 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 26
 Attributes       : ........ x....... ........ .....x..   ........ ..x..... ........ ........ 
@@ -1849,6 +1904,9 @@ Name             : Resurgence (desc=Rank 2) (id=16196) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1893,6 +1951,9 @@ Name             : Purification (desc=Passive) (id=16213) [Spell Family (11), Pa
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ..x..x.. ........   ........ ........ ........ ........   
+                 : Magic Heal, Periodic, Helpful Periodic
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1985,6 +2046,9 @@ Name             : Ancestral Healing (desc=Rank 2) (id=16235) [Spell Family (11)
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x.x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2006,6 +2070,9 @@ Class            : Shaman
 School           : Holy
 Spell Type       : None
 Duration         : 15 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Triggered by     : Ancestral Healing (16235)
 Family Flags     : 58
@@ -2028,10 +2095,14 @@ Tooltip          : Reduces physical damage taken by $s1%.
 Name             : Clearcasting (id=16246) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 15 seconds
+Stacks           : 2 initial, 2 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Triggered by     : Elemental Focus (16164)
 Family Flags     : 46
@@ -2087,6 +2158,9 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2107,6 +2181,11 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 15 seconds
+Internal Cooldown: 0.5 seconds
+Stacks           : 3 initial, 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Triggered by     : Flurry (16256)
 Family Flags     : 41
@@ -2205,6 +2284,11 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 15 seconds
+Internal Cooldown: 0.5 seconds
+Stacks           : 3 initial, 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Triggered by     : Flurry (16281)
 Family Flags     : 41
@@ -2229,6 +2313,11 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 15 seconds
+Internal Cooldown: 0.5 seconds
+Stacks           : 3 initial, 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Triggered by     : Flurry (16282)
 Family Flags     : 41
@@ -2252,6 +2341,9 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2271,6 +2363,9 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2380,6 +2475,9 @@ Name             : Seasoned Winds (desc=Rank 2) (id=16544) [Spell Family (11), P
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2399,14 +2497,16 @@ Description      : When you successfully interrupt an enemy spellcast with Wind 
 Name             : Stormstrike (id=17364) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 8% Base Mana (0) (id=182998)
 Range            : 5 yards
 GCD              : 1.5 seconds
 Duration         : 15 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 8 seconds
+Category         : 1254
 Category Cooldown: 8 seconds
+Proc Chance      : 100%
 Affecting spells : Frostbrand Attack (8034 effect#3), Clearcasting (16246 effect#2), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Primal Wisdom (51522 effect#2), Glyph of Stormstrike (55446 effect#1), Reduced Stormstrike Cost (352522 effect#1), Reduced Stormstrike Cost (388430 effect#1)
 Family Flags     : 36, 56
 Attributes       : ........ ........ x.x..... ........   ........ .x...... ........ ........ 
@@ -2490,6 +2590,7 @@ School           : Nature
 Spell Type       : None
 Spell Level      : 30
 Cooldown         : 1800 seconds
+Category         : 1161
 Category Cooldown: 1800 seconds
 Affecting spells : Elemental Precision (30672 effect#3), Elemental Precision (30673 effect#3), Elemental Precision (30674 effect#3), Glyph of Renewed Life (58059 effect#1)
 Family Flags     : 9
@@ -2510,7 +2611,7 @@ Description      : Allows you to resurrect yourself upon death with $21169s1% he
 Name             : Windfury Attack (id=25504) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Range            : 100 yards
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Staff, Fist Weapon, Dagger, One Hand, Two-Hand, Main Hand
 Affecting spells : Elemental Weapons (16266 effect#3), Elemental Weapons (29079 effect#3), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
@@ -2532,7 +2633,7 @@ Description      : Imbue the Shaman's weapon with wind.  Each hit has a 20% chan
 Name             : Lightning Shield (id=26364) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 8
 Range            : 100 yards
 Affecting spells : Improved Shields (16261 effect#1), Improved Shields (16290 effect#1), Stormstrike (17364 effect#1), Energized Shield (24499 effect#1), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Mental Quickness (30814 effect#2), Shamanistic Rage (30823 effect#1), Shaman Lightning Shield Bonus (33020 effect#1), Improved Shields (51881 effect#1), Glyph of Lightning Shield (55448 effect#1), Elemental Fury (60188 effect#1)
@@ -2741,6 +2842,10 @@ Name             : Elemental Devastation (desc=Rank 2) (id=29179) [Spell Family 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2761,6 +2866,10 @@ Name             : Elemental Devastation (desc=Rank 3) (id=29180) [Spell Family 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2781,6 +2890,10 @@ Name             : Elemental Devastation (desc=Rank 1) (id=30160) [Spell Family 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2888,6 +3001,9 @@ Name             : Unleashed Rage (desc=Rank 1) (id=30802) [Passive]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ x....... ........ ........ 
@@ -2960,6 +3076,9 @@ Spell Level      : 1
 GCD              : 1.5 seconds
 Duration         : 15 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Glyph of Shamanistic Rage (63280 effect#1)
 Family Flags     : 49
 Attributes       : ....x... ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -3049,6 +3168,10 @@ Name             : Nature's Guardian (desc=Rank 1) (id=30881) [Spell Family (11)
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 30 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -3075,6 +3198,10 @@ Name             : Nature's Guardian (desc=Rank 2) (id=30883) [Spell Family (11)
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 30 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -3101,6 +3228,10 @@ Name             : Nature's Guardian (desc=Rank 3) (id=30884) [Spell Family (11)
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 30 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -3148,10 +3279,14 @@ Tooltip          : Maximum health increased.
 Name             : Stormstrike (id=32175) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 40
 Range            : 5 yards
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Stacks           : 2 initial, 2 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Focused Strikes (77536 effect#1), Focused Strikes (77537 effect#1), Focused Strikes (77538 effect#1)
 Triggered by     : Stormstrike (17364)
 Family Flags     : 76
@@ -3172,7 +3307,7 @@ Description      : Instantly strike an enemy with both weapons, dealing $32175s1
 Name             : Stormstrike Off-Hand (id=32176) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 40
 Range            : 5 yards
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
@@ -3259,7 +3394,7 @@ Spell power increased by $s2.
 Name             : Windfury Attack (id=33750) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Range            : 100 yards
 Requires weapon  : One-handed Axe, One-handed Mace, Fist Weapon, Dagger, One Hand, Off Hand
 Affecting spells : Elemental Weapons (16266 effect#3), Elemental Weapons (29079 effect#3), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
@@ -3283,6 +3418,10 @@ Class            : Shaman
 School           : Nature
 Spell Type       : None
 Spell Level      : 32
+Internal Cooldown: 3 seconds
+Proc Chance      : 20%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Shamanistic Rage (30823 effect#1), Glyph of Windfury Weapon (55445 effect#1)
 Family Flags     : 72
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
@@ -3301,10 +3440,11 @@ Effects          :
 Name             : Rockbiter Weapon (id=36494) [Passive, Hidden] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 75
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Attributes       : ......xx x....... ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ x.......   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3347,10 +3487,11 @@ Effects          :
 Name             : Stoneclaw Stun (id=39796) 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 58
 Range            : 100 yards
 Duration         : 3 seconds
+Mechanic         : Unknown(12)
 Triggered by     : Stoneclaw Totem Passive (5728)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3371,6 +3512,7 @@ Class            : Hunter, Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3389,6 +3531,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3407,6 +3550,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3423,7 +3567,7 @@ Effects          :
 Name             : Lightning Bolt (id=45284) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 100 yards
 Velocity         : 20 yards/sec
@@ -3446,7 +3590,7 @@ Description      : Casts a bolt of lightning at the target for $s1 Nature damage
 Name             : Chain Lightning (id=45297) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 32 (max 37)
 Max Scaling Level: 37
 Range            : 100 yards
@@ -3471,6 +3615,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3489,6 +3634,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3507,6 +3653,7 @@ Class            : Hunter, Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3551,6 +3698,10 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ..x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ x....... ........ ........ 
@@ -3576,6 +3727,7 @@ Name             : Lava Flows (desc=Rank 1) (id=51480) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3604,6 +3756,7 @@ Name             : Lava Flows (desc=Rank 2) (id=51481) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3632,6 +3785,7 @@ Name             : Lava Flows (desc=Rank 3) (id=51482) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3661,6 +3815,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3682,6 +3837,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3701,11 +3857,13 @@ Description      : Grants your Earthbind Totem a $s2% chance to root nearby targ
 Name             : Thunderstorm (id=51490) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 GCD              : 1.5 seconds
 Cooldown         : 45 seconds
+Category         : 1223
 Category Cooldown: 45 seconds
+Proc Chance      : 101%
 Affecting spells : Concussion (16035 effect#1), Convection (16039 effect#1), Concussion (16105 effect#1), Concussion (16106 effect#1), Convection (16109 effect#1), Elemental Mastery (16166 effect#1), Elemental Reach (28999 effect#2), Elemental Reach (29000 effect#2), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Tidal Waves (51562 effect#1), Tidal Waves (51563 effect#1), Tidal Waves (51564 effect#1), Elemental Fury (60188 effect#1), Glyph of Thunderstorm (62132 effect#1), Glyph of Thunder (63270 effect#1), Telluric Currents (82984 effect#1), Telluric Currents (82988 effect#1)
 Family Flags     : 45
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -3729,7 +3887,7 @@ Description      : You call down a bolt of lightning, energizing you and damagin
 Name             : Lava Burst (id=51505) [Spell Family (11)] 
 Class            : Shaman
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 10% Base Mana (0) (id=238550)
 Spell Level      : 34
 Range            : 30 yards
@@ -3737,6 +3895,7 @@ Cast Time        : 2 seconds
 GCD              : 1.5 seconds
 Velocity         : 24 yards/sec
 Cooldown         : 8 seconds
+Proc Chance      : 101%
 Affecting spells : Concussion (16035 effect#1), Call of Flame (16038 effect#2), Convection (16039 effect#1), Concussion (16105 effect#1), Concussion (16106 effect#1), Convection (16109 effect#1), Call of Flame (16160 effect#2), Elemental Mastery (16166 effects: #1, #2), Clearcasting (16246 effects: #1, #2), Elemental Reach (28999 effect#1), Elemental Reach (29000 effect#1), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Lava Flows (51480 effect#2), Lava Flows (51481 effect#2), Lava Flows (51482 effect#2), Glyph of Lava Burst (55454 effect#1), Elemental Fury (60188 effect#1), Shamanism (62099 effects: #1, #3), Unleash Flame (73683 effect#2), Spiritwalker's Grace (79206 effect#1), Ancestral Focus (89920 effect#1)
 Family Flags     : 44
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -3758,6 +3917,9 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 40%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ x....... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3818,6 +3980,10 @@ Name             : Static Shock (desc=Rank 1) (id=51525) [Spell Family (11), Pas
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 15%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Family Flags     : 77
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
@@ -3840,6 +4006,10 @@ Name             : Static Shock (desc=Rank 2) (id=51526) [Spell Family (11), Pas
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 30%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Family Flags     : 77
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
@@ -3862,6 +4032,10 @@ Name             : Static Shock (desc=Rank 3) (id=51527) [Spell Family (11), Pas
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 45%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Family Flags     : 77
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
@@ -3886,6 +4060,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Requires weapon  : One-handed Axe, Two-handed Axe, Gun, One-handed Mace, Two-handed Mace, Two-handed Sword, War Glaive, Staff, Exotic, Fist Weapon, Miscellaneous, Dagger
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ......xx ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, Melee Main-Hand, Melee Off-Hand
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Family Flags     : 33, 73
 Attributes       : ....x.xx x....... ..x..... ........   ........ ........ ........ ........ 
@@ -3908,6 +4085,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Staff, Exotic, Exotic (2), Fist Weapon, Miscellaneous, Dagger
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ......xx ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, Melee Main-Hand, Melee Off-Hand
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Family Flags     : 73
 Attributes       : ....x.xx x....... ..x..... ........   ........ ........ ........ ........ 
@@ -3930,6 +4110,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Two-handed Sword, War Glaive, Staff, Fist Weapon, Miscellaneous, Dagger
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ......xx ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, Melee Main-Hand, Melee Off-Hand
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Family Flags     : 73
 Attributes       : ....x.xx x....... ..x..... ........   ........ ........ ........ ........ 
@@ -3976,6 +4159,7 @@ Name             : Blessing of the Eternals (desc=Rank 1) (id=51554) [Spell Fami
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3996,6 +4180,7 @@ Name             : Blessing of the Eternals (desc=Rank 2) (id=51555) [Spell Fami
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4016,6 +4201,9 @@ Name             : Ancestral Awakening (desc=Rank 1) (id=51556) [Spell Family (1
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4034,6 +4222,9 @@ Name             : Ancestral Awakening (desc=Rank 2) (id=51557) [Spell Family (1
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4052,6 +4243,9 @@ Name             : Ancestral Awakening (desc=Rank 3) (id=51558) [Spell Family (1
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4071,6 +4265,10 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.2 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4092,6 +4290,10 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.2 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4113,6 +4315,10 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.2 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4132,7 +4338,7 @@ Description      : When you cast Chain Heal or Riptide, you gain the Tidal Waves
 Name             : Earthliving Weapon (id=51730) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 9% Base Mana (0) (id=238349)
 Spell Level      : 54
 GCD              : 1.5 seconds
@@ -4164,6 +4370,7 @@ Name             : Improved Shields (desc=Rank 3) (id=51881) [Spell Family (11),
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4187,11 +4394,12 @@ Description      : Increases the damage done by your Lightning Shield orbs by $s
 Name             : Cleanse Spirit (id=51886) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 14% Base Mana (0) (id=254186)
 Spell Level      : 18
 Range            : 40 yards
 GCD              : 1.5 seconds
+Proc Chance      : 101%
 Affecting spells : Mental Quickness (30814 effect#2), Improved Cleanse Spirit (77130 effect#1), Cleansing Waters (86959 effect#2), Cleansing Waters (86962 effect#2)
 Family Flags     : 35
 Attributes       : ........ ........ x.x..... ........   ........ ........ ........ ........ 
@@ -4213,10 +4421,11 @@ Description      : $?s77130[Removes one Curse and one harmful Magic effect from 
 Name             : Earthliving (id=51945) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 30
 Range            : 40 yards
 Duration         : 12 seconds
+Proc Chance      : 101%
 Affecting spells : Purification (16213 effect#2), Glyph of Earthliving Weapon (55439 effect#1), Deep Healing (77226 effect#1)
 Triggered by     : Earthliving Weapon (Passive) (52007)
 Family Flags     : 51
@@ -4240,6 +4449,9 @@ Class            : Shaman
 School           : Nature
 Spell Type       : None
 Spell Level      : 54
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Affecting spells : Elemental Weapons (16266 effect#1), Elemental Weapons (29079 effect#1), Blessing of the Eternals (51554 effect#1), Blessing of the Eternals (51555 effect#1)
 Family Flags     : 52
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
@@ -4263,6 +4475,7 @@ School           : Shadow
 Spell Type       : None
 Spell Level      : 1
 Range            : 30 yards
+Proc Chance      : 101%
 Affecting spells : Shamanistic Rage (30823 effect#1), Glyph of Healing Stream Totem (55456 effect#1), Deep Healing (77226 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Triggered by     : Healing Stream (5672)
 Family Flags     : 13, 26
@@ -4282,8 +4495,9 @@ Effects          :
 Name             : Flametongue Totem (id=52109) [Spell Family (11), Passive] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 12
+Proc Chance      : 101%
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 25
 Attributes       : ......x. x....... ........ ........   ........ ........ ........ ........ 
@@ -4296,17 +4510,22 @@ Attributes       : ......x. x....... ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Passive (6), Do Not Log (8), Disable Tied Effect Points (222)
 Effects          :
-#1 (id=956608)   : Apply Raid Aura (65) | Unknown(317)
+#1 (id=956608)   : Apply Raid Aura (65) | Modify Spell Power% (317)
                    Base Value: 6 | Scaled Value: 6 | PvP Coefficient: 1.00000 | Misc Value: 126 | Radius: 40 yards | Target: Self (1)
 Tooltip          : Spell power increased by $s1%.
 
 Name             : Water Shield (id=52127) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20
 GCD              : 1.5 seconds
 Duration         : 600 seconds
+Internal Cooldown: 3.5 seconds
+Stacks           : 3 initial, 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Improved Shields (16261 effect#2), Improved Shields (16290 effect#2), Improved Shields (51881 effect#2), Glyph of Water Shield (55436 effect#1)
 Family Flags     : 37
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -4332,6 +4551,7 @@ Class            : Shaman
 School           : Nature
 Spell Type       : None
 Spell Level      : 20
+Proc Chance      : 101%
 Affecting spells : Improved Shields (16261 effect#2), Improved Shields (16290 effect#2), Improved Shields (51881 effect#2), Glyph of Water Shield (55436 effect#1)
 Triggered by     : Water Shield (52127)
 Family Flags     : 37
@@ -4352,8 +4572,12 @@ Description      : The caster is surrounded by $52127n globes of water, granting
 Name             : Tidal Waves (id=53390) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 15 seconds
+Stacks           : 2 initial, 2 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Family Flags     : 58
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
@@ -4381,8 +4605,12 @@ Critical effect chance of next Healing Surge increased by $w2%.
 Name             : Maelstrom Weapon (id=53817) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 30 seconds
+Stacks           : 1 initial, 5 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1)
 Triggered by     : Maelstrom Weapon (51528), Maelstrom Weapon (51529), Maelstrom Weapon (51530)
 Family Flags     : 73
@@ -4414,10 +4642,11 @@ Tooltip          : Reduces the cast time and mana cost of your next Lightning Bo
 Name             : Stoneclaw Totem (id=55328) 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 58
 Range            : 50000 yards
 Duration         : 15 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ .....x..   .......x ..x..... ........ ........ 
                  : ..x..... ........ ........ ..x.x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4438,6 +4667,7 @@ Name             : Glyph of Water Shield (id=55436) [Spell Family (11), Passive,
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4462,6 +4692,7 @@ Name             : Glyph of Chain Heal (id=55437) [Spell Family (11), Passive, H
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4486,6 +4717,7 @@ Name             : Glyph of Totemic Recall (id=55438) [Spell Family (11), Passiv
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4509,6 +4741,7 @@ Name             : Glyph of Earthliving Weapon (id=55439) [Spell Family (11), Pa
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4533,6 +4766,9 @@ Name             : Glyph of Healing Wave (id=55440) [Spell Family (11), Passive,
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4557,6 +4793,7 @@ Name             : Glyph of Grounding Totem (id=55441) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4605,6 +4842,7 @@ Name             : Glyph of Frost Shock (id=55443) [Spell Family (11), Passive, 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4629,6 +4867,7 @@ Name             : Glyph of Lava Lash (id=55444) [Spell Family (11), Passive, Hi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4653,6 +4892,7 @@ Name             : Glyph of Windfury Weapon (id=55445) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4677,6 +4917,7 @@ Name             : Glyph of Stormstrike (id=55446) [Spell Family (11), Passive, 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4701,6 +4942,7 @@ Name             : Glyph of Flame Shock (id=55447) [Spell Family (11), Passive, 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4725,6 +4967,7 @@ Name             : Glyph of Lightning Shield (id=55448) [Spell Family (11), Pass
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4749,6 +4992,7 @@ Name             : Glyph of Chain Lightning (id=55449) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4773,6 +5017,7 @@ Name             : Glyph of Fire Nova (id=55450) [Spell Family (11), Passive, Hi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4821,6 +5066,7 @@ Name             : Glyph of Elemental Mastery (id=55452) [Spell Family (11), Pas
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4845,6 +5091,7 @@ Name             : Glyph of Lightning Bolt (id=55453) [Spell Family (11), Passiv
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4869,6 +5116,7 @@ Name             : Glyph of Lava Burst (id=55454) [Spell Family (11), Passive, H
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4889,6 +5137,7 @@ Name             : Glyph of Fire Elemental Totem (id=55455) [Spell Family (11), 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4913,6 +5162,7 @@ Name             : Glyph of Healing Stream Totem (id=55456) [Spell Family (11), 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4936,9 +5186,10 @@ Description      : Your Healing Stream Totem also increases the Fire, Frost, and
 Name             : Glyph of Healing Wave (id=55533) 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 40 yards
+Proc Chance      : 101%
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : .......x .......x ........ ........   ........ ........ ........ ........ 
@@ -4958,6 +5209,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4977,6 +5229,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4996,6 +5249,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5015,6 +5269,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5053,6 +5308,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5072,6 +5328,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5091,6 +5348,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5110,6 +5368,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5148,6 +5407,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5167,6 +5427,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5186,6 +5447,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5205,6 +5467,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5224,6 +5487,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5243,6 +5507,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5262,6 +5527,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5281,6 +5547,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5300,6 +5567,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5319,6 +5587,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5338,6 +5607,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5357,6 +5627,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5375,6 +5646,7 @@ Class            : Hunter, Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5435,12 +5707,13 @@ Tooltip          : Cannot benefit from Bloodlust or other similar effects.
 Name             : Wind Shear (id=57994) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 8% Base Mana (0) (id=255692)
 Spell Level      : 16
 Range            : 25 yards
 Duration         : 2 seconds
 Cooldown         : 15 seconds
+Proc Chance      : 101%
 Affecting spells : Reverberation (16040 effect#2), Reverberation (16113 effect#2), Clearcasting (16246 effect#2), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Mental Quickness (30814 effect#2), Shamanistic Rage (30823 effect#1), Shaman Shock Range Bonus (32973 effect#1), Earth's Grasp (51483 effect#1), Earth's Grasp (51485 effect#1), Glyph of Shocking (55442 effect#1)
 Family Flags     : 43, 59
 Attributes       : ........ ........ x.x..... ........   ........ ........ ........ ........ 
@@ -5463,6 +5736,7 @@ Name             : Glyph of Water Walking (id=58057) [Spell Family (11), Passive
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5482,6 +5756,7 @@ Name             : Glyph of Astral Recall (id=58058) [Spell Family (11), Passive
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5501,6 +5776,7 @@ Name             : Glyph of Renewed Life (id=58059) [Spell Family (11), Passive,
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5521,6 +5797,7 @@ Name             : Glyph of the Arctic Wolf (id=58135) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5541,6 +5818,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5560,6 +5838,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5579,6 +5858,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5598,6 +5878,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5617,6 +5898,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5636,6 +5918,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5654,6 +5937,7 @@ Name             : Glyph of Ghost Wolf (id=59289) [Spell Family (11), Passive, H
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5676,6 +5960,7 @@ Race             : Draenei (0x400)
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5698,7 +5983,7 @@ Name             : Gift of the Naaru (desc=Racial) (id=59547) [Spell Family (11)
 Class            : Shaman
 Race             : Draenei (0x400)
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 40 yards
 Duration         : 15 seconds
@@ -5726,13 +6011,14 @@ Tooltip          : Healing $/5;s2% every $t1 seconds.
 Name             : Lava Lash (id=60103) [Spell Family (11)] 
 Class            : Shaman
 School           : Fire
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 4% Base Mana (0) (id=245063)
 Spell Level      : 10
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear, Off Hand
 Cooldown         : 10 seconds
+Proc Chance      : 101%
 Affecting spells : Frostbrand Attack (8034 effect#3), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Glyph of Lava Lash (55444 effect#1), Improved Lava Lash (77700 effect#1), Improved Lava Lash (77701 effect#1)
 Family Flags     : 66
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ...x.... 
@@ -5755,6 +6041,7 @@ Name             : Elemental Fury (desc=Passive) (id=60188) [Spell Family (11), 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5779,6 +6066,7 @@ Name             : Maelstrom Ready! (id=60348) [Passive, Hidden]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .x...... ........ ........   ........ ........ ........ ........ 
@@ -5795,13 +6083,14 @@ Effects          :
 Name             : Riptide (id=61295) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 10% Base Mana (0) (id=255840)
 Spell Level      : 60
 Range            : 40 yards
 GCD              : 1.5 seconds
 Duration         : 15 seconds
 Cooldown         : 6 seconds
+Category         : 1228
 Category Cooldown: 6 seconds
 Affecting spells : Tidal Focus (16179 effect#1), Purification (16213 effects: #1, #2), Tidal Focus (16214 effect#1), Tidal Focus (16215 effect#1), Clearcasting (16246 effect#1), Healing Trance (60515 effect#1), Glyph of Riptide (63273 effect#1), Unleash Life (73685 effects: #2, #3), Deep Healing (77226 effect#1)
 Family Flags     : 68
@@ -5831,6 +6120,7 @@ Class            : Hunter, Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 2 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5847,7 +6137,7 @@ Effects          :
 Name             : Earthquake (id=61882) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 60% Base Mana (0) (id=233469)
 Spell Level      : 1
 Range            : 35 yards
@@ -5855,6 +6145,7 @@ Cast Time        : 2.5 seconds
 GCD              : 1.5 seconds
 Duration         : 10 seconds
 Cooldown         : 10 seconds
+Proc Chance      : 100%
 Affecting spells : Convection (16039 effect#1), Convection (16109 effect#1), Clearcasting (16246 effects: #1, #3), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Elemental Fury (60188 effect#1), Spiritwalker's Grace (79206 effect#1)
 Family Flags     : 83
 Attributes       : ........ ........ x....... ........   ...x...x ..x..... ........ ........ 
@@ -5879,6 +6170,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5907,6 +6199,7 @@ Name             : Glyph of Thunderstorm (id=62132) [Spell Family (11), Passive,
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5932,6 +6225,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5950,6 +6244,7 @@ Name             : Glyph of Thunder (id=63270) [Spell Family (11), Passive, Hidd
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5970,6 +6265,9 @@ Name             : Glyph of Feral Spirit (id=63271) [Spell Family (11), Passive,
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5990,6 +6288,9 @@ Name             : Glyph of Riptide (id=63273) [Spell Family (11), Passive, Hidd
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6010,6 +6311,9 @@ Name             : Glyph of Earth Shield (id=63279) [Spell Family (11), Passive,
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6030,6 +6334,7 @@ Name             : Glyph of Shamanistic Rage (id=63280) [Spell Family (11), Pass
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6050,6 +6355,7 @@ Name             : Glyph of Hex (id=63291) [Spell Family (11), Passive, Hidden]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6069,6 +6375,7 @@ Name             : Glyph of Stoneclaw Totem (id=63298) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6088,6 +6395,7 @@ Name             : Frozen Power (desc=Rank 1) (id=63373) [Spell Family (11), Pas
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6111,6 +6419,7 @@ Name             : Frozen Power (desc=Rank 2) (id=63374) [Spell Family (11), Pas
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6154,10 +6463,13 @@ Description      : Gain $s1% of your base mana.
 Name             : Freeze (id=63685) [Spell Family (11)] 
 Class            : Shaman
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 5 seconds
+Proc Chance      : 101%
+Proc Flags       : .....x.. .x...... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee Taken, Yellow Ranged Taken
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ......x. 
                  : ........ .......x ....x... ........   ........ ........ ........ ........ 
@@ -6178,6 +6490,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6197,6 +6510,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6216,6 +6530,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6235,6 +6550,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6254,6 +6570,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6273,6 +6590,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6290,8 +6608,12 @@ Description      : Your Stoneclaw Totem also places a damage absorb shield on yo
 Name             : Earthgrab (id=64695) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 5 seconds
+Proc Chance      : 100%
+Mechanic         : Unknown(7)
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 78
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
@@ -6312,9 +6634,10 @@ Tooltip          : Rooted.
 Name             : Elemental Mastery (id=64701) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Duration         : 15 seconds
+Proc Chance      : 101%
 Affecting spells : Glyph of Elemental Mastery (55452 effect#1)
 Triggered by     : Elemental Mastery (16166)
 Family Flags     : 5
@@ -6345,6 +6668,7 @@ Class            : Shaman
 Race             : Orc (0x2)
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6365,6 +6689,7 @@ Class            : Shaman
 School           : Nature
 Spell Type       : None
 Duration         : 6 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ...x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ......x. ........ ........ ........   ........ ........ ........ ........ 
@@ -6451,6 +6776,9 @@ Name             : Item - Shaman T10 Restoration 4P Bonus (id=70808) [Spell Fami
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6468,10 +6796,11 @@ Description      : Your Chain Heal critical strikes cause the target to heal for
 Name             : Chained Heal (desc=Rank 1) (id=70809) 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20
 Range            : 100 yards
 Duration         : 9 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ....x... ........   ........ ........ ........ ........ 
@@ -6517,11 +6846,15 @@ See individual weapon imbue spell tooltips for details regarding the effects of 
 Name             : Unleash Wind (id=73681) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Range            : 100 yards
 Velocity         : 35 yards/sec
 Duration         : 12 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Stacks           : 6 initial, 6 maximum
+Proc Chance      : 101%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Affecting spells : Elemental Weapons (16266 effect#2), Elemental Weapons (29079 effect#2)
 Family Flags     : 89
 Attributes       : ........ ........ ..x..... x..x....   .....x.. ........ ........ ........ 
@@ -6546,7 +6879,7 @@ Tooltip          : Melee attack speed increased by $w2%.
 Name             : Unleash Frost (id=73682) [Spell Family (11)] 
 Class            : Shaman
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Range            : 100 yards
 Duration         : 5 seconds
 Affecting spells : Elemental Fury (60188 effect#1)
@@ -6571,9 +6904,13 @@ Tooltip          : Movement speed reduced by $w2%.
 Name             : Unleash Flame (id=73683) [Spell Family (11)] 
 Class            : Shaman
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Range            : 100 yards
 Duration         : 8 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Affecting spells : Elemental Weapons (16266 effect#2), Elemental Weapons (29079 effect#2), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Elemental Fury (60188 effect#1)
 Family Flags     : 85, 90
 Attributes       : ........ ........ ..x..... x..x....   .....x.. ........ ........ ........ 
@@ -6632,6 +6969,10 @@ Range            : 100 yards
 GCD              : 1.5 seconds
 Duration         : 8 seconds
 Cooldown         : 15 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Affecting spells : Purification (16213 effect#1), Elemental Weapons (16266 effect#2), Elemental Weapons (29079 effect#2), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Deep Healing (77226 effect#1)
 Family Flags     : 82
 Attributes       : ........ ........ ..x..... x..x....   .....x.. ........ ........ ........ 
@@ -6660,14 +7001,16 @@ Tooltip          : Your next direct heal will be $w2% more effective.
 Name             : Primal Strike (id=73899) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 8% Base Mana (0) (id=276832)
 Spell Level      : 3
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 8 seconds
+Category         : 1254
 Category Cooldown: 8 seconds
+Proc Chance      : 100%
 Affecting spells : Shamanistic Rage (30823 effect#1), Focused Strikes (77536 effect#1), Focused Strikes (77537 effect#1), Focused Strikes (77538 effect#1)
 Family Flags     : 81
 Attributes       : ........ ........ x.x..... ........   ........ .x...... ........ ........ 
@@ -6716,7 +7059,7 @@ Description      : Calls forth healing rains to blanket the area targeted by the
 Name             : Healing Rain (id=73921) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 83
 Range            : 100 yards
 Affecting spells : Soothing Rains (16187 effect#2), Soothing Rains (16205 effect#2), Purification (16213 effect#1), Deep Healing (77226 effect#1)
@@ -6738,14 +7081,16 @@ Description      : Healing rains blanket the area, restoring $s1 health to the S
 Name             : Bind Elemental (id=76780) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 9% Base Mana (0) (id=279298)
 Spell Level      : 64
 Range            : 30 yards
 Cast Time        : 1.5 seconds
 GCD              : 1.5 seconds
 Duration         : 50 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x08000000
+Mechanic         : Unknown(18)
 Affecting spells : Nature's Swiftness (16188 effect#1), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Glyph of Feral Spirit (63271 effect#1), Spiritwalker's Grace (79206 effect#1), Ancestral Focus (89920 effect#1)
 Family Flags     : 71
 Attributes       : ........ ........ x...x... ......x.   ........ ..x..... ..x..... ........ 
@@ -6787,6 +7132,9 @@ Name             : Elemental Overload (id=77222) [Spell Family (11), Passive, Hi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6853,7 +7201,7 @@ Description      : $?s77226[Increases the potency of your healing spells by up t
 Name             : Lava Burst (id=77451) [Spell Family (11)] 
 Class            : Shaman
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 100 yards
 Cast Time        : 2 seconds
@@ -6877,7 +7225,7 @@ Description      : You hurl molten lava at the target, dealing $s1 Fire damage. 
 Name             : Greater Healing Wave (id=77472) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 33% Base Mana (0) (id=279829)
 Spell Level      : 68
 Range            : 40 yards
@@ -6902,7 +7250,7 @@ Description      : Heals a friendly target for $s1.
 Name             : Earthquake (id=77478) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 50
 Range            : 100 yards
 Affecting spells : Convection (16039 effect#1), Convection (16109 effect#1), Totemic Focus (16173 effects: #1, #2), Tidal Focus (16179 effect#1), Nature's Swiftness (16188 effect#1), Purification (16213 effect#1), Tidal Focus (16214 effect#1), Tidal Focus (16215 effect#1), Totemic Focus (16222 effects: #1, #2), Clearcasting (16246 effects: #1, #3), Improved Mana/Health Totems (24436 effect#1), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Mental Quickness (30814 effect#2), Shamanistic Rage (30823 effect#1), Nature's Blessing (30867 effect#1), Nature's Blessing (30868 effect#1), Nature's Blessing (30869 effect#1), Nature's Guardian (30881 effects: #1, #2), Nature's Guardian (30883 effects: #1, #2), Nature's Guardian (30884 effects: #1, #2), Shaman Healing Surge Crit Chance (38501 effect#1), Tidal Waves (51562 effect#1), Tidal Waves (51563 effect#1), Tidal Waves (51564 effect#1), Tidal Waves (53390 effect#2), Maelstrom Weapon (53817 effects: #1, #2, #3), Elemental Fury (60188 effect#1), Healing Trance (60515 effect#1), Unleash Life (73685 effect#2), Deep Healing (77226 effect#1), Spiritwalker's Grace (79206 effect#1), Empowered Healing (82980 effect#2), Empowered Healing (82981 effect#2), Empowered Healing (82982 effect#2), Telluric Currents (82984 effect#1), Telluric Currents (82988 effect#1), Ancestral Focus (89920 effect#1), Increased Lesser Healing Wave (352517 effect#1), Increased Lesser Healing Wave (388432 effect#1)
@@ -7040,9 +7388,11 @@ Description      : Causes the Searing Bolts from your Searing Totem to have a $s
 Name             : Searing Flames (id=77661) 
 Class            : Shaman
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Range            : 200 yards
 Duration         : 15 seconds
+Stacks           : 5 maximum
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ x..x....   ...x.x.x ........ ........ ........ 
                  : ........ ......x. ...x.... ........   .......x ........ x.x..... ......x. 
                  : .......x ........ ........ ........   ...x.... ........ .xx..... ........ 
@@ -7171,7 +7521,7 @@ Attributes       : ........ ........ ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Do Not Display Duration (170)
 Effects          :
-#1 (id=68163)    : Apply Raid Aura (65) | Unknown(317)
+#1 (id=68163)    : Apply Raid Aura (65) | Modify Spell Power% (317)
                    Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Radius: 100 yards | Target: Self (1)
 Description      : Causes your Fire totems to increase the spell power of party and raid members within $a1 yards by $s1% .
 Tooltip          : Spell power increased by $s1%.
@@ -7180,6 +7530,9 @@ Name             : Lava Surge (desc=Rank 1) (id=77755) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7198,6 +7551,9 @@ Name             : Lava Surge (desc=Rank 2) (id=77756) [Spell Family (11), Passi
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 20%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7234,6 +7590,9 @@ Name             : Focused Insight (desc=Rank 1) (id=77794) [Spell Family (11), 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7254,6 +7613,9 @@ Name             : Focused Insight (desc=Rank 2) (id=77795) [Spell Family (11), 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7274,6 +7636,9 @@ Name             : Focused Insight (desc=Rank 3) (id=77796) [Spell Family (11), 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7331,7 +7696,7 @@ Description      : Reduces damage taken while casting spells by $s1%.
 Name             : Spiritwalker's Grace (id=79206) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 12% Base Mana (0) (id=281674)
 Spell Level      : 85
 Duration         : 15 seconds
@@ -7360,6 +7725,7 @@ Class            : Hunter, Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
+Mechanic         : Unknown(28)
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7378,6 +7744,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
+Mechanic         : Unknown(28)
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7471,6 +7838,9 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7492,6 +7862,9 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7632,6 +8005,9 @@ Name             : Feedback (desc=Rank 1) (id=86183) [Spell Family (11), Passive
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7650,6 +8026,9 @@ Name             : Feedback (desc=Rank 2) (id=86184) [Spell Family (11), Passive
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7668,6 +8047,9 @@ Name             : Feedback (desc=Rank 3) (id=86185) [Spell Family (11), Passive
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7726,7 +8108,7 @@ Description      : Increases your primary attribute by $s1% while wearing Mail i
 Name             : Dual Wield (desc=Passive) (id=86629) [Passive] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7927,7 +8309,7 @@ Description      : Grants a $s1% increase to your primary attribute for wearing 
 Name             : Tranquil Mind (id=87717) [Spell Family (11), Passive] 
 Class            : Shaman
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 74
 Affecting spells : Shamanistic Rage (30823 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 26
@@ -7949,7 +8331,7 @@ Tooltip          : Reduces casting or channeling time lost when damaged by $s1%.
 Name             : Totem of Tranquil Mind (id=87718) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 8% Base Mana (0) (id=289619)
 Spell Level      : 74
 GCD              : 1 seconds
@@ -7970,35 +8352,13 @@ Effects          :
                    Base Value: 5 | Scaled Value: 5 | PvP Coefficient: 1.00000 | Misc Value: 47069 | Misc Value 2: 0x52 | Target: Water Totem (42)
 Description      : Summons a Totem of Tranquil Mind with $s1 health at the feet of the caster for $d, causing party or raid members within $87717a1 yards to lose $87717s1% less casting or channeling time when damaged.
 
-Name             : Running Wild (desc=Racial) (id=87840) 
-Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Druid
-Race             : Worgen (0x200000)
-School           : Physical
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Attributes       : ....x... .......x x...x... ....x...   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ...x....   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Is Ability (4), Only Outdoors (15), Not Shapeshifted (16), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), Ignore Caster Modifiers (125), Force Display Castbar (155), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#1 (id=89943)    : Apply Aura (6) | Dummy (4)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000
-#3 (id=104313)   : Apply Aura (6) | Unknown(358)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Drop to all fours to run as fast as a wild animal.
-Tooltip          : $?j2g[Increases ground speed by $j2g%. ][]$?j2f[Increases flight speed by $j2f%. ][]$?j2s[Increases swim speed by $j2s%. ][]
-
 Name             : Rolling Thunder (desc=Rank 1) (id=88756) [Spell Family (11), Passive, Hidden] 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 30%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8019,6 +8379,9 @@ Name             : Rolling Thunder (desc=Rank 2) (id=88764) [Spell Family (11), 
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 60%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8039,6 +8402,9 @@ Name             : Rolling Thunder (id=88765) [Spell Family (11)]
 Class            : Shaman
 School           : Physical
 Spell Type       : None
+Proc Chance      : 30%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Triggered by     : Rolling Thunder (88756), Rolling Thunder (88764)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8078,7 +8444,7 @@ Description      : When you have more than $s1 Lightning Shield charges active, 
 Name             : Fulmination (id=88767) [Spell Family (11)] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Range            : 100 yards
 Affecting spells : Improved Shields (16261 effect#1), Improved Shields (16290 effect#1), Stormstrike (17364 effect#1), Energized Shield (24499 effect#1), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Mental Quickness (30814 effect#2), Shamanistic Rage (30823 effect#1), Shaman Lightning Shield Bonus (33020 effect#1), Improved Shields (51881 effect#1), Glyph of Lightning Shield (55448 effect#1), Elemental Fury (60188 effect#1)
 Family Flags     : 10
@@ -8179,6 +8545,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
+Proc Chance      : 100%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : x....... ........ ........ ........   ........ ........ ........ ........ 
@@ -8199,7 +8566,7 @@ Tooltip          : Arcane resistance increased by $w1.
 Name             : Spirit Link Totem (id=98007) [Spell Family (11), Passive] 
 Class            : Shaman
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 30
 Affecting spells : Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 53
@@ -8222,7 +8589,7 @@ Health periodically normalized among other affected party and raid members.
 Name             : Spirit Link Totem (id=98008) [Spell Family (11)] 
 Class            : Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 11% Base Mana (0) (id=298280)
 Spell Level      : 49
 GCD              : 1 seconds
@@ -8291,6 +8658,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 5 seconds
+Mechanic         : Unknown(11)
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ......x. 
                  : x....... ........ ........ ........   ...x.... ........ ........ ........ 

@@ -827,6 +827,7 @@ enum effect_type_t : unsigned {
     E_255 = 255,
     E_256 = 256,
     E_REDUCE_REMAINING_COOLDOWN = 290,
+    E_ADD_COMBO_POINTS2 = 328,
     E_MAX
 };
 

@@ -1,8 +1,8 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
 Name             : Dual Wield (desc=Passive) (id=674) [Passive] 
 Class            : Warrior, Hunter, Rogue, Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -66,12 +66,13 @@ Description      : Increases your chance to hit with all spells and attacks by $
 Name             : Bite (desc=Basic Attack) (id=17253) [Spell Family (9)] 
 Class            : Hunter, Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 25 Focus (2) (id=182675)
 Spell Level      : 1
 Range            : 5 yards
 GCD              : 1.5 seconds
 Cooldown         : 3 seconds
+Category         : 19
 Affecting spells : Camouflage (51755 effect#3), Spiked Collar (53182 effect#1), Spiked Collar (53183 effect#1), Spiked Collar (53184 effect#1), Cobra Strikes (53257 effect#1), Sic 'Em! (83359 effect#1)
 Family Flags     : 19
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ........ 
@@ -147,6 +148,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 3 seconds
+Mechanic         : Unknown(26)
 Attributes       : ........ ........ .......x ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -166,6 +168,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -184,6 +187,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -256,7 +260,7 @@ Description      : Summons an entire legion of Ghouls to fight for the Death Kni
 Name             : Death and Decay (id=43265) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Unknown(22) (id=265130)
 Resource         : -10 Runic Power (6) (id=265131)
 Spell Level      : 60
@@ -264,6 +268,7 @@ Range            : 30 yards
 GCD              : 1.5 seconds
 Duration         : 10 seconds
 Cooldown         : 30 seconds
+Category         : 18
 Category Cooldown: 30 seconds
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Cinderglacier (53386 effect#1), Improved Icy Talons (55610 effect#3), Glyph of Death and Decay (58629 effect#1)
 Family Flags     : 5
@@ -277,9 +282,9 @@ Attributes       : ........ ........ ........ ..x.....   ...x...x ..x..... .....
                  : ........ ........ ........ ........   
                  : Aura Is Debuff (26), No Redirection (35), No Reflection (39), No Threat (42), Extra Initial Period (169), No Caster Aura Icon (187), Always Show Ground Texture (190), Aura Points On Client (268)
 Effects          :
-#1 (id=864198)   : Persistent Area Aura (27) | Dummy (4) | Scaling Class: 6
-                   Base Value: 26 | Scaled Value: 46.13432 (coefficient=0.041) | PvP Coefficient: 1.00000 | Radius: 10 yards | Target: Unknown(87) -> AOE enemy (28)
-#2 (id=105194)   : Apply Aura (6) | Periodic Dummy (226): every 1 seconds | Scaling Class: 6
+#1 (id=864198)   : Persistent Area Aura (27) | Dummy (4)
+                   Base Value: 26 | Scaled Value: 26 | PvP Coefficient: 1.00000 | Radius: 10 yards | Target: Unknown(87) -> AOE enemy (28)
+#2 (id=105194)   : Apply Aura (6) | Periodic Dummy (226): every 1 seconds
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Corrupts the ground targeted by the Death Knight, causing ${$m1+($AP*0.064)} Shadow damage every sec that targets remain in the area for $d.  This ability produces a high amount of threat.
 Tooltip          : Suffering $w1 Shadow damage every sec.
@@ -288,6 +293,7 @@ Name             : Disarm Duration Reduction (id=43588) [Passive, Hidden]
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -305,7 +311,7 @@ Description      : Disarm duration reduced by $s1%.
 Name             : Feral Charge Effect (id=45334) [Spell Family (7)] 
 Class            : Death Knight, Druid
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Rage (1) (id=230127)
 Spell Level      : 20
 Range            : 8 - 25 yards
@@ -330,13 +336,14 @@ Tooltip          : Immobilized.
 Name             : Plague Strike (id=45462) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Unknown(22) (id=265150)
 Resource         : -10 Runic Power (6) (id=265151)
 Spell Level      : 55
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Butchery (48979 effect#1), Chill of the Grave (49149 effect#1), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2, #4), Butchery (49483 effect#1), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Chill of the Grave (50115 effect#1), Chill of the Grave (50480 effect#1), Rage of Rivendare (51745 effect#1), Rage of Rivendare (51746 effect#1), Icy Touch (52372 effects: #1, #2), Cinderglacier (53386 effect#1), Improved Icy Talons (55610 effect#3), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3), Rage of Rivendare (91323 effect#1)
 Family Flags     : 0
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ...x.... 
@@ -364,6 +371,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Family Flags     : 66
 Attributes       : ........ ........ ........ ...x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ....xx..   ........ ........ x....... ........ 
@@ -382,12 +390,13 @@ Description      : A deadly attack that deals damage and heals the Death Knight.
 Name             : Icy Touch (id=45477) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Unknown(21) (id=265142)
 Resource         : -10 Runic Power (6) (id=265143)
 Spell Level      : 55
 Range            : 20 yards
 GCD              : 1.5 seconds
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Butchery (48979 effect#1), Chill of the Grave (49149 effect#1), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Butchery (49483 effect#1), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Chill of the Grave (50115 effect#1), Chill of the Grave (50480 effect#1), Icy Talons (50887 effect#1), Frost Vulnerability (51714 effect#1), Icy Touch (52372 effects: #1, #2), Cinderglacier (53386 effect#1), Icy Reach (55061 effect#1), Icy Reach (55062 effect#1), Improved Icy Talons (55610 effects: #1, #3), Freezing Fog (59052 effect#1), Blood Presence (61261 effect#2), Runic Focus (61455 effect#1), Frozen Heart (77514 effect#1)
 Family Flags     : 1
 Attributes       : ........ ........ ..x..... ........   ........ .x...... ........ ...x.... 
@@ -414,13 +423,14 @@ Tooltip          : Melee and ranged attack speed reduced by $55095s2%.
 Name             : Chains of Ice (id=45524) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Unknown(21) (id=265152)
 Resource         : -10 Runic Power (6) (id=265153)
 Spell Level      : 58
 Range            : 20 yards
 GCD              : 1.5 seconds
 Duration         : 8 seconds
+Proc Chance      : 101%
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2, #4), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Frost Vulnerability (51714 effect#1), Icy Touch (52372 effects: #1, #2), Cinderglacier (53386 effect#1), Icy Reach (55061 effect#1), Icy Reach (55062 effect#1), Improved Icy Talons (55610 effect#3), Glyph of Chains of Ice (58620 effect#1), Frozen Heart (77514 effect#1)
 Family Flags     : 2, 46, 47
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ...x.... 
@@ -472,13 +482,14 @@ Tooltip          : Blood Rune converted to a Death Rune.
 Name             : Blood Strike (id=45902) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Unknown(20) (id=265154)
 Resource         : -10 Runic Power (6) (id=265155)
 Spell Level      : 55
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Category         : 1207
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2, #4), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Increased Blood Strike Damage (52394 effect#1), Improved Icy Talons (55610 effect#3), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 22
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ...x.... 
@@ -504,6 +515,9 @@ Name             : Offensive State (DND) (id=45903) [Passive, Hidden]
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -522,6 +536,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -540,6 +555,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -556,11 +572,12 @@ Effects          :
 Name             : Raise Dead (id=46584) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 56
 Range            : 30 yards
 GCD              : 1.5 seconds
 Cooldown         : 180 seconds
+Category         : 1245
 Category Cooldown: 180 seconds
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Master of Ghouls (52143 effect#1), Icy Touch (52372 effects: #1, #2), Cinderglacier (53386 effect#1), Improved Icy Talons (55610 effect#3)
 Family Flags     : 12
@@ -589,6 +606,7 @@ Spell Level      : 50
 Range            : 30 yards
 Duration         : 60 seconds
 Cooldown         : 180 seconds
+Category         : 1245
 Category Cooldown: 180 seconds
 Stance Mask      : 0x40000000
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Master of Ghouls (52143 effect#1), Icy Touch (52372 effects: #1, #2), Cinderglacier (53386 effect#1), Improved Icy Talons (55610 effect#3)
@@ -612,6 +630,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Duration         : 4.5 seconds
+Proc Chance      : 101%
 Attributes       : .......x x....... ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -633,6 +652,7 @@ Resource         : 40 Energy (3) (id=234848)
 Spell Level      : 50
 Range            : 5 yards
 GCD              : 1 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00000040
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ...x.... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -653,7 +673,7 @@ Description      : Claw the enemy, dealing $91776s1% of normal melee damage.$?s6
 Name             : Strangulate (id=47476) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Unknown(20) (id=265158)
 Resource         : -10 Runic Power (6) (id=265159)
 Spell Level      : 59
@@ -661,6 +681,8 @@ Range            : 30 yards
 GCD              : 1.5 seconds
 Duration         : 5 seconds
 Cooldown         : 120 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(9)
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Cinderglacier (53386 effect#1), Improved Icy Talons (55610 effect#3), Glyph of Strangulate (58618 effect#1), Runic Focus (61455 effect#1), Frozen Heart (77514 effect#1), Hand of Doom (85793 effect#1), Hand of Doom (85794 effect#1)
 Family Flags     : 9
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ...x.... 
@@ -689,6 +711,7 @@ Spell Level      : 50
 Range            : 5 yards
 GCD              : 1 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00000040
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ...x.... 
                  : ........ ........ ...xx... ........   ........ ........ ........ ........ 
@@ -715,6 +738,7 @@ Spell Level      : 1
 Range            : 5 - 30 yards
 GCD              : 1 seconds
 Cooldown         : 30 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00000040
 Attributes       : ....x... ........ ........ .....x..   .....x.. ..x..... ........ ........ 
                  : ........ ........ ...x.... ....x...   ........ ........ xx...... ........ 
@@ -735,11 +759,12 @@ Description      : Leap behind an enemy target.$?s63560[
 Name             : Huddle (id=47484) 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 10 Energy (3) (id=254925)
 Spell Level      : 50
 GCD              : 1 seconds
 Cooldown         : 45 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00000040
 Attributes       : ....x... ........ x.x..... ........   ........ ........ .x...... ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -760,13 +785,15 @@ Description      : Go into a defensive crouch, reducing all damage taken by $918
 Name             : Mind Freeze (id=47528) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 20 Runic Power (6) (id=253949)
 Spell Level      : 57
 Range            : 5 yards
 Duration         : 4 seconds
 Cooldown         : 10 seconds
+Category         : 88
 Category Cooldown: 10 seconds
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effect#2), Endless Winter (49137 effect#1), Runic Power Mastery (49455 effect#1), Endless Winter (49657 effect#1), Runic Power Mastery (50147 effect#2), Frost Vulnerability (51714 effect#1), Cinderglacier (53386 effect#1), Runic Power Mastery (91145 effect#2)
 Family Flags     : 10
 Attributes       : ........ ........ ........ ........   ........ .x...... ........ ........ 
@@ -786,11 +813,12 @@ Description      : Smash the target's mind with cold, interrupting spellcasting 
 Name             : Death Coil (id=47541) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 40 Runic Power (6) (id=256746)
 Spell Level      : 55
 Range            : 30 yards
 GCD              : 1.5 seconds
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Morbidity (48963 effect#1), Runic Power Mastery (49455 effect#1), Morbidity (49564 effect#1), Morbidity (49565 effect#1), Runic Power Mastery (50147 effect#2), Runic Corruption (51459 effect#2), Runic Corruption (51462 effect#2), Cinderglacier (53386 effect#1), Glyph of Death Coil (63333 effect#1), Glyph of Howling Blast (63335 effect#1), Sudden Doom (81340 effect#1), Runic Power Mastery (91145 effect#2)
 Family Flags     : 13
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
@@ -842,11 +870,12 @@ Description      : Empower your rune weapon, immediately activating all your run
 Name             : Death Coil (id=47632) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Runic Power (6) (id=235440)
 Spell Level      : 55
 Range            : 30 yards
 Velocity         : 24 yards/sec
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Morbidity (48963 effect#1), Runic Power Mastery (49455 effect#1), Morbidity (49564 effect#1), Morbidity (49565 effect#1), Runic Power Mastery (50147 effect#2), Runic Corruption (51459 effect#2), Runic Corruption (51462 effect#2), Cinderglacier (53386 effect#1), Runic Focus (61455 effect#1), Glyph of Death Coil (63333 effect#1), Glyph of Howling Blast (63335 effect#1), Sudden Doom (81340 effect#1), Runic Power Mastery (91145 effect#2)
 Family Flags     : 13, 64
 Attributes       : ........ ........ ..x..... ........   ........ .x...... ........ ........ 
@@ -866,10 +895,11 @@ Description      : Fire a blast of unholy energy, causing Shadow damage to an en
 Name             : Death Coil (id=47633) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 55
 Range            : 30 yards
 Velocity         : 24 yards/sec
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Morbidity (48963 effect#1), Runic Power Mastery (49455 effect#1), Morbidity (49564 effect#1), Morbidity (49565 effect#1), Runic Power Mastery (50147 effect#2), Runic Corruption (51459 effect#2), Runic Corruption (51462 effect#2), Cinderglacier (53386 effect#1), Runic Focus (61455 effect#1), Glyph of Death Coil (63333 effect#1), Glyph of Howling Blast (63335 effect#1), Sudden Doom (81340 effect#1), Runic Power Mastery (91145 effect#2)
 Family Flags     : 13, 31
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ........ 
@@ -941,7 +971,7 @@ Effects          :
                    Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Target: Self (1)
 #2 (id=40422)    : Apply Aura (6) | Increase Speed% (31)
                    Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Misc Value: 21 | Target: Self (1)
-                   Affected Spells: Army of the Dead (42650), Death and Decay (43265), Plague Strike (45462), Icy Touch (45477), Chains of Ice (45524), Blood Tap (45529), Blood Strike (45902), Raise Dead (46584), Raise Dead (46585), Strangulate (47476), Mind Freeze (47528), Death Coil (47541), Empower Rune Weapon (47568), Death Coil (47632), Death Coil (47633), Blood Presence (48263), Unholy Presence (48265), Frost Presence (48266), Anti-Magic Shell (48707), Blood Boil (48721), Death Pact (48743), Acherus Deathcharger (48778), Icebound Fortitude (48792), Rune Tap (48982), Unholy Frenzy (49016), Obliterate (49020), Dancing Rune Weapon (49028), Lichborne (49039), Frost Strike (49143), Howling Blast (49184), Unholy Blight (49194), Hungering Cold (49203), Summon Gargoyle (49206), Bone Shield (49222), Death Grip (49560), Death Grip (49575), Death Grip (49576), Death Strike (49998), Blood Rites (50034), Anti-Magic Zone (50461), Summon Gargoyle (50514), Pestilence (50842), Anti-Magic Zone (51052), Icy Touch (52372), Plague Strike (52373), Blood Strike (52374), Death Coil (52375), Heart Strike (55050), Scourge Strike (55090), Desecration (55741), Horn of Winter (57330), Blood Presence (61261), Summon Gargoyle (61777), Dark Transformation (63560), Death Strike Off-Hand (66188), Frost Strike Off-Hand (66196), Obliterate Off-Hand (66198), Blood Strike Off-Hand (66215), Plague Strike Off-Hand (66216), Desecration (68766), Desecration (414206), Desecration (414268)
+                   Affected Spells: Army of the Dead (42650), Death and Decay (43265), Plague Strike (45462), Icy Touch (45477), Chains of Ice (45524), Blood Tap (45529), Blood Strike (45902), Raise Dead (46584), Raise Dead (46585), Strangulate (47476), Mind Freeze (47528), Death Coil (47541), Empower Rune Weapon (47568), Death Coil (47632), Death Coil (47633), Blood Presence (48263), Unholy Presence (48265), Frost Presence (48266), Anti-Magic Shell (48707), Blood Boil (48721), Death Pact (48743), Icebound Fortitude (48792), Rune Tap (48982), Unholy Frenzy (49016), Obliterate (49020), Dancing Rune Weapon (49028), Lichborne (49039), Frost Strike (49143), Howling Blast (49184), Unholy Blight (49194), Hungering Cold (49203), Summon Gargoyle (49206), Bone Shield (49222), Death Grip (49560), Death Grip (49575), Death Grip (49576), Death Strike (49998), Blood Rites (50034), Anti-Magic Zone (50461), Summon Gargoyle (50514), Pestilence (50842), Anti-Magic Zone (51052), Icy Touch (52372), Plague Strike (52373), Blood Strike (52374), Death Coil (52375), Heart Strike (55050), Scourge Strike (55090), Desecration (55741), Horn of Winter (57330), Blood Presence (61261), Summon Gargoyle (61777), Dark Transformation (63560), Death Strike Off-Hand (66188), Frost Strike Off-Hand (66196), Obliterate Off-Hand (66198), Blood Strike Off-Hand (66215), Plague Strike Off-Hand (66216), Desecration (68766), Desecration (414206), Desecration (414268)
                    Family Flags: 0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39, 40, 44, 48, 49, 51, 59, 62, 69
 #3 (id=953011)   : Apply Aura (6) | Add Flat Modifier (107): Spell Global Cooldown (21)
                    Base Value: -500 | Scaled Value: -500 | PvP Coefficient: 1.00000 | Misc Value: 21 | Target: Self (1)
@@ -994,6 +1024,7 @@ Spell Level      : 68
 Duration         : 5 seconds
 Cooldown         : 45 seconds
 Category Cooldown: 45 seconds
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Magic Suppression (49224 effect#1), Magic Suppression (49610 effect#1), Magic Suppression (49611 effect#1), Cinderglacier (53386 effect#1), Glyph of Anti-Magic Shell (58623 effect#1)
 Family Flags     : 17
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
@@ -1018,10 +1049,11 @@ Immune to magic debuffs.
 Name             : Blood Boil (id=48721) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Unknown(20) (id=255145)
 Spell Level      : 58
 GCD              : 1.5 seconds
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Glyph of Scourge Strike (58642 effect#2), Glyph of Blood Boil (59332 effect#1), Runic Focus (61455 effect#1), Crimson Scourge (81135 effect#1), Crimson Scourge (81136 effect#1), Crimson Scourge (81141 effect#1)
 Family Flags     : 18
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ........ 
@@ -1066,31 +1098,6 @@ Effects          :
                    Base Value: 25 | Scaled Value: 25 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Sacrifices an undead minion, healing the Death Knight for $s3% of $Ghis:her; maximum health.  This heal cannot be a critical.
 
-Name             : Acherus Deathcharger (desc=Summon) (id=48778) [Spell Family (15)] 
-Class            : Death Knight
-School           : Shadow
-Spell Type       : None
-Spell Level      : 55
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Stance Mask      : 0x01000000
-Affecting spells : Unholy Presence (48265 effect#2), Frozen Heart (77514 effect#1)
-Family Flags     : 26
-Attributes       : ........ .......x ..x.x... ....x...   ........ ........ .x...... ........ 
-                 : ........ ........ ...x.... ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ ........ ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Only Outdoors (15), Do Not Sheath (18), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), No AutoCast (AI) (49), Allow While Not Shapeshifted (caster form) (83), Ignore Caster Modifiers (125), Allow Equip While Casting (209), Aura Points On Client (268)
-Effects          :
-#2 (id=953496)   : Server Side Script (77)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Summons and dismisses your rideable Acherus Deathcharger.
-Tooltip          : $?j1g[Increases ground speed by $j1g%. ][]$?j1f[Increases flight speed by $j1f%. ][]$?j1s[Increases swim speed by $j1s%. ][]
-
 Name             : Icebound Fortitude (id=48792) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
@@ -1099,6 +1106,7 @@ Resource         : 20 Runic Power (6) (id=236533)
 Spell Level      : 62
 Duration         : 12 seconds
 Cooldown         : 180 seconds
+Proc Chance      : 100%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Runic Power Mastery (50147 effects: #1, #2), Cinderglacier (53386 effect#1), Increased Icebound Fortitude Mitigation (54803 effect#1), Sanguine Fortitude (81125 effects: #1, #2), Sanguine Fortitude (81127 effects: #1, #2), Brittle Bones (81327 effect#2), Brittle Bones (81328 effect#2), Runic Power Mastery (91145 effects: #1, #2)
 Family Flags     : 20
 Attributes       : ....x... ........ ..x..... ........   ........ ..x....x ........ ........ 
@@ -1126,6 +1134,7 @@ Name             : Virulence (desc=Rank 1) (id=48962) [Spell Family (15), Passiv
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1146,6 +1155,7 @@ Name             : Morbidity (desc=Rank 1) (id=48963) [Spell Family (15), Passiv
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1170,6 +1180,9 @@ Name             : Shadow Infusion (desc=Rank 1) (id=48965) [Spell Family (15), 
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 33%
+Proc Flags       : ........ ....x.x. x....... ........   ........ ........ ........ ........   
+                 : Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1191,6 +1204,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ .x...... ........ ........ 
@@ -1211,6 +1225,9 @@ Name             : Butchery (desc=Rank 1) (id=48979) [Spell Family (15), Passive
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1232,10 +1249,11 @@ Description      : Whenever you kill an enemy that grants experience or honor, y
 Name             : Rune Tap (id=48982) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Unknown(20) (id=265270)
 Spell Level      : 55
 Cooldown         : 30 seconds
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Rune Tap (59754 effect#2)
 Family Flags     : 27
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -1257,6 +1275,10 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 15%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1279,6 +1301,7 @@ Spell Level      : 55
 Range            : 30 yards
 Duration         : 30 seconds
 Cooldown         : 180 seconds
+Mechanic         : Unknown(31)
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Glyph of Heart Strike (58616 effect#1), Frozen Heart (77514 effect#1)
 Family Flags     : 29
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... .x...... ........ 
@@ -1303,6 +1326,9 @@ Name             : Sudden Doom (desc=Rank 1) (id=49018) [Spell Family (15), Pass
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1320,7 +1346,7 @@ Description      : Your main-hand autoattacks have a chance to make your next De
 Name             : Obliterate (id=49020) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Unknown(21) (id=265253)
 Resource         : 1 Unknown(22) (id=265254)
 Resource         : -20 Runic Power (6) (id=265255)
@@ -1328,6 +1354,7 @@ Spell Level      : 61
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Killing Machine (51124 effect#1), Annihilation (51468 effect#1), Annihilation (51472 effect#1), Annihilation (51473 effect#1), Glyph of Obliterate (58671 effect#1), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 49
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ...x.... 
@@ -1371,6 +1398,10 @@ Name             : Blood Parasite (desc=Rank 1) (id=49027) [Spell Family (15), P
 Class            : Death Knight
 School           : Shadow
 Spell Type       : None
+Internal Cooldown: 5 seconds
+Proc Chance      : 5%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1390,7 +1421,7 @@ Description      : Your melee attacks have a $h% chance to spawn a Bloodworm. Th
 Name             : Dancing Rune Weapon (id=49028) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 60 Runic Power (6) (id=236592)
 Spell Level      : 55
 Range            : 30 yards
@@ -1398,6 +1429,9 @@ GCD              : 1.5 seconds
 Duration         : 12 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 90 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Affecting spells : Unholy Presence (48265 effects: #2, #3)
 Family Flags     : 30
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ....x... 
@@ -1422,6 +1456,7 @@ Name             : Epidemic (desc=Rank 1) (id=49036) [Spell Family (15), Passive
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1474,6 +1509,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1493,6 +1529,7 @@ Class            : Death Knight
 School           : Shadow
 Spell Type       : None
 Spell Level      : 68
+Proc Chance      : 101%
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ .....x..   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1512,6 +1549,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1531,12 +1569,13 @@ Description      : The cost of your Mind Freeze is reduced to 10 Runic Power.
 Name             : Frost Strike (id=49143) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 40 Runic Power (6) (id=236421)
 Spell Level      : 55
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Killing Machine (51124 effect#1), Frost Vulnerability (51714 effect#1), Cinderglacier (53386 effect#1), Glyph of Frost Strike (58647 effect#1), Frozen Heart (77514 effect#1), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 34
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ...x.... 
@@ -1559,6 +1598,10 @@ Name             : Chill of the Grave (desc=Rank 1) (id=49149) [Spell Family (15
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... ..x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1580,6 +1623,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 55
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1604,7 +1648,7 @@ Description      : You take $s1% less damage from all sources.
 Name             : Howling Blast (id=49184) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Unknown(21) (id=265234)
 Resource         : -10 Runic Power (6) (id=265235)
 Spell Level      : 55
@@ -1642,6 +1686,9 @@ Name             : Rime (desc=Rank 1) (id=49188) [Spell Family (15), Passive, Hi
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 15%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1661,6 +1708,9 @@ Class            : Death Knight
 School           : Shadow
 Spell Type       : None
 Spell Level      : 55
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Affecting spells : Unholy Presence (48265 effect#2), Runic Power Mastery (49455 effect#1), Cinderglacier (53386 effect#1), Glyph of Raise Dead (58686 effect#1), Frozen Heart (77514 effect#1)
 Family Flags     : 40
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
@@ -1681,13 +1731,18 @@ Tooltip          : Taking damage from a vile swarm of unholy insects.  Diseases 
 Name             : Hungering Cold (id=49203) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 40 Runic Power (6) (id=236425)
 Spell Level      : 55
 Cast Time        : 1.5 seconds
 GCD              : 1.5 seconds
 Duration         : 10 seconds
 Cooldown         : 60 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Mechanic         : Unknown(13)
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Frost Vulnerability (51714 effect#1), Glyph of Hungering Cold (63331 effect#1)
 Family Flags     : 44, 47
 Attributes       : ........ ........ ..x.x... ......x.   ...x...x ..x..... ..x..... ........ 
@@ -1742,6 +1797,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 10%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1759,12 +1817,17 @@ Description      : Your autoattacks have a $h% chance to cause a Blood-Caked Str
 Name             : Bone Shield (id=49222) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Unknown(22) (id=265230)
 Resource         : -10 Runic Power (6) (id=265231)
 GCD              : 1.5 seconds
 Duration         : 300 seconds
 Cooldown         : 60 seconds
+Internal Cooldown: 2 seconds
+Stacks           : 6 initial, 6 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.x .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Heal Taken, Magic Hostile Spell Taken
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Glyph of Bone Shield (58673 effect#1)
 Family Flags     : 38
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
@@ -1795,6 +1858,8 @@ Class            : Death Knight
 School           : Shadow
 Spell Type       : None
 Spell Level      : 55
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1816,6 +1881,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Requires weapon  : One-handed Axe, One-handed Mace, One-handed Sword, Fist Weapon, Dagger
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1837,6 +1903,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ .x...... ........ ........ 
@@ -1858,6 +1925,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ .x...... ........ ........ 
@@ -1879,6 +1947,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1897,6 +1966,7 @@ Name             : Runic Power Mastery (desc=Rank 1) (id=49455) [Spell Family (1
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1907,7 +1977,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8)
 Effects          :
-#1 (id=953784)   : Apply Aura (6) | Increase Energy (35)
+#1 (id=953784)   : Apply Aura (6) | Modify Max Power (35) (runic_power)
                    Base Value: 100 | Scaled Value: 100 | PvP Coefficient: 1.00000 | Misc Value: 6 | Target: Self (1)
                    Affected Spells: Mind Freeze (47528), Death Coil (47541), Death Coil (47632), Death Coil (47633), Death Pact (48743), Unholy Blight (49194), Death Coil (52375)
                    Family Flags: 10, 13, 19, 37, 40
@@ -1917,6 +1987,9 @@ Name             : Butchery (desc=Rank 2) (id=49483) [Spell Family (15), Passive
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1940,6 +2013,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 55
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1966,6 +2040,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 55
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1992,6 +2067,10 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 15%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2013,6 +2092,10 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 15%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2035,6 +2118,9 @@ Name             : Sudden Doom (desc=Rank 2) (id=49529) [Spell Family (15), Pass
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2053,6 +2139,9 @@ Name             : Sudden Doom (desc=Rank 3) (id=49530) [Spell Family (15), Pass
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2072,6 +2161,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2090,6 +2180,10 @@ Name             : Blood Parasite (desc=Rank 2) (id=49542) [Spell Family (15), P
 Class            : Death Knight
 School           : Shadow
 Spell Type       : None
+Internal Cooldown: 5 seconds
+Proc Chance      : 10%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2112,6 +2206,8 @@ School           : Physical
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 3 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(6)
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Unholy Command (49588 effect#1), Unholy Command (49589 effect#1), Cinderglacier (53386 effect#1), Glyph of Death Grip (62259 effect#1), Blood Shield (77513 effect#1), Frozen Heart (77514 effect#1)
 Family Flags     : 25
 Attributes       : ........ ........ ........ ........   ........ .x...... ........ ...x.... 
@@ -2137,6 +2233,7 @@ Name             : Epidemic (desc=Rank 2) (id=49562) [Spell Family (15), Passive
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2157,6 +2254,7 @@ Name             : Morbidity (desc=Rank 2) (id=49564) [Spell Family (15), Passiv
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2181,6 +2279,7 @@ Name             : Morbidity (desc=Rank 3) (id=49565) [Spell Family (15), Passiv
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2205,6 +2304,7 @@ Name             : Virulence (desc=Rank 2) (id=49567) [Spell Family (15), Passiv
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2225,6 +2325,7 @@ Name             : Virulence (desc=Rank 3) (id=49568) [Spell Family (15), Passiv
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2245,6 +2346,9 @@ Name             : Shadow Infusion (desc=Rank 2) (id=49571) [Spell Family (15), 
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 66%
+Proc Flags       : ........ ....x.x. x....... ........   ........ ........ ........ ........   
+                 : Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2265,6 +2369,9 @@ Name             : Shadow Infusion (desc=Rank 3) (id=49572) [Spell Family (15), 
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x.x. ....x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2286,6 +2393,8 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Range            : 50000 yards
+Proc Chance      : 101%
+Mechanic         : Unknown(6)
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Unholy Command (49588 effect#1), Unholy Command (49589 effect#1), Cinderglacier (53386 effect#1), Glyph of Death Grip (62259 effect#1), Blood Shield (77513 effect#1), Frozen Heart (77514 effect#1)
 Family Flags     : 25
 Attributes       : ........ ........ .......x x..x....   .....x.. .x...... ........ ........ 
@@ -2306,10 +2415,12 @@ Tooltip          : Taunted.
 Name             : Death Grip (id=49576) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 55
 Range            : 30 yards
 Cooldown         : 35 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(6)
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Unholy Command (49588 effect#1), Unholy Command (49589 effect#1), Cinderglacier (53386 effect#1), Glyph of Death Grip (62259 effect#1), Blood Shield (77513 effect#1), Frozen Heart (77514 effect#1)
 Family Flags     : 25
 Attributes       : ........ ........ ........ ........   ........ ........ ...x.... ........ 
@@ -2331,6 +2442,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 50%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2352,6 +2466,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2373,6 +2490,7 @@ Class            : Death Knight
 School           : Shadow
 Spell Type       : None
 Spell Level      : 55
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2394,6 +2512,8 @@ Class            : Death Knight
 School           : Shadow
 Spell Type       : None
 Spell Level      : 55
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2416,6 +2536,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 20%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2436,6 +2559,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 30%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2455,6 +2581,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2476,6 +2603,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2495,6 +2623,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2512,7 +2641,7 @@ Description      : Increases your armor value from items by $s1%.
 Name             : Death Strike (id=49998) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Unknown(21) (id=265192)
 Resource         : 1 Unknown(22) (id=265193)
 Resource         : -20 Runic Power (6) (id=265194)
@@ -2520,6 +2649,7 @@ Spell Level      : 56
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Category         : 1196
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Improved Icy Talons (55610 effect#3), Improved Death Strike (62905 effects: #1, #2, #4), Improved Death Strike (62908 effects: #1, #2, #4), Improved Death Strike (81138 effects: #1, #2, #3), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 4
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ........ 
@@ -2548,6 +2678,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2574,6 +2705,9 @@ School           : Shadow
 Spell Type       : None
 GCD              : 1.5 seconds
 Cooldown         : 180 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Cinderglacier (53386 effect#1), Glyph of Pestilence (58657 effect#2), Glyph of Death Grip (62259 effect#2)
 Family Flags     : 14
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
@@ -2595,6 +2729,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2616,6 +2751,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2636,6 +2772,10 @@ Name             : Chill of the Grave (desc=Rank 2) (id=50115) [Spell Family (15
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... ..x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2657,6 +2797,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Requires weapon  : One-handed Axe, One-handed Mace, One-handed Sword, Fist Weapon, Dagger
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2678,6 +2819,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Requires weapon  : One-handed Axe, One-handed Mace, One-handed Sword, Fist Weapon, Dagger
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2698,6 +2840,7 @@ Name             : Runic Power Mastery (desc=Rank 2) (id=50147) [Spell Family (1
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2708,7 +2851,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8)
 Effects          :
-#1 (id=954988)   : Apply Aura (6) | Increase Energy (35)
+#1 (id=954988)   : Apply Aura (6) | Modify Max Power (35) (runic_power)
                    Base Value: 200 | Scaled Value: 200 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 6 | Target: Self (1)
                    Affected Spells: Icebound Fortitude (48792)
                    Family Flags: 20
@@ -2722,6 +2865,9 @@ Name             : Improved Blood Presence (desc=Rank 1) (id=50365) [Passive]
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x...x... x.x..x.. ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ......x. ........ x.x..... x..x....   ........ ........ ........ .......x 
                  : ........ ........ ........ ........   ........ ........ x....... ........ 
                  : ........ .......x .....x.. ........   ........ ........ ........ ........ 
@@ -2744,6 +2890,9 @@ Name             : Improved Blood Presence (desc=Rank 2) (id=50371) [Passive]
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x...x... x.x..x.. ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ......x. ........ x.x..... x..x....   ........ ........ ........ .......x 
                  : ........ ........ ........ ........   ........ ........ x....... ........ 
                  : ........ .......x .....x.. ........   ........ ........ ........ ........ 
@@ -2766,6 +2915,7 @@ Name             : Improved Frost Presence (desc=Rank 1) (id=50384) [Spell Famil
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......x. ........ x.x..... x..x....   ........ ........ ........ .......x 
                  : ........ ........ ........ ........   ........ ........ x....... ........ 
                  : ........ ........ .....x.. ........   ........ ........ ........ ........ 
@@ -2788,6 +2938,7 @@ Name             : Improved Frost Presence (desc=Rank 2) (id=50385) [Spell Famil
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......x. ........ x.x..... x..x....   ........ ........ ........ .......x 
                  : ........ ........ ........ ........   ........ ........ x....... ........ 
                  : ........ ........ .....x.. ........   ........ ........ ........ ........ 
@@ -2861,6 +3012,10 @@ Spell Type       : None
 Resource         : 0 Rage (1) (id=237567)
 Spell Level      : 1
 Duration         : 20 seconds
+Stacks           : 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Triggered by     : Scent of Blood (49004), Scent of Blood (49508), Scent of Blood (49509)
 Attributes       : ....x... ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2880,10 +3035,11 @@ Tooltip          : Successful attacks generate runic power.
 Name             : Chilblains (id=50434) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 10 seconds
+Proc Chance      : 101%
 Affecting spells : Frost Vulnerability (51714 effect#1)
 Triggered by     : Chilblains (50040)
 Family Flags     : 50
@@ -2905,10 +3061,11 @@ Tooltip          : Movement speed reduced by $s1%.
 Name             : Chilblains (id=50435) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 10 seconds
+Proc Chance      : 101%
 Affecting spells : Frost Vulnerability (51714 effect#1)
 Triggered by     : Chilblains (50041)
 Family Flags     : 50
@@ -2955,6 +3112,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 55
 Range            : 100 yards
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2975,6 +3135,7 @@ School           : Shadow
 Spell Type       : None
 Spell Level      : 55
 Duration         : 30 seconds
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3)
 Family Flags     : 51
 Attributes       : ........ ........ ..x..... ........   ..x...x. ........ ........ ........ 
@@ -2995,9 +3156,10 @@ Tooltip          : Absorbs $50461s1% of spell damage.
 Name             : Blood-Caked Strike (id=50463) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Energy (3) (id=237424)
 Range            : 5 yards
+Proc Chance      : 101%
 Triggered by     : Blood-Caked Blade (49219), Blood-Caked Blade (49627), Blood-Caked Blade (49628)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ .....x..   ........ ........ ........ ........ 
@@ -3019,6 +3181,7 @@ Name             : Chill of the Grave (id=50480) [Spell Family (15), Passive, Hi
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Affecting spells : Frost Presence (48266 effect#3)
 Triggered by     : Chill of the Grave (49149), Chill of the Grave (50115)
 Family Flags     : 79
@@ -3045,6 +3208,7 @@ Spell Type       : None
 Resource         : 0 Runic Power (6) and 3 Runic Power (6) per tick (id=237230)
 Spell Level      : 55
 Duration         : 20 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00000040
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Cinderglacier (53386 effect#1)
 Triggered by     : Summon Gargoyle (61777)
@@ -3070,6 +3234,7 @@ School           : Shadow
 Spell Type       : None
 Resource         : 0 Runic Power (6) (id=237375)
 Range            : 50000 yards
+Proc Chance      : 101%
 Triggered by     : Summon Gargoyle (50514)
 Attributes       : .......x x....... ........ x..x....   .....x.. ........ ........ ........ 
                  : ..x..... ......x. ........ ........   ........ ........ ........ ........ 
@@ -3088,11 +3253,12 @@ Description      : Feeds the Gargoyle Runic Power.
 Name             : Unholy Blight (id=50536) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 55
 Range            : 100 yards
 Velocity         : 15 yards/sec
 Duration         : 10 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ .....x..   ........ ........ ..x..... ........ 
                  : ........ x......x ........ ........   ........ ........ ........ ........ 
@@ -3112,9 +3278,11 @@ Name             : Arcane Torrent (desc=Racial) (id=50613)
 Class            : Death Knight
 Race             : Blood Elf (0x200)
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 2 seconds
 Cooldown         : 120 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(9)
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3135,12 +3303,14 @@ Tooltip          : Silenced.
 Name             : Pestilence (id=50842) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Unknown(20) (id=265244)
 Resource         : -10 Runic Power (6) (id=265245)
 Spell Level      : 56
 Range            : 5 yards
 GCD              : 1.5 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(22)
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Glyph of Pestilence (58657 effect#1), Glyph of Resilient Grip (59309 effect#1), Runic Focus (61455 effect#1), Contagion (91316 effect#1), Contagion (91319 effect#1)
 Family Flags     : 48
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ...x.... 
@@ -3166,6 +3336,7 @@ Class            : Death Knight
 School           : Frost
 Spell Type       : None
 Spell Level      : 55
+Proc Chance      : 101%
 Attributes       : ......x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x...x. 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3191,6 +3362,7 @@ Spell Level      : 55
 Duration         : 10 seconds
 Cooldown         : 120 seconds
 Category Cooldown: 45 seconds
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3)
 Family Flags     : 51
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ........ 
@@ -3211,6 +3383,9 @@ Name             : Ebon Plaguebringer (desc=Rank 1) (id=51099) [Spell Family (15
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3232,6 +3407,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3252,6 +3430,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 10 seconds
+Proc Chance      : 101%
 Triggered by     : Killing Machine (51123), Killing Machine (51127), Killing Machine (51128)
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3275,6 +3454,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3294,6 +3476,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3312,6 +3497,9 @@ Name             : Ebon Plaguebringer (desc=Rank 2) (id=51160) [Spell Family (15
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3336,6 +3524,7 @@ Resource         : 1 Unknown(21) (id=265273)
 Resource         : -10 Runic Power (6) (id=265274)
 Duration         : 20 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 101%
 Affecting spells : Icy Touch (45477 effect#1), Unholy Presence (48265 effect#3), Blade Barrier (49182 effect#1), Howling Blast (49184 effect#1), Blade Barrier (49500 effect#1), Blade Barrier (49501 effect#1), Icy Touch (52372 effect#1), Glyph of Pillar of Frost (58635 effects: #1, #2)
 Family Flags     : 21
 Attributes       : ....x... ........ ..x..... ........   ........ ..x..... ........ ........ 
@@ -3361,6 +3550,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3385,6 +3575,7 @@ School           : Shadow
 Spell Type       : None
 Spell Level      : 55
 Duration         : 3 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3407,6 +3598,7 @@ Class            : Death Knight
 School           : Shadow
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3429,6 +3621,7 @@ Name             : Annihilation (desc=Rank 1) (id=51468) [Spell Family (15), Pas
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3449,6 +3642,7 @@ Name             : Annihilation (desc=Rank 2) (id=51472) [Spell Family (15), Pas
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3469,6 +3663,7 @@ Name             : Annihilation (desc=Rank 3) (id=51473) [Spell Family (15), Pas
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3489,6 +3684,7 @@ Name             : Rage of Rivendare (desc=Rank 1) (id=51745) [Spell Family (15)
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3509,6 +3705,7 @@ Name             : Rage of Rivendare (desc=Rank 2) (id=51746) [Spell Family (15)
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3556,7 +3753,7 @@ Effects          :
 Name             : Gargoyle Strike (id=51963) 
 Class            : Death Knight
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20
 Range            : 40 yards
 Cast Time        : 2 seconds
@@ -3579,6 +3776,7 @@ Name             : On a Pale Horse (desc=Rank 1) (id=51983) [Spell Family (15), 
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3599,6 +3797,7 @@ Name             : On a Pale Horse (desc=Rank 2) (id=51986) [Spell Family (15), 
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ x.......   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3619,6 +3818,7 @@ Name             : Death Knight Pet Scaling 02 (id=51996) [Passive, Hidden]
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ....x... .x......   ........ ........ ........ ........ 
@@ -3642,6 +3842,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Resource         : 0 Rune (5) (id=256362)
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3661,7 +3862,7 @@ Description      : Reduces the cooldown on Raise Dead by ${$m1/-1000} sec, and t
 Name             : Death and Decay (id=52212) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Runic Power (6) (id=238584)
 Range            : 100 yards
 Affecting spells : Morbidity (48963 effect#2), Morbidity (49564 effect#2), Morbidity (49565 effect#2), Runic Focus (61455 effect#1)
@@ -3676,8 +3877,8 @@ Attributes       : ........ ........ ........ x..x....   ...x.x.x ........ .....
                  : ........ ........ ........ ........   
                  : Allow While Mounted (24), Allow While Sitting (27), No Redirection (35), Allow While Stealthed (37), No Reflection (39), Allow While Invisible (78), Allow While Not Shapeshifted (caster form) (83), Active Threat (94), Treat As Periodic (121), Do Not Display Range (126), Allow Cast While Casting (135), Allow While Stunned (163), Treat as Area Effect (175), Allow While Fleeing (177), Allow While Confused (178), Always AOE Line of Sight (186), Allow While Riding Vehicle (204), Allow While Charmed (261)
 Effects          :
-#1 (id=956468)   : School Damage (2): shadow | Scaling Class: 6
-                   Base Value: 0 | Scaled Value: 46.13432 (coefficient=0.041) | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: Unknown(87) -> AOE enemy (instant) (16)
+#1 (id=956468)   : School Damage (2): shadow
+                   Base Value: 26 | Scaled Value: 26 | AP Coefficient: 0.06400 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: Unknown(87) -> AOE enemy (instant) (16)
 Description      : Corrupts the ground targeted by the Death Knight, causing Shadow damage every sec that targets remain in the area for $43265d.  This ability produces a high amount of threat.
 Tooltip          : Diseased.
 
@@ -3685,6 +3886,10 @@ Name             : Will of the Necropolis (desc=Rank 1) (id=52284) [Spell Family
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 45 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3702,7 +3907,7 @@ Description      : When a damaging attack brings you below 30% of your maximum h
 Name             : Icy Touch (desc=Rank 1) (id=52372) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Unknown(21) (id=265111)
 Resource         : -10 Runic Power (6) (id=265112)
 Spell Level      : 55
@@ -3710,7 +3915,9 @@ Range            : 20 yards
 GCD              : 1.5 seconds
 Duration         : 20 seconds
 Cooldown         : 6 seconds
+Category         : 19
 Category Cooldown: 6 seconds
+Proc Chance      : 101%
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Butchery (48979 effect#1), Chill of the Grave (49149 effect#1), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Butchery (49483 effect#1), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Chill of the Grave (50115 effect#1), Chill of the Grave (50480 effect#1), Icy Talons (50887 effect#1), Frost Vulnerability (51714 effect#1), Cinderglacier (53386 effect#1), Icy Reach (55061 effect#1), Icy Reach (55062 effect#1), Improved Icy Talons (55610 effects: #1, #3), Freezing Fog (59052 effect#1), Blood Presence (61261 effect#2), Runic Focus (61455 effect#1), Frozen Heart (77514 effect#1)
 Family Flags     : 1, 31
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ...x.... 
@@ -3737,7 +3944,7 @@ Tooltip          : Ranged, melee and casting speed reduced by $s2%.
 Name             : Plague Strike (desc=Rank 1) (id=52373) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Unknown(20) (id=265113)
 Resource         : 1 Unknown(22) (id=265114)
 Resource         : -10 Runic Power (6) (id=265115)
@@ -3768,13 +3975,14 @@ Tooltip          : Deals $o2 Shadow damage over $d.
 Name             : Blood Strike (desc=Rank 1) (id=52374) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Unknown(20) (id=265116)
 Resource         : -10 Runic Power (6) (id=265117)
 Spell Level      : 55
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Category         : 1207
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2, #4), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Increased Blood Strike Damage (52394 effect#1), Improved Icy Talons (55610 effect#3), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 22
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ...x.... 
@@ -3796,11 +4004,13 @@ Description      : Instantly strike the enemy, causing $s2% weapon damage plus $
 Name             : Death Coil (desc=Rank 1) (id=52375) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 40 Runic Power (6) (id=256540)
 Spell Level      : 55
 Range            : 30 yards
 GCD              : 1.5 seconds
+Category         : 633
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Morbidity (48963 effect#1), Runic Power Mastery (49455 effect#1), Morbidity (49564 effect#1), Morbidity (49565 effect#1), Runic Power Mastery (50147 effect#2), Runic Corruption (51459 effect#2), Runic Corruption (51462 effect#2), Cinderglacier (53386 effect#1), Glyph of Death Coil (63333 effect#1), Glyph of Howling Blast (63335 effect#1), Sudden Doom (81340 effect#1), Runic Power Mastery (91145 effect#2)
 Family Flags     : 13
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ........ 
@@ -3867,11 +4077,13 @@ Tooltip          : Increases melee attack power by $s1% and ranged attack power 
 Name             : Charge (id=53148) [Spell Family (9)] 
 Class            : Hunter, Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Rage (1) (id=239772)
 Spell Level      : 80
 Range            : 8 - 25 yards
 Duration         : 1 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(7)
 Triggered by     : Swoop (52825), Charge (61685)
 Attributes       : ....x... ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3896,6 +4108,7 @@ School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
 Requires weapon  : Two-handed Axe, Two-handed Mace, Polearm, Two-handed Sword, Staff
+Proc Chance      : 101%
 Attributes       : .....x.x x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ .....x.. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3918,6 +4131,7 @@ School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Miscellaneous, Dagger, Spear
+Proc Chance      : 101%
 Attributes       : .....x.x x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ .....x.. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3940,6 +4154,7 @@ School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Miscellaneous, Dagger, Spear
+Proc Chance      : 101%
 Attributes       : .....x.x x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ .....x.. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3962,6 +4177,7 @@ School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
 Requires weapon  : Two-handed Axe, Two-handed Mace, Polearm, Two-handed Sword, Staff
+Proc Chance      : 101%
 Attributes       : .....x.x x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ .....x.. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3984,6 +4200,7 @@ School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Miscellaneous, Dagger, Spear
+Proc Chance      : 101%
 Attributes       : .....x.x x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ .....x.. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4006,6 +4223,7 @@ School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Miscellaneous, Dagger, Spear
+Proc Chance      : 101%
 Attributes       : .....x.x x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ .....x.. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4027,6 +4245,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Duration         : Aura (infinite)
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4048,6 +4267,8 @@ Spell Type       : None
 Spell Level      : 55
 Range            : 40 yards
 Duration         : 15 seconds
+Stacks           : 1 maximum
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4070,6 +4291,10 @@ School           : Frost
 Spell Type       : None
 Range            : 10 - 40 yards
 Duration         : 30 seconds
+Stacks           : 2 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... x.x.x.x. x.x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4093,6 +4318,7 @@ School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
 Requires weapon  : One-handed Axe, One-handed Mace, One-handed Sword, Dagger
+Proc Chance      : 101%
 Attributes       : .....x.x x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ .....x.. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4115,6 +4341,7 @@ School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
 Requires weapon  : One-handed Axe, One-handed Mace, One-handed Sword, Dagger
+Proc Chance      : 101%
 Attributes       : .....x.x x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ .....x.. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4136,6 +4363,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Duration         : Aura (infinite)
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4155,6 +4383,7 @@ Class            : Death Knight
 Race             : Orc (0x2)
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4174,6 +4403,7 @@ Name             : Death Knight Pet Scaling 01 (id=54566) [Passive, Hidden]
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ....x... .x......   ........ ........ ........ ........ 
@@ -4196,6 +4426,7 @@ Name             : Blood of the North (desc=Passive) (id=54637) [Spell Family (1
 Class            : Death Knight
 School           : Shadow
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4215,13 +4446,14 @@ Description      : Permanently transforms your Blood Runes into Death Runes. Dea
 Name             : Heart Strike (id=55050) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Unknown(20) (id=265288)
 Resource         : -10 Runic Power (6) (id=265289)
 Spell Level      : 55
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Category         : 1207
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Increased Blood Strike Damage (52394 effect#1), Glyph of Heart Strike (58616 effect#1)
 Family Flags     : 24
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ...x.... 
@@ -4247,6 +4479,7 @@ Name             : Icy Reach (desc=Rank 1) (id=55061) [Spell Family (15), Passiv
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4267,6 +4500,7 @@ Name             : Icy Reach (desc=Rank 2) (id=55062) [Spell Family (15), Passiv
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4286,10 +4520,11 @@ Description      : Increases the range of your Icy Touch, Chains of Ice and Howl
 Name             : Blood Plague (id=55078) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 21 seconds
+Mechanic         : Unknown(22)
 Affecting spells : Virulence (48962 effect#1), Blood Parasite (49027 effect#1), Epidemic (49036 effect#1), Blood Parasite (49542 effect#1), Epidemic (49562 effect#1), Virulence (49567 effect#1), Virulence (49568 effect#1), Ebon Plaguebringer (51099 effect#1), Ebon Plaguebringer (51160 effect#1), Ebon Plague (65142 effect#1), Dreadblade (77515 effect#1), Scarlet Fever (81131 effect#1), Scarlet Fever (81132 effect#1), Epidemic (81334 effect#1)
 Triggered by     : Plague Strike (45462), Outbreak (77575)
 Family Flags     : 43, 57, 65
@@ -4313,13 +4548,14 @@ Tooltip          : Suffering $w1 Shadow damage per $t1 sec.
 Name             : Scourge Strike (id=55090) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Unknown(22) (id=265290)
 Resource         : -10 Runic Power (6) (id=265291)
 Spell Level      : 55
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Rage of Rivendare (51745 effect#1), Rage of Rivendare (51746 effect#1), Rage of Rivendare (91323 effect#1)
 Family Flags     : 59
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ...x.... 
@@ -4343,9 +4579,11 @@ Description      : An unholy strike that deals $s2% of weapon damage as Physical
 Name             : Frost Fever (id=55095) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Range            : 50000 yards
 Duration         : 21 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(22)
 Affecting spells : Virulence (48962 effect#1), Blood Parasite (49027 effect#1), Epidemic (49036 effect#1), Blood Parasite (49542 effect#1), Epidemic (49562 effect#1), Virulence (49567 effect#1), Virulence (49568 effect#1), Chilblains (50040 effect#1), Chilblains (50041 effect#1), Ebon Plaguebringer (51099 effect#1), Ebon Plaguebringer (51160 effect#1), Frost Vulnerability (51714 effect#1), Glyph of Icy Touch (58631 effect#1), Runic Focus (61455 effect#1), Ebon Plague (65142 effect#1), Dreadblade (77515 effect#1), Brittle Bones (81327 effect#1), Brittle Bones (81328 effect#1), Epidemic (81334 effect#1)
 Triggered by     : Icy Touch (45477), Glyph of Howling Blast (63335), Outbreak (77575)
 Family Flags     : 43, 58, 65
@@ -4374,6 +4612,7 @@ Spell Type       : None
 Resource         : 0 Rune (5) (id=265312)
 Duration         : 10 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effect#3), Cinderglacier (53386 effect#1), Glyph of Vampiric Blood (58676 effects: #1, #2)
 Family Flags     : 35
 Attributes       : ....x... ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -4425,8 +4664,11 @@ Tooltip          : Increases melee and ranged attack speed by $s1%.
 Name             : Desecration (desc=Rank 1) (id=55666) [Spell Family (15), Passive, Hidden] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 GCD              : 1.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Affecting spells : Icy Touch (45477 effects: #1, #2), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2, #4), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Improved Icy Talons (55610 effect#3)
 Family Flags     : 7
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
@@ -4446,8 +4688,11 @@ Description      : Your Plague, Scourge, and Necrotic Strikes defile the ground 
 Name             : Desecration (desc=Rank 2) (id=55667) [Spell Family (15), Passive, Hidden] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 GCD              : 1.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Affecting spells : Icy Touch (45477 effects: #1, #2), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2, #4), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Improved Icy Talons (55610 effect#3)
 Family Flags     : 7
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
@@ -4469,6 +4714,8 @@ Class            : Death Knight
 School           : Shadow
 Spell Type       : None
 Duration         : 20 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(11)
 Affecting spells : Unholy Presence (48265 effects: #2, #3)
 Family Flags     : 51
 Attributes       : ........ ........ ..x..... ...x....   ........ ..x..... ........ ........ 
@@ -4498,7 +4745,9 @@ Spell Level      : 65
 Range            : 30 yards
 Duration         : 3 seconds
 Cooldown         : 8 seconds
+Category         : 82
 Category Cooldown: 8 seconds
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effect#3)
 Family Flags     : 60
 Attributes       : ....x... ........ x.x..... ........   ........ ........ ........ ........ 
@@ -4523,6 +4772,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4541,6 +4791,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4557,12 +4808,13 @@ Effects          :
 Name             : Rune Strike (id=56815) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 30 Runic Power (6) (id=256724)
 Spell Level      : 67
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Category         : 65
 Affecting spells : Unholy Presence (48265 effect#3), Glyph of Rune Strike (58669 effect#1), Glyph of Rune Tap (59327 effect#1), Glyph of Death Strike (59336 effects: #1, #2), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3), Glyph of Dark Succor (96279 effect#1), Dark Succor (101568 effect#1)
 Family Flags     : 61
 Attributes       : ....x... ........ ..x..x.. ........   ........ .x...... ........ ...x.... 
@@ -4592,6 +4844,9 @@ Spell Type       : None
 Resource         : 0 Runic Power (6) (id=242196)
 Spell Level      : 67
 Range            : 5 yards
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. .....x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4613,6 +4868,10 @@ Resource         : 0 Runic Power (6) (id=242197)
 Spell Level      : 67
 Range            : 5 yards
 Duration         : 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Triggered by     : Rune Strike (56816)
 Attributes       : .......x x....... ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4631,6 +4890,9 @@ Name             : Rime (desc=Rank 2) (id=56822) [Spell Family (15), Passive, Hi
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 30%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4649,6 +4911,10 @@ Name             : Reaping (desc=Passive) (id=56835) [Spell Family (15), Passive
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 0.1 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4666,12 +4932,13 @@ Description      : Whenever you hit with Blood Strike, Pestilence, or Festering 
 Name             : Horn of Winter (id=57330) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : -10 Runic Power (6) (id=265320)
 Spell Level      : 65
 GCD              : 1.5 seconds
 Duration         : 120 seconds
 Cooldown         : 20 seconds
+Category         : 1253
 Category Cooldown: 20 seconds
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Glyph of Horn of Winter (58680 effect#1)
 Family Flags     : 62
@@ -4704,6 +4971,7 @@ Range            : 50000 yards
 GCD              : 1.5 seconds
 Duration         : 300 seconds
 Cooldown         : 10 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ x....... ........   ........ ..x..x.. .x...... ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4726,6 +4994,10 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=243742)
 Range            : 5 yards
 Duration         : 6 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Triggered by     : Charge (53148)
 Attributes       : .......x x....... ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4745,6 +5017,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4767,6 +5042,7 @@ School           : Physical
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 10 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ .x...... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4786,6 +5062,7 @@ Name             : Glyph of Strangulate (id=58618) [Spell Family (15), Passive, 
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4807,6 +5084,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4828,6 +5106,7 @@ Class            : Death Knight
 School           : Frost
 Spell Type       : None
 Range            : 50000 yards
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ..x..... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4846,6 +5125,7 @@ Name             : Glyph of Anti-Magic Shell (id=58623) [Spell Family (15), Pass
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4866,6 +5146,7 @@ Name             : Glyph of Death and Decay (id=58629) [Spell Family (15), Passi
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4886,6 +5167,7 @@ Name             : Glyph of Icy Touch (id=58631) [Spell Family (15), Passive, Hi
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4930,6 +5212,7 @@ Name             : Glyph of Blood Tap (id=58640) [Spell Family (15), Passive, Hi
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4977,6 +5260,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 10%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4997,6 +5283,7 @@ Name             : Glyph of Pestilence (id=58657) [Spell Family (15), Passive, H
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5022,6 +5309,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Resource         : 0 Runic Power (6) (id=244364)
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5065,6 +5353,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5086,6 +5375,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5111,6 +5401,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5130,6 +5423,7 @@ Class            : Death Knight
 School           : Shadow
 Spell Type       : None
 Spell Level      : 55
+Proc Chance      : 101%
 Triggered by     : Glyph of Death's Embrace (58677)
 Attributes       : ........ ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ .x...x..   ........ ........ ........ ........ 
@@ -5150,6 +5444,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5170,6 +5465,7 @@ Name             : Glyph of Raise Dead (id=58686) [Spell Family (15), Passive, H
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5191,6 +5487,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5210,6 +5507,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5229,6 +5527,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5248,6 +5547,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5267,6 +5567,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5286,6 +5587,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5305,6 +5607,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5324,6 +5627,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5343,6 +5647,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5362,6 +5667,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5381,6 +5687,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5400,6 +5707,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5419,6 +5727,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5438,6 +5747,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5457,6 +5767,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5476,6 +5787,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5495,6 +5807,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5514,6 +5827,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5533,6 +5847,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5550,8 +5865,12 @@ Description      : Increases the bonus healing received while your Vampiric Bloo
 Name             : Freezing Fog (id=59052) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 15 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Triggered by     : Rime (49188), Rime (56822), Rime (59057)
 Family Flags     : 82
 Attributes       : ........ ........ x....... x..x....   ........ ..x..... ........ ........ 
@@ -5575,6 +5894,9 @@ Name             : Rime (desc=Rank 3) (id=59057) [Spell Family (15), Passive, Hi
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 45%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5593,6 +5915,7 @@ Name             : Glyph of Path of Frost (id=59307) [Spell Family (15), Passive
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5612,6 +5935,7 @@ Name             : Glyph of Resilient Grip (id=59309) [Spell Family (15), Passiv
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5633,6 +5957,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5652,6 +5977,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5671,6 +5997,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5689,6 +6016,9 @@ Name             : Glyph of Rune Tap (id=59327) [Spell Family (15), Passive, Hid
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5728,6 +6058,7 @@ Name             : Glyph of Blood Boil (id=59332) [Spell Family (15), Passive, H
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5749,6 +6080,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5792,6 +6124,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5812,6 +6145,7 @@ Race             : Draenei (0x400)
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5834,7 +6168,7 @@ Name             : Gift of the Naaru (desc=Racial) (id=59545) [Spell Family (15)
 Class            : Death Knight
 Race             : Draenei (0x400)
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 40 yards
 Duration         : 15 seconds
@@ -5862,9 +6196,10 @@ Tooltip          : Healing $/5;s2% every $t1 seconds.
 Name             : Rune Tap (id=59754) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 100 yards
+Proc Chance      : 101%
 Triggered by     : Glyph of Rune Tap (59327)
 Attributes       : ........ ........ x....... ........   ........ ..x..... ...x.... ........ 
                  : ........ ........ ........ .x...x..   ........ ........ ........ ........ 
@@ -5889,6 +6224,7 @@ Class            : Death Knight
 School           : Shadow
 Spell Type       : None
 Spell Level      : 1
+Mechanic         : Unknown(22)
 Affecting spells : Virulence (48962 effect#1), Blood Parasite (49027 effect#1), Epidemic (49036 effect#1), Blood Parasite (49542 effect#1), Epidemic (49562 effect#1), Virulence (49567 effect#1), Virulence (49568 effect#1), Ebon Plaguebringer (51099 effect#1), Ebon Plaguebringer (51160 effect#1), Dreadblade (77515 effect#1), Scarlet Fever (81131 effect#1), Scarlet Fever (81132 effect#1), Epidemic (81334 effect#1)
 Family Flags     : 43, 57
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
@@ -5909,6 +6245,7 @@ Name             : Frost Fever (desc=Passive) (id=59921) [Spell Family (15), Pas
 Class            : Death Knight
 School           : Frost
 Spell Type       : None
+Mechanic         : Unknown(22)
 Affecting spells : Virulence (48962 effect#1), Blood Parasite (49027 effect#1), Epidemic (49036 effect#1), Blood Parasite (49542 effect#1), Epidemic (49562 effect#1), Virulence (49567 effect#1), Virulence (49568 effect#1), Chilblains (50040 effect#1), Chilblains (50041 effect#1), Ebon Plaguebringer (51099 effect#1), Ebon Plaguebringer (51160 effect#1), Frost Vulnerability (51714 effect#1), Glyph of Icy Touch (58631 effect#1), Runic Focus (61455 effect#1), Dreadblade (77515 effect#1), Brittle Bones (81327 effect#1), Brittle Bones (81328 effect#1), Epidemic (81334 effect#1)
 Family Flags     : 43, 58
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
@@ -5933,6 +6270,7 @@ Name             : Glyph of Death Gate (id=60200) [Spell Family (15), Passive, H
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5952,6 +6290,7 @@ Name             : Silence Duration Reduction (id=60209) [Passive, Hidden]
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5974,6 +6313,7 @@ Spell Level      : 57
 Duration         : Aura (infinite)
 Cooldown         : 1 seconds
 Category Cooldown: 1 seconds
+Proc Chance      : 101%
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effect#2), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Improved Icy Talons (55610 effect#3)
 Family Flags     : 23
 Attributes       : ....x..x ........ x.x..... x..x.x.x   ........ ..x..... ........ ....x... 
@@ -5998,6 +6338,7 @@ Name             : Runic Focus (desc=Passive) (id=61455) [Spell Family (15), Pas
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6021,6 +6362,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 2 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6043,6 +6385,10 @@ Range            : 8 - 25 yards
 GCD              : 1.5 seconds
 Duration         : 4 seconds
 Cooldown         : 25 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ x.x..... .....x..   ........ ..x..... ........ ........ 
@@ -6068,6 +6414,7 @@ Name             : Death Knight Pet Scaling 03 (id=61697) [Passive, Hidden]
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ....x... .x......   ........ ........ ........ ........ 
@@ -6092,6 +6439,7 @@ Spell Type       : None
 Resource         : 0 Runic Power (6) (id=253391)
 Spell Level      : 55
 Duration         : 30 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00000040
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Cinderglacier (53386 effect#1)
 Triggered by     : Summon Gargoyle (49206)
@@ -6140,6 +6488,7 @@ Name             : DEFENSE (id=62157) [Passive, Hidden]
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6161,6 +6510,7 @@ School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
 Requires weapon  : Two-handed Axe, Two-handed Mace, Polearm, Two-handed Sword, Staff
+Proc Chance      : 101%
 Attributes       : .....x.x x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ .....x.. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6181,6 +6531,7 @@ Name             : Glyph of Death Grip (id=62259) [Spell Family (15), Passive, H
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6267,6 +6618,7 @@ Name             : Glyph of Dancing Rune Weapon (id=63330) [Spell Family (15), P
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6287,6 +6639,7 @@ Name             : Glyph of Hungering Cold (id=63331) [Spell Family (15), Passiv
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6307,6 +6660,7 @@ Name             : Glyph of Death Coil (id=63333) [Spell Family (15), Passive, H
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6331,6 +6685,9 @@ Name             : Glyph of Howling Blast (id=63335) [Spell Family (15), Passive
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ....x... x....... ........   ........ ........ ........ ........   
+                 : Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6350,7 +6707,7 @@ Description      : Your Howling Blast ability now infects your targets with Fros
 Name             : Dark Transformation (id=63560) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Unknown(22) (id=265335)
 Resource         : -10 Runic Power (6) (id=265336)
 Spell Level      : 26
@@ -6358,6 +6715,7 @@ Range            : 100 yards
 GCD              : 1.5 seconds
 Velocity         : 40 yards/sec
 Duration         : 30 seconds
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3)
 Family Flags     : 69
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6382,6 +6740,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6401,6 +6760,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6420,6 +6780,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6443,6 +6804,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6463,6 +6825,7 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 21 seconds
+Proc Chance      : 101%
 Affecting spells : Blood Parasite (49027 effect#1), Epidemic (49036 effect#1), Blood Parasite (49542 effect#1), Epidemic (49562 effect#1), Ebon Plaguebringer (51099 effect#1), Ebon Plaguebringer (51160 effect#1), Epidemic (81334 effect#1)
 Family Flags     : 43, 70
 Attributes       : ........ ........ ..x..... ........   ...x...x ........ ........ ........ 
@@ -6507,10 +6870,11 @@ Description      : When dual-wielding, your Death Strikes, Obliterates, Plague S
 Name             : Death Strike Off-Hand (id=66188) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Range            : 100 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Category         : 1196
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Improved Icy Talons (55610 effect#3), Improved Death Strike (62905 effects: #1, #2, #4), Improved Death Strike (62908 effects: #1, #2, #4), Improved Death Strike (81138 effects: #1, #2, #3), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 4
 Attributes       : ....x... ........ ..x..x.. ........   ........ ........ ........ ...x.... 
@@ -6555,6 +6919,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Requires weapon  : One-handed Axe, One-handed Mace, One-handed Sword, Fist Weapon, Dagger
+Proc Chance      : 100%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6574,11 +6939,12 @@ Description      : When dual-wielding, your Death Strikes, Obliterates, Plague S
 Name             : Frost Strike Off-Hand (id=66196) [Spell Family (15)] 
 Class            : Death Knight
 School           : Frost
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Runic Power (6) (id=248546)
 Range            : 100 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Killing Machine (51124 effect#1), Frost Vulnerability (51714 effect#1), Cinderglacier (53386 effect#1), Glyph of Frost Strike (58647 effect#1), Frozen Heart (77514 effect#1), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 34
 Attributes       : ....x... ........ ..x..x.. ........   ........ ........ ........ ...x.... 
@@ -6600,10 +6966,11 @@ Description      : Instantly strike the enemy, causing $s2% offhand weapon damag
 Name             : Obliterate Off-Hand (id=66198) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Range            : 100 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effects: #2, #3), Killing Machine (51124 effect#1), Annihilation (51468 effect#1), Annihilation (51472 effect#1), Annihilation (51473 effect#1), Glyph of Obliterate (58671 effect#1), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 49
 Attributes       : ....x... ........ ..x..x.. ........   ........ ........ ........ ...x.... 
@@ -6627,10 +6994,11 @@ Description      : A brutal instant attack that deals $m2% offhand weapon damage
 Name             : Blood Strike Off-Hand (id=66215) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Range            : 100 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Category         : 1207
 Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2, #4), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Increased Blood Strike Damage (52394 effect#1), Improved Icy Talons (55610 effect#3), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 22
 Attributes       : ....x... ........ ..x..x.. ........   ........ ........ ........ ...x.... 
@@ -6656,7 +7024,7 @@ Description      : Instantly strike the enemy, causing $m2% weapon damage plus a
 Name             : Plague Strike Off-Hand (id=66216) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Range            : 100 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
@@ -6681,10 +7049,12 @@ Description      : A vicious strike that deals $s2% offhand weapon damage plus a
 Name             : Rune Strike Off-Hand (id=66217) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Runic Power (6) (id=248830)
 Range            : 100 yards
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Category         : 65
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effect#3), Glyph of Rune Strike (58669 effect#1), Glyph of Rune Tap (59327 effect#1), Glyph of Death Strike (59336 effects: #1, #2), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3), Glyph of Dark Succor (96279 effect#1), Dark Succor (101568 effect#1)
 Family Flags     : 61
 Attributes       : ....x... ........ ..x..x.. ........   ........ ........ ........ ........ 
@@ -6711,6 +7081,8 @@ School           : Shadow
 Spell Type       : None
 Range            : 5 yards
 Duration         : 20 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(11)
 Affecting spells : Unholy Presence (48265 effects: #2, #3)
 Family Flags     : 51
 Attributes       : ........ ........ ..x..... ...x....   ........ ..x..... ........ ........ 
@@ -6800,6 +7172,7 @@ Name             : MINOR DEFENSE (id=70163) [Passive, Hidden]
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6821,6 +7194,7 @@ School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
 Requires weapon  : One-handed Axe, One-handed Mace, One-handed Sword, Dagger
+Proc Chance      : 101%
 Attributes       : .....x.x x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ .....x.. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6840,7 +7214,7 @@ Description      : Affixes your one-handed rune weapon with a rune that increase
 Name             : Necrotic Strike (id=73975) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Unknown(22) (id=276876)
 Resource         : -10 Runic Power (6) (id=305076)
 Spell Level      : 83
@@ -6848,6 +7222,7 @@ Range            : 5 yards
 GCD              : 1.5 seconds
 Duration         : 10 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Affecting spells : Unholy Presence (48265 effect#3), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 77
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ...x.... 
@@ -6909,7 +7284,7 @@ Effects          :
 #1 (id=68126)    : Apply Aura (6) | Modify Damage Done% (79)
                    Base Value: 0 | Scaled Value: 0 | SP Coefficient: 2.00000 | PvP Coefficient: 1.00000 | Misc Value: 0x10 | Target: Self (1)
                    Affected School(s): Frost
-                   Affected Spells: Icy Touch (45477), Chains of Ice (45524), Blood Tap (45529), Strangulate (47476), Acherus Deathcharger (48778), Unholy Frenzy (49016), Frost Strike (49143), Howling Blast (49184), Unholy Blight (49194), Death Grip (49560), Death Grip (49575), Death Grip (49576), Icy Touch (52372), Frost Strike Off-Hand (66196)
+                   Affected Spells: Icy Touch (45477), Chains of Ice (45524), Blood Tap (45529), Strangulate (47476), Unholy Frenzy (49016), Frost Strike (49143), Howling Blast (49184), Unholy Blight (49194), Death Grip (49560), Death Grip (49575), Death Grip (49576), Icy Touch (52372), Frost Strike Off-Hand (66196)
                    Family Flags: 1, 2, 3, 9, 25, 26, 29, 33, 34, 40
 #2 (id=90622)    : Apply Aura (6) | Dummy (4)
                    Base Value: 200 | Scaled Value: 200 | PvP Coefficient: 1.00000 | Target: Self (1)
@@ -6944,6 +7319,7 @@ School           : Shadow
 Spell Type       : None
 Spell Level      : 1
 Duration         : 10 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6963,7 +7339,7 @@ Tooltip          : Absorbs $w1 Physical damage.
 Name             : Outbreak (id=77575) [Spell Family (15)] 
 Class            : Death Knight
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 81
 Range            : 30 yards
 GCD              : 1.5 seconds
@@ -6994,6 +7370,10 @@ Spell Level      : 85
 Range            : 40 yards
 Duration         : 8 seconds
 Cooldown         : 60 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
+Proc Flags       : ........ ..x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Affecting spells : Unholy Presence (48265 effect#3)
 Family Flags     : 72
 Attributes       : ........ ........ ........ .....x..   ........ ........ ........ ........ 
@@ -7108,6 +7488,9 @@ Name             : Scarlet Fever (desc=Rank 2) (id=81132) [Spell Family (15), Pa
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7128,6 +7511,9 @@ Name             : Crimson Scourge (desc=Rank 1) (id=81135) [Spell Family (15), 
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 5%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7150,6 +7536,9 @@ Name             : Crimson Scourge (desc=Rank 2) (id=81136) [Spell Family (15), 
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7202,6 +7591,10 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
+Proc Flags       : ....x... ....x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell, Magic Hostile Spell
 Triggered by     : Crimson Scourge (81135), Crimson Scourge (81136)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7246,6 +7639,10 @@ Name             : Will of the Necropolis (desc=Rank 2) (id=81163) [Spell Family
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 45 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7264,6 +7661,10 @@ Name             : Will of the Necropolis (desc=Rank 3) (id=81164) [Spell Family
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 45 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7283,6 +7684,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 68
+Proc Chance      : 45%
+Proc Flags       : ....x... ....x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7300,7 +7704,7 @@ Description      : When you land a damaging Death Coil, Frost Strike, or Rune St
 Name             : Dancing Rune Weapon (id=81256) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 55
 Duration         : 12 seconds
 Affecting spells : Glyph of Dancing Rune Weapon (63330 effect#1)
@@ -7327,6 +7731,8 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Duration         : Aura (infinite)
+Stacks           : 99 maximum
+Proc Chance      : 101%
 Triggered by     : Blood Gorged (50453)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7468,6 +7874,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Requires weapon  : Two-handed Axe, Two-handed Mace, Polearm, Two-handed Sword
+Proc Chance      : 15%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7513,6 +7922,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Requires weapon  : Two-handed Axe, Two-handed Mace, Polearm, Two-handed Sword
+Proc Chance      : 30%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7538,6 +7950,9 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Requires weapon  : Two-handed Axe, Two-handed Mace, Polearm, Two-handed Sword
+Proc Chance      : 45%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7619,6 +8034,10 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
+Proc Flags       : ........ ..x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Triggered by     : Sudden Doom (49018), Sudden Doom (49529), Sudden Doom (49530)
 Family Flags     : 81
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
@@ -7643,6 +8062,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
+Mechanic         : Unknown(28)
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7659,7 +8079,7 @@ Effects          :
 Name             : Parry (desc=Passive) (id=82246) [Passive] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
@@ -7721,7 +8141,7 @@ Description      : Reduces the cooldown of your Strangulate ability by $/1000;s1
 Name             : Festering Strike (id=85948) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 1 Unknown(20) (id=287890)
 Resource         : 1 Unknown(21) (id=305081)
 Resource         : -20 Runic Power (6) (id=305082)
@@ -7752,7 +8172,7 @@ Description      : An instant attack that deals $m2% weapon damage plus $s1 and 
 Name             : Festering Strike Off-Hand (id=86061) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 74
 Range            : 5 yards
 GCD              : 1.5 seconds
@@ -7918,31 +8338,6 @@ Effects          :
                    Base Value: 5 | Scaled Value: 5 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Grants a $s1% increase to your primary attribute for wearing plate in all armor slots.
 
-Name             : Running Wild (desc=Racial) (id=87840) 
-Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Druid
-Race             : Worgen (0x200000)
-School           : Physical
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Attributes       : ....x... .......x x...x... ....x...   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ...x....   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Is Ability (4), Only Outdoors (15), Not Shapeshifted (16), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), Ignore Caster Modifiers (125), Force Display Castbar (155), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#1 (id=89943)    : Apply Aura (6) | Dummy (4)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000
-#3 (id=104313)   : Apply Aura (6) | Unknown(358)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Drop to all fours to run as fast as a wild animal.
-Tooltip          : $?j2g[Increases ground speed by $j2g%. ][]$?j2f[Increases flight speed by $j2f%. ][]$?j2s[Increases swim speed by $j2s%. ][]
-
 Name             : Hunter Pet Tenacity Marker (DND) (id=87891) [Passive, Hidden] 
 Class            : Hunter, Death Knight
 School           : Physical
@@ -7967,6 +8362,9 @@ Name             : Death Strike Enabler (id=89832) [Passive, Hidden]
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x.x.x.x .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Heal Taken, Generic Hostile Spell Taken, Magic Heal Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8012,7 +8410,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8)
 Effects          :
-#1 (id=94634)    : Apply Aura (6) | Increase Energy (35)
+#1 (id=94634)    : Apply Aura (6) | Modify Max Power (35) (runic_power)
                    Base Value: 300 | Scaled Value: 300 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 6 | Target: Self (1)
                    Affected Spells: Icebound Fortitude (48792)
                    Family Flags: 20
@@ -8096,6 +8494,8 @@ School           : Physical
 Spell Type       : None
 Range            : 100 yards
 Duration         : 30 seconds
+Stacks           : 5 maximum
+Proc Chance      : 101%
 Triggered by     : Shadow Infusion (48965), Shadow Infusion (49571), Shadow Infusion (49572)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8119,7 +8519,7 @@ Tooltip          : Damage dealt increased by $s1%.
 Name             : Claw (id=91776) 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 40 Energy (3) (id=293456)
 Spell Level      : 50
 Range            : 5 yards
@@ -8141,7 +8541,7 @@ Description      : Claw the enemy, dealing $s1% of normal melee damage.
 Name             : Sweeping Claws (id=91778) 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 40 Energy (3) (id=293458)
 Spell Level      : 50
 Range            : 5 yards
@@ -8164,7 +8564,7 @@ Description      : Rakes an enemy with deformed claws, dealing $91778s1% of norm
 Name             : Monstrous Blow (id=91797) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 30 Energy (3) (id=293478)
 Spell Level      : 50
 Range            : 5 yards
@@ -8192,7 +8592,7 @@ Tooltip          : Stunned.
 Name             : Gnaw (id=91800) [Spell Family (15)] 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 30 Energy (3) (id=293481)
 Spell Level      : 50
 Range            : 5 yards
@@ -8227,6 +8627,7 @@ Range            : 5 - 30 yards
 GCD              : 1 seconds
 Velocity         : 30 yards/sec
 Cooldown         : 30 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00000040
 Attributes       : ....x... ........ ........ .....x..   .....x.. ..x..... .x...... ........ 
                  : ........ ........ ...x.... ....x...   ........ ........ xx...... ........ 
@@ -8280,6 +8681,7 @@ Range            : 5 - 30 yards
 GCD              : 1 seconds
 Velocity         : 30 yards/sec
 Cooldown         : 30 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00000040
 Attributes       : ....x... ........ ........ .....x..   .....x.. ..x..... .x...... ........ 
                  : ........ ........ ...x.... ....x...   ........ ........ xx...... ........ 
@@ -8300,7 +8702,7 @@ Description      : Leap behind an enemy target.
 Name             : Putrid Bulwark (id=91837) 
 Class            : Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 10 Energy (3) (id=293517)
 Spell Level      : 50
 GCD              : 1 seconds
@@ -8355,6 +8757,9 @@ Name             : Vengeance (desc=Passive) (id=93099) [Spell Family (4), Passiv
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.x. ........ ........ x..x....   ........ ........ ........ ........ 
                  : ........ ........ ........ ....x...   ........ ........ xx...... ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8482,6 +8887,9 @@ Name             : Death's Advance (desc=Rank 1) (id=96269) [Spell Family (15), 
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
+Proc Flags       : ....x... x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8500,6 +8908,9 @@ Name             : Death's Advance (desc=Rank 2) (id=96270) [Spell Family (15), 
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8518,6 +8929,9 @@ Name             : Glyph of Dark Succor (id=96279) [Spell Family (15), Passive, 
 Class            : Death Knight
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8559,6 +8973,8 @@ Spell Type       : None
 Spell Level      : 58
 Range            : 100 yards
 Duration         : 1.5 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(7)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ......x. 
                  : x....... ........ ........ ........   ........ ........ ........ ........ 
@@ -8581,6 +8997,8 @@ Spell Type       : None
 Spell Level      : 58
 Range            : 100 yards
 Duration         : 3 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(7)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ......x. 
                  : x....... ........ ........ ........   ........ ........ ........ ........ 
@@ -8623,6 +9041,7 @@ Class            : Death Knight
 School           : Physical
 Spell Type       : None
 Duration         : 15 seconds
+Proc Chance      : 101%
 Triggered by     : Glyph of Dark Succor (96279)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8665,6 +9084,8 @@ School           : Shadow
 Spell Type       : None
 Range            : 5 yards
 Duration         : 20 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(11)
 Affecting spells : Unholy Presence (48265 effects: #2, #3)
 Triggered by     : Desecration (55666)
 Family Flags     : 51
@@ -8692,6 +9113,8 @@ School           : Shadow
 Spell Type       : None
 Range            : 5 yards
 Duration         : 20 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(11)
 Affecting spells : Unholy Presence (48265 effects: #2, #3)
 Triggered by     : Desecration (55667)
 Family Flags     : 51

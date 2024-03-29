@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
 Name             : Defensive Stance (id=71) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
@@ -7,7 +7,9 @@ Resource         : 0 Rage (1) (id=169180)
 Spell Level      : 10
 Duration         : Aura (infinite)
 Cooldown         : 1 seconds
+Category         : 47
 Category Cooldown: 1 seconds
+Proc Chance      : 101%
 Affecting spells : Stance Mastery (12678 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 23
 Attributes       : ....x... ........ x.x..... x..x.x..   ........ ..x..... ........ ....x... 
@@ -27,13 +29,14 @@ Description      : A defensive combat stance.  Decreases damage taken by $7376s1
 Name             : Heroic Strike (id=78) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 30 Rage (1) (id=169337)
 Spell Level      : 14 (max 80)
 Max Scaling Level: 80
 Range            : 5 yards
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 3 seconds
+Category         : 1265
 Category Cooldown: 3 seconds
 Affecting spells : Inner Rage (1134 effect#1), Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Warrior Tier 6 Trinket (40458 effect#1), Incite (50685 effect#1), Incite (50686 effect#1), Incite (50687 effect#1), Glyph of Heroic Throw (58357 effect#1), Deadly Calm (85730 effect#1), Incite (86627 effect#1)
 Family Flags     : 6
@@ -61,6 +64,7 @@ Resource         : 0 Rage (1) (id=169341)
 Spell Level      : 3
 Range            : 8 - 25 yards
 Cooldown         : 15 seconds
+Category         : 1219
 Category Cooldown: 15 seconds
 Stance Mask      : 0x00010000
 Affecting spells : Wrecking Crew (46867 effect#1), Wrecking Crew (56611 effect#1), Warbringer (57499 effects: #1, #2), Glyph of Long Charge (58097 effect#1), Glyph of Rapid Charge (58355 effect#1), Juggernaut (64976 effects: #1, #2, #3), Blitz (80976 effect#2), Blitz (80977 effect#2), Deadly Calm (85730 effect#1)
@@ -84,7 +88,7 @@ Description      : Charge an enemy, generate $/10;s2 Rage, and stun it $?s80977[
 Name             : Block (desc=Passive) (id=107) [Passive] 
 Class            : Warrior, Paladin, Shaman
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Requires armor   : Cosmetic, Shield 
 Attributes       : ....x.x. ........ ..x..... ........   ........ ........ ........ ........ 
@@ -104,13 +108,15 @@ Description      : Gives a chance to block enemy melee and ranged attacks.
 Name             : Taunt (desc=Defensive Stance) (id=355) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=169601)
 Spell Level      : 12
 Range            : 30 yards
 Duration         : 3 seconds
 Cooldown         : 8 seconds
+Category         : 82
 Category Cooldown: 8 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00020000
 Affecting spells : Deadly Calm (85730 effect#1)
 Family Flags     : 15
@@ -140,6 +146,7 @@ Spell Level      : 68
 GCD              : 1.5 seconds
 Duration         : 120 seconds
 Cooldown         : 60 seconds
+Category         : 1261
 Category Cooldown: 60 seconds
 Affecting spells : Booming Voice (12321 effect#1), Booming Voice (12835 effect#1), Rude Interruption (61216 effect#1), Rude Interruption (61221 effect#1), Glyph of Command (68164 effects: #1, #2), Single-Minded Fury (81099 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 39
@@ -163,7 +170,7 @@ Tooltip          : Stamina increased by $s1.
 Name             : Dual Wield (desc=Passive) (id=674) [Passive] 
 Class            : Warrior, Hunter, Rogue, Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -181,15 +188,18 @@ Description      : Allows one-hand and off-hand weapons to be equipped in the of
 Name             : Disarm (desc=Defensive Stance) (id=676) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 15 Rage (1) (id=169606)
 Spell Level      : 34
 Range            : 5 yards
 GCD              : 1.5 seconds
 Duration         : 10 seconds
 Cooldown         : 60 seconds
+Category         : 109
 Category Cooldown: 60 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00020000
+Mechanic         : Unknown(3)
 Affecting spells : Deadly Calm (85730 effect#1)
 Family Flags     : 9
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ...x.... 
@@ -215,13 +225,14 @@ Tooltip          : Disarmed!
 Name             : Rend (desc=Battle, Defensive Stance) (id=772) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 10 Rage (1) (id=169466)
 Spell Level      : 7
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Stance Mask      : 0x00030000
+Mechanic         : Unknown(15)
 Affecting spells : Battle Trance (12964 effect#1), Blood Frenzy (29836 effects: #1, #2), Blood Frenzy (29859 effects: #1, #2), Thunderstruck (80979 effects: #1, #3), Thunderstruck (80980 effects: #1, #3), Deadly Calm (85730 effect#1)
 Family Flags     : 5
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... .x...... ...x.... 
@@ -241,12 +252,13 @@ Description      : Wounds the target causing them to bleed for $94009o1 damage p
 Name             : Cleave (id=845) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 30 Rage (1) (id=169570)
 Spell Level      : 24
 Range            : 5 yards
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 3 seconds
+Category         : 1265
 Category Cooldown: 3 seconds
 Affecting spells : Inner Rage (1134 effect#1), Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Glyph of Cleaving (58366 effect#1), Thunderstruck (80979 effect#1), Thunderstruck (80980 effect#1), Deadly Calm (85730 effect#1), Meat Cleaver (85738 effect#1), Meat Cleaver (85739 effect#1), Vengeance (93098 effect#1), Vengeance (93099 effect#1)
 Family Flags     : 22
@@ -269,7 +281,7 @@ Description      : A sweeping attack that strikes the target and $?s58366[two ne
 Name             : Shield Wall (id=871) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=169620)
 Spell Level      : 48
 Duration         : 12 seconds
@@ -322,11 +334,12 @@ Tooltip          : Heroic Strike and Cleave cooldown reduced.
 Name             : Demoralizing Shout (id=1160) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 10 Rage (1) (id=170125)
 Spell Level      : 52
 GCD              : 1.5 seconds
 Duration         : 30 seconds
+Proc Chance      : 101%
 Affecting spells : Drums of War (12290 effect#1), Drums of War (12963 effect#1), Glyph of Demoralizing Shout (58099 effects: #1, #2), Rude Interruption (61216 effect#1), Rude Interruption (61221 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 17
 Attributes       : ....x... ........ x.x..... ........   ........ ........ ........ ........ 
@@ -348,12 +361,13 @@ Tooltip          : Reduces physical damage caused by $s1%.
 Name             : Challenging Shout (id=1161) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 5 Rage (1) (id=169876)
 Spell Level      : 46
 GCD              : 1.5 seconds
 Duration         : 6 seconds
 Cooldown         : 180 seconds
+Proc Chance      : 101%
 Affecting spells : Drums of War (12290 effect#1), Drums of War (12963 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 19
 Attributes       : ....x... ........ x.x..... ........   ........ ........ ........ ........ 
@@ -374,7 +388,7 @@ Tooltip          : Taunted.
 Name             : Slam (id=1464) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 15 Rage (1) (id=170384)
 Spell Level      : 44
 Range            : 5 yards
@@ -400,13 +414,15 @@ Description      : Slams the opponent, causing $50782m2% weapon damage plus $507
 Name             : Whirlwind (desc=Berserker Stance) (id=1680) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 25 Rage (1) (id=170099)
 Spell Level      : 36 (max 80)
 Max Scaling Level: 80
+Max Targets      : 255
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 10 seconds
+Category         : 891
 Category Cooldown: 10 seconds
 Stance Mask      : 0x00040000
 Affecting spells : Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Deadly Calm (85730 effect#1), Meat Cleaver (85738 effect#1), Meat Cleaver (85739 effect#1), Vengeance (93098 effect#1), Vengeance (93099 effect#1)
@@ -432,7 +448,7 @@ Description      : In a whirlwind of steel you attack all enemies within $a1 yar
 Name             : Hamstring (desc=Battle, Berserker Stance) (id=1715) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 10 Rage (1) (id=170526)
 Spell Level      : 26
 Range            : 5 yards
@@ -460,12 +476,14 @@ Tooltip          : Movement slowed by $s1%.
 Name             : Recklessness (id=1719) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=176312)
 Spell Level      : 64
 Duration         : 12 seconds
 Cooldown         : 300 seconds
+Category         : 1330
 Category Cooldown: 12 seconds
+Proc Chance      : 101%
 Affecting spells : Second Wind (29834 effect#1), Second Wind (29838 effect#1), Second Wind (29841 effect#1), Second Wind (29842 effect#1), Intensify Rage (46908 effect#1), Intensify Rage (46909 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 4
 Attributes       : ....x... ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -494,12 +512,14 @@ All damage taken increased by $s2%.
 Name             : Battle Stance (id=2457) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=171047)
 Spell Level      : 1
 Duration         : Aura (infinite)
 Cooldown         : 1 seconds
+Category         : 47
 Category Cooldown: 1 seconds
+Proc Chance      : 101%
 Affecting spells : Stance Mastery (12678 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 23, 55
 Attributes       : ....x... ........ x.x..... x..x.x..   ........ ..x..... ........ ....x..x 
@@ -519,12 +539,14 @@ Description      : A balanced combat stance.  Increases damage done by $21156s1%
 Name             : Berserker Stance (id=2458) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=171898)
 Spell Level      : 30
 Duration         : Aura (infinite)
 Cooldown         : 1 seconds
+Category         : 47
 Category Cooldown: 1 seconds
+Proc Chance      : 101%
 Affecting spells : Stance Mastery (12678 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 23
 Attributes       : ....x... ........ x.x..... x..x.x..   ........ ..x..... ........ ....x... 
@@ -578,12 +600,13 @@ Critical block chance increased by $w3%.
 Name             : Shoot (id=3018) 
 Class            : Warrior, Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Spell Level      : 1
 Range            : 30 yards
 Cast Time        : 1.5 seconds
 Velocity         : 40 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
+Category         : 76
 Attributes       : .x..x... ........ ......x. ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ .......x ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -600,7 +623,7 @@ Effects          :
 Name             : Parry (desc=Passive) (id=3127) [Passive] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
@@ -626,7 +649,11 @@ Spell Level      : 72
 Range            : 25 yards
 Duration         : 10 seconds
 Cooldown         : 30 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
 Stance Mask      : 0x00020000
+Proc Flags       : ...x.x.x .x...... ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken
 Affecting spells : Warbringer (57499 effect#2), Glyph of Intervene (58377 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 48
 Attributes       : ....x... ........ ........ .....x..   ........ ..x..... ...x.... ........ 
@@ -649,13 +676,18 @@ Tooltip          : The next melee or ranged attack made against you will be made
 Name             : Intimidating Shout (id=5246) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 25 Rage (1) (id=173924)
 Spell Level      : 42
 Range            : 8 yards
+Max Targets      : 5
 GCD              : 1.5 seconds
 Duration         : 8 seconds
 Cooldown         : 120 seconds
+Proc Chance      : 100%
+Mechanic         : Unknown(5)
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Drums of War (12290 effect#1), Drums of War (12963 effect#1), Glyph of Intimidating Shout (63327 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 18
 Attributes       : ....x... ........ x.x..... ........   ...x...x ........ ........ ........ 
@@ -679,6 +711,9 @@ Name             : Defensive State (DND) (id=5301) [Passive, Hidden]
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...... ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -697,7 +732,7 @@ Effects          :
 Name             : Execute (desc=Battle, Berserker Stance) (id=5308) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 10 Rage (1) (id=172234)
 Spell Level      : 16 (max 80)
 Max Scaling Level: 80
@@ -726,7 +761,7 @@ Description      : Attempt to finish off a wounded foe, causing ${10+$AP*0.437*$
 Name             : Thunder Clap (desc=Battle, Defensive Stance) (id=6343) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 20 Rage (1) (id=174609)
 Spell Level      : 9
 GCD              : 1.5 seconds
@@ -755,7 +790,7 @@ Tooltip          : Time between attacks increased by $s2%.
 Name             : Heroic Leap (id=6544) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=174422)
 Spell Level      : 85
 Range            : 8 - 40 yards
@@ -785,12 +820,13 @@ Description      : Leap through the air towards a targeted location, slamming do
 Name             : Pummel (id=6552) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 10 Rage (1) (id=174413)
 Spell Level      : 38
 Range            : 5 yards
 Duration         : 4 seconds
 Cooldown         : 10 seconds
+Category         : 88
 Category Cooldown: 10 seconds
 Affecting spells : Drums of War (12290 effect#1), Drums of War (12963 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 3
@@ -832,13 +868,14 @@ Description      : Increases your chance to hit with all spells and attacks by $
 Name             : Revenge (desc=Defensive Stance) (id=6572) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 5 Rage (1) (id=174244)
 Spell Level      : 40
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 5 seconds
+Category         : 65
 Category Cooldown: 5 seconds
 Stance Mask      : 0x00020000
 Affecting spells : Recklessness (1719 effect#1), Improved Revenge (12797 effects: #1, #2, #3), Improved Revenge (12799 effects: #1, #2), Safeguard (46945 effect#1), Safeguard (46949 effect#1), Glyph of Revenge (58364 effect#1), Deadly Calm (85730 effect#1)
@@ -860,12 +897,13 @@ Description      : Instantly counterattack an enemy for $s1 damage. Revenge is o
 Name             : Battle Shout (id=6673) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Rage (1) (id=174537)
 Spell Level      : 20
 GCD              : 1.5 seconds
 Duration         : 120 seconds
 Cooldown         : 60 seconds
+Category         : 1261
 Category Cooldown: 60 seconds
 Affecting spells : Booming Voice (12321 effect#1), Booming Voice (12835 effect#1), Improved Battle Shout (37536 effect#1), Glyph of Battle (58095 effects: #1, #2), Solarian's Grace (58157 effect#1), Mortal Strike (58389 effect#1), Raging Blow (58390 effect#1), Victory Rush (58391 effect#1), Resonating Power (58392 effect#1), Sunder Armor (58395 effect#1), Shield Slam (58397 effect#1), Revenge (58398 effect#1), Slam (58399 effect#1), Overpower (58400 effect#1), Intervene (58402 effect#1), Heroic Throw (58403 effect#1), Piercing Howl (58404 effect#1), Bloodthirst (58405 effect#1), Devastate (58406 effect#1), Cleaving (58407 effect#1), Bloody Healing (58408 effect#1), Rapid Charge (58409 effect#1), Rude Interruption (61216 effect#1), Rude Interruption (61221 effect#1), Single-Minded Fury (81099 effect#1), Deadly Calm (85730 effect#1), Colossus Smash (89814 effect#1), Intercept (94373 effect#1), Death Wish (94375 effect#1)
 Family Flags     : 16
@@ -937,7 +975,7 @@ Description      : An aggressive combat stance.  Increases damage done by $7381s
 Name             : Overpower (desc=Battle Stance) (id=7384) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 5 Rage (1) (id=174281)
 Spell Level      : 22 (max 80)
 Max Scaling Level: 80
@@ -967,12 +1005,14 @@ Description      : Instantly overpower the enemy, causing $m1% weapon damage.  O
 Name             : Sunder Armor (id=7386) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 15 Rage (1) (id=170161)
 Spell Level      : 18
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Affecting spells : Battle Trance (12964 effect#1), Glyph of Rapid Charge (58355 effect#2), Glyph of Resonating Power (58356 effect#2), Glyph of Revenge (58364 effect#2), Glyph of Cleaving (58366 effect#2), Glyph of Bloodthirst (58367 effect#2), Glyph of Raging Blow (58370 effect#2), Glyph of Intervene (58377 effect#2), Glyph of Victory Rush (58382 effect#2), Glyph of Sweeping Strikes (58384 effect#2), Glyph of Slam (58385 effect#2), Glyph of Overpower (58386 effect#2), Glyph of Sunder Armor (58387 effects: #1, #2), Glyph of Devastate (58388 effect#2), Glyph of Furious Sundering (63326 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 14
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ...x.... 
@@ -993,12 +1033,14 @@ Tooltip          : Armor decreased by $s1%.
 Name             : Charge Stun (id=7922) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Rage (1) (id=174811)
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 1.5 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00010000
+Mechanic         : Unknown(12)
 Affecting spells : Glyph of Long Charge (58097 effect#1), Blitz (80976 effect#1), Blitz (80977 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 24
 Attributes       : ....x... ........ x.x..... ........   ...x...x .x...... ........ ........ 
@@ -1022,6 +1064,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Range            : 50000 yards
+Mechanic         : Unknown(15)
 Triggered by     : Deep Wounds (12834)
 Attributes       : ....x..x x....... ..x..... ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -1042,6 +1085,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 60 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1089,6 +1136,7 @@ Resource         : 10 Rage (1) (id=178310)
 Spell Level      : 29
 Duration         : 30 seconds
 Cooldown         : 180 seconds
+Mechanic         : Unknown(31)
 Affecting spells : Intensify Rage (46908 effect#1), Intensify Rage (46909 effect#1), Unshackled Fury (76856 effects: #1, #2), Deadly Calm (85730 effect#1), Glyph of Death Wish (94374 effect#1)
 Family Flags     : 20, 58
 Attributes       : ....x... ........ ..x..... ...x....   ........ ..x....x x....... ........ 
@@ -1114,7 +1162,7 @@ Increases all damage taken by $w3%.][]
 Name             : Mortal Strike (id=12294) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 20 Rage (1) (id=178093)
 Spell Level      : 10 (max 80)
 Max Scaling Level: 80
@@ -1123,6 +1171,7 @@ GCD              : 1.5 seconds
 Duration         : 10 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 4.5 seconds
+Category         : 971
 Category Cooldown: 4.5 seconds
 Affecting spells : Recklessness (1719 effect#1), Cruelty (12320 effect#1), Cruelty (12852 effect#1), Battle Trance (12964 effect#1), Impale (16493 effect#1), Impale (16494 effect#1), Taste for Blood (56636 effect#1), Taste for Blood (56637 effect#1), Taste for Blood (56638 effect#1), Glyph of Mortal Strike (58368 effect#1), Juggernaut (65156 effect#1), War Academy (84570 effect#1), War Academy (84571 effect#1), War Academy (84572 effect#1), Slaughter (84584 effect#1), Slaughter (84585 effect#1), Slaughter (84586 effect#1), Deadly Calm (85730 effect#1), Rude Interruption (86662 effect#1), Rude Interruption (86663 effect#1)
 Family Flags     : 25
@@ -1193,6 +1242,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 1.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...... ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1231,6 +1284,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 50%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1254,6 +1310,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 3%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1273,6 +1332,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1338,6 +1400,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 5 seconds
+Proc Chance      : 5%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1355,11 +1421,12 @@ Description      : Your Bloodthirst, Mortal Strike and Shield Slam hits have a $
 Name             : Piercing Howl (id=12323) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 10 Rage (1) (id=178257)
 Spell Level      : 19
 GCD              : 1.5 seconds
 Duration         : 6 seconds
+Mechanic         : Unknown(11)
 Affecting spells : Battle Trance (12964 effect#1), Glyph of Piercing Howl (58372 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 37
 Attributes       : ....x... ........ x.x..... ........   ........ ........ ........ ........ 
@@ -1385,7 +1452,10 @@ Resource         : 30 Rage (1) (id=178801)
 Spell Level      : 1
 Duration         : 10 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 100%
 Stance Mask      : 0x00050000
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Glyph of Sweeping Strikes (58384 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 52
 Attributes       : ....x... ........ ..x..... ........   ........ ..x..... ........ ........ 
@@ -1408,6 +1478,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.1 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1452,6 +1526,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 30 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1555,6 +1633,7 @@ School           : Physical
 Spell Type       : None
 Range            : 100 yards
 Duration         : 6 seconds
+Mechanic         : Unknown(11)
 Attributes       : ........ ........ ........ ........   ........ ........ ..x..... ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1597,6 +1676,8 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 6 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(15)
 Affecting spells : Blood Frenzy (29836 effects: #1, #2), Blood Frenzy (29859 effects: #1, #2), Deadly Calm (85730 effect#1)
 Family Flags     : 36
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
@@ -1640,6 +1721,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 1.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...... ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1659,6 +1744,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 1.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...... ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1716,6 +1805,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 25%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1745,6 +1837,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 50%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1768,7 +1863,7 @@ Description      : Increases the damage of your Revenge ability by $s2% and caus
 Name             : Concussion Blow (id=12809) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 15 Rage (1) (id=178805)
 Spell Level      : 29
 Range            : 5 yards
@@ -1776,6 +1871,7 @@ GCD              : 1.5 seconds
 Duration         : 5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 30 seconds
+Proc Chance      : 101%
 Affecting spells : Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 26
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ...x.... 
@@ -1803,6 +1899,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x...x... x....... ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   .x...... ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1848,6 +1947,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x...x... x....... ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   .x...... ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1868,6 +1970,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Range            : 50000 yards
+Mechanic         : Unknown(15)
 Triggered by     : Deep Wounds (12849)
 Attributes       : ....x..x x....... ..x..... ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -1910,6 +2013,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x...x... x....... ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   .x...... ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1930,6 +2036,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Range            : 50000 yards
+Mechanic         : Unknown(15)
 Triggered by     : Deep Wounds (12867)
 Attributes       : ....x..x x....... ..x..... ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -1951,6 +2058,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 9 seconds
+Category         : 21
+Mechanic         : Unknown(31)
 Affecting spells : Unshackled Fury (76856 effects: #1, #2), Deadly Calm (85730 effect#1)
 Triggered by     : Enrage (12317)
 Family Flags     : 58
@@ -1975,6 +2084,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.1 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1994,6 +2107,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2039,6 +2155,10 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 15 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell, Magic Hostile Spell
 Triggered by     : Battle Trance (12322), Battle Trance (85741), Battle Trance (85742)
 Attributes       : ....x... ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2063,6 +2183,10 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 15 seconds
+Stacks           : 3 initial, 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Triggered by     : Flurry (12319)
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2085,6 +2209,10 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 15 seconds
+Stacks           : 3 initial, 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Triggered by     : Flurry (12971)
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2107,6 +2235,10 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 15 seconds
+Stacks           : 3 initial, 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Triggered by     : Flurry (12972)
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2128,6 +2260,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2147,6 +2282,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2167,6 +2305,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 20
 Cooldown         : 180 seconds
+Category         : 1251
 Category Cooldown: 180 seconds
 Affecting spells : Deadly Calm (85730 effect#1)
 Family Flags     : 51
@@ -2212,6 +2351,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 6%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2231,6 +2373,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 9%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2251,6 +2396,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 9 seconds
+Category         : 21
+Mechanic         : Unknown(31)
 Affecting spells : Unshackled Fury (76856 effects: #1, #2), Deadly Calm (85730 effect#1)
 Triggered by     : Enrage (13045)
 Family Flags     : 58
@@ -2276,6 +2423,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 9 seconds
+Category         : 21
+Mechanic         : Unknown(31)
 Affecting spells : Unshackled Fury (76856 effects: #1, #2), Deadly Calm (85730 effect#1)
 Triggered by     : Enrage (13046)
 Family Flags     : 58
@@ -2299,6 +2448,9 @@ Name             : Blood Craze (desc=Rank 1) (id=16487) [Passive, Hidden]
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2340,6 +2492,9 @@ Name             : Blood Craze (desc=Rank 2) (id=16489) [Passive, Hidden]
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2404,6 +2559,9 @@ Name             : Blood Craze (desc=Rank 3) (id=16492) [Passive, Hidden]
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2465,6 +2623,7 @@ Spell Type       : None
 Resource         : 0 Energy (3) (id=183453)
 Range            : 50000 yards
 Duration         : 3 seconds
+Mechanic         : Unknown(9)
 Triggered by     : Gag Order (12311), Gag Order (12958)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ......x. 
@@ -2489,6 +2648,10 @@ Resource         : 0 Rage (1) (id=183454)
 Spell Level      : 54
 Duration         : 10 seconds
 Cooldown         : 30 seconds
+Proc Chance      : 100%
+Mechanic         : Unknown(31)
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Intensify Rage (46908 effect#1), Intensify Rage (46909 effect#1), Unshackled Fury (76856 effects: #1, #2), Deadly Calm (85730 effect#1)
 Family Flags     : 28, 58
 Attributes       : ....x... ........ x.x..... ........   ........ ..x....x ........ ........ 
@@ -2513,12 +2676,16 @@ Tooltip          : Immune to Fear, Sap and Incapacitate effects.  Generating ext
 Name             : Retaliation (id=20230) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=185944)
 Spell Level      : 62
 GCD              : 1.5 seconds
 Duration         : 12 seconds
 Cooldown         : 300 seconds
+Stacks           : 20 initial, 20 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Affecting spells : Second Wind (29834 effect#1), Second Wind (29838 effect#1), Second Wind (29841 effect#1), Second Wind (29842 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 35
 Attributes       : ....x... ........ x.x..... ........   ........ ..x..... .x...... ........ 
@@ -2539,13 +2706,15 @@ Tooltip          : Counterattacking all melee attacks.
 Name             : Devastate (id=20243) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 15 Rage (1) (id=185252)
 Spell Level      : 39 (max 80)
 Max Scaling Level: 80
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires armor   : Shield 
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Affecting spells : Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Sword and Board (46951 effect#2), Sword and Board (46952 effect#2), Sword and Board (46953 effect#2), Glyph of Devastate (58388 effect#1), War Academy (84570 effect#1), War Academy (84571 effect#1), War Academy (84572 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 38
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ...x.... 
@@ -2574,6 +2743,7 @@ Resource         : 10 Rage (1) (id=185091)
 Spell Level      : 50
 Range            : 8 - 25 yards
 Cooldown         : 30 seconds
+Category         : 1158
 Category Cooldown: 30 seconds
 Stance Mask      : 0x00040000
 Affecting spells : Skirmisher (29888 effect#1), Skirmisher (29889 effect#1), Wrecking Crew (46867 effect#1), Wrecking Crew (56611 effect#1), Warbringer (57499 effect#2), Deadly Calm (85730 effect#1)
@@ -2597,11 +2767,12 @@ Description      : Charge an enemy, causing ${$AP*0.12} damage (based on attack 
 Name             : Intercept (desc=Rank 1) (id=20253) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Rage (1) (id=184677)
 Spell Level      : 1
 Range            : 8 - 25 yards
 Duration         : 1.5 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00040000
 Affecting spells : Glyph of Intercept (94372 effect#1)
 Triggered by     : Intercept (20252)
@@ -2627,6 +2798,9 @@ Name             : Executioner (desc=Rank 1) (id=20502) [Spell Family (4), Passi
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2647,6 +2821,9 @@ Name             : Executioner (desc=Rank 2) (id=20503) [Spell Family (4), Passi
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2671,6 +2848,7 @@ Resource         : 0 Rage (1) (id=184584)
 Spell Level      : 20
 Range            : 15 yards
 Duration         : 8 seconds
+Mechanic         : Unknown(5)
 Affecting spells : Drums of War (12290 effect#1), Drums of War (12963 effect#1), Glyph of Intimidating Shout (63327 effect#1), Deadly Calm (85730 effect#1)
 Triggered by     : Intimidating Shout (5246)
 Family Flags     : 18
@@ -2783,6 +2961,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Triggered by     : Shield Specialization (12298)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2824,6 +3005,7 @@ School           : Physical
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 5 seconds
+Mechanic         : Unknown(7)
 Triggered by     : Improved Hamstring (12289), Improved Hamstring (12668)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -2866,7 +3048,7 @@ Effects          :
 Name             : Bloodthirst (id=23881) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 20 Rage (1) (id=187336)
 Spell Level      : 10 (max 80)
 Max Scaling Level: 80
@@ -2874,6 +3056,7 @@ Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 3 seconds
+Category         : 971
 Category Cooldown: 3 seconds
 Affecting spells : Recklessness (1719 effect#1), Cruelty (12320 effect#1), Cruelty (12852 effect#1), Battle Trance (12964 effect#1), Glyph of Bloodthirst (58367 effect#1), Glyph of Bloody Healing (58369 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 42
@@ -2900,6 +3083,10 @@ Spell Type       : None
 Resource         : 0 Rage (1) (id=187745)
 Spell Level      : 10
 Duration         : 8 seconds
+Stacks           : 3 initial, 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x... ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -2924,7 +3111,11 @@ Spell Level      : 66
 Duration         : 5 seconds
 Requires armor   : Shield 
 Cooldown         : 25 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
 Stance Mask      : 0x00030000
+Proc Flags       : .....x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Glyph of Spell Reflection (63328 effect#1), Deadly Calm (85730 effect#1), Glyph of Colossus Smash (89003 effect#1)
 Family Flags     : 33
 Attributes       : ....x... ........ x.x..... ...x....   ........ ..x..... ........ ........ 
@@ -2945,13 +3136,14 @@ Tooltip          : Reflects the next spell cast on you.
 Name             : Shield Slam (id=23922) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 20 Rage (1) (id=188170)
 Spell Level      : 10
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires armor   : Shield 
 Cooldown         : 6 seconds
+Category         : 971
 Category Cooldown: 6 seconds
 Affecting spells : Recklessness (1719 effect#1), Shield Block (2565 effect#2), Tactical Mastery (12295 effect#1), Cruelty (12320 effect#1), Tactical Mastery (12676 effect#1), Cruelty (12852 effect#1), Battle Trance (12964 effect#1), Sword and Board (50227 effect#1), Glyph of Shield Slam (58375 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 41
@@ -2974,7 +3166,7 @@ Description      : Slam the target with your shield, causing $s2 damage (based o
 Name             : Sweeping Strikes (id=26654) 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 1
 Range            : 100 yards
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
@@ -2996,7 +3188,7 @@ Name             : Gift of the Naaru (desc=Racial) (id=28880) [Spell Family (4)]
 Class            : Warrior
 Race             : Draenei (0x400)
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 40 yards
 Duration         : 15 seconds
@@ -3025,6 +3217,9 @@ Name             : Sentinel (desc=Passive) (id=29144) [Passive]
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3047,6 +3242,7 @@ Name             : Precision (desc=Passive) (id=29592) [Passive]
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3069,7 +3265,10 @@ Name             : Bastion of Defense (desc=Rank 1) (id=29593) [Passive, Hidden]
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
 Stance Mask      : 0x00020000
+Proc Flags       : ...x.x.x .x.x.x.x .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Heal Taken, Generic Hostile Spell Taken, Magic Heal Taken, Magic Hostile Spell Taken
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3090,7 +3289,10 @@ Name             : Bastion of Defense (desc=Rank 2) (id=29594) [Passive, Hidden]
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 20%
 Stance Mask      : 0x00020000
+Proc Flags       : ...x.x.x .x.x.x.x .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Heal Taken, Generic Hostile Spell Taken, Magic Heal Taken, Magic Hostile Spell Taken
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3112,6 +3314,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Heal, Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3139,6 +3344,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 3%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3162,6 +3370,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 6%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3208,6 +3419,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x.x.x.x .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Heal Taken, Generic Hostile Spell Taken, Magic Heal Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3229,6 +3443,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 5%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3256,6 +3473,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x.x.x.x .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Heal Taken, Generic Hostile Spell Taken, Magic Heal Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3331,6 +3551,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 10%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3457,6 +3680,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 5
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -3501,6 +3727,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 3 seconds
+Mechanic         : Unknown(26)
 Attributes       : ........ ........ .......x ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3518,7 +3745,7 @@ Tooltip          : Interrupted.
 Name             : Victory Rush (id=34428) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=222055)
 Spell Level      : 5
 Range            : 5 yards
@@ -3546,6 +3773,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3564,6 +3792,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3580,10 +3809,11 @@ Effects          :
 Name             : Whirlwind Off-Hand (id=44949) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=230810)
 Spell Level      : 36 (max 80)
 Max Scaling Level: 80
+Max Targets      : 255
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, One-handed Sword, Two-handed Sword, Fist Weapon, Dagger
 Affecting spells : Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Deadly Calm (85730 effect#1), Meat Cleaver (85738 effect#1), Meat Cleaver (85739 effect#1), Vengeance (93098 effect#1), Vengeance (93099 effect#1)
 Triggered by     : Whirlwind (1680)
@@ -3608,6 +3838,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3626,6 +3857,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3646,6 +3878,7 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 100 yards
 Duration         : 60 seconds
+Proc Chance      : 101%
 Triggered by     : Blood Frenzy (29836)
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ .x...... ......x. 
@@ -3669,6 +3902,7 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 100 yards
 Duration         : 60 seconds
+Proc Chance      : 101%
 Triggered by     : Blood Frenzy (29859)
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ .x...... ......x. 
@@ -3690,6 +3924,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 50%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3710,6 +3947,7 @@ Name             : Intensify Rage (desc=Rank 1) (id=46908) [Spell Family (4), Pa
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3730,6 +3968,7 @@ Name             : Intensify Rage (desc=Rank 2) (id=46909) [Spell Family (4), Pa
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3750,6 +3989,9 @@ Name             : Furious Attacks (desc=Rank 1) (id=46910) [Passive, Hidden]
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Attributes       : ......xx x....... ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3768,6 +4010,9 @@ Name             : Bloodsurge (desc=Rank 1) (id=46913) [Spell Family (4), Passiv
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3786,6 +4031,9 @@ Name             : Bloodsurge (desc=Rank 2) (id=46914) [Spell Family (4), Passiv
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 20%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3804,6 +4052,9 @@ Name             : Bloodsurge (desc=Rank 3) (id=46915) [Spell Family (4), Passiv
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 30%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3823,6 +4074,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Affecting spells : Deadly Calm (85730 effect#1)
 Triggered by     : Bloodsurge (46913), Bloodsurge (46914), Bloodsurge (46915)
 Family Flags     : 56
@@ -3852,6 +4107,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, One-handed Sword, Two-handed Sword, Fist Weapon, Dagger, Main Hand, Off Hand
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3871,7 +4127,7 @@ Description      : Allows you to equip two-handed axes, maces and swords in one 
 Name             : Bladestorm (id=46924) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 25 Rage (1) (id=255846)
 Spell Level      : 1
 GCD              : 1.5 seconds
@@ -3904,6 +4160,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ..x..... ........ ........   ........ ........ ........ ........   
+                 : Generic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -3926,6 +4185,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 6 seconds
+Proc Chance      : 101%
 Triggered by     : Safeguard (46945)
 Family Flags     : 69
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
@@ -3950,6 +4210,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 6 seconds
+Proc Chance      : 101%
 Triggered by     : Safeguard (46949)
 Family Flags     : 69
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
@@ -3973,6 +4234,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ..x..... ........ ........   ........ ........ ........ ........   
+                 : Generic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -3994,6 +4258,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 10%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4017,6 +4284,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 20%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4040,6 +4310,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 30%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4061,13 +4334,15 @@ Description      : Increases the critical strike chance of Devastate by $s2%.  I
 Name             : Shockwave (id=46968) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 15 Rage (1) (id=235189)
 Spell Level      : 60
 GCD              : 1.5 seconds
 Duration         : 4 seconds
 Cooldown         : 20 seconds
+Category         : 1201
 Category Cooldown: 20 seconds
+Proc Chance      : 101%
 Affecting spells : Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Glyph of Shockwave (63325 effect#1), Deadly Calm (85730 effect#1), Thunderstruck (87095 effect#1), Thunderstruck (87096 effect#1)
 Family Flags     : 47
 Attributes       : ....x... ........ x.x..... ........   ........ ........ ........ ........ 
@@ -4094,6 +4369,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4114,6 +4390,10 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 5 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Triggered by     : Sword and Board (46951), Sword and Board (46952), Sword and Board (46953)
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4137,6 +4417,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Requires armor   : Shield Off-hand Weapon
+Proc Chance      : 101%
 Triggered by     : Titan's Grip (46917)
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4155,9 +4436,10 @@ Description      : Secondary component for allowing sheilds to be carried while 
 Name             : Whirlwind (id=50622) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=237476)
 Spell Level      : 36
+Max Targets      : 255
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Affecting spells : Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Deadly Calm (85730 effect#1), Meat Cleaver (85738 effect#1), Meat Cleaver (85739 effect#1), Vengeance (93098 effect#1), Vengeance (93099 effect#1)
 Triggered by     : Bladestorm (46924)
@@ -4185,6 +4467,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 33%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4208,6 +4493,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 66%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4231,6 +4519,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4257,6 +4548,9 @@ Spell Level      : 40
 Range            : 30 yards
 GCD              : 1.5 seconds
 Duration         : 1800 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x... ........ x.x..... ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   .....x.. ........ ........ ........ 
@@ -4301,7 +4595,7 @@ Description      : Focus your protective gaze on a group or raid target.  Each t
 Name             : Slam (id=50782) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 15 Rage (1) (id=238463)
 Spell Level      : 44 (max 80)
 Max Scaling Level: 80
@@ -4309,6 +4603,7 @@ Range            : 5 yards
 Cast Time        : 1.5 seconds
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Affecting spells : Recklessness (1719 effect#1), Improved Slam (12330 effects: #1, #2), Battle Trance (12964 effect#1), Impale (16493 effect#1), Impale (16494 effect#1), Bloodsurge (46916 effects: #1, #2), Glyph of Slam (58385 effect#1), Juggernaut (65156 effect#1), War Academy (84570 effect#1), War Academy (84571 effect#1), War Academy (84572 effect#1), Slaughter (84584 effect#1), Slaughter (84585 effect#1), Slaughter (84586 effect#1), Deadly Calm (85730 effect#1), Improved Slam (86655 effects: #1, #2)
 Family Flags     : 21
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ...x.... 
@@ -4330,10 +4625,11 @@ Description      : Slams the opponent, causing $m2% weapon damage plus an additi
 Name             : Heroic Leap (id=52174) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=256547)
 Spell Level      : 85
 Range            : 50000 yards
+Proc Chance      : 101%
 Affecting spells : Recklessness (1719 effect#1), Skirmisher (29888 effect#2), Skirmisher (29889 effect#2), Deadly Calm (85730 effect#1)
 Triggered by     : Heroic Leap (6544)
 Family Flags     : 61
@@ -4356,6 +4652,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Duration         : 2 seconds
+Proc Chance      : 101%
 Affecting spells : Deadly Calm (85730 effect#1), Rude Interruption (86662 effect#1), Rude Interruption (86663 effect#1)
 Triggered by     : Sudden Death (29723), Sudden Death (29725)
 Family Flags     : 57
@@ -4410,6 +4707,8 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
+Stacks           : 1 maximum
+Proc Chance      : 101%
 Triggered by     : Furious Attacks (46910)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ .x...... ........ 
@@ -4431,6 +4730,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4449,6 +4749,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4467,6 +4768,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4488,6 +4792,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 5 seconds
+Proc Chance      : 33%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4513,6 +4821,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 5 seconds
+Proc Chance      : 66%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4538,6 +4850,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 5 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4590,6 +4906,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 12 seconds
+Category         : 21
+Proc Chance      : 101%
+Mechanic         : Unknown(31)
 Affecting spells : Unshackled Fury (76856 effects: #1, #2), Deadly Calm (85730 effect#1)
 Triggered by     : Bastion of Defense (29593)
 Family Flags     : 58
@@ -4615,6 +4934,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 12 seconds
+Category         : 21
+Proc Chance      : 101%
+Mechanic         : Unknown(31)
 Affecting spells : Unshackled Fury (76856 effects: #1, #2), Deadly Calm (85730 effect#1)
 Triggered by     : Bastion of Defense (29594)
 Family Flags     : 58
@@ -4640,6 +4962,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 12 seconds
+Category         : 21
+Proc Chance      : 101%
+Mechanic         : Unknown(31)
 Affecting spells : Unshackled Fury (76856 effects: #1, #2), Deadly Calm (85730 effect#1)
 Triggered by     : Wrecking Crew (46867)
 Family Flags     : 58
@@ -4665,6 +4990,9 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 12 seconds
+Category         : 21
+Proc Chance      : 101%
+Mechanic         : Unknown(31)
 Affecting spells : Unshackled Fury (76856 effects: #1, #2), Deadly Calm (85730 effect#1)
 Triggered by     : Wrecking Crew (56611)
 Family Flags     : 58
@@ -4687,7 +5015,7 @@ Tooltip          : Physical damage increased by $s1%.
 Name             : Heroic Throw (id=57755) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=243637)
 Spell Level      : 20
 Range            : 30 yards
@@ -4695,6 +5023,7 @@ GCD              : 1.5 seconds
 Velocity         : 50 yards/sec
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 60 seconds
+Proc Chance      : 101%
 Affecting spells : Recklessness (1719 effect#1), Gag Order (12311 effect#2), Gag Order (12958 effect#2), Deadly Calm (85730 effect#1)
 Family Flags     : 32
 Attributes       : ....x... ........ x.x..x.. ........   ........ .x...... ........ ........ 
@@ -4715,6 +5044,7 @@ Name             : Glyph of Battle (id=58095) [Spell Family (4), Passive, Hidden
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4739,6 +5069,9 @@ Name             : Glyph of Berserker Rage (id=58096) [Spell Family (4), Passive
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4758,6 +5091,7 @@ Name             : Glyph of Long Charge (id=58097) [Spell Family (4), Passive, H
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4778,6 +5112,7 @@ Name             : Glyph of Thunder Clap (id=58098) [Spell Family (4), Passive, 
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4798,6 +5133,7 @@ Name             : Glyph of Demoralizing Shout (id=58099) [Spell Family (4), Pas
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4822,6 +5158,7 @@ Name             : Glyph of Enduring Victory (id=58104) [Spell Family (4), Passi
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4843,6 +5180,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4861,6 +5199,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4879,6 +5218,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4898,6 +5238,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4916,6 +5257,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4935,6 +5277,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4953,6 +5296,7 @@ Name             : Glyph of Rapid Charge (id=58355) [Spell Family (4), Passive, 
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4977,6 +5321,7 @@ Name             : Glyph of Resonating Power (id=58356) [Spell Family (4), Passi
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5001,6 +5346,9 @@ Name             : Glyph of Heroic Throw (id=58357) [Spell Family (4), Passive, 
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5021,6 +5369,9 @@ Name             : Glyph of Revenge (id=58364) [Spell Family (4), Passive, Hidde
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5045,6 +5396,7 @@ Name             : Glyph of Cleaving (id=58366) [Spell Family (4), Passive, Hidd
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5069,6 +5421,7 @@ Name             : Glyph of Bloodthirst (id=58367) [Spell Family (4), Passive, H
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5093,6 +5446,7 @@ Name             : Glyph of Mortal Strike (id=58368) [Spell Family (4), Passive,
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5113,6 +5467,7 @@ Name             : Glyph of Bloody Healing (id=58369) [Spell Family (4), Passive
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5133,6 +5488,7 @@ Name             : Glyph of Raging Blow (id=58370) [Spell Family (4), Passive, H
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5158,6 +5514,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 10%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5178,6 +5537,9 @@ Name             : Glyph of Shield Slam (id=58375) [Spell Family (4), Passive, H
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ..x.x.x. x....... ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5198,6 +5560,7 @@ Name             : Glyph of Intervene (id=58377) [Spell Family (4), Passive, Hid
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5222,6 +5585,7 @@ Name             : Glyph of Victory Rush (id=58382) [Spell Family (4), Passive, 
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5246,6 +5610,7 @@ Name             : Glyph of Sweeping Strikes (id=58384) [Spell Family (4), Passi
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5270,6 +5635,7 @@ Name             : Glyph of Slam (id=58385) [Spell Family (4), Passive, Hidden]
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5294,6 +5660,9 @@ Name             : Glyph of Overpower (id=58386) [Spell Family (4), Passive, Hid
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5318,6 +5687,7 @@ Name             : Glyph of Sunder Armor (id=58387) [Spell Family (4), Passive, 
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5342,6 +5712,7 @@ Name             : Glyph of Devastate (id=58388) [Spell Family (4), Passive, Hid
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5367,6 +5738,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5388,6 +5760,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5409,6 +5782,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5430,6 +5804,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5451,6 +5826,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5470,6 +5846,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5491,6 +5868,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5512,6 +5890,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5532,6 +5911,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5553,6 +5933,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5574,6 +5955,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5595,6 +5977,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5616,6 +5999,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5636,6 +6020,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5657,6 +6042,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5677,6 +6063,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5698,6 +6085,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5719,6 +6107,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5738,12 +6127,14 @@ Description      : Reduces the cooldown of your Charge ability by $58355s1%.
 Name             : Sunder Armor (id=58567) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=255857)
 Spell Level      : 10
 Range            : 100 yards
 GCD              : 1.5 seconds
 Duration         : 30 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Affecting spells : Battle Trance (12964 effect#1), Glyph of Rapid Charge (58355 effect#2), Glyph of Resonating Power (58356 effect#2), Glyph of Revenge (58364 effect#2), Glyph of Cleaving (58366 effect#2), Glyph of Bloodthirst (58367 effect#2), Glyph of Raging Blow (58370 effect#2), Glyph of Intervene (58377 effect#2), Glyph of Victory Rush (58382 effect#2), Glyph of Sweeping Strikes (58384 effect#2), Glyph of Slam (58385 effect#2), Glyph of Overpower (58386 effect#2), Glyph of Sunder Armor (58387 effects: #1, #2), Glyph of Devastate (58388 effect#2), Glyph of Furious Sundering (63326 effect#1), Deadly Calm (85730 effect#1)
 Triggered by     : Sunder Armor (7386), Glyph of Heroic Throw (58357)
 Family Flags     : 14
@@ -5772,6 +6163,7 @@ Race             : Draenei (0x400)
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5794,6 +6186,7 @@ Name             : Intervene (id=59667) [Hidden]
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : .......x x....... ........ ...x....   ........ ..x..... ........ ....x... 
                  : ..x..... ........ ........ ....x...   ........ ........ xx...... ........ 
                  : .......x ........ ........ ........   ........ ........ ........ ........ 
@@ -5815,6 +6208,10 @@ Resource         : 0 Energy (3) (id=245708)
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 9 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Triggered by     : Taste for Blood (56636), Taste for Blood (56637), Taste for Blood (56638)
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -5842,6 +6239,7 @@ Spell Level      : 39
 GCD              : 1.5 seconds
 Duration         : 0.1 seconds
 Cooldown         : 30 seconds
+Proc Chance      : 101%
 Attributes       : ....x... ........ x.x..... ........   ........ ..x....x ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5861,6 +6259,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ .x...... ........ ........ 
@@ -5882,6 +6283,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ .x...... ........ ........ 
@@ -5903,6 +6307,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 2 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5920,6 +6325,9 @@ Name             : Glyph of Bladestorm (id=63324) [Spell Family (4), Passive, Hi
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5940,6 +6348,9 @@ Name             : Glyph of Shockwave (id=63325) [Spell Family (4), Passive, Hid
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5960,6 +6371,9 @@ Name             : Glyph of Furious Sundering (id=63326) [Spell Family (4), Pass
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5980,6 +6394,9 @@ Name             : Glyph of Intimidating Shout (id=63327) [Spell Family (4), Pas
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6000,6 +6417,9 @@ Name             : Glyph of Spell Reflection (id=63328) [Spell Family (4), Passi
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6020,6 +6440,7 @@ Name             : Glyph of Shield Wall (id=63329) [Spell Family (4), Passive, H
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6046,6 +6467,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6065,6 +6487,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6084,6 +6507,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6102,6 +6526,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6120,6 +6545,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6139,6 +6565,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6156,13 +6583,14 @@ Description      : Shield Wall now reduces damage taken by ${40-$63329m2}%, but 
 Name             : Shattering Throw (id=64380) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Rage (1) (id=247249)
 Spell Level      : 71
 Range            : 100 yards
 Cast Time        : 1.5 seconds
 Velocity         : 50 yards/sec
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Stance Mask      : 0x00010000
 Affecting spells : Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 54
@@ -6183,7 +6611,7 @@ Description      : Throws your weapon at the enemy causing $64382m1 damage (base
 Name             : Shattering Throw (desc=Battle Stance) (id=64382) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 25 Rage (1) (id=256494)
 Spell Level      : 74
 Range            : 30 yards
@@ -6217,6 +6645,9 @@ Name             : Juggernaut (desc=Rank 1) (id=64976) [Spell Family (4), Passiv
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ....x... ........ ........   ........ ........ ........ ........   
+                 : Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6246,6 +6677,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6268,6 +6703,7 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6285,6 +6721,7 @@ Name             : Glyph of Command (id=68164) [Spell Family (4), Passive, Hidde
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6374,9 +6811,10 @@ Name             : Arcane Torrent (desc=Racial) (id=69179)
 Class            : Warrior
 Race             : Blood Elf (0x200)
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 2 seconds
 Cooldown         : 120 seconds
+Mechanic         : Unknown(9)
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6399,6 +6837,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 75
+Internal Cooldown: 0.1 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6422,6 +6864,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 75
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6470,7 +6915,7 @@ Description      : $?s76857[Increases your chance to block by $s2% and your chan
 Name             : Opportunity Strike (id=76858) 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 1
 Range            : 10 yards
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
@@ -6493,6 +6938,9 @@ Name             : Impending Victory (desc=Rank 1) (id=80128) [Spell Family (4),
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 25%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6511,6 +6959,9 @@ Name             : Impending Victory (desc=Rank 2) (id=80129) [Spell Family (4),
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6580,6 +7031,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6607,6 +7061,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6657,6 +7114,7 @@ Class            : Warrior, Paladin, Death Knight
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
+Mechanic         : Unknown(28)
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6675,6 +7133,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 120 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x..x... .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6695,6 +7157,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 120 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6855,6 +7321,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6875,6 +7344,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 15 seconds
+Stacks           : 1 maximum
+Proc Chance      : 101%
 Triggered by     : Lambs to the Slaughter (84583)
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6899,6 +7370,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 15 seconds
+Stacks           : 2 maximum
+Proc Chance      : 101%
 Triggered by     : Lambs to the Slaughter (84587)
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6923,6 +7396,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 15 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Triggered by     : Lambs to the Slaughter (84588)
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6946,6 +7421,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6965,6 +7443,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6984,6 +7465,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7003,6 +7487,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Heal, Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7030,6 +7517,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x... ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Heal, Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7147,6 +7637,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7166,6 +7659,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Triggered by     : Shield Specialization (12725)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7186,6 +7682,9 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Triggered by     : Shield Specialization (12724)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7204,7 +7703,7 @@ Description      : You generate $/10;s1 extra Rage when you block an attack.  Yo
 Name             : Raging Blow (desc=Berserker Stance) (id=85288) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 20 Rage (1) (id=287248)
 Spell Level      : 39 (max 80)
 Max Scaling Level: 80
@@ -7234,7 +7733,7 @@ Description      : A mighty blow that deals $96103m2% weapon damage from both me
 Name             : Raging Blow Off-Hand (id=85384) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 39 (max 80)
 Max Scaling Level: 80
 Range            : 100 yards
@@ -7283,7 +7782,7 @@ Tooltip          : Increases parry chance by $s1%.
 Name             : Throwdown (desc=Battle Stance) (id=85388) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 15 Rage (1) (id=287347)
 Spell Level      : 1
 Range            : 5 yards
@@ -7291,7 +7790,9 @@ GCD              : 1.5 seconds
 Duration         : 5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 45 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00010000
+Mechanic         : Unknown(12)
 Affecting spells : Deadly Calm (85730 effect#1)
 Family Flags     : 63
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ...x.... 
@@ -7315,6 +7816,7 @@ School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
 Cooldown         : 120 seconds
+Category         : 1330
 Category Cooldown: 10 seconds
 Attributes       : ....x... ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7339,6 +7841,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 10 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Triggered by     : Meat Cleaver (12329)
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7363,6 +7867,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 10 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Triggered by     : Meat Cleaver (12950)
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7386,6 +7892,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 5 seconds
+Proc Chance      : 10%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7405,6 +7915,10 @@ Class            : Warrior
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 5 seconds
+Proc Chance      : 15%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7462,7 +7976,7 @@ Description      : Increases your Strength by $s1% while wearing only Plate armo
 Name             : Colossus Smash (desc=Battle, Berserker Stance) (id=86346) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 20 Rage (1) (id=288285)
 Spell Level      : 81
 Range            : 5 yards
@@ -7470,6 +7984,7 @@ GCD              : 1.5 seconds
 Duration         : 6 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 20 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x00050000
 Affecting spells : Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Sudden Death (52437 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 62
@@ -7582,6 +8097,10 @@ School           : Physical
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x.x. ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Generic Hostile Spell
 Triggered by     : Incite (50685), Incite (50686), Incite (50687)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -7725,6 +8244,10 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 20 seconds
+Stacks           : 1 initial, 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Triggered by     : Thunderstruck (80979)
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7749,6 +8272,10 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 20 seconds
+Stacks           : 1 initial, 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Triggered by     : Thunderstruck (80980)
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7807,35 +8334,10 @@ Effects          :
                    Base Value: 5 | Scaled Value: 5 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Grants a $s1% increase to your primary attribute for wearing plate in all armor slots.
 
-Name             : Running Wild (desc=Racial) (id=87840) 
-Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Druid
-Race             : Worgen (0x200000)
-School           : Physical
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Attributes       : ....x... .......x x...x... ....x...   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ...x....   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Is Ability (4), Only Outdoors (15), Not Shapeshifted (16), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), Ignore Caster Modifiers (125), Force Display Castbar (155), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#1 (id=89943)    : Apply Aura (6) | Dummy (4)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000
-#3 (id=104313)   : Apply Aura (6) | Unknown(358)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Drop to all fours to run as fast as a wild animal.
-Tooltip          : $?j2g[Increases ground speed by $j2g%. ][]$?j2f[Increases flight speed by $j2f%. ][]$?j2s[Increases swim speed by $j2s%. ][]
-
 Name             : Strike (id=88161) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 20 Rage (1) (id=290124)
 Spell Level      : 1 (max 10)
 Max Scaling Level: 10
@@ -7843,6 +8345,7 @@ Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 3 seconds
+Category         : 971
 Category Cooldown: 3 seconds
 Affecting spells : Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Deadly Calm (85730 effect#1)
 Family Flags     : 64
@@ -7925,6 +8428,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 9 seconds
+Stacks           : 5 maximum
+Proc Chance      : 101%
 Triggered by     : Executioner (20502), Executioner (20503)
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7988,6 +8493,9 @@ Name             : Vengeance (desc=Passive) (id=93098) [Spell Family (4), Passiv
 Class            : Warrior
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.x. ........ ........ x..x....   ........ ........ ........ ........ 
                  : ........ ........ ........ ....x...   ........ ........ xx...... ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8007,10 +8515,11 @@ Description      : Each time you take damage, you gain $s1% of the damage taken 
 Name             : Rend (desc=Battle, Defensive Stance) (id=94009) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 7
 Range            : 100 yards
 Duration         : 15 seconds
+Mechanic         : Unknown(15)
 Affecting spells : Battle Trance (12964 effect#1), Blood Frenzy (29836 effects: #1, #2), Blood Frenzy (29859 effects: #1, #2), Thunderstruck (80979 effects: #1, #3), Thunderstruck (80980 effects: #1, #3), Deadly Calm (85730 effect#1)
 Triggered by     : Rend (772)
 Family Flags     : 5
@@ -8133,8 +8642,9 @@ Description      : Death Wish no longer increases damage taken.
 Name             : Whirlwind Off-Hand (id=95738) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 36
+Max Targets      : 255
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, One-handed Sword, Two-handed Sword, Fist Weapon, Dagger
 Affecting spells : Recklessness (1719 effect#1), Battle Trance (12964 effect#1), Deadly Calm (85730 effect#1), Meat Cleaver (85738 effect#1), Meat Cleaver (85739 effect#1), Vengeance (93098 effect#1), Vengeance (93099 effect#1)
 Triggered by     : Whirlwind (50622)
@@ -8157,7 +8667,7 @@ Effects          :
 Name             : Raging Blow (id=96103) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 39 (max 80)
 Max Scaling Level: 80
 Range            : 100 yards
@@ -8187,6 +8697,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 83
 Cooldown         : 180 seconds
+Category         : 1251
 Category Cooldown: 180 seconds
 Family Flags     : 68
 Attributes       : ....x... ........ x.x..... ........   ........ ........ ........ ........ 

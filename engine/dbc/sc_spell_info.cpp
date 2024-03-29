@@ -936,6 +936,7 @@ static constexpr auto _effect_type_strings = util::make_static_map<unsigned, uti
   { 202, "Apply Player/Pet Aura"    },
   { 260, "Summon Stabled Pet"       },
   { 290, "Reduce Remaining Cooldown"},
+  { 328, "Add Combo Points" }
 } );
 
 static constexpr auto _effect_subtype_strings = util::make_static_map<unsigned, util::string_view>( {

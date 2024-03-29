@@ -1,12 +1,13 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
 Name             : Cower (id=1742) [Spell Family (9)] 
 Class            : Monk
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=171283)
 Spell Level      : 20
 Duration         : 6 seconds
 Cooldown         : 45 seconds
+Category         : 1241
 Category Cooldown: 45 seconds
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
@@ -31,11 +32,12 @@ Tooltip          : Reduces damage taken by $s1%.
 Name             : Growl (id=2649) [Spell Family (9)] 
 Class            : Monk
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=171125)
 Spell Level      : 1
 Range            : 5 yards
 Cooldown         : 5 seconds
+Category         : 82
 Category Cooldown: 5 seconds
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
@@ -56,12 +58,17 @@ Description      : Your pet growls at the target, generating threat and increasi
 Name             : Intimidation (id=19577) [Spell Family (9)] 
 Class            : Hunter, Monk
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=184392)
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 15 seconds
 Cooldown         : 60 seconds
+Category         : 1132
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Camouflage (51755 effect#3), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1)
 Family Flags     : 67
 Attributes       : ....x... ...x.... x.x..... ........   ........ ..x..... ........ ........ 
@@ -103,10 +110,12 @@ Description      : Increases your pet's movement speed by $s1%.
 Name             : Intimidation (id=24394) 
 Class            : Hunter, Monk
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 40
 Range            : 5 yards
 Duration         : 3 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(12)
 Triggered by     : Intimidation (19577)
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -151,6 +160,7 @@ Name             : Hunter Pet Scaling 02 (id=34903) [Passive, Hidden]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ....x... .x......   ........ ........ ........ ........ 
@@ -193,6 +203,7 @@ Name             : Cornered (desc=Rank 1) (id=52234) [Spell Family (9), Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -215,6 +226,9 @@ Class            : Monk
 School           : Nature
 Spell Type       : None
 Resource         : 0 Focus (2) (id=255606)
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -233,6 +247,7 @@ Name             : Pet Barding (desc=Rank 1) (id=53175) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -253,6 +268,7 @@ Name             : Pet Barding (desc=Rank 2) (id=53176) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -274,6 +290,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -293,6 +310,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -312,6 +330,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -332,6 +351,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -352,6 +372,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -373,6 +394,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -394,6 +416,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -415,6 +438,9 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 10%
+Proc Flags       : ..x.x.x. x...x... x....... ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -435,6 +461,9 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 20%
+Proc Flags       : ..x.x.x. x...x... x....... ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -455,6 +484,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -474,6 +504,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -493,6 +524,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -511,6 +543,9 @@ Name             : Invigoration (desc=Passive) (id=53397) [Spell Family (9), Pas
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -532,6 +567,9 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=240017)
 Duration         : 20 seconds
 Cooldown         : 45 seconds
+Proc Chance      : 50%
+Proc Flags       : ..x..... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -556,6 +594,8 @@ Spell Type       : None
 Resource         : 0 Rage (1) (id=240062)
 Spell Level      : 1
 Duration         : Aura (infinite)
+Stacks           : 5 maximum
+Proc Chance      : 101%
 Triggered by     : Rabid (53401)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ xx...... ........ 
@@ -576,6 +616,7 @@ Name             : Lionhearted (desc=Rank 1) (id=53409) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -596,6 +637,7 @@ Name             : Lionhearted (desc=Rank 2) (id=53411) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -616,6 +658,7 @@ Name             : Invigoration (id=53412) [Spell Family (9)]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Triggered by     : Invigoration (53397)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -658,6 +701,8 @@ Name             : Great Resistance (desc=Rank 1) (id=53427) [Spell Family (17),
 Class            : Monk
 School           : Nature
 Spell Type       : None
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -678,6 +723,8 @@ Name             : Great Resistance (desc=Rank 2) (id=53429) [Spell Family (17),
 Class            : Monk
 School           : Nature
 Spell Type       : None
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -698,6 +745,8 @@ Name             : Great Resistance (desc=Rank 3) (id=53430) [Spell Family (17),
 Class            : Monk
 School           : Nature
 Spell Type       : None
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -717,7 +766,7 @@ Description      : Your pet takes $s1% less damage from Arcane, Fire, Frost, Nat
 Name             : Call of the Wild (id=53434) [Spell Family (9)] 
 Class            : Monk
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=239702)
 Duration         : 20 seconds
 Cooldown         : 300 seconds
@@ -744,6 +793,7 @@ Name             : Grace of the Mantis (desc=Rank 1) (id=53450) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -762,6 +812,7 @@ Name             : Grace of the Mantis (desc=Rank 2) (id=53451) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -784,6 +835,10 @@ Resource         : 0 Focus (2) (id=240110)
 Range            : 8 - 25 yards
 Duration         : 10 seconds
 Cooldown         : 30 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ .....x..   ........ ..x..... ........ ........ 
@@ -807,11 +862,13 @@ Tooltip          : The next attack made against you will have $w2 damage absorbe
 Name             : Taunt (id=53477) [Spell Family (9)] 
 Class            : Monk
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=254507)
 Range            : 5 yards
 Duration         : 3 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(16)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ x.x..... ........   ........ ........ ........ ........ 
@@ -859,6 +916,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 20 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -877,11 +935,14 @@ Tooltip          : Health increased by 30% of maximum.
 Name             : Roar of Sacrifice (id=53480) [Spell Family (9)] 
 Class            : Monk
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=240151)
 Range            : 40 yards
 Duration         : 12 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ...x.... ........ 
@@ -907,6 +968,7 @@ Name             : Blood of the Rhino (desc=Rank 1) (id=53481) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -925,6 +987,7 @@ Name             : Blood of the Rhino (desc=Rank 2) (id=53482) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -943,6 +1006,7 @@ Name             : Mobility (desc=Rank 1) (id=53483) [Spell Family (9), Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -963,6 +1027,7 @@ Name             : Mobility (desc=Rank 2) (id=53485) [Spell Family (9), Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1008,6 +1073,7 @@ Name             : Cornered (desc=Rank 2) (id=53497) [Spell Family (9), Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1028,11 +1094,16 @@ Description      : When at less than 35% health, your pet does $s1% more damage 
 Name             : Wolverine Bite (id=53508) [Spell Family (9)] 
 Class            : Monk
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Range            : 5 yards
 GCD              : 1.5 seconds
 Cooldown         : 10 seconds
+Category         : 65
 Category Cooldown: 5 seconds
+Internal Cooldown: 7 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x...x... x.x..x.. ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell, Periodic, Helpful Periodic
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ .....x.. ........   ........ .x...... ....x... ...x.... 
@@ -1074,6 +1145,7 @@ Name             : Feeding Frenzy (desc=Rank 2) (id=53512) [Spell Family (9), Pa
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1094,6 +1166,10 @@ Name             : Owl's Focus (desc=Rank 1) (id=53514) [Spell Family (9), Passi
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 8 seconds
+Proc Chance      : 15%
+Proc Flags       : ....x... ....x.x. ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell, Magic Heal
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1111,9 +1187,13 @@ Description      : Your pet has a $53514h% chance after using a Basic Attack to 
 Name             : Owl's Focus (id=53515) [Spell Family (9)] 
 Class            : Monk
 School           : None
-Spell Type       : None
+Spell Type       : Magic
 Range            : 100 yards
 Duration         : 8 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Triggered by     : Owl's Focus (53514), Owl's Focus (53516)
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ......x. 
@@ -1139,6 +1219,10 @@ Name             : Owl's Focus (desc=Rank 2) (id=53516) [Spell Family (9), Passi
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 8 seconds
+Proc Chance      : 30%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1156,7 +1240,7 @@ Description      : Your pet has a $53516h% chance after using a Basic Attack to 
 Name             : Roar of Recovery (id=53517) [Spell Family (9)] 
 Class            : Monk
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=239929)
 Range            : 40 yards
 Duration         : 9 seconds
@@ -1182,6 +1266,7 @@ Name             : Mobility (desc=Rank 1) (id=53554) [Spell Family (9), Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1202,6 +1287,7 @@ Name             : Mobility (desc=Rank 2) (id=53555) [Spell Family (9), Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1224,6 +1310,9 @@ School           : Physical
 Spell Type       : None
 Range            : 5 yards
 Cooldown         : 30 seconds
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ........   ........ ........ .x...... ........ 
@@ -1245,6 +1334,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Duration         : 5 seconds
+Proc Chance      : 101%
 Triggered by     : Bloodthirsty (53186), Bloodthirsty (53187)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1266,6 +1356,7 @@ Class            : Monk
 School           : Nature
 Spell Type       : None
 Cooldown         : 480 seconds
+Category         : 1156
 Category Cooldown: 480 seconds
 Attributes       : ........ ........ .......x ........   ........ ........ .x...... ........ 
                  : x....... ........ ........ ........   ........ ........ ....x... ........ 
@@ -1285,6 +1376,7 @@ Name             : Hunter Pet Scaling 04 (id=61017) [Passive, Hidden]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ....x... .x......   ........ ........ ........ ........ 
@@ -1307,6 +1399,9 @@ Class            : Monk
 School           : Nature
 Spell Type       : None
 Resource         : 0 Focus (2) (id=232887)
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1326,6 +1421,9 @@ Class            : Monk
 School           : Nature
 Spell Type       : None
 Resource         : 0 Focus (2) (id=232888)
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1345,6 +1443,8 @@ Class            : Monk
 School           : Nature
 Spell Type       : None
 Resource         : 0 Focus (2) (id=232930)
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1364,6 +1464,8 @@ Class            : Monk
 School           : Nature
 Spell Type       : None
 Resource         : 0 Focus (2) (id=232931)
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1382,6 +1484,7 @@ Name             : Great Stamina (desc=Rank 1) (id=61686) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1400,6 +1503,7 @@ Name             : Great Stamina (desc=Rank 2) (id=61687) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1418,6 +1522,7 @@ Name             : Great Stamina (desc=Rank 3) (id=61688) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1436,6 +1541,7 @@ Name             : Natural Armor (desc=Rank 1) (id=61689) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1454,6 +1560,7 @@ Name             : Natural Armor (desc=Rank 2) (id=61690) [Passive]
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1472,6 +1579,7 @@ Name             : Wild Hunt (desc=Rank 1) (id=62758) [Spell Family (17), Passiv
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1493,6 +1601,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1513,6 +1622,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1532,6 +1642,7 @@ Name             : Wild Hunt (desc=Rank 2) (id=62762) [Spell Family (17), Passiv
 Class            : Monk
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1553,6 +1664,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1572,6 +1684,7 @@ Class            : Monk
 School           : Physical
 Spell Type       : None
 Range            : 5 yards
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1589,10 +1702,11 @@ Description      : Your pet's Growl also heals it for $s1% of its total health.
 Name             : Bullheaded (id=63896) [Spell Family (9)] 
 Class            : Monk
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=247992)
 Spell Level      : 1
 Duration         : 12 seconds
+Proc Chance      : 101%
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Bombardment (35110 effect#1), Mortal Shots (36413 effect#1), Camouflage (51755 effect#3), Rapid Recuperation (53228 effect#2), Rapid Recuperation (53232 effect#2), Into the Wilderness (84729 effect#1), Animal Handler (87325 effect#1), Serpent Spread (87934 effect#1), Serpent Spread (87935 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Triggered by     : Bullheaded (53490)
 Family Flags     : 13
@@ -1615,7 +1729,7 @@ Tooltip          : All damage taken reduced by $s1%.
 Name             : Thunderstomp (id=63900) [Spell Family (9)] 
 Class            : Monk
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 20 Focus (2) (id=255767)
 Spell Level      : 1
 Range            : 5 yards
@@ -1642,6 +1756,7 @@ Class            : Mage, Monk
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ x.x..... ...x....   .....x.. ........ .x...... ........ 
                  : ........ ......x. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1662,6 +1777,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 0 Focus (2) (id=250757)
 Duration         : 10 seconds
+Proc Chance      : 101%
 Triggered by     : Culling the Herd (52858), Culling the Herd (61680), Culling the Herd (61681)
 Attributes       : ....x... ........ x.x..... ........   ........ ..x..... ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -1684,6 +1800,7 @@ Class            : Hunter, Monk
 School           : Physical
 Spell Type       : None
 Duration         : Aura (infinite)
+Proc Chance      : 101%
 Affecting spells : Ferocious Inspiration (34460 effect#1), Camouflage (51755 effect#3), Cobra Strikes (53256 effect#1), Cobra Strikes (53259 effect#1), Cobra Strikes (53260 effect#1)
 Family Flags     : 37
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
@@ -1718,7 +1835,7 @@ Attributes       : ......xx x....... ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8)
 Effects          :
-#1 (id=91116)    : Apply Aura (6) | Increase Energy (35)
+#1 (id=91116)    : Apply Aura (6) | Modify Max Power (35) (focus)
                    Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 2 | Target: Self (1)
                    Affected Spells: Multi-Shot (2643)
                    Family Flags: 12

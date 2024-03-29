@@ -1,16 +1,19 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
 Name             : Power Word: Shield (id=17) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 34% Base Mana (0) (id=176617)
 Spell Level      : 5
 Range            : 40 yards
 GCD              : 1.5 seconds
 Duration         : 15 seconds
 Cooldown         : 3 seconds
+Category         : 56
 Category Cooldown: 3 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x08000000
+Mechanic         : Unknown(19)
 Affecting spells : Mental Agility (14520 effect#1), Improved Power Word: Shield (14748 effect#1), Improved Power Word: Shield (14768 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Improved Power Word: Shield (24191 effect#1), Rapture (47535 effect#2), Rapture (47536 effect#2), Rapture (47537 effect#2), Grace (47930 effect#1), Borrowed Time (52795 effects: #1, #2), Borrowed Time (52797 effects: #1, #2), Borrowed Time (52798 effects: #1, #2), Divine Touch (63534 effect#1), Divine Touch (63542 effect#1), Soul Warding (63574 effect#1), Body and Soul (64127 effect#1), Body and Soul (64129 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1), Soul Warding (78500 effect#1), Soul Warding (78501 effect#1)
 Family Flags     : 0
 Attributes       : ........ ...x.... x.x..... ........   ........ ........ ........ ........ 
@@ -40,7 +43,7 @@ $shield=${((($SP*0.87)+$m1)*$<mastery>*$<spirit>*$<twin3>*$<ipws2>)}
 Name             : Renew (id=139) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 17% Base Mana (0) (id=169145)
 Spell Level      : 8
 Range            : 40 yards
@@ -68,7 +71,7 @@ Variables        : $total=${$m1*4}
 Name             : Dispel Magic (id=527) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 16% Base Mana (0) (id=169383)
 Spell Level      : 26
 Range            : 30 yards
@@ -95,7 +98,7 @@ Description      : Dispels magic on the target, removing $527s1 harmful $lspell:
 Name             : Cure Disease (id=528) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 16% Base Mana (0) (id=169384)
 Spell Level      : 22
 Range            : 40 yards
@@ -119,7 +122,7 @@ Description      : Removes $s1 $ldisease:diseases; from the friendly target.
 Name             : Smite (id=585) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 15% Base Mana (0) (id=169185)
 Spell Level      : 1
 Range            : 30 yards
@@ -144,12 +147,13 @@ Description      : Smite an enemy for $s1 Holy damage.$?s55692[ Damage is increa
 Name             : Fade (id=586) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 15% Base Mana (0) (id=169186)
 Spell Level      : 24
 GCD              : 1.5 seconds
 Duration         : 10 seconds
 Cooldown         : 30 seconds
+Category         : 82
 Category Cooldown: 30 seconds
 Stance Mask      : 0x08000000
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Veiled Shadows (15274 effect#1), Veiled Shadows (15311 effect#1), Quick Fade (18388 effect#1), Grace (47930 effect#1), Glyph of Fade (55684 effects: #1, #2), Glyph of Fading (57985 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1)
@@ -172,10 +176,11 @@ Tooltip          : Reduced threat level.
 Name             : Inner Fire (id=588) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 7
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
+Proc Chance      : 101%
 Stance Mask      : 0x08000000
 Affecting spells : Mental Agility (14520 effect#1), Inner Sanctum (14747 effect#1), Inner Sanctum (14770 effect#1), Inner Sanctum (14771 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Twisted Faith (47573 effect#1), Twisted Faith (47577 effect#1), Pain and Suffering (47580 effect#2), Pain and Suffering (47581 effect#2), Glyph of Inner Fire (55686 effect#1), Inner Will (73413 effect#1)
 Family Flags     : 1
@@ -205,12 +210,13 @@ Variables        : $innerfire=$?s55686[${90}][${60}]
 Name             : Shadow Word: Pain (id=589) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 22% Base Mana (0) (id=169268)
 Spell Level      : 4
 Range            : 40 yards
 GCD              : 1.5 seconds
 Duration         : 18 seconds
+Proc Chance      : 100%
 Stance Mask      : 0x08000000
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Mind Melt (14910 effect#2), Improved Shadow Word: Pain (15275 effect#1), Improved Shadow Word: Pain (15317 effect#1), Harnessed Shadows (33191 effect#2), Mind Melt (33371 effect#2), Twin Disciplines (47586 effect#1), Glyph of Shadow Word: Pain (55681 effect#1), Inner Will (73413 effect#1), Shadowy Apparition (78202 effect#2), Shadowy Apparition (78203 effect#2), Shadowy Apparition (78204 effect#2), Harnessed Shadows (78228 effect#2), Dark Thoughts (84734 effect#1), Dark Evangelism (87117 effect#1), Dark Evangelism (87118 effect#1), Shadow Power (87327 effect#2), Empowered Shadow (95799 effects: #1, #2)
 Family Flags     : 15
@@ -232,7 +238,7 @@ Tooltip          : $s1 Shadow damage every $t1 seconds.
 Name             : Prayer of Healing (id=596) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 26% Base Mana (0) (id=169307)
 Spell Level      : 44
 Range            : 40 yards
@@ -260,14 +266,16 @@ Description      : A powerful prayer heals the friendly target's party members w
 Name             : Mind Control (id=605) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 12% Base Mana (0) (id=169534)
 Spell Level      : 38
 Range            : 30 yards
 Cast Time        : 2.5 seconds
 GCD              : 1.5 seconds
 Duration         : 30 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x08000000
+Mechanic         : Unknown(1)
 Affecting spells : Focused Will (45241 effect#1), Focused Will (45242 effect#1), Dark Thoughts (84734 effect#1)
 Family Flags     : 17
 Attributes       : ........ ........ x.x.x... ......x.   x.x..... .....x.. .x...... ..x..... 
@@ -298,6 +306,7 @@ Cast Time        : 0.5 seconds
 GCD              : 1.5 seconds
 Duration         : 180 seconds
 Cooldown         : 180 seconds
+Category         : 1145
 Category Cooldown: 180 seconds
 Stance Mask      : 0x80000000
 Affecting spells : Focused Will (45241 effect#1), Focused Will (45242 effect#1)
@@ -325,7 +334,7 @@ $mult=${$<twin3>}
 Name             : Levitate (id=1706) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 3% Base Mana (0) (id=170242)
 Spell Level      : 34
 Range            : 30 yards
@@ -352,7 +361,7 @@ Tooltip          : Levitating.
 Name             : Heal (id=2050) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 9% Base Mana (0) (id=171238)
 Spell Level      : 16
 Range            : 40 yards
@@ -378,7 +387,7 @@ Description      : Heal your target for $s1.
 Name             : Greater Heal (id=2060) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 27% Base Mana (0) (id=169772)
 Spell Level      : 38
 Range            : 40 yards
@@ -404,7 +413,7 @@ Description      : A slow casting spell that heals a single target for $s1.
 Name             : Flash Heal (id=2061) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 28% Base Mana (0) (id=169773)
 Spell Level      : 3
 Range            : 40 yards
@@ -430,12 +439,13 @@ Description      : Heals a friendly target for $s1.
 Name             : Mind Vision (id=2096) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 3% Base Mana (0) (id=171221)
 Spell Level      : 36
 Range            : 50000 yards
 GCD              : 1.5 seconds
 Duration         : 60 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x08000000
 Affecting spells : Inner Will (73413 effect#1)
 Family Flags     : 63
@@ -459,13 +469,15 @@ Tooltip          : Sight granted through target's eyes.
 Name             : Devouring Plague (id=2944) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 25% Base Mana (0) (id=170600)
 Spell Level      : 28
 Range            : 40 yards
 GCD              : 1.5 seconds
 Duration         : 24 seconds
+Category         : 691
 Stance Mask      : 0x08000000
+Mechanic         : Unknown(22)
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Mind Melt (14910 effect#2), Darkness (15259 effect#1), Darkness (15307 effect#1), Darkness (15308 effect#1), Mind Melt (33371 effect#2), Twin Disciplines (47586 effect#1), Improved Devouring Plague (63625 effect#1), Improved Devouring Plague (63626 effect#1), Inner Will (73413 effect#1), Echo of Light (77485 effect#1), Shadowy Apparition (78202 effect#2), Shadowy Apparition (78203 effect#2), Shadowy Apparition (78204 effect#2), Dark Thoughts (84734 effect#1), Dark Evangelism (87117 effect#1), Dark Evangelism (87118 effect#1), Shadow Power (87327 effect#2), Empowered Shadow (95799 effects: #1, #2)
 Family Flags     : 25
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -486,7 +498,7 @@ Tooltip          : Causes $w1 damage every $t1 seconds, healing the caster.
 Name             : Shoot (id=5019) 
 Class            : Priest, Mage, Warlock
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 30 yards
 Cast Time        : 0.5 seconds
@@ -509,13 +521,17 @@ Description      : Attack with an equipped wand.
 Name             : Fear Ward (id=6346) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 3% Base Mana (0) (id=174206)
 Spell Level      : 54
 Range            : 30 yards
 GCD              : 1.5 seconds
 Duration         : 180 seconds
 Cooldown         : 180 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ .....x.. .x...... ........   ........ ........ ........ ........   
+                 : Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Glyph of Fear Ward (55678 effects: #1, #2), Inner Will (73413 effect#1)
 Family Flags     : 57
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -539,6 +555,7 @@ School           : Holy
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 15 seconds
+Mechanic         : Unknown(19)
 Family Flags     : 29
 Attributes       : ........ ........ ........ ..x..x..   ...x...x ..x..... xx...... ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -562,6 +579,10 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 5 yards
 Duration         : 6 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x..x... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Any Damage Taken
 Affecting spells : Grace (47930 effect#1), Grace (77613 effect#1)
 Family Flags     : 78
 Attributes       : ........ ........ ..x..... ........   ........ ..x..... ........ ........ 
@@ -582,13 +603,14 @@ Tooltip          : Restore $s1 health every $t1 sec.
 Name             : Mind Blast (id=8092) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 17% Base Mana (0) (id=176730)
 Spell Level      : 9
 Range            : 40 yards
 Cast Time        : 1.5 seconds
 GCD              : 1.5 seconds
 Cooldown         : 8 seconds
+Category         : 19
 Category Cooldown: 8 seconds
 Stance Mask      : 0x08000000
 Affecting spells : Mind Melt (14910 effect#1), Darkness (15259 effect#1), Improved Mind Blast (15273 effect#1), Darkness (15307 effect#1), Darkness (15308 effect#1), Improved Mind Blast (15312 effect#1), Improved Mind Blast (15313 effect#1), Mind Blast Cast Pushback Reduction (23043 effect#1), Misery (33192 effect#1), Mind Melt (33371 effect#1), Focused Will (45241 effect#1), Focused Will (45242 effect#1), Twisted Faith (47573 effect#2), Twisted Faith (47577 effect#2), Shadowy Apparition (78202 effect#1), Shadowy Apparition (78203 effect#1), Shadowy Apparition (78204 effect#1), Mind Melt (81292 effect#1), Dark Thoughts (84734 effect#1), Dark Archangel (87153 effect#2), Mind Melt (87160 effect#1), Mind Spike (87178 effect#1), Shadow Power (87327 effect#2)
@@ -610,14 +632,20 @@ Description      : Blasts the target for $s1 Shadow damage.
 Name             : Psychic Scream (id=8122) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 15% Base Mana (0) (id=175992)
 Spell Level      : 12
+Max Targets      : 5
 GCD              : 1.5 seconds
 Duration         : 8 seconds
 Cooldown         : 30 seconds
+Category         : 43
 Category Cooldown: 30 seconds
+Proc Chance      : 100%
 Stance Mask      : 0x08000000
+Mechanic         : Unknown(5)
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Improved Psychic Scream (15392 effect#1), Improved Psychic Scream (15448 effect#1), Psychic Scream Duration Increase (23044 effect#1), Improved Psychic Scream (44297 effect#1), Glyph of Psychic Scream (55676 effects: #1, #2, #3), Glyph of Dispel Magic (55677 effect#1), Inner Will (73413 effect#1), Dark Thoughts (84734 effect#1)
 Family Flags     : 16
 Attributes       : ........ ........ x.x..... ........   ...x...x ........ ........ ........ 
@@ -640,7 +668,7 @@ Tooltip          : $?$w3!=0[Trembling in Fear.][Running in Fear.]
 Name             : Mana Burn (id=8129) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 14% Base Mana (0) (id=175490)
 Spell Level      : 58
 Range            : 30 yards
@@ -666,14 +694,17 @@ Description      : Destroy $m1% of the target's mana (up to a maximum of ${$m1*2
 Name             : Shackle Undead (id=9484) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 9% Base Mana (0) (id=176191)
 Spell Level      : 32
 Range            : 30 yards
+Max Targets      : 1
 Cast Time        : 1.5 seconds
 GCD              : 1.5 seconds
 Duration         : 50 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x08000000
+Mechanic         : Unknown(20)
 Affecting spells : Focused Will (45241 effect#1), Focused Will (45242 effect#1), Glyph of Scourge Imprisonment (55690 effects: #1, #2), Glyph of Shackle Undead (57986 effect#1), Glyph of Shadowfiend (58228 effect#1), Enlightenment (84732 effect#1), Holy Focus (84733 effect#1), Shadow Power (87327 effect#1), Revelations (88627 effect#1), Masochism (88994 effect#1), Masochism (88995 effect#1)
 Family Flags     : 30, 44, 58
 Attributes       : ........ ........ x...x... ......x.   ........ ..x..... ..x..... ........ 
@@ -744,6 +775,9 @@ Name             : Atonement (desc=Rank 1) (id=14523) [Spell Family (6), Passive
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x.x..x.. ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -922,6 +956,9 @@ Name             : Inspiration (desc=Rank 1) (id=14892) [Spell Family (6), Passi
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -985,6 +1022,9 @@ Name             : Mind Melt (desc=Rank 1) (id=14910) [Spell Family (6), Passive
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1010,7 +1050,7 @@ Description      : Increases the damage done with your Shadow Word: Death by $s1
 Name             : Holy Fire (id=14914) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 11% Base Mana (0) (id=176259)
 Spell Level      : 18
 Range            : 30 yards
@@ -1018,7 +1058,9 @@ Cast Time        : 2 seconds
 GCD              : 1.5 seconds
 Duration         : 7 seconds
 Cooldown         : 10 seconds
+Category         : 451
 Category Cooldown: 10 seconds
+Proc Chance      : 101%
 Affecting spells : Divine Fury (18530 effect#1), Divine Fury (18531 effect#1), Divine Fury (18533 effect#1), Benediction (23236 effect#1), Increased Holy Criticals (23435 effect#1), Focused Will (45241 effect#1), Focused Will (45242 effect#1), Glyph of Divine Accuracy (63246 effect#1), Evangelism (81660 effects: #1, #2, #3), Evangelism (81661 effects: #1, #2, #3), Enlightenment (84732 effect#1), Holy Focus (84733 effect#1), Aggression (84735 effect#1), Shadow Power (87327 effect#1), Revelations (88627 effect#1), Masochism (88994 effect#1), Masochism (88995 effect#1)
 Family Flags     : 20
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -1062,10 +1104,11 @@ Description      : Increases the amount healed by your Renew spell by $s1%.
 Name             : Holy Nova (id=15237) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 15% Base Mana (0) (id=180214)
 Spell Level      : 62
 GCD              : 1.5 seconds
+Category         : 431
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Benediction (23236 effect#1), Increased Holy Criticals (23435 effect#1), Rapid Healing (24546 effect#2), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Grace (47930 effect#1), Glyph of Holy Nova (55683 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1)
 Family Flags     : 22
 Attributes       : ........ ........ x....... ........   ...x...x ........ ........ ........ 
@@ -1173,10 +1216,13 @@ Description      : Increases the damage of your Shadow Word: Pain spell by $s1%.
 Name             : Vampiric Embrace (id=15286) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x.x..x.. ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell, Periodic, Helpful Periodic
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Phantasm (47569 effect#1), Phantasm (47570 effect#1)
 Family Flags     : 2
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
@@ -1350,6 +1396,9 @@ Name             : Inspiration (desc=Rank 2) (id=15362) [Spell Family (6), Passi
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1387,7 +1436,7 @@ Description      : Reduces the cooldown of your Psychic Scream spell by $/1000;s
 Name             : Mind Flay (id=15407) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 8% Base Mana (0) (id=181765)
 Spell Level      : 10
 Range            : 40 yards
@@ -1441,7 +1490,9 @@ Resource         : 13% Base Mana (0) (id=180925)
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
 Cooldown         : 1.5 seconds
+Category         : 39
 Category Cooldown: 1.5 seconds
+Proc Chance      : 101%
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Inner Will (73413 effect#1), Dark Thoughts (84734 effect#1)
 Family Flags     : 31, 43
 Attributes       : ........ ........ x.x..... xx.x....   ........ ..x..... .x...... ........ 
@@ -1468,12 +1519,14 @@ Tooltip          : Shadow damage you deal increased by $s2%. All damage you take
 Name             : Silence (id=15487) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 225 Base Mana (0) (id=181035)
 Range            : 30 yards
 Duration         : 5 seconds
 Cooldown         : 45 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x08000000
+Mechanic         : Unknown(9)
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Inner Will (73413 effect#1), Dark Thoughts (84734 effect#1)
 Family Flags     : 44, 53
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -1554,10 +1607,11 @@ Description      : Reduces the casting time of your Smite, Holy Fire, Heal and G
 Name             : Desperate Prayer (id=19236) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 18
 GCD              : 1.5 seconds
 Cooldown         : 120 seconds
+Category         : 671
 Category Cooldown: 120 seconds
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Benediction (23236 effect#1), Increased Holy Criticals (23435 effect#1), Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Grace (47930 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1)
 Family Flags     : 24
@@ -1579,6 +1633,9 @@ Name             : Conviction (desc=Rank 1) (id=20049) [Passive, Hidden]
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1598,6 +1655,8 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Triggered by     : Conviction (20049)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1622,6 +1681,8 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Triggered by     : Conviction (20056)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1646,6 +1707,8 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Triggered by     : Conviction (20057)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1669,6 +1732,9 @@ Name             : Conviction (desc=Rank 2) (id=20056) [Passive, Hidden]
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1687,6 +1753,9 @@ Name             : Conviction (desc=Rank 3) (id=20057) [Passive, Hidden]
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1705,6 +1774,9 @@ Name             : Protector of the Innocent (desc=Rank 1) (id=20138) [Spell Fam
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ...x....   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -1725,6 +1797,9 @@ Name             : Protector of the Innocent (desc=Rank 2) (id=20139) [Spell Fam
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ...x....   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -1745,6 +1820,9 @@ Name             : Protector of the Innocent (desc=Rank 3) (id=20140) [Spell Fam
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ...x....   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -1804,7 +1882,7 @@ Description      : Upon death, the priest becomes the Spirit of Redemption for $
 Name             : Power Word: Fortitude (id=21562) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 22% Base Mana (0) (id=184917)
 Spell Level      : 14
 Range            : 40 yards
@@ -1848,8 +1926,9 @@ Description      : Damage dealt by pets increased by $s1%.
 Name             : Holy Nova (id=23455) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 62
+Max Targets      : 5
 Affecting spells : Benediction (23236 effect#1), Increased Holy Criticals (23435 effect#1), Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Grace (47930 effect#1), Body and Soul (64128 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1), Chakra: Sanctuary (81206 effect#1), Long Arm of the Law (87173 effect#1), Spiritual Healing (87336 effect#1), Holy Word: Serenity (88684 effect#2)
 Family Flags     : 27
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -1871,7 +1950,7 @@ Healing is divided among the number of targets healed.  These effects cause no t
 Name             : Shadow Protection (id=27683) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 22% Base Mana (0) (id=189286)
 Spell Level      : 52
 Range            : 40 yards
@@ -1920,9 +1999,10 @@ Name             : Arcane Torrent (desc=Racial) (id=28730)
 Class            : Paladin, Priest, Mage, Warlock
 Race             : Blood Elf (0x200)
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 2 seconds
 Cooldown         : 120 seconds
+Mechanic         : Unknown(9)
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1964,7 +2044,7 @@ Description      : Increases your chance to hit with all spells and attacks by $
 Name             : Mass Dispel (id=32375) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 38% Base Mana (0) (id=219682)
 Spell Level      : 72
 Range            : 30 yards
@@ -1994,12 +2074,13 @@ Description      : Dispels magic in a $32375a1 yard radius, removing $32375s1 ha
 Name             : Shadow Word: Death (id=32379) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 12% Base Mana (0) (id=219752)
 Spell Level      : 32
 Range            : 40 yards
 GCD              : 1.5 seconds
 Cooldown         : 10 seconds
+Category         : 1169
 Category Cooldown: 10 seconds
 Stance Mask      : 0x08000000
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Darkness (15259 effect#1), Darkness (15307 effect#1), Darkness (15308 effect#1), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Inner Will (73413 effect#1), Dark Thoughts (84734 effect#1), Dark Archangel (87153 effect#2), Shadow Power (87327 effect#2)
@@ -2026,6 +2107,10 @@ School           : Shadow
 Spell Type       : None
 Spell Level      : 1
 Duration         : 1 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Family Flags     : 45
 Attributes       : ........ ........ .....x.. .......x   ...x...x ..x..... ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ .....x.. 
@@ -2044,7 +2129,7 @@ Description      : A word of dark binding that inflicts Shadow damage to the tar
 Name             : Binding Heal (id=32546) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 28% Base Mana (0) (id=219899)
 Spell Level      : 48
 Range            : 40 yards
@@ -2072,7 +2157,7 @@ Description      : Heals a friendly target and the caster for $s1.  Low threat.
 Name             : Mass Dispel (id=32592) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 70
 Range            : 30 yards
 Stance Mask      : 0x08000000
@@ -2103,6 +2188,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 3 seconds
+Mechanic         : Unknown(26)
 Attributes       : ........ ........ .......x ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2126,6 +2212,7 @@ Spell Level      : 68
 Range            : 40 yards
 GCD              : 1.5 seconds
 Cooldown         : 10 seconds
+Category         : 1181
 Category Cooldown: 10 seconds
 Stance Mask      : 0x80000000
 Affecting spells : Mental Agility (14520 effect#1), Chakra (14751 effect#2), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Healing Trance (37706 effect#1), Prayer of Mending (41635 effect#1), Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1), Grace (47930 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1), Chakra: Sanctuary (81206 effect#1), Spiritual Healing (87336 effect#1)
@@ -2155,7 +2242,7 @@ $mending=${($<base>*(1.0+($<twin3>+$<sheal>)))}
 Name             : Prayer of Mending (id=33110) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Affecting spells : Mental Agility (14520 effect#1), Chakra (14751 effect#2), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Healing Trance (37706 effect#1), Prayer of Mending (41635 effect#1), Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1), Grace (47930 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1), Chakra: Sanctuary (81206 effect#1), Spiritual Healing (87336 effect#1)
@@ -2178,6 +2265,9 @@ Name             : Blessed Resilience (desc=Rank 1) (id=33142) [Spell Family (6)
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -2219,6 +2309,9 @@ Name             : Blessed Resilience (desc=Rank 2) (id=33145) [Spell Family (6)
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -2299,6 +2392,7 @@ Name             : Absolution (id=33167) [Spell Family (6), Passive, Hidden]
 Class            : Paladin, Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2319,6 +2413,9 @@ Name             : Harnessed Shadows (desc=Rank 1) (id=33191) [Spell Family (6),
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2343,6 +2440,7 @@ Name             : Misery (desc=Rank 2) (id=33192) [Spell Family (6), Passive, H
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2493,6 +2591,9 @@ Name             : Mind Melt (desc=Rank 2) (id=33371) [Spell Family (6), Passive
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2516,7 +2617,7 @@ Description      : Increases the damage done with your Shadow Word: Death by $s1
 Name             : Reflective Shield (id=33619) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Family Flags     : 46
@@ -2537,7 +2638,7 @@ Description      : Causes a percentage of the damage absorbed by your Power Word
 Name             : Shadowfiend (id=34433) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 66
 Range            : 40 yards
 GCD              : 1.5 seconds
@@ -2589,6 +2690,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Family Flags     : 49
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
@@ -2609,6 +2711,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Family Flags     : 49
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
@@ -2627,12 +2730,13 @@ Description      : Increases the amount of mana regeneration from Spirit while i
 Name             : Circle of Healing (id=34861) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 21% Base Mana (0) (id=221507)
 Spell Level      : 50
 Range            : 40 yards
 GCD              : 1.5 seconds
 Cooldown         : 10 seconds
+Category         : 1204
 Category Cooldown: 10 seconds
 Stance Mask      : 0x80000000
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Healing Trance (37706 effect#1), Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Grace (47930 effect#1), Glyph of Circle of Healing (55675 effects: #1, #2), Body and Soul (64128 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1), Chakra: Sanctuary (81206 effects: #1, #2), Long Arm of the Law (87173 effect#1), Spiritual Healing (87336 effect#1), Holy Word: Serenity (88684 effect#2)
@@ -2654,13 +2758,16 @@ Description      : Heals up to $?s55675[6][5] friendly party or raid members wit
 Name             : Vampiric Touch (id=34914) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 16% Base Mana (0) (id=222300)
 Spell Level      : 47
 Range            : 40 yards
 Cast Time        : 1.5 seconds
 GCD              : 1.5 seconds
 Duration         : 15 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ........ .x...... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell Taken
 Affecting spells : Mind Melt (14910 effect#2), Harnessed Shadows (33191 effect#2), Mind Melt (33371 effect#2), Focused Will (45241 effect#1), Focused Will (45242 effect#1), Shadowy Apparition (78202 effect#2), Shadowy Apparition (78203 effect#2), Shadowy Apparition (78204 effect#2), Harnessed Shadows (78228 effect#2), Dark Thoughts (84734 effect#1), Dark Evangelism (87117 effect#1), Dark Evangelism (87118 effect#1), Shadow Power (87327 effect#2), Empowered Shadow (95799 effects: #1, #2)
 Family Flags     : 42
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2705,9 +2812,10 @@ Description      : Causes $34914o2 Shadow damage over $d, and when you deal dama
 Name             : Mass Dispel (id=39897) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 70
 Range            : 30 yards
+Max Targets      : 10
 Stance Mask      : 0x08000000
 Affecting spells : Absolution (33167 effect#1), Focused Will (45241 effect#1), Focused Will (45242 effect#1), Glyph of Mass Dispel (55691 effect#1), Enlightenment (84732 effect#1), Shadow Power (87327 effect#1), Revelations (88627 effect#1), Masochism (88994 effect#1), Masochism (88995 effect#1)
 Triggered by     : Mass Dispel (32592)
@@ -2731,6 +2839,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2749,6 +2858,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2765,13 +2875,17 @@ Effects          :
 Name             : Prayer of Mending (id=41635) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 68 (max 74)
 Max Scaling Level: 74
 Range            : 50000 yards
 GCD              : 1.5 seconds
 Duration         : 30 seconds
+Stacks           : 5 maximum
+Proc Chance      : 100%
 Stance Mask      : 0x80000000
+Proc Flags       : ...x.x.x .x...x.x .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Heal Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Mental Agility (14520 effect#1), Chakra (14751 effect#2), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Healing Trance (37706 effect#1), Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1), Grace (47930 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1), Chakra: Sanctuary (81206 effect#1), Spiritual Healing (87336 effect#1)
 Family Flags     : 37
 Attributes       : ........ ........ x....... ........   ........ ..x..... ........ ........ 
@@ -2812,6 +2926,9 @@ Name             : Focused Will (desc=Rank 1) (id=45234) [Passive, Hidden]
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -2833,6 +2950,8 @@ Class            : Priest
 School           : Holy
 Spell Type       : None
 Duration         : 8 seconds
+Stacks           : 2 maximum
+Proc Chance      : 101%
 Triggered by     : Focused Will (45234)
 Attributes       : ........ ........ ........ x..x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2857,6 +2976,8 @@ Class            : Priest
 School           : Holy
 Spell Type       : None
 Duration         : 8 seconds
+Stacks           : 2 maximum
+Proc Chance      : 101%
 Triggered by     : Focused Will (45243)
 Attributes       : ........ ........ ........ x..x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2880,6 +3001,9 @@ Name             : Focused Will (desc=Rank 2) (id=45243) [Passive, Hidden]
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -2899,6 +3023,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2917,6 +3042,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2934,6 +3060,9 @@ Name             : Divine Aegis (desc=Rank 1) (id=47509) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ..x..x.. ........   ........ ........ ........ ........   
+                 : Magic Heal, Periodic, Helpful Periodic
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -2952,6 +3081,9 @@ Name             : Divine Aegis (desc=Rank 2) (id=47511) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ..x..x.. ........   ........ ........ ........ ........   
+                 : Magic Heal, Periodic, Helpful Periodic
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -2970,6 +3102,9 @@ Name             : Divine Aegis (desc=Rank 3) (id=47515) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ..x..x.. ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal, Periodic, Helpful Periodic
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -2988,6 +3123,10 @@ Name             : Grace (desc=Rank 1) (id=47516) [Spell Family (6), Passive, Hi
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Stacks           : 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3008,6 +3147,10 @@ Name             : Grace (desc=Rank 2) (id=47517) [Spell Family (6), Passive, Hi
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Stacks           : 3 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -3028,6 +3171,7 @@ Name             : Rapture (desc=Rank 1) (id=47535) [Spell Family (6), Passive, 
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -3052,6 +3196,7 @@ Name             : Rapture (desc=Rank 2) (id=47536) [Spell Family (6), Passive, 
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -3076,6 +3221,7 @@ Name             : Rapture (desc=Rank 3) (id=47537) [Spell Family (6), Passive, 
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -3105,7 +3251,9 @@ Spell Level      : 10
 Range            : 30 yards
 GCD              : 1.5 seconds
 Cooldown         : 12 seconds
+Category         : 1230
 Category Cooldown: 12 seconds
+Proc Chance      : 101%
 Affecting spells : Glyph of Penance (63235 effect#1), Evangelism (81660 effect#2), Evangelism (81661 effect#2), Enlightenment (84732 effect#1), Holy Focus (84733 effect#1), Aggression (84735 effect#1), Shadow Power (87327 effect#1), Revelations (88627 effect#1), Masochism (88994 effect#1), Masochism (88995 effect#1)
 Family Flags     : 55
 Attributes       : ........ x....... x....... .....x..   ..x....x ..x...x. ........ ....x... 
@@ -3126,6 +3274,7 @@ Name             : Test of Faith (desc=Rank 1) (id=47558) [Spell Family (6), Pas
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3150,6 +3299,7 @@ Name             : Test of Faith (desc=Rank 2) (id=47559) [Spell Family (6), Pas
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3172,6 +3322,7 @@ Name             : Test of Faith (desc=Rank 3) (id=47560) [Spell Family (6), Pas
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3194,6 +3345,7 @@ Name             : Phantasm (desc=Rank 1) (id=47569) [Spell Family (6), Passive,
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3214,6 +3366,7 @@ Name             : Phantasm (desc=Rank 2) (id=47570) [Spell Family (6), Passive,
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3284,6 +3437,9 @@ Name             : Pain and Suffering (desc=Rank 1) (id=47580) [Spell Family (6)
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 30%
+Proc Flags       : ........ ........ x.x..x.. ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3306,6 +3462,9 @@ Name             : Pain and Suffering (desc=Rank 2) (id=47581) [Spell Family (6)
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 60%
+Proc Flags       : ........ ........ x.x..x.. ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell, Periodic, Helpful Periodic
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Mind Melt (14910 effect#1), Harnessed Shadows (33191 effect#2), Misery (33192 effect#1), Mind Melt (33371 effect#1), Focused Will (45241 effect#1), Focused Will (45242 effect#1), Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Inner Will (73413 effect#1), Shadowy Apparition (78202 effect#1), Shadowy Apparition (78203 effect#1), Shadowy Apparition (78204 effect#1), Harnessed Shadows (78228 effect#2), Chakra: Serenity (81208 effect#1), Shadow Power (87327 effect#2), Spiritual Healing (87336 effects: #1, #2)
 Family Flags     : 23
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
@@ -3364,6 +3523,7 @@ Name             : Twin Disciplines (desc=Rank 1) (id=47586) [Spell Family (6), 
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3387,6 +3547,7 @@ Name             : Twin Disciplines (desc=Rank 2) (id=47587) [Spell Family (6), 
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3410,6 +3571,7 @@ Name             : Twin Disciplines (desc=Rank 3) (id=47588) [Spell Family (6), 
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Benediction (23236 effect#1), Increased Holy Criticals (23435 effect#1), Rapid Healing (24546 effect#2), Twin Disciplines (47587 effect#1), Grace (47930 effect#1), Glyph of Holy Nova (55683 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1)
 Family Flags     : 22
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
@@ -3434,10 +3596,11 @@ Description      : Increases your Shadow and Holy spell damage and healing by $s
 Name             : Penance (id=47666) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 60
 Range            : 30 yards
 Velocity         : 40 yards/sec
+Proc Chance      : 101%
 Affecting spells : Pain and Suffering (47580 effect#2), Pain and Suffering (47581 effect#2), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Evangelism (81659 effect#1), Evangelism (81660 effect#1), Evangelism (81661 effect#1), Evangelism (81662 effect#1), Aggression (84735 effect#1), Shadow Power (87327 effect#2)
 Triggered by     : Penance (47758)
 Family Flags     : 47
@@ -3458,10 +3621,11 @@ Description      : Launches a volley of holy light at the target, causing $47666
 Name             : Penance (id=47750) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 60
 Range            : 40 yards
 Velocity         : 40 yards/sec
+Proc Chance      : 101%
 Affecting spells : Grace (47516 effect#1), Grace (47517 effect#1), Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Grace (47930 effect#1), Renewed Hope (57470 effect#1), Renewed Hope (57472 effect#1), Grace (77613 effect#1), Evangelism (81659 effect#1), Evangelism (81662 effect#1), Aggression (84735 effect#1), Spiritual Healing (87336 effect#1)
 Triggered by     : Penance (47757)
 Family Flags     : 48
@@ -3482,10 +3646,11 @@ Description      : Launches a volley of holy light at the target, causing $47666
 Name             : Divine Aegis (desc=Rank 1) (id=47753) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 100 yards
 Duration         : 15 seconds
+Proc Chance      : 101%
 Affecting spells : Rapture (47535 effect#2), Rapture (47536 effect#2), Rapture (47537 effect#2)
 Family Flags     : 56
 Attributes       : ........ ........ x.x..... ...x....   ........ ..x..... ........ ........ 
@@ -3511,6 +3676,7 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 40 yards
 Duration         : 2 seconds
+Proc Chance      : 101%
 Affecting spells : Grace (47516 effect#1), Grace (47517 effect#1), Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Grace (47930 effect#1), Renewed Hope (57470 effect#1), Renewed Hope (57472 effect#1), Grace (77613 effect#1), Evangelism (81659 effect#1), Evangelism (81662 effect#1), Enlightenment (84732 effect#1), Holy Focus (84733 effect#1), Aggression (84735 effect#1), Shadow Power (87327 effect#1), Spiritual Healing (87336 effect#1), Revelations (88627 effect#1), Masochism (88994 effect#1), Masochism (88995 effect#1)
 Family Flags     : 48, 71
 Attributes       : ........ x....... x....... .....x..   ..x...xx ..x...x. ........ ..x.x... 
@@ -3535,6 +3701,7 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 30 yards
 Duration         : 2 seconds
+Proc Chance      : 101%
 Affecting spells : Enlightenment (84732 effect#1), Holy Focus (84733 effect#1), Aggression (84735 effect#1), Shadow Power (87327 effect#1), Revelations (88627 effect#1), Masochism (88994 effect#1), Masochism (88995 effect#1)
 Family Flags     : 71
 Attributes       : ........ x....... x....... .....x..   ..x....x ..x...x. ........ ..x.x... 
@@ -3587,6 +3754,8 @@ Class            : Priest
 School           : Holy
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Triggered by     : Grace (47516)
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   .......x ........ ..x..... ........ 
@@ -3610,6 +3779,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Range            : 50000 yards
+Proc Chance      : 101%
 Triggered by     : Pain and Suffering (47580), Pain and Suffering (47581)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ .x...... ........ 
@@ -3627,12 +3797,13 @@ Effects          :
 Name             : Mind Sear (id=48045) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 28% Base Mana (0) (id=235613)
 Spell Level      : 74
 Range            : 35 yards
 GCD              : 1.5 seconds
 Duration         : 5 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x08000000
 Affecting spells : Dark Thoughts (84734 effect#1)
 Family Flags     : 52
@@ -3675,11 +3846,12 @@ Description      : Heals target for $s1% of maximum health.
 Name             : Mind Trauma (id=48301) [Spell Family (6)] 
 Class            : Priest
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 GCD              : 1.5 seconds
 Duration         : 10 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x08000000
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ..x..... ........ 
@@ -3701,6 +3873,7 @@ Class            : Priest
 School           : Shadow
 Spell Type       : None
 Range            : 30 yards
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ x..x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ....x...   ........ ........ ........ .x...... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3721,8 +3894,9 @@ Tooltip          : Regenerating mana.
 Name             : Mind Sear (id=49821) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 75
+Proc Chance      : 101%
 Affecting spells : Mind Melt (14910 effect#1), Darkness (15259 effect#1), Darkness (15307 effect#1), Darkness (15308 effect#1), Misery (33192 effect#1), Mind Melt (33371 effect#1), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Glyph of Spirit Tap (63237 effect#1), Shadowy Apparition (78202 effect#1), Shadowy Apparition (78203 effect#1), Shadowy Apparition (78204 effect#1), Dark Thoughts (84734 effect#1), Shadow Power (87327 effect#2), Empowered Shadow (95799 effects: #1, #2)
 Triggered by     : Mind Sear (48045)
 Family Flags     : 51
@@ -3746,6 +3920,8 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Resource         : 32% Base Mana (0) (id=237495)
+Category         : 39
+Proc Chance      : 101%
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1), Inner Will (73413 effect#1), Dark Thoughts (84734 effect#1)
 Family Flags     : 31, 43
 Attributes       : ......x. ........ x.x..... xx.x....   ........ ........ .x...... ........ 
@@ -3769,6 +3945,9 @@ Name             : Borrowed Time (desc=Rank 1) (id=52795) [Spell Family (6), Pas
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3793,6 +3972,9 @@ Name             : Borrowed Time (desc=Rank 2) (id=52797) [Spell Family (6), Pas
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3817,6 +3999,9 @@ Name             : Borrowed Time (desc=Rank 3) (id=52798) [Spell Family (6), Pas
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3841,6 +4026,7 @@ Name             : Glyph of Power Word: Shield (id=55672) [Spell Family (6), Pas
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3861,6 +4047,7 @@ Name             : Glyph of Lightwell (id=55673) [Spell Family (6), Passive, Hid
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3901,6 +4088,7 @@ Name             : Glyph of Circle of Healing (id=55675) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3925,6 +4113,7 @@ Name             : Glyph of Psychic Scream (id=55676) [Spell Family (6), Passive
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3953,6 +4142,7 @@ Name             : Glyph of Dispel Magic (id=55677) [Spell Family (6), Passive, 
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3973,6 +4163,7 @@ Name             : Glyph of Fear Ward (id=55678) [Spell Family (6), Passive, Hid
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3997,6 +4188,9 @@ Name             : Glyph of Flash Heal (id=55679) [Spell Family (6), Passive, Hi
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4019,6 +4213,9 @@ Name             : Glyph of Prayer of Healing (id=55680) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4039,6 +4236,9 @@ Name             : Glyph of Shadow Word: Pain (id=55681) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x.x..x.. ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4059,6 +4259,7 @@ Name             : Glyph of Shadow Word: Death (id=55682) [Spell Family (6), Pas
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4081,6 +4282,7 @@ Name             : Glyph of Holy Nova (id=55683) [Spell Family (6), Passive, Hid
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4101,6 +4303,7 @@ Name             : Glyph of Fade (id=55684) [Spell Family (6), Passive, Hidden]
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4125,6 +4328,7 @@ Name             : Glyph of Prayer of Mending (id=55685) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4145,6 +4349,7 @@ Name             : Glyph of Inner Fire (id=55686) [Spell Family (6), Passive, Hi
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4165,6 +4370,7 @@ Name             : Glyph of Mind Flay (id=55687) [Spell Family (6), Passive, Hid
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4185,6 +4391,7 @@ Name             : Glyph of Psychic Horror (id=55688) [Spell Family (6), Passive
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4205,6 +4412,7 @@ Name             : Glyph of Power Word: Barrier (id=55689) [Spell Family (6), Pa
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4224,6 +4432,7 @@ Name             : Glyph of Scourge Imprisonment (id=55690) [Spell Family (6), P
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4248,6 +4457,7 @@ Name             : Glyph of Mass Dispel (id=55691) [Spell Family (6), Passive, H
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4268,6 +4478,7 @@ Name             : Glyph of Smite (id=55692) [Spell Family (6), Passive, Hidden]
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4287,9 +4498,10 @@ Description      : Your Smite spell inflicts an additional $55692s1% damage agai
 Name             : Glyph of Dispel Magic (id=56131) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 40 yards
+Proc Chance      : 101%
 Stance Mask      : 0x80000000
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Pain and Suffering (47580 effect#2), Pain and Suffering (47581 effect#2), Twin Disciplines (47587 effect#1), Twin Disciplines (47588 effect#1)
 Triggered by     : Glyph of Dispel Magic (55677)
@@ -4311,9 +4523,10 @@ Description      : Heals a friendly target for $s1% of maximum health.
 Name             : Glyph of Power Word: Shield (id=56160) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 40 yards
+Proc Chance      : 101%
 Affecting spells : Grace (47930 effect#1), Grace (77613 effect#1), Spiritual Healing (87336 effect#1)
 Family Flags     : 79
 Attributes       : ........ ........ x....... x..x....   .....x.. ........ ........ ........ 
@@ -4333,10 +4546,11 @@ Description      : Your Power Word: Shield also heals the target for $55672s1% o
 Name             : Glyph of Prayer of Healing (id=56161) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 6 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x80000000
 Family Flags     : 89
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -4359,6 +4573,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4377,6 +4592,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4396,6 +4612,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4414,6 +4631,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4432,6 +4650,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4450,6 +4669,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4468,6 +4688,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4486,6 +4707,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4505,6 +4727,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4523,6 +4746,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4541,6 +4765,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4561,6 +4786,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4579,6 +4805,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4597,6 +4824,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4616,6 +4844,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4634,6 +4863,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4653,6 +4883,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4671,6 +4902,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4690,6 +4922,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4708,6 +4941,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4727,6 +4961,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4745,6 +4980,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 2 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4763,6 +4999,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4780,6 +5017,10 @@ Name             : Renewed Hope (desc=Rank 1) (id=57470) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 15 seconds
+Proc Chance      : 50%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4802,6 +5043,10 @@ Name             : Renewed Hope (desc=Rank 2) (id=57472) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 15 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4824,6 +5069,7 @@ Name             : Glyph of Fading (id=57985) [Spell Family (6), Passive, Hidden
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4844,6 +5090,7 @@ Name             : Glyph of Shackle Undead (id=57986) [Spell Family (6), Passive
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4864,6 +5111,7 @@ Name             : Glyph of Levitate (id=57987) [Spell Family (6), Passive, Hidd
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4884,6 +5132,7 @@ Name             : Glyph of Fortitude (id=58009) [Spell Family (6), Passive, Hid
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4904,6 +5153,7 @@ Name             : Glyph of Shadow Protection (id=58015) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4924,6 +5174,7 @@ Name             : Glyph of Shadowfiend (id=58227)
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   .....x.. ........ ........ ........ 
                  : ........ ......x. ........ ....x...   ........ ........ ........ ........ 
                  : .......x ........ ........ ........   ........ ........ ........ ........ 
@@ -4943,6 +5194,7 @@ Name             : Glyph of Shadowfiend (id=58228) [Spell Family (6), Passive, H
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4964,6 +5216,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4982,6 +5235,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5001,6 +5255,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5019,6 +5274,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5038,6 +5294,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5056,6 +5313,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5076,6 +5334,7 @@ Race             : Draenei (0x400)
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5098,7 +5357,7 @@ Name             : Gift of the Naaru (desc=Racial) (id=59544) [Spell Family (6)]
 Class            : Priest
 Race             : Draenei (0x400)
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 40 yards
 Duration         : 15 seconds
@@ -5126,10 +5385,14 @@ Tooltip          : Healing $/5;s2% every $t1 seconds.
 Name             : Borrowed Time (id=59887) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 6 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Grace (47930 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1), Chakra: Sanctuary (81206 effect#3), Chakra: Serenity (81208 effect#3)
 Triggered by     : Borrowed Time (52795)
 Family Flags     : 69, 74
@@ -5153,10 +5416,14 @@ Tooltip          : $s1% spell haste until next spell cast.
 Name             : Borrowed Time (id=59888) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 6 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Grace (47930 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1), Chakra: Sanctuary (81206 effect#3), Chakra: Serenity (81208 effect#3)
 Triggered by     : Borrowed Time (52797)
 Family Flags     : 69, 74
@@ -5180,10 +5447,14 @@ Tooltip          : $s1% spell haste until next spell cast.
 Name             : Borrowed Time (id=59889) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 6 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Grace (47930 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1), Chakra: Sanctuary (81206 effect#3), Chakra: Serenity (81208 effect#3)
 Triggered by     : Borrowed Time (52798)
 Family Flags     : 69, 74
@@ -5209,6 +5480,10 @@ Class            : Priest
 School           : Holy
 Spell Type       : None
 Duration         : Aura (infinite)
+Stacks           : 10 initial, 10 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Affecting spells : Glyph of Lightwell (55673 effect#1)
 Family Flags     : 87
 Attributes       : ........ x....... ..x..... ........   ........ ..x..... ........ ........ 
@@ -5263,6 +5538,8 @@ Spell Level      : 30
 Range            : 40 yards
 Duration         : 10 seconds
 Cooldown         : 180 seconds
+Category         : 1243
+Proc Chance      : 101%
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Inner Will (73413 effect#1)
 Family Flags     : 88
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ........ 
@@ -5283,6 +5560,7 @@ Name             : Glyph of Dispersion (id=63229) [Spell Family (6), Passive, Hi
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5303,6 +5581,7 @@ Name             : Glyph of Guardian Spirit (id=63231) [Spell Family (6), Passiv
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5323,6 +5602,7 @@ Name             : Glyph of Penance (id=63235) [Spell Family (6), Passive, Hidde
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5343,6 +5623,7 @@ Name             : Glyph of Spirit Tap (id=63237) [Spell Family (6), Passive, Hi
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5363,6 +5644,7 @@ Name             : Glyph of Divine Accuracy (id=63246) [Spell Family (6), Passiv
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5383,6 +5665,7 @@ Name             : Glyph of Desperation (id=63248) [Spell Family (6), Passive, H
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5403,6 +5686,7 @@ Name             : Divine Touch (desc=Rank 1) (id=63534) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5423,6 +5707,7 @@ Name             : Divine Touch (desc=Rank 2) (id=63542) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5443,6 +5728,7 @@ Name             : Soul Warding (desc=Rank 1) (id=63574) [Spell Family (6), Pass
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5469,6 +5755,7 @@ Range            : 30 yards
 GCD              : 1.5 seconds
 Duration         : 5 seconds
 Cooldown         : 6 seconds
+Proc Chance      : 101%
 Attributes       : ....x... ........ x....... .....x..   ........ .xx..... ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5491,6 +5778,7 @@ Name             : Improved Devouring Plague (desc=Rank 1) (id=63625) [Spell Fam
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5511,6 +5799,7 @@ Name             : Improved Devouring Plague (desc=Rank 2) (id=63626) [Spell Fam
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5531,6 +5820,10 @@ Name             : Serendipity (desc=Rank 1) (id=63730) [Spell Family (6), Passi
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 0.1 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5550,8 +5843,12 @@ Description      : When you heal with Binding Heal or Flash Heal, the cast time 
 Name             : Serendipity (id=63731) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 20 seconds
+Stacks           : 1 initial, 2 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Triggered by     : Serendipity (63730)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5578,6 +5875,10 @@ Name             : Serendipity (desc=Rank 2) (id=63733) [Spell Family (6), Passi
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 0.1 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5597,8 +5898,12 @@ Description      : When you heal with Binding Heal or Flash Heal, the cast time 
 Name             : Serendipity (id=63735) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 20 seconds
+Stacks           : 1 initial, 2 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Triggered by     : Serendipity (63733)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5626,6 +5931,7 @@ Class            : Priest
 School           : Holy
 Spell Type       : None
 Duration         : 12 seconds
+Proc Chance      : 101%
 Attributes       : .......x x....... ........ ...x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5646,6 +5952,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5665,6 +5972,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5683,6 +5991,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5701,6 +6010,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5719,6 +6029,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5737,6 +6048,7 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5753,7 +6065,7 @@ Effects          :
 Name             : Psychic Horror (id=64044) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 16% Base Mana (0) (id=247829)
 Range            : 30 yards
 GCD              : 1.5 seconds
@@ -5784,6 +6096,8 @@ School           : Physical
 Spell Type       : None
 Range            : 100 yards
 Duration         : 10 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(3)
 Triggered by     : Psychic Horror (64044)
 Attributes       : ........ ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5806,6 +6120,7 @@ Name             : Body and Soul (desc=Rank 1) (id=64127) [Spell Family (6), Pas
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5832,6 +6147,7 @@ School           : Holy
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 4 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5853,6 +6169,7 @@ Name             : Body and Soul (desc=Rank 2) (id=64129) [Spell Family (6), Pas
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5876,7 +6193,7 @@ Description      : When you cast Power Word: Shield or Leap of Faith, you increa
 Name             : Divine Hymn (id=64843) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 36% Base Mana (0) (id=248246)
 Spell Level      : 78
 Range            : 40 yards
@@ -5912,6 +6229,7 @@ Spell Type       : None
 Spell Level      : 80
 Range            : 40 yards
 Duration         : 8 seconds
+Proc Chance      : 101%
 Affecting spells : Test of Faith (47558 effect#1), Test of Faith (47559 effect#1), Test of Faith (47560 effect#1), Grace (47930 effect#1), Body and Soul (64127 effect#2), Body and Soul (64129 effect#2), Grace (77613 effect#1), Chakra: Sanctuary (81206 effect#1), Spiritual Healing (87336 effect#1), Heavenly Voice (87430 effect#1), Heavenly Voice (87431 effect#1), Holy Word: Serenity (88684 effect#2)
 Triggered by     : Divine Hymn (64843)
 Family Flags     : 66
@@ -5935,7 +6253,7 @@ Tooltip          : Healing received increased by $s2%.
 Name             : Hymn of Hope (id=64901) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 64
 Range            : 40 yards
 GCD              : 1.5 seconds
@@ -5967,6 +6285,7 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 40 yards
 Duration         : 8 seconds
+Proc Chance      : 101%
 Affecting spells : Glyph of Desperation (63248 effect#1), Enlightenment (84732 effect#1), Holy Focus (84733 effects: #1, #2), Shadow Power (87327 effect#1), Revelations (88627 effect#1), Masochism (88994 effect#1), Masochism (88995 effect#1)
 Triggered by     : Hymn of Hope (64901)
 Family Flags     : 68
@@ -5982,7 +6301,7 @@ Attributes       : ........ ........ ........ ........   ...x...x ........ .....
 Effects          :
 #1 (id=969157)   : Energize Power% (137)
                    Base Value: 2 | Scaled Value: 2 | PvP Coefficient: 1.00000 | Radius: 40 yards | Target: At Caster (22) -> AOE friendly (30)
-#2 (id=969158)   : Apply Aura (6) | Increase Energy (35)
+#2 (id=969158)   : Apply Aura (6) | Modify Max Power (35) (mana)
                    Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Radius: 40 yards | Target: At Caster (22) -> AOE friendly (30)
 Description      : Restores $64904s1% mana to $64901s2 nearby low mana friendly party or raid targets every $64901t1 sec for $64901d, and increases their total maximum mana by $64904s2% for $64904d. Maximum of $*4;s2 mana restores. The Priest must channel to maintain the spell.
 Tooltip          : Maximum mana increased by $s2%.
@@ -6059,6 +6378,7 @@ Spell Type       : None
 Spell Level      : 20
 Range            : 100 yards
 Duration         : 9 seconds
+Proc Chance      : 101%
 Attributes       : ....x... ........ x.x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ....x... ........   ........ ........ ........ ........ 
@@ -6079,6 +6399,8 @@ Class            : Priest
 School           : Holy
 Spell Type       : None
 Spell Level      : 70
+Max Targets      : 10
+Proc Chance      : 101%
 Triggered by     : Mass Dispel (32375)
 Attributes       : .......x x....... x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ .x...... ........ ........ 
@@ -6097,7 +6419,7 @@ Description      : Dispels magic in a $32375a1 yard radius, removing $32375s1 ha
 Name             : Leap of Faith (id=73325) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 13% Base Mana (0) (id=276407)
 Spell Level      : 85
 Range            : 40 yards
@@ -6123,7 +6445,7 @@ Description      : You pull the spirit of the friendly party or raid target to y
 Name             : Inner Will (id=73413) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 83
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
@@ -6154,7 +6476,7 @@ Tooltip          : Reduces the mana cost of instant cast spells by $s1% and incr
 Name             : Mind Spike (id=73510) [Spell Family (6)] 
 Class            : Priest
 School           : Shadowfrost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 12% Base Mana (0) (id=276571)
 Spell Level      : 81
 Range            : 40 yards
@@ -6208,6 +6530,9 @@ Name             : Echo of Light (id=77485) [Spell Family (6), Passive, Hidden]
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6230,6 +6555,9 @@ Name             : Shadow Orb Power (desc=Passive) (id=77486) [Spell Family (6),
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
+Proc Flags       : ........ ........ x.x..x.. ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell, Periodic, Helpful Periodic
 Affecting spells : Harnessed Shadows (33191 effect#1), Harnessed Shadows (78228 effect#1), Sin and Punishment (87099 effect#1), Sin and Punishment (87100 effect#1), Paralysis (87192 effect#1), Paralysis (87195 effect#1)
 Family Flags     : 84
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ .......x 
@@ -6251,9 +6579,11 @@ Description      : $?s86475[Increases the damage done by your Shadow Orbs by ${$
 Name             : Shadow Orb (id=77487) 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Duration         : 60 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Triggered by     : Harnessed Shadows (33191), Shadow Orb Power (77486), Harnessed Shadows (78228), Shadow Orbs (95740)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6296,6 +6626,8 @@ Class            : Priest
 School           : Holy
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Triggered by     : Grace (47517)
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   .......x ........ ..x..... ........ 
@@ -6318,6 +6650,9 @@ Name             : Shadowy Apparition (desc=Rank 1) (id=78202) [Spell Family (6)
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6344,6 +6679,9 @@ Name             : Shadowy Apparition (desc=Rank 2) (id=78203) [Spell Family (6)
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6370,6 +6708,9 @@ Name             : Shadowy Apparition (id=78204) [Spell Family (6), Passive, Hid
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6396,6 +6737,9 @@ Name             : Harnessed Shadows (desc=Rank 2) (id=78228) [Spell Family (6),
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6459,7 +6803,7 @@ Description      : Reduces the cooldown of your Power Word: Shield ability by $/
 Name             : Power Word: Fortitude (id=79104) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 14
 Range            : 40 yards
 GCD              : 1.5 seconds
@@ -6485,7 +6829,7 @@ Tooltip          : Increases Stamina by $w1.
 Name             : Shadow Protection (id=79106) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 52
 Range            : 40 yards
 GCD              : 1.5 seconds
@@ -6513,6 +6857,10 @@ Class            : Priest
 School           : Shadow
 Spell Type       : None
 Duration         : 6 seconds
+Stacks           : 1 initial, 2 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Triggered by     : Mind Melt (14910)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6557,6 +6905,7 @@ Name             : Tome of Light (desc=Rank 2) (id=81625) [Spell Family (6), Pas
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6577,6 +6926,9 @@ Name             : Evangelism (desc=Rank 1) (id=81659) [Spell Family (6), Passiv
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x.x..x.. ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6608,6 +6960,8 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Duration         : 20 seconds
+Stacks           : 5 maximum
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ....x... ........   ........ ........ ........ ........ 
@@ -6642,6 +6996,8 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Duration         : 20 seconds
+Stacks           : 5 maximum
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ....x... ........   ........ ........ ........ ........ 
@@ -6675,6 +7031,9 @@ Name             : Evangelism (desc=Rank 2) (id=81662) [Spell Family (6), Passiv
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x.x..x.. ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6704,6 +7063,7 @@ Spell Type       : None
 Spell Level      : 1
 Duration         : 18 seconds
 Cooldown         : 30 seconds
+Category         : 1268
 Category Cooldown: 30 seconds
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6729,6 +7089,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
+Mechanic         : Unknown(28)
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6746,6 +7107,9 @@ Name             : Atonement (desc=Rank 2) (id=81749) [Spell Family (6), Passive
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x.x..x.. ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6765,10 +7129,11 @@ If the Priest is healed through Atonement, the effect is reduced in half.
 Name             : Power Word: Barrier (id=81782) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 5
 Range            : 50000 yards
 Duration         : 0.5 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ x.......   ........ ........ ...x.... ........ 
                  : ..x..... ........ .....x.. ........   ........ ........ ........ ......x. 
                  : ........ .....x.x ........ ........   ........ ..x..... ........ ........ 
@@ -6916,6 +7281,9 @@ Name             : Speed of Light (desc=Rank 1) (id=85495) [Spell Family (10), P
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6940,6 +7308,7 @@ School           : Holy
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 4 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ......x. 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6961,6 +7330,9 @@ Name             : Speed of Light (desc=Rank 2) (id=85498) [Spell Family (10), P
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6983,6 +7355,9 @@ Name             : Speed of Light (desc=Rank 3) (id=85499) [Spell Family (10), P
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7052,7 +7427,7 @@ Description      : Healing the target of your Beacon of Light with Flash of Ligh
 Name             : Word of Glory (id=85673) [Spell Family (10)] 
 Class            : Paladin, Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1 Holy Power (9) (id=287640)
 Spell Level      : 9
 Range            : 40 yards
@@ -7103,6 +7478,9 @@ Name             : Sin and Punishment (desc=Rank 1) (id=87099) [Spell Family (6)
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7127,6 +7505,9 @@ Name             : Sin and Punishment (desc=Rank 2) (id=87100) [Spell Family (6)
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7152,6 +7533,8 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Duration         : 20 seconds
+Stacks           : 5 maximum
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ....x... ........   ........ ........ ........ ........ 
@@ -7181,6 +7564,8 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Duration         : 20 seconds
+Stacks           : 5 maximum
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ....x... ........   ........ ........ ........ ........ 
@@ -7210,6 +7595,7 @@ Class            : Priest
 School           : Holy
 Spell Type       : None
 Spell Level      : 1
+Category         : 1268
 Family Flags     : 72
 Attributes       : ........ ........ x.x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7265,6 +7651,7 @@ Spell Type       : None
 Spell Level      : 1
 Duration         : 18 seconds
 Cooldown         : 90 seconds
+Category         : 1268
 Category Cooldown: 90 seconds
 Family Flags     : 72
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -7299,6 +7686,10 @@ Class            : Priest
 School           : Shadow
 Spell Type       : None
 Duration         : 6 seconds
+Stacks           : 1 initial, 2 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Triggered by     : Mind Melt (33371)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7320,10 +7711,12 @@ Tooltip          : Reduces the cast time of your Mind Blast by $s1%.
 Name             : Mind Spike (id=87178) [Spell Family (6)] 
 Class            : Priest
 School           : Shadowfrost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 12 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Affecting spells : Dark Thoughts (84734 effect#1)
 Triggered by     : Mind Spike (73510)
 Family Flags     : 81
@@ -7350,6 +7743,9 @@ Name             : Paralysis (desc=Rank 1) (id=87192) [Spell Family (6), Passive
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7369,10 +7765,11 @@ Description      : When you critically hit with your Mind Blast, you cause the t
 Name             : Paralysis (id=87193) 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 2 seconds
+Mechanic         : Unknown(7)
 Triggered by     : Paralysis (87192)
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ..x..... ........ 
@@ -7392,10 +7789,11 @@ Tooltip          : Paralyzed.
 Name             : Paralysis (id=87194) 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 4 seconds
+Mechanic         : Unknown(7)
 Triggered by     : Paralysis (87195)
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ..x..... ........ 
@@ -7416,6 +7814,9 @@ Name             : Paralysis (desc=Rank 2) (id=87195) [Spell Family (6), Passive
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7435,12 +7836,17 @@ Description      : When you critically hit with your Mind Blast, you cause the t
 Name             : Sin and Punishment (id=87204) [Spell Family (5)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
+Max Targets      : 5
 GCD              : 1.5 seconds
 Duration         : 3 seconds
 Cooldown         : 40 seconds
 Category Cooldown: 40 seconds
+Proc Chance      : 100%
+Mechanic         : Unknown(24)
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ........ ........ x....... ..x...x.   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7530,7 +7936,7 @@ Description      : Allows you to benefit from mastery rating.  Check your talent
 Name             : Shadowy Apparition (id=87532) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 5 yards
 Cooldown         : 10 seconds
@@ -7550,35 +7956,10 @@ Description      : When you deal periodic damage with your Shadow Word: Pain, yo
     
 While moving, the chance to summon the shadowy apparation is increased.
 
-Name             : Running Wild (desc=Racial) (id=87840) 
-Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Druid
-Race             : Worgen (0x200000)
-School           : Physical
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Attributes       : ....x... .......x x...x... ....x...   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ...x....   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Is Ability (4), Only Outdoors (15), Not Shapeshifted (16), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), Ignore Caster Modifiers (125), Force Display Castbar (155), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#1 (id=89943)    : Apply Aura (6) | Dummy (4)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000
-#3 (id=104313)   : Apply Aura (6) | Unknown(358)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Drop to all fours to run as fast as a wild animal.
-Tooltip          : $?j2g[Increases ground speed by $j2g%. ][]$?j2f[Increases flight speed by $j2f%. ][]$?j2s[Increases swim speed by $j2s%. ][]
-
 Name             : Holy Word: Chastise (id=88625) [Spell Family (6)] 
 Class            : Paladin, Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 15% Base Mana (0) (id=290638)
 Spell Level      : 1
 Range            : 30 yards
@@ -7608,6 +7989,9 @@ Name             : Surge of Light (desc=Rank 1) (id=88687) [Spell Family (6), Pa
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 3%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7651,6 +8035,9 @@ Name             : Surge of Light (desc=Rank 2) (id=88690) [Spell Family (6), Pa
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 6%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7672,6 +8059,9 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Duration         : 12 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Triggered by     : Daybreak (88820), Daybreak (88821)
 Attributes       : ....x... ........ ........ .....x..   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7695,6 +8085,9 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 10%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7716,6 +8109,9 @@ Class            : Priest
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 20%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7755,6 +8151,9 @@ Name             : Masochism (id=88994) [Spell Family (6), Passive, Hidden]
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7777,6 +8176,9 @@ Name             : Masochism (id=88995) [Spell Family (6), Passive, Hidden]
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7818,7 +8220,7 @@ Description      : When you take a damaging attack equal to or greater than $889
 Name             : Inner Focus (id=89485) [Spell Family (6)] 
 Class            : Priest
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Duration         : Aura (infinite)
 Cooldown         : 45 seconds
 Affecting spells : Glyph of Power Word: Shield (55672 effect#1), Inner Will (73413 effect#1)
@@ -7848,6 +8250,9 @@ Name             : Strength of Soul (desc=Rank 1) (id=89488) [Spell Family (6), 
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7868,6 +8273,9 @@ Name             : Strength of Soul (desc=Rank 2) (id=89489) [Spell Family (6), 
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7926,6 +8334,9 @@ Name             : Train of Thought (desc=Rank 1) (id=92295) [Spell Family (6), 
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7950,6 +8361,9 @@ Name             : Train of Thought (desc=Rank 1) (id=92297) [Spell Family (6), 
 Class            : Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. x....... ........   ........ ........ ........ ........   
+                 : Magic Heal, Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7971,7 +8385,7 @@ You have a $h% chance when you Smite to reduce the cooldown of your Penance by $
 Name             : Leap of Faith (id=92572) [Spell Family (6), Hidden] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 85
 Range            : 50000 yards
 Duration         : 1.5 seconds
@@ -8049,6 +8463,9 @@ Name             : Glyph of the Long Word (id=93466) [Spell Family (10), Passive
 Class            : Paladin, Priest
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8155,7 +8572,7 @@ Description      : Enables Worgens to switch between human and Worgan forms
 Name             : Atonement (id=94472) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Stance Mask      : 0x80000000
@@ -8237,9 +8654,11 @@ Description      : You have a $77486h% chance for your Shadow Word: Pain and Min
 Name             : Empowered Shadow (id=95799) [Spell Family (6)] 
 Class            : Priest
 School           : Shadow
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Duration         : 15 seconds
+Stacks           : 1 maximum
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8352,7 +8771,7 @@ Tooltip          : Immune to Silence, Interrupt and Dispel effects.
 Name             : Prayer of Healing (id=98367) [Spell Family (6), Hidden] 
 Class            : Priest
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Stance Mask      : 0x80000000

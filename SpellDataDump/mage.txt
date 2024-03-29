@@ -1,13 +1,14 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
 Name             : Blizzard (id=10) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 74% Base Mana (0) (id=169192)
 Spell Level      : 52
 Range            : 35 yards
 GCD              : 1.5 seconds
 Duration         : 8 seconds
+Proc Chance      : 100%
 Affecting spells : Burning Soul (11083 effect#1), Shatter (11170 effect#1), Ice Shards (11185 effect#1), Arcane Power (12042 effects: #1, #2), Icy Veins (12472 effect#2), Ice Shards (12487 effect#1), Clearcasting (12536 effect#1), Shatter (12982 effect#1), Slow (31589 effects: #1, #2, #3), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Frostburn (76613 effect#1), Piercing Chill (83156 effect#1), Piercing Chill (83157 effect#1), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1), Dark Intent (85759 effect#2), Molten Fury (86880 effect#1)
 Family Flags     : 7, 19
 Attributes       : ........ ........ x....... ........   ..xx...x ........ ........ ....x... 
@@ -39,12 +40,13 @@ $mult=${$<arctic5>*$<piercing3>}
 Name             : Invisibility (id=66) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 16% Base Mana (0) (id=169403)
 Spell Level      : 78
 GCD              : 1.5 seconds
 Duration         : 3 seconds
 Cooldown         : 180 seconds
+Category         : 1162
 Affecting spells : Prismatic Cloak (31574 effect#2), Prismatic Cloak (31575 effect#2), Improved Mana Gem (31584 effect#1), Improved Mana Gem (31585 effect#1), Arcane Flows (44378 effect#1), Arcane Flows (44379 effect#1), Prismatic Cloak (54354 effect#2)
 Family Flags     : 31, 50
 Attributes       : ........ ........ x...x... ........   ........ ..x..... .x...... ........ 
@@ -67,7 +69,7 @@ Tooltip          : Fading.
 Name             : Frostbolt (id=116) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 13% Base Mana (0) (id=169202)
 Spell Level      : 7
 Range            : 35 yards
@@ -75,6 +77,7 @@ Cast Time        : 1.5 seconds
 GCD              : 1.5 seconds
 Velocity         : 28 yards/sec
 Duration         : 9 seconds
+Proc Chance      : 101%
 Affecting spells : Burning Soul (11083 effect#1), Piercing Ice (11151 effect#1), Shatter (11170 effect#1), Permafrost (11175 effects: #1, #2, #3), Arcane Power (12042 effects: #1, #2), Presence of Mind (12043 effect#1), Icy Veins (12472 effect#2), Clearcasting (12536 effect#1), Permafrost (12569 effects: #1, #2, #3), Permafrost (12571 effects: #1, #2, #3), Piercing Ice (12952 effect#1), Piercing Ice (12953 effect#1), Shatter (12982 effect#1), Frosty Zap (24392 effect#1), Improved Counterspell (24429 effect#1), Slow (31589 effects: #1, #2), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Glyph of Frostbolt (56370 effect#1), Glyph of Ice Block (56372 effect#1), Frostburn (76613 effect#1), Early Frost (83049 effects: #1, #2), Early Frost (83050 effects: #1, #2), Piercing Chill (83156 effect#1), Piercing Chill (83157 effect#1), Early Frost (83162 effects: #1, #2), Early Frost (83239 effects: #1, #2), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1), Frost Specialization (84669 effect#3), Molten Fury (86880 effect#1)
 Family Flags     : 5
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -100,12 +103,13 @@ Healing received reduced by $w3%.][]
 Name             : Cone of Cold (id=120) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 25% Base Mana (0) (id=177052)
 Spell Level      : 18
 GCD              : 1.5 seconds
 Duration         : 8 seconds
 Cooldown         : 10 seconds
+Category         : 50
 Category Cooldown: 10 seconds
 Affecting spells : Shatter (11170 effect#1), Permafrost (11175 effects: #1, #2, #3), Improved Cone of Cold (11190 effect#1), Arcane Power (12042 effects: #1, #2), Improved Cone of Cold (12489 effect#1), Clearcasting (12536 effect#1), Permafrost (12569 effects: #1, #2, #3), Permafrost (12571 effects: #1, #2, #3), Shatter (12982 effect#1), Slow (31589 effects: #1, #2), Ice Floes (31670 effect#1), Ice Floes (31672 effect#1), Arctic Winds (31674 effects: #1, #2, #3), Arctic Winds (31675 effects: #1, #2, #3), Arctic Winds (31676 effects: #1, #2, #3), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Ice Floes (55094 effect#1), Glyph of Cone of Cold (56364 effect#1), Frostburn (76613 effect#1), Piercing Chill (83156 effect#1), Piercing Chill (83157 effect#1), Improved Freeze (86259 effect#1), Improved Freeze (86260 effect#1), Improved Freeze (86314 effect#1), Molten Fury (86880 effect#1)
 Family Flags     : 9
@@ -141,13 +145,17 @@ $mult=${$<arctic5>*$<piercing3>}
 Name             : Frost Nova (id=122) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 7% Base Mana (0) (id=169347)
 Spell Level      : 8
 GCD              : 1.5 seconds
 Duration         : 8 seconds
 Cooldown         : 25 seconds
+Category         : 35
 Category Cooldown: 25 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Shatter (11170 effect#1), Arcane Power (12042 effects: #1, #2), Clearcasting (12536 effect#1), Shatter (12982 effect#1), Slow (31589 effects: #1, #2), Ice Floes (31670 effect#1), Ice Floes (31672 effect#1), Arctic Winds (31674 effects: #2, #3), Arctic Winds (31675 effects: #2, #3), Arctic Winds (31676 effects: #2, #3), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Brain Freeze (44546 effect#1), Brain Freeze (44548 effect#1), Brain Freeze (44549 effect#1), Ice Floes (55094 effect#1), Glyph of Frost Nova (56376 effect#1), Frostburn (76613 effect#1), Piercing Chill (83156 effect#1), Piercing Chill (83157 effect#1), Molten Fury (86880 effect#1)
 Family Flags     : 6
 Attributes       : ........ ........ x....... ......x.   ...x...x ........ ........ ........ 
@@ -179,13 +187,14 @@ $mult=${$<arctic5>*$<piercing3>}
 Name             : Fireball (id=133) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 9% Base Mana (0) (id=169221)
 Spell Level      : 1
 Range            : 40 yards
 Cast Time        : 1.5 seconds
 GCD              : 1.5 seconds
 Velocity         : 24 yards/sec
+Proc Chance      : 101%
 Affecting spells : Burning Soul (11083 effect#1), Combustion (11129 effect#1), Shatter (11170 effect#1), Arcane Power (12042 effects: #1, #2), Presence of Mind (12043 effect#1), Icy Veins (12472 effect#2), Clearcasting (12536 effect#1), Shatter (12982 effect#1), Fire Power (18459 effect#1), Fire Power (18460 effect#1), Slow (31589 effects: #1, #2, #3), Blazing Speed (31641 effect#1), Blazing Speed (31642 effect#1), Blazing Speed (31643 effect#1), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Backlash (34935 effect#1), Backlash (34938 effect#1), Living Bomb (44457 effect#1), Living Bomb (44461 effect#1), Owlkin Frenzy (48389 effect#1), Owlkin Frenzy (48392 effect#1), Owlkin Frenzy (48393 effect#1), Fire Power (54734 effect#1), Glyph of Fireball (56368 effect#1), Brain Freeze (57761 effects: #1, #2), Frostburn (76613 effect#1), Fire Power (83619 effect#1), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1), Molten Fury (86880 effect#1)
 Family Flags     : 0, 67
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -205,7 +214,7 @@ Description      : Hurls a fiery ball that causes $s1 Fire damage.
 Name             : Remove Curse (id=475) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 8% Base Mana (0) (id=169669)
 Spell Level      : 30
 Range            : 40 yards
@@ -229,12 +238,13 @@ Description      : Removes $m1 Curse from a friendly target.
 Name             : Mage Ward (id=543) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 16% Base Mana (0) (id=169111)
 Spell Level      : 36
 GCD              : 1.5 seconds
 Duration         : 30 seconds
 Cooldown         : 30 seconds
+Category         : 56
 Category Cooldown: 30 seconds
 Affecting spells : Molten Shields (11094 effect#1), Glyph of Drain Soul (58070 effect#1)
 Family Flags     : 3, 67
@@ -260,7 +270,7 @@ Tooltip          : Absorbs $w1 Fire, Frost or Arcane damage.
 Name             : Conjure Mana Gem (id=759) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 75% Base Mana (0) (id=169617)
 Spell Level      : 48
 Cast Time        : 3 seconds
@@ -286,7 +296,7 @@ Description      : Conjures a mana gem that can be used to instantly restore $27
 Name             : Arcane Explosion (id=1449) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 15% Base Mana (0) (id=170093)
 Spell Level      : 22
 GCD              : 1.5 seconds
@@ -309,7 +319,7 @@ Description      : Causes an explosion of arcane magic around the caster, causin
 Name             : Arcane Brilliance (id=1459) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 26% Base Mana (0) (id=169941)
 Spell Level      : 58
 Range            : 30 yards
@@ -333,11 +343,13 @@ Description      : Infuses all party and raid members with brilliance, increasin
 Name             : Mana Shield (id=1463) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 46
 GCD              : 1.5 seconds
 Duration         : 60 seconds
 Cooldown         : 12 seconds
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Arcane Power (12042 effect#3), Mana Shield Absorb Increase (23037 effect#1), Improved Mana Gem (31584 effect#1), Improved Mana Gem (31585 effect#1), Glyph of Mana Shield (70937 effect#1)
 Family Flags     : 15, 67
 Attributes       : ........ ........ x....... ........   ........ ..x..... ........ ........ 
@@ -358,12 +370,13 @@ Tooltip          : Absorbing up to $w1 damage, draining mana instead.
 Name             : Blink (id=1953) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 12% Base Mana (0) (id=171323)
 Spell Level      : 16
 GCD              : 1.5 seconds
 Duration         : 1 seconds
 Cooldown         : 15 seconds
+Category         : 44
 Category Cooldown: 15 seconds
 Affecting spells : Arcane Power (12042 effect#3), Improved Mana Gem (31584 effect#1), Improved Mana Gem (31585 effect#1), Reduced Blink GCD (44301 effect#1), Improved Blink (46989 effect#1), Improved Blink (47000 effect#1), Glyph of Blink (56365 effect#1)
 Family Flags     : 16
@@ -389,7 +402,7 @@ Tooltip          : Blinking.
 Name             : Flamestrike (id=2120) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 30% Base Mana (0) (id=170626)
 Spell Level      : 44
 Range            : 40 yards
@@ -418,12 +431,13 @@ Tooltip          : $s2 Fire damage every $t2 seconds.
 Name             : Fire Blast (id=2136) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 21% Base Mana (0) (id=171277)
 Spell Level      : 5
 Range            : 30 yards
 GCD              : 1.5 seconds
 Cooldown         : 8 seconds
+Category         : 19
 Category Cooldown: 8 seconds
 Affecting spells : Improved Fire Blast (11078 effects: #1, #2), Improved Fire Blast (11080 effects: #1, #2), Combustion (11129 effect#1), Shatter (11170 effect#1), Arcane Power (12042 effects: #1, #2), Clearcasting (12536 effect#1), Shatter (12982 effect#1), Slow (31589 effects: #1, #2), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Mage Fire Blast Range Bonus (33066 effect#1), Living Bomb (44457 effect#1), Living Bomb (44461 effect#1), Frostburn (76613 effect#1), Molten Fury (86880 effect#1)
 Family Flags     : 1
@@ -444,13 +458,15 @@ Description      : Blasts the enemy for $s1 Fire damage.
 Name             : Counterspell (id=2139) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 9% Base Mana (0) (id=170724)
 Spell Level      : 9
 Range            : 40 yards
 Duration         : 7 seconds
 Cooldown         : 24 seconds
+Category         : 88
 Category Cooldown: 24 seconds
+Mechanic         : Unknown(26)
 Affecting spells : Improved Counterspell (24429 effect#1), Improved Mana Gem (31584 effect#1), Improved Mana Gem (31585 effect#1)
 Family Flags     : 14
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -470,7 +486,7 @@ Description      : Counters the enemy's spellcast, preventing any spell from tha
 Name             : Scorch (id=2948) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 8% Base Mana (0) (id=171233)
 Spell Level      : 26
 Range            : 40 yards
@@ -495,7 +511,7 @@ Description      : Scorch the enemy for $s1 Fire damage.
 Name             : Shoot (id=5019) 
 Class            : Priest, Mage, Warlock
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 30 yards
 Cast Time        : 0.5 seconds
@@ -548,7 +564,7 @@ Description      : Launches $?<?s83515>[five]?<?s83513>[four][three] waves of Ar
 Name             : Mage Armor (id=6117) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 68
 GCD              : 1.5 seconds
 Duration         : 1800 seconds
@@ -576,7 +592,7 @@ Tooltip          : Resistance to all magic schools increased by $s1 and regenera
 Name             : Arcane Missiles (id=7268) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 3
 Range            : 60 yards
 Velocity         : 20 yards/sec
@@ -600,10 +616,13 @@ Description      : Launches Arcane Missiles at the enemy, causing $7268s1 Arcane
 Name             : Frost Armor (id=7302) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 54
 GCD              : 1.5 seconds
 Duration         : 1800 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Affecting spells : Shatter (11170 effect#1), Shatter (12982 effect#1), Frostburn (76613 effect#1), Glyph of Armors (89749 effect#1), Glyph of Frost Armor (98397 effect#1)
 Family Flags     : 19, 25
 Attributes       : ........ ........ x....... ........   ........ ..x..... ........ ........ 
@@ -631,10 +650,11 @@ Regaining $w2% of maximum mana every $t2 sec.][]
 Name             : Chilled (id=7321) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 30
 Range            : 30 yards
 Duration         : 5 seconds
+Mechanic         : Unknown(11)
 Affecting spells : Permafrost (11175 effects: #1, #2, #3), Permafrost (12569 effects: #1, #2, #3), Permafrost (12571 effects: #1, #2, #3)
 Triggered by     : Frost Armor (7302)
 Family Flags     : 20
@@ -759,6 +779,9 @@ Name             : Critical Mass (desc=Rank 1) (id=11095) [Spell Family (3), Pas
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 33%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -788,6 +811,9 @@ Class            : Mage
 School           : Fire
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 5%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -805,13 +831,14 @@ Description      : Gives your damaging spells a $h% chance to reset the cooldown
 Name             : Blast Wave (id=11113) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 7% Base Mana (0) (id=176827)
 Spell Level      : 1
 Range            : 40 yards
 GCD              : 0.5 seconds
 Duration         : 3 seconds
 Cooldown         : 15 seconds
+Category         : 250
 Category Cooldown: 15 seconds
 Affecting spells : Combustion (11129 effect#1), Shatter (11170 effect#1), Arcane Power (12042 effects: #1, #2), Clearcasting (12536 effect#1), Shatter (12982 effect#1), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Glyph of Blast Wave (62126 effect#1), Frostburn (76613 effect#1), Improved Flamestrike (84673 effect#1), Improved Flamestrike (84674 effect#1), Molten Fury (86880 effect#1)
 Family Flags     : 38
@@ -858,6 +885,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -877,6 +907,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -894,10 +927,11 @@ Description      : Your critical strikes from non-periodic Fire damage spells ca
 Name             : Combustion (id=11129) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 5
 Range            : 40 yards
 Cooldown         : 120 seconds
+Proc Chance      : 101%
 Affecting spells : Fire Specialization (84668 effect#2)
 Family Flags     : 58, 67
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ........ 
@@ -967,6 +1001,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1061,6 +1098,10 @@ Class            : Mage
 School           : Arcane
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 15 seconds
+Proc Chance      : 13%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1080,6 +1121,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1097,7 +1141,7 @@ Description      : Your Counterspell also silences the target for $18469d.
 Name             : Pyroblast (id=11366) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 17% Base Mana (0) (id=177460)
 Spell Level      : 10
 Range            : 40 yards
@@ -1105,6 +1149,8 @@ Cast Time        : 5 seconds
 GCD              : 1.5 seconds
 Velocity         : 24 yards/sec
 Duration         : 12 seconds
+Category         : 290
+Proc Chance      : 101%
 Affecting spells : Burning Soul (11083 effect#1), Combustion (11129 effect#1), Shatter (11170 effect#1), Arcane Power (12042 effects: #1, #2), Presence of Mind (12043 effect#1), Icy Veins (12472 effect#2), Clearcasting (12536 effect#1), Shatter (12982 effect#1), Slow (31589 effects: #1, #2, #3), Blazing Speed (31641 effect#1), Blazing Speed (31642 effect#1), Blazing Speed (31643 effect#1), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Backlash (34935 effect#1), Backlash (34938 effect#1), Living Bomb (44457 effect#1), Living Bomb (44461 effect#1), Hot Streak (48108 effect#1), Owlkin Frenzy (48389 effect#1), Owlkin Frenzy (48392 effect#1), Owlkin Frenzy (48393 effect#1), Glyph of Pyroblast (56384 effect#1), Flashburn (76595 effect#1), Frostburn (76613 effect#1), Fire Power (83619 effect#1), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1), Dark Intent (85759 effect#1), Molten Fury (86880 effect#1)
 Family Flags     : 22, 67, 76
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -1148,12 +1194,13 @@ Description      : Reduces the mana cost of your Scorch spell by $s1%.
 Name             : Ice Barrier (id=11426) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 21% Base Mana (0) (id=177453)
 Spell Level      : 1
 GCD              : 1.5 seconds
 Duration         : 60 seconds
 Cooldown         : 30 seconds
+Category         : 471
 Category Cooldown: 30 seconds
 Affecting spells : Ice Floes (31670 effect#1), Ice Floes (31672 effect#1), Arctic Winds (31674 effect#1), Arctic Winds (31675 effect#1), Arctic Winds (31676 effect#1), Ice Floes (55094 effect#1), Glyph of Ice Barrier (63095 effect#1)
 Family Flags     : 32, 67
@@ -1178,7 +1225,7 @@ $absorb=$?s63095[${$<base>*1.3}][${$<base>}]
 Name             : Cold Snap (id=11958) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Cooldown         : 480 seconds
 Affecting spells : Ice Floes (31670 effect#1), Ice Floes (31672 effect#1), Ice Floes (55094 effect#1)
@@ -1200,10 +1247,11 @@ Description      : When activated, this spell finishes the cooldown on all Frost
 Name             : Arcane Power (id=12042) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Duration         : 15 seconds
 Cooldown         : 120 seconds
+Category         : 1151
 Category Cooldown: 15 seconds
 Affecting spells : Icy Veins (12472 effect#2), Arcane Flows (44378 effect#1), Arcane Flows (44379 effect#1), Glyph of Arcane Power (56381 effects: #1, #2), Item - Mage T12 4P Bonus (99064 effect#1)
 Family Flags     : 51, 67
@@ -1236,10 +1284,14 @@ Tooltip          : $?$w2=10[Increased damage and mana cost for your damaging spe
 Name             : Presence of Mind (id=12043) [Spell Family (3)] 
 Class            : Mage
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Duration         : Aura (infinite)
 Cooldown         : 120 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Affecting spells : Arcane Potency (31571 effect#1), Arcane Potency (31572 effect#1), Arcane Flows (44378 effect#1), Arcane Flows (44379 effect#1)
 Family Flags     : 37, 67
 Attributes       : ........ ........ x.x..... .x......   ........ ..x..... ........ ........ 
@@ -1289,7 +1341,7 @@ Tooltip          : Gain $s1% of total mana $?$w2=0[][and $w2% of total health ]e
 Name             : Impact (id=12355) 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 2 seconds
@@ -1316,6 +1368,9 @@ Class            : Mage
 School           : Fire
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 10%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1333,7 +1388,7 @@ Description      : Gives your damaging spells a $h% chance to reset the cooldown
 Name             : Icy Veins (id=12472) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 3% Base Mana (0) (id=178017)
 Spell Level      : 1
 Duration         : 20 seconds
@@ -1362,10 +1417,11 @@ Tooltip          : Casting speed of all spells increased by $s1% and reduces pus
 Name             : Chilled (desc=Rank 1) (id=12484) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 2 seconds
+Mechanic         : Unknown(11)
 Affecting spells : Permafrost (11175 effects: #1, #2, #3), Permafrost (12569 effects: #1, #2, #3), Permafrost (12571 effects: #1, #2, #3)
 Family Flags     : 20
 Attributes       : ........ x....... ........ ........   ...x...x ........ ........ ........ 
@@ -1389,10 +1445,11 @@ Healing received reduced by $w3%.][]
 Name             : Chilled (desc=Rank 2) (id=12485) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 50000 yards
 Duration         : 2 seconds
+Mechanic         : Unknown(11)
 Affecting spells : Permafrost (11175 effects: #1, #2, #3), Permafrost (12569 effects: #1, #2, #3), Permafrost (12571 effects: #1, #2, #3)
 Family Flags     : 20
 Attributes       : ........ x....... ........ ........   ...x...x ........ ........ ........ 
@@ -1462,10 +1519,14 @@ Description      : Your Cone of Cold also freezes targets for $83302d.
 Name             : Clearcasting (id=12536) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 15 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Affecting spells : Arcane Potency (31571 effect#1), Arcane Potency (31572 effect#1)
 Triggered by     : Arcane Concentration (11213), Arcane Concentration (12574), Arcane Concentration (12575)
 Family Flags     : 33, 67
@@ -1491,6 +1552,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1520,6 +1584,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1549,6 +1616,10 @@ Class            : Mage
 School           : Arcane
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 15 seconds
+Proc Chance      : 27%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1568,6 +1639,10 @@ Class            : Mage
 School           : Arcane
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 15 seconds
+Proc Chance      : 40%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1606,6 +1681,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1651,6 +1729,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1669,6 +1750,9 @@ Name             : Critical Mass (desc=Rank 2) (id=12872) [Spell Family (3), Pas
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 66%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1697,6 +1781,9 @@ Name             : Critical Mass (desc=Rank 3) (id=12873) [Spell Family (3), Pas
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1790,6 +1877,7 @@ Name             : Fire Power (desc=Rank 1) (id=18459) [Spell Family (3), Passiv
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 33%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1811,6 +1899,7 @@ Name             : Fire Power (desc=Rank 2) (id=18460) [Spell Family (3), Passiv
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 66%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1835,6 +1924,8 @@ Spell Type       : None
 Resource         : 0 Energy (3) (id=184068)
 Range            : 50000 yards
 Duration         : 2 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(9)
 Triggered by     : Improved Counterspell (11255)
 Family Flags     : 62
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
@@ -1877,6 +1968,8 @@ School           : Fire
 Spell Type       : None
 Range            : 100 yards
 Duration         : 30 seconds
+Stacks           : 1 maximum
+Proc Chance      : 101%
 Triggered by     : Critical Mass (11095), Critical Mass (12872), Critical Mass (12873)
 Family Flags     : 45
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1897,9 +1990,10 @@ Tooltip          : $s1% additional chance to be critically hit by spells.
 Name             : Replenish Mana (desc=Rank 5) (id=27103) [Spell Family (3)] 
 Class            : Mage
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 68
 Cooldown         : 60 seconds
+Category         : 100
 Category Cooldown: 60 seconds
 Affecting spells : Icy Veins (12472 effect#2), Improved Mana Gems (37447 effects: #1, #2)
 Family Flags     : 40
@@ -1920,9 +2014,10 @@ Name             : Arcane Torrent (desc=Racial) (id=28730)
 Class            : Paladin, Priest, Mage, Warlock
 Race             : Blood Elf (0x200)
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 2 seconds
 Cooldown         : 120 seconds
+Mechanic         : Unknown(9)
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1966,6 +2061,10 @@ Class            : Mage
 School           : Fire
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.008 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1985,6 +2084,10 @@ Class            : Mage
 School           : Fire
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.008 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2040,7 +2143,7 @@ Description      : Your Arcane damage spells deal $s1% more damage to snared or 
 Name             : Arcane Blast (id=30451) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 5% Base Mana (0) (id=216716)
 Spell Level      : 20
 Range            : 40 yards
@@ -2067,7 +2170,7 @@ Description      : Blasts the target with energy, dealing $s1 Arcane damage.  Ea
 Name             : Ice Lance (id=30455) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=216784)
 Spell Level      : 28
 Range            : 35 yards
@@ -2094,10 +2197,13 @@ Description      : Deals $s1 Frost damage to an enemy target, damage doubled aga
 Name             : Molten Armor (id=30482) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 34
 GCD              : 1.5 seconds
 Duration         : 1800 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Arcane Potency (24544 effect#2), Glyph of Molten Armor (56382 effect#1), Glyph of Armors (89749 effect#1)
 Family Flags     : 18
 Attributes       : ........ ........ x....... ........   ........ ..x..... ........ ........ 
@@ -2128,6 +2234,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2147,6 +2256,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ......x. ........ ........   ........ ........ ........ ........   
+                 : Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2300,7 +2412,7 @@ Description      : Mana gained from your Mana Gem also increases your spell powe
 Name             : Slow (id=31589) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 12% Base Mana (0) (id=218227)
 Spell Level      : 49
 Range            : 35 yards
@@ -2338,6 +2450,9 @@ Class            : Mage
 School           : Fire
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 5%
+Proc Flags       : ...x.x.x .x...... ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -2359,6 +2474,9 @@ Class            : Mage
 School           : Fire
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 10%
+Proc Flags       : ...x.x.x .x...... ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -2407,13 +2525,18 @@ Tooltip          : Movement speed increased by $s1%.
 Name             : Dragon's Breath (id=31661) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 7% Base Mana (0) (id=218233)
 Spell Level      : 1
 GCD              : 1.5 seconds
 Duration         : 5 seconds
 Cooldown         : 20 seconds
+Category         : 1215
 Category Cooldown: 20 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Combustion (11129 effect#1), Shatter (11170 effect#1), Arcane Power (12042 effects: #1, #2), Clearcasting (12536 effect#1), Shatter (12982 effect#1), Slow (31589 effects: #1, #2), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Living Bomb (44457 effect#1), Living Bomb (44461 effect#1), Glyph of Dragon's Breath (56373 effect#1), Frostburn (76613 effect#1), Molten Fury (86880 effect#1)
 Family Flags     : 23
 Attributes       : ........ ........ x...x... ........   ...x...x ........ ........ ........ 
@@ -2475,6 +2598,7 @@ Name             : Arctic Winds (desc=Rank 1) (id=31674) [Spell Family (3), Pass
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2503,6 +2627,7 @@ Name             : Arctic Winds (desc=Rank 2) (id=31675) [Spell Family (3), Pass
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2531,6 +2656,7 @@ Name             : Arctic Winds (desc=Rank 3) (id=31676) [Spell Family (3), Pass
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2598,7 +2724,7 @@ Description      : Increases damage of all spells against targets with less than
 Name             : Summon Water Elemental (id=31687) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 16% Base Mana (0) (id=218742)
 Spell Level      : 10
 GCD              : 1.5 seconds
@@ -2623,7 +2749,7 @@ Description      : Summon a Water Elemental to fight for the caster.
 Name             : Waterbolt (id=31707) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 1% Base Mana (0) (id=217735)
 Spell Level      : 10
 Range            : 45 yards
@@ -2679,6 +2805,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 3 seconds
+Mechanic         : Unknown(26)
 Attributes       : ........ ........ .......x ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2696,12 +2823,16 @@ Tooltip          : Interrupted.
 Name             : Freeze (id=33395) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 12% Base Mana (0) (id=220099)
 Spell Level      : 10
 Range            : 45 yards
 Duration         : 8 seconds
 Cooldown         : 25 seconds
+Category         : 35
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Family Flags     : 73
 Attributes       : ........ ........ x....... ......x.   ...x...x ........ .x...... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2787,7 +2918,7 @@ Description      : Increases spell haste by $s1% if 3 or more targets are taking
 Name             : Molten Armor (id=34913) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 54
 Range            : 100 yards
 Affecting spells : Shatter (11170 effect#1), Arcane Power (12042 effect#1), Shatter (12982 effect#1), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Hot Streak (44445 effect#1), Improved Hot Streak (44446 effect#1), Improved Hot Streak (44448 effect#1), Frostburn (76613 effect#1), Molten Fury (86880 effect#1)
@@ -2813,6 +2944,10 @@ School           : Arcane
 Spell Type       : None
 Spell Level      : 1
 Duration         : 6 seconds
+Stacks           : 1 initial, 4 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Affecting spells : Glyph of Arcane Blast (62210 effect#1), Happy Hour (83963 effect#1)
 Triggered by     : Arcane Blast (30451), Arcane Blast (88084)
 Family Flags     : 66, 67
@@ -2846,6 +2981,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2883,7 +3019,7 @@ Tooltip          : Cannot be made invulnerable by Ice Block.
 Name             : Blizzard (id=42208) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20
 Range            : 100 yards
 Affecting spells : Burning Soul (11083 effect#1), Shatter (11170 effect#1), Ice Shards (11185 effect#1), Arcane Power (12042 effects: #1, #2), Icy Veins (12472 effect#2), Ice Shards (12487 effect#1), Clearcasting (12536 effect#1), Shatter (12982 effect#1), Slow (31589 effects: #1, #2, #3), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Frostburn (76613 effect#1), Piercing Chill (83156 effect#1), Piercing Chill (83157 effect#1), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1), Dark Intent (85759 effect#2), Molten Fury (86880 effect#1)
@@ -2916,6 +3052,7 @@ Name             : Arcane Flows (desc=Rank 1) (id=44378) [Spell Family (3), Pass
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2940,6 +3077,7 @@ Name             : Arcane Flows (desc=Rank 2) (id=44379) [Spell Family (3), Pass
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2964,6 +3102,7 @@ Name             : Incanter's Absorption (desc=Rank 1) (id=44394) [Passive, Hidd
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -2982,6 +3121,7 @@ Name             : Incanter's Absorption (desc=Rank 2) (id=44395) [Passive, Hidd
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -3000,6 +3140,7 @@ Name             : Netherwind Presence (desc=Rank 1) (id=44400) [Spell Family (3
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3018,6 +3159,7 @@ Name             : Netherwind Presence (desc=Rank 2) (id=44402) [Spell Family (3
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3036,6 +3178,7 @@ Name             : Netherwind Presence (desc=Rank 3) (id=44403) [Spell Family (3
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3054,6 +3197,7 @@ Name             : Missile Barrage (desc=Rank 1) (id=44404) [Spell Family (3), P
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3079,6 +3223,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
+Proc Chance      : 101%
 Triggered by     : Incanter's Absorption (44394)
 Family Flags     : 60, 67
 Attributes       : ........ ........ ........ ...x....   ........ ..x..... ........ ........ 
@@ -3100,14 +3245,16 @@ Tooltip          : Spell power increased by $w1.
 Name             : Arcane Barrage (id=44425) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 11% Base Mana (0) (id=233986)
 Spell Level      : 10
 Range            : 40 yards
 GCD              : 1.5 seconds
 Velocity         : 24 yards/sec
 Cooldown         : 4 seconds
+Category         : 1189
 Category Cooldown: 4 seconds
+Proc Chance      : 101%
 Affecting spells : Shatter (11170 effect#1), Arcane Power (12042 effects: #1, #2), Clearcasting (12536 effect#1), Shatter (12982 effect#1), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Glyph of Arcane Barrage (63092 effect#1), Glyph of Mirror Image (63093 effect#1), Frostburn (76613 effect#1), Molten Fury (86880 effect#1)
 Family Flags     : 47
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -3129,6 +3276,9 @@ Class            : Mage
 School           : Fire
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3152,6 +3302,9 @@ Class            : Mage
 School           : Fire
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3175,6 +3328,9 @@ Class            : Mage
 School           : Fire
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3196,7 +3352,7 @@ Description      : Any time you score 2 non-periodic critical strikes in a row w
 Name             : Living Bomb (id=44457) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 17% Base Mana (0) (id=229871)
 Spell Level      : 1
 Range            : 40 yards
@@ -3226,9 +3382,10 @@ Tooltip          : Causes $s1 Fire damage every $t1 sec.  After $d, the target e
 Name             : Living Bomb (id=44461) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 60
 Range            : 50000 yards
+Max Targets      : 3
 Affecting spells : Critical Mass (11095 effect#2), Shatter (11170 effect#1), Arcane Power (12042 effect#1), Critical Mass (12872 effect#2), Critical Mass (12873 effect#2), Shatter (12982 effect#1), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Frostburn (76613 effect#1), Molten Fury (86880 effect#1), Glyph of Living Bomb (89926 effects: #1, #2)
 Family Flags     : 48
 Attributes       : ........ ........ x.x....x x..x....   ........ ........ ........ ........ 
@@ -3252,6 +3409,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3273,6 +3433,8 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 100 yards
 Duration         : 15 seconds
+Stacks           : 2 maximum
+Proc Chance      : 101%
 Triggered by     : Fingers of Frost (44543), Fingers of Frost (44545), Fingers of Frost (83074)
 Family Flags     : 65, 67
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
@@ -3297,6 +3459,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3316,6 +3481,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 5%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Affecting spells : Item - Mage T12 4P Bonus (99064 effect#2)
 Family Flags     : 79
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
@@ -3339,6 +3507,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 10%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Affecting spells : Item - Mage T12 4P Bonus (99064 effect#2)
 Family Flags     : 79
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
@@ -3362,6 +3533,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 15%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Affecting spells : Item - Mage T12 4P Bonus (99064 effect#2)
 Family Flags     : 79
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
@@ -3404,6 +3578,10 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 6 seconds
+Proc Chance      : 33%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3428,14 +3606,16 @@ Description      : Reduces the mana cost of all spells by $s1%.  In addition, yo
 Name             : Deep Freeze (id=44572) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 9% Base Mana (0) (id=233740)
 Spell Level      : 1
 Range            : 35 yards
 GCD              : 1.5 seconds
 Duration         : 5 seconds
 Cooldown         : 30 seconds
+Category         : 1221
 Category Cooldown: 30 seconds
+Proc Chance      : 101%
 Affecting spells : Shatter (11170 effect#1), Shatter (12982 effect#1), Fingers of Frost (44544 effect#1), Frostburn (76613 effect#1), Piercing Chill (83156 effect#1), Piercing Chill (83157 effect#1)
 Family Flags     : 52
 Attributes       : ........ ........ x.x..... ........   ........ ........ ........ ........ 
@@ -3465,7 +3645,7 @@ $mult=${$<arctic5>*$<piercing3>}
 Name             : Frostfire Bolt (id=44614) [Spell Family (3)] 
 Class            : Mage
 School           : Frostfire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 9% Base Mana (0) (id=253905)
 Spell Level      : 56
 Range            : 40 yards
@@ -3473,6 +3653,8 @@ Cast Time        : 2.5 seconds
 GCD              : 1.5 seconds
 Velocity         : 28 yards/sec
 Duration         : 9 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Affecting spells : Burning Soul (11083 effect#1), Combustion (11129 effect#1), Piercing Ice (11151 effect#1), Shatter (11170 effect#1), Permafrost (11175 effects: #1, #2), Arcane Power (12042 effects: #1, #2), Presence of Mind (12043 effect#1), Icy Veins (12472 effect#2), Clearcasting (12536 effect#1), Permafrost (12569 effects: #1, #2), Permafrost (12571 effects: #1, #2), Piercing Ice (12952 effect#1), Piercing Ice (12953 effect#1), Shatter (12982 effect#1), Fire Power (18459 effect#1), Fire Power (18460 effect#1), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Fire Power (54734 effect#1), Brain Freeze (57761 effects: #1, #2), Glyph of Frostfire (61205 effects: #1, #2), Flashburn (76595 effect#1), Frostburn (76613 effect#1), Piercing Chill (83156 effect#1), Piercing Chill (83157 effect#1), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1), Frostfire Orb (84726 effect#1), Frostfire Orb (84727 effect#1), Dark Intent (85759 effect#1), Molten Fury (86880 effect#1)
 Family Flags     : 44, 67
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -3507,6 +3689,7 @@ Name             : Shattered Barrier (desc=Rank 1) (id=44745) [Spell Family (3),
 Class            : Mage
 School           : Frost
 Spell Type       : None
+Proc Chance      : 100%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3524,13 +3707,15 @@ Description      : Gives your Ice Barrier spell a $h% chance to freeze all enemi
 Name             : Ice Block (id=45438) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 15 Base Mana (0) (id=229753)
 Spell Level      : 30
 GCD              : 1.5 seconds
 Duration         : 10 seconds
 Cooldown         : 300 seconds
+Category         : 37
 Category Cooldown: 300 seconds
+Mechanic         : Unknown(29)
 Affecting spells : Ice Floes (31670 effect#1), Ice Floes (31672 effect#1), Ice Floes (55094 effect#1)
 Family Flags     : 39, 67
 Attributes       : ........ ........ x.x..... ........   ........ ..x....x ........ ........ 
@@ -3559,6 +3744,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3627,6 +3813,8 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 1 maximum
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3648,6 +3836,7 @@ Name             : Glyph of the Penguin (id=52648) [Spell Family (7), Passive, H
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3669,6 +3858,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3694,6 +3884,7 @@ Name             : Missile Barrage (desc=Rank 2) (id=54486) [Spell Family (3), P
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3717,12 +3908,15 @@ Description      : Your Arcane Missiles spell will fire its missiles every 0.5 s
 Name             : Focus Magic (id=54646) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=240434)
 Spell Level      : 20
 Range            : 30 yards
 GCD              : 1.5 seconds
 Duration         : 1800 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ..x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Affecting spells : Improved Mana Gem (31584 effect#1), Improved Mana Gem (31585 effect#1)
 Family Flags     : 31, 67
 Attributes       : ........ ........ x....... ........   ........ ........ ...x.... ........ 
@@ -3749,6 +3943,7 @@ Spell Type       : None
 Spell Level      : 20
 Range            : 50000 yards
 Duration         : 10 seconds
+Proc Chance      : 101%
 Affecting spells : Improved Mana Gem (31584 effect#1), Improved Mana Gem (31585 effect#1)
 Triggered by     : Focus Magic (54646)
 Family Flags     : 31, 67
@@ -3771,6 +3966,7 @@ Name             : Fire Power (desc=Rank 3) (id=54734) [Spell Family (3), Passiv
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3792,6 +3988,7 @@ Name             : Shattered Barrier (desc=Rank 2) (id=54787) [Spell Family (3),
 Class            : Mage
 School           : Frost
 Spell Type       : None
+Proc Chance      : 100%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3813,6 +4010,8 @@ Spell Type       : None
 Resource         : 0 Energy (3) (id=241729)
 Range            : 50000 yards
 Duration         : 4 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(9)
 Triggered by     : Improved Counterspell (12598)
 Family Flags     : 62
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
@@ -3833,8 +4032,11 @@ Tooltip          : Silenced.
 Name             : Shattered Barrier (id=55080) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 2 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Shatter (11170 effect#1), Shatter (12982 effect#1), Frostburn (76613 effect#1)
 Family Flags     : 19
 Attributes       : ........ ........ x....... x..x..x.   ...x...x ........ ........ ........ 
@@ -3856,6 +4058,7 @@ Name             : Ice Floes (desc=Rank 3) (id=55094) [Spell Family (3), Passive
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3876,6 +4079,7 @@ Name             : Torment the Weak (desc=Rank 2) (id=55339) [Passive, Hidden]
 Class            : Mage
 School           : Arcane
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3894,6 +4098,7 @@ Name             : Torment the Weak (desc=Rank 3) (id=55340) [Passive, Hidden]
 Class            : Mage
 School           : Arcane
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3943,6 +4148,7 @@ Name             : Glyph of Arcane Missiles (id=56363) [Spell Family (3), Passiv
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3963,6 +4169,9 @@ Name             : Glyph of Cone of Cold (id=56364) [Spell Family (3), Passive, 
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3983,6 +4192,7 @@ Name             : Glyph of Blink (id=56365) [Spell Family (3), Passive, Hidden]
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4003,6 +4213,7 @@ Name             : Glyph of Invisibility (id=56366) [Spell Family (3), Passive, 
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4023,6 +4234,7 @@ Name             : Glyph of Fireball (id=56368) [Spell Family (3), Passive, Hidd
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4043,6 +4255,7 @@ Name             : Glyph of Frostbolt (id=56370) [Spell Family (3), Passive, Hid
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4063,6 +4276,7 @@ Name             : Glyph of Ice Block (id=56372) [Spell Family (3), Passive, Hid
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4083,6 +4297,7 @@ Name             : Glyph of Dragon's Breath (id=56373) [Spell Family (3), Passiv
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4103,6 +4318,7 @@ Name             : Glyph of Icy Veins (id=56374) [Spell Family (3), Passive, Hid
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4123,6 +4339,7 @@ Name             : Glyph of Polymorph (id=56375) [Spell Family (3), Passive, Hid
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4143,6 +4360,7 @@ Name             : Glyph of Frost Nova (id=56376) [Spell Family (3), Passive, Hi
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4163,6 +4381,7 @@ Name             : Glyph of Ice Lance (id=56377) [Spell Family (3), Passive, Hid
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4183,6 +4402,7 @@ Name             : Glyph of Evocation (id=56380) [Spell Family (3), Passive, Hid
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4203,6 +4423,7 @@ Name             : Glyph of Arcane Power (id=56381) [Spell Family (3), Passive, 
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4227,6 +4448,7 @@ Name             : Glyph of Molten Armor (id=56382) [Spell Family (3), Passive, 
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4247,6 +4469,7 @@ Name             : Glyph of Mage Armor (id=56383) [Spell Family (3), Passive, Hi
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4267,6 +4490,7 @@ Name             : Glyph of Pyroblast (id=56384) [Spell Family (3), Passive, Hid
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4288,6 +4512,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 2 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4306,6 +4531,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4324,6 +4550,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4343,6 +4570,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4362,6 +4590,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4381,6 +4610,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4400,6 +4630,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4419,6 +4650,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4438,6 +4670,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4457,6 +4690,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4476,6 +4710,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4495,6 +4730,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4514,6 +4750,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4533,6 +4770,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4552,6 +4790,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4570,6 +4809,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4589,6 +4829,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4608,6 +4849,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4670,10 +4912,11 @@ Tooltip          : Cannot benefit from Bloodlust or other similar effects.
 Name             : Brain Freeze (id=57761) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 15 seconds
+Proc Chance      : 101%
 Affecting spells : Arcane Potency (31571 effect#1), Arcane Potency (31572 effect#1)
 Triggered by     : Brain Freeze (44546), Brain Freeze (44548), Brain Freeze (44549)
 Family Flags     : 33, 67
@@ -4702,6 +4945,7 @@ Name             : Glyph of Arcane Brilliance (id=57924) [Spell Family (3), Pass
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4722,6 +4966,7 @@ Name             : Glyph of Slow Fall (id=57925) [Spell Family (3), Passive, Hid
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4741,6 +4986,7 @@ Name             : Glyph of the Monkey (id=57927) [Spell Family (3), Passive, Hi
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4760,6 +5006,7 @@ Name             : Glyph of Conjuring (id=57928) [Spell Family (3), Passive, Hid
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4781,6 +5028,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4800,6 +5048,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4819,6 +5068,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4838,6 +5088,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4857,6 +5108,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4877,6 +5129,7 @@ School           : Physical
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 30 seconds
+Proc Chance      : 101%
 Triggered by     : Mirror Image (55342)
 Attributes       : .......x x....... ........ ........   ........ ........ ...x.... ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -4899,6 +5152,7 @@ Race             : Draenei (0x400)
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4921,7 +5175,7 @@ Name             : Gift of the Naaru (desc=Racial) (id=59548) [Spell Family (3)]
 Class            : Mage
 Race             : Draenei (0x400)
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 40 yards
 Duration         : 15 seconds
@@ -4949,13 +5203,14 @@ Tooltip          : Healing $/5;s2% every $t1 seconds.
 Name             : Frostbolt (id=59638) 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 90 Base Mana (0) (id=245438)
 Spell Level      : 20
 Range            : 40 yards
 Cast Time        : 2 seconds
 Velocity         : 24 yards/sec
 Duration         : 4 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4977,6 +5232,7 @@ Name             : Glyph of Frostfire (id=61205) [Spell Family (3), Passive, Hid
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5004,6 +5260,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5021,7 +5278,7 @@ Description      : Your Frostfire Bolt now deals $61205s1% additional damage ove
 Name             : Dalaran Brilliance (id=61316) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 26% Base Mana (0) (id=246249)
 Spell Level      : 80
 Range            : 40 yards
@@ -5047,6 +5304,7 @@ Name             : Glyph of Blast Wave (id=62126) [Spell Family (3), Passive, Hi
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5068,6 +5326,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5086,6 +5345,7 @@ Name             : Glyph of Arcane Blast (id=62210) [Spell Family (3), Passive, 
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5107,6 +5367,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5125,6 +5386,7 @@ Name             : Glyph of Deep Freeze (id=63090) [Spell Family (3), Passive, H
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5145,6 +5407,7 @@ Name             : Glyph of Slow (id=63091) [Spell Family (3), Passive, Hidden]
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5165,6 +5428,7 @@ Name             : Glyph of Arcane Barrage (id=63092) [Spell Family (3), Passive
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5185,6 +5449,7 @@ Name             : Glyph of Mirror Image (id=63093) [Spell Family (3), Passive, 
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5205,6 +5470,7 @@ Name             : Glyph of Ice Barrier (id=63095) [Spell Family (3), Passive, H
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5226,6 +5492,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5245,6 +5512,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5264,6 +5532,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5283,6 +5552,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5302,6 +5572,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5322,6 +5593,10 @@ School           : Fire
 Spell Type       : None
 Spell Level      : 10
 Duration         : 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Triggered by     : Impact (11103), Impact (12357)
 Attributes       : ........ ........ .......x ........   ...x...x ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
@@ -5343,6 +5618,7 @@ Class            : Mage, Monk
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ x.x..... ...x....   .....x.. ........ .x...... ........ 
                  : ........ ......x. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5426,6 +5702,7 @@ Name             : Glyph of Mana Shield (id=70937) [Spell Family (3), Passive, H
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5447,6 +5724,7 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5463,9 +5741,10 @@ Effects          :
 Name             : Deep Freeze (id=71757) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 60
 Range            : 100 yards
+Proc Chance      : 101%
 Affecting spells : Shatter (11170 effect#1), Shatter (12982 effect#1), Glyph of Deep Freeze (63090 effect#1), Frostburn (76613 effect#1), Piercing Chill (83156 effect#1), Piercing Chill (83157 effect#1)
 Triggered by     : Deep Freeze Immunity State (71761)
 Family Flags     : 69
@@ -5496,6 +5775,9 @@ Name             : Deep Freeze Immunity State (id=71761) [Spell Family (3), Pass
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -5555,6 +5837,9 @@ Name             : Frostburn (id=76613) [Spell Family (3), Passive, Hidden]
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5576,7 +5861,7 @@ Description      : $?a76613[All your spells deal $s1% increased damage against F
 Name             : Arcane Brilliance (id=79057) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 48
 Range            : 30 yards
 GCD              : 1.5 seconds
@@ -5593,9 +5878,9 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Not Shapeshifted (16), Not On Player Controlled NPC (168), Vehicle Immunity Category (218), Do Not Count For PvP Scoreboard (252), Use Target's Level for Spell Scaling (264)
 Effects          :
-#1 (id=68344)    : Apply Aura (6) | Increase Energy (35) | Scaling Class: -1
+#1 (id=68344)    : Apply Aura (6) | Modify Max Power (35) (mana) | Scaling Class: -1
                    Base Value: 2 | Scaled Value: 2126.4 (coefficient=4.8) | PvP Coefficient: 1.00000 | Target: Friend (21)
-#2 (id=90962)    : Apply Aura (6) | Unknown(317) | Scaling Class: -1
+#2 (id=90962)    : Apply Aura (6) | Modify Spell Power% (317) | Scaling Class: -1
                    Base Value: 6 | Scaled Value: 6 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Infuses all  party and raid members with brilliance, increasing their maximum mana by $s1 and their spell power by $s2% for $d.  If target is in your party or raid, all party and raid members will be affected.
 Tooltip          : Increases maximum mana by $s1.
@@ -5607,6 +5892,10 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 3
 Duration         : 20 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Triggered by     : Offensive State (DND) (79684)
 Attributes       : ........ ........ ........ .....x..   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
@@ -5627,6 +5916,9 @@ Name             : Offensive State (DND) (id=79684) [Spell Family (3), Passive, 
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -5697,6 +5989,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
+Mechanic         : Unknown(28)
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5713,7 +6006,7 @@ Effects          :
 Name             : Ring of Frost (id=82676) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 7% Base Mana (0) (id=284840)
 Spell Level      : 83
 Range            : 30 yards
@@ -5741,10 +6034,14 @@ Description      : Summons a Ring of Frost, taking $91264d to coalesce.  Enemies
 Name             : Ring of Frost (id=82691) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 83
 Range            : 100 yards
 Duration         : 10 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(13)
+Proc Flags       : ...x.x.x .x.x.x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Heal Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Burning Soul (11083 effect#1), Piercing Chill (83156 effect#1), Piercing Chill (83157 effect#1), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1)
 Family Flags     : 70
 Attributes       : ........ ........ x....... x..xx...   .....x.. ........ .x...... ........ 
@@ -5765,12 +6062,13 @@ Tooltip          : Frozen.
 Name             : Flame Orb (id=82731) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=284894)
 Spell Level      : 81
 Range            : 40 yards
 GCD              : 1.5 seconds
 Cooldown         : 60 seconds
+Category         : 1269
 Category Cooldown: 60 seconds
 Affecting spells : Burning Soul (11083 effect#1), Critical Mass (11095 effect#2), Shatter (11170 effect#1), Arcane Power (12042 effect#2), Clearcasting (12536 effect#1), Critical Mass (12872 effect#2), Critical Mass (12873 effect#2), Shatter (12982 effect#1), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1), Frostfire Orb (84726 effects: #1, #2), Frostfire Orb (84727 effect#2), Molten Fury (86880 effect#1)
 Family Flags     : 71, 75
@@ -5791,7 +6089,7 @@ Description      : Launches a Flame Orb forward from the Mage's position, dealin
 Name             : Flame Orb (id=82739) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 81
 Range            : 100 yards
 Affecting spells : Burning Soul (11083 effect#1), Critical Mass (11095 effect#2), Shatter (11170 effect#1), Critical Mass (12872 effect#2), Critical Mass (12873 effect#2), Shatter (12982 effect#1), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1), Frostfire Orb (84726 effect#1), Molten Fury (86880 effect#1)
@@ -5885,8 +6183,11 @@ Description      : Reduces the cast time of your Frostbolt spell by ${$m1/-1000}
 Name             : Shattered Barrier (id=83073) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 4 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Shatter (11170 effect#1), Shatter (12982 effect#1), Frostburn (76613 effect#1)
 Family Flags     : 19
 Attributes       : ........ ........ x....... x..x..x.   ...x...x ........ ........ ........ 
@@ -5909,6 +6210,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5926,7 +6230,7 @@ Description      : Gives your offensive Chill effects a $s1% chance to grant you
 Name             : Improved Mana Gem (id=83098) 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Range            : 40 yards
 Duration         : 15 seconds
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
@@ -6040,10 +6344,14 @@ Effects          :
 Name             : Improved Cone of Cold (id=83301) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 2 seconds
+Proc Chance      : 100%
+Mechanic         : Unknown(7)
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Family Flags     : 63
 Attributes       : ........ ........ .......x ..x.....   ...x...x ..x..... ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -6063,10 +6371,14 @@ Tooltip          : Frozen.
 Name             : Improved Cone of Cold (id=83302) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 4 seconds
+Proc Chance      : 100%
+Mechanic         : Unknown(7)
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Family Flags     : 63
 Attributes       : ........ ........ .......x ..x.....   ...x...x ..x..... ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -6128,7 +6440,7 @@ Description      : Increases the number of missiles fired by your Arcane Missile
 Name             : Fire Power (id=83619) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 100 yards
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6150,7 +6462,7 @@ Description      : At the end of its duration your Flame Orb explodes, dealing $
 Name             : Combustion (id=83853) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Range            : 50000 yards
 Duration         : 10 seconds
 Affecting spells : Flashburn (76595 effect#1)
@@ -6332,7 +6644,7 @@ Description      : Reduces the casting time of your Flamestrike spell by $s2% an
 Name             : Frostfire Orb (desc=Rank 2) (id=84721) [Spell Family (3)] 
 Class            : Mage
 School           : Frostfire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 81
 Range            : 100 yards
 Duration         : 2 seconds
@@ -6364,6 +6676,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -6383,6 +6698,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -6471,6 +6789,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 50%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6490,6 +6811,9 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6550,6 +6874,10 @@ Name             : Reactive Barrier (desc=Rank 1) (id=86303) [Passive, Hidden]
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 3 seconds
+Proc Chance      : 50%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -6568,6 +6896,9 @@ Name             : Reactive Barrier (desc=Rank 1) (id=86304) [Passive, Hidden]
 Class            : Mage
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -6650,6 +6981,10 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 6 seconds
+Proc Chance      : 66%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6676,6 +7011,10 @@ Class            : Mage
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 6 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6817,6 +7156,8 @@ School           : Arcane
 Spell Type       : None
 Spell Level      : 1
 Duration         : 8 seconds
+Stacks           : 4 maximum
+Proc Chance      : 101%
 Affecting spells : Glyph of Arcane Blast (62210 effect#1), Happy Hour (83963 effect#1)
 Triggered by     : Invocation (84722), Invocation (84723)
 Family Flags     : 66, 67
@@ -6875,41 +7216,17 @@ Effects          :
 #1 (id=89935)    : Apply Aura (6) | Increase Speed% (31)
                    Base Value: 40 | Scaled Value: 40 | PvP Coefficient: 1.00000 | Target: Self (1)
 
-Name             : Running Wild (desc=Racial) (id=87840) 
-Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Druid
-Race             : Worgen (0x200000)
-School           : Physical
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Attributes       : ....x... .......x x...x... ....x...   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ...x....   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Is Ability (4), Only Outdoors (15), Not Shapeshifted (16), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), Ignore Caster Modifiers (125), Force Display Castbar (155), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#1 (id=89943)    : Apply Aura (6) | Dummy (4)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000
-#3 (id=104313)   : Apply Aura (6) | Unknown(358)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Drop to all fours to run as fast as a wild animal.
-Tooltip          : $?j2g[Increases ground speed by $j2g%. ][]$?j2f[Increases flight speed by $j2f%. ][]$?j2s[Increases swim speed by $j2s%. ][]
-
 Name             : Fireball (id=88082) 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 16% Base Mana (0) (id=290045)
 Spell Level      : 1
 Range            : 40 yards
 Cast Time        : 2.5 seconds
 GCD              : 1.5 seconds
 Velocity         : 24 yards/sec
+Proc Chance      : 101%
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6927,7 +7244,7 @@ Description      : Hurls a fiery ball that causes ${($m1+$M1)/2} Fire damage.
 Name             : Arcane Blast (id=88084) [Spell Family (3)] 
 Class            : Mage
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 7% Base Mana (0) (id=290047)
 Spell Level      : 34
 Range            : 40 yards
@@ -6956,7 +7273,7 @@ Description      : Blasts the target with energy, dealing ${($m1+$M1)/2} Arcane 
 Name             : Flamestrike (id=88148) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 44
 Range            : 40 yards
 GCD              : 1.5 seconds
@@ -7181,12 +7498,13 @@ Effects          :
 Name             : Frostfire Orb (id=92283) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 6% Base Mana (0) (id=293902)
 Spell Level      : 81
 Range            : 40 yards
 GCD              : 1.5 seconds
 Cooldown         : 60 seconds
+Category         : 1269
 Category Cooldown: 60 seconds
 Affecting spells : Burning Soul (11083 effect#1), Critical Mass (11095 effect#2), Shatter (11170 effect#1), Critical Mass (12872 effect#2), Critical Mass (12873 effect#2), Shatter (12982 effect#1), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1), Frostfire Orb (84726 effect#1), Molten Fury (86880 effect#1)
 Family Flags     : 71
@@ -7207,12 +7525,14 @@ Description      : Launches a Frostfire Orb forward from the Mage's position, de
 Name             : Pyroblast! (id=92315) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 10
 Range            : 40 yards
 GCD              : 1.5 seconds
 Velocity         : 24 yards/sec
 Duration         : 12 seconds
+Category         : 290
+Proc Chance      : 101%
 Affecting spells : Burning Soul (11083 effect#1), Combustion (11129 effect#1), Shatter (11170 effect#1), Arcane Power (12042 effects: #1, #2), Presence of Mind (12043 effect#1), Icy Veins (12472 effect#2), Clearcasting (12536 effect#1), Shatter (12982 effect#1), Slow (31589 effects: #1, #2, #3), Blazing Speed (31641 effect#1), Blazing Speed (31642 effect#1), Blazing Speed (31643 effect#1), Molten Fury (31679 effect#1), Molten Fury (31680 effect#1), Backlash (34935 effect#1), Backlash (34938 effect#1), Living Bomb (44457 effect#1), Living Bomb (44461 effect#1), Owlkin Frenzy (48389 effect#1), Owlkin Frenzy (48392 effect#1), Owlkin Frenzy (48393 effect#1), Glyph of Pyroblast (56384 effect#1), Flashburn (76595 effect#1), Frostburn (76613 effect#1), Fire Power (83619 effect#1), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1), Dark Intent (85759 effect#1), Molten Fury (86880 effect#1)
 Family Flags     : 22, 67
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -7254,7 +7574,7 @@ Description      : Enables Worgens to switch between human and Worgan forms
 Name             : Frostfire Orb (desc=Rank 1) (id=95969) [Spell Family (3)] 
 Class            : Mage
 School           : Frostfire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 81
 Range            : 100 yards
 Cooldown         : 6 seconds
@@ -7365,7 +7685,7 @@ Tooltip          : Deals Fire damage every $t1 sec.
 Name             : Ignite (id=413843) [Spell Family (3)] 
 Class            : Mage
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Affecting spells : Arcane Power (12042 effect#1), Flashburn (76595 effect#1), Dark Intent (85759 effect#1)

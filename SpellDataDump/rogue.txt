@@ -1,8 +1,8 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
 Name             : Backstab (id=53) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 60 Energy (3) (id=169274)
 Spell Level      : 18 (max 80)
 Max Scaling Level: 80
@@ -25,14 +25,14 @@ Effects          :
                    Base Value: 10 | Scaled Value: 345.4448 (coefficient=0.307) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=679093)   : Weapon Damage% (31) | Scaling Class: 4
                    Base Value: 109 | Scaled Value: 2.00016 | Points Per Level: 1.468 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#3 (id=679094)   : Add Combo Points (80) | Scaling Class: 4
+#3 (id=679094)   : Add Combo Points (328) | Scaling Class: 4
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Backstab the target, causing $m2% weapon damage plus $m1 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.
 
 Name             : Kidney Shot (id=408) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 25 Energy (3) (id=169325)
 Spell Level      : 30
 Range            : 5 yards
@@ -40,7 +40,10 @@ GCD              : 1 seconds
 Duration         : 1 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 20 seconds
+Category         : 270
 Category Cooldown: 20 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(12)
 Affecting spells : Murderous Intent (14158 effect#1), Murderous Intent (14159 effect#1), Relentless Strikes (14179 effect#1), Perceived Weakness (37174 effect#1), Rogue Tier 6 Trinket (40460 effect#1), Armor Penetration 140 (42098 effect#1), Thick Skin (43823 effect#1), Relentless Strikes (58422 effect#1), Relentless Strikes (58423 effect#1), Vendetta (79140 effect#1), Hemorrhage (89775 effect#1), Fury of the Destroyer (109949 effect#2)
 Family Flags     : 21
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ..x...x. ...x.... 
@@ -69,7 +72,7 @@ Tooltip          : Stunned.
 Name             : Dual Wield (desc=Passive) (id=674) [Passive] 
 Class            : Warrior, Hunter, Rogue, Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -87,13 +90,14 @@ Description      : Allows one-hand and off-hand weapons to be equipped in the of
 Name             : Garrote (id=703) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 45 Energy (3) (id=169504)
 Spell Level      : 40
 Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 18 seconds
 Stance Mask      : 0x20000000
+Mechanic         : Unknown(15)
 Affecting spells : Initiative (13976 effect#1), Initiative (13979 effect#1), Opportunity (14057 effect#2), Opportunity (14072 effect#2), Murderous Intent (14158 effect#1), Murderous Intent (14159 effect#1), Shadowstep (36554 effect#2), Shadowstep (36563 effect#3), Find Weakness (51632 effect#1), Cut to the Chase (51664 effect#1), Cut to the Chase (51665 effect#1), Cut to the Chase (51667 effect#1), Shadow Dance (51713 effect#1), Deadly Momentum (79121 effect#1), Deadly Momentum (79122 effect#1), Vendetta (79140 effect#1), Opportunity (79141 effect#2), Deadly Momentum (84590 effect#1), Hemorrhage (89775 effect#1), Find Weakness (91023 effect#1)
 Family Flags     : 8
 Attributes       : ....x... ........ xxx..x.. ........   ........ .x...... ........ ...x.... 
@@ -108,7 +112,7 @@ Attributes       : ....x... ........ xxx..x.. ........   ........ .x...... .....
 Effects          :
 #1 (id=679355)   : Apply Aura (6) | Periodic Damage (3): physical every 3 seconds | Scaling Class: 4
                    Base Value: 20 | Scaled Value: 132.7768 (coefficient=0.118) | PvP Coefficient: 1.00000 | Mechanic: Unknown(15) | Target: Enemy (6)
-#2 (id=679356)   : Add Combo Points (80) | Scaling Class: 4
+#2 (id=679356)   : Add Combo Points (328) | Scaling Class: 4
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=282)      : Trigger Spell (64): Garrote - Silence | Scaling Class: 4
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Trigger Spell: 1330 | Target: Enemy (6)
@@ -123,7 +127,7 @@ $bonus=$?s51633[${$<opportunity>*1.3}][${$<opportunity>*$<spatter1>}]
 Name             : Mutilate (id=1329) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 60 Energy (3) (id=170015)
 Spell Level      : 10
 Range            : 5 yards
@@ -141,7 +145,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Discount Power On Miss (59), Initiate Combat Post-Cast (Enables Auto-Attack) (84), Requires Main-Hand Weapon (106), Suppress Caster Procs (112), Requires Off-Hand Weapon (120), Not In Spellbook Until Learned (269)
 Effects          :
-#1 (id=679936)   : Add Combo Points (80)
+#1 (id=679936)   : Add Combo Points (328)
                    Base Value: 2 | Scaled Value: 2 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=870382)   : Trigger Spell (64): Mutilate
                    Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Trigger Spell: 5374 | Target: Enemy (6)
@@ -156,6 +160,7 @@ Spell Type       : None
 Spell Level      : 60
 Range            : 50000 yards
 Duration         : 3 seconds
+Mechanic         : Unknown(9)
 Affecting spells : Glyph of Garrote (56812 effect#1)
 Triggered by     : Garrote (703)
 Family Flags     : 61
@@ -177,13 +182,15 @@ Tooltip          : Silenced.
 Name             : Distract (id=1725) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 30 Energy (3) (id=170110)
 Spell Level      : 28
 Range            : 30 yards
 GCD              : 1 seconds
 Cooldown         : 30 seconds
+Category         : 22
 Category Cooldown: 30 seconds
+Mechanic         : Unknown(4)
 Affecting spells : Glyph of Distract (58032 effect#1)
 Family Flags     : 12
 Attributes       : ....x... ........ ..x..... ......x.   .....x.. x.x..... .x...... ........ 
@@ -203,7 +210,7 @@ Description      : Throws a distraction, attracting the attention of all nearby 
 Name             : Sinister Strike (id=1752) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 45 Energy (3) (id=170879)
 Spell Level      : 1 (max 80)
 Max Scaling Level: 80
@@ -224,7 +231,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
 Effects          :
 #1 (id=680897)   : Normalized Weapon Damage (121) | Scaling Class: 4
                    Base Value: 3 | Scaled Value: 200.2905 (coefficient=0.178) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#2 (id=680898)   : Add Combo Points (80) | Scaling Class: 4
+#2 (id=680898)   : Add Combo Points (328) | Scaling Class: 4
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=101522)   : Weapon Damage% (31) | Scaling Class: 4
                    Base Value: 42 | Scaled Value: 1.00065 | Points Per Level: 0.735 | PvP Coefficient: 1.00000 | Target: Enemy (6)
@@ -233,12 +240,13 @@ Description      : An instant strike that causes $m1 damage in addition to $m3% 
 Name             : Kick (id=1766) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 15 Energy (3) (id=169820)
 Spell Level      : 14
 Range            : 5 yards
 Duration         : 5 seconds
 Cooldown         : 10 seconds
+Category         : 88
 Category Cooldown: 10 seconds
 Affecting spells : Improved Kick (24434 effect#1), Glyph of Kick (56805 effect#1), Kick Cost Reduction (61249 effect#1), Vendetta (79140 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 4
@@ -259,7 +267,7 @@ Description      : A quick kick that interrupts spellcasting and prevents any sp
 Name             : Gouge (id=1776) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 45 Energy (3) (id=169824)
 Spell Level      : 16
 Range            : 5 yards
@@ -267,7 +275,12 @@ GCD              : 1 seconds
 Duration         : 4 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 10 seconds
+Category         : 33
 Category Cooldown: 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Improved Gouge (13741 effects: #1, #2), Improved Gouge (13793 effects: #1, #2), Cold Blood (14177 effect#1), Glyph of Gouge (56809 effect#1), Main Gauche (76806 effect#1), Enhanced Elements (77223 effect#1), Vendetta (79140 effect#1), Deadly Momentum (84590 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 3
 Attributes       : ....x... ...x.... x.x.x... ........   ........ ........ ..x..... ...x.... 
@@ -282,7 +295,7 @@ Attributes       : ....x... ...x.... x.x.x... ........   ........ ........ ..x..
 Effects          :
 #1 (id=679725)   : School Damage (2): physical | Scaling Class: 4
                    Base Value: 1 | Scaled Value: 117.0236 (coefficient=0.104) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#2 (id=679726)   : Add Combo Points (80) | Scaling Class: 4
+#2 (id=679726)   : Add Combo Points (328) | Scaling Class: 4
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=679727)   : Apply Aura (6) | Stun (12) | Scaling Class: 4
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(14) | Target: Enemy (6)
@@ -296,6 +309,10 @@ Spell Type       : None
 Spell Level      : 5
 Duration         : Aura (infinite)
 Cooldown         : 6 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x.x.... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken
 Affecting spells : Nightstalker (13975 effects: #1, #2), Nightstalker (14062 effects: #1, #2), Master of Subtlety (31223 effect#1), Savage Combat (51682 effects: #1, #2), Savage Combat (58413 effects: #1, #2), Vendetta (79140 effect#1), Bandit's Guile (84652 effect#1), Bandit's Guile (84653 effect#1), Bandit's Guile (84654 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 22
 Attributes       : ....x... ........ x.x.x... .x.xx...   ....x... ..x..... ........ ........ 
@@ -343,14 +360,16 @@ Description      : Allows opening of locked chests and doors that require a skil
 Name             : Cheap Shot (id=1833) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 40 Energy (3) (id=171315)
 Spell Level      : 26
 Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 4 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Stance Mask      : 0x20000000
+Mechanic         : Unknown(12)
 Affecting spells : Initiative (13976 effect#1), Initiative (13979 effect#1), Murderous Intent (14158 effect#1), Murderous Intent (14159 effect#1), Shadow Dance (51713 effects: #1, #2), Vendetta (79140 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 10
 Attributes       : ....x... ........ xxx..x.. ........   ........ ........ ..x..... ...x.... 
@@ -365,7 +384,7 @@ Attributes       : ....x... ........ xxx..x.. ........   ........ ........ ..x..
 Effects          :
 #1 (id=681382)   : Apply Aura (6) | Stun (12)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#2 (id=681383)   : Add Combo Points (80)
+#2 (id=681383)   : Add Combo Points (328)
                    Base Value: 2 | Scaled Value: 2 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Stuns the target for $d.  Must be stealthed.  Awards $s2 combo $lpoint:points;.
 Tooltip          : Stunned.
@@ -401,7 +420,12 @@ Spell Type       : None
 Resource         : 0 Energy (3) (id=171170)
 Spell Level      : 24
 Cooldown         : 180 seconds
+Category         : 39
 Category Cooldown: 180 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Nightstalker (13975 effect#1), Elusiveness (13981 effect#1), Nightstalker (14062 effect#1), Elusiveness (14066 effect#1), Glyph of Blurred Speed (58039 effect#1), Glyph of Vanish (89758 effect#1), Glyph of Blind (91299 effect#1)
 Family Flags     : 11
 Attributes       : ....x... ........ x.x.x... ...x.x..   .....x.. ..x..... ........ ........ 
@@ -447,13 +471,14 @@ Description      : Reduces damage from falling.
 Name             : Rupture (id=1943) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 25 Energy (3) (id=171102)
 Spell Level      : 46
 Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 6 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Mechanic         : Unknown(15)
 Affecting spells : Murderous Intent (14158 effect#1), Murderous Intent (14159 effect#1), Serrated Blades (14171 effect#1), Serrated Blades (14172 effect#1), Relentless Strikes (14179 effect#1), Perceived Weakness (37174 effect#1), Rogue Tier 6 Trinket (40460 effect#1), Armor Penetration 140 (42098 effect#1), Thick Skin (43823 effect#1), Find Weakness (51632 effect#1), Cut to the Chase (51664 effect#1), Cut to the Chase (51665 effect#1), Cut to the Chase (51667 effect#1), Glyph of Rupture (56801 effect#1), Relentless Strikes (58422 effect#1), Relentless Strikes (58423 effect#1), Executioner (76808 effects: #1, #2), Deadly Momentum (79121 effect#1), Deadly Momentum (79122 effect#1), Vendetta (79140 effect#1), Deadly Momentum (84590 effect#1), Hemorrhage (89775 effect#1), Find Weakness (91023 effect#1), Fury of the Destroyer (109949 effect#2)
 Family Flags     : 20
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ....x... ...x.... 
@@ -487,13 +512,14 @@ $bonus=$?s36554[${(($<spatter2>*(100+$76808m1))/100)}][${$<spatter2>}]
 Name             : Feint (id=1966) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 20 Energy (3) (id=181130)
 Spell Level      : 42
 Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 6 seconds
 Cooldown         : 10 seconds
+Category         : 82
 Category Cooldown: 10 seconds
 Affecting spells : Enveloping Shadows (31211 effect#2), Enveloping Shadows (31212 effect#2), Enveloping Shadows (31213 effect#2), Glyph of Feint (56804 effect#1)
 Family Flags     : 27
@@ -517,14 +543,17 @@ Tooltip          : $s2% reduced damage taken from area of effect attacks.
 Name             : Blind (id=2094) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 15 Energy (3) (id=170296)
 Spell Level      : 34
 Range            : 15 yards
 GCD              : 1 seconds
 Duration         : 60 seconds
 Cooldown         : 180 seconds
+Category         : 1187
 Category Cooldown: 20 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(2)
 Affecting spells : Elusiveness (13981 effect#1), Elusiveness (14066 effect#1)
 Family Flags     : 24
 Attributes       : ....x... ........ x...x... ......x.   ........ ..x..... ........ ........ 
@@ -545,7 +574,7 @@ Tooltip          : Disoriented.
 Name             : Eviscerate (id=2098) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 35 Energy (3) (id=170004)
 Spell Level      : 3
 Range            : 5 yards
@@ -624,6 +653,7 @@ Resource         : 0 Energy (3) (id=170655)
 Spell Level      : 16
 Duration         : 8 seconds
 Cooldown         : 60 seconds
+Category         : 44
 Category Cooldown: 60 seconds
 Affecting spells : Improved Sprint (13743 effect#1), Improved Sprint (13875 effect#1), Sprint Duration Increase (23049 effect#1), Glyph of Sprint (56811 effect#1), Vendetta (79140 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 6
@@ -645,12 +675,13 @@ Tooltip          : Movement speed increased by $w1%.
 Name             : Shoot (id=3018) 
 Class            : Warrior, Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Spell Level      : 1
 Range            : 30 yards
 Cast Time        : 1.5 seconds
 Velocity         : 40 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
+Category         : 76
 Attributes       : .x..x... ........ ......x. ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ .......x ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -706,6 +737,7 @@ Resource         : 0 Energy (3) (id=173806)
 Spell Level      : 9
 Duration         : 15 seconds
 Cooldown         : 180 seconds
+Category         : 66
 Category Cooldown: 180 seconds
 Affecting spells : Glyph of Evasion (56799 effect#1), Vendetta (79140 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 5
@@ -730,7 +762,7 @@ Chance to be hit by ranged attacks reduced by $s2%.
 Name             : Mutilate (id=5374) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 1 (max 80)
 Max Scaling Level: 80
 Range            : 5 yards
@@ -757,12 +789,13 @@ Description      : Instantly attacks with both weapons for $5374m2% weapon damag
 Name             : Shiv (id=5938) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 20 Energy (3) (id=174946)
 Spell Level      : 70
 Range            : 5 yards
 GCD              : 1 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Affecting spells : Main Gauche (76806 effect#1), Enhanced Elements (77223 effect#1), Deadly Momentum (84590 effect#1)
 Family Flags     : 29
 Attributes       : ....x... ........ x.x..x.. ........   ........ ........ ........ ...x.... 
@@ -783,6 +816,9 @@ Name             : Throwing Specialization (desc=Rank 1) (id=5952) [Spell Family
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ....x... x.x.x.x. x.x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -804,14 +840,17 @@ Description      : Increases the range of Throw and Deadly Throw by $s1 yards an
 Name             : Sap (id=6770) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 35 Energy (3) (id=174197)
 Spell Level      : 10
 Range            : 10 yards
+Max Targets      : 1
 GCD              : 1 seconds
 Duration         : 60 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 100%
 Stance Mask      : 0x20000000
+Mechanic         : Unknown(30)
 Affecting spells : Murderous Intent (14158 effect#1), Murderous Intent (14159 effect#1), Shadow Dance (51713 effect#1), Glyph of Sap (56798 effect#1), Vendetta (79140 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 7
 Attributes       : ....x... ........ xxx.xx.. ........   .....x.. x.x..... ..x..... ...x.... 
@@ -832,12 +871,13 @@ Tooltip          : Sapped.
 Name             : Expose Armor (id=8647) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 25 Energy (3) (id=175868)
 Spell Level      : 36
 Range            : 5 yards
 GCD              : 1 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Affecting spells : Murderous Intent (14158 effect#1), Murderous Intent (14159 effect#1), Improved Expose Armor (14168 effect#1), Improved Expose Armor (14169 effect#1), Relentless Strikes (14179 effect#1), Perceived Weakness (37174 effect#1), Rogue Tier 6 Trinket (40460 effect#1), Armor Penetration 140 (42098 effect#1), Thick Skin (43823 effect#1), Glyph of Expose Armor (56803 effect#1), Relentless Strikes (58422 effect#1), Relentless Strikes (58423 effect#1), Vendetta (79140 effect#1), Hemorrhage (89775 effect#1), Fury of the Destroyer (109949 effect#2)
 Family Flags     : 19
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ....x... ...x.... 
@@ -863,7 +903,7 @@ Tooltip          : Armor decreased by $s1%.
 Name             : Ambush (id=8676) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 60 Energy (3) (id=175441)
 Spell Level      : 8 (max 80)
 Max Scaling Level: 80
@@ -887,7 +927,7 @@ Effects          :
                    Base Value: 28 | Scaled Value: 367.9494 (coefficient=0.327) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=686099)   : Weapon Damage% (31) | Scaling Class: 4
                    Base Value: 90 | Scaled Value: 1.9008 | Points Per Level: 1.39 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#3 (id=686100)   : Add Combo Points (80) | Scaling Class: 4
+#3 (id=686100)   : Add Combo Points (328) | Scaling Class: 4
                    Base Value: 2 | Scaled Value: 2 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Ambush the target, causing $m2% weapon damage plus $m1 to the target (${$m2*1.447}% plus ${$m1*1.447} if a dagger is equipped).  Must be stealthed and behind the target.  Awards $s3 combo $lpoint:points;.
 
@@ -1085,6 +1125,9 @@ Name             : Improved Kick (desc=Rank 1) (id=13754) [Spell Family (8), Pas
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1304,6 +1347,9 @@ Name             : Improved Kick (desc=Rank 2) (id=13867) [Spell Family (8), Pas
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1346,7 +1392,11 @@ Resource         : 0 Energy (3) (id=180126)
 Spell Level      : 1
 Duration         : Aura (infinite)
 Cooldown         : 10 seconds
+Category         : 1287
 Category Cooldown: 10 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Glyph of Blade Flurry (56818 effect#1)
 Family Flags     : 30, 43
 Attributes       : ....x... ........ ..x..... ........   .....x.. ..x..... ........ ........ 
@@ -1425,7 +1475,7 @@ Attributes       : ....x... ........ ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Is Ability (4)
 Effects          :
-#1 (id=691367)   : Add Combo Points (80)
+#1 (id=691367)   : Add Combo Points (328)
                    Base Value: 1 | Scaled Value: 1 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 
 Name             : Initiative (desc=Rank 2) (id=13979) [Spell Family (8), Passive, Hidden] 
@@ -1704,6 +1754,9 @@ Name             : Ruthlessness (desc=Rank 1) (id=14156) [Spell Family (8), Pass
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 20%
+Proc Flags       : ....x.x. x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1734,7 +1787,7 @@ Attributes       : ....x... ........ ........ ........   ........ ..x..... .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), No Threat (42), Not an Action (92), Suppress Target Procs (113), Do Not Display Range (126), No Harmful Threat (132), Not an Attack (194)
 Effects          :
-#1 (id=691545)   : Add Combo Points (80)
+#1 (id=691545)   : Add Combo Points (328)
                    Base Value: 1 | Scaled Value: 1 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 
 Name             : Murderous Intent (desc=Rank 1) (id=14158) [Spell Family (8), Passive, Hidden] 
@@ -1785,6 +1838,9 @@ Name             : Ruthlessness (desc=Rank 2) (id=14160) [Spell Family (8), Pass
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 40%
+Proc Flags       : ....x.x. x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1803,6 +1859,9 @@ Name             : Ruthlessness (desc=Rank 3) (id=14161) [Spell Family (8), Pass
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 60%
+Proc Flags       : ....x.x. x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1921,6 +1980,9 @@ Name             : Improved Expose Armor (desc=Rank 1) (id=14168) [Spell Family 
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ....x... ....x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1941,6 +2003,9 @@ Name             : Improved Expose Armor (desc=Rank 2) (id=14169) [Spell Family 
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2003,6 +2068,10 @@ School           : Physical
 Spell Type       : None
 Duration         : Aura (infinite)
 Cooldown         : 120 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Affecting spells : Glyph of Backstab (56800 effects: #1, #3)
 Family Flags     : 38
 Attributes       : ....x... ........ ..x..... .x......   .....x.. ..x..... ........ ........ 
@@ -2084,7 +2153,7 @@ Attributes       : ....x... ........ x.x..... ........   .....x.. ..x..... .x...
                  : ........ ........ ........ ........   
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Allow While Stealthed (37), No Threat (42), No AutoCast (AI) (49), No Aura Icon (60), Suppress Caster Procs (112), Suppress Target Procs (113), Not an Attack (194), Not In Spellbook Until Learned (269)
 Effects          :
-#1 (id=691744)   : Add Combo Points (80)
+#1 (id=691744)   : Add Combo Points (328)
                    Base Value: 2 | Scaled Value: 2 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=691745)   : Apply Aura (6) | Unknown(560)
                    Base Value: 2 | Scaled Value: 2 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Self (1)
@@ -2117,6 +2186,10 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 50%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2137,6 +2210,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Range            : 50000 yards
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Triggered by     : Seal Fate (14186), Seal Fate (14190), Glyph of Sinister Strike (56821)
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -2148,7 +2223,7 @@ Attributes       : ....x... ........ ........ ........   ........ ..x..... .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), No Threat (42), Ignore Line of Sight (66)
 Effects          :
-#1 (id=690311)   : Add Combo Points (80)
+#1 (id=690311)   : Add Combo Points (328)
                    Base Value: 1 | Scaled Value: 1 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 
 Name             : Seal Fate (desc=Rank 2) (id=14190) [Spell Family (8), Passive, Hidden] 
@@ -2156,6 +2231,10 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2174,6 +2253,9 @@ Name             : Defensive State (DND) (id=16092) [Passive, Hidden]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -2190,7 +2272,7 @@ Effects          :
 Name             : Hemorrhage (id=16511) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 35 Energy (3) (id=181408)
 Spell Level      : 29 (max 80)
 Max Scaling Level: 80
@@ -2198,6 +2280,7 @@ Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 60 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 101%
 Affecting spells : Lethality (14128 effect#1), Lethality (14132 effect#1), Lethality (14135 effect#1), Cold Blood (14177 effect#1), Sinister Calling (31220 effect#2), Honor Among Thieves (51700 effect#2), Honor Among Thieves (51701 effect#2), Slaughter from the Shadows (51708 effect#2), Slaughter from the Shadows (51709 effect#2), Slaughter from the Shadows (51710 effect#2), Glyph of Hemorrhage (56807 effect#1), Main Gauche (76806 effect#1), Enhanced Elements (77223 effect#1), Vendetta (79140 effect#1), Deadly Momentum (84590 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 23, 25
 Attributes       : ....x... ........ x.x..... ..x.....   ........ .x...... ........ ...x.... 
@@ -2310,6 +2393,8 @@ Spell Type       : None
 Resource         : 0 Energy (3) (id=183378)
 Range            : 50000 yards
 Duration         : 1.5 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(9)
 Triggered by     : Improved Kick (13754)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -2434,9 +2519,10 @@ Name             : Arcane Torrent (desc=Racial) (id=25046)
 Class            : Rogue
 Race             : Blood Elf (0x200)
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 2 seconds
 Cooldown         : 120 seconds
+Mechanic         : Unknown(9)
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2457,7 +2543,7 @@ Tooltip          : Silenced.
 Name             : Deadly Throw (id=26679) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 35 Energy (3) (id=215934)
 Spell Level      : 62
 Range            : 30 yards
@@ -2493,7 +2579,7 @@ Variables        : $mult=$?s36554[${((100+$76808m1))/100}][${1.00}]
 Name             : Mutilate Off-Hand (id=27576) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Energy (3) (id=215768)
 Spell Level      : 1 (max 80)
 Max Scaling Level: 80
@@ -2544,6 +2630,9 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 20%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2564,6 +2653,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 4 seconds
+Mechanic         : Unknown(11)
 Triggered by     : Blade Twisting (31124)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ .x...... ........ 
@@ -2585,6 +2675,9 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Proc Chance      : 40%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2731,6 +2824,7 @@ Name             : Master of Subtlety (desc=Passive) (id=31223) [Spell Family (8
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... .x...... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2754,6 +2848,7 @@ Spell Type       : None
 Spell Level      : 58
 Duration         : 5 seconds
 Cooldown         : 120 seconds
+Category         : 1329
 Category Cooldown: 120 seconds
 Affecting spells : Elusiveness (13981 effect#2), Elusiveness (14066 effect#2), Glyph of Cloak of Shadows (63269 effect#1)
 Family Flags     : 48
@@ -2783,6 +2878,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Affecting spells : Glyph of Backstab (56800 effects: #1, #3)
 Family Flags     : 42
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
@@ -2805,6 +2901,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Affecting spells : Glyph of Backstab (56800 effects: #1, #3)
 Family Flags     : 42
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
@@ -2827,6 +2924,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Affecting spells : Glyph of Backstab (56800 effects: #1, #3)
 Family Flags     : 42
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
@@ -2907,7 +3005,7 @@ Description      : Reduces all damage taken by $s1%.
 Name             : Envenom (id=32645) [Spell Family (8)] 
 Class            : Rogue
 School           : Nature
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 35 Energy (3) (id=219032)
 Spell Level      : 54
 Range            : 5 yards
@@ -2957,6 +3055,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 3 seconds
+Mechanic         : Unknown(26)
 Attributes       : ........ ........ .......x ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2975,6 +3074,9 @@ Name             : Combat Potency (desc=Rank 1) (id=35541) [Spell Family (8), Pa
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 20%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2994,6 +3096,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Mechanic         : Unknown(11)
 Triggered by     : Combat Potency (35541)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3014,6 +3117,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Mechanic         : Unknown(11)
 Triggered by     : Combat Potency (35550)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3034,6 +3138,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Mechanic         : Unknown(11)
 Triggered by     : Combat Potency (35551)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3053,6 +3158,9 @@ Name             : Combat Potency (desc=Rank 2) (id=35550) [Spell Family (8), Pa
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 20%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3071,6 +3179,9 @@ Name             : Combat Potency (desc=Rank 3) (id=35551) [Spell Family (8), Pa
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 20%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3094,6 +3205,7 @@ Spell Level      : 1
 Range            : 25 yards
 Duration         : 3 seconds
 Cooldown         : 24 seconds
+Category         : 1206
 Affecting spells : Venomous Wounds (79133 effect#1), Venomous Wounds (79134 effect#1)
 Family Flags     : 41
 Attributes       : ....x... ........ ........ .....x..   .....x.. ..x..... ........ ........ 
@@ -3123,6 +3235,10 @@ Resource         : 0 Energy (3) (id=223577)
 Spell Level      : 1
 Range            : 100 yards
 Duration         : 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Triggered by     : Shadowstep (36554)
 Attributes       : ....x... ........ ........ .....x..   .....x.. ..x..... ........ ........ 
                  : ..x..... ........ ........ ....x...   ........ ........ xx...... ........ 
@@ -3150,6 +3266,7 @@ Class            : Rogue, Druid
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3188,6 +3305,7 @@ Class            : Rogue, Druid
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3207,6 +3325,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 8 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(11)
 Triggered by     : Blade Twisting (31126)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ .x...... ........ 
@@ -3227,6 +3347,9 @@ Name             : Deadly Brew (desc=Rank 1) (id=51625) [Spell Family (8), Passi
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ........ ........ x....... ........   ........ ........ ........ ........   
+                 : Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3247,6 +3370,9 @@ Name             : Deadly Brew (desc=Rank 2) (id=51626) [Spell Family (8), Passi
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3267,6 +3393,9 @@ Name             : Find Weakness (desc=Rank 1) (id=51632) [Spell Family (8), Pas
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3287,6 +3416,7 @@ Name             : Venomous Vim (id=51637)
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3305,6 +3435,9 @@ Name             : Cut to the Chase (desc=Rank 1) (id=51664) [Spell Family (8), 
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 33%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3325,6 +3458,9 @@ Name             : Cut to the Chase (desc=Rank 2) (id=51665) [Spell Family (8), 
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 67%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3345,6 +3481,9 @@ Name             : Cut to the Chase (desc=Rank 3) (id=51667) [Spell Family (8), 
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3365,6 +3504,9 @@ Name             : Throwing Specialization (desc=Rank 2) (id=51679) [Spell Famil
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x.x.x.x. x.x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.xx ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3389,6 +3531,7 @@ School           : Physical
 Spell Type       : None
 Range            : 100 yards
 Duration         : 3 seconds
+Proc Chance      : 101%
 Triggered by     : Throwing Specialization (5952), Throwing Specialization (51679)
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ .x...... ........ 
@@ -3408,6 +3551,9 @@ Name             : Savage Combat (desc=Rank 1) (id=51682) [Spell Family (8), Pas
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ....x... x....... ........   ........ ........ ........ ........   
+                 : Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3462,6 +3608,9 @@ Name             : Waylay (desc=Rank 1) (id=51692) [Spell Family (8), Passive, H
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3481,6 +3630,8 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Duration         : 8 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(11)
 Triggered by     : Waylay (51692), Waylay (51696)
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ .x...... ........ 
@@ -3504,6 +3655,9 @@ Name             : Waylay (desc=Rank 2) (id=51696) [Spell Family (8), Passive, H
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3522,6 +3676,10 @@ Name             : Honor Among Thieves (desc=Rank 1) (id=51698) [Passive]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 4 seconds
+Proc Chance      : 33%
+Proc Flags       : ....x... x...x.x. x.x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Heal, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ x....... ........ ..x..... 
                  : ........ .......x ...x.... ........   ........ x....... ........ ........ 
@@ -3545,6 +3703,7 @@ School           : Physical
 Spell Type       : None
 Range            : 100 yards
 Cooldown         : 4 seconds
+Proc Chance      : 101%
 Affecting spells : Honor Among Thieves (51700 effect#3), Honor Among Thieves (51701 effect#3)
 Family Flags     : 67
 Attributes       : ....x... ........ .....x.. ...x....   ........ ..x..... ........ ....x... 
@@ -3557,7 +3716,7 @@ Attributes       : ....x... ........ .....x.. ...x....   ........ ..x..... .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), No Active Defense (21), Allow While Sitting (27), No Threat (42), No Aura Icon (60), Ignore Line of Sight (66), Suppress Target Procs (113), Always Hit (114), Not In Spellbook (143), Ignore Area Effect PvP Check (166), Not an Attack (194), No Aura Log (202)
 Effects          :
-#1 (id=955490)   : Add Combo Points (80)
+#1 (id=955490)   : Add Combo Points (328)
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 
 Name             : Honor Among Thieves (desc=Rank 2) (id=51700) [Spell Family (8), Passive] 
@@ -3565,6 +3724,10 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 3 seconds
+Proc Chance      : 66%
+Proc Flags       : ....x... x...x.x. x.x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Heal, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ x....... ........ ..x..... 
                  : ........ .......x ...x.... ........   ........ x....... ........ ........ 
@@ -3593,6 +3756,10 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 2 seconds
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x.x. x.x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Heal, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ x....... ........ ..x..... 
                  : ........ .......x ...x.... ........   ........ x....... ........ ........ 
@@ -3620,6 +3787,7 @@ Name             : Slaughter from the Shadows (desc=Rank 1) (id=51708) [Spell Fa
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3644,6 +3812,7 @@ Name             : Slaughter from the Shadows (desc=Rank 2) (id=51709) [Spell Fa
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3668,6 +3837,7 @@ Name             : Slaughter from the Shadows (desc=Rank 3) (id=51710) [Spell Fa
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3696,6 +3866,7 @@ Resource         : 0 Energy (3) (id=256497)
 Spell Level      : 60
 Duration         : 6 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 101%
 Affecting spells : Glyph of Shadow Dance (63253 effect#1)
 Family Flags     : 57
 Attributes       : ....x... ........ x.x..... ........   ........ ..x..... .x...... ........ 
@@ -3722,13 +3893,15 @@ Tooltip          : Can use opening abilities without being stealthed.
 Name             : Dismantle (id=51722) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 25 Energy (3) (id=238189)
 Spell Level      : 38
 Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 10 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(3)
 Family Flags     : 52
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3752,12 +3925,13 @@ Tooltip          : Disarmed.
 Name             : Fan of Knives (id=51723) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 35 Energy (3) (id=238243)
 Spell Level      : 80
 GCD              : 1 seconds
 Velocity         : 18 yards/sec
 Requires weapon  : Thrown
+Proc Chance      : 101%
 Affecting spells : Ambidexterity (13852 effect#2), Cold Blood (14177 effect#1), Slaughter from the Shadows (51708 effect#2), Slaughter from the Shadows (51709 effect#2), Slaughter from the Shadows (51710 effect#2), Glyph of Fan of Knives (63254 effect#1), Vendetta (79140 effect#1), Deadly Momentum (84590 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 50
 Attributes       : .x..x... ........ x....... ........   ....x... ........ ........ ........ 
@@ -3779,6 +3953,7 @@ Class            : Rogue, Druid
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3796,6 +3971,7 @@ Name             : Glyph of Sap (id=56798) [Spell Family (8), Passive, Hidden]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3816,6 +3992,7 @@ Name             : Glyph of Evasion (id=56799) [Spell Family (8), Passive, Hidde
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3836,6 +4013,9 @@ Name             : Glyph of Backstab (id=56800) [Spell Family (8), Passive, Hidd
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3862,6 +4042,7 @@ Name             : Glyph of Rupture (id=56801) [Spell Family (8), Passive, Hidde
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3882,6 +4063,7 @@ Name             : Glyph of Eviscerate (id=56802) [Spell Family (8), Passive, Hi
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3902,6 +4084,7 @@ Name             : Glyph of Expose Armor (id=56803) [Spell Family (8), Passive, 
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3922,6 +4105,7 @@ Name             : Glyph of Feint (id=56804) [Spell Family (8), Passive, Hidden]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3942,6 +4126,9 @@ Name             : Glyph of Kick (id=56805) [Spell Family (8), Passive, Hidden]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3964,6 +4151,7 @@ Name             : Glyph of Deadly Throw (id=56806) [Spell Family (8), Passive, 
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3984,6 +4172,9 @@ Name             : Glyph of Hemorrhage (id=56807) [Spell Family (8), Passive, Hi
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4004,6 +4195,7 @@ Name             : Glyph of Adrenaline Rush (id=56808) [Spell Family (8), Passiv
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4024,6 +4216,7 @@ Name             : Glyph of Gouge (id=56809) [Spell Family (8), Passive, Hidden]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4044,6 +4237,7 @@ Name             : Glyph of Slice and Dice (id=56810) [Spell Family (8), Passive
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4064,6 +4258,7 @@ Name             : Glyph of Sprint (id=56811) [Spell Family (8), Passive, Hidden
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4084,6 +4279,7 @@ Name             : Glyph of Garrote (id=56812) [Spell Family (8), Passive, Hidde
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4104,6 +4300,7 @@ Name             : Glyph of Ambush (id=56813) [Spell Family (8), Passive, Hidden
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4124,6 +4321,7 @@ Name             : Glyph of Revealing Strike (id=56814) [Spell Family (8), Passi
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4144,6 +4342,7 @@ Name             : Glyph of Blade Flurry (id=56818) [Spell Family (8), Passive, 
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4164,6 +4363,7 @@ Name             : Glyph of Preparation (id=56819) [Spell Family (8), Passive, H
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4184,6 +4384,7 @@ Name             : Glyph of Crippling Poison (id=56820) [Spell Family (8), Passi
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4205,6 +4406,10 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Internal Cooldown: 0.5 seconds
+Proc Chance      : 20%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ...x.... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4224,6 +4429,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4243,6 +4449,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4262,6 +4469,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4281,6 +4489,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4300,6 +4509,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4319,6 +4529,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4338,6 +4549,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4357,6 +4569,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4376,6 +4589,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4395,6 +4609,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4414,6 +4629,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4433,6 +4649,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4452,6 +4669,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4471,6 +4689,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4490,6 +4709,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4509,6 +4729,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4528,6 +4749,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4547,6 +4769,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4566,6 +4789,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4585,6 +4809,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4604,6 +4829,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4653,6 +4879,9 @@ Range            : 100 yards
 GCD              : 1 seconds
 Duration         : 20 seconds
 Cooldown         : 30 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x....... ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged
 Affecting spells : Glyph of Tricks of the Trade (63256 effect#1)
 Family Flags     : 49
 Attributes       : ....x... ........ x.x..... .x......   .....x.. ..x..... ...x.... ..x..... 
@@ -4676,6 +4905,7 @@ Name             : Glyph of Pick Pocket (id=58017) [Spell Family (8), Passive, H
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4695,6 +4925,7 @@ Name             : Glyph of Pick Lock (id=58027) [Spell Family (8), Passive, Hid
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4715,6 +4946,7 @@ Name             : Glyph of Distract (id=58032) [Spell Family (8), Passive, Hidd
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4735,6 +4967,7 @@ Name             : Glyph of Safe Fall (id=58033) [Spell Family (8), Passive, Hid
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4775,6 +5008,7 @@ Name             : Glyph of Blurred Speed (id=58039) [Spell Family (8), Passive,
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4796,6 +5030,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4815,6 +5050,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4834,6 +5070,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4853,6 +5090,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4872,6 +5110,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4891,6 +5130,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4910,6 +5150,9 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 100%
+Proc Flags       : ........ ....x... x....... ........   ........ ........ ........ ........   
+                 : Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4936,6 +5179,9 @@ Name             : Savage Combat (desc=Rank 2) (id=58413) [Spell Family (8), Pas
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ....x... x....... ........   ........ ........ ........ ........   
+                 : Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4960,6 +5206,7 @@ Name             : Relentless Strikes (desc=Rank 2) (id=58422) [Spell Family (8)
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ....x... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4980,6 +5227,7 @@ Name             : Relentless Strikes (desc=Rank 3) (id=58423) [Spell Family (8)
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ....x... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5000,6 +5248,7 @@ Name             : Overkill (id=58426) [Passive, Hidden]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... .x...... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5021,6 +5270,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 0 Energy (3) (id=244348)
 Duration         : Aura (infinite)
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ...x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5043,6 +5293,7 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : Aura (infinite)
+Proc Chance      : 101%
 Triggered by     : Savage Combat (58413)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ .x...... ........ 
@@ -5066,6 +5317,7 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : Aura (infinite)
+Proc Chance      : 101%
 Triggered by     : Savage Combat (51682)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ .x...... ........ 
@@ -5087,6 +5339,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5108,6 +5361,7 @@ Class            : Rogue, Druid
 School           : Physical
 Spell Type       : None
 Cast Time        : 2 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5127,6 +5381,7 @@ School           : Physical
 Spell Type       : None
 Resource         : 0 Energy (3) (id=256247)
 Duration         : 2 seconds
+Proc Chance      : 101%
 Affecting spells : Glyph of Killing Spree (63252 effect#1)
 Family Flags     : 62
 Attributes       : ....x..x x....... x....... ........   ........ ..x..... ........ ........ 
@@ -5152,6 +5407,7 @@ Name             : Glyph of Vendetta (id=63249) [Spell Family (8), Passive, Hidd
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5172,6 +5428,7 @@ Name             : Glyph of Killing Spree (id=63252) [Spell Family (8), Passive,
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5192,6 +5449,7 @@ Name             : Glyph of Shadow Dance (id=63253) [Spell Family (8), Passive, 
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5212,6 +5470,7 @@ Name             : Glyph of Fan of Knives (id=63254) [Spell Family (8), Passive,
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5232,6 +5491,7 @@ Name             : Glyph of Tricks of the Trade (id=63256) [Spell Family (8), Pa
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5256,6 +5516,7 @@ Name             : Glyph of Mutilate (id=63268) [Spell Family (8), Passive, Hidd
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5276,6 +5537,7 @@ Name             : Glyph of Cloak of Shadows (id=63269) [Spell Family (8), Passi
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5297,6 +5559,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5316,6 +5579,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5335,6 +5599,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5354,6 +5619,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5373,6 +5639,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5392,6 +5659,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5411,6 +5679,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5545,7 +5814,7 @@ Attributes       : ....x... ........ ........ ........   .....x.. ..x..... .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), Allow While Stealthed (37), No Threat (42)
 Effects          :
-#1 (id=67054)    : Add Combo Points (80)
+#1 (id=67054)    : Add Combo Points (328)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Transfers any existing combo points to the current enemy target$?s84654[, as well as any insight gained from Bandit's Guile]?s84653[, as well as any insight gained from Bandit's Guile]?s84652[, as well as any insight gained from Bandit's Guile][].  Requires active combo points.
 
@@ -5556,7 +5825,12 @@ Spell Type       : None
 Spell Level      : 81
 Duration         : 20 seconds
 Cooldown         : 120 seconds
+Category         : 1329
 Category Cooldown: 120 seconds
+Internal Cooldown: 1 seconds
+Proc Chance      : 101%
+Proc Flags       : ...x.x.x .x...... ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken
 Affecting spells : Elusiveness (13981 effect#2), Elusiveness (14066 effect#2)
 Family Flags     : 70
 Attributes       : ....x... ........ ........ ........   ........ ..x..... ........ ........ 
@@ -5579,6 +5853,8 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
+Stacks           : 5 maximum
+Proc Chance      : 101%
 Triggered by     : Combat Readiness (74001)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5652,6 +5928,9 @@ Name             : Main Gauche (id=76806) [Spell Family (8), Passive, Hidden]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5674,6 +5953,7 @@ Name             : Executioner (id=76808) [Spell Family (8), Passive, Hidden]
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Max Targets      : 250
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5814,6 +6094,9 @@ Name             : Restless Blades (desc=Rank 1) (id=79095) [Spell Family (8), P
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5832,6 +6115,9 @@ Name             : Restless Blades (desc=Rank 2) (id=79096) [Spell Family (8), P
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5850,6 +6136,9 @@ Name             : Deadly Momentum (desc=Rank 1) (id=79121) [Spell Family (8), P
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5870,6 +6159,9 @@ Name             : Deadly Momentum (desc=Rank 2) (id=79122) [Spell Family (8), P
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5970,6 +6262,9 @@ Name             : Venomous Wounds (desc=Rank 1) (id=79133) [Spell Family (8), P
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 30%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -5992,6 +6287,9 @@ Name             : Venomous Wounds (desc=Rank 2) (id=79134) [Spell Family (8), P
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 60%
+Proc Flags       : ........ ........ ..x..x.. ........   ........ ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -6013,7 +6311,7 @@ Description      : Each time your Rupture or Garrote deals damage to an enemy th
 Name             : Venomous Wound (id=79136) [Spell Family (8)] 
 Class            : Rogue
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 100 yards
 Affecting spells : Improved Poisons (14117 effect#1), Vile Poisons (16513 effects: #2, #3), Vile Poisons (16514 effects: #2, #3), Vile Poisons (16515 effects: #2, #3), Venomous Totem (23726 effect#2), Envenom (32645 effect#3), Deadly Brew (51625 effect#1), Deadly Brew (51626 effect#1), Potent Poisons (76803 effects: #1, #2), Strikes of Opportunity (76838 effect#1), Vendetta (79140 effect#1), Hemorrhage (89775 effect#1)
@@ -6213,6 +6511,7 @@ Class            : Rogue, Druid
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
+Mechanic         : Unknown(28)
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6229,7 +6528,7 @@ Effects          :
 Name             : Parry (desc=Passive) (id=82245) [Passive] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 12
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
@@ -6251,6 +6550,10 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x...x... ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell
 Triggered by     : Deadly Momentum (79121), Deadly Momentum (79122)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6285,7 +6588,7 @@ Attributes       : ....x.x. x....... ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), Passive (6), Do Not Log (8), Not In Spellbook Until Learned (269)
 Effects          :
-#1 (id=85447)    : Apply Aura (6) | Increase Energy (35)
+#1 (id=85447)    : Apply Aura (6) | Modify Max Power (35) (energy)
                    Base Value: 20 | Scaled Value: 20 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
 #2 (id=85448)    : Apply Aura (6) | Modify Damage Done% (79)
                    Base Value: 20 | Scaled Value: 20 | PvP Coefficient: 1.00000 | Misc Value: 0x1 | Target: Self (1)
@@ -6295,7 +6598,7 @@ Description      : While wielding daggers, your maximum Energy is increased by $
 Name             : Revealing Strike (id=84617) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 40 Energy (3) (id=286630)
 Spell Level      : 29 (max 80)
 Max Scaling Level: 80
@@ -6303,6 +6606,10 @@ Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 15 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : .....x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Glyph of Revealing Strike (56814 effect#1), Vendetta (79140 effect#1), Deadly Momentum (84590 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 23, 60
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ...x.... 
@@ -6317,7 +6624,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
 Effects          :
 #1 (id=85480)    : Weapon Damage% (31)
                    Base Value: 81 | Scaled Value: 1.25013 | Points Per Level: 0.863 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#2 (id=85481)    : Add Combo Points (80)
+#2 (id=85481)    : Add Combo Points (328)
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=85482)    : Apply Aura (6) | Dummy (4)
                    Base Value: 35 | Scaled Value: 35 | PvP Coefficient: 1.00000 | Target: Enemy (6)
@@ -6328,6 +6635,9 @@ Name             : Bandit's Guile (desc=Rank 1) (id=84652) [Spell Family (8), Pa
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 33%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6348,6 +6658,9 @@ Name             : Bandit's Guile (desc=Rank 2) (id=84653) [Spell Family (8), Pa
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 67%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6368,6 +6681,9 @@ Name             : Bandit's Guile (desc=Rank 2) (id=84654) [Spell Family (8), Pa
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6431,7 +6747,7 @@ Description      : Increases your Agility by $s1% while wearing only Leather arm
 Name             : Main Gauche (id=86392) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 1
 Range            : 10 yards
 Family Flags     : 65
@@ -6498,6 +6814,8 @@ School           : Physical
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 3 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(9)
 Triggered by     : Improved Kick (13867)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -6553,31 +6871,6 @@ Effects          :
 #1 (id=89431)    : Dummy (3)
                    Base Value: 5 | Scaled Value: 5 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Grants a $s1% increase to your Agility for wearing leather in all armor slots.
-
-Name             : Running Wild (desc=Racial) (id=87840) 
-Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Druid
-Race             : Worgen (0x200000)
-School           : Physical
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Attributes       : ....x... .......x x...x... ....x...   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ...x....   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Is Ability (4), Only Outdoors (15), Not Shapeshifted (16), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), Ignore Caster Modifiers (125), Force Display Castbar (155), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#1 (id=89943)    : Apply Aura (6) | Dummy (4)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000
-#3 (id=104313)   : Apply Aura (6) | Unknown(358)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Drop to all fours to run as fast as a wild animal.
-Tooltip          : $?j2g[Increases ground speed by $j2g%. ][]$?j2f[Increases flight speed by $j2f%. ][]$?j2s[Increases swim speed by $j2s%. ][]
 
 Name             : Glyph of Vanish (id=89758) [Spell Family (8), Passive, Hidden] 
 Class            : Rogue
@@ -6639,7 +6932,7 @@ Description      : Your Backstab critical strikes grant you energy.
 Name             : Hemorrhage (id=89775) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 1
 Range            : 30 yards
 Duration         : 24 seconds
@@ -6669,6 +6962,7 @@ Spell Type       : None
 Spell Level      : 29
 Range            : 100 yards
 Duration         : 10 seconds
+Proc Chance      : 101%
 Triggered by     : Find Weakness (51632), Find Weakness (91023)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ..x..... ......x. 
@@ -6689,6 +6983,9 @@ Name             : Find Weakness (desc=Rank 2) (id=91023) [Spell Family (8), Pas
 Class            : Rogue
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6750,6 +7047,9 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 100 yards
 Duration         : 15 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ....x... x....... ........   ........ ........ ........ ........   
+                 : Generic Hostile Spell, Magic Hostile Spell
 Triggered by     : Master Poisoner (58410)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ..x..... ......x. 

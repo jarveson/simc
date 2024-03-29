@@ -1,10 +1,11 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53627 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
 Name             : Auto Shot (id=75) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Spell Level      : 1
 Range            : 40 yards
+Cast Time        : Ranged Shot
 Velocity         : 60 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Mortal Shots (36413 effect#1), Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Owl's Focus (53515 effect#1), Focus (77442 effect#2), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Artisan Quiver (87326 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
@@ -27,7 +28,7 @@ Tooltip          : Firing at the target.
 Name             : Mend Pet (id=136) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=169157)
 Spell Level      : 16
 Range            : 45 yards
@@ -54,7 +55,7 @@ Variables        : $total=${$m1*5}
 Name             : Dual Wield (desc=Passive) (id=674) [Passive] 
 Class            : Warrior, Hunter, Rogue, Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -118,7 +119,7 @@ Description      : Summons your first pet to you.
 Name             : Revive Pet (id=982) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 35 Focus (2) (id=169376)
 Spell Level      : 1
 Cast Time        : 10 seconds
@@ -149,6 +150,7 @@ Spell Level      : 14
 Range            : 100 yards
 GCD              : 1 seconds
 Duration         : 300 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Feeding Frenzy (53511 effect#1), Feeding Frenzy (53512 effect#1), Glyph of Misdirection (56829 effect#1)
 Family Flags     : 10
 Attributes       : ........ ........ x....... ..x.....   ........ ..x..... ........ ........ 
@@ -199,6 +201,7 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=170425)
 Spell Level      : 4
 Duration         : Aura (infinite)
+Category         : 1239
 Affecting spells : Camouflage (51755 effect#3), Pathing (52783 effect#1), Pathing (52785 effect#1), Pathing (52786 effect#1)
 Family Flags     : 65
 Attributes       : ....x... ........ ..x..... x..x....   .....x.. ..x..... .x...... ....x... 
@@ -225,6 +228,7 @@ Spell Level      : 28
 GCD              : 1 seconds
 Duration         : 60 seconds
 Cooldown         : 30 seconds
+Category         : 411
 Category Cooldown: 30 seconds
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Camouflage (51755 effect#3), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1), Trap Launcher (77769 effect#1)
 Family Flags     : 7, 90
@@ -245,13 +249,19 @@ Description      : Place a frost trap that freezes the first enemy that approach
 Name             : Scare Beast (id=1513) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 25 Focus (2) (id=170473)
 Spell Level      : 36
 Range            : 30 yards
+Max Targets      : 1
 Cast Time        : 1.5 seconds
 GCD              : 1.5 seconds
 Duration         : 20 seconds
+Category         : 33
+Proc Chance      : 100%
+Mechanic         : Unknown(5)
+Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Camouflage (51755 effect#3), Glyph of Scare Beast (57902 effect#1)
 Family Flags     : 48
 Attributes       : ........ ........ x...x... ......x.   ........ ........ ........ ........ 
@@ -344,7 +354,7 @@ Description      : Exposes all hidden and invisible enemies within $a1 yards of 
 Name             : Serpent Sting (id=1978) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 25 Focus (2) (id=169809)
 Spell Level      : 10
 Range            : 40 yards
@@ -400,7 +410,7 @@ Description      : Temporarily sends this pet away.  You can call it back later.
 Name             : Multi-Shot (id=2643) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 40 Focus (2) (id=170887)
 Spell Level      : 24 (max 80)
 Max Scaling Level: 80
@@ -408,6 +418,7 @@ Range            : 40 yards
 GCD              : 1 seconds
 Velocity         : 30 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
+Category         : 85
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Refocus (24531 effect#1), Multi-Shot Damage Increase (28539 effect#1), Careful Aim (34482 effect#1), Careful Aim (34483 effect#1), Master Marksman (34485 effect#1), Master Marksman (34486 effect#1), Master Marksman (34487 effect#1), Concussive Barrage (35100 effect#1), Concussive Barrage (35102 effect#1), Mortal Shots (36413 effect#1), Shot Power (37508 effect#1), Camouflage (51755 effect#3), Improved Steady Shot (53221 effect#1), Improved Steady Shot (53222 effect#1), Improved Steady Shot (53224 effect#1), Rapid Recuperation (53228 effect#1), Rapid Recuperation (53232 effect#1), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Beast Mastery (53270 effect#1), Owl's Focus (53515 effect#1), Kindred Spirits (56314 effect#1), Kindred Spirits (56315 effect#1), Glyph of Silencing Shot (56836 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Bombardment (82921 effect#1), Ready, Set, Aim... (82925 effect#1), Termination (83489 effect#1), Termination (83490 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2), Kindred Spirits (88680 effect#1)
 Family Flags     : 12
 Attributes       : .x...... ........ x....... ........   ........ .x...... ........ ........ 
@@ -429,13 +440,14 @@ Description      : Fires several missiles, hitting your current target and all e
 Name             : Raptor Strike (id=2973) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=170763)
 Spell Level      : 6
 Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Cooldown         : 6 seconds
+Category         : 40
 Category Cooldown: 6 seconds
 Affecting spells : Serpent Sting (1978 effect#2), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Camouflage (51755 effect#3), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Feeding Frenzy (53511 effect#1), Feeding Frenzy (53512 effect#1), Owl's Focus (53515 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 1, 80
@@ -456,7 +468,7 @@ Description      : An attack that instantly deals your normal weapon damage plus
 Name             : Wing Clip (id=2974) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=170806)
 Spell Level      : 12
 Range            : 5 yards
@@ -483,7 +495,7 @@ Tooltip          : Movement speed reduced by $s1%.
 Name             : Arcane Shot (id=3044) [Spell Family (9)] 
 Class            : Hunter
 School           : Arcane
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 25 Focus (2) (id=170789)
 Spell Level      : 1 (max 80)
 Max Scaling Level: 80
@@ -491,6 +503,7 @@ Range            : 40 yards
 GCD              : 1 seconds
 Velocity         : 40 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
+Category         : 1173
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Efficiency (19416 effect#2), Efficiency (19417 effect#2), Efficiency (19418 effect#2), Arcane Shot Focus Reduction (23157 effect#1), The Beast Within (34471 effect#3), Rapid Killing (34948 effect#1), Rapid Killing (34949 effect#1), Go for the Throat (34950 effect#1), Go for the Throat (34954 effect#1), Mortal Shots (36413 effect#1), Improved Shots (37507 effect#1), Shot Power (37508 effect#1), Camouflage (51755 effect#3), Rapid Recuperation (53230 effect#1), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Owl's Focus (53515 effect#1), Rapid Recuperation (54227 effect#1), Glyph of Arcane Shot (56841 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Sic 'Em! (83340 effect#1), Sic 'Em! (83356 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 11
 Attributes       : .x...... ........ x....... ........   ........ .x...... ........ ........ 
@@ -518,6 +531,7 @@ Resource         : 0 Focus (2) (id=169901)
 Spell Level      : 54
 Duration         : 15 seconds
 Cooldown         : 300 seconds
+Category         : 55
 Category Cooldown: 300 seconds
 Affecting spells : Camouflage (51755 effect#3), Owl's Focus (53515 effect#1), Glyph of Rapid Fire (56828 effect#1), Posthaste (83558 effect#1), Posthaste (83560 effect#1)
 Family Flags     : 5
@@ -539,10 +553,12 @@ Tooltip          : Increases ranged attack speed by $w1%.
 Name             : Freezing Trap (id=3355) [Spell Family (9)] 
 Class            : Hunter
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 28
 Range            : 10 yards
 Duration         : 60 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(13)
 Affecting spells : Survival Tactics (19286 effect#1), Survival Tactics (19287 effect#1), Trap Mastery (19376 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Camouflage (51755 effect#3), Point of No Escape (53298 effect#1), Point of No Escape (53299 effect#1), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Trap Mastery (63457 effect#1), Trap Mastery (63458 effect#1), General Hunter Passives (87816 effect#2)
 Family Flags     : 3
 Attributes       : ........ ........ ........ ......x.   ........ ..x..... ..x..... ........ 
@@ -567,7 +583,7 @@ Tooltip          : Frozen.
 Name             : Black Arrow (id=3674) [Spell Family (9)] 
 Class            : Hunter
 School           : Shadow
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 35 Focus (2) (id=171822)
 Spell Level      : 50
 Range            : 40 yards
@@ -576,6 +592,7 @@ Velocity         : 40 yards/sec
 Duration         : 20 seconds
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 30 seconds
+Category         : 1250
 Category Cooldown: 30 seconds
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Trap Mastery (19376 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Camouflage (51755 effect#3), Invigoration (53252 effect#1), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1), Trap Mastery (63457 effect#2), Trap Mastery (63458 effect#2), Toxicology (82832 effect#1), Toxicology (82833 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 7, 59
@@ -597,12 +614,13 @@ Tooltip          : $s1 Shadow damage every $t1 seconds.
 Name             : Web (desc=Special Ability) (id=4167) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=264631)
 Spell Level      : 20
 Range            : 30 yards
 Duration         : 5 seconds
 Cooldown         : 40 seconds
+Mechanic         : Unknown(7)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ........ ........ x....... ......x.   ........ .x...... ........ ........ 
@@ -623,7 +641,7 @@ Tooltip          : Webbed.
 Name             : Concussive Shot (id=5116) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 0 Focus (2) (id=172830)
 Spell Level      : 8
 Range            : 40 yards
@@ -632,6 +650,8 @@ Velocity         : 40 yards/sec
 Duration         : 6 seconds
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 5 seconds
+Category         : 1231
+Mechanic         : Unknown(11)
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Mortal Shots (36413 effect#1), Camouflage (51755 effect#3), Owl's Focus (53515 effect#1), Glyph of Concussive Shot (56851 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 9
 Attributes       : .x...... ........ x....... ........   ........ .x...... ........ ........ 
@@ -654,12 +674,16 @@ Tooltip          : Movement slowed by $s1%. $?s56851[Maximum run speed limited.]
 Name             : Aspect of the Cheetah (id=5118) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=173225)
 Spell Level      : 24
 Duration         : Aura (infinite)
 Cooldown         : 1 seconds
+Category         : 47
 Category Cooldown: 1 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Pathfinding (19559 effect#1), Pathfinding (19560 effect#1), Camouflage (51755 effect#3), Glyph of Aspect of the Pack (57904 effect#1)
 Family Flags     : 21
 Attributes       : ........ ...x.... x.x..... x.......   ........ ..x..... .x...... ........ 
@@ -707,7 +731,7 @@ Tooltip          : Feigning death.
 Name             : Eagle Eye (id=6197) 
 Class            : Hunter
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=174037)
 Spell Level      : 16
 Range            : 50000 yards
@@ -777,12 +801,16 @@ Description      : Feed your pet the selected item, instantly restoring $1539s1%
 Name             : Aspect of the Pack (id=13159) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=178568)
 Spell Level      : 56
 Duration         : Aura (infinite)
 Cooldown         : 1 seconds
+Category         : 47
 Category Cooldown: 1 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...x.. .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken
 Affecting spells : Pathfinding (19559 effect#1), Pathfinding (19560 effect#1), Camouflage (51755 effect#3), Glyph of Aspect of the Pack (57904 effect#1)
 Family Flags     : 21
 Attributes       : ........ ...x.... x.x..... ........   ........ ........ .x...... ........ 
@@ -805,12 +833,14 @@ Tooltip          : $w1% increased movement speed.  Dazed if struck.
 Name             : Aspect of the Hawk (id=13165) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=178967)
 Spell Level      : 12
 Duration         : Aura (infinite)
 Cooldown         : 1 seconds
+Category         : 47
 Category Cooldown: 1 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), One with Nature (82682 effect#1), One with Nature (82683 effect#1), One with Nature (82684 effect#1), Focus Fire (82692 effect#1)
 Family Flags     : 20
 Attributes       : ........ ........ x.x..... x.......   ........ ..x..... ........ ........ 
@@ -834,6 +864,9 @@ Name             : Defensive State (DND) (id=13358) [Passive, Hidden]
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -877,6 +910,7 @@ Spell Level      : 22
 GCD              : 1 seconds
 Duration         : 60 seconds
 Cooldown         : 30 seconds
+Category         : 1250
 Category Cooldown: 30 seconds
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Camouflage (51755 effect#3), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1)
 Family Flags     : 7, 93
@@ -900,7 +934,7 @@ $mult=$?s56846[${4}][${2}]
 Name             : Immolation Trap (id=13797) [Spell Family (9)] 
 Class            : Hunter
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 22
 Range            : 10 yards
 Duration         : 15 seconds
@@ -933,6 +967,7 @@ Spell Level      : 46
 GCD              : 1 seconds
 Duration         : 60 seconds
 Cooldown         : 30 seconds
+Category         : 411
 Category Cooldown: 30 seconds
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Camouflage (51755 effect#3), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1), Trap Launcher (77769 effect#3)
 Family Flags     : 7, 92
@@ -953,10 +988,11 @@ Description      : Place a frost trap that creates an ice slick around itself fo
 Name             : Ice Trap (id=13810) [Spell Family (9)] 
 Class            : Hunter
 School           : Frost
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 28
 Range            : 50000 yards
 Duration         : 30 seconds
+Mechanic         : Unknown(11)
 Affecting spells : Survival Tactics (19286 effect#1), Survival Tactics (19287 effect#1), Trap Mastery (19376 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Increased Pet Attack Power (38297 effect#1), Camouflage (51755 effect#3), Point of No Escape (53298 effect#2), Point of No Escape (53299 effect#2), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Glyph of Ice Trap (56847 effect#1), Trap Mastery (63457 effect#1), Trap Mastery (63458 effect#1), General Hunter Passives (87816 effect#2)
 Family Flags     : 4
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
@@ -981,7 +1017,7 @@ Tooltip          : Movement speed slowed by $s1%.
 Name             : Explosive Trap (id=13812) [Spell Family (9)] 
 Class            : Hunter
 School           : Fire
-Spell Type       : None
+Spell Type       : Ranged
 Spell Level      : 38
 Duration         : 20 seconds
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Survival Tactics (19286 effect#1), Survival Tactics (19287 effect#1), Trap Mastery (19376 effect#2), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Camouflage (51755 effect#3), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Mastery (63457 effect#2), Trap Mastery (63458 effect#2), Essence of the Viper (76658 effect#3), General Hunter Passives (87816 effect#2), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
@@ -1012,6 +1048,7 @@ Spell Level      : 38
 GCD              : 1 seconds
 Duration         : 60 seconds
 Cooldown         : 30 seconds
+Category         : 1250
 Category Cooldown: 30 seconds
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Camouflage (51755 effect#3), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1), Trap Launcher (77769 effect#2)
 Family Flags     : 7, 85
@@ -1054,7 +1091,7 @@ Tooltip          : Dazed.
 Name             : Claw (desc=Basic Attack) (id=16827) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 25 Focus (2) (id=181918)
 Spell Level      : 1
 Range            : 5 yards
@@ -1079,12 +1116,13 @@ Description      : Claw the enemy, causing ${$M1+(($RAP*0.40)*0.20)} damage.
 Name             : Bite (desc=Basic Attack) (id=17253) [Spell Family (9)] 
 Class            : Hunter, Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 25 Focus (2) (id=182675)
 Spell Level      : 1
 Range            : 5 yards
 GCD              : 1.5 seconds
 Cooldown         : 3 seconds
+Category         : 19
 Affecting spells : Camouflage (51755 effect#3), Spiked Collar (53182 effect#1), Spiked Collar (53183 effect#1), Spiked Collar (53184 effect#1), Cobra Strikes (53257 effect#1), Sic 'Em! (83359 effect#1)
 Family Flags     : 19
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ........ 
@@ -1105,6 +1143,9 @@ Name             : Entrapment (desc=Rank 1) (id=19184) [Spell Family (9), Passiv
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   .....x.. ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1122,9 +1163,10 @@ Description      : When your Ice Trap or Snake Trap are triggered you entrap all
 Name             : Entrapment (id=19185) 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Range            : 50000 yards
 Duration         : 2 seconds
+Mechanic         : Unknown(7)
 Triggered by     : Entrapment (19184)
 Attributes       : ........ ........ ........ ...x....   ...x...x ........ ........ ........ 
                  : ..x..... ........ ........ ....x...   ........ ........ ........ ........ 
@@ -1198,6 +1240,9 @@ Name             : Survival Tactics (desc=Rank 2) (id=19287) [Spell Family (9), 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1221,13 +1266,15 @@ Description      : Reduces the chance that your trap spells will be resisted by 
 Name             : Counterattack (id=19306) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 29
 Range            : 5 yards
 GCD              : 1.5 seconds
 Duration         : 5 seconds
 Cooldown         : 5 seconds
+Category         : 1135
 Category Cooldown: 5 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1)
 Family Flags     : 51
 Attributes       : ....x... ........ x.x..x.. ........   ........ .x...... ........ ........ 
@@ -1387,7 +1434,7 @@ Description      : Increases the damage you deal with melee weapons by $s1%.
 Name             : Wyvern Sting (id=19386) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 10 Focus (2) (id=183377)
 Spell Level      : 40
 Range            : 35 yards
@@ -1396,7 +1443,12 @@ Velocity         : 40 yards/sec
 Duration         : 30 seconds
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 60 seconds
+Category         : 1111
 Category Cooldown: 60 seconds
+Proc Chance      : 100%
+Mechanic         : Unknown(10)
+Proc Flags       : ........ ........ ....x... ........   ........ ........ ........ ........   
+                 : Any Damage Taken
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Camouflage (51755 effect#3), Noxious Stings (53295 effect#2), Noxious Stings (53296 effect#2), Owl's Focus (53515 effect#1), Glyph of Wyvern Sting (56848 effect#1)
 Family Flags     : 44
 Attributes       : .x...... ........ x...x... ........   ........ ..x..... ........ ........ 
@@ -1418,6 +1470,9 @@ Name             : Entrapment (desc=Rank 2) (id=19387) [Spell Family (9), Passiv
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... x...x... x....... ........   .....x.. ........ ........ ........   
+                 : Yellow Melee, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1507,7 +1562,7 @@ Description      : Reduces the Focus cost of your Arcane Shot by $s2, and your E
 Name             : Aimed Shot (id=19434) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 50 Focus (2) (id=184079)
 Spell Level      : 10 (max 80)
 Max Scaling Level: 80
@@ -1516,6 +1571,7 @@ Cast Time        : 2.9 seconds
 GCD              : 1 seconds
 Velocity         : 40 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
+Category         : 85
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Refocus (24531 effect#1), Rapid Killing (35098 effect#1), Rapid Killing (35099 effect#1), Mortal Shots (36413 effect#1), Shot Power (37508 effect#1), Camouflage (51755 effect#3), Rapid Recuperation (53230 effect#1), Piercing Shots (53234 effect#1), Piercing Shots (53237 effect#1), Piercing Shots (53238 effect#1), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Beast Mastery (53270 effect#2), Owl's Focus (53515 effect#1), Rapid Recuperation (54227 effect#1), Glyph of Aimed Shot (56824 effect#1), Glyph of Freezing Trap (56845 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Fire! (82926 effects: #1, #2), Focused Aim (87324 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 17
 Attributes       : .x..x... ........ x....... ........   ........ ........ ........ ........ 
@@ -1564,7 +1620,7 @@ Also increases the periodic critical strike chance of your Serpent Sting by $s2%
 Name             : Scatter Shot (id=19503) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 0 Focus (2) (id=184312)
 Spell Level      : 15
 Range            : 20 yards
@@ -1573,6 +1629,7 @@ Velocity         : 60 yards/sec
 Duration         : 4 seconds
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 30 seconds
+Proc Chance      : 101%
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Mortal Shots (36413 effect#1), Shot Power (37508 effect#2), Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Glyph of Scatter Shot (63069 effect#1), Glyph of Raptor Strike (63086 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 18, 79
 Attributes       : .x...... ........ x...x... ........   ........ .x...... ........ ........ 
@@ -1735,12 +1792,17 @@ Tooltip          : Enraged.
 Name             : Intimidation (id=19577) [Spell Family (9)] 
 Class            : Hunter, Monk
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=184392)
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 15 seconds
 Cooldown         : 60 seconds
+Category         : 1132
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Camouflage (51755 effect#3), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1)
 Family Flags     : 67
 Attributes       : ....x... ...x.... x.x..... ........   ........ ..x..... ........ ........ 
@@ -1847,6 +1909,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 10 seconds
+Stacks           : 5 maximum
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -1931,7 +1994,7 @@ Description      : Your pet gains $s1% attack speed after attacking with a Basic
 Name             : Tranquilizing Shot (id=19801) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 20 Focus (2) (id=183372)
 Spell Level      : 35
 Range            : 35 yards
@@ -1963,6 +2026,7 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=184994)
 Spell Level      : 36
 Duration         : Aura (infinite)
+Category         : 1239
 Affecting spells : Camouflage (51755 effect#3), Pathing (52783 effect#1), Pathing (52785 effect#1), Pathing (52786 effect#1)
 Family Flags     : 65
 Attributes       : ....x... ........ ..x..... x..x....   .....x.. ..x..... .x...... ....x... 
@@ -1987,6 +2051,7 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=185038)
 Spell Level      : 52
 Duration         : Aura (infinite)
+Category         : 1239
 Affecting spells : Camouflage (51755 effect#3), Pathing (52783 effect#1), Pathing (52785 effect#1), Pathing (52786 effect#1)
 Family Flags     : 65
 Attributes       : ....x... ........ ..x..... x..x....   .....x.. ..x..... .x...... ....x... 
@@ -2011,6 +2076,7 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=185248)
 Spell Level      : 34
 Duration         : Aura (infinite)
+Category         : 1239
 Affecting spells : Camouflage (51755 effect#3), Pathing (52783 effect#1), Pathing (52785 effect#1), Pathing (52786 effect#1)
 Family Flags     : 65
 Attributes       : ....x... ........ ..x..... x..x....   .....x.. ..x..... .x...... ....x... 
@@ -2035,6 +2101,7 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=183835)
 Spell Level      : 46
 Duration         : Aura (infinite)
+Category         : 1239
 Affecting spells : Camouflage (51755 effect#3), Pathing (52783 effect#1), Pathing (52785 effect#1), Pathing (52786 effect#1)
 Family Flags     : 65
 Attributes       : ....x... ........ ..x..... x..x....   .....x.. ..x..... .x...... ....x... 
@@ -2059,6 +2126,7 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=184482)
 Spell Level      : 12
 Duration         : Aura (infinite)
+Category         : 1239
 Affecting spells : Camouflage (51755 effect#3), Pathing (52783 effect#1), Pathing (52785 effect#1), Pathing (52786 effect#1)
 Family Flags     : 65
 Attributes       : ....x... ........ ..x..... x..x....   .....x.. ..x..... .x...... ....x... 
@@ -2083,6 +2151,7 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=183836)
 Spell Level      : 18
 Duration         : Aura (infinite)
+Category         : 1239
 Affecting spells : Camouflage (51755 effect#3), Pathing (52783 effect#1), Pathing (52785 effect#1), Pathing (52786 effect#1)
 Family Flags     : 65
 Attributes       : ....x... ........ ..x..... x..x....   .....x.. ..x..... .x...... ....x... 
@@ -2103,11 +2172,12 @@ Tooltip          : Tracking Undead.
 Name             : Aspect of the Wild (id=20043) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=184601)
 Spell Level      : 64
 Duration         : Aura (infinite)
 Cooldown         : 1 seconds
+Category         : 47
 Category Cooldown: 1 seconds
 Affecting spells : Camouflage (51755 effect#3)
 Family Flags     : 54
@@ -2174,7 +2244,7 @@ Description      : Damage dealt by pets increased by $s1%.
 Name             : Distracting Shot (id=20736) [Spell Family (9)] 
 Class            : Hunter
 School           : Arcane
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 0 Focus (2) (id=185417)
 Spell Level      : 52
 Range            : 40 yards
@@ -2183,7 +2253,9 @@ Velocity         : 40 yards/sec
 Duration         : 6 seconds
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 8 seconds
+Category         : 911
 Category Cooldown: 8 seconds
+Mechanic         : Unknown(16)
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Feeding Frenzy (53511 effect#1), Feeding Frenzy (53512 effect#1), Owl's Focus (53515 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 49
 Attributes       : .x...... ........ x...x... ........   ........ .x...... .x...... ........ 
@@ -2294,10 +2366,12 @@ Tooltip          : $s1 Nature damage every $t1 seconds.
 Name             : Intimidation (id=24394) 
 Class            : Hunter, Monk
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 40
 Range            : 5 yards
 Duration         : 3 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(12)
 Triggered by     : Intimidation (19577)
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2340,13 +2414,15 @@ Description      : Reduces the mana cost of your Mend Pet spell and gives the Me
 Name             : Demoralizing Screech (id=24423) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=187537)
 Spell Level      : 1
 Range            : 5 yards
 GCD              : 1.5 seconds
 Duration         : 10 seconds
 Cooldown         : 10 seconds
+Category         : 36
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ x.x..... ..x.....   ........ .x...... ........ ........ 
@@ -2375,7 +2451,12 @@ Resource         : 0 Focus (2) (id=187403)
 Spell Level      : 20
 Duration         : Aura (infinite)
 Cooldown         : 10 seconds
+Category         : 38
 Category Cooldown: 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
+Proc Flags       : ..x.x.x. x...x... x.x..x.. ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell, Periodic, Helpful Periodic
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ x.x.x... .x.xx...   ....x... ..x..... ........ ........ 
@@ -2425,7 +2506,7 @@ Tooltip          : Regenerate $s1% of total health every $t1 sec.
 Name             : Furious Howl (desc=Special Ability) (id=24604) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=188563)
 Spell Level      : 20
 Duration         : 60 seconds
@@ -2450,13 +2531,14 @@ Tooltip          : Increases critical strike chance by $s1%.
 Name             : Lightning Breath (desc=Special Ability) (id=24844) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=188425)
 Spell Level      : 20
 Range            : 40 yards
 GCD              : 1.5 seconds
 Duration         : 45 seconds
 Cooldown         : 30 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ........ ........ x....... ........   ........ .x...... ........ ........ 
@@ -2479,6 +2561,9 @@ Name             : Defensive State 2 (DND) (id=24949) [Passive, Hidden]
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -2495,7 +2580,7 @@ Effects          :
 Name             : Pummel (desc=Special Ability) (id=26090) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=188703)
 Spell Level      : 20
 Range            : 5 yards
@@ -2525,6 +2610,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 3 seconds
+Mechanic         : Unknown(26)
 Attributes       : ........ ........ .......x ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2548,6 +2634,7 @@ Spell Level      : 10
 Range            : 100 yards
 GCD              : 1 seconds
 Cooldown         : 6 seconds
+Category         : 1171
 Category Cooldown: 6 seconds
 Affecting spells : Ice Trap (13810 effect#2), Improved Kill Command (35029 effect#1), Improved Kill Command (35030 effect#1), Camouflage (51755 effect#3), Glyph of Kill Command (56842 effect#1), Resistance is Futile! (82897 effect#1), Killing Streak (94006 effects: #1, #2), Killing Streak (94007 effects: #1, #2)
 Family Flags     : 43
@@ -2631,6 +2718,9 @@ Range            : 100 yards
 GCD              : 1.5 seconds
 Duration         : 20 seconds
 Cooldown         : 30 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x...x... x....x.. ........   .....x.. ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell, Helpful Periodic
 Affecting spells : Camouflage (51755 effect#3)
 Family Flags     : 52
 Attributes       : ....x... ........ x....... .x......   ........ ..x..... ...x.... ..x..... 
@@ -2698,6 +2788,9 @@ Name             : Master Marksman (desc=Rank 1) (id=34485) [Spell Family (9), P
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 20%
+Proc Flags       : ........ x.x..... ........ ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Generic Heal
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2718,6 +2811,9 @@ Name             : Master Marksman (desc=Rank 2) (id=34486) [Spell Family (9), P
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 40%
+Proc Flags       : ........ x....... ........ ........   ........ ........ ........ ........   
+                 : Yellow Ranged
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2738,6 +2834,9 @@ Name             : Master Marksman (desc=Rank 3) (id=34487) [Spell Family (9), P
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 60%
+Proc Flags       : ........ x....... ........ ........   ........ ........ ........ ........   
+                 : Yellow Ranged
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2757,7 +2856,7 @@ Description      : You have a $h% chance when you Steady Shot to gain the Master
 Name             : Silencing Shot (id=34490) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 0 Focus (2) (id=221907)
 Spell Level      : 28
 Range            : 35 yards
@@ -2765,6 +2864,7 @@ Velocity         : 60 yards/sec
 Duration         : 3 seconds
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 20 seconds
+Proc Chance      : 101%
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Mortal Shots (36413 effect#1), Shot Power (37508 effect#2), Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 18
 Attributes       : .x...... ........ x....... ........   ........ .x...... ........ ........ 
@@ -2848,6 +2948,9 @@ Name             : Thrill of the Hunt (desc=Rank 1) (id=34497) [Spell Family (9)
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 5%
+Proc Flags       : ........ x....... ..x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2868,6 +2971,9 @@ Name             : Thrill of the Hunt (desc=Rank 2) (id=34498) [Spell Family (9)
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
+Proc Flags       : ........ x....... ..x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Periodic, Helpful Periodic
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Efficiency (19416 effect#1), Efficiency (19417 effect#1), Efficiency (19418 effect#1), Camouflage (51755 effect#3), Rapid Recuperation (53230 effect#1), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Beast Mastery (53270 effect#2), Sniper Training (53302 effect#2), Sniper Training (53303 effect#2), Sniper Training (53304 effect#2), Rapid Recuperation (54227 effect#1), Lock and Load (56453 effects: #1, #2), Glyph of Explosive Shot (63066 effect#1), Glyph of Kill Shot (63067 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), General Hunter Passives (87816 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 55, 63
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
@@ -2890,6 +2996,9 @@ Name             : Thrill of the Hunt (desc=Rank 3) (id=34499) [Spell Family (9)
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 15%
+Proc Flags       : ........ x....... ..x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2915,6 +3024,7 @@ Spell Level      : 66
 GCD              : 1 seconds
 Duration         : 60 seconds
 Cooldown         : 30 seconds
+Category         : 1249
 Category Cooldown: 30 seconds
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Camouflage (51755 effect#3), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1), General Hunter Passives (87816 effect#2)
 Family Flags     : 7, 91
@@ -2954,13 +3064,14 @@ Description      : While your pet is under the effects of Bestial Wrath, you als
 Name             : Fire Breath (desc=Special Ability) (id=34889) [Spell Family (9)] 
 Class            : Hunter
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=221937)
 Spell Level      : 20
 Range            : 40 yards
 GCD              : 1.5 seconds
 Duration         : 45 seconds
 Cooldown         : 30 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ........ ........ x....... ........   ........ .x...... ........ ........ 
@@ -2983,6 +3094,9 @@ Name             : Rapid Killing (desc=Rank 1) (id=34948) [Spell Family (9), Pas
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3003,6 +3117,9 @@ Name             : Rapid Killing (desc=Rank 2) (id=34949) [Spell Family (9), Pas
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : .x...... ........ ........ ........   ........ ........ ........ ........   
+                 : Killing Blow
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3023,6 +3140,9 @@ Name             : Go for the Throat (desc=Rank 1) (id=34950) [Spell Family (9),
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ......x. x....... ........ ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3081,6 +3201,9 @@ Name             : Go for the Throat (desc=Rank 2) (id=34954) [Spell Family (9),
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ......x. x....... ........ ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3163,6 +3286,10 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 20 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ......x. x....... ........ ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged
 Affecting spells : Camouflage (51755 effect#3), Glyph of Trap Launcher (56857 effect#1)
 Triggered by     : Rapid Killing (34948)
 Family Flags     : 56
@@ -3188,6 +3315,10 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 20 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ......x. x....... ........ ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged
 Affecting spells : Camouflage (51755 effect#3), Glyph of Trap Launcher (56857 effect#1)
 Triggered by     : Rapid Killing (34949)
 Family Flags     : 56
@@ -3212,6 +3343,9 @@ Name             : Concussive Barrage (desc=Rank 1) (id=35100) [Spell Family (9)
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 50%
+Proc Flags       : ......x. x....... .x...... ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3231,8 +3365,9 @@ Description      : Your successful Chimera Shot and Multi-Shot attacks have a $h
 Name             : Concussive Barrage (id=35101) 
 Class            : Hunter
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 4 seconds
+Mechanic         : Unknown(11)
 Triggered by     : Concussive Barrage (35100), Concussive Barrage (35102)
 Attributes       : ........ ........ .......x ........   .......x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ .x...... ........ 
@@ -3253,6 +3388,9 @@ Name             : Concussive Barrage (desc=Rank 2) (id=35102) [Spell Family (9)
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ......x. x....... x....... ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3273,6 +3411,9 @@ Name             : Bombardment (desc=Rank 1) (id=35104) [Spell Family (9), Passi
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ......x. x...x... ........ ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3291,6 +3432,9 @@ Name             : Bombardment (desc=Rank 2) (id=35110) [Spell Family (9), Passi
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ......x. x...x... ........ ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3310,7 +3454,7 @@ Description      : When you critically hit with Multi-Shot, the focus cost of Mu
 Name             : Gore (desc=Special Ability) (id=35290) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=222324)
 Spell Level      : 20
 Range            : 5 yards
@@ -3337,12 +3481,13 @@ Tooltip          : Damage taken by bleed effects increased by $s1%.
 Name             : Time Warp (desc=Special Ability) (id=35346) [Spell Family (9)] 
 Class            : Hunter
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=222039)
 Spell Level      : 20
 Range            : 25 yards
 Duration         : 6 seconds
 Cooldown         : 15 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ x....... ........   ........ .x...... ........ ..x..... 
@@ -3363,7 +3508,7 @@ Tooltip          : Movement slowed by $s1%.
 Name             : Corrosive Spit (desc=Special Ability) (id=35387) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=221392)
 Spell Level      : 20
 Range            : 30 yards
@@ -3413,6 +3558,7 @@ Class            : Hunter, Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3431,6 +3577,7 @@ Class            : Hunter, Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. x....... x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3447,12 +3594,13 @@ Effects          :
 Name             : Smack (desc=Basic Attack) (id=49966) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 25 Focus (2) (id=237155)
 Spell Level      : 1
 Range            : 5 yards
 GCD              : 1.5 seconds
 Cooldown         : 3 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Spiked Collar (53182 effect#1), Spiked Collar (53183 effect#1), Spiked Collar (53184 effect#1), Cobra Strikes (53257 effect#1), Sic 'Em! (83359 effect#1)
 Family Flags     : 19
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ........ 
@@ -3472,12 +3620,14 @@ Description      : Smack the enemy, causing ${$M1+(($RAP*0.40)*0.20)} damage.
 Name             : Pin (desc=Special Ability) (id=50245) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=236970)
 Spell Level      : 20
 Range            : 5 yards
 Duration         : 4 seconds
 Cooldown         : 40 seconds
+Proc Chance      : 100%
+Mechanic         : Unknown(7)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ......x.   ..x..... .x...... ........ ........ 
@@ -3498,13 +3648,14 @@ Tooltip          : Pinned in place.
 Name             : Demoralizing Roar (desc=Special Ability) (id=50256) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=237076)
 Spell Level      : 20
 Range            : 5 yards
 GCD              : 1.5 seconds
 Duration         : 15 seconds
 Cooldown         : 10 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ........ 
@@ -3526,12 +3677,14 @@ Tooltip          : Physical damage reduced by $s1%.
 Name             : Tendon Rip (desc=Special Ability) (id=50271) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=237219)
 Spell Level      : 20
 Range            : 5 yards
 Duration         : 15 seconds
 Cooldown         : 10 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(15)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ..x..... ..x..... ........   ........ .x...... ........ ........ 
@@ -3552,13 +3705,14 @@ Tooltip          : All bleed effects cause $s1% additional damage.
 Name             : Spore Cloud (desc=Special Ability) (id=50274) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=237268)
 Spell Level      : 20
 Range            : 6 yards
 GCD              : 1.5 seconds
 Duration         : 10 seconds
 Cooldown         : 8 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ........   ........ .x...... ........ ........ 
@@ -3579,12 +3733,13 @@ Tooltip          : Casting speed slowed by $s1%.
 Name             : Dust Cloud (desc=Special Ability) (id=50285) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=253961)
 Spell Level      : 20
 Range            : 5 yards
 GCD              : 1.5 seconds
 Cooldown         : 25 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ........   ........ .x...... ........ ........ 
@@ -3604,13 +3759,15 @@ Description      : Your tallstrider kicks up an obscuring cloud of dust, causing
 Name             : Serenity Dust (desc=Special Ability) (id=50318) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=256000)
 Spell Level      : 20
 Range            : 25 yards
 Duration         : 4 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 101%
 Stance Mask      : 0x80000000
+Mechanic         : Unknown(26)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -3636,6 +3793,8 @@ Spell Level      : 20
 Range            : 5 yards
 Duration         : 6 seconds
 Cooldown         : 10 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(11)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ........ ........ ........ ........   ........ .x...... ........ ........ 
@@ -3661,6 +3820,7 @@ Resource         : 0 Focus (2) (id=237570)
 Spell Level      : 20
 Range            : 20 yards
 Cooldown         : 40 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ........ ........ ........ ........   ........ .x...... ........ ........ 
@@ -3680,12 +3840,13 @@ Description      : Instantly lashes an enemy, interrupting spellcasting and prev
 Name             : Tear Armor (id=50498) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=237037)
 Spell Level      : 1
 Range            : 5 yards
 GCD              : 1.5 seconds
 Cooldown         : 6 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ........   ........ .x...... ........ ........ 
@@ -3705,12 +3866,13 @@ Description      : Tears at the enemies armor with the raptor's talons, reducing
 Name             : Ravage (desc=Special Ability) (id=50518) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=237281)
 Spell Level      : 20
 Range            : 5 yards
 Duration         : 25 seconds
 Cooldown         : 15 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ........   ........ .x...... ........ ........ 
@@ -3732,12 +3894,13 @@ Tooltip          : Increases physical damage taken by $s1%.
 Name             : Sonic Blast (desc=Special Ability) (id=50519) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=236994)
 Spell Level      : 20
 Range            : 20 yards
 Duration         : 2 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ........   ........ .x...... ........ ........ 
@@ -3758,13 +3921,16 @@ Tooltip          : Stunned.
 Name             : Clench (desc=Special Ability) (id=50541) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=237525)
 Spell Level      : 20
 Range            : 5 yards
 Duration         : 10 seconds
 Cooldown         : 60 seconds
+Category         : 109
 Category Cooldown: 60 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(3)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ........   ........ .x...... ........ ...x.... 
@@ -3791,6 +3957,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 10 yards
 Velocity         : 10 yards/sec
+Proc Chance      : 101%
 Triggered by     : Feed Pet (6991)
 Attributes       : ........ x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3808,11 +3975,12 @@ Effects          :
 Name             : Camouflage (id=51753) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 20 Focus (2) (id=256244)
 Spell Level      : 85
 GCD              : 1.5 seconds
 Cooldown         : 60 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3)
 Family Flags     : 69
 Attributes       : ........ ........ x...x... ....x...   ........ ........ .x...... ........ 
@@ -3837,6 +4005,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 85
 Duration         : 60 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ x.x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ .x...... ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -3864,6 +4033,7 @@ Name             : Pathing (desc=Rank 1) (id=52783) [Spell Family (9), Passive, 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3884,6 +4054,7 @@ Name             : Pathing (desc=Rank 2) (id=52785) [Spell Family (9), Passive, 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3904,6 +4075,7 @@ Name             : Pathing (desc=Rank 3) (id=52786) [Spell Family (9), Passive, 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3929,6 +4101,10 @@ Range            : 8 - 25 yards
 GCD              : 1.5 seconds
 Duration         : 4 seconds
 Cooldown         : 25 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ x.x..... ........   ........ ..x..... ........ ........ 
@@ -3952,11 +4128,13 @@ Description      : Your pet swoops at an enemy, immobilizing the target for $531
 Name             : Charge (id=53148) [Spell Family (9)] 
 Class            : Hunter, Death Knight
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Rage (1) (id=239772)
 Spell Level      : 80
 Range            : 8 - 25 yards
 Duration         : 1 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(7)
 Triggered by     : Swoop (52825), Charge (61685)
 Attributes       : ....x... ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3978,7 +4156,7 @@ Tooltip          : Immobilized.
 Name             : Chimera Shot (id=53209) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 50 Focus (2) (id=255010)
 Spell Level      : 60
 Range            : 40 yards
@@ -3987,6 +4165,7 @@ Velocity         : 40 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 10 seconds
 Category Cooldown: 6 seconds
+Proc Chance      : 101%
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Efficiency (19416 effect#1), Efficiency (19417 effect#1), Efficiency (19418 effect#1), Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Glyph of Chimera Shot (63065 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 64
 Attributes       : .x...... ........ x....... ........   ........ .x...... ........ ........ 
@@ -4011,6 +4190,10 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 8 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ......x. x...x... x....... ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x... ........ ..x..... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4030,6 +4213,9 @@ Name             : Improved Steady Shot (desc=Rank 1) (id=53221) [Spell Family (
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4050,6 +4236,9 @@ Name             : Improved Steady Shot (desc=Rank 2) (id=53222) [Spell Family (
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4070,6 +4259,9 @@ Name             : Improved Steady Shot (desc=Rank 3) (id=53224) [Spell Family (
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4090,6 +4282,9 @@ Name             : Rapid Recuperation (desc=Rank 1) (id=53228) [Spell Family (9)
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4115,6 +4310,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 15 seconds
+Proc Chance      : 101%
 Triggered by     : Rapid Recuperation (53228)
 Attributes       : ....x... ........ ..x..... .......x   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4137,6 +4333,9 @@ Name             : Rapid Recuperation (desc=Rank 2) (id=53232) [Spell Family (9)
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ ..x...x. ........ ........   ........ ........ ........ ........   
+                 : Generic Heal, Magic Heal
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4161,6 +4360,9 @@ Name             : Piercing Shots (desc=Rank 1) (id=53234) [Spell Family (9), Pa
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ x....... ........ ........   ........ ........ ........ ........   
+                 : Yellow Ranged
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4181,6 +4383,9 @@ Name             : Piercing Shots (desc=Rank 2) (id=53237) [Spell Family (9), Pa
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ x....... ........ ........   ........ ........ ........ ........   
+                 : Yellow Ranged
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4201,6 +4406,9 @@ Name             : Piercing Shots (desc=Rank 3) (id=53238) [Spell Family (9), Pa
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ x....... ........ ........   ........ ........ ........ ........   
+                 : Yellow Ranged
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4221,6 +4429,7 @@ Name             : Marked for Death (desc=Rank 1) (id=53241) [Spell Family (9), 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4243,6 +4452,7 @@ Name             : Marked for Death (desc=Rank 2) (id=53243) [Spell Family (9), 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4265,6 +4475,7 @@ Name             : Invigoration (desc=Rank 1) (id=53252) [Spell Family (9), Pass
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4285,6 +4496,7 @@ Name             : Invigoration (desc=Rank 2) (id=53253) [Spell Family (9), Pass
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4302,10 +4514,11 @@ Description      : When your pet scores a critical hit with a Basic Attack, you 
 Name             : Wild Quiver Auto Shot (id=53254) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Ranged
 Spell Level      : 1
 Range            : 50000 yards
 Velocity         : 60 yards/sec
+Proc Chance      : 101%
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Mortal Shots (36413 effect#1), Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Owl's Focus (53515 effect#1), Focus (77442 effect#2), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Artisan Quiver (87326 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 0, 71
 Attributes       : .x..x... ........ x.x..... ........   ........ ........ ........ ........ 
@@ -4327,6 +4540,9 @@ Name             : Cobra Strikes (desc=Rank 1) (id=53256) [Spell Family (9), Pas
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 5%
+Proc Flags       : ......x. x...x... x....... ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4348,6 +4564,8 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 15 seconds
+Stacks           : 2 maximum
+Proc Chance      : 101%
 Triggered by     : Cobra Strikes (53256), Cobra Strikes (53259), Cobra Strikes (53260)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4370,6 +4588,9 @@ Name             : Cobra Strikes (desc=Rank 2) (id=53259) [Spell Family (9), Pas
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 10%
+Proc Flags       : ......x. x...x... x....... ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4390,6 +4611,9 @@ Name             : Cobra Strikes (desc=Rank 3) (id=53260) [Spell Family (9), Pas
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 15%
+Proc Flags       : ......x. x...x... x....... ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4410,6 +4634,7 @@ Name             : Longevity (desc=Rank 1) (id=53262) [Spell Family (9), Passive
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4430,6 +4655,7 @@ Name             : Longevity (desc=Rank 2) (id=53263) [Spell Family (9), Passive
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4450,6 +4676,7 @@ Name             : Longevity (desc=Rank 3) (id=53264) [Spell Family (9), Passive
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4470,6 +4697,7 @@ Name             : Beast Mastery (id=53270) [Spell Family (9), Passive, Hidden]
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4498,6 +4726,7 @@ Resource         : 0 Focus (2) (id=239559)
 Spell Level      : 74
 Range            : 40 yards
 Cooldown         : 45 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3)
 Family Flags     : 66
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ..x..... 
@@ -4521,6 +4750,7 @@ Name             : Hunting Party (id=53290) [Spell Family (9), Passive]
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......x. ........ ........ x..x....   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x .....x.. ........   ........ ........ ........ ........ 
@@ -4544,6 +4774,7 @@ Name             : Noxious Stings (desc=Rank 1) (id=53295) [Spell Family (9), Pa
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4570,6 +4801,7 @@ Name             : Noxious Stings (desc=Rank 2) (id=53296) [Spell Family (9), Pa
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4596,6 +4828,7 @@ Name             : Point of No Escape (desc=Rank 1) (id=53298) [Spell Family (9)
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4620,6 +4853,7 @@ Name             : Point of No Escape (desc=Rank 2) (id=53299) [Spell Family (9)
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4643,7 +4877,7 @@ Description      : Increases the ranged critical strike chance of all of your at
 Name             : Explosive Shot (id=53301) [Spell Family (9)] 
 Class            : Hunter
 School           : Fire
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 50 Focus (2) (id=239963)
 Spell Level      : 10
 Range            : 40 yards
@@ -4652,6 +4886,8 @@ Velocity         : 40 yards/sec
 Duration         : 2 seconds
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 6 seconds
+Category         : 1173
+Proc Chance      : 101%
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Efficiency (19416 effect#1), Efficiency (19417 effect#1), Efficiency (19418 effect#1), Camouflage (51755 effect#3), Lock and Load (56453 effects: #1, #2), Glyph of Explosive Shot (63066 effect#1), General Hunter Passives (87816 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 63
 Attributes       : .x...... ........ x....... ........   ........ .x...... ........ ........ 
@@ -4674,6 +4910,7 @@ Name             : Sniper Training (desc=Rank 1) (id=53302) [Spell Family (9), P
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4698,6 +4935,7 @@ Name             : Sniper Training (desc=Rank 2) (id=53303) [Spell Family (9), P
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4722,6 +4960,7 @@ Name             : Sniper Training (desc=Rank 3) (id=53304) [Spell Family (9), P
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4745,7 +4984,7 @@ Description      : Increases the critical strike chance of your Kill Shot abilit
 Name             : Kill Shot (id=53351) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 0 Focus (2) (id=239964)
 Spell Level      : 35 (max 80)
 Max Scaling Level: 80
@@ -4754,6 +4993,8 @@ GCD              : 1 seconds
 Velocity         : 40 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 10 seconds
+Category         : 1226
+Proc Chance      : 101%
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Camouflage (51755 effect#3), Rapid Recuperation (53230 effect#1), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Beast Mastery (53270 effect#2), Sniper Training (53302 effect#2), Sniper Training (53303 effect#2), Sniper Training (53304 effect#2), Rapid Recuperation (54227 effect#1), Glyph of Kill Shot (63067 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 55
 Attributes       : .x..x... ........ x....... ........   ........ .x...... ........ ........ 
@@ -4775,10 +5016,11 @@ Description      : You attempt to finish the wounded target off, firing a long r
 Name             : Chimera Shot (id=53353) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Ranged
 Spell Level      : 60
 Range            : 100 yards
 Velocity         : 40 yards/sec
+Proc Chance      : 101%
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Camouflage (51755 effect#3)
 Family Flags     : 74, 75
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -4802,6 +5044,7 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 40 yards
 Duration         : 4 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Glyph of Master's Call (63068 effect#1)
 Family Flags     : 83
 Attributes       : ....x... ........ ........ .....x..   ........ ..x....x ........ ........ 
@@ -4828,6 +5071,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 15 seconds
+Proc Chance      : 101%
 Triggered by     : Rapid Recuperation (53232)
 Attributes       : ....x... ........ ..x..... .......x   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4849,9 +5093,10 @@ Tooltip          : Restoring $s1 Focus every $t1 sec.
 Name             : Dust Cloud (id=54404) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=240815)
 Duration         : 30 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Triggered by     : Dust Cloud (50285)
 Family Flags     : 60
@@ -4873,13 +5118,16 @@ Tooltip          : Melee and ranged attack speed reduced by $s1%.
 Name             : Frost Breath (desc=Special Ability) (id=54644) [Spell Family (9)] 
 Class            : Hunter
 School           : Froststorm
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=255535)
 Spell Level      : 20
 Range            : 30 yards
 Duration         : 5 seconds
 Cooldown         : 10 seconds
+Category         : 1247
 Category Cooldown: 10 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(11)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ........ ........ ........ ........   ........ .x...... ........ ........ 
@@ -4902,13 +5150,14 @@ Tooltip          : Movement speed reduced by $s1%.
 Name             : Monstrous Bite (desc=Exotic Ability) (id=54680) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=240889)
 Spell Level      : 20
 Range            : 5 yards
 GCD              : 1.5 seconds
 Duration         : 8 seconds
 Cooldown         : 8 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ........ ........ 
@@ -4933,6 +5182,7 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=241016)
 Spell Level      : 1
 Range            : 30 yards
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Triggered by     : Frost Breath (54644)
 Family Flags     : 60
@@ -4952,12 +5202,14 @@ Effects          :
 Name             : Venom Web Spray (desc=Special Ability) (id=54706) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=240335)
 Spell Level      : 20
 Range            : 30 yards
 Duration         : 5 seconds
 Cooldown         : 40 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(7)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ........ ........ x....... ......x.   ........ .x...... ........ ........ 
@@ -4978,7 +5230,7 @@ Tooltip          : Webbed.
 Name             : Acid Spit (desc=Special Ability) (id=55749) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=255403)
 Spell Level      : 20
 Range            : 30 yards
@@ -4986,6 +5238,7 @@ GCD              : 1.5 seconds
 Velocity         : 24 yards/sec
 Duration         : 25 seconds
 Cooldown         : 10 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ........ ........ x....... ........   ........ .x...... ........ ........ 
@@ -5008,6 +5261,7 @@ Name             : Kindred Spirits (desc=Rank 1) (id=56314) [Spell Family (9), P
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5018,7 +5272,7 @@ Attributes       : ....x.xx ........ ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7)
 Effects          :
-#1 (id=49355)    : Apply Aura (6) | Increase Energy (35)
+#1 (id=49355)    : Apply Aura (6) | Modify Max Power (35) (focus)
                    Base Value: 5 | Scaled Value: 5 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 2 | Target: Self (1)
                    Affected Spells: Multi-Shot (2643)
                    Family Flags: 12
@@ -5032,6 +5286,7 @@ Name             : Kindred Spirits (desc=Rank 2) (id=56315) [Spell Family (9), P
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5042,7 +5297,7 @@ Attributes       : ....x.xx ........ ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7)
 Effects          :
-#1 (id=49357)    : Apply Aura (6) | Increase Energy (35)
+#1 (id=49357)    : Apply Aura (6) | Modify Max Power (35) (focus)
                    Base Value: 10 | Scaled Value: 10 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 2 | Target: Self (1)
                    Affected Spells: Multi-Shot (2643)
                    Family Flags: 12
@@ -5056,6 +5311,7 @@ Name             : T.N.T. (desc=Rank 1) (id=56333) [Spell Family (9), Passive, H
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5074,6 +5330,7 @@ Name             : T.N.T. (desc=Rank 2) (id=56336) [Spell Family (9), Passive, H
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5092,6 +5349,7 @@ Name             : Hunter vs. Wild (desc=Rank 1) (id=56339) [Spell Family (9), P
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ....x... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5110,6 +5368,7 @@ Name             : Hunter vs. Wild (desc=Rank 2) (id=56340) [Spell Family (9), P
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5128,6 +5387,7 @@ Name             : Hunter vs. Wild (desc=Rank 3) (id=56341) [Spell Family (9), P
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5146,6 +5406,10 @@ Name             : Lock and Load (desc=Rank 1) (id=56342) [Spell Family (9), Pas
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 10 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ........ ..x..x.. ........   .....x.. ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -5166,6 +5430,10 @@ Name             : Lock and Load (desc=Rank 2) (id=56343) [Spell Family (9), Pas
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 10 seconds
+Proc Chance      : 100%
+Proc Flags       : ........ ........ ..x..x.. ........   .....x.. ........ ........ ........   
+                 : Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -5188,6 +5456,10 @@ School           : Physical
 Spell Type       : None
 Duration         : 12 seconds
 Cooldown         : 22 seconds
+Stacks           : 2 initial, 2 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ x...x... x....... ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell
 Triggered by     : Lock and Load (56342), Lock and Load (56343)
 Attributes       : ....x... ........ ..x..... ...x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5213,9 +5485,12 @@ Tooltip          : Your Explosive Shot triggers no cooldown and costs no Focus.
 Name             : Distracting Shot (id=56559) 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Range            : 50000 yards
 Duration         : 6 seconds
+Category         : 82
+Proc Chance      : 101%
+Mechanic         : Unknown(16)
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ........ 
                  : ..x..... ........ ........ ..x.....   ........ ........ x....... ........ 
                  : ........ ...x.... ........ ........   ........ ........ ........ ........ 
@@ -5236,6 +5511,7 @@ Class            : Hunter, Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 50 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5252,13 +5528,15 @@ Effects          :
 Name             : Sting (desc=Special Ability) (id=56626) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Melee
 Resource         : 0 Focus (2) (id=242568)
 Spell Level      : 20
 Range            : 5 yards
 GCD              : 1.5 seconds
 Duration         : 2 seconds
 Cooldown         : 45 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(12)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ........   ........ .x.....x x....... ........ 
@@ -5279,7 +5557,7 @@ Tooltip          : Stunned.
 Name             : Steady Shot (id=56641) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 0 Focus (2) (id=242858)
 Spell Level      : 3 (max 80)
 Max Scaling Level: 80
@@ -5288,6 +5566,9 @@ Cast Time        : 2 seconds
 GCD              : 1 seconds
 Velocity         : 40 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
+Proc Chance      : 100%
+Proc Flags       : ........ x...x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Generic Hostile Spell
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Rapid Killing (35098 effect#1), Rapid Killing (35099 effect#1), Mortal Shots (36413 effect#1), Shot Power (37508 effect#1), Camouflage (51755 effect#3), Piercing Shots (53234 effect#1), Piercing Shots (53237 effect#1), Piercing Shots (53238 effect#1), Beast Mastery (53270 effect#2), Glyph of Steady Shot (56826 effect#1), Sniper Training (64418 effect#1), Sniper Training (64419 effect#1), Sniper Training (64420 effect#1), Aspect of the Fox (82661 effect#2), Into the Wilderness (84729 effect#1), Focused Aim (87324 effect#1), Animal Handler (87325 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 32
 Attributes       : .x..x... ........ x....... ........   ........ ........ ........ ........ 
@@ -5313,6 +5594,9 @@ Name             : Glyph of Aimed Shot (id=56824) [Spell Family (9), Passive, Hi
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ......x. x....... ........ ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5333,6 +5617,7 @@ Name             : Glyph of Steady Shot (id=56826) [Spell Family (9), Passive, H
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5353,6 +5638,7 @@ Name             : Glyph of Rapid Fire (id=56828) [Spell Family (9), Passive, Hi
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5373,6 +5659,7 @@ Name             : Glyph of Misdirection (id=56829) [Spell Family (9), Passive, 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5393,6 +5680,7 @@ Name             : Glyph of Bestial Wrath (id=56830) [Spell Family (9), Passive,
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5413,6 +5701,7 @@ Name             : Glyph of Serpent Sting (id=56832) [Spell Family (9), Passive,
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5433,6 +5722,7 @@ Name             : Glyph of Mending (id=56833) [Spell Family (9), Passive, Hidde
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5455,6 +5745,9 @@ Name             : Glyph of Silencing Shot (id=56836) [Spell Family (9), Passive
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ x....... ........ ........   ........ ........ ........ ........   
+                 : Yellow Ranged
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5475,6 +5768,7 @@ Name             : Glyph of Arcane Shot (id=56841) [Spell Family (9), Passive, H
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5495,6 +5789,7 @@ Name             : Glyph of Kill Command (id=56842) [Spell Family (9), Passive, 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5515,6 +5810,7 @@ Name             : Glyph of Disengage (id=56844) [Spell Family (9), Passive, Hid
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5535,6 +5831,7 @@ Name             : Glyph of Freezing Trap (id=56845) [Spell Family (9), Passive,
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5555,6 +5852,7 @@ Name             : Glyph of Immolation Trap (id=56846) [Spell Family (9), Passiv
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5579,6 +5877,7 @@ Name             : Glyph of Ice Trap (id=56847) [Spell Family (9), Passive, Hidd
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5599,6 +5898,7 @@ Name             : Glyph of Wyvern Sting (id=56848) [Spell Family (9), Passive, 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5619,6 +5919,7 @@ Name             : Glyph of Snake Trap (id=56849) [Spell Family (9), Passive, Hi
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5639,6 +5940,7 @@ Name             : Glyph of Deterrence (id=56850) [Spell Family (9), Passive, Hi
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5659,6 +5961,7 @@ Name             : Glyph of Concussive Shot (id=56851) [Spell Family (9), Passiv
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5679,6 +5982,7 @@ Name             : Glyph of Dazzled Prey (id=56856) [Spell Family (9), Passive, 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5698,6 +6002,7 @@ Name             : Glyph of Trap Launcher (id=56857) [Spell Family (9), Passive,
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5719,6 +6024,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5737,6 +6043,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5755,6 +6062,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5773,6 +6081,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5791,6 +6100,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5809,6 +6119,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5827,6 +6138,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5845,6 +6157,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5863,6 +6176,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5881,6 +6195,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5899,6 +6214,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5917,6 +6233,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5935,6 +6252,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5953,6 +6271,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5971,6 +6290,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5989,6 +6309,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6007,6 +6328,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6025,6 +6347,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6043,6 +6366,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6061,6 +6385,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6077,11 +6402,12 @@ Effects          :
 Name             : Stampede (desc=Special Ability) (id=57386) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 20
 Range            : 5 yards
 Duration         : 30 seconds
 Cooldown         : 15 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ........ ........ x....... ........   ........ .x...... ........ ........ 
@@ -6106,6 +6432,10 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=243742)
 Range            : 5 yards
 Duration         : 6 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Triggered by     : Charge (53148)
 Attributes       : .......x x....... ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6146,6 +6476,7 @@ Name             : Glyph of Revive Pet (id=57866) [Spell Family (9), Passive, Hi
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6166,6 +6497,7 @@ Name             : Glyph of Lesser Proportion (id=57870) [Spell Family (9), Pass
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6188,6 +6520,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 68
 Duration         : 15 seconds
+Proc Chance      : 101%
 Affecting spells : Survival Tactics (19286 effect#1), Survival Tactics (19287 effect#1), Trap Mastery (19376 effect#3), Camouflage (51755 effect#3), Glyph of Snake Trap (56849 effect#1), Trap Mastery (63457 effect#3), Trap Mastery (63458 effect#3), General Hunter Passives (87816 effect#2)
 Family Flags     : 45
 Attributes       : ........ ........ ........ ........   ........ ........ .......x ........ 
@@ -6209,6 +6542,7 @@ Name             : Glyph of Scare Beast (id=57902) [Spell Family (9), Passive, H
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6229,6 +6563,7 @@ Name             : Glyph of Feign Death (id=57903) [Spell Family (9), Passive, H
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6249,6 +6584,7 @@ Name             : Glyph of Aspect of the Pack (id=57904) [Spell Family (9), Pas
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6270,6 +6606,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6288,6 +6625,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6306,6 +6644,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6324,6 +6663,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6342,6 +6682,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6358,7 +6699,7 @@ Effects          :
 Name             : Lava Breath (desc=Special Ability) (id=58604) [Spell Family (9)] 
 Class            : Hunter
 School           : Fire
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 0 Focus (2) (id=244360)
 Spell Level      : 20
 Range            : 30 yards
@@ -6391,6 +6732,7 @@ Spell Type       : None
 Resource         : 0 Focus (2) (id=244361)
 Spell Level      : 1
 Range            : 30 yards
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Triggered by     : Lava Breath (58604)
 Family Flags     : 60
@@ -6413,6 +6755,7 @@ Race             : Draenei (0x400)
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
+Proc Chance      : 101%
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6435,7 +6778,7 @@ Name             : Gift of the Naaru (desc=Racial) (id=59543) [Spell Family (9)]
 Class            : Hunter
 Race             : Draenei (0x400)
 School           : Holy
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 1
 Range            : 40 yards
 Duration         : 15 seconds
@@ -6471,7 +6814,9 @@ GCD              : 1.5 seconds
 Velocity         : 45 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 30 seconds
+Category         : 411
 Category Cooldown: 30 seconds
+Proc Chance      : 101%
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Bombardment (35110 effect#1), Mortal Shots (36413 effect#1), Camouflage (51755 effect#3), Rapid Recuperation (53228 effect#2), Rapid Recuperation (53232 effect#2), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1), Into the Wilderness (84729 effect#1), Animal Handler (87325 effect#1), Serpent Spread (87934 effect#1), Serpent Spread (87935 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 7, 13
 Attributes       : ........ ........ x...x... ........   ........ ........ .x...... ........ 
@@ -6499,6 +6844,7 @@ GCD              : 1.5 seconds
 Duration         : 60 seconds
 Cooldown         : 30 seconds
 Category Cooldown: 30 seconds
+Proc Chance      : 101%
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Camouflage (51755 effect#3), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1)
 Triggered by     : Freezing Trap (60192)
 Family Flags     : 7
@@ -6522,6 +6868,8 @@ School           : Physical
 Spell Type       : None
 Range            : 100 yards
 Duration         : 4 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(11)
 Attributes       : ........ ........ ........ ..x.....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ....x...   ........ ........ ........ ........ 
                  : .......x ........ ........ ........   ........ ........ ........ ........ 
@@ -6542,6 +6890,7 @@ Class            : Hunter, Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 2 seconds
+Proc Chance      : 101%
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6562,6 +6911,7 @@ Spell Type       : None
 Resource         : 30 Focus (2) (id=232932)
 Duration         : 16 seconds
 Cooldown         : 32 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Mobility (53483 effect#1), Mobility (53485 effect#1), Mobility (53554 effect#1), Mobility (53555 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60, 61
 Attributes       : ........ ........ ........ ........   .....x.. ..x..... ........ ........ 
@@ -6588,6 +6938,10 @@ Range            : 8 - 25 yards
 GCD              : 1.5 seconds
 Duration         : 4 seconds
 Cooldown         : 25 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ x.x..... .....x..   ........ ..x..... ........ ........ 
@@ -6618,6 +6972,8 @@ Spell Level      : 1
 Range            : 20 yards
 Duration         : 2 seconds
 Cooldown         : 40 seconds
+Category         : 19
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Triggered by     : Nether Shock (50479)
 Family Flags     : 60
@@ -6639,6 +6995,7 @@ Name             : Glyph of Chimera Shot (id=63065) [Spell Family (9), Passive, 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6659,6 +7016,7 @@ Name             : Glyph of Explosive Shot (id=63066) [Spell Family (9), Passive
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6679,6 +7037,7 @@ Name             : Glyph of Kill Shot (id=63067) [Spell Family (9), Passive, Hid
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6699,6 +7058,7 @@ Name             : Glyph of Master's Call (id=63068) [Spell Family (9), Passive,
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6719,6 +7079,7 @@ Name             : Glyph of Scatter Shot (id=63069) [Spell Family (9), Passive, 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6739,6 +7100,9 @@ Name             : Glyph of Raptor Strike (id=63086) [Spell Family (9), Passive,
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ....x... ........ ........ ........   ........ ........ ........ ........   
+                 : Yellow Melee
 Attributes       : ......xx ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6761,6 +7125,8 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 5 seconds
+Proc Chance      : 101%
+Affecting spells : Item - Druid T11 Feral 4P Bonus (90165 effect#1)
 Triggered by     : Glyph of Raptor Strike (63086)
 Family Flags     : 71
 Attributes       : ........ ........ ........ ........   ........ ..x....x ........ ........ 
@@ -6782,6 +7148,7 @@ Name             : Trap Mastery (desc=Rank 2) (id=63457) [Spell Family (9), Pass
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6814,6 +7181,7 @@ Name             : Trap Mastery (desc=Rank 3) (id=63458) [Spell Family (9), Pass
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6849,6 +7217,8 @@ Spell Type       : None
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 8 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(15)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ .....x..   ........ ........ x....... ........ 
                  : ........ x....... ....x... ........   ........ ........ ........ ........ 
@@ -6869,6 +7239,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6887,6 +7258,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6905,6 +7277,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6923,6 +7296,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6941,6 +7315,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6959,6 +7334,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Cast Time        : 5 seconds
+Proc Chance      : 101%
 Attributes       : ........ x....... ........ ....x...   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6977,6 +7353,7 @@ Class            : Hunter
 School           : Nature
 Spell Type       : None
 Duration         : 15 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ...x....   .....x.. ..x..... ........ ........ 
                  : ........ ......x. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6999,6 +7376,7 @@ Class            : Hunter
 School           : Nature
 Spell Type       : None
 Duration         : 15 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ...x....   .....x.. ..x..... ........ ........ 
                  : ........ ......x. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7021,6 +7399,7 @@ Class            : Hunter
 School           : Nature
 Spell Type       : None
 Duration         : 15 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ...x....   .....x.. ..x..... ........ ........ 
                  : ........ ......x. ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7041,9 +7420,10 @@ Tooltip          : Damage done by your Steady Shot and Cobra Shot increased by $
 Name             : Entrapment (id=64803) 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Range            : 50000 yards
 Duration         : 4 seconds
+Mechanic         : Unknown(7)
 Triggered by     : Entrapment (19387)
 Attributes       : ........ ........ ........ ...x....   ...x...x ........ ........ ........ 
                  : ..x..... ........ ........ ....x...   ........ ........ ........ ........ 
@@ -7130,6 +7510,7 @@ Class            : Hunter, Monk
 School           : Physical
 Spell Type       : None
 Duration         : Aura (infinite)
+Proc Chance      : 101%
 Affecting spells : Ferocious Inspiration (34460 effect#1), Camouflage (51755 effect#3), Cobra Strikes (53256 effect#1), Cobra Strikes (53259 effect#1), Cobra Strikes (53260 effect#1)
 Family Flags     : 37
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
@@ -7198,6 +7579,9 @@ Name             : Wild Quiver (id=76659) [Spell Family (9), Passive, Hidden]
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ......x. x....... ........ ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged
 Attributes       : ......xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7262,7 +7646,7 @@ Description      : Focus gained through use of Steady Shot.
 Name             : Cobra Shot (id=77767) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Ranged
 Spell Level      : 81
 Range            : 40 yards
 Cast Time        : 2 seconds
@@ -7296,6 +7680,10 @@ Resource         : 20 Focus (2) (id=280163)
 Spell Level      : 48
 Duration         : 15 seconds
 Cooldown         : 1.5 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ....x.x. x.x.x.x. x....... ........   ........ ........ ........ ........   
+                 : Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell
 Affecting spells : Camouflage (51755 effect#3), Glyph of Trap Launcher (56857 effect#1)
 Family Flags     : 56
 Attributes       : ....x... ........ ..x..... .x......   .....x.. ..x..... ........ ........ 
@@ -7328,6 +7716,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Spell Level      : 10
+Proc Chance      : 101%
 Attributes       : .......x ........ ........ ........   ........ ........ ........ .......x 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -7346,9 +7735,10 @@ Name             : Arcane Torrent (desc=Racial) (id=80483)
 Class            : Hunter
 Race             : Blood Elf (0x200)
 School           : Arcane
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 2 seconds
 Cooldown         : 120 seconds
+Mechanic         : Unknown(9)
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7371,6 +7761,7 @@ Class            : Hunter, Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
+Mechanic         : Unknown(28)
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7387,7 +7778,7 @@ Effects          :
 Name             : Parry (desc=Passive) (id=82243) [Passive] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 8
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Attributes       : ....x.x. ........ ........ ........   ........ ........ ........ ........ 
@@ -7407,7 +7798,7 @@ Description      : Gives a chance to parry enemy melee attacks.
 Name             : Widow Venom (id=82654) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Resource         : 15 Focus (2) (id=284819)
 Spell Level      : 40
 Range            : 40 yards
@@ -7433,11 +7824,16 @@ Tooltip          : Healing received reduced by $w1%.
 Name             : Aspect of the Fox (id=82661) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 83
 Duration         : Aura (infinite)
 Cooldown         : 1 seconds
+Category         : 47
 Category Cooldown: 1 seconds
+Internal Cooldown: 2 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.. ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken
 Affecting spells : Camouflage (51755 effect#3), One with Nature (82682 effect#2), One with Nature (82683 effect#2), One with Nature (82684 effect#2), Focus Fire (82692 effect#1)
 Family Flags     : 76
 Attributes       : ........ ........ x.x..... x.......   ........ ..x..... ........ ........ 
@@ -7779,6 +8175,10 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 8 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ ....x... x....... ........   ........ ........ ........ ........   
+                 : Generic Hostile Spell, Magic Hostile Spell
 Attributes       : ........ ........ ........ ...x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .x.....x ........ ........   ........ ........ ........ ........ 
@@ -7800,6 +8200,10 @@ Name             : Crouching Tiger, Hidden Chimera (desc=Rank 1) (id=82898) [Spe
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 2 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...... .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7826,6 +8230,10 @@ Name             : Crouching Tiger, Hidden Chimera (desc=Rank 2) (id=82899) [Spe
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 2 seconds
+Proc Chance      : 100%
+Proc Flags       : ...x.x.x .x...... .x...... ........   ........ ........ ........ ........   
+                 : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Magic Hostile Spell Taken
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7853,6 +8261,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 5 seconds
+Proc Chance      : 101%
 Triggered by     : Bombardment (35104), Bombardment (35110)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7876,6 +8285,8 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 30 seconds
+Stacks           : 5 maximum
+Proc Chance      : 100%
 Triggered by     : Master Marksman (34485), Master Marksman (34486), Master Marksman (34487)
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7899,6 +8310,10 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ........ x...x... ........ ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Generic Hostile Spell
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -7923,13 +8338,14 @@ Tooltip          : Aimed Shot cast time and focus cost reduced by $s1%.
 Name             : Aimed Shot! (desc=Master Marksman) (id=82928) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Ranged
 Spell Level      : 10 (max 80)
 Max Scaling Level: 80
 Range            : 40 yards
 GCD              : 1 seconds
 Velocity         : 40 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
+Category         : 85
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Refocus (24531 effect#1), Rapid Killing (35098 effect#1), Rapid Killing (35099 effect#1), Mortal Shots (36413 effect#1), Shot Power (37508 effect#1), Camouflage (51755 effect#3), Rapid Recuperation (53230 effect#1), Piercing Shots (53234 effect#1), Piercing Shots (53237 effect#1), Piercing Shots (53238 effect#1), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Beast Mastery (53270 effect#2), Owl's Focus (53515 effect#1), Rapid Recuperation (54227 effect#1), Glyph of Aimed Shot (56824 effect#1), Glyph of Freezing Trap (56845 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Fire! (82926 effects: #1, #2), Focused Aim (87324 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 17
 Attributes       : .x..x... ........ x....... ........   ........ .x...... ........ ........ 
@@ -7987,6 +8403,7 @@ GCD              : 1.5 seconds
 Velocity         : 45 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 30 seconds
+Category         : 1250
 Category Cooldown: 30 seconds
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Bombardment (35110 effect#1), Mortal Shots (36413 effect#1), Camouflage (51755 effect#3), Rapid Recuperation (53228 effect#2), Rapid Recuperation (53232 effect#2), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1), Into the Wilderness (84729 effect#1), Animal Handler (87325 effect#1), Serpent Spread (87934 effect#1), Serpent Spread (87935 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 7, 13
@@ -8042,6 +8459,7 @@ GCD              : 1.5 seconds
 Velocity         : 45 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 30 seconds
+Category         : 411
 Category Cooldown: 30 seconds
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Bombardment (35110 effect#1), Mortal Shots (36413 effect#1), Camouflage (51755 effect#3), Rapid Recuperation (53228 effect#2), Rapid Recuperation (53232 effect#2), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1), Into the Wilderness (84729 effect#1), Animal Handler (87325 effect#1), Serpent Spread (87934 effect#1), Serpent Spread (87935 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 7, 13
@@ -8100,6 +8518,7 @@ GCD              : 1.5 seconds
 Velocity         : 45 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 30 seconds
+Category         : 1250
 Category Cooldown: 30 seconds
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Bombardment (35110 effect#1), Mortal Shots (36413 effect#1), Camouflage (51755 effect#3), Rapid Recuperation (53228 effect#2), Rapid Recuperation (53232 effect#2), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1), Into the Wilderness (84729 effect#1), Animal Handler (87325 effect#1), Serpent Spread (87934 effect#1), Serpent Spread (87935 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 7, 13
@@ -8130,6 +8549,7 @@ GCD              : 1.5 seconds
 Velocity         : 45 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
 Cooldown         : 30 seconds
+Category         : 1249
 Category Cooldown: 30 seconds
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Bombardment (35110 effect#1), Mortal Shots (36413 effect#1), Camouflage (51755 effect#3), Rapid Recuperation (53228 effect#2), Rapid Recuperation (53232 effect#2), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1), Into the Wilderness (84729 effect#1), Animal Handler (87325 effect#1), Serpent Spread (87934 effect#1), Serpent Spread (87935 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 7, 13
@@ -8179,6 +8599,9 @@ Name             : Sic 'Em! (desc=Rank 1) (id=83340) [Spell Family (9), Passive,
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ x...x... ..x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Generic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8199,6 +8622,9 @@ Name             : Sic 'Em! (desc=Rank 1) (id=83356) [Spell Family (9), Passive,
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ........ x....... x.x..x.. ........   ........ ........ ........ ........   
+                 : Yellow Ranged, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ..x..... 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8220,6 +8646,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 12 seconds
+Proc Chance      : 100%
 Triggered by     : Sic 'Em! (83340)
 Attributes       : ....x... ........ ..x..... ...x....   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8241,7 +8668,7 @@ Tooltip          : The cost of your pet's next Bite, Claw, or Smack attack is re
 Name             : Kill Command (id=83381) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 1
 Range            : 100 yards
 Affecting spells : Ice Trap (13810 effect#2), Improved Kill Command (35029 effect#1), Improved Kill Command (35030 effect#1), Camouflage (51755 effect#3), Glyph of Kill Command (56842 effect#1), Resistance is Futile! (82897 effect#1), Killing Streak (94006 effects: #1, #2), Killing Streak (94007 effects: #1, #2)
@@ -8374,6 +8801,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 4 seconds
+Proc Chance      : 101%
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ .......x ........ ........   ........ ........ ........ ........ 
@@ -8622,35 +9050,14 @@ Effects          :
 Description      : Reduces Focus regen by $s1%.
 Tooltip          : Oh snap.
 
-Name             : Running Wild (desc=Racial) (id=87840) 
-Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Druid
-Race             : Worgen (0x200000)
-School           : Physical
-Spell Type       : None
-Spell Level      : 20
-Cast Time        : 1.5 seconds
-Duration         : Aura (infinite)
-Attributes       : ....x... .......x x...x... ....x...   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ .....x.. 
-                 : ........ ........ ........ ...x....   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ .x...... ........ ........ 
-                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Is Ability (4), Only Outdoors (15), Not Shapeshifted (16), Cancels Auto Attack Combat (20), Not In Combat (Only Peaceful) (28), Ignore Caster Modifiers (125), Force Display Castbar (155), Allow Equip While Casting (209), Alliance Specific Spell (233), Aura Points On Client (268)
-Effects          :
-#1 (id=89943)    : Apply Aura (6) | Dummy (4)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000
-#3 (id=104313)   : Apply Aura (6) | Unknown(358)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Drop to all fours to run as fast as a wild animal.
-Tooltip          : $?j2g[Increases ground speed by $j2g%. ][]$?j2f[Increases flight speed by $j2f%. ][]$?j2s[Increases swim speed by $j2s%. ][]
-
 Name             : Hunter Pet Cunning Marker (DND) (id=87884) [Passive, Hidden] 
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Internal Cooldown: 7 seconds
+Proc Chance      : 100%
+Proc Flags       : ..x.x... ........ ........ ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee
 Attributes       : ....x.xx x....... ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8711,6 +9118,9 @@ Name             : Serpent Spread (desc=Rank 1) (id=87934) [Spell Family (9), Pa
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ......x. x...x... ........ ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8731,6 +9141,9 @@ Name             : Serpent Spread (desc=Rank 2) (id=87935) [Spell Family (9), Pa
 Class            : Hunter
 School           : Physical
 Spell Type       : None
+Proc Chance      : 100%
+Proc Flags       : ......x. x...x... ........ ........   ........ ........ ........ ........   
+                 : White Ranged, Yellow Ranged, Generic Hostile Spell
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8750,9 +9163,10 @@ Description      : Targets hit by your Multi-Shot are also afflicted by your Ser
 Name             : Serpent Sting (id=88453) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Ranged
 Spell Level      : 1
 Range            : 40 yards
+Max Targets      : 4
 Velocity         : 40 yards/sec
 Duration         : 6 seconds
 Requires weapon  : Bow, Gun, Crossbow
@@ -8780,9 +9194,10 @@ Tooltip          : Causes $w1 Nature damage every $t1 seconds.
 Name             : Serpent Sting (id=88466) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Ranged
 Spell Level      : 1
 Range            : 40 yards
+Max Targets      : 4
 Velocity         : 40 yards/sec
 Duration         : 9 seconds
 Requires weapon  : Bow, Gun, Crossbow
@@ -8816,6 +9231,7 @@ Max Scaling Level: 1
 Range            : 100 yards
 GCD              : 1 seconds
 Duration         : 15 seconds
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Feeding Frenzy (53511 effect#1), Feeding Frenzy (53512 effect#1), Glyph of Misdirection (56829 effect#1)
 Family Flags     : 10
 Attributes       : ........ ........ x....... ..x.....   ........ ..x..... ........ ........ 
@@ -8838,7 +9254,7 @@ Tooltip          : All attackers gain $s2 ranged attack power against this targe
 Name             : Terrifying Roar (desc=Special Ability) (id=90309) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 20
 Duration         : 60 seconds
 Cooldown         : 45 seconds
@@ -8862,7 +9278,7 @@ Tooltip          : Increases critical strike chance by $s1%.
 Name             : Tailspin (desc=Special Ability) (id=90314) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 30
 Range            : 5 yards
 GCD              : 1.5 seconds
@@ -8886,7 +9302,7 @@ Description      : Your fox twirls its tail around, kicking up an obscuring clou
 Name             : Tailspin (id=90315) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Duration         : 30 seconds
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Triggered by     : Tailspin (90314)
@@ -8909,11 +9325,13 @@ Tooltip          : Melee and ranged attack speed reduced by $s1%.
 Name             : Lock Jaw (desc=Special Ability) (id=90327) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 20
 Range            : 5 yards
 Duration         : 4 seconds
 Cooldown         : 40 seconds
+Proc Chance      : 100%
+Mechanic         : Unknown(7)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ......x.   ..x..... .x...... ........ ........ 
@@ -8938,7 +9356,12 @@ Spell Type       : None
 Spell Level      : 20
 Duration         : Aura (infinite)
 Cooldown         : 10 seconds
+Category         : 38
 Category Cooldown: 10 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 101%
+Proc Flags       : ..x.x.x. x...x... x.x..x.. ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Hostile Spell, Magic Hostile Spell, Periodic, Helpful Periodic
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ x.x.x... .x.xx...   ....x... ..x..... ........ ........ 
@@ -8965,7 +9388,7 @@ Movement speed slowed by $s2%.
 Name             : Play (desc=Bonus Ability) (id=90347) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20
 GCD              : 1.5 seconds
 Duration         : 15 seconds
@@ -9020,7 +9443,7 @@ Tooltip          : Melee, ranged, and spell casting speed increased by $s1%.
 Name             : Spirit Mend (desc=Exotic Ability) (id=90361) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 5 Focus (2) (id=292292)
 Spell Level      : 20
 Range            : 25 yards
@@ -9091,12 +9514,15 @@ Effects          :
 Name             : Snatch (desc=Special Ability) (id=91644) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 20
 Range            : 5 yards
 Duration         : 10 seconds
 Cooldown         : 60 seconds
+Category         : 109
 Category Cooldown: 60 seconds
+Proc Chance      : 101%
+Mechanic         : Unknown(3)
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ........ ........   ........ .x...... ........ ...x.... 
@@ -9119,7 +9545,7 @@ Tooltip          : Disarmed.
 Name             : Froststorm Breath (desc=Exotic Ability) (id=92380) [Spell Family (9)] 
 Class            : Hunter
 School           : Froststorm
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 20 Focus (2) (id=293991)
 Spell Level      : 20
 Duration         : 8 seconds
@@ -9163,6 +9589,7 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Spell Level      : 10
+Proc Chance      : 101%
 Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -9180,7 +9607,7 @@ Description      : Allows you to give commands to control your pet.
 Name             : Burrow Attack (desc=Exotic Ability) (id=93433) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 30 Focus (2) (id=294596)
 Spell Level      : 20
 Duration         : 8 seconds
@@ -9206,7 +9633,7 @@ Variables        : $damage= ${($95714m1+(($RAP*0.40)*0.288))*8}
 Name             : Horn Toss (desc=Exotic Ability) (id=93434) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Resource         : 30 Focus (2) (id=294597)
 Spell Level      : 20
 Range            : 5 yards
@@ -9230,7 +9657,7 @@ Description      : The Rhino punts the enemy with its mighty horn, knocking them
 Name             : Roar of Courage (desc=Special Ability) (id=93435) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 20
 Duration         : 60 seconds
 Cooldown         : 45 seconds
@@ -9258,6 +9685,10 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 8 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x.x.x.x. x.x..x.. ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -9284,6 +9715,10 @@ Class            : Hunter
 School           : Physical
 Spell Type       : None
 Duration         : 8 seconds
+Stacks           : 1 initial, 1 maximum
+Proc Chance      : 100%
+Proc Flags       : ..x.x.x. x.x.x.x. x.x..x.. ........   ........ ........ ........ ........   
+                 : White Melee, Yellow Melee, White Ranged, Yellow Ranged, Generic Heal, Generic Hostile Spell, Magic Heal, Magic Hostile Spell, Periodic, Helpful Periodic
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -9308,7 +9743,7 @@ Tooltip          : Damage of your next Kill Command increased by $s1%, and the F
 Name             : Rest (desc=Bonus Ability) (id=94019) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20
 GCD              : 1.5 seconds
 Duration         : 12 seconds
@@ -9334,7 +9769,7 @@ Tooltip          : Zzzzzz...
 Name             : Trick (desc=Bonus Ability) (id=94022) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20
 GCD              : 1.5 seconds
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
@@ -9404,13 +9839,15 @@ Tooltip          : Hidden and invisible units are revealed.
 Name             : Corrosive Spit (desc=Special Ability) (id=95466) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20
 Range            : 50000 yards
 GCD              : 1.5 seconds
 Velocity         : 40 yards/sec
 Duration         : 30 seconds
 Cooldown         : 6 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Triggered by     : Corrosive Spit (35387)
 Family Flags     : 60
@@ -9432,12 +9869,14 @@ Tooltip          : Armor decreased by $s1%.
 Name             : Tear Armor (id=95467) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
-Spell Type       : None
+Spell Type       : Melee
 Spell Level      : 1
 Range            : 5 yards
 GCD              : 1.5 seconds
 Duration         : 30 seconds
 Cooldown         : 6 seconds
+Stacks           : 3 maximum
+Proc Chance      : 101%
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Triggered by     : Tear Armor (50498)
 Family Flags     : 60
@@ -9459,7 +9898,7 @@ Tooltip          : Armor decreased by $s1%.
 Name             : Burrow Attack (desc=Exotic Ability) (id=95714) [Spell Family (9)] 
 Class            : Hunter
 School           : Nature
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20
 Triggered by     : Burrow Attack (93433)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -9479,7 +9918,7 @@ Variables        : $damage= ${($95714m1+(($RAP*0.40)*0.288))*8}
 Name             : Froststorm Breath (desc=Exotic Ability) (id=95725) [Spell Family (9)] 
 Class            : Hunter
 School           : Froststorm
-Spell Type       : None
+Spell Type       : Magic
 Spell Level      : 20
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Triggered by     : Froststorm Breath (92380)
@@ -9531,6 +9970,7 @@ GCD              : 1.5 seconds
 Velocity         : 45 yards/sec
 Duration         : 30 seconds
 Cooldown         : 30 seconds
+Category         : 1250
 Category Cooldown: 30 seconds
 Affecting spells : Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Resourcefulness (34491 effect#1), Resourcefulness (34492 effect#1), Resourcefulness (34493 effect#1), Thrill of the Hunt (34497 effect#1), Thrill of the Hunt (34498 effect#1), Thrill of the Hunt (34499 effect#1), Camouflage (51755 effect#3), Sniper Training (53302 effect#1), Sniper Training (53303 effect#1), Sniper Training (53304 effect#1), Owl's Focus (53515 effect#1), Trap Shot Cooldown Reduction (61255 effect#1)
 Family Flags     : 7
@@ -9544,7 +9984,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Not Shapeshifted (16), Not In Arena or Rated Battleground (144), Not in Battleground (284), Not In Arena (297)
 Effects          :
-#1 (id=1103850)  : Unknown(105)
+#1 (id=1103850)  : Unknown(321)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: 189322 | Target: Unknown(87)
 Description      : Launch a fire trap to a nearby location where it will explode when an enemy approaches, causing ${$RAP*0.1+$49065m1} to ${$RAP*0.1+$49065M1} Fire damage and burning all enemies for ${$49065m2*10+$RAP} additional Fire damage over $49065d to all within $49065a1 yards.  Trap will exist for $d.  Only one trap can be active at a time.
 
