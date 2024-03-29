@@ -12928,6 +12928,7 @@ void player_t::create_options()
   add_option( opt_string( "main_hand", items[ SLOT_MAIN_HAND ].options_str ) );
   add_option( opt_string( "off_hand", items[ SLOT_OFF_HAND ].options_str ) );
   add_option( opt_string( "tabard", items[ SLOT_TABARD ].options_str ) );
+  add_option( opt_string( "ranged", items[ SLOT_RANGED ].options_str ) );
 
   // Set Bonus
   add_option( opt_func( "set_bonus", parse_set_bonus ) );
