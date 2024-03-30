@@ -2195,10 +2195,16 @@ double compute_max_resource( player_t* p, resource_e r )
 
   // re-ordered 2016-06-19 by Theck - initial_multiplier should do something for RESOURCE_HEALTH
   if ( r == RESOURCE_HEALTH )
-    value += std::floor( p->stamina() ) * p->current.health_per_stamina;
+  {
+    double adjust = ( p->is_pet() || p->is_enemy() || p->is_add() ) ? 0 : std::min( 20, (int)floor( p->stamina() ) );
+    value += (std::floor( p->stamina() ) - adjust) * p->current.health_per_stamina + adjust;
+  }
 
   if ( r == RESOURCE_MANA )
-    value += std::floor( p->intellect() * p->current.mana_per_intellect);
+  {
+    double adjust = ( p->is_pet() || p->is_enemy() || p->is_add() ) ? 0 : std::min( 20, (int)floor( p->intellect() ) );
+    value += std::floor( p->intellect() - adjust) * p->current.mana_per_intellect + adjust;
+  }
 
   value *= p->resources.initial_multiplier[ r ];
   value = std::floor( value );
@@ -4421,8 +4427,8 @@ double player_t::composite_melee_attack_power() const
 {
   double ap = current.stats.attack_power;
 
-  ap += current.attack_power_per_strength * cache.strength();
-  ap += current.attack_power_per_agility * cache.agility();
+  ap += current.attack_power_per_strength * ( cache.strength() - 10 );
+  ap += current.attack_power_per_agility * ( cache.agility() - 10 );
 
   return ap;
 }
@@ -7437,20 +7443,28 @@ void player_t::stat_gain( stat_e stat, double amount, gain_t* gain, action_t* ac
       break;
   }
 
+  auto recalc_resource = [ & ]( resource_e rsc ) {
+    recalculate_resource_max( rsc );
+    // Adjust current health to new max on stamina gains, if the actor is not in combat
+    if ( !in_combat )
+    {
+      double delta = resources.max[ rsc ] - resources.current[ rsc ];
+      resource_gain( rsc, delta );
+    }
+  };
+
   switch ( stat )
   {
     case STAT_STAMINA:
-    case STAT_ALL:
-    {
-      recalculate_resource_max( RESOURCE_HEALTH );
-      // Adjust current health to new max on stamina gains, if the actor is not in combat
-      if ( !in_combat )
-      {
-        double delta = resources.max[ RESOURCE_HEALTH ] - resources.current[ RESOURCE_HEALTH ];
-        resource_gain( RESOURCE_HEALTH, delta );
-      }
+      recalc_resource( RESOURCE_HEALTH );
       break;
-    }
+    case STAT_INTELLECT:
+      recalc_resource( RESOURCE_MANA );
+      break;
+    case STAT_ALL:
+      recalc_resource( RESOURCE_HEALTH );
+      recalc_resource( RESOURCE_MANA );
+      break;
     default:
       break;
   }
@@ -7582,18 +7596,26 @@ void player_t::stat_loss( stat_e stat, double amount, gain_t* gain, action_t* ac
       break;
   }
 
+  auto recalc_resource = [ & ]( resource_e rsc ) {
+    recalculate_resource_max( RESOURCE_HEALTH );
+    // Adjust current health to new max on stamina gains
+    double delta = resources.current[ RESOURCE_HEALTH ] - resources.max[ RESOURCE_HEALTH ];
+    if ( delta > 0 )
+      resource_loss( RESOURCE_HEALTH, delta, gain, action );
+  };
+
   switch ( stat )
   {
     case STAT_STAMINA:
-    case STAT_ALL:
-    {
-      recalculate_resource_max( RESOURCE_HEALTH );
-      // Adjust current health to new max on stamina gains
-      double delta = resources.current[ RESOURCE_HEALTH ] - resources.max[ RESOURCE_HEALTH ];
-      if ( delta > 0 )
-        resource_loss( RESOURCE_HEALTH, delta, gain, action );
+      recalc_resource( RESOURCE_HEALTH );
       break;
-    }
+    case STAT_INTELLECT:
+      recalc_resource( RESOURCE_MANA );
+      break;
+    case STAT_ALL:
+      recalc_resource( RESOURCE_HEALTH );
+      recalc_resource( RESOURCE_MANA );
+      break;
     default:
       break;
   }
