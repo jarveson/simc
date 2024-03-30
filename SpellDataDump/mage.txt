@@ -91,7 +91,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Show Mechanic as Combat Text (213), Aura Points On Client (268)
 Effects          :
 #1 (id=679000)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
-                   Base Value: -40 | Scaled Value: -40 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -40 | Scaled Value: -40 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 #2 (id=679001)   : School Damage (2): frost | Scaling Class: 8
                    Base Value: 17 | Scaled Value: 828.5998 (coefficient=0.884) | Points Per Level: 0.5 | SP Coefficient: 0.94300 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=909236)   : Apply Aura (6) | Modify Healing Received% (118) | Scaling Class: 8
@@ -124,7 +124,7 @@ Attributes       : ........ ........ x....... ........   ...x...x ........ .....
                  : Not Shapeshifted (16), No Redirection (35), No Reflection (39), Aura Points On Client (268)
 Effects          :
 #1 (id=688102)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
-                   Base Value: -60 | Scaled Value: -60 | PvP Coefficient: 1.00000 | Radius: 12 yards | Mechanic: Unknown(11) | Target: Cone Front (104)
+                   Base Value: -60 | Scaled Value: -60 | PvP Coefficient: 1.00000 | Radius: 12 yards | Mechanic: Snare | Target: Cone Front (104)
 #2 (id=688103)   : School Damage (2): frost | Scaling Class: 8
                    Base Value: 97 | Scaled Value: 787.3573 (coefficient=0.84) | Points Per Level: 0.8 | SP Coefficient: 0.21400 | PvP Coefficient: 1.00000 | Radius: 12 yards | Target: Cone Front (104)
 #3 (id=909237)   : Apply Aura (6) | Modify Healing Received% (118) | Scaling Class: 8
@@ -171,7 +171,7 @@ Effects          :
 #1 (id=679178)   : School Damage (2): frost | Scaling Class: 8
                    Base Value: 18 | Scaled Value: 397.428 (coefficient=0.424) | Points Per Level: 0.5 | SP Coefficient: 0.19300 | PvP Coefficient: 1.00000 | Radius: 0 - 12 yards | Target: At Caster (22) -> AOE enemy (15)
 #2 (id=679179)   : Apply Aura (6) | Root (26) | Scaling Class: 8
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 0 - 12 yards | Mechanic: Unknown(7) | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 0 - 12 yards | Mechanic: Root | Target: At Caster (22) -> AOE enemy (15)
 Description      : Blasts enemies near the caster for $s1 Frost damage and freezes them in place for up to $d.  Damage caused may interrupt the effect.
 Tooltip          : Frozen in place.
 Variables        : $arctic1=$?s31674[${1.01}][${1}]
@@ -466,7 +466,7 @@ Duration         : 7 seconds
 Cooldown         : 24 seconds
 Category         : 88
 Category Cooldown: 24 seconds
-Mechanic         : Unknown(26)
+Mechanic         : Interrupt
 Affecting spells : Improved Counterspell (24429 effect#1), Improved Mana Gem (31584 effect#1), Improved Mana Gem (31585 effect#1)
 Family Flags     : 14
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -654,7 +654,7 @@ Spell Type       : Magic
 Spell Level      : 30
 Range            : 30 yards
 Duration         : 5 seconds
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Affecting spells : Permafrost (11175 effects: #1, #2, #3), Permafrost (12569 effects: #1, #2, #3), Permafrost (12571 effects: #1, #2, #3)
 Triggered by     : Frost Armor (7302)
 Family Flags     : 20
@@ -855,7 +855,7 @@ Effects          :
 #1 (id=687827)   : School Damage (2): fire | Scaling Class: 8
                    Base Value: 153 | Scaled Value: 927.0194 (coefficient=0.989) | Points Per Level: 1 | SP Coefficient: 0.14300 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
 #2 (id=687828)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
-                   Base Value: -70 | Scaled Value: -70 | PvP Coefficient: 1.00000 | Radius: 8 yards | Mechanic: Unknown(11) | Target: AOE enemy (instant) (16)
+                   Base Value: -70 | Scaled Value: -70 | PvP Coefficient: 1.00000 | Radius: 8 yards | Mechanic: Snare | Target: AOE enemy (instant) (16)
 Description      : A wave of flame radiates outward from the target location, damaging all enemies caught within the blast for $s1 Fire damage and are slowed by $s2% for $d.
 Tooltip          : Dazed.
 
@@ -1357,7 +1357,7 @@ Attributes       : ........ ........ .......x ........   ...x...x ........ .....
                  : Allow Cast While Dead (23), No Redirection (35), No Reflection (39), Allow Cast While Casting (135), Not In Spellbook (143)
 Effects          :
 #1 (id=689554)   : Apply Aura (6) | Stun (12)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(12) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Stun | Target: Enemy (6)
 #2 (id=90339)    : Server Side Script (77)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 12 yards | Target: At Enemy (53) -> AOE enemy (instant) (16)
 Description      : Stuns the target for $12355d and spreads any Fire damage over time effects to nearby enemy targets within $12355a2 yards.
@@ -1421,7 +1421,7 @@ Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 2 seconds
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Affecting spells : Permafrost (11175 effects: #1, #2, #3), Permafrost (12569 effects: #1, #2, #3), Permafrost (12571 effects: #1, #2, #3)
 Family Flags     : 20
 Attributes       : ........ x....... ........ ........   ...x...x ........ ........ ........ 
@@ -1449,7 +1449,7 @@ Spell Type       : Magic
 Spell Level      : 10
 Range            : 50000 yards
 Duration         : 2 seconds
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Affecting spells : Permafrost (11175 effects: #1, #2, #3), Permafrost (12569 effects: #1, #2, #3), Permafrost (12571 effects: #1, #2, #3)
 Family Flags     : 20
 Attributes       : ........ x....... ........ ........   ...x...x ........ ........ ........ 
@@ -1925,7 +1925,7 @@ Resource         : 0 Energy (3) (id=184068)
 Range            : 50000 yards
 Duration         : 2 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(9)
+Mechanic         : Silence
 Triggered by     : Improved Counterspell (11255)
 Family Flags     : 62
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
@@ -2017,7 +2017,7 @@ School           : Arcane
 Spell Type       : Magic
 Duration         : 2 seconds
 Cooldown         : 120 seconds
-Mechanic         : Unknown(9)
+Mechanic         : Silence
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2431,7 +2431,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Limit N (165), Taps immediately (215), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=849323)   : Apply Aura (6) | Decrease Movement Speed% (33)
-                   Base Value: -60 | Scaled Value: -60 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -60 | Scaled Value: -60 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
                    Affected Spells: Blizzard (10), Frostbolt (116), Cone of Cold (120), Frost Nova (122), Fireball (133), Arcane Explosion (1449), Flamestrike (2120), Fire Blast (2136), Scorch (2948), Arcane Missiles (7268), Pyroblast (11366), Dragon's Breath (31661), Blizzard (42208), Flamestrike (88148), Pyroblast! (92315), Cleansing Flames (107835), Cleansing Flames (109847), Cleansing Flames (109849)
                    Family Flags: 0, 1, 2, 4, 5, 6, 7, 9, 12, 21, 22, 23
 #2 (id=849324)   : Apply Aura (6) | Apply Percent Modifier w/ Label (218): Spell Direct Amount (0)
@@ -2805,7 +2805,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 3 seconds
-Mechanic         : Unknown(26)
+Mechanic         : Interrupt
 Attributes       : ........ ........ .......x ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2847,7 +2847,7 @@ Effects          :
 #1 (id=851795)   : School Damage (2): frost | Scaling Class: 8
                    Base Value: 73 | Scaled Value: 384.3053 (coefficient=0.41) | Points Per Level: 2 | SP Coefficient: 0.02900 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
 #2 (id=851796)   : Apply Aura (6) | Root (26) | Scaling Class: 8
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 8 yards | Mechanic: Unknown(7) | Target: AOE enemy (instant) (16)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 8 yards | Mechanic: Root | Target: AOE enemy (instant) (16)
 Description      : Blasts enemies in a $a1 yard radius for ${($m1+$M1)/2} Frost damage and freezes them in place for up to $d.  Damage caused may interrupt the effect.
 Tooltip          : Frozen in place.
 
@@ -3629,7 +3629,7 @@ Attributes       : ........ ........ x.x..... ........   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18), Taps immediately (215), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=950072)   : Apply Aura (6) | Stun (12)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(12) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Stun | Target: Enemy (6)
 Description      : Stuns the target for $d.  Only usable on Frozen targets.  Deals ${$71757m1*$<mult>} to ${$71757M1*$<mult>} damage to targets that are permanently immune to stuns.
 Tooltip          : Stunned and Frozen.
 Variables        : $arctic1=$?s31674[${1.01}][${1}]
@@ -3668,7 +3668,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), DoT Stacking Rule (103), Spell Haste Affects Periodic (173), Aura Points On Client (268)
 Effects          :
 #1 (id=976761)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
-                   Base Value: -40 | Scaled Value: -40 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -40 | Scaled Value: -40 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 #2 (id=976762)   : School Damage (2): frostfire | Scaling Class: 8
                    Base Value: 628 | Scaled Value: 889.5262 (coefficient=0.949) | Points Per Level: 3.9 | SP Coefficient: 0.97700 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=976763)   : Apply Aura (6) | Periodic Damage (3): frostfire every 3 seconds | Scaling Class: 8
@@ -4011,7 +4011,7 @@ Resource         : 0 Energy (3) (id=241729)
 Range            : 50000 yards
 Duration         : 4 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(9)
+Mechanic         : Silence
 Triggered by     : Improved Counterspell (12598)
 Family Flags     : 62
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
@@ -4050,7 +4050,7 @@ Attributes       : ........ ........ x....... x..x..x.   ...x...x ........ .....
                  : Not Shapeshifted (16), Allow While Mounted (24), Allow While Sitting (27), Heartbeat Resist (30), No Redirection (35), No Reflection (39), Aura Never Bounces (148)
 Effects          :
 #1 (id=976636)   : Apply Aura (6) | Root (26)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Mechanic: Unknown(7) | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Mechanic: Root | Target: At Caster (22) -> AOE enemy (15)
 Description      : Frozen in place.
 Tooltip          : Frozen in place.
 
@@ -5224,7 +5224,7 @@ Effects          :
 #1 (id=965356)   : School Damage (2): frost | Scaling Class: 8
                    Base Value: 162 | Scaled Value: 220.2726 (coefficient=0.235) | SP Coefficient: 0.25000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=965357)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
-                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 Description      : Inflicts Frost damage to an enemy and reduces its movement speed for $d.
 Tooltip          : Reduced movement speed.
 
@@ -5989,7 +5989,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
-Mechanic         : Unknown(28)
+Mechanic         : Discover
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6039,7 +6039,7 @@ Spell Level      : 83
 Range            : 100 yards
 Duration         : 10 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(13)
+Mechanic         : Freeze
 Proc Flags       : ...x.x.x .x.x.x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
                  : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Heal Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Burning Soul (11083 effect#1), Piercing Chill (83156 effect#1), Piercing Chill (83157 effect#1), Burning Soul (84253 effect#1), Burning Soul (84254 effect#1)
@@ -6055,7 +6055,7 @@ Attributes       : ........ ........ x....... x..xx...   .....x.. ........ .x...
                  : Not Shapeshifted (16), Allow While Mounted (24), Allow While Sitting (27), Not In Combat (Only Peaceful) (28), Allow While Stealthed (37), No AutoCast (AI) (49), Allow While Invisible (78), Can Proc From Procs (122), Do Not Display Range (126), Allow Cast While Casting (135), Not In Spellbook (143), Allow While Stunned (163), Allow While Fleeing (177), Allow While Confused (178), Allow While Riding Vehicle (204), Allow While Charmed (261)
 Effects          :
 #1 (id=82979)    : Apply Aura (6) | Stun (12)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 0 - 20 yards | Mechanic: Unknown(13) | Target: Unknown(87) -> AOE enemy (instant) (16)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 0 - 20 yards | Mechanic: Freeze | Target: Unknown(87) -> AOE enemy (instant) (16)
 Description      : Summons a Ring of Frost, taking $91264d to coalesce.  Enemies entering the fully-formed ring will become frozen for $82691d.  Lasts $82676d.  $82676s2 yd radius.
 Tooltip          : Frozen.
 
@@ -6201,7 +6201,7 @@ Attributes       : ........ ........ x....... x..x..x.   ...x...x ........ .....
                  : Not Shapeshifted (16), Allow While Mounted (24), Allow While Sitting (27), Heartbeat Resist (30), No Redirection (35), No Reflection (39)
 Effects          :
 #1 (id=83557)    : Apply Aura (6) | Root (26)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 10 yards | Mechanic: Unknown(7) | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 10 yards | Mechanic: Root | Target: At Caster (22) -> AOE enemy (15)
 Description      : Frozen in place.
 Tooltip          : Frozen in place.
 
@@ -6349,7 +6349,7 @@ Spell Level      : 10
 Range            : 100 yards
 Duration         : 2 seconds
 Proc Chance      : 100%
-Mechanic         : Unknown(7)
+Mechanic         : Root
 Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
                  : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Family Flags     : 63
@@ -6376,7 +6376,7 @@ Spell Level      : 10
 Range            : 100 yards
 Duration         : 4 seconds
 Proc Chance      : 100%
-Mechanic         : Unknown(7)
+Mechanic         : Root
 Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
                  : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Family Flags     : 63
@@ -6662,7 +6662,7 @@ Attributes       : ........ ........ x....... ........   .......x ........ .....
                  : Not Shapeshifted (16), No Reflection (39), Active Threat (94), Not In Spellbook (143), Aura Points On Client (268)
 Effects          :
 #1 (id=85629)    : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
-                   Base Value: -40 | Scaled Value: -40 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -40 | Scaled Value: -40 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 #2 (id=87603)    : School Damage (2): frostfire | Scaling Class: 8
                    Base Value: 174 | Scaled Value: 260.5778 (coefficient=0.278) | SP Coefficient: 0.13400 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=99077)    : Apply Aura (6) | Modify Healing Received% (118) | Scaling Class: 8

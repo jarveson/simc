@@ -13,7 +13,7 @@ Category         : 56
 Category Cooldown: 3 seconds
 Proc Chance      : 101%
 Stance Mask      : 0x08000000
-Mechanic         : Unknown(19)
+Mechanic         : Shield
 Affecting spells : Mental Agility (14520 effect#1), Improved Power Word: Shield (14748 effect#1), Improved Power Word: Shield (14768 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Improved Power Word: Shield (24191 effect#1), Rapture (47535 effect#2), Rapture (47536 effect#2), Rapture (47537 effect#2), Grace (47930 effect#1), Borrowed Time (52795 effects: #1, #2), Borrowed Time (52797 effects: #1, #2), Borrowed Time (52798 effects: #1, #2), Divine Touch (63534 effect#1), Divine Touch (63542 effect#1), Soul Warding (63574 effect#1), Body and Soul (64127 effect#1), Body and Soul (64129 effect#1), Inner Will (73413 effect#1), Grace (77613 effect#1), Soul Warding (78500 effect#1), Soul Warding (78501 effect#1)
 Family Flags     : 0
 Attributes       : ........ ...x.... x.x..... ........   ........ ........ ........ ........ 
@@ -275,7 +275,7 @@ GCD              : 1.5 seconds
 Duration         : 30 seconds
 Proc Chance      : 101%
 Stance Mask      : 0x08000000
-Mechanic         : Unknown(1)
+Mechanic         : Charm
 Affecting spells : Focused Will (45241 effect#1), Focused Will (45242 effect#1), Dark Thoughts (84734 effect#1)
 Family Flags     : 17
 Attributes       : ........ ........ x.x.x... ......x.   x.x..... .....x.. .x...... ..x..... 
@@ -477,7 +477,7 @@ GCD              : 1.5 seconds
 Duration         : 24 seconds
 Category         : 691
 Stance Mask      : 0x08000000
-Mechanic         : Unknown(22)
+Mechanic         : Infect
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Mind Melt (14910 effect#2), Darkness (15259 effect#1), Darkness (15307 effect#1), Darkness (15308 effect#1), Mind Melt (33371 effect#2), Twin Disciplines (47586 effect#1), Improved Devouring Plague (63625 effect#1), Improved Devouring Plague (63626 effect#1), Inner Will (73413 effect#1), Echo of Light (77485 effect#1), Shadowy Apparition (78202 effect#2), Shadowy Apparition (78203 effect#2), Shadowy Apparition (78204 effect#2), Dark Thoughts (84734 effect#1), Dark Evangelism (87117 effect#1), Dark Evangelism (87118 effect#1), Shadow Power (87327 effect#2), Empowered Shadow (95799 effects: #1, #2)
 Family Flags     : 25
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -555,7 +555,7 @@ School           : Holy
 Spell Type       : None
 Range            : 50000 yards
 Duration         : 15 seconds
-Mechanic         : Unknown(19)
+Mechanic         : Shield
 Family Flags     : 29
 Attributes       : ........ ........ ........ ..x..x..   ...x...x ..x..... xx...... ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -643,7 +643,7 @@ Category         : 43
 Category Cooldown: 30 seconds
 Proc Chance      : 100%
 Stance Mask      : 0x08000000
-Mechanic         : Unknown(5)
+Mechanic         : Flee
 Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
                  : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Improved Psychic Scream (15392 effect#1), Improved Psychic Scream (15448 effect#1), Psychic Scream Duration Increase (23044 effect#1), Improved Psychic Scream (44297 effect#1), Glyph of Psychic Scream (55676 effects: #1, #2, #3), Glyph of Dispel Magic (55677 effect#1), Inner Will (73413 effect#1), Dark Thoughts (84734 effect#1)
@@ -704,7 +704,7 @@ GCD              : 1.5 seconds
 Duration         : 50 seconds
 Proc Chance      : 101%
 Stance Mask      : 0x08000000
-Mechanic         : Unknown(20)
+Mechanic         : Shackle
 Affecting spells : Focused Will (45241 effect#1), Focused Will (45242 effect#1), Glyph of Scourge Imprisonment (55690 effects: #1, #2), Glyph of Shackle Undead (57986 effect#1), Glyph of Shadowfiend (58228 effect#1), Enlightenment (84732 effect#1), Holy Focus (84733 effect#1), Shadow Power (87327 effect#1), Revelations (88627 effect#1), Masochism (88994 effect#1), Masochism (88995 effect#1)
 Family Flags     : 30, 44, 58
 Attributes       : ........ ........ x...x... ......x.   ........ ..x..... ..x..... ........ 
@@ -1458,7 +1458,7 @@ Effects          :
 #1 (id=7301)     : Apply Aura (6) | Periodic Damage (3): shadow every 1 seconds | Scaling Class: 5
                    Base Value: 10 | Scaled Value: 187.1474 (coefficient=0.198) | SP Coefficient: 0.28800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=693751)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 5
-                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 Description      : Assault the target's mind with Shadow energy, causing $o1 Shadow damage over $d and slowing their movement speed by $s2%.
 Tooltip          : Movement speed slowed.
 
@@ -1526,7 +1526,7 @@ Duration         : 5 seconds
 Cooldown         : 45 seconds
 Proc Chance      : 101%
 Stance Mask      : 0x08000000
-Mechanic         : Unknown(9)
+Mechanic         : Silence
 Affecting spells : Mental Agility (14520 effect#1), Mental Agility (14780 effect#1), Mental Agility (14781 effect#1), Inner Will (73413 effect#1), Dark Thoughts (84734 effect#1)
 Family Flags     : 44, 53
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
@@ -2002,7 +2002,7 @@ School           : Arcane
 Spell Type       : Magic
 Duration         : 2 seconds
 Cooldown         : 120 seconds
-Mechanic         : Unknown(9)
+Mechanic         : Silence
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2188,7 +2188,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 3 seconds
-Mechanic         : Unknown(26)
+Mechanic         : Interrupt
 Attributes       : ........ ........ .......x ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6084,7 +6084,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Reset cooldown upon ending an encounter (333)
 Effects          :
 #1 (id=968459)   : Apply Aura (6) | Stun (12)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(24) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Horrify | Target: Enemy (6)
 #2 (id=968460)   : Trigger Spell (64): Psychic Horror
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Trigger Spell: 64058 | Target: Enemy (6)
 Description      : You terrify the target, causing them to tremble in horror for $d and drop their main hand and ranged weapons for $64058d.
@@ -6097,7 +6097,7 @@ Spell Type       : None
 Range            : 100 yards
 Duration         : 10 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(3)
+Mechanic         : Disarm
 Triggered by     : Psychic Horror (64044)
 Attributes       : ........ ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6110,9 +6110,9 @@ Attributes       : ........ ........ x....... ........   ........ ..x..... .....
                  : Not Shapeshifted (16), No Threat (42), No Partial Immunity (139)
 Effects          :
 #1 (id=968746)   : Apply Aura (6) | Disarm (67)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(3) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Disarm | Target: Enemy (6)
 #2 (id=968747)   : Apply Aura (6) | Unknown(278)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(3) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Disarm | Target: Enemy (6)
 Description      : You terrify the target, causing them to tremble in horror for $64044d and drop their main hand and ranged weapons for $64058d.
 Tooltip          : Disarmed.
 
@@ -7089,7 +7089,7 @@ Class            : Priest, Mage, Warlock
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
-Mechanic         : Unknown(28)
+Mechanic         : Discover
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7769,7 +7769,7 @@ Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 2 seconds
-Mechanic         : Unknown(7)
+Mechanic         : Root
 Triggered by     : Paralysis (87192)
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ..x..... ........ 
@@ -7782,7 +7782,7 @@ Attributes       : ........ ........ ..x..... ........   ........ ........ .....
                  : Do Not Sheath (18), Always Hit (114), No Attack Dodge (247), No Attack Parry (248), No Attack Miss (249), No Attack Block (256)
 Effects          :
 #1 (id=89038)    : Apply Aura (6) | Decrease Movement Speed% (33)
-                   Base Value: -100 | Scaled Value: -100 | PvP Coefficient: 1.00000 | Mechanic: Unknown(7) | Target: Enemy (6)
+                   Base Value: -100 | Scaled Value: -100 | PvP Coefficient: 1.00000 | Mechanic: Root | Target: Enemy (6)
 Description      : When you critically hit with your Mind Blast, you cause the target to be unable to move for $87193d.
 Tooltip          : Paralyzed.
 
@@ -7793,7 +7793,7 @@ Spell Type       : Magic
 Spell Level      : 1
 Range            : 50000 yards
 Duration         : 4 seconds
-Mechanic         : Unknown(7)
+Mechanic         : Root
 Triggered by     : Paralysis (87195)
 Attributes       : ........ ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ..x..... ........ 
@@ -7806,7 +7806,7 @@ Attributes       : ........ ........ ..x..... ........   ........ ........ .....
                  : Do Not Sheath (18), Always Hit (114), No Attack Dodge (247), No Attack Parry (248), No Attack Miss (249), No Attack Block (256)
 Effects          :
 #1 (id=89039)    : Apply Aura (6) | Decrease Movement Speed% (33)
-                   Base Value: -100 | Scaled Value: -100 | PvP Coefficient: 1.00000 | Mechanic: Unknown(7) | Target: Enemy (6)
+                   Base Value: -100 | Scaled Value: -100 | PvP Coefficient: 1.00000 | Mechanic: Root | Target: Enemy (6)
 Description      : When you critically hit with your Mind Blast, you cause the target to be unable to move for $87194d.
 Tooltip          : Paralyzed.
 
@@ -7844,7 +7844,7 @@ Duration         : 3 seconds
 Cooldown         : 40 seconds
 Category Cooldown: 40 seconds
 Proc Chance      : 100%
-Mechanic         : Unknown(24)
+Mechanic         : Horrify
 Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
                  : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Attributes       : ........ ........ x....... ..x...x.   ...x...x ........ ........ ........ 
@@ -7981,7 +7981,7 @@ Effects          :
 #1 (id=91044)    : School Damage (2): holy | Scaling Class: 5
                    Base Value: 1 | Scaled Value: 598.3045 (coefficient=0.633) | SP Coefficient: 0.61400 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=91045)    : Apply Aura (6) | Stun (12) | Scaling Class: 5
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(2) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Disorient | Target: Enemy (6)
 Description      : Chastise the target for $s1 Holy damage, and disorients them for $d.
 Tooltip          : Disoriented.
 

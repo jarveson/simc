@@ -454,7 +454,7 @@ School           : Nature
 Spell Type       : Magic
 Spell Level      : 6
 Duration         : 5 seconds
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Affecting spells : Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
 Family Flags     : 32
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
@@ -840,11 +840,11 @@ Attributes       : ........ ........ ........ ........   ...x...x ........ .....
                  : No Redirection (35), No Reflection (39), Ignore Line of Sight (66), Item Cast With Owner Skill (88), Do Not Display Range (126)
 Effects          :
 #1 (id=686359)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 7
-                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 #2 (id=686360)   : School Damage (2): frost | Scaling Class: 7
                    Base Value: 42 | Scaled Value: 611.7331 (coefficient=0.609) | Points Per Level: 2.1 | SP Coefficient: 0.10000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=909304)   : Apply Aura (6) | Modify Damage Taken% from Caster's Spells (271) | Scaling Class: 7
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
                    Affected Spells: Lightning Bolt (403), Chain Lightning (421), Earth Shock (8042), Flame Shock (8050), Frost Shock (8056), Stormstrike (17364), Lava Lash (60103)
                    Family Flags: 0, 1, 20, 28, 31, 36, 66
 Description      : Imbue the Shaman's weapon with frost.  Each hit has a chance of causing $8034s2 additional Frost damage and slowing the target's movement speed by $8034s1% for $8034d.  Lasts 30 minutes.
@@ -937,7 +937,7 @@ Attributes       : ........ ........ x.x..... ........   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18)
 Effects          :
 #1 (id=686557)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 7
-                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 #2 (id=686558)   : School Damage (2): frost | Scaling Class: 7
                    Base Value: 88 | Scaled Value: 872.9 (coefficient=0.869) | Points Per Level: 1.2 | SP Coefficient: 0.38600 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Instantly shocks the target with frost, dealing Frost damage and slowing movement speed. Lasts $d. Causes a high amount of threat.
@@ -3491,7 +3491,7 @@ Spell Type       : Magic
 Spell Level      : 58
 Range            : 100 yards
 Duration         : 3 seconds
-Mechanic         : Unknown(12)
+Mechanic         : Stun
 Triggered by     : Stoneclaw Totem Passive (5728)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5727,7 +5727,7 @@ Attributes       : ........ ........ x.x..... ........   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18), Always Hit (114), Taps immediately (215)
 Effects          :
 #1 (id=979434)   : Interrupt Cast (68)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(26) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Interrupt | Target: Enemy (6)
 #2 (id=51297)    : Modify Threat (125)
                    Base Value: -5 | Scaled Value: -5 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Disrupts the target's concentration with a burst of wind, interrupting spellcasting and preventing any spell in that school from being cast for $d.  Also lowers your threat, making the enemy less likely to attack you.
@@ -6481,7 +6481,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Display Range (126), Not In Spellbook (143), Aura Never Bounces (148)
 Effects          :
 #1 (id=979938)   : Apply Aura (6) | Root (26)
-                   Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Mechanic: Unknown(7) | Target: Enemy (6)
+                   Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Mechanic: Root | Target: Enemy (6)
 Description      : Increases the damage done by your Lightning Bolt, Chain Lightning, Lava Lash and Shock spells on targets afflicted by your Frostbrand Attack effect, and your Frost Shock has a chance to root the target in ice for $63685d. when used on targets at or further than $63685s1 yards from you.
 Tooltip          : Frozen in place.
 
@@ -6611,7 +6611,7 @@ School           : Nature
 Spell Type       : Magic
 Duration         : 5 seconds
 Proc Chance      : 100%
-Mechanic         : Unknown(7)
+Mechanic         : Root
 Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
                  : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Totemic Reach (86935 effect#1), Totemic Reach (86936 effect#1)
@@ -6897,7 +6897,7 @@ Effects          :
 #1 (id=66860)    : School Damage (2): frost | Scaling Class: 7
                    Base Value: 462 | Scaled Value: 872.9 (coefficient=0.869) | SP Coefficient: 0.38600 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=66861)    : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 7
-                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 Description      : Unleashes the Frostbrand enchantment upon the Shaman's weapon, dealing $s1 Frost damage to a target enemy and reducing their movement speed by $s2% for $d. Increased in effectiveness if the target is already afflicted by a movement-slowing Frost effect.
 Tooltip          : Movement speed reduced by $w2%.
 
@@ -7090,7 +7090,7 @@ GCD              : 1.5 seconds
 Duration         : 50 seconds
 Proc Chance      : 101%
 Stance Mask      : 0x08000000
-Mechanic         : Unknown(18)
+Mechanic         : Banish
 Affecting spells : Nature's Swiftness (16188 effect#1), Elemental Precision (30672 effect#1), Elemental Precision (30673 effect#1), Elemental Precision (30674 effect#1), Shamanistic Rage (30823 effect#1), Glyph of Feral Spirit (63271 effect#1), Spiritwalker's Grace (79206 effect#1), Ancestral Focus (89920 effect#1)
 Family Flags     : 71
 Attributes       : ........ ........ x...x... ......x.   ........ ..x..... ..x..... ........ 
@@ -7725,7 +7725,7 @@ Class            : Hunter, Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
-Mechanic         : Unknown(28)
+Mechanic         : Discover
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -7744,7 +7744,7 @@ Class            : Shaman
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
-Mechanic         : Unknown(28)
+Mechanic         : Discover
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8658,7 +8658,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 5 seconds
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ......x. 
                  : x....... ........ ........ ........   ...x.... ........ ........ ........ 

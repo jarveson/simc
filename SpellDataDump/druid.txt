@@ -39,7 +39,7 @@ Cast Time        : 1.7 seconds
 GCD              : 1.5 seconds
 Duration         : 30 seconds
 Proc Chance      : 100%
-Mechanic         : Unknown(7)
+Mechanic         : Root
 Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
                  : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Clearcasting (16870 effect#1), Nature's Grace (16886 effect#1), Moonfury (16913 effect#1), Nature's Swiftness (17116 effect#1), Owlkin Frenzy (48391 effect#1), Glyph of Entangling Roots (54760 effects: #1, #2), Predator's Swiftness (69369 effects: #1, #2), Nature's Focus (84736 effect#1), Shooting Stars (93398 effect#1), Shooting Stars (93399 effect#1), Sunfire (93401 effect#1), Nature's Torment Cooldown (93432 effect#1), Roots Range Increase (96148 effect#1)
@@ -322,7 +322,7 @@ Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 16 seconds
 Stance Mask      : 0x00000001
-Mechanic         : Unknown(15)
+Mechanic         : Bleed
 Affecting spells : Feral Aggression (16858 effect#2), Feral Aggression (16859 effect#2), Clearcasting (16870 effect#1), Predatory Strikes (16972 effect#3), Predatory Strikes (16974 effect#3), Berserk (50334 effect#1), Glyph of Rip (54818 effect#1), Survival Instincts (61336 effect#1), Item - Druid T10 Feral 2P Bonus (70724 effect#3), Razor Claws (77493 effect#1), Item - Druid T12 Feral 4P Bonus (99009 effect#1), Item - Druid Firelands Cosmetic Transform Controller (99246 effect#1)
 Family Flags     : 23, 85
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ....x... ...x.... 
@@ -336,7 +336,7 @@ Attributes       : ....x... ........ ..x..... ........   ........ .x...... ....x
                  : Is Ability (4), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Finishing Move - Damage (52), Discount Power On Miss (59), Taps immediately (215), Aura Points On Client (268)
 Effects          :
 #1 (id=685878)   : Apply Aura (6) | Periodic Damage (3): physical every 2 seconds | Scaling Class: 11
-                   Base Value: 3 | Scaled Value: 56.82968 (coefficient=0.0576) | Bonus Value: 160.8201 (0.163) | PvP Coefficient: 1.00000 | Mechanic: Unknown(15) | Target: Enemy (6)
+                   Base Value: 3 | Scaled Value: 56.82968 (coefficient=0.0576) | Bonus Value: 160.8201 (0.163) | PvP Coefficient: 1.00000 | Mechanic: Bleed | Target: Enemy (6)
 #2 (id=117625)   : Dummy (3) | Scaling Class: 11
                    Base Value: 2 | Scaled Value: 2 | PvP Coefficient: 1.00000
 #3 (id=117626)   : Dummy (3) | Scaling Class: 11
@@ -435,7 +435,7 @@ Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 9 seconds
 Stance Mask      : 0x00000001
-Mechanic         : Unknown(15)
+Mechanic         : Bleed
 Affecting spells : Clearcasting (16870 effect#1), Berserk (50334 effect#1), Glyph of Swiftmend (54824 effect#1), Survival Instincts (61336 effect#1), Item - Druid T10 Feral 4P Bonus (70726 effects: #1, #2), Razor Claws (77493 effect#1), Endless Carnage (80314 effect#1), Endless Carnage (80315 effect#1), Item - Druid T11 Feral 2P Bonus (90162 effect#1), Claw and Rake Damage Bonus (352574 effect#1), Claw and Rake Damage Bonus (388428 effect#1)
 Family Flags     : 12
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ...x.... 
@@ -497,7 +497,7 @@ GCD              : 1.5 seconds
 Duration         : 40 seconds
 Proc Chance      : 101%
 Stance Mask      : 0x40000002
-Mechanic         : Unknown(10)
+Mechanic         : Sleep
 Affecting spells : Nature's Grace (16886 effect#1), Nature's Swiftness (17116 effect#1), Owlkin Frenzy (48391 effect#1), Predator's Swiftness (69369 effects: #1, #2), Item - Druid T10 Restoration 4P Bonus (Rejuvenation) (70664 effect#1), Celestial Focus (84738 effect#1), Nature's Torment Cooldown (93432 effect#1)
 Family Flags     : 24, 49, 79
 Attributes       : ........ ........ x...x... ......x.   ........ ..x..... ..x..... ........ 
@@ -714,7 +714,7 @@ Category         : 32
 Category Cooldown: 60 seconds
 Proc Chance      : 101%
 Stance Mask      : 0x00000010
-Mechanic         : Unknown(12)
+Mechanic         : Stun
 Affecting spells : Clearcasting (16870 effect#1), Brutal Impact (16940 effects: #1, #2), Brutal Impact (16941 effects: #1, #2), Skull Bash (82364 effect#1), Skull Bash (82365 effect#1)
 Family Flags     : 13
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ..x..... ...x.... 
@@ -831,7 +831,7 @@ Spell Level      : 22
 Duration         : 10 seconds
 Cooldown         : 60 seconds
 Stance Mask      : 0x00000010
-Mechanic         : Unknown(31)
+Mechanic         : Enrage
 Affecting spells : Primal Madness (80316 effect#2), Primal Madness (80317 effect#2)
 Family Flags     : 19
 Attributes       : ....x... ........ ..x..... ........   ........ ..x..... ........ ........ 
@@ -1185,7 +1185,7 @@ Attributes       : ....x... ........ .xx..x.. ........   ........ .x...... .....
                  : Is Ability (4), Only Stealthed (17), Do Not Sheath (18), No Active Defense (21), Initiates Combat (Enables Auto-Attack) (41), Discount Power On Miss (59), Initiate Combat Post-Cast (Enables Auto-Attack) (84), Taps immediately (215)
 Effects          :
 #1 (id=688477)   : Apply Aura (6) | Stun (12)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(12) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Stun | Target: Enemy (6)
 #2 (id=688478)   : Trigger Spell (64): Pounce Bleed
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Trigger Spell: 9007 | Target: Enemy (6)
 #3 (id=688479)   : Add Combo Points (328)
@@ -1201,7 +1201,7 @@ Resource         : 0 Energy (3) (id=177091)
 Spell Level      : 36
 Range            : 50000 yards
 Duration         : 18 seconds
-Mechanic         : Unknown(15)
+Mechanic         : Bleed
 Affecting spells : Clearcasting (16870 effect#1), Brutal Impact (16940 effect#1), Brutal Impact (16941 effect#1), Berserk (50334 effect#1), Glyph of Pounce (54821 effect#1), Survival Instincts (61336 effect#1)
 Triggered by     : Pounce (9005)
 Family Flags     : 17
@@ -1216,7 +1216,7 @@ Attributes       : ........ ........ .....x.. ........   ........ ........ .....
                  : No Active Defense (21), Not In Spellbook (143), No Attack Miss (249), Periodic Can Crit (265)
 Effects          :
 #1 (id=688148)   : Apply Aura (6) | Periodic Damage (3): physical every 3 seconds | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 390.7041 (coefficient=0.396) | PvP Coefficient: 1.00000 | Mechanic: Unknown(15) | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 390.7041 (coefficient=0.396) | PvP Coefficient: 1.00000 | Mechanic: Bleed | Target: Enemy (6)
 Description      : Pounce, stunning the target for $9005d and causing $9007o1 Bleed damage over $9007d.  Must be prowling.  Awards $9005s3 combo $lpoint:points;.
 Tooltip          : Bleeding for $s1 damage every $t1 seconds.
 
@@ -1656,7 +1656,7 @@ Attributes       : ........ ........ x....... ........   ..xx...x ........ .....
                  : Not Shapeshifted (16), Is Channelled (34), No Redirection (35), No Reflection (39), Allow While Not Shapeshifted (caster form) (83), No Initial Threat (86), Spell Haste Affects Periodic (173), No Caster Aura Icon (187), Aura Points On Client (268), Haste Affects Duration (273)
 Effects          :
 #1 (id=694631)   : Persistent Area Aura (27) | Decrease Movement Speed% (33)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 8 yards | Mechanic: Unknown(11) | Target: AOE enemy (28)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 8 yards | Mechanic: Snare | Target: AOE enemy (28)
 #2 (id=694632)   : Persistent Area Aura (27) | Modify Melee Haste% (138)
                    Base Value: -20 | Scaled Value: -20 | PvP Coefficient: 1.00000 | Radius: 8 yards | Mechanic: Unknown(8) | Target: AOE enemy (28)
 #3 (id=870645)   : Apply Aura (6) | Periodic Trigger Spell (23): Hurricane every 1 seconds
@@ -2494,7 +2494,7 @@ Max Targets      : 1
 GCD              : 1.5 seconds
 Duration         : 27 seconds
 Proc Chance      : 100%
-Mechanic         : Unknown(7)
+Mechanic         : Root
 Proc Flags       : ...x.x.x .x...x.. .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxxxxx xxxxxxxx   
                  : White Melee Taken, Yellow Melee Taken, White Ranged Taken, Yellow Ranged Taken, Generic Hostile Spell Taken, Magic Hostile Spell Taken, Periodic Taken, Helpful Periodic Taken, Target Dies, Knockback, Cast Successful
 Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Clearcasting (16870 effect#1), Nature's Grace (16886 effect#1), Moonfury (16913 effect#1), Nature's Swiftness (17116 effect#1), Owlkin Frenzy (48391 effect#1), Glyph of Entangling Roots (54760 effects: #1, #2), Predator's Swiftness (69369 effects: #1, #2), Nature's Focus (84736 effect#1), Shooting Stars (93398 effect#1), Shooting Stars (93399 effect#1), Sunfire (93401 effect#1), Nature's Torment Cooldown (93432 effect#1), Roots Range Increase (96148 effect#1)
@@ -2663,7 +2663,7 @@ Effects          :
 #1 (id=699795)   : Weapon Damage (58) | Scaling Class: 11
                    Base Value: 45 | Scaled Value: 73.99698 (coefficient=0.075) | Bonus Value: 176.6061 (0.179) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=699796)   : Apply Aura (6) | Stun (12) | Scaling Class: 11
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(12) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Stun | Target: Enemy (6)
 #3 (id=100815)   : Weapon Damage% (31) | Scaling Class: 11
                    Base Value: 155 | Scaled Value: 1.55 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Finishing move that causes damage and stuns the target.  Causes more damage and lasts longer per combo point:
@@ -3198,9 +3198,9 @@ Attributes       : ....x... ........ ........ ........   ........ .x...... .....
                  : Is Ability (4), Initiates Combat (Enables Auto-Attack) (41), Discount Power On Miss (59), DoT Stacking Rule (103), Aura Points On Client (268)
 Effects          :
 #1 (id=852679)   : Apply Aura (6) | Periodic Damage (3): physical every 3 seconds | Scaling Class: 11
-                   Base Value: 31 | Scaled Value: 69.06385 (coefficient=0.07) | PvP Coefficient: 1.00000 | Mechanic: Unknown(15) | Target: Enemy (6)
+                   Base Value: 31 | Scaled Value: 69.06385 (coefficient=0.07) | PvP Coefficient: 1.00000 | Mechanic: Bleed | Target: Enemy (6)
 #2 (id=852680)   : School Damage (2): physical | Scaling Class: 11
-                   Base Value: 31 | Scaled Value: 3608.093 (coefficient=3.657) | PvP Coefficient: 1.00000 | Mechanic: Unknown(15) | Target: Enemy (6)
+                   Base Value: 31 | Scaled Value: 3608.093 (coefficient=3.657) | PvP Coefficient: 1.00000 | Mechanic: Bleed | Target: Enemy (6)
 Description      : Lacerates the enemy target, dealing ${$m2+($AP*0.0552)} damage and making them bleed for ${5*($m1+($AP*0.00369))} damage over $d.  Damage increased by attack power.  This effect stacks up to $u times on the same target.
 Tooltip          : Suffering $w1 damage every $t1 sec.
 
@@ -3263,7 +3263,7 @@ GCD              : 1.5 seconds
 Duration         : 6 seconds
 Proc Chance      : 101%
 Stance Mask      : 0x40000002
-Mechanic         : Unknown(18)
+Mechanic         : Banish
 Affecting spells : Nature's Grace (16886 effect#1), Nature's Swiftness (17116 effect#1), Cyclone Range Increase (33830 effect#1), Owlkin Frenzy (48391 effect#1), Gale Winds (48488 effect#2), Gale Winds (48514 effect#2), Predator's Swiftness (69369 effects: #1, #2), Nature's Focus (84736 effect#1), Nature's Torment Cooldown (93432 effect#1)
 Family Flags     : 37
 Attributes       : ........ ........ x....... ........   ........ ........ x....... ........ 
@@ -3998,7 +3998,7 @@ Attributes       : ........ ........ ..x..... ........   ...x...x .x...... .....
                  : Do Not Sheath (18), No Redirection (35), No Reflection (39), Initiates Combat (Enables Auto-Attack) (41), Taps immediately (215)
 Effects          :
 #1 (id=909931)   : Apply Aura (6) | Root (26)
-                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Mechanic: Unknown(7) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Mechanic: Root | Target: Enemy (6)
 Description      : Causes you to charge an enemy, immobilizing them for $45334d.
 Tooltip          : Immobilized.
 
@@ -4134,7 +4134,7 @@ Spell Level      : 1
 Duration         : 10 seconds
 Proc Chance      : 101%
 Stance Mask      : 0x40000000
-Mechanic         : Unknown(31)
+Mechanic         : Enrage
 Triggered by     : Owlkin Frenzy (48389), Owlkin Frenzy (48392), Owlkin Frenzy (48393)
 Attributes       : ........ ........ ..x..... ...x....   ........ ..x....x ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ..x..... ........ 
@@ -4970,7 +4970,7 @@ Spell Level      : 1
 Range            : 100 yards
 Duration         : 3 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Triggered by     : Feral Charge (49376)
 Attributes       : ....x... ........ ..x..... ........   .....x.. ..x..... ........ ........ 
                  : ..x..... ........ ........ ....x...   x....... ........ x....... ........ 
@@ -5109,7 +5109,7 @@ Spell Type       : None
 Range            : 100 yards
 Duration         : 3 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Triggered by     : Barkskin (22812)
 Attributes       : ....x... ........ ..x..... ...x....   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ .x...... ........ 
@@ -5261,7 +5261,7 @@ Spell Level      : 76
 Range            : 100 yards
 GCD              : 1 seconds
 Duration         : 9 seconds
-Mechanic         : Unknown(31)
+Mechanic         : Enrage
 Affecting spells : Predatory Strikes (16972 effect#3), Predatory Strikes (16974 effect#3), Cat Form (Passive) (48629 effect#1), Berserk (50334 effect#1), Survival Instincts (61336 effect#1), Glyph of Savage Roar (63055 effect#1), Glyph of Barkskin (63057 effect#1), Endless Carnage (80314 effect#2), Endless Carnage (80315 effect#2), Item - Druid T12 Feral 4P Bonus (99009 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ ..x..... .....x..   ........ ..x..... ......x. ...x.... 
@@ -6652,7 +6652,7 @@ Attributes       : ........ ........ ........ ........   ...x...x ........ .x...
                  : No Redirection (35), No Reflection (39), No AutoCast (AI) (49), Item Cast With Owner Skill (88), Suppress Target Procs (113)
 Effects          :
 #1 (id=962332)   : Apply Aura (6) | Decrease Movement Speed% (33)
-                   Base Value: -25 | Scaled Value: -25 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -25 | Scaled Value: -25 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 #2 (id=51494)    : Apply Aura (6) | Modify Ranged and Melee Attack Speed% (342)
                    Base Value: -10 | Scaled Value: -10 | PvP Coefficient: 1.00000 | Mechanic: Unknown(8) | Target: Enemy (6)
 Description      : Your Shred, Ravage, Maul, and Mangle attacks cause an Infected Wound in the target. The Infected Wound reduces the movement speed of the target by $58179s1% and the attack speed by $58179s2%. Lasts $58179d.
@@ -6679,7 +6679,7 @@ Attributes       : ........ ........ ........ ........   ...x...x ........ .x...
                  : No Redirection (35), No Reflection (39), No AutoCast (AI) (49), Item Cast With Owner Skill (88), Suppress Target Procs (113)
 Effects          :
 #1 (id=978912)   : Apply Aura (6) | Decrease Movement Speed% (33)
-                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 #2 (id=51496)    : Apply Aura (6) | Modify Ranged and Melee Attack Speed% (342)
                    Base Value: -20 | Scaled Value: -20 | PvP Coefficient: 1.00000 | Mechanic: Unknown(8) | Target: Enemy (6)
 Description      : Your Shred, Ravage, Maul, and Mangle attacks cause an Infected Wound in the target. The Infected Wound reduces the movement speed of the target by $58180s1% and the attack speed by $58180s2%. Lasts $58180d.
@@ -6924,7 +6924,7 @@ Effects          :
 #2 (id=966297)   : School Damage (2): nature | Scaling Class: 11
                    Base Value: 400 | Scaled Value: 1298.4 (coefficient=1.316) | SP Coefficient: 0.12600 | PvP Coefficient: 1.00000 | Radius: 30 yards | Target: Cone Front (104)
 #3 (id=966298)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 11
-                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Radius: 30 yards | Mechanic: Unknown(11) | Target: Cone Front (104)
+                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Radius: 30 yards | Mechanic: Snare | Target: Cone Front (104)
 Description      : You summon a violent Typhoon that does $61391s2 Nature damage to targets in front of the caster within $61391a1 yards, knocking them back and dazing them for $61391d.
 Tooltip          : Dazed.
 
@@ -6956,7 +6956,7 @@ Spell Level      : 76
 Duration         : Aura (infinite)
 Proc Chance      : 101%
 Stance Mask      : 0x00000001
-Mechanic         : Unknown(31)
+Mechanic         : Enrage
 Affecting spells : Glyph of Savage Roar (63055 effect#1), Endless Carnage (80314 effect#2), Endless Carnage (80315 effect#2)
 Family Flags     : 80
 Attributes       : ....x..x x....... ..x..... .....x..   ........ ..x..... ........ ........ 
@@ -6970,7 +6970,7 @@ Attributes       : ....x..x x....... ..x..... .....x..   ........ ..x..... .....
                  : Is Ability (4), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8), Do Not Sheath (18), No Immunities (29), No Threat (42), Not an Action (92), Always Hit (114), Allow Actions During Channel (160), Aura Points On Client (268)
 Effects          :
 #1 (id=56034)    : Apply Aura (6) | Modify Auto Attack Damage Done% (344)
-                   Base Value: 80 | Scaled Value: 80 | PvP Coefficient: 1.00000 | Misc Value: 1 | Mechanic: Unknown(31) | Target: Self (1)
+                   Base Value: 80 | Scaled Value: 80 | PvP Coefficient: 1.00000 | Misc Value: 1 | Mechanic: Enrage | Target: Self (1)
 Description      : Finishing move that increases autoattack damage done by $s1%.  Lasts longer per combo point:
    1 point  : 14 seconds
    2 points: 19 seconds
@@ -7654,7 +7654,7 @@ GCD              : 1.5 seconds
 Duration         : 6 seconds
 Cooldown         : 6 seconds
 Stance Mask      : 0x00000010
-Mechanic         : Unknown(15)
+Mechanic         : Bleed
 Affecting spells : Clearcasting (16870 effect#1), Gale Winds (48488 effect#1), Gale Winds (48514 effect#1), Genesis (57810 effect#2), Genesis (57811 effect#2), Genesis (57812 effect#2)
 Family Flags     : 86
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ........ 
@@ -7668,9 +7668,9 @@ Attributes       : ....x... ........ ..x..... ........   ........ .x...... .....
                  : Is Ability (4), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Treat as Area Effect (175), Aura Points On Client (268)
 Effects          :
 #1 (id=68168)    : School Damage (2): physical | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 1041.878 (coefficient=1.056) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Mechanic: Unknown(15) | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 1 | Scaled Value: 1041.878 (coefficient=1.056) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Mechanic: Bleed | Target: At Caster (22) -> AOE enemy (15)
 #2 (id=68169)    : Apply Aura (6) | Periodic Damage (3): physical every 2 seconds | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 581.123 (coefficient=0.589) | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Mechanic: Unknown(15) | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 1 | Scaled Value: 581.123 (coefficient=0.589) | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Mechanic: Bleed | Target: At Caster (22) -> AOE enemy (15)
 Description      : $?a48418[Deals ${($AP*0.0982+$m1)*1.04} to ${($AP*0.0982+$M1)*1.04} damage, and causes all targets within $A2 yards to bleed for ${($AP*0.0167+$m2)*1.04*3} damage over $d.][Deals ${$AP*0.0982+$m1} to ${$AP*0.0982+$M1} damage, and causes all targets within $A2 yards to bleed for ${($AP*0.0167+$m2)*3} damage over $d.]
 Tooltip          : Bleeding for $w2 every $t2 sec.
 
@@ -7761,7 +7761,7 @@ Effects          :
 #1 (id=68268)    : School Damage (2): astral | Scaling Class: 11
                    Base Value: 1 | Scaled Value: 1211.577 (coefficient=1.228) | SP Coefficient: 1.22800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=68269)    : None (0) | Scaling Class: 11
-                   Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Mechanic: Unknown(12)
+                   Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Mechanic: Stun
 #3 (id=88261)    : None (0) | Scaling Class: 11
                    Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000
 Description      : You fuse the power of the moon and sun, launching a devastating blast of energy at the target. Causes $78674s1 Spellstorm damage to the target and generates $78674s2 Lunar or Solar energy, whichever is more beneficial to you.
@@ -8481,7 +8481,7 @@ Class            : Druid
 School           : Physical
 Spell Type       : None
 Duration         : 8 seconds
-Mechanic         : Unknown(31)
+Mechanic         : Enrage
 Affecting spells : Vengeance (84840 effect#1)
 Family Flags     : 34
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
@@ -8506,7 +8506,7 @@ Class            : Druid
 School           : Physical
 Spell Type       : None
 Duration         : 8 seconds
-Mechanic         : Unknown(31)
+Mechanic         : Enrage
 Affecting spells : Vengeance (84840 effect#1)
 Family Flags     : 34
 Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
@@ -8533,7 +8533,7 @@ Spell Type       : None
 Duration         : 10 seconds
 Stacks           : 1 initial, 1 maximum
 Proc Chance      : 100%
-Mechanic         : Unknown(31)
+Mechanic         : Enrage
 Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
                  : Yellow Melee, Generic Hostile Spell
 Affecting spells : Vengeance (84840 effect#1)
@@ -8566,7 +8566,7 @@ Spell Type       : None
 Duration         : 10 seconds
 Stacks           : 1 initial, 1 maximum
 Proc Chance      : 100%
-Mechanic         : Unknown(31)
+Mechanic         : Enrage
 Proc Flags       : ....x... ....x... ........ ........   ........ ........ ........ ........   
                  : Yellow Melee, Generic Hostile Spell
 Affecting spells : Vengeance (84840 effect#1)
@@ -8787,7 +8787,7 @@ Spell Type       : Magic
 Spell Level      : 39
 Range            : 100 yards
 Duration         : 1.25 seconds
-Mechanic         : Unknown(9)
+Mechanic         : Silence
 Attributes       : ........ x....... x....... x..x....   .....x.. ........ ........ ........ 
                  : ........ ......x. ...x.... ....x...   ........ ........ ........ ......x. 
                  : .......x ........ ........ ........   ...x.... ..x..... .xx..... ........ 
@@ -8952,7 +8952,7 @@ Class            : Rogue, Druid
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
-Mechanic         : Unknown(28)
+Mechanic         : Discover
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -8971,7 +8971,7 @@ Class            : Druid
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
-Mechanic         : Unknown(28)
+Mechanic         : Discover
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -9797,7 +9797,7 @@ Spell Type       : None
 Spell Level      : 22
 Range            : 100 yards
 Duration         : 4 seconds
-Mechanic         : Unknown(26)
+Mechanic         : Interrupt
 Affecting spells : Clearcasting (16870 effect#1), Brutal Impact (16940 effect#3), Brutal Impact (16941 effect#3), Berserk (50334 effect#1), Skull Bash Cost Reduction (61252 effect#1)
 Family Flags     : 92
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
@@ -9811,7 +9811,7 @@ Attributes       : ....x... ........ ..x..... ........   ........ ........ .....
                  : Is Ability (4), Do Not Sheath (18), Do Not Display Range (126), Not In Spellbook (143), Taps immediately (215), No Attack Miss (249)
 Effects          :
 #1 (id=98665)    : Interrupt Cast (68)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(26) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Interrupt | Target: Enemy (6)
 Description      : You charge and skull bash the target, interrupting spellcasting and preventing any spell in that school from being cast for $93985d.
 
 Name             : Enable Worgen Altered Form (desc=Racial Passive) (id=94293) [Passive, Hidden] 
@@ -10067,7 +10067,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), No Aura Icon (60), Allow While Not Shapeshifted (caster form) (83), Not an Action (92), Always Hit (114), Do Not Display Range (126), Not an Attack (194), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=104140)   : Interrupt Cast (68) | Scaling Class: 11
-                   Base Value: 0 | Scaled Value: 93.72951 (coefficient=0.095) | PvP Coefficient: 1.00000 | Mechanic: Unknown(26) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 93.72951 (coefficient=0.095) | PvP Coefficient: 1.00000 | Mechanic: Interrupt | Target: Enemy (6)
 Description      : You summon a beam of solar light over the enemy target's location, interupting the enemy target and silencing all enemy targets under the beam while it is active. Solar Beam lasts for $81261d.
 Tooltip          : Interrupted.
 

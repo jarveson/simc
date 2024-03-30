@@ -115,7 +115,7 @@ Spell Level      : 40
 Range            : 5 yards
 Duration         : 3 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(12)
+Mechanic         : Stun
 Triggered by     : Intimidation (19577)
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -868,7 +868,7 @@ Range            : 5 yards
 Duration         : 3 seconds
 Cooldown         : 60 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(16)
+Mechanic         : Heal
 Affecting spells : Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Longevity (53262 effect#1), Longevity (53263 effect#1), Longevity (53264 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1)
 Family Flags     : 60
 Attributes       : ....x... ........ x.x..... ........   ........ ........ ........ ........ 

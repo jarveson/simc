@@ -43,7 +43,7 @@ Cooldown         : 20 seconds
 Category         : 270
 Category Cooldown: 20 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(12)
+Mechanic         : Stun
 Affecting spells : Murderous Intent (14158 effect#1), Murderous Intent (14159 effect#1), Relentless Strikes (14179 effect#1), Perceived Weakness (37174 effect#1), Rogue Tier 6 Trinket (40460 effect#1), Armor Penetration 140 (42098 effect#1), Thick Skin (43823 effect#1), Relentless Strikes (58422 effect#1), Relentless Strikes (58423 effect#1), Vendetta (79140 effect#1), Hemorrhage (89775 effect#1), Fury of the Destroyer (109949 effect#2)
 Family Flags     : 21
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ..x...x. ...x.... 
@@ -97,7 +97,7 @@ Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 18 seconds
 Stance Mask      : 0x20000000
-Mechanic         : Unknown(15)
+Mechanic         : Bleed
 Affecting spells : Initiative (13976 effect#1), Initiative (13979 effect#1), Opportunity (14057 effect#2), Opportunity (14072 effect#2), Murderous Intent (14158 effect#1), Murderous Intent (14159 effect#1), Shadowstep (36554 effect#2), Shadowstep (36563 effect#3), Find Weakness (51632 effect#1), Cut to the Chase (51664 effect#1), Cut to the Chase (51665 effect#1), Cut to the Chase (51667 effect#1), Shadow Dance (51713 effect#1), Deadly Momentum (79121 effect#1), Deadly Momentum (79122 effect#1), Vendetta (79140 effect#1), Opportunity (79141 effect#2), Deadly Momentum (84590 effect#1), Hemorrhage (89775 effect#1), Find Weakness (91023 effect#1)
 Family Flags     : 8
 Attributes       : ....x... ........ xxx..x.. ........   ........ .x...... ........ ...x.... 
@@ -111,7 +111,7 @@ Attributes       : ....x... ........ xxx..x.. ........   ........ .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Only Stealthed (17), Do Not Sheath (18), No Active Defense (21), Initiates Combat (Enables Auto-Attack) (41), Discount Power On Miss (59), Initiate Combat Post-Cast (Enables Auto-Attack) (84), Taps immediately (215), Aura Points On Client (268)
 Effects          :
 #1 (id=679355)   : Apply Aura (6) | Periodic Damage (3): physical every 3 seconds | Scaling Class: 4
-                   Base Value: 20 | Scaled Value: 132.7768 (coefficient=0.118) | PvP Coefficient: 1.00000 | Mechanic: Unknown(15) | Target: Enemy (6)
+                   Base Value: 20 | Scaled Value: 132.7768 (coefficient=0.118) | PvP Coefficient: 1.00000 | Mechanic: Bleed | Target: Enemy (6)
 #2 (id=679356)   : Add Combo Points (328) | Scaling Class: 4
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=282)      : Trigger Spell (64): Garrote - Silence | Scaling Class: 4
@@ -160,7 +160,7 @@ Spell Type       : None
 Spell Level      : 60
 Range            : 50000 yards
 Duration         : 3 seconds
-Mechanic         : Unknown(9)
+Mechanic         : Silence
 Affecting spells : Glyph of Garrote (56812 effect#1)
 Triggered by     : Garrote (703)
 Family Flags     : 61
@@ -175,7 +175,7 @@ Attributes       : ....x... ........ ..x..... ........   ........ ........ .....
                  : Is Ability (4), Do Not Sheath (18), Ignore Line of Sight (66)
 Effects          :
 #1 (id=679994)   : Apply Aura (6) | Silence (27)
-                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Mechanic: Unknown(9) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Mechanic: Silence | Target: Enemy (6)
 Description      : Silences an enemy for $d.
 Tooltip          : Silenced.
 
@@ -190,7 +190,7 @@ GCD              : 1 seconds
 Cooldown         : 30 seconds
 Category         : 22
 Category Cooldown: 30 seconds
-Mechanic         : Unknown(4)
+Mechanic         : Distract
 Affecting spells : Glyph of Distract (58032 effect#1)
 Family Flags     : 12
 Attributes       : ....x... ........ ..x..... ......x.   .....x.. x.x..... .x...... ........ 
@@ -261,7 +261,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Discount Power On Miss (59), Taps immediately (215), No Attack Miss (249)
 Effects          :
 #1 (id=679719)   : Interrupt Cast (68)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(26) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Interrupt | Target: Enemy (6)
 Description      : A quick kick that interrupts spellcasting and prevents any spell in that school from being cast for $d.
 
 Name             : Gouge (id=1776) [Spell Family (8)] 
@@ -298,7 +298,7 @@ Effects          :
 #2 (id=679726)   : Add Combo Points (328) | Scaling Class: 4
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=679727)   : Apply Aura (6) | Stun (12) | Scaling Class: 4
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(14) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Incapacitate | Target: Enemy (6)
 Description      : Causes $s1 damage, incapacitating the opponent for $d, and turns off your attack.$?s56809[][  Target must be facing you.]  Any damage caused will revive the target.  Awards $s2 combo $lpoint:points;.
 Tooltip          : Incapacitated.
 
@@ -369,7 +369,7 @@ Duration         : 4 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Proc Chance      : 101%
 Stance Mask      : 0x20000000
-Mechanic         : Unknown(12)
+Mechanic         : Stun
 Affecting spells : Initiative (13976 effect#1), Initiative (13979 effect#1), Murderous Intent (14158 effect#1), Murderous Intent (14159 effect#1), Shadow Dance (51713 effects: #1, #2), Vendetta (79140 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 10
 Attributes       : ....x... ........ xxx..x.. ........   ........ ........ ..x..... ...x.... 
@@ -478,7 +478,7 @@ Range            : 5 yards
 GCD              : 1 seconds
 Duration         : 6 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
-Mechanic         : Unknown(15)
+Mechanic         : Bleed
 Affecting spells : Murderous Intent (14158 effect#1), Murderous Intent (14159 effect#1), Serrated Blades (14171 effect#1), Serrated Blades (14172 effect#1), Relentless Strikes (14179 effect#1), Perceived Weakness (37174 effect#1), Rogue Tier 6 Trinket (40460 effect#1), Armor Penetration 140 (42098 effect#1), Thick Skin (43823 effect#1), Find Weakness (51632 effect#1), Cut to the Chase (51664 effect#1), Cut to the Chase (51665 effect#1), Cut to the Chase (51667 effect#1), Glyph of Rupture (56801 effect#1), Relentless Strikes (58422 effect#1), Relentless Strikes (58423 effect#1), Executioner (76808 effects: #1, #2), Deadly Momentum (79121 effect#1), Deadly Momentum (79122 effect#1), Vendetta (79140 effect#1), Deadly Momentum (84590 effect#1), Hemorrhage (89775 effect#1), Find Weakness (91023 effect#1), Fury of the Destroyer (109949 effect#2)
 Family Flags     : 20
 Attributes       : ....x... ........ x.x..... ........   ........ .x...... ....x... ...x.... 
@@ -492,7 +492,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... ....x
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Finishing Move - Damage (52), Discount Power On Miss (59), Requires Main-Hand Weapon (106), No Helpful Threat (131), Taps immediately (215), Periodic Can Crit (265), Aura Points On Client (268)
 Effects          :
 #1 (id=681139)   : Apply Aura (6) | Periodic Damage (3): physical every 2 seconds | Scaling Class: 4
-                   Base Value: 8 | Scaled Value: 141.7787 (coefficient=0.126) | Bonus Value: 20.25409 (0.018) | PvP Coefficient: 1.00000 | Mechanic: Unknown(15) | Target: Enemy (6)
+                   Base Value: 8 | Scaled Value: 141.7787 (coefficient=0.126) | Bonus Value: 20.25409 (0.018) | PvP Coefficient: 1.00000 | Mechanic: Bleed | Target: Enemy (6)
 Description      : Finishing move that causes damage over time, increased by your attack power.  Lasts longer per combo point:
    1 point  : ${($m1+$b1*$<bonus>*1+0.015*$AP*$<bonus>)*0.5*$<dur1>} damage over $<dur1> seconds
    2 points: ${($m1+$b1*$<bonus>*2+0.024*$AP*$<bonus>)*0.5*$<dur2>} damage over $<dur2> seconds
@@ -553,7 +553,7 @@ Cooldown         : 180 seconds
 Category         : 1187
 Category Cooldown: 20 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(2)
+Mechanic         : Disorient
 Affecting spells : Elusiveness (13981 effect#1), Elusiveness (14066 effect#1)
 Family Flags     : 24
 Attributes       : ....x... ........ x...x... ......x.   ........ ..x..... ........ ........ 
@@ -850,7 +850,7 @@ Duration         : 60 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Proc Chance      : 100%
 Stance Mask      : 0x20000000
-Mechanic         : Unknown(30)
+Mechanic         : Sap
 Affecting spells : Murderous Intent (14158 effect#1), Murderous Intent (14159 effect#1), Shadow Dance (51713 effect#1), Glyph of Sap (56798 effect#1), Vendetta (79140 effect#1), Hemorrhage (89775 effect#1)
 Family Flags     : 7
 Attributes       : ....x... ........ xxx.xx.. ........   .....x.. x.x..... ..x..... ...x.... 
@@ -2394,7 +2394,7 @@ Resource         : 0 Energy (3) (id=183378)
 Range            : 50000 yards
 Duration         : 1.5 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(9)
+Mechanic         : Silence
 Triggered by     : Improved Kick (13754)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -2522,7 +2522,7 @@ School           : Arcane
 Spell Type       : Magic
 Duration         : 2 seconds
 Cooldown         : 120 seconds
-Mechanic         : Unknown(9)
+Mechanic         : Silence
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -2566,7 +2566,7 @@ Effects          :
 #1 (id=846486)   : Weapon Damage (58) | Scaling Class: 4
                    Base Value: 58 | Scaled Value: 160.9075 (coefficient=0.143) | Bonus Value: 249.8005 (0.222) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=846487)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 4
-                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Unknown(11) | Target: Enemy (6)
+                   Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 Description      : Finishing move that reduces the movement of the target by $s2% for $d and causes increased thrown weapon damage:
    1 point  : ${$m1+($b1*$<mult>*1)+($rw*$<mult>)} - ${$M1+($b1*$<mult>*1)+($RW*$<mult>)} damage
    2 points: ${$m1+($b1*$<mult>*2)+($rw*$<mult>)} - ${$M1+($b1*$<mult>*2)+($RW*$<mult>)} damage
@@ -2653,7 +2653,7 @@ School           : Physical
 Spell Type       : None
 Spell Level      : 1
 Duration         : 4 seconds
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Triggered by     : Blade Twisting (31124)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ .x...... ........ 
@@ -3055,7 +3055,7 @@ Spell Type       : None
 Spell Level      : 10
 Range            : 100 yards
 Duration         : 3 seconds
-Mechanic         : Unknown(26)
+Mechanic         : Interrupt
 Attributes       : ........ ........ .......x ........   ...x...x ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3096,7 +3096,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Triggered by     : Combat Potency (35541)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3117,7 +3117,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Triggered by     : Combat Potency (35550)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3138,7 +3138,7 @@ Class            : Rogue
 School           : Physical
 Spell Type       : None
 Spell Level      : 1
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Triggered by     : Combat Potency (35551)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -3326,7 +3326,7 @@ Spell Type       : None
 Spell Level      : 1
 Duration         : 8 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Triggered by     : Blade Twisting (31126)
 Attributes       : ....x... ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ .x...... ........ 
@@ -3544,7 +3544,7 @@ Attributes       : ....x... ........ ........ ........   ........ ........ .....
                  : Is Ability (4), Ignore Line of Sight (66), Suppress Target Procs (113)
 Effects          :
 #1 (id=956291)   : Interrupt Cast (68)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Unknown(26) | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Interrupt | Target: Enemy (6)
 Description      : Increases the range of Throw and Deadly Throw and gives your Deadly Throw a chance to interrupt the target for $51680d.
 
 Name             : Savage Combat (desc=Rank 1) (id=51682) [Spell Family (8), Passive, Hidden] 
@@ -3631,7 +3631,7 @@ School           : Physical
 Spell Type       : None
 Duration         : 8 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(11)
+Mechanic         : Snare
 Triggered by     : Waylay (51692), Waylay (51696)
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ .x...... ........ 
@@ -3901,7 +3901,7 @@ GCD              : 1 seconds
 Duration         : 10 seconds
 Cooldown         : 60 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(3)
+Mechanic         : Disarm
 Family Flags     : 52
 Attributes       : ....x... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6511,7 +6511,7 @@ Class            : Rogue, Druid
 School           : Physical
 Spell Type       : None
 Cast Time        : 12.5 seconds
-Mechanic         : Unknown(28)
+Mechanic         : Discover
 Attributes       : .....x.. ........ x....... ........   ........ ..x..... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6815,7 +6815,7 @@ Spell Type       : None
 Range            : 50000 yards
 Duration         : 3 seconds
 Proc Chance      : 101%
-Mechanic         : Unknown(9)
+Mechanic         : Silence
 Triggered by     : Improved Kick (13867)
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ..x..... ........ ........ ........   ........ ........ ........ ........ 
@@ -6949,7 +6949,7 @@ Attributes       : ........ ........ ........ ........   .....x.. ........ .....
                  : Allow While Stealthed (37), DoT Stacking Rule (103), Always Hit (114), Ignore Caster Damage Modifiers (221), Aura Points On Client (268), Ignore Positive Damage Taken Modifiers (321)
 Effects          :
 #1 (id=92690)    : Apply Aura (6) | Periodic Damage (3): physical every 3 seconds
-                   Base Value: 3 | Scaled Value: 3 | PvP Coefficient: 1.00000 | Mechanic: Unknown(15) | Target: Enemy (6)
+                   Base Value: 3 | Scaled Value: 3 | PvP Coefficient: 1.00000 | Mechanic: Bleed | Target: Enemy (6)
                    Affected Spells: Backstab (53), Kidney Shot (408), Garrote (703), Sinister Strike (1752), Kick (1766), Gouge (1776), Stealth (1784), Cheap Shot (1833), Rupture (1943), Eviscerate (2098), Deadly Poison (2818), Deadly Poison (2823), Sprint (2983), Crippling Poison (3408), Crippling Poison (3409), Slice and Dice (5171), Evasion (5277), Mutilate (5374), Mind-numbing Poison (5760), Mind-numbing Poison (5761), Sap (6770), Expose Armor (8647), Ambush (8676), Instant Poison (8679), Instant Poison (8680), Wound Poison (13218), Wound Poison (13219), Venomhide Poison (14795), Juju Escape (16321), Hemorrhage (16511), Deadly Throw (26679), Mutilate Off-Hand (27576), Spore Cloud (32643), Envenom (32645), Fan of Knives (51723), Venomous Wound (79136), Revealing Strike (84617)
                    Family Flags: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 25, 28, 32, 33, 34, 35, 36, 50
 Description      : Your Hemorrhage ability also causes the target to bleed, dealing $56807s1% of the direct strike's damage over $89775d.
