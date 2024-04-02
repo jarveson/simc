@@ -2270,7 +2270,8 @@ struct ferocious_bite_t : public cat_finisher_t
   {
     add_option( opt_bool( "max_energy", max_energy ) );
 
-    max_excess_energy = modified_effectN( find_effect_index( this, E_DUMMY ) );
+    // tooltips broke yo
+    max_excess_energy = 25.0;//modified_effectN( find_effect_index( this, E_DUMMY ) );
     base_dmg_per_pnt  = data().effectN( 1 ).bonus( p );
   }
 
@@ -6045,7 +6046,7 @@ public:
        << "<th colspan=\"2\">None</th><th colspan=\"2\">Solar</th><th colspan=\"2\">Lunar</th><th colspan=\"2\">Both</th>\n"
        << "</tr></thead>\n";
 
-    /* balance_print_data( os, p.find_class_spell( "Wrath" ), *p.eclipse_handler.data.wrath );
+    /* balance_print_data( os, p.find_class_spell( "Wrath" ), *p.eclipse_handler.`wrath );
     //balance_print_data( os, p.talent.starfire, *p.eclipse_handler.data.starfire );
     //balance_print_data( os, p.talent.starsurge, *p.eclipse_handler.data.starsurge );
     //balance_print_data( os, p.talent.starfall, *p.eclipse_handler.data.starfall );
