@@ -1885,15 +1885,23 @@ void item_t::decode_gems()
     // DBC data
     //
     // Detect meta gem through DBC data, instead of clunky prefix matching
-    const item_enchantment_data_t& meta_gem_enchant = enchant::find_meta_gem( *player -> dbc, option_gems_str );
+    const auto [meta_gem_enchant, pos] = enchant::find_meta_gem( *player -> dbc, option_gems_str );
     meta_gem_e meta_gem = enchant::meta_gem_type( *player -> dbc, meta_gem_enchant );
+
+    std::string stat_gems_part = option_gems_str;
 
     if ( meta_gem != META_GEM_NONE )
     {
       player -> meta_gem = meta_gem;
+      stat_gems_part     = option_gems_str.substr( pos );
+      if ( !stat_gems_part.empty() && stat_gems_part[ 0 ] == '_' )
+      {
+        stat_gems_part = stat_gems_part.substr( 1 );
+      }
+
     }
 
-    auto tokens = item_database::parse_tokens( option_gems_str );
+    auto tokens = item_database::parse_tokens( stat_gems_part );
 
     for ( auto& t : tokens )
     {

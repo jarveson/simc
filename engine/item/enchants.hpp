@@ -12,6 +12,7 @@
 #include "util/string_view.hpp"
 
 #include <string>
+#include <tuple>
 #include <vector>
 
 class dbc_t;
@@ -25,7 +26,7 @@ namespace enchant
 std::string encoded_enchant_name( const dbc_t&, const item_enchantment_data_t& );
 
 const item_enchantment_data_t& find_item_enchant( const item_t& item, util::string_view name );
-const item_enchantment_data_t& find_meta_gem( const dbc_t& dbc, util::string_view encoding );
+std::tuple<const item_enchantment_data_t&, size_t> find_meta_gem( const dbc_t& dbc, util::string_view encoding );
 const item_enchantment_data_t& find_meta_gem( const dbc_t& dbc, unsigned gem_id );
 meta_gem_e meta_gem_type( const dbc_t& dbc, const item_enchantment_data_t& );
 meta_gem_e meta_gem_type( const dbc_t& dbc, unsigned gem_id );

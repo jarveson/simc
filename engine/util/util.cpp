@@ -383,6 +383,11 @@ bool util::str_in_str_ci( util::string_view l,
   return std::search( l.begin(), l.end(), r.begin(), r.end(), pred_ci ) != l.end();
 }
 
+size_t util::str_in_str_ci_pos( util::string_view l, util::string_view r )
+{
+  return std::distance( l.begin(), std::search( l.begin(), l.end(), r.begin(), r.end(), pred_ci ) );
+}
+
 // dot_behavior_type_string =================================================
 
 const char* util::dot_behavior_type_string( dot_behavior_e t )

@@ -217,6 +217,7 @@ std::string create_blizzard_talent_url( const player_t& p );
 bool str_compare_ci( util::string_view l, util::string_view r );
 bool str_in_str_ci ( util::string_view l, util::string_view r );
 bool str_prefix_ci ( util::string_view str, util::string_view prefix );
+size_t str_in_str_ci_pos( util::string_view l, util::string_view r );
 
 double floor( double arg, unsigned int decplaces = 0 );
 double ceil( double arg, unsigned int decplaces = 0 );

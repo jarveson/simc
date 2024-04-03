@@ -281,7 +281,7 @@ bool enchant::passive_enchant( item_t& item, unsigned spell_id )
  * (capacitive_primal_diamond), and the "short" form of the tokenized name
  * (capacitive_primal).
  */
-const item_enchantment_data_t& enchant::find_meta_gem( const dbc_t& dbc, util::string_view encoding )
+std::tuple<const item_enchantment_data_t&, size_t> enchant::find_meta_gem( const dbc_t& dbc, util::string_view encoding )
 {
   for ( const auto& gem_property : gem_property_data_t::data( dbc.ptr ) )
   {
@@ -310,14 +310,17 @@ const item_enchantment_data_t& enchant::find_meta_gem( const dbc_t& dbc, util::s
     if ( offset != std::string::npos )
       shortname = util::string_view( tokenized_name ).substr( 0, offset );
 
-    if ( util::str_in_str_ci( encoding, tokenized_name ) ||
-         ( !shortname.empty() && util::str_in_str_ci( encoding, shortname ) ) )
+    if ( util::str_in_str_ci( encoding, tokenized_name ) )
     {
-      return data;
+      return { data, util::str_in_str_ci_pos( encoding, tokenized_name ) + tokenized_name.length() };
+    }
+    else if ( !shortname.empty() && util::str_in_str_ci( encoding, shortname ) )
+    {
+      return { data, util::str_in_str_ci_pos( encoding, shortname ) + shortname.length() };
     }
   }
 
-  return dbc.item_enchantment( 0 );
+  return { dbc.item_enchantment( 0 ), util::string_view::npos };
 }
 
 
