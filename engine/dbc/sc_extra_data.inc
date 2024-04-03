@@ -20,12 +20,12 @@ static int __gt_item_scaling[120] =
 
 static constexpr double __gt_chance_to_dodge_base[] = {
          0.0,      // None
-         0.03664,  // Warrior
-         0.034943,  // Paladin
+         0.05,  // Warrior
+         0.05,  // Paladin
         -0.040873,   // Hunter
          0.020957,   // Rogue
          0.0301, // Priest
-         0.03664,  // DK
+         0.05,  // DK
          0.021080,  // Shaman
          0.036587, // Mage
          0.024211,  // Warlock
@@ -1199,7 +1199,7 @@ static double _gt_resolve_dps_by_level[120] =
 // To calculate these values you need to use the in-game GetParryChance() or GetDodgeChance()
 // Take the naked base primary stat for the level and divide that by what
 // was returned from either GetParryChance() for Strength users or GetDodgeChance() for
-// Agility users; minus 3 for the base dodge or parry. As an example at level 29
+// Agility users; minus the base dodge or parry. As an example at level 29
 // my base Agility on a monk is 85. Naked GetDodgeChance() returns 6.256046295166. I subtract 3 for 
 // the base dodge from the result, or 3.256046295166. I then divide that by the base Agility
 // 85 / 3.256046295166 = 26.10527993

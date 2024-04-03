@@ -1574,10 +1574,9 @@ void player_t::init_base_stats()
     base.health_per_stamina = dbc->health_per_stamina( level() );
     base.mana_per_intellect = dbc->mana_per_intellect_by_class( type );
 
-    // players have a base 7.5% hit/exp
-    //base.hit       = 0.075;
-    //base.expertise = 0.075;
-
+    //base.hit = 0.0;
+    //base.expertise = 0.0;
+    
     if ( base.distance < 1 )
       base.distance = 5;
 
@@ -1598,9 +1597,11 @@ void player_t::init_base_stats()
   base.dodge_per_agility =
         dbc->avoid_per_agi_by_class( type, level() ); 
 
-  // All classes get 3% dodge and miss
-  base.dodge = 0.03;
-  base.miss = 0.03;
+  base.dodge = dbc->dodge_base(type);
+  // assume 5 for mobs ( is this 5% now for all? )
+  if (base.dodge == 0)
+      base.dodge = 0.05;
+  base.miss = 0.05;
 
   // Only Warriors and Paladins (and enemies) can block, defaults to 0
   if ( type == WARRIOR || type == PALADIN || type == ENEMY || type == TANK_DUMMY )
@@ -1622,16 +1623,15 @@ void player_t::init_base_stats()
     }
   }
 
-  // Only certain classes can parry, and get 3% base parry, default is 0
-  // Parry from base strength isn't affected by diminishing returns and is added here
-  if ( type == WARRIOR || type == PALADIN || type == ROGUE || type == DEATH_KNIGHT || type == MONK ||
-       type == DEMON_HUNTER || specialization() == SHAMAN_ENHANCEMENT  )
+  if ( type == WARRIOR || type == PALADIN || type == DEATH_KNIGHT )
   {
-    base.parry = 0.03 + ( dbc->race_base( race ).strength + dbc->attribute_base( type, level() ).strength ) * base.parry_per_strength;
+      base.parry_per_strength = 0.27;
   }
-  else if ( type == ENEMY || type == TANK_DUMMY )
+
+  if ( type == WARRIOR || type == PALADIN || type == ROGUE || type == DEATH_KNIGHT || type == MONK ||
+       type == DEMON_HUNTER || specialization() == SHAMAN_ENHANCEMENT || type == ENEMY || type == TANK_DUMMY )
   {
-    base.parry = 0.03;
+      base.parry = 0.05;
   }
 
   // Extract avoidance DR values from table in sc_extra_data.inc
