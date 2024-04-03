@@ -1589,6 +1589,43 @@ void print_html_stats( report::sc_html_stream& os, const player_t& p )
           p.composite_total_spell_power( SCHOOL_MAX ),
           p.initial.stats.spell_power );
     }
+    if ( p.composite_melee_hit() == p.composite_spell_hit() )
+    {
+      os.printf(
+          "<tr>\n"
+          "<th class=\"left\">Hit</th>\n"
+          "<td class=\"right\"></td>\n"
+          "<td class=\"right\"></td>\n"
+          "<td class=\"right\">%.2f%%</td>\n"
+          "<td class=\"right\">%.2f%%</td>\n"
+          "<td class=\"right\">%.0f</td>\n"
+          "</tr>\n",
+          100 * buffed_stats.attack_hit, 100 * p.composite_melee_hit(),
+          p.composite_melee_hit_rating() );
+    }
+    else
+    {
+      os.printf(
+          "<tr>\n"
+          "<th class=\"left\">Melee Hit</th>\n"
+          "<td class=\"right\"></td>\n"
+          "<td class=\"right\"></td>\n"
+          "<td class=\"right\">%.2f%%</td>\n"
+          "<td class=\"right\">%.2f%%</td>\n"
+          "<td class=\"right\">%.0f</td>\n"
+          "</tr>\n",
+          100 * buffed_stats.attack_hit, 100 * p.composite_melee_hit(), p.composite_melee_hit_rating() );
+      os.printf(
+          "<tr>\n"
+          "<th class=\"left\">Spell Hit</th>\n"
+          "<td class=\"right\"></td>\n"
+          "<td class=\"right\"></td>\n"
+          "<td class=\"right\">%.2f%%</td>\n"
+          "<td class=\"right\">%.2f%%</td>\n"
+          "<td class=\"right\">%.0f</td>\n"
+          "</tr>\n",
+          100 * buffed_stats.spell_hit, 100 * p.composite_spell_hit(), p.composite_spell_hit_rating() );
+    }
     if ( p.composite_melee_crit_chance() == p.composite_spell_crit_chance() )
     {
       os.printf(
@@ -1770,7 +1807,7 @@ void print_html_stats( report::sc_html_stream& os, const player_t& p )
         "</tr>\n",
         100.0 * buffed_stats.mastery_value, 100.0 * p.cache.mastery_value(),
         p.composite_mastery_rating() );
-    if ( buffed_stats.mh_attack_expertise > 7.5 )
+    if ( buffed_stats.mh_attack_expertise > 0.0 )
     {
       if ( p.dual_wield() )
       {
@@ -4102,6 +4139,19 @@ void print_html_player_results_spec_gear( report::sc_html_stream& os, const play
 
     // Talent Hash
     os.format( "<tr class=\"left\"><th>Talent</th><td>{}</td></tr>\n", p.talents_str );
+
+    // Glyphs
+    if ( p.player_glyphs.size() )
+    {
+      os << "<tr class=\"left\"><th>Glyphs</th><td><ul class=\"float\">\n";
+
+      for ( const auto& g : p.player_glyphs )
+      {
+        os.format( "<li class=\"nowrap\">{}</li>\n",
+                   report_decorators::decorated_spell_data( sim, p.find_spell( g ) ));
+      }
+      os << "</ul></td></tr>\n";
+    }
 
     // Set Bonuses
     if ( p.sets )

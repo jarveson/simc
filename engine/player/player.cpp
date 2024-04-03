@@ -4562,7 +4562,7 @@ double player_t::composite_melee_expertise( const weapon_t* w) const
 {
   double e = current.expertise;
 
-  e += composite_expertise_rating() / current.rating.expertise;
+  e += ( composite_expertise_rating() / current.rating.expertise ) * 0.25;
 
   if (w) {
       if (race == RACE_ORC) {
