@@ -320,9 +320,7 @@ std::string item_t::reforge_stats_str() const
   std::ostringstream ss;
   for ( const auto& s : parsed.reforge_stats )
   {
-    if ( s.value < 0 )
-      ss << "-";
-    else
+    if ( s.value > 0 )
       ss << "+";
 
     ss << s.value << " " << util::stat_type_abbrev( s.stat );

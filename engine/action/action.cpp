@@ -390,7 +390,7 @@ action_t::action_t( action_e ty, util::string_view token, player_t* p, const spe
     normalize_weapon_speed(),
     ground_aoe(),
     round_base_dmg( true ),
-    dynamic_tick_action( true ),  // WoD updates everything on tick by default. If you need snapshotted values for a
+    dynamic_tick_action( false ),  // WoD updates everything on tick by default. If you need snapshotted values for a
                                   // periodic effect, use persistent multipliers.
     track_cd_waste(),
     cd_waste_data(),
@@ -2630,7 +2630,7 @@ void action_t::init()
 
   // WOD: Yank out persistent multiplier from update flags, so they get
   // snapshot once at the application of the spell
-  update_flags &= ~STATE_MUL_PERSISTENT;
+  //update_flags &= ~STATE_MUL_PERSISTENT;
 
   // The Rolling Periodic multiplier is only updated when the DoT is applied or refreshed
   update_flags &= ~STATE_ROLLING_TA;

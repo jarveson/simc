@@ -1240,32 +1240,17 @@ double dbc_t::health_base( player_e t, unsigned level ) const
 double dbc_t::ranged_ap_per_agi( player_e t ) const
 {
   uint32_t class_id   = util::class_id( t );
-  auto ap = ap_per_stat_t::find( t );
-  if ( ap.size() )
-  {
-    return ap[ 0 ].ranged_attack_power_per_agility;
-  }
-  return 0;
+  return ap_per_stat_t::find( t ).ranged_attack_power_per_agility;
 }
 double dbc_t::ap_per_agi( player_e t ) const
 {
   uint32_t class_id = util::class_id( t );
-  auto ap           = ap_per_stat_t::find( t );
-  if ( ap.size() )
-  {
-    return ap[ 0 ].attack_power_per_agility;
-  }
-  return 0;
+  return ap_per_stat_t::find( t ).attack_power_per_agility;
 }
 double dbc_t::ap_per_str( player_e t ) const
 {
   uint32_t class_id = util::class_id( t );
-  auto ap           = ap_per_stat_t::find( t );
-  if ( ap.size() )
-  {
-    return ap[ 0 ].attack_power_per_strength;
-  }
-  return 0;
+  return ap_per_stat_t::find( t ).attack_power_per_strength;
 }
 
 double dbc_t::resource_base( player_e t, unsigned level ) const
