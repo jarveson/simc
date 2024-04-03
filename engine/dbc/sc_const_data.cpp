@@ -1039,7 +1039,7 @@ double dbc_t::dodge_base( pet_e t ) const
 
   assert( class_id < dbc_t::class_max_size() );
 
-  return _chancetomeleecritbase[ t ][ 0 ];
+  return _chancetomeleecritbase[ class_id ][ 0 ];
  }
 
 double dbc_t::spell_crit_base( player_e t, unsigned lvl ) const
@@ -1048,7 +1048,7 @@ double dbc_t::spell_crit_base( player_e t, unsigned lvl ) const
 
   assert( class_id < dbc_t::class_max_size() );
 
-  return _chancetospellcritbase[ t ][ 0 ];
+  return _chancetospellcritbase[ class_id ][ 0 ];
 }
 
 const stat_data_t& dbc_t::race_base( race_e r ) const
@@ -1240,17 +1240,17 @@ double dbc_t::health_base( player_e t, unsigned level ) const
 double dbc_t::ranged_ap_per_agi( player_e t ) const
 {
   uint32_t class_id   = util::class_id( t );
-  return ap_per_stat_t::find( t ).ranged_attack_power_per_agility;
+  return ap_per_stat_t::find( class_id ).ranged_attack_power_per_agility;
 }
 double dbc_t::ap_per_agi( player_e t ) const
 {
   uint32_t class_id = util::class_id( t );
-  return ap_per_stat_t::find( t ).attack_power_per_agility;
+  return ap_per_stat_t::find( class_id ).attack_power_per_agility;
 }
 double dbc_t::ap_per_str( player_e t ) const
 {
   uint32_t class_id = util::class_id( t );
-  return ap_per_stat_t::find( t ).attack_power_per_strength;
+  return ap_per_stat_t::find( class_id ).attack_power_per_strength;
 }
 
 double dbc_t::resource_base( player_e t, unsigned level ) const
