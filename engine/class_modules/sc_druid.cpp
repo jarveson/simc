@@ -720,7 +720,6 @@ public:
   void datacollection_end() override;
   timespan_t available() const override;
   double composite_attack_power_multiplier() const override;
-  double composite_melee_attack_power() const override;
   double composite_player_multiplier(school_e school) const override;
   double composite_armor_multiplier() const override;
   double composite_melee_crit_chance() const override;
@@ -5574,8 +5573,6 @@ double druid_t::composite_melee_crit_chance() const
 double druid_t::composite_spell_crit_chance() const
 {
   double scc = player_t::composite_spell_crit_chance();
-  if ( buff.cat_form->check() )
-    scc += talent.master_shapeshifter->effectN( 1 ).percent();
   scc += talent.natures_majesty->effectN(1).percent();
   return scc;
 }
