@@ -2036,101 +2036,76 @@ std::string raidbots_talent_render_src( std::string_view talent_str, unsigned le
 
 void print_html_talents( report::sc_html_stream& os, const player_t& p )
 {
-  if ( !p.collected_data.fight_length.mean() || p.player_traits.empty() )
+  if ( !p.collected_data.fight_length.mean() || !p.talent_points || p.type > WARRIOR)
     return;
-
-  static constexpr unsigned TREE_ROWS = 10;
-  using talentrank_t = std::pair<const trait_data_t*, unsigned>;
-
-  std::array<std::vector<talentrank_t>, TREE_ROWS> class_traits;
-  std::array<std::vector<talentrank_t>, TREE_ROWS> spec_traits;
-  size_t class_points = 0;
-  size_t spec_points = 0;
-
-  for ( auto t : p.player_traits )
-  {
-    std::array<std::vector<talentrank_t>, TREE_ROWS>* tree;
-    auto trait = trait_data_t::find( std::get<1>( t ), maybe_ptr( p.dbc->ptr ) );
-    auto rank = std::get<2>( t );
-
-    switch ( std::get<0>( t ) )
-    {
-      case talent_tree::CLASS:          tree = &class_traits; class_points += rank; break;
-      case talent_tree::SPECIALIZATION: tree = &spec_traits;  spec_points += rank;  break;
-      default: continue;
-    }
-
-    tree->at( trait->row - 1 ).emplace_back( trait, rank );
-  }
-
-  for ( auto &row : class_traits )
-    range::sort( row, []( talentrank_t a, talentrank_t b ) { return a.first->col < b.first->col; } );
-
-  for ( auto &row : spec_traits )
-    range::sort( row, []( talentrank_t a, talentrank_t b ) { return a.first->col < b.first->col; } );
 
   os << "<div class=\"player-section talents\">\n"
      << "<h3 class=\"toggle\">Talents</h3>\n"
      << "<div class=\"toggle-content hide\">\n";
 
-  auto num_players = p.sim->players_by_name.size();
-  if ( num_players == 1 )
+  using talentrank_t = std::pair<const talent_data_t*, unsigned>;
+  std::array<size_t, 3> tab_pts{};
+  std::array<std::array<std::vector<talentrank_t>, MAX_TALENT_ROWS>, MAX_TALENT_TREES> tree;
+
+  std::map<int, const talent_tab_data_t*> tabs;
+  auto tab_data = talent_tab_data_t::data();
+
+  for ( const auto& td : tab_data )
   {
-    auto w_ = raidbots_talent_render_width( p.specialization(), 600 );
-    os.format( "<iframe src=\"{}\" width=\"{}\" height=\"650\"></iframe>\n",
-               raidbots_talent_render_src( p.talents_str, p.true_level, w_, false, p.dbc->ptr ), w_ );
-
-    // Hide the talent table only if the Raidbots talent iframe is present.
-    os << "<h3 class=\"toggle\">Talent Tables</h3>\n"
-       << "<div class=\"toggle-content hide\">\n";
-  }
-
-  os.format( "<table class=\"sc\"><tr><th>Row</th><th>{} Talents [{}]</th></tr>\n",
-             util::player_type_string_long( p.type ),
-             class_points );
-
-  for ( uint32_t row = 0; row < TREE_ROWS; row++ )
-  {
-    os.format( "<tr><th class=\"left\">{}</th><td><ul class=\"float\">\n", row + 1 );
-
-    for ( auto entry : class_traits[ row ] )
+    if ( td.is_class( p.type ) )
     {
-      bool partial = entry.second != entry.first->max_ranks;
-
-      os.format( "<li class=\"nowrap{}\">{} [{}]{}</li>\n",
-                 partial ? " filler" : "",
-                 report_decorators::decorated_spell_data( *p.sim, p.find_spell( entry.first->id_spell ) ),
-                 entry.second,
-                 partial ? "<b>*</b>" : "" );
+      tabs[ td.order ] = &td;
     }
-    os << "</ul></td></tr>\n";
+    if ( tabs.size() == 3 )
+      break;
   }
-  os << "</table>\n";
 
-  os.format( "<table class=\"sc\"><tr><th>Row</th><th>{} Talents [{}]</th></tr>\n",
-             util::spec_string_no_class( p ), spec_points );
-
-  for ( uint32_t row = 0; row < TREE_ROWS; row++ )
+  for ( size_t tab = 0; tab < 3; ++tab )
   {
-    os.format( "<tr><th class=\"left\">{}</th><td><ul class=\"float\">\n", row + 1 );
+    auto ttd       = tabs[ tab ];
+    tree[ tab ]    = {};
 
-    for ( auto entry : spec_traits[ row ] )
+    for ( size_t row = 0; row < MAX_TALENT_ROWS; ++row )
     {
-      bool partial = entry.second != entry.first->max_ranks;
-
-      os.format( "<li class=\"nowrap{}\">{} [{}]{}</li>\n",
-                 partial ? " filler" : "",
-                 report_decorators::decorated_spell_data( *p.sim, p.find_spell( entry.first->id_spell ) ),
-                 entry.second,
-                 partial ? "<b>*</b>" : "" );
+      for (size_t col = 0; col < MAX_TALENT_COLS; ++col)
+      {
+        auto rank = ( p.talent_points->choice( tab, col, row ) + 1 );
+        tab_pts[tab] += rank;
+        auto td = talent_data_t::find( p.type, row, col, ttd->id );
+        if ( td )
+          tree[ tab ][ row ].emplace_back( td, rank );
+      }
     }
-    os << "</ul></td></tr>\n";
   }
-  os << "</table>\n";
 
-  // Close the talent table div only if it exists.
-  if ( num_players == 1 )
-    os << "</div>\n";
+  for ( size_t tab_num = 0; tab_num < 3; ++tab_num )
+  {
+    auto tab = tabs.find(tab_num);
+    if ( tab == tabs.end() || tab_pts[tab_num] == 0 )
+        continue;
+
+    os.format( "<table class=\"sc\"><tr><th>Row</th><th>{} Talents [{}]</th></tr>\n", tab->second->name, tab_pts[tab_num] );
+
+    for ( size_t row = 0; row < MAX_TALENT_ROWS; ++row )
+    {
+      if ( std::accumulate(tree[tab_num][row].begin(), tree[tab_num][row].end(), 0, [](auto a, auto b) {return a + b.second;}) == 0)
+        continue;
+
+      os.format( "<tr><th class=\"left\">{}</th><td><ul class=\"float\">\n", row + 1 );
+
+      for ( const auto& [ td, rank ] : tree[ tab_num ][ row ] )
+      {
+        if ( rank == 0 )
+          continue;
+        os.format( "<li class=\"nowrap\">{} [{}]</li>\n",
+                report_decorators::decorated_spell_data( *p.sim, p.find_spell( td->_spell_ranks[ rank - 1 ] ) ),
+                rank );
+      }
+
+      os << "</ul></td></tr>\n";
+    }
+    os << "</table>\n";
+  }
 
   os << "</div>\n"
      << "</div>\n";
@@ -4130,10 +4105,10 @@ void print_html_player_results_spec_gear( report::sc_html_stream& os, const play
 
     if ( p.sim->players_by_name.size() == 1 )
     {
-      auto w_ = raidbots_talent_render_width( p.specialization(), 125 );
-      os.format(
-        "<iframe src=\"{}\" width=\"{}\" height=\"125\" style=\"float: left; margin-right: 10px; margin-top: 5px;\"></iframe>\n",
-        raidbots_talent_render_src( p.talents_str, p.true_level, w_, true, p.dbc->ptr ), w_ );
+      //auto w_ = raidbots_talent_render_width( p.specialization(), 125 );
+      //os.format(
+      //  "<iframe src=\"{}\" width=\"{}\" height=\"125\" style=\"float: left; margin-right: 10px; margin-top: 5px;\"></iframe>\n",
+      //  raidbots_talent_render_src( p.talents_str, p.true_level, w_, true, p.dbc->ptr ), w_ );
     }
 
     os << "<table class=\"sc spec\">\n";
