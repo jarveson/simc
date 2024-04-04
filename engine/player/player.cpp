@@ -1961,7 +1961,7 @@ void player_t::init_meta_gem()
 {
   sim->print_debug( "Initializing meta-gem for {}.", *this );
 
-  if ( !meta_gem_str.empty() )
+ if ( !meta_gem_str.empty() )
   {
     meta_gem = util::parse_meta_gem_type( meta_gem_str );
     if ( meta_gem == META_GEM_NONE )
@@ -1969,7 +1969,7 @@ void player_t::init_meta_gem()
       throw std::invalid_argument(fmt::format( "Invalid meta gem '{}'.", meta_gem_str ));
     }
   }
-  else
+  else if ( meta_gem == META_GEM_NONE )
   {
     // parse from items if no override
     unsigned meta_id = 0;
