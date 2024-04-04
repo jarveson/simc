@@ -989,18 +989,19 @@ struct savage_defense_buff_t : public druid_absorb_buff_t
   double coeff;
 
   savage_defense_buff_t( druid_t* p ) 
-      : base_t( p, "savage_defense", p->find_spell( 62600 ) )
+      : base_t( p, "savage_defense", p->find_spell( 62606 ) ),
+      coeff( find_trigger( this ).trigger()->effectN( 1 ).percent() )
   {
     //set_quiet( true );
     set_absorb_school(SCHOOL_PHYSICAL);
-    coeff = find_trigger( this ).trigger()->effectN( 1 ).base_value();
+
     // Not sure if this is true
     set_absorb_high_priority(true);
   }
 
   bool trigger( int s, double v, double c, timespan_t d ) override
   {
-    double amount = v * attack_power() * coeff;
+    double amount = attack_power() * coeff;
     if ( p()->specialization() == DRUID_FERAL )
       amount *= 1.0 + ( p()->mastery.savage_defender->effectN( 1 ).mastery_value() * p()->composite_mastery() );
     return base_t::trigger( s, amount, c, d );
@@ -2259,10 +2260,13 @@ struct ferocious_bite_t : public cat_finisher_t
   double max_excess_energy;
   double base_ap_mod_per_pnt{};
   bool max_energy = false;
+  double refresh_hp{};
 
   DRUID_ABILITY( ferocious_bite_t, cat_finisher_t, "ferocious_bite", p->find_class_spell( "Ferocious Bite" ) )
   {
     add_option( opt_bool( "max_energy", max_energy ) );
+
+    refresh_hp = std::max(p->sets->set( DRUID_FERAL, T13, set_bonus_e::B2 )->effectN( 2 ).base_value(), p->talent.blood_in_the_water->effectN( 1 ).base_value());
 
     // tooltips broke yo
     max_excess_energy   = 25.0;//modified_effectN( find_effect_index( this, E_DUMMY ) );
@@ -2315,18 +2319,14 @@ struct ferocious_bite_t : public cat_finisher_t
 
     if ( p()->talent.blood_in_the_water->ok() )
     {
-        double hp = p()->sets->has_set_bonus( DRUID_FERAL, T13, set_bonus_e::B2 )
-            ? p()->sets->set( DRUID_FERAL, T13, set_bonus_e::B4 )->effectN( 2 ).base_value()
-                    : p()->talent.blood_in_the_water->effectN( 1 ).base_value();
-    if ( target->health_percentage() <= hp )
-    {
+      if ( target->health_percentage() <= refresh_hp )
+      {
         auto td_d = td( s->target );
-        if ( td_d->dots.rip->is_ticking() &&
-            ( p()->talent.blood_in_the_water.rank() == 2 || p()->rng().roll( 0.5 ) ) )
+        if ( td_d->dots.rip->is_ticking() && ( p()->talent.blood_in_the_water.rank() == 2 || p()->rng().roll( 0.5 ) ) )
         {
           td_d->dots.rip->refresh_duration();
         }
-    }
+      }
     }
   }
 
@@ -2810,6 +2810,7 @@ struct bear_attack_t : public druid_attack_t<melee_attack_t>
     {
       trigger_primal_fury();
       trigger_lotp();
+      trigger_sd();
     }
   }
 
@@ -2821,7 +2822,10 @@ struct bear_attack_t : public druid_attack_t<melee_attack_t>
     if ( attack_type != result_amount_type::DMG_DIRECT )
       return;
 
-    p()->buff.savage_defense->trigger();
+    if ( id == p()->spec.mangle_bear->id() && p()->sets->has_set_bonus( DRUID_FERAL, T13, set_bonus_e::B2 ) && p()->buff.pulverize->up() )
+      p()->buff.savage_defense->trigger( -1, buff_t::DEFAULT_VALUE(), 1.0 );
+    else
+      p()->buff.savage_defense->trigger();
   }
 
   void trigger_primal_fury()
@@ -2909,9 +2913,6 @@ struct mangle_bear_t : public bear_attack_t
     bear_attack_t::execute();
     if ( p()->buff.berserk->check() )
       p()->cooldown.mangle->reset( true );
-
-    if (hit_any_target && attack_critical && p()->sets->has_set_bonus(DRUID_FERAL, T13, set_bonus_e::B2) )
-      trigger_sd();
   }
 
   int n_targets() const override
@@ -4433,8 +4434,6 @@ struct bear_melee_t : public druid_melee_t<bear_attacks::bear_attack_t>
     if (!hit_any_target)
         return;
 
-    trigger_sd();
-
     if ( p()->buff.fury_swipes->trigger() )
         p()->active.fury_swipes->execute_on_target( p()->target );
   }
@@ -4957,7 +4956,7 @@ void druid_t::create_buffs()
           ->set_cooldown( 6_s );
 
   buff.savage_defense = make_buff_fallback<savage_defense_buff_t>( find_spell( 62600 ), this, "savage_defense" )
-                            ->set_chance( find_spell( 62600 )->effectN( 2 ).base_value() );
+                            ->set_chance( find_spell( 62600 )->effectN( 2 ).percent() );
 
   buff.primal_madness =
       make_buff_fallback<primal_madness_buff_t>( talent.primal_madness.ok(), this, "primal_madness" );
