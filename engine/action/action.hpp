@@ -210,6 +210,8 @@ public:
   /// Whether or not the ability/dot ticks when it is first applied, but not on refresh applications
   bool tick_on_application;
 
+  bool no_partial_resists;
+
   /**
    * @brief Whether or not ticks scale with haste.
    *
@@ -773,6 +775,8 @@ public:
   virtual block_result_e calculate_block_result( action_state_t* s ) const;
 
   virtual double calculate_direct_amount( action_state_t* state ) const;
+
+  virtual double calculate_spell_resist_amount( action_state_t* state ) const;
 
   virtual double calculate_tick_amount( action_state_t* state, double multiplier ) const;
 

@@ -385,6 +385,7 @@ action_t::action_t( action_e ty, util::string_view token, player_t* p, const spe
     consume_per_tick_(),
     rolling_periodic(),
     split_aoe_damage(),
+    no_partial_resists( false ),
     reduced_aoe_targets( 0.0 ),
     full_amount_targets( 0 ),
     normalize_weapon_speed(),
@@ -639,6 +640,7 @@ void action_t::parse_spell_data( const spell_data_t& spell_data )
   may_dodge = may_parry = may_block = !spell_data.flags( spell_attribute::SX_NO_D_P_B );
   allow_class_ability_procs         = spell_data.flags( spell_attribute::SX_ALLOW_CLASS_ABILITY_PROCS );
   not_a_proc          = spell_data.flags( spell_attribute::SX_NOT_A_PROC );
+  no_partial_resists                = spell_data.flags( spell_attribute::SX_NO_PARTIAL_RESISTS );
 
   if ( spell_data.flags( spell_attribute::SX_REFRESH_EXTENDS_DURATION ) )
     dot_behavior = dot_behavior_e::DOT_REFRESH_PANDEMIC;
@@ -1353,6 +1355,11 @@ double action_t::calculate_tick_amount( action_state_t* state, double dot_multip
   // subsequent impact).
   amount = calculate_crit_damage_bonus( state );
 
+  if ( !no_partial_resists )
+  {
+    amount *= 1.0 - calculate_spell_resist_amount( state );
+  }
+
   if ( sim->debug )
   {
     sim->print_debug(
@@ -1364,6 +1371,18 @@ double action_t::calculate_tick_amount( action_state_t* state, double dot_multip
   }
 
   return amount;
+}
+
+double action_t::calculate_spell_resist_amount( action_state_t* state ) const
+{
+  auto s = get_school();
+
+  if ( s == SCHOOL_PHYSICAL )
+  {
+    return 0;
+  }
+
+  return 0.0;
 }
 
 double action_t::calculate_direct_amount( action_state_t* state ) const
