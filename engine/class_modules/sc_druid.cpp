@@ -3851,6 +3851,8 @@ struct mark_of_the_wild_t : public druid_spell_t
 {
   DRUID_ABILITY( mark_of_the_wild_t, druid_spell_t, "mark_of_the_wild", p->find_class_spell( "Mark of the Wild" ) )
   {
+    apply_affecting_aura( p->glyphs.mark_of_the_wild );
+
     harmful = false;
     ignore_false_positive = true;
 
