@@ -10784,6 +10784,13 @@ void player_t::create_talents_numbers()
   }
 }
 
+void player_t::create_talents_wowhead()
+{
+  create_talents_numbers();
+  if ( player_glyphs.empty() )
+    return;
+}
+
 void player_t::create_glyphs_str()
 {
     glyphs_str.clear();
@@ -12387,7 +12394,7 @@ void player_t::recreate_talent_str( talent_format format )
       create_talents_armory();
       break;
     case talent_format::WOWHEAD:
-      create_talents_numbers();
+      create_talents_wowhead();
       break;
     default:
       create_talents_numbers();

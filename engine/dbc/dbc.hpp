@@ -44,6 +44,7 @@
 #include <functional>
 #include <memory>
 #include <string>
+#include <tuple>
 #include <unordered_map>
 #include <vector>
 
@@ -99,6 +100,8 @@ double item_level_squish( unsigned source_ilevel, bool ptr );
 // Filtered data access
 const dbc_item_data_t& find_consumable( item_subclass_consumable type, bool ptr, const std::function<bool(const dbc_item_data_t*)>& finder );
 const dbc_item_data_t& find_gem( std::string_view gem, bool ptr, bool tokenized = true );
+
+util::span<const std::tuple<unsigned, specialization_e>> get_item_set_spec_overrides();
 
 // Class / Spec specific passives for an actor
 const spell_data_t* get_class_passive( const player_t&, specialization_e );

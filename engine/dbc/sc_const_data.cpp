@@ -12,6 +12,7 @@
 #include "active_spells.hpp"
 #include "mastery_spells.hpp"
 #include "racial_spells.hpp"
+#include "item_set_bonus.hpp"
 
 #include "generated/sc_spec_list.inc"
 #include "generated/sc_scale_data.inc"
@@ -87,8 +88,8 @@ struct class_passives_entry_t
     specialization_e spec;
     unsigned         spell_id;
   };
-static constexpr std::array<class_passives_entry_t, 51> _class_passives { {
-  { DEATH_KNIGHT, SPEC_NONE,              137005 },
+static constexpr std::array<class_passives_entry_t, 0> _class_passives { {
+/*{ DEATH_KNIGHT, SPEC_NONE,              137005 },
   { DEATH_KNIGHT, DEATH_KNIGHT_BLOOD,     137008 },
   { DEATH_KNIGHT, DEATH_KNIGHT_UNHOLY,    137007 },
   { DEATH_KNIGHT, DEATH_KNIGHT_FROST,     137006 },
@@ -138,7 +139,7 @@ static constexpr std::array<class_passives_entry_t, 51> _class_passives { {
   { WARRIOR,      SPEC_NONE,              137047 },
   { WARRIOR,      WARRIOR_ARMS,           137049 },
   { WARRIOR,      WARRIOR_FURY,           137050 },
-  { WARRIOR,      WARRIOR_PROTECTION,     137048 },
+  { WARRIOR,      WARRIOR_PROTECTION,     137048 },*/
 } };
 
 } // ANONYMOUS namespace ====================================================
@@ -212,6 +213,8 @@ void dbc::init()
   spell_data_t::link( false );
   spelleffect_data_t::link( false );
   talent_data_t::link( false );
+
+  item_set_bonus_t::override_set_specs( get_item_set_spec_overrides() );
 
   if ( SC_USE_PTR )
   {
@@ -949,6 +952,19 @@ std::vector<const spell_data_t*> dbc::class_passives( const player_t* p )
   } );
 
   return spells;
+}
+
+util::span<const std::tuple<unsigned, specialization_e>> dbc::get_item_set_spec_overrides()
+{
+  static constexpr std::tuple<unsigned, specialization_e> set_spec_overrides[] = {
+      { 887, DRUID_RESTORATION },
+      { 888, DRUID_BALANCE },
+      { 889, DRUID_FERAL },
+      { 927, DRUID_FERAL },
+      { 1002, DRUID_FERAL },
+      { 1058, DRUID_FERAL },
+  };
+  return util::make_span( set_spec_overrides );
 }
 
 double dbc::item_level_squish( unsigned source_ilevel, bool ptr )

@@ -71,6 +71,11 @@ struct item_set_bonus_t
   }
 
   static util::span<const item_set_bonus_t> data( bool ptr );
+
+  static void override_set_specs(util::span<const std::tuple<unsigned, specialization_e>> data );
+
+private:
+  static util::span<item_set_bonus_t> _data( bool ptr );
 };
 
 #endif /* ITEM_SET_BONUS_HPP */

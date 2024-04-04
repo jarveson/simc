@@ -3871,9 +3871,9 @@ class SetBonusListGenerator(DataGenerator):
             'tier': 10,
         },
         {
-            'name': 'tier11_melee',
+            'name': 'tier11',
             'bonuses': [ 927 ],
-            'tier': 10,
+            'tier': 11,
         }
     ]
 
@@ -3943,11 +3943,9 @@ class SetBonusListGenerator(DataGenerator):
     def generate(self, data = None):
         data.sort(key = lambda v: (v['index'], v['class'], v['bonus'], v['set_bonus_id']))
 
-        self.output_header(
-                header = 'Set bonus data',
-                type = 'item_set_bonus_t',
-                array = 'set_bonus',
-                length = len(data))
+        self._out.write('// Set bonus data, wow build %s\n' % ( self._options.build ))
+        self._out.write('static std::array<item_set_bonus_t, %d> __%s_data { {\n' % (
+            len(data), self.format_str( 'set_bonus' ) ))
 
         _hdr_specifiers = (
             '{: <43}', '{: <21}', '{: <6}', '{: <5}', '{: <4}', '{: <3}', '{: <3}', '{: <4}', '{: <7}', '{}'
