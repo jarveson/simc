@@ -187,16 +187,20 @@ spell_t::spell_t( util::string_view   token,
 
 double spell_t::miss_chance( double hit, player_t* t ) const
 {  
-  // base spell miss is double base melee miss
-  double miss = t -> cache.miss();
-  miss *= 2;
+  // taken from old simc
 
-  // 11% level-dependent miss for level+4
-  miss += 0.03 * ( t -> level() - player -> level() );
-    
-  miss += 0.08 * std::max( t -> level() - player -> level() - 3, 0 );
+  double miss = 0.0;
+  int delta_level = t->level() - player->level();
+  if (delta_level > 2)
+  {
+    miss = 0.17 + ( delta_level - 3 ) * 0.11;
+  }
+  else
+  {
+    miss = 0.04 + delta_level * 0.01;
+  }
 
-  // subtract the player's hit and expertise
+  // subtract the player's hit
   miss -= hit;
 
   return miss;
