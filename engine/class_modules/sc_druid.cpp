@@ -1468,17 +1468,6 @@ public:
         s->target->debuffs.faerie_fire->trigger(stacks);
   }
 
-  void trigger_bleed( action_state_t* s, timespan_t d )
-  {
-    if ( ab::sim->overrides.bleeding )
-      return;
-
-    if ( ab::result_is_miss( s->result ) )
-      return;
-
-    s->target->debuffs.bleeding->trigger(d);
-  }
-
   void trigger_earth_and_moon( action_state_t* s )
   {
     if (!( p()->talent.earth_and_moon.ok() ))
@@ -1590,17 +1579,6 @@ public:
       {
         direct_bleed = true;
       }
-    }
-  }
-
-  void impact( action_state_t* s ) override
-  {
-    ab::impact( s );
-    if ( direct_bleed && ab::result_is_hit( s->result ) )
-    {
-      dot_t* dot = ab::find_dot( s->target );
-      assert( dot );
-      ab::trigger_bleed( s, dot->duration() );
     }
   }
 
