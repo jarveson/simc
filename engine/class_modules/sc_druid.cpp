@@ -797,9 +797,6 @@ struct force_of_nature_t : public pet_t
       weapon_multiplier = 1.0;
       base_execute_time = weapon->swing_time;
       may_crit = background = repeating = true;
-
-      // took this from simc cata
-      base_multiplier *= 3.0;
     }
 
     timespan_t execute_time() const override
@@ -2298,12 +2295,8 @@ struct ferocious_bite_t : public cat_finisher_t
     attack_power_mod.direct = base_ap_mod_per_pnt * cps;
     base_dd_adder           = base_dmg_per_pnt * cps;
 
-    // Incarn does affect the additional energy consumption.
-    double _max_used = max_excess_energy * ( 1.0 + p()->buff.berserk->check_value() );
-
-    auto x = p()->resources.current[ RESOURCE_ENERGY ];
-
-    excess_energy = std::min( _max_used, ( p()->resources.current[ RESOURCE_ENERGY ] - cat_finisher_t::cost() ) );
+    excess_energy =
+        std::min( max_excess_energy, ( p()->resources.current[ RESOURCE_ENERGY ] - cat_finisher_t::cost() ) );
     
     cat_finisher_t::execute();
   }
