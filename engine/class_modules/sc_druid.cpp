@@ -375,6 +375,8 @@ public:
 
     // Feral
     action_t* fury_swipes;
+    action_t* primal_fury_cat;
+    action_t* primal_fury_bear;
 
   } active;
 
@@ -547,8 +549,8 @@ public:
     // Feral
     proc_t* clearcasting;
     proc_t* clearcasting_wasted;
-    //proc_t* primal_fury;
-    //proc_t* fury_swipes;
+    proc_t* primal_fury;
+    proc_t* fury_swipes;
 
     // Guardian
   } proc;
@@ -1051,6 +1053,7 @@ struct bear_form_buff_t : public druid_buff_t, public swap_melee_t
     add_invalidate( CACHE_HIT );
     add_invalidate( CACHE_PLAYER_DAMAGE_MULTIPLIER );
     add_invalidate( CACHE_STAMINA );
+    add_invalidate( CACHE_WEAPON_DPS );
   }
 
   void expire_override( int expiration_stacks, timespan_t remaining_duration ) override
@@ -1098,11 +1101,14 @@ struct cat_form_buff_t : public druid_buff_t, public swap_melee_t
     add_invalidate( CACHE_EXP );
     add_invalidate( CACHE_HIT );
     add_invalidate( CACHE_CRIT_CHANCE );
+    add_invalidate( CACHE_WEAPON_DPS );
   }
 
   void expire_override( int expiration_stacks, timespan_t remaining_duration ) override
   {
     base_t::expire_override( expiration_stacks, remaining_duration );
+
+    p()->current.attack_power_per_agility = 0.0;
 
     swap_melee( p()->caster_melee_attack, p()->caster_form_weapon );
   }
@@ -1111,7 +1117,14 @@ struct cat_form_buff_t : public druid_buff_t, public swap_melee_t
   {
     swap_melee( p()->cat_melee_attack, p()->cat_weapon );
 
+    // This ap mod has to live here or asserts start failing,
+    // as simc won't invalidate cache correctly
+    p()->current.attack_power_per_agility = 2.0;
+
     base_t::start( stacks, value, duration );
+
+    if ( !sim->overrides.crit_chance )
+      sim->auras.crit_chance->trigger();
 
     if ( !p()->in_combat )
       return;
@@ -1337,7 +1350,6 @@ public:
     parse_effects( p()->buff.berserk );
     parse_effects( p()->buff.predatory_swiftness );
     parse_effects( p()->buff.stampede_cat );
-    parse_effects( p()->buff.primal_fury_cat );
     parse_effects( p()->buff.primal_fury_bear );
 
     // Guardian
@@ -2097,7 +2109,8 @@ public:
     if ( proc || !p()->talent.primal_fury.ok() || !attack_critical )
       return;
 
-    p()->buff.primal_fury_cat->trigger();
+    if ( p()->buff.primal_fury_cat->trigger() )
+      p()->active.primal_fury_cat->execute();
   }
 
   void trigger_lotp()
@@ -2264,6 +2277,7 @@ struct ferocious_bite_t : public cat_finisher_t
   double base_dmg_per_pnt{};
   double excess_energy = 0.0;
   double max_excess_energy;
+  double base_ap_mod_per_pnt{};
   bool max_energy = false;
 
   DRUID_ABILITY( ferocious_bite_t, cat_finisher_t, "ferocious_bite", p->find_class_spell( "Ferocious Bite" ) )
@@ -2271,15 +2285,18 @@ struct ferocious_bite_t : public cat_finisher_t
     add_option( opt_bool( "max_energy", max_energy ) );
 
     // tooltips broke yo
-    max_excess_energy = 25.0;//modified_effectN( find_effect_index( this, E_DUMMY ) );
-    base_dmg_per_pnt  = data().effectN( 1 ).bonus( p );
+    max_excess_energy   = 25.0;//modified_effectN( find_effect_index( this, E_DUMMY ) );
+
+    base_dd_adder = base_dmg_per_pnt = data().effectN( 1 ).bonus( p );
+    attack_power_mod.direct = base_ap_mod_per_pnt = 0.109;
   }
 
   double maximum_energy() const
   {
-    double req = base_costs[ RESOURCE_ENERGY ] + max_excess_energy;
+    double req = base_costs[ RESOURCE_ENERGY ];
 
     req *= 1.0 + p()->buff.berserk->check_value();
+    req += max_excess_energy;
 
     return req;
   }
@@ -2294,11 +2311,14 @@ struct ferocious_bite_t : public cat_finisher_t
 
   void execute() override
   {
-    attack_power_mod.direct = 0.109 * p()->resources.current[ RESOURCE_COMBO_POINT ];
-    base_dd_adder           = base_dmg_per_pnt * p()->resources.current[ RESOURCE_COMBO_POINT ];
+    auto cps                = p()->resources.current[ RESOURCE_COMBO_POINT ];
+    attack_power_mod.direct = base_ap_mod_per_pnt * cps;
+    base_dd_adder           = base_dmg_per_pnt * cps;
 
     // Incarn does affect the additional energy consumption.
     double _max_used = max_excess_energy * ( 1.0 + p()->buff.berserk->check_value() );
+
+    auto x = p()->resources.current[ RESOURCE_ENERGY ];
 
     excess_energy = std::min( _max_used, ( p()->resources.current[ RESOURCE_ENERGY ] - cat_finisher_t::cost() ) );
     
@@ -2328,7 +2348,7 @@ struct ferocious_bite_t : public cat_finisher_t
         if ( td_d->dots.rip->is_ticking() &&
             ( p()->talent.blood_in_the_water.rank() == 2 || p()->rng().roll( 0.5 ) ) )
         {
-        td_d->dots.rip->refresh_duration();
+          td_d->dots.rip->refresh_duration();
         }
     }
     }
@@ -2359,10 +2379,8 @@ struct ferocious_bite_t : public cat_finisher_t
   {
     auto dam = cat_finisher_t::composite_da_multiplier( s );
     auto energy_mul = 1.0 + ( excess_energy / max_excess_energy );
-    // base spell coeff is for 5CP, so we reduce if lower than 5.
-    auto combo_mul = cp( s ) / p()->resources.max[ RESOURCE_COMBO_POINT ];
 
-    return dam * energy_mul * combo_mul;
+    return dam * energy_mul;
   }
 };
 
@@ -2378,7 +2396,8 @@ struct maim_t : public cat_finisher_t
 
   void execute() override
   {
-    base_dd_adder = base_dmg_per_point * p()->resources.current[ RESOURCE_COMBO_POINT ];
+    auto cps      = p()->resources.current[ RESOURCE_COMBO_POINT ];
+    base_dd_adder = base_dmg_per_point * cps;
 
     cat_finisher_t::execute();
   }
@@ -2432,10 +2451,10 @@ struct rake_t : public cat_attack_t
 
   double composite_ta_multiplier( const action_state_t* s ) const override
   {
-    auto da = base_t::composite_ta_multiplier( s );
+    auto ta = base_t::composite_ta_multiplier( s );
     if ( p()->specialization() == DRUID_FERAL )
-      da *= 1.0 + p()->mastery.razor_claws->effectN( 1 ).mastery_value() * p()->composite_mastery();
-    return da;
+      ta *= 1.0 + p()->mastery.razor_claws->effectN( 1 ).mastery_value() * p()->composite_mastery();
+    return ta;
   }
 
   double composite_da_multiplier(const action_state_t* s) const override
@@ -2538,11 +2557,17 @@ struct ravage_t : public cat_attack_t
 // Rip ======================================================================
 struct rip_t : public cat_finisher_t
 {
+  double base_ap_per_cp{};
+  double bonus_dmg_per_cp{};
+
   DRUID_ABILITY( rip_t, base_t, "rip", p->find_class_spell( "Rip" ) )
   {
     apply_affecting_aura( p->glyphs.rip );
-    dot_name = "rip";
-    may_crit = false;
+
+    dot_name       = "rip";
+    base_ap_per_cp = 0.0207;
+
+    bonus_dmg_per_cp = data().effectN( 1 ).bonus( p );
   }
 
   timespan_t composite_dot_duration( const action_state_t* s ) const override
@@ -2558,6 +2583,16 @@ struct rip_t : public cat_finisher_t
     if ( p()->specialization() == DRUID_FERAL )
         da *= 1.0 + p()->mastery.razor_claws->effectN( 1 ).mastery_value() * p()->composite_mastery();
     return da;
+  }
+
+  void execute() override
+  {
+    auto cps = p()->resources.current[ RESOURCE_COMBO_POINT ];
+
+    attack_power_mod.tick = base_ap_per_cp * cps;
+    base_ta_adder         = bonus_dmg_per_cp * cps;
+
+    cat_finisher_t::execute();
   }
 
   void impact( action_state_t* s ) override
@@ -2719,6 +2754,29 @@ struct fury_swipes_trigger_t : public cat_attack_t
     proc              = true;
     min_gcd           = 0_s;
   }
+
+  void execute() override
+  {
+    cat_attack_t::execute();
+    p()->proc.fury_swipes->occur();
+  }
+};
+
+struct primal_fury_cat_trigger_t : public cat_attack_t
+{
+  DRUID_ABILITY( primal_fury_cat_trigger_t, cat_attack_t, "primal_fury",
+                 p->buff.primal_fury_cat->data().effectN( 1 ).trigger() )
+  {
+    background = dual = true;
+    proc              = true;
+    min_gcd           = 0_s;
+  }
+
+  void execute() override
+  {
+    cat_attack_t::execute();
+    p()->proc.primal_fury->occur();
+  }
 };
 
 }  // end namespace cat_attacks
@@ -2798,7 +2856,8 @@ struct bear_attack_t : public druid_attack_t<melee_attack_t>
     if ( attack_type != result_amount_type::DMG_DIRECT)
         return;
 
-    p()->buff.primal_fury_bear->trigger();
+    if (p()->buff.primal_fury_bear->trigger())
+        p()->active.primal_fury_bear->execute();
   }
 
   void trigger_lotp()
@@ -3004,7 +3063,6 @@ struct lacerate_t : public bear_attack_t
     {
       background = dual = true;
       dot_name          = "lacerate";
-      may_crit          = false;
 
       attack_power_mod.direct = 0.0552;
       attack_power_mod.tick   = 0.00369;
@@ -3028,6 +3086,24 @@ struct lacerate_t : public bear_attack_t
     apply_affecting_aura(p->glyphs.lacerate);
   }
 };
+
+struct primal_fury_bear_trigger_t : public bear_attack_t
+{
+  DRUID_ABILITY( primal_fury_bear_trigger_t, bear_attack_t, "primal_fury",
+                 p->buff.primal_fury_bear->data().effectN( 1 ).trigger() )
+  {
+    background = dual = true;
+    proc              = true;
+    min_gcd           = 0_s;
+  }
+
+  void execute() override
+  {
+    bear_attack_t::execute();
+    p()->proc.primal_fury->occur();
+  }
+};
+
 } // end namespace bear_attacks
 
 namespace heals
@@ -3588,7 +3664,6 @@ struct insect_swarm_t : public druid_spell_t
   DRUID_ABILITY(insect_swarm_t, druid_spell_t, "insect_swarm", p->find_class_spell("Insect Swarm"))
   {
     apply_affecting_aura( p->glyphs.insect_swarm );
-    may_crit = false;
   }
 
   void tick( dot_t* d ) override
@@ -4631,14 +4706,17 @@ void druid_t::init_spells()
   talent.wild_growth             = CT( "Wild Growth" );
 
   // Passive Auras
-  spec.leather_specialization   = find_specialization_spell( "Leather Specialization" );
+  // Making this one easier, this is the generic dummy with value
+  // the rest are stance masked out..too lazy
+  spec.leather_specialization = find_specialization_spell( 86530 );
 
   spec.cat_form_passive = find_spell( 3025 );
   spec.bear_form_passive = find_spell( 1178 );
 
-  spec.starsurge = find_specialization_spell("Starsurge");
+  // todo: fix string spec spell usage, only feral works with id's curenttly
+  spec.starsurge = find_specialization_spell( "Starsurge" );
   spec.moonfury  = find_specialization_spell( "Moonfury" );
-  spec.aggression = find_specialization_spell( "Aggression" );
+  spec.aggression     = find_specialization_spell( 84735 );
   spec.vengeance  = find_specialization_spell( "Vengeance" );
   spec.mangle_bear    = find_specialization_spell( 33878 );
   spec.mangle_cat     = find_specialization_spell( 33876 );
@@ -4892,9 +4970,8 @@ void druid_t::create_buffs()
 
   buff.primal_fury_bear = make_buff_fallback( talent.primal_fury.ok(), this, "primal_fury_bear",
                                               find_spell( talent.primal_fury->effectN( 1 ).trigger_spell_id() ) );
-  buff.primal_fury_cat =
-      make_buff_fallback( talent.primal_fury.ok(), this, "primal_fury_cat",
-                                              find_spell(talent.primal_fury->effectN( 2 ).trigger_spell_id()) );
+  buff.primal_fury_cat  = make_buff_fallback( talent.primal_fury.ok(), this, "primal_fury_cat",
+                                              find_spell( talent.primal_fury->effectN( 2 ).trigger_spell_id() ) );
 
   buff.leader_of_the_pack =
       make_buff_fallback( talent.leader_of_the_pack.ok(), this, "leader_of_the_pack", find_spell( 17007 ) )
@@ -4908,6 +4985,7 @@ void druid_t::create_buffs()
 
   buff.strength_of_the_panther = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T11, B4 ), this,
                                                      "strength_of_the_panther", find_spell( 90166 ) )
+                                     ->set_default_value_from_effect(1)
                                      ->add_invalidate( CACHE_ATTACK_POWER );
 
   buff.t12_2p_melee = make_buff_fallback( sets->has_set_bonus( DRUID_FERAL, T12, B2 ), this, "t12_2p_melee",
@@ -4985,7 +5063,13 @@ void druid_t::create_actions()
   }
 
   if (talent.fury_swipes.ok())
-    active.fury_swipes = get_secondary_action<fury_swipes_trigger_t>( "fury_swipes_trigger" );
+    active.fury_swipes = get_secondary_action<fury_swipes_trigger_t>( "fury_swipes" );
+
+  if ( talent.primal_fury.ok() )
+  {
+    active.primal_fury_cat = get_secondary_action<primal_fury_cat_trigger_t>( "primal_fury" );
+    active.primal_fury_bear = get_secondary_action<primal_fury_bear_trigger_t>( "primal_fury" );
+  }
 
   player_t::create_actions();
 }
@@ -5144,10 +5228,10 @@ void druid_t::init_procs()
   player_t::init_procs();
 
   // Feral
-  //proc.primal_fury          = get_proc( "Primal Fury" );
+  proc.primal_fury          = get_proc( "Primal Fury" );
   proc.clearcasting         = get_proc( "Clearcasting" );
   proc.clearcasting_wasted  = get_proc( "Clearcasting (Wasted)" );
-  //proc.fury_swipes          = get_proc( "Fury Swipes" );
+  proc.fury_swipes          = get_proc( "Fury Swipes" );
 
  }
 
@@ -5458,16 +5542,8 @@ double druid_t::composite_attack_power_multiplier() const
     ap *= 1.0 + spec.aggression->effectN(1).percent();
 
   if ( buff.strength_of_the_panther->check() )
-    ap *= 1.0 + (buff.strength_of_the_panther->current_stack / 100);
+    ap *= 1.0 + (buff.strength_of_the_panther->current_value / 100);
 
-  return ap;
-}
-
-double druid_t::composite_melee_attack_power() const
-{
-  double ap = player_t::composite_melee_attack_power();
-  if ( buff.cat_form->check() )
-    ap += player_t::agility();
   return ap;
 }
 
