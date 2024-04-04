@@ -1299,10 +1299,17 @@ void print_html_gear( report::sc_html_stream& os, const player_t& p )
     if ( !item.parsed.gem_stats.empty() )
     {
       item_sim_desc += ", gems: { ";
+
+      if ( !item.parsed.meta_gem_stats.empty() )
+      {
+        item_sim_desc += util::meta_gem_type_string( p.meta_gem );
+        item_sim_desc += ", ";
+      }
+
       item_sim_desc += item.gem_stats_str();
       if ( item.socket_color_match() && !item.parsed.socket_bonus_stats.empty() )
       {
-        item_sim_desc += ", ";
+        item_sim_desc += ", socket_bonus: ";
         item_sim_desc += item.socket_bonus_stats_str();
       }
       item_sim_desc += " }";

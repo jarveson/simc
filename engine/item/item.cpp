@@ -470,6 +470,9 @@ void sc_format_to( const item_t& item, fmt::format_context::iterator out )
   if ( !item.parsed.reforge_stats.empty() )
     fmt::format_to( out, " reforge={{ {} }}", item.reforge_stats_str() );
 
+  if ( !item.parsed.meta_gem_stats.empty() )
+    fmt::format_to( out, " meta_gem={{ {} }}", "exists_fixme" );
+
   if ( !item.parsed.gem_stats.empty() )
     fmt::format_to( out, " gems={{ {} }}", item.gem_stats_str() );
 
