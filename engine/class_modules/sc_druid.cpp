@@ -4771,6 +4771,8 @@ void druid_t::init_base_stats()
 
   player_t::init_base_stats();
 
+  base.spell_power_per_intellect = 1.0;
+
   base.armor_multiplier *= 1.0 + find_effect( talent.thick_hide, A_MOD_BASE_RESISTANCE_PCT ).percent();
   base.attribute_multiplier[ ATTR_INTELLECT ] *= 1.0 + talent.heart_of_the_wild->effectN( 1 ).percent();
 
