@@ -851,6 +851,7 @@ public:
   void stat_gain( stat_e stat, double amount, gain_t* g = nullptr, action_t* a = nullptr, bool temporary = false );
   void stat_loss( stat_e stat, double amount, gain_t* g = nullptr, action_t* a = nullptr, bool temporary = false );
   void create_talents_numbers();
+  void create_talents_wowhead();
   void create_talents_armory();
   void create_talents_blizzard();
   void create_glyphs_str();
