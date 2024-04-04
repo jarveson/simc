@@ -719,6 +719,7 @@ public:
   void datacollection_begin() override;
   void datacollection_end() override;
   timespan_t available() const override;
+  double composite_melee_attack_power() const override;
   double composite_attack_power_multiplier() const override;
   double composite_player_multiplier(school_e school) const override;
   double composite_armor_multiplier() const override;
@@ -865,7 +866,8 @@ struct force_of_nature_t : public pet_t
     initial.stats.attribute[ ATTR_SPIRIT ]     = 109;
 
     initial.attack_power_per_strength = 2.0;
-    initial.stats.attack_power = -20;
+    initial.stats.attack_power        = -20;
+    base.attack_crit_chance           = 0.05;
 
     initial.spell_power_per_intellect         = 0;
     intellect_per_owner                       = 0;
@@ -1059,6 +1061,8 @@ struct bear_form_buff_t : public druid_buff_t, public swap_melee_t
   {
     base_t::expire_override( expiration_stacks, remaining_duration );
 
+    p()->current.attack_power_per_agility = 0.0;
+
     swap_melee( p()->caster_melee_attack, p()->caster_form_weapon );
 
     p()->resource_loss( RESOURCE_RAGE, p()->resources.current[ RESOURCE_RAGE ] );
@@ -1068,6 +1072,8 @@ struct bear_form_buff_t : public druid_buff_t, public swap_melee_t
   void start( int stacks, double value, timespan_t duration ) override
   {
     swap_melee( p()->bear_melee_attack, p()->bear_weapon );
+
+    p()->current.attack_power_per_agility = 2.0;
 
     base_t::start( stacks, value, duration );
 
@@ -3010,7 +3016,6 @@ struct pulverize_t : public bear_attack_t
     auto t_td    = td( p()->target );
     auto stacks = t_td->dots.lacerate->current_stack();
 
-    // todo: is this right?
     base_dd_adder = ( dmg * wpn_percent / 100.0 ) * stacks;
 
     bear_attack_t::execute();
@@ -5534,6 +5539,14 @@ double druid_t::composite_spell_hit() const
 }
 
 // Attack Power =============================================================
+
+double druid_t::composite_melee_attack_power() const
+{
+  double ap = player_t::composite_melee_attack_power();
+  ap += level() * ( ( level() > 80 ) ? 3.0 : 2.0 );
+  return ap;
+}
+
 double druid_t::composite_attack_power_multiplier() const
 {
   double ap = player_t::composite_attack_power_multiplier();
