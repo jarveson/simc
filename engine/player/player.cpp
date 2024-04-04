@@ -1536,9 +1536,6 @@ void player_t::init_base_stats()
         dbc->race_base( race ).intellect + dbc->attribute_base( type, level() ).intellect;
     base.stats.attribute[ STAT_SPIRIT ] = dbc->race_base( race ).spirit + dbc->attribute_base( type, level() ).spirit;
 
-    // Endurance seems to be using ceiling
-    base.stats.attribute[ STAT_STAMINA ] += util::ceil( racials.endurance->effectN( 1 ).average( this ) );
-
     base.spell_crit_chance        = dbc->spell_crit_base( type, level() );
     base.attack_crit_chance       = dbc->melee_crit_base( type, level() );
     base.spell_crit_per_intellect = dbc->spell_crit_scaling( type, level() );
@@ -1551,6 +1548,8 @@ void player_t::init_base_stats()
 
     resources.base[ RESOURCE_HEALTH ] = dbc->health_base( type, level() );
     resources.base[ RESOURCE_MANA ]   = dbc->resource_base( type, level() );
+
+    resources.base_multiplier[ RESOURCE_HEALTH ] *= 1.0 + racials.endurance->effectN(1).percent();
 
     // 1% of base mana as mana regen per second for all classes.
     resources.base_regen_per_second[ RESOURCE_MANA ] = dbc->resource_base( type, level() ) * 0.01;
@@ -1649,11 +1648,7 @@ void player_t::init_base_stats()
     resources.base_multiplier[ RESOURCE_MANA ] *= 1.02;
   }
 
-  // Expansive Mind
-  for ( auto& r : { RESOURCE_MANA } )
-  {
-    resources.base_multiplier[ r ] *= 1.0 + racials.expansive_mind->effectN( 1 ).percent();
-  }
+  resources.base_multiplier[ RESOURCE_MANA ] *= 1.0 + racials.expansive_mind->effectN( 1 ).percent();
 
   if ( world_lag_stddev < timespan_t::zero() )
     world_lag_stddev = world_lag * 0.1;
