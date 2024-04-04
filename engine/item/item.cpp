@@ -1897,6 +1897,7 @@ void item_t::decode_gems()
         stat_gems_part = stat_gems_part.substr( 1 );
       }
 
+      enchant::initialize_item_enchant( *this, parsed.meta_gem_stats, SPECIAL_EFFECT_SOURCE_GEM, meta_gem_enchant );
     }
 
     auto tokens = item_database::parse_tokens( stat_gems_part );

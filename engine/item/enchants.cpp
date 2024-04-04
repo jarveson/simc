@@ -423,13 +423,9 @@ item_socket_color enchant::initialize_gem( item_t& item, size_t gem_idx )
 
   const item_enchantment_data_t& data = item.player->dbc->item_enchantment( gem_prop.enchant_id );
 
-  // This should only exist for meta gems, which are handled else where
-  if ( data.id_cond == 0 )
-  {
-    enchant::initialize_item_enchant(
-        item, gem_prop.color != SOCKET_COLOR_META ? item.parsed.gem_stats : item.parsed.meta_gem_stats,
-        SPECIAL_EFFECT_SOURCE_GEM, data );
-  }
+  enchant::initialize_item_enchant(
+    item, gem_prop.color != SOCKET_COLOR_META ? item.parsed.gem_stats : item.parsed.meta_gem_stats,
+    SPECIAL_EFFECT_SOURCE_GEM, data );
 
   if ( !dbc::valid_gem_color( gem_prop.color ) )
   {
