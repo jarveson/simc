@@ -1435,18 +1435,35 @@ double dbc_t::item_socket_cost( unsigned ilevel ) const
 double dbc_t::armor_mitigation_constant( unsigned level ) const
 {
   assert( level > 0 && level <= ( MAX_SCALING_LEVEL + 3 ) );
-  return 1;
+  // Pulled from old cata simc
+  double a, b;
+  if ( level > 80 )
+  {
+    a = 2167.5;
+    b = -158167.5;
+  }
+  else if ( level >= 60 )
+  {
+    a = 467.5;
+    b = -22167.5;
+  }
+  else
+  {
+    a = 85.0;
+    b = 400.0;
+  }
+  return a * level + b;
 }
 
 double dbc_t::get_armor_constant_mod( difficulty_e diff ) const
 {
-  return 100; // todo
+  return 1; // todo
 }
 
 double dbc_t::npc_armor_value( unsigned level ) const
 {
   assert( level > 0 && level <= ( MAX_SCALING_LEVEL + 3 ) );
-  return 100; // todo
+  return 11977;  // todo
 }
 
 /* Generic helper methods */

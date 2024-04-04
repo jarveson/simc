@@ -728,7 +728,7 @@ void action_t::parse_effect_direct_mods( const spelleffect_data_t& spelleffect_d
 
   if ( !item_scaling )
   {
-    if ( !spelleffect_data.sp_coeff() && !spelleffect_data.ap_coeff() )
+    //if ( !spelleffect_data.sp_coeff() && !spelleffect_data.ap_coeff() )
     {
       base_dd_min = spelleffect_data.min( player, player->level() );
       base_dd_max = spelleffect_data.max( player, player->level() );
@@ -750,7 +750,7 @@ void action_t::parse_effect_periodic_mods( const spelleffect_data_t& spelleffect
 
   if ( !item_scaling )
   {
-    if ( !spelleffect_data.sp_coeff() && !spelleffect_data.ap_coeff() )
+    //if ( !spelleffect_data.sp_coeff() && !spelleffect_data.ap_coeff() )
     {
       base_td = spelleffect_data.average( player, player->level() );
     }

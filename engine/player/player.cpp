@@ -8085,7 +8085,7 @@ void player_t::target_mitigation( school_e school, result_amount_type dmg_type, 
       sim->print_debug( "Damage to {} before armor mitigation is {}", s->target->name(), s->result_amount );
 
     // Maximum amount of damage reduced by armor
-    double armor_cap = 0.85;
+    double armor_cap = 0.75;
 
     // Armor
     if ( s->action && !s->action->ignores_armor )

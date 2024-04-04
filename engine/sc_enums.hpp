@@ -47,7 +47,7 @@ enum class attack_power_type : unsigned
   // Let SimC figure out BfA attack power mode based on information assigned to the action object.
   NONE,
 
-  DEFAULT = WEAPON_MAINHAND,
+  DEFAULT = NO_WEAPON,
 };
 
 
