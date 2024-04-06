@@ -496,8 +496,10 @@ public:
     // Guardian (Bear)
     gain_t* bear_form;
     gain_t* rage_from_melees;
+    gain_t* rage_from_damage;
     gain_t* primal_madness_rage;
     gain_t* enrage;
+    gain_t* natural_reaction;
   } gain;
 
   // Masteries
@@ -743,6 +745,7 @@ public:
   double resource_regen_per_second( resource_e ) const override;
   void target_mitigation( school_e, result_amount_type, action_state_t* ) override;
   void assess_damage_imminent_pre_absorb( school_e, result_amount_type, action_state_t* ) override;
+  void assess_damage( school_e school, result_amount_type dtype, action_state_t* s ) override;
   void create_options() override;
   const druid_td_t* find_target_data( const player_t* target ) const override;
   druid_td_t* get_target_data( player_t* target ) const override;
@@ -2277,9 +2280,8 @@ struct ferocious_bite_t : public cat_finisher_t
 
   double maximum_energy() const
   {
-    double req = base_costs[ RESOURCE_ENERGY ];
+    double req = cat_finisher_t::cost();
 
-    req *= 1.0 + p()->buff.berserk->check_value();
     req += max_excess_energy;
 
     return req;
@@ -2413,6 +2415,8 @@ struct rake_t : public cat_attack_t
   {
     attack_power_mod.direct = 0.147;
     attack_power_mod.tick = 0.147;
+
+    tick_may_crit = true;
   }
 
   void execute() override
@@ -2542,6 +2546,7 @@ struct rip_t : public cat_finisher_t
 
     dot_name       = "rip";
     base_ap_per_cp = 0.0207;
+    tick_may_crit  = true;
 
     bonus_dmg_per_cp = data().effectN( 1 ).bonus( p );
   }
@@ -4424,7 +4429,7 @@ struct bear_melee_t : public druid_melee_t<bear_attacks::bear_attack_t>
 
     energize_type = action_energize::ON_HIT;
     energize_resource = resource_e::RESOURCE_RAGE;
-    energize_amount = 4.0;
+    energize_amount = 16.0;
   }
 
   void execute() override
@@ -5192,9 +5197,10 @@ void druid_t::init_gains()
     gain.lotp_mana = get_gain( "Lotp Mana" );
 
     gain.bear_form           = get_gain( "Bear Form" );
-    gain.rage_from_melees    = get_gain( "Rage from Melees" );
+    gain.rage_from_damage    = get_gain( "Rage from Dmg" );
     gain.primal_madness_rage = get_gain( "Primal Madness Rage" );
     gain.enrage              = get_gain( "Enrage" );
+    gain.natural_reaction    = get_gain( "Natural Reaction" );
   
     // Multi-spec
     gain.clearcasting = get_gain( "Clearcasting" );  // Feral & Restoration
@@ -5825,13 +5831,17 @@ void druid_t::init_absorb_priority()
 
 void druid_t::target_mitigation( school_e school, result_amount_type type, action_state_t* s )
 {
+  player_t::target_mitigation( school, type, s );
+
+  if ( talent.natural_reaction->ok() )
+    s->result_amount *= 1.0 + talent.natural_reaction->effectN( 3 ).percent();
+
   s->result_amount *= 1.0 + buff.barkskin->value();
 
   s->result_amount *= 1.0 + buff.survival_instincts->value();
 
-  s->result_amount *= 1.0 + talent.thick_hide->effectN( 1 ).percent();
-
-  player_t::target_mitigation( school, type, s );
+  if (talent.perseverance->ok() && ((talent.perseverance->school_mask() & school) == school))
+    s->result_amount *= 1.0 + talent.perseverance->effectN( 1 ).percent();
 }
 
 // Trigger effects based on being hit or taking damage.
@@ -5851,6 +5861,21 @@ void druid_t::assess_damage_imminent_pre_absorb( school_e school, result_amount_
     if ( buff.moonkin_form->check() && s->result_type == result_amount_type::DMG_DIRECT )
       buff.owlkin_frenzy->trigger();
   }
+}
+
+void druid_t::assess_damage(school_e school, result_amount_type dtype, action_state_t* s)
+{
+    if (s->result == RESULT_DODGE && talent.natural_reaction->ok())
+        resource_gain(RESOURCE_RAGE, talent.natural_reaction->effectN(2).base_value(), gain.natural_reaction );
+
+    if ( s->result_amount > 0.0 )
+    {
+        // todo: could be wrong 
+        double rage_gain = s->result_amount * 18.92 / resources.max[ RESOURCE_HEALTH ];
+        resource_gain( RESOURCE_RAGE, rage_gain, gain.rage_from_damage );
+    }
+
+    player_t::assess_damage(school, dtype, s);
 }
 
 void druid_t::shapeshift( form_e f )
