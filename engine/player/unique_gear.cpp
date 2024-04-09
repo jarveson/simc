@@ -69,6 +69,7 @@ namespace item
   void darkmoon_card_greatness( special_effect_t& );
   void vial_of_shadows( special_effect_t& );
   void deathbringers_will( special_effect_t& );
+  void deaths_verdict(special_effect_t& );
   void cunning_of_the_cruel( special_effect_t& );
   void felmouth_frenzy( special_effect_t& );
   void matrix_restabilizer( special_effect_t& );
@@ -1502,6 +1503,39 @@ void item::deathbringers_will( special_effect_t& effect )
   };
 
   new deathbringers_will_callback( effect.item, effect );
+}
+
+void item::deaths_verdict( special_effect_t& effect )
+{
+  auto buffs                  = std::make_shared<std::map<stat_e, buff_t*>>();
+  ( *buffs )[ STAT_AGILITY ]  = create_buff<stat_buff_t>(
+      effect.player, "paragon_agi", effect.player->find_spell( effect.spell_id == 67702 ? 67703 : 67772 ), effect.item );
+  ( *buffs )[ STAT_STRENGTH ] =
+      create_buff<stat_buff_t>( effect.player, "paragon_str",
+                                effect.player->find_spell( effect.spell_id == 67702 ? 67708 : 67773 ), effect.item );
+
+  effect.proc_flags_  = PF_ALL_DAMAGE;
+  effect.proc_flags2_ = PF2_ALL_HIT | PF2_PERIODIC_DAMAGE;
+
+  struct deaths_verdict_callback_t : public dbc_proc_callback_t
+  {
+    std::shared_ptr<std::map<stat_e, buff_t*>> buffs;
+
+    deaths_verdict_callback_t( const special_effect_t& effect, std::shared_ptr<std::map<stat_e, buff_t*>> b )
+    : dbc_proc_callback_t( effect.item, effect ), buffs( std::move( b ) )
+    {
+    }
+
+    void execute( action_t*, action_state_t* ) override
+    {
+      static constexpr std::array<stat_e, 3> ratings = { STAT_AGILITY, STAT_STRENGTH };
+
+      stat_e max_stat = util::highest_stat( effect.player, ratings );
+      (*buffs )[ max_stat ]->trigger();
+    }
+  };
+
+  new deaths_verdict_callback_t( effect, buffs );
 }
 
 void item::battering_talisman_trigger( special_effect_t& effect )
@@ -4908,6 +4942,8 @@ void unique_gear::register_special_effects()
   register_special_effect( 45483,  "ProcOn/hit_45431Trigger"            ); /* Shattered Sun Pendant of Resolve */
   register_special_effect( 45484,  "ProcOn/hit_45478Trigger"            ); /* Shattered Sun Pendant of Restoration */
   register_special_effect( 57345,  item::darkmoon_card_greatness        );
+  register_special_effect( 67702,  item::deaths_verdict                 );
+  register_special_effect( 67771,  item::deaths_verdict                 );
   register_special_effect( 71519,  item::deathbringers_will             );
   register_special_effect( 71562,  item::deathbringers_will             );
   register_special_effect( 71892,  item::heartpierce                    );

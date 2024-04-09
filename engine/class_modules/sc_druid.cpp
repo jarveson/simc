@@ -5060,7 +5060,7 @@ void druid_t::create_actions()
 // Default Consumables ======================================================
 std::string druid_t::default_flask() const
 {
-  if ( true_level >= 80 )
+  if ( true_level >= 81 )
   {
     switch ( specialization() )
     {
@@ -5095,7 +5095,7 @@ std::string druid_t::default_flask() const
 
 std::string druid_t::default_potion() const
 {
-  if ( true_level >= 80 )
+  if ( true_level >= 81 )
   {
     switch ( specialization() )
     {
@@ -5129,7 +5129,7 @@ std::string druid_t::default_potion() const
 
 std::string druid_t::default_food() const
 {
-  if ( true_level >= 80 )
+  if ( true_level >= 81 )
   {
     switch ( specialization() )
     {
