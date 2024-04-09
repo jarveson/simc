@@ -1445,7 +1445,11 @@ double dbc_t::real_ppm_modifier( unsigned spell_id, player_t* player, unsigned i
 double dbc_t::item_socket_cost( unsigned ilevel ) const
 {
   assert( ilevel > 0 && ( ilevel <= random_property_max_level() ) );
-  return 0;
+#if SC_USE_PTR
+  return ptr ? _ptr__item_socket_cost_per_level[ ilevel - 1 ] : __item_socket_cost_per_level[ ilevel - 1 ];
+#else
+  return __item_socket_cost_per_level[ ilevel - 1 ];
+#endif
 }
 
 double dbc_t::armor_mitigation_constant( unsigned level ) const
