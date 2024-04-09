@@ -1117,6 +1117,8 @@ class SpellDataGenerator(DataGenerator):
     # without a category
     _spell_id_list = [
         (
+         53120, 53121, 53122, 53123, 53124, 53040, 74496, # Mining Prof Toughness
+         53125, 53662, 53663, 53664, 53665, 53666, 74495, # Skinning Prof Master of Anatomy
          134735,                    # PvP Rules Enabled
          109871, 109869,            # No'Kaled the Elements of Death - LFR
          107785, 107789,            # No'Kaled the Elements of Death - Normal

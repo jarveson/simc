@@ -4112,6 +4112,45 @@ void player_t::create_buffs()
     buffs.ancestral_call[ 3 ] = make_buff_fallback<stat_buff_t>( race == RACE_MAGHAR_ORC, this,
                                                                  "might_of_the_blackrock", find_spell( 274742 ) );
 
+
+    if (auto skill = profession[ PROF_MINING ]; skill > 0 ) {
+        if (skill >= 525)
+            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 74496 ) );
+        else if ( skill >= 450 )
+            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53040 ) );
+        else if ( skill >= 375 )
+            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53124 ) );
+        else if ( skill >= 300 )
+            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53123 ) );
+        else if ( skill >= 225 )
+            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53122 ) );
+        else if ( skill >= 150 )
+            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53121 ) );
+        else
+            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53120 ) );
+    }
+    else
+      buffs.toughness = make_buff_fallback( false, this, "toughness", find_spell( 53120 ) );
+
+    if ( auto skill = profession[ PROF_SKINNING]; skill > 0) {
+      if ( skill >= 525 )
+            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 74495 ) );
+      else if ( skill >= 450 )
+            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53666 ) );
+      else if ( skill >= 375 )
+            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53665 ) );
+      else if ( skill >= 300 )
+            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53664 ) );
+      else if ( skill >= 225 )
+            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53663 ) );
+      else if ( skill >= 150 )
+            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53662 ) );
+      else
+            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53125 ) );
+    }
+    else
+      buffs.master_of_anatomy = make_buff_fallback( false, this, "master_of_anatomy", find_spell( 53125 ) );
+
     if ( race == RACE_DARK_IRON_DWARF )
     {
       buffs.fireblood =
