@@ -2367,15 +2367,11 @@ slot_e util::translate_invtype( inventory_type inv_type )
     case INVTYPE_2HWEAPON:
     case INVTYPE_WEAPON:
     case INVTYPE_WEAPONMAINHAND:
-    case INVTYPE_RANGED:
-    case INVTYPE_RANGEDRIGHT:
       return SLOT_MAIN_HAND;
     case INVTYPE_WEAPONOFFHAND:
     case INVTYPE_SHIELD:
     case INVTYPE_HOLDABLE:
       return SLOT_OFF_HAND;
-    case INVTYPE_THROWN:
-      return SLOT_MAIN_HAND;
     case INVTYPE_CHEST:
     case INVTYPE_ROBE:
       return SLOT_CHEST;
@@ -2405,6 +2401,11 @@ slot_e util::translate_invtype( inventory_type inv_type )
       return SLOT_WRISTS;
     case INVTYPE_BODY:
       return SLOT_SHIRT;
+    case INVTYPE_THROWN:
+    case INVTYPE_RELIC:
+    case INVTYPE_RANGED:
+    case INVTYPE_RANGEDRIGHT:
+      return SLOT_RANGED;
     default:
       return SLOT_INVALID;
   }

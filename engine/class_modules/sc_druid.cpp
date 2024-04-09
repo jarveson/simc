@@ -5060,16 +5060,103 @@ void druid_t::create_actions()
 // Default Consumables ======================================================
 std::string druid_t::default_flask() const
 {
+  if ( true_level >= 80 )
+  {
+    switch ( specialization() )
+    {
+      case DRUID_GUARDIAN:
+      case DRUID_FERAL:
+            return role == role_e::ROLE_TANK ? "flask_of_steelskin" :
+            "flask_of_the_winds";
+      case DRUID_RESTORATION:
+      case DRUID_BALANCE:
+            return "flask_of_the_draconic_mind";
+      default:
+            return "disabled";
+    }
+  }
+
+  if ( true_level >= 75 )
+  {
+    switch ( specialization() )
+    {
+      case DRUID_GUARDIAN:
+      case DRUID_FERAL:
+            return "flask_of_endless_rage";
+      case DRUID_RESTORATION:
+      case DRUID_BALANCE:
+            return "flask_of_the_frost_wyrm";
+      default:
+            return "disabled";
+    }
+  }
   return "disabled";
 }
 
 std::string druid_t::default_potion() const
 {
+  if ( true_level >= 80 )
+  {
+    switch ( specialization() )
+    {
+      case DRUID_GUARDIAN:
+      case DRUID_FERAL:
+            return role == role_e::ROLE_TANK ? "disabled" : "potion_of_the_tolvir";
+      case DRUID_RESTORATION:
+      case DRUID_BALANCE:
+            return "volcanic_potion";
+      default:
+            return "disabled";
+    }
+  }
+
+  if ( true_level >= 75 )
+  {
+    switch ( specialization() )
+    {
+      case DRUID_GUARDIAN:
+      case DRUID_FERAL:
+            return "potion_of_speed";
+      case DRUID_RESTORATION:
+      case DRUID_BALANCE:
+            return "potion_of_speed";
+      default:
+            return "disabled";
+    }
+  }
   return "disabled";
 }
 
 std::string druid_t::default_food() const
 {
+  if ( true_level >= 80 )
+  {
+    switch ( specialization() )
+    {
+      case DRUID_GUARDIAN:
+      case DRUID_FERAL:
+      case DRUID_RESTORATION:
+      case DRUID_BALANCE:
+            return "seafood_magnifique_feast";
+      default:
+            return "disabled";
+    }
+  }
+
+  if ( true_level >= 75 )
+  {
+    switch ( specialization() )
+    {
+      case DRUID_GUARDIAN:
+      case DRUID_FERAL:
+            return "hearty_rhino";
+      case DRUID_RESTORATION:
+      case DRUID_BALANCE:
+            return "fish_feast";
+      default:
+            return "disabled";
+    }
+  }
   return "disabled";
 }
 
@@ -5092,6 +5179,7 @@ void druid_t::apl_precombat()
   precombat->add_action( "flask" );
   precombat->add_action( "food" );
   precombat->add_action( "snapshot_stats", "Snapshot raid buffed stats before combat begins and pre-potting is done." );
+  precombat->add_action( "potion" );
 }
 
 // NO Spec Combat Action Priority List ======================================
@@ -5281,36 +5369,36 @@ void druid_t::init_special_effects()
     {
       struct t12_2p_melee_cat_cb_t : public druid_cb_t
       {
-            struct fiery_claws_t : public residual_action::residual_periodic_action_t<cat_attacks::cat_attack_t>
-            {
+        struct fiery_claws_t : public residual_action::residual_periodic_action_t<cat_attacks::cat_attack_t>
+        {
           fiery_claws_t( druid_t* p ) : residual_action_t( "fiery_claws_cat", p, p->find_spell( 99002 ) )
           {
             proc = true;
           }
-            };
+        };
 
-            action_t* damage;
-            double mul;
+        action_t* damage;
+        double mul;
 
-            t12_2p_melee_cat_cb_t( druid_t* p, const special_effect_t& e )
-              : druid_cb_t( p, e ), mul( p->buff.t12_2p_melee->data().effectN( 1 ).percent() )
-            {
+        t12_2p_melee_cat_cb_t( druid_t* p, const special_effect_t& e )
+            : druid_cb_t( p, e ), mul( p->buff.t12_2p_melee->data().effectN( 1 ).percent() )
+        {
           damage = p->get_secondary_action<fiery_claws_t>( "fiery_claws_cat" );
-            }
+        }
 
-            void trigger( action_t* a, action_state_t* s ) override
-            {
+        void trigger( action_t* a, action_state_t* s ) override
+        {
           // Too lazy, 5221 is shred
           if ( a->id == p()->spec.mangle_cat->id() || a->id == 5221 )
           {
             dbc_proc_callback_t::trigger( a, s );
           }
-            }
+        }
 
-            void execute( action_t*, action_state_t* s ) override
-            {
-          residual_action::trigger( damage, s->target, s->result_amount * mul );
-            }
+        void execute( action_t*, action_state_t* s ) override
+        {
+        residual_action::trigger( damage, s->target, s->result_amount * mul );
+        }
       };
 
       const auto driver    = new special_effect_t( this );
@@ -6054,6 +6142,9 @@ void druid_t::apply_affecting_auras( action_t& action )
   action.apply_affecting_aura( talent.blessing_of_the_grove);
 
   // Feral
+  action.apply_affecting_aura( sets->set( DRUID_FERAL, T10, B2 ) );
+  action.apply_affecting_aura( sets->set( DRUID_FERAL, T10, B4 ) );
+
   action.apply_affecting_aura( sets->set( DRUID_FERAL, T11, B2 ) );
   action.apply_affecting_aura( sets->set( DRUID_FERAL, T11, B4) );
 }

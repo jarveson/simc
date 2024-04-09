@@ -12006,21 +12006,21 @@ std::unique_ptr<expr_t> player_t::create_expression( util::string_view expressio
   {
     const auto ctalent = find_talent_spell( talent_tree::CLASS,
         splits[ 1 ], specialization(), true );
-    const auto stalent = find_talent_spell( talent_tree::SPECIALIZATION,
-        splits[ 1 ], specialization(), true );
+    //const auto stalent = find_talent_spell( talent_tree::SPECIALIZATION,
+     //   splits[ 1 ], specialization(), true );
 
-    if ( ctalent.invalid() && stalent.invalid() )
+    if ( ctalent.invalid() )
     {
       throw std::invalid_argument(fmt::format("Cannot find talent '{}'.", splits[ 1 ]));
     }
 
     if ( splits.size() == 2 || ( splits.size() == 3 && splits[ 2 ] == "enabled" ) )
     {
-      return expr_t::create_constant( expression_str, ctalent.enabled() || stalent.enabled() );
+      return expr_t::create_constant( expression_str, ctalent.enabled() );
     }
     else if ( splits.size() == 3 && splits[ 2 ] == "rank" )
     {
-      return expr_t::create_constant( expression_str, std::max( ctalent.rank(), stalent.rank() ) );
+      return expr_t::create_constant( expression_str, ctalent.rank() );
     }
 
     throw std::invalid_argument(
