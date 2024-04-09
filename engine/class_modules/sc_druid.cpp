@@ -2948,7 +2948,12 @@ struct maul_t : public rage_spender_t<>
     base_dd_min = base_dd_max = 35;
     attack_power_mod.direct   = 0.19;
     bleed_mul                 = p->talent.rend_and_tear->effectN( 1 ).percent();
-    // todo: aoe
+
+    if ( p->glyphs.maul->ok()) {
+        aoe = p->glyphs.maul->effectN( 1 ).base_value();
+        base_aoe_multiplier *= 1.0 - p->glyphs.maul->effectN( 3 ).percent();
+
+    }
   }
 
   double composite_target_multiplier( player_t* t ) const override
