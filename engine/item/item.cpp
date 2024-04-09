@@ -377,6 +377,26 @@ std::string item_t::gem_stats_str() const
   return str;
 }
 
+std::string item_t::meta_gem_stats_str() const
+{
+  if ( parsed.meta_gem_stats.empty() )
+  {
+    return {};
+  }
+
+  std::ostringstream s;
+
+  for ( const auto& gem_stat : parsed.meta_gem_stats )
+  {
+    s << "+" << gem_stat.value << " " << util::stat_type_abbrev( gem_stat.stat ) << ", ";
+  }
+
+  std::string str = s.str();
+  str.erase( str.end() - 2, str.end() );
+
+  return str;
+}
+
 std::string item_t::enchant_stats_str() const
 {
   if ( parsed.enchant_stats.empty() )
@@ -471,7 +491,7 @@ void sc_format_to( const item_t& item, fmt::format_context::iterator out )
     fmt::format_to( out, " reforge={{ {} }}", item.reforge_stats_str() );
 
   if ( !item.parsed.meta_gem_stats.empty() )
-    fmt::format_to( out, " meta_gem={{ {} }}", "exists_fixme" );
+    fmt::format_to( out, " meta_gem={{ {} }}", item.meta_gem_stats_str() );
 
   if ( !item.parsed.gem_stats.empty() )
     fmt::format_to( out, " gems={{ {} }}", item.gem_stats_str() );

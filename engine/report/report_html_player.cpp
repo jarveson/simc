@@ -1302,8 +1302,13 @@ void print_html_gear( report::sc_html_stream& os, const player_t& p )
 
       if ( !item.parsed.meta_gem_stats.empty() )
       {
-        item_sim_desc += util::meta_gem_type_string( p.meta_gem );
-        item_sim_desc += ", ";
+        if ( !p.meta_gem )
+        {
+          item_sim_desc += item.meta_gem_stats_str() + "(meta-inactive),";
+        } else {
+          item_sim_desc += util::meta_gem_type_string( p.meta_gem );
+          item_sim_desc += ", ";
+        }
       }
 
       item_sim_desc += item.gem_stats_str();

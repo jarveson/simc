@@ -248,6 +248,7 @@ struct item_t
   std::string reforge_stats_str() const;
   std::string weapon_stats_str() const;
   std::string gem_stats_str() const;
+  std::string meta_gem_stats_str() const;
   std::string socket_bonus_stats_str() const;
   std::string enchant_stats_str() const;
   bool has_stats() const;
