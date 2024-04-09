@@ -1,5 +1,5 @@
-// Spell text, wow build 4.4.0.53863
-static const std::array<spelltext_data_t, 7588> __spelltext_data { {
+// Spell text, wow build 4.4.0.54137
+static const std::array<spelltext_data_t, 7600> __spelltext_data { {
   {     10, "Ice shards pelt the target area doing ${$42208m1*8*$<mult>} Frost damage over $10d.", "$42208s1 Frost damage every $42208t1 $lsecond:seconds;.", 0 },
   {     17, "Draws on the soul of the friendly target to shield them, absorbing $<shield> damage$?s55672[ and healing them for $55672s1% of the absorption amount][].  Lasts $d.  While the shield holds, spellcasting will not be interrupted by damage.  Once shielded, the target cannot be shielded again for $6788d.", "Absorbs $w1 damage.", 0 },
   {     53, "Backstab the target, causing $m2% weapon damage plus $m1 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.", 0, 0 },
@@ -37,7 +37,7 @@ static const std::array<spelltext_data_t, 7588> __spelltext_data { {
   {    467, "Thorns sprout from the friendly target causing $?s33876[${$M1+($AP*.168)}][${($M1+($SP*.168))*$<mult>}] Nature damage to attackers when hit.  $?s84840[Attack power gained from Vengeance will not increase Thorns damage.  ][]Lasts $d.", "Causes $w1 Nature damage to attackers.", 0 },
   {    469, "Generates ${$92049m1/10} Rage and increases the Stamina of all party and raid members within $a1 yards by $s1. Lasts $d.", "Stamina increased by $s1.", 0 },
   {    475, "Removes $m1 Curse from a friendly target.", 0, 0 },
-  {    498, "$?s54924[Reduces magical damage taken by $s3% for $d.][Reduces all damage taken by $s2% for $d.]", "Damage taken reduced by $s2%.", 0 },
+  {    498, "$?s54924[Reduces magical damage taken by $s4% for $d.][Reduces all damage taken by $s3% for $d.]", "$?s54924[Magical damage taken reduced by $w4%.][Damage taken reduced by $s3%.]", 0 },
   {    527, "Dispels magic on the target, removing $527s1 harmful $lspell:spells; from $?s33167[a friend][yourself] or $527s2 beneficial $lspell:spells; from an enemy.$?s55677[  When used on an ally or yourself, also restores $55677s1% of the target's maximum health when successfully dispelling a magical effect.][]", 0, 0 },
   {    528, "Removes $s1 $ldisease:diseases; from the friendly target.", 0, 0 },
   {    543, "Absorbs ${$m1+0.807*$SPA} Fire, Frost or Arcane damage.  Lasts $d.", "Absorbs $w1 Fire, Frost or Arcane damage.", 0 },
@@ -1713,7 +1713,7 @@ static const std::array<spelltext_data_t, 7588> __spelltext_data { {
   {  20235, "Gives your Word of Glory a $s1% increased critical chance when used on targets with 35% or less health.", 0, "Rank 2" },
   {  20237, "Increases the damage of your Holy Shock and Exorcism by $s1%.", 0, "Rank 1" },
   {  20238, "Increases the damage of your Holy Shock and Exorcism by $s1%.", 0, "Rank 2" },
-  {  20243, "Sunder the target's armor causing the Sunder Armor effect.  In addition, causes $m1% of weapon damage plus $s2 for each application of Sunder Armor on the target.  The Sunder Armor effect can stack up to $u times.", 0, 0 },
+  {  20243, "Sunder the target's armor causing the Sunder Armor effect.  In addition, causes $m2% of weapon damage plus ${$s3/$u} for each application of Sunder Armor on the target.  The Sunder Armor effect can stack up to $u times.", 0, 0 },
   {  20252, "Charge an enemy, causing ${$AP*0.12} damage (based on attack power) and stunning it for $20253d.", 0, "Berserker Stance" },
   {  20253, "Charge an enemy, causing ${1+$AP*0.12} damage (based on attack power) and stunning it for $20253d.", "Stunned.", "Rank 1" },
   {  20271, "Unleashes the energy of a Seal to judge an enemy for Holy damage.", 0, 0 },
@@ -2954,7 +2954,7 @@ static const std::array<spelltext_data_t, 7588> __spelltext_data { {
   {  34321, "Increases spell power by $s1 for $d.", "Spell power increased by $s1.", 0 },
   {  34339, "Balances your blunt weapon, increasing weapon damage by 12 for 1 hour.  Cannot be applied to items higher than level 200.", 0, 0 },
   {  34340, "Balances your blunt weapon, increasing weapon damage by 12 and critical strike rating by 14 for 1 hour.  Cannot be applied to items higher than level 200.", 0, 0 },
-  {  34428, "Instantly attack the target causing ${$AP*$m1/100} damage and healing you for $?s84580[${$m3*1.2}]?s84579[${$m3*1.1}][${$m3}]% of your maximum health.  Can only be used within $32216d after you kill an enemy that yields experience or honor.", 0, 0 },
+  {  34428, "Instantly attack the target causing ${$AP*$m1/100} damage and healing you for $?s84580[${$m2*1.2}]?s84579[${$m2*1.1}][${$m2}]% of your maximum health.  Can only be used within $32216d after you kill an enemy that yields experience or honor.", 0, 0 },
   {  34433, "Creates a shadowy fiend to attack the target.  Caster receives $34650s1% mana when the Shadowfiend attacks. Damage taken by area of effect attacks is reduced. Lasts $d.", 0, 0 },
   {  34460, "All party and raid members have all damage increased by $75447s1% within $75447a1 yards of your pet.", 0, "Passive" },
   {  34471, "When your pet is under the effects of Bestial Wrath, you also go into a rage causing $34471s2% additional damage and reducing focus costs of all your shots and abilities by $34471s1% for $34471d.", "Enraged.", 0 },
@@ -4604,7 +4604,7 @@ static const std::array<spelltext_data_t, 7588> __spelltext_data { {
   {  56812, "Increases the duration of your Garrote ability's silence effect by ${$56812m1/1000}.1 sec.", 0, 0 },
   {  56813, "Increases the range on Ambush by $56813s1 yards.", 0, 0 },
   {  56814, "Increases Revealing Strike's bonus effectiveness to your finishing moves by an additional $56814s1%", 0, 0 },
-  {  56815, "Strike the target for 180% weapon damage plus $m1.  Only usable while in Blood Presence, or for $56817d after the Death Knight dodges or parries.  This attack cannot be dodged, blocked, or parried, and causes a high amount of threat.", 0, 0 },
+  {  56815, "Strike the target for $s2% weapon damage plus ${$AP*0.1*$m2/100}.  Only usable while in Blood Presence, or for $56817d after the Death Knight dodges or parries.  This attack cannot be dodged, blocked, or parried, and causes a high amount of threat.", 0, 0 },
   {  56818, "Reduces the penalty to Energy generation while Blade Flurry is active by $56818s1%.", 0, 0 },
   {  56819, "Your Preparation ability also instantly resets the cooldown of Kick, Dismantle, and Smoke Bomb.", 0, 0 },
   {  56820, "Increases the chance to inflict your target with Crippling Poison by an additional $56820s1%.", 0, 0 },
@@ -6094,7 +6094,7 @@ static const std::array<spelltext_data_t, 7588> __spelltext_data { {
   {  81021, "Increases your melee haste by $81016s1% after you use Feral Charge (Bear) for $81016d, and your next Ravage will temporarily not require stealth or have a positioning requirement for $81021d after you use Feral Charge (Cat), and cost $81021s2% less energy.", "Your next Ravage can be used without requiring stealth or proper positioning, and costs $s2% less energy.", 0 },
   {  81022, "Increases your melee haste by $81017s1% after you use Feral Charge (Bear) for $81017d, and your next Ravage will temporarily not require stealth or have a positioning requirement for $81022d after you use Feral Charge (Cat), and cost $81022s2% less energy.", "Your next Ravage can be used without requiring stealth or proper positioning, and costs $s2% less energy.", 0 },
   {  81061, "While not in an Eclipse state, you have a $s1% chance to double the Solar or Lunar energy generated by your Wrath or Starfire when they deal damage.\r\n\r\nWhen you reach a Solar or Lunar eclipse, you instantly are restored $s3% of your total mana.", 0, 0 },
-  {  81062, "While not in an Eclipse state, you have a $s1% chance to double the Solar or Lunar energy generated by your Wrath or Starfire when they deal damage.\r\n\r\nWhen you reach a Solar or Lunar eclipse, you instantly are restored $s3% of your total mana.", 0, 0 },
+  {  81062, "While not in an Eclipse state, you have a $s1% chance to double the Solar or Lunar energy generated by your Wrath or Starfire when they deal damage. This effect cannot occur when you need less than $s4 energy to reach one end of the Eclipse bar.\r\n\r\nWhen you reach a Solar or Lunar eclipse, you instantly are restored $s3% of your total mana.", 0, 0 },
   {  81093, "Reduces the mana cost of your Wrath spell, and when you deal damage with your Wrath spell you have a chance to cause your next Starfire to be instant cast.", "Cast time of your next Starfire reduced by $s1%.", 0 },
   {  81094, "When you periodically heal with your Rejuvenation or Lifebloom spells, you have a chance to instantly regenerate a percentage of your total mana. This effect cannot occur more than once every $48539s2 sec.", "$w1% mana restored.", 0 },
   {  81099, "When you dual-wield one-handed weapons, you deal $s1% additional damage and Slam hits with both weapons.", 0, 0 },
@@ -6247,7 +6247,16 @@ static const std::array<spelltext_data_t, 7588> __spelltext_data { {
   {  83560, "Reduces the cooldown of your Rapid Fire by $/60000;s1 min, and your movement speed is increased by $s2% for $83559d after you use Disengage.", 0, "Rank 2" },
   {  83619, "At the end of its duration your Flame Orb explodes, dealing $s1 Fire damage to all nearby enemies.", 0, 0 },
   {  83853, "Combines your damaging periodic Fire effects on an enemy target but does not consume them, instantly dealing $11129s2 Fire damage and creating a new periodic effect that lasts $83853d and deals damage per time equal to the sum of the combined effects.", "Suffering $w1 Fire damage every sec.", 0 },
+  {  83942, "Items take $s1% less durability loss when you die.", 0, "Rank 1" },
+  {  83943, "Items take $s1% less durability loss when you die.", 0, "Rank 2" },
+  {  83949, "Increases the chance to gain a skill increase on tradeskills by $s1%.", 0, 0 },
+  {  83953, "Increases Justice points gained by $s1%.", 0, 0 },
+  {  83959, "Increases Honor points gained by $s1%.", 0, "Rank 1" },
+  {  83960, "Increases Honor points gained by $s1%.", 0, "Rank 2" },
   {  83963, "Increases the number of flasks gained from using a guild cauldron by $s1%.", 0, 0 },
+  {  83964, "Reduces the gold price of items from vendors by $s1%.", 0, 0 },
+  {  83966, "Sometimes increases the quantity of materials gained from Mining, Skinning, Herbalism, and Disenchanting.", 0, 0 },
+  {  83968, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
   {  84193, "Flip a card to see your fortune.", 0, 0 },
   {  84212, "Increases your dodge rating by $s1 for $d.", "Dodge rating increased by $s1.", 0 },
   {  84213, "Increases your dodge rating by $s1 for $d.", "Dodge rating increased by $s1.", 0 },
@@ -7588,13 +7597,16 @@ static const std::array<spelltext_data_t, 7588> __spelltext_data { {
   { 414268, "Your Plague Strikes have a chance to cause the Grasp of the Dead effect for 7 yards around the target.  Targets in the area are slowed by $s1%.", "Standing upon unholy ground. \r\nMovement speed is reduced by $s1%.", 0 },
   { 414813, "Your Shattering Throw is now instant and can be used in any stance, but it no longer removes invulnerabilities and cannot be used on players or player-controlled targets.", 0, 0 },
   { 425777, "Launch a fire trap to a nearby location where it will explode when an enemy approaches, causing ${$RAP*0.1+$49065m1} to ${$RAP*0.1+$49065M1} Fire damage and burning all enemies for ${$49065m2*10+$RAP} additional Fire damage over $49065d to all within $49065a1 yards.  Trap will exist for $d.  Only one trap can be active at a time.\r\n\r\nNot usable in Arenas or Battlegrounds.", 0, "Rank 1" },
+  { 450759, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
+  { 450761, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
+  { 450762, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
 } };
 
-// spelltext hotfix entries, wow build 4.4.0.53863
+// spelltext hotfix entries, wow build 4.4.0.54137
 static constexpr std::array<hotfix::client_hotfix_entry_t, 0> __spelltext_hotfix_data { {
 } };
 
-// Spell description variables, wow build 4.4.0.53863
+// Spell description variables, wow build 4.4.0.54137
 static const std::array<spelldesc_vars_data_t, 83> __spelldesc_vars_data { {
   { 10, "$arctic1=$?s31674[${1.01}][${1}]\r\n$arctic2=$?s31675[${1.02}][${$<arctic1>}]\r\n$arctic3=$?s31676[${1.03}][${$<arctic2>}]\r\n$arctic4=$?s31677[${1.04}][${$<arctic3>}]\r\n$arctic5=$?s31678[${1.05}][${$<arctic4>}]\r\n$piercing1=$?s11151[${1.02}][${1}]\r\n$piercing2=$?s12952[${1.04}][${$<piercing1>}]\r\n$piercing3=$?s12953[${1.06}][${$<piercing2>}]\r\n$mult=${$<arctic5>*$<piercing3>}" },
   { 17, "$twin1=$?s47586[${1.02}][${1.00}]\r\n$twin2=$?s47587[${1.04}][${$<twin1>}]\r\n$twin3=$?s47588[${1.06}][${$<twin2>}]\r\n$ipws1=$?s14748[${1.10}][${1.00}]\r\n$ipws2=$?s14768[${1.20}][${$<ipws1>}]\r\n$mastery=$?s47540[${((100+$77484m1)/100)}][${1.00}]\r\n$spirit=$?s87336[${((100+$87336m1)/100)}][${1.00}]\r\n$shield=${((($SP*0.87)+$m1)*$<mastery>*$<spirit>*$<twin3>*$<ipws2>)}" },
@@ -7681,7 +7693,7 @@ static const std::array<spelldesc_vars_data_t, 83> __spelldesc_vars_data { {
   { 95725, "$damage=${$95725m1+(($RAP*0.40)*0.288)}" },
 } };
 
-// spelldesc_vars hotfix entries, wow build 4.4.0.53863
+// spelldesc_vars hotfix entries, wow build 4.4.0.54137
 static constexpr std::array<hotfix::client_hotfix_entry_t, 0> __spelldesc_vars_hotfix_data { {
 } };
 

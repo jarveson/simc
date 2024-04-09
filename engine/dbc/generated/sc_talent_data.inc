@@ -1,4 +1,4 @@
-// 660 talents, wow build 4.4.0.53863
+// 660 talents, wow build 4.4.0.54137
 static std::array<talent_data_t, 660> __talent_data { {
   { "Precision",   181, 0, 8, 0, 2, 0, 0, 0, 181, { 13705, 13832, 13843, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 },  0 },
   { "Lightning Reflexes",   186, 0, 8, 0, 0, 2, 0, 0, 181, { 13712, 13788, 13789, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 },  0 },
@@ -662,7 +662,7 @@ static std::array<talent_data_t, 660> __talent_data { {
   { "Spirit Link Totem", 15487, 1, 64, 0, 3, 4, 0, 0, 262, { 98008, 0, 0, 0, 0, 0, 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 },  0 },
 } };
 
-// Talent Tabs, wow build 4.4.0.53863
+// Talent Tabs, wow build 4.4.0.54137
 static const std::array<talent_tab_data_t, 33> __talent_tab_data { {
   { 181, "Combat", 1, 8, 0 },
   { 182, "Assassination", 0, 8, 0 },

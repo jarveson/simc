@@ -1,5 +1,5 @@
-// Active class spells, wow build 4.4.0.53863
-static const std::array<active_class_spell_t, 955> __active_spells_data { {
+// Active class spells, wow build 4.4.0.54137
+static const std::array<active_class_spell_t, 958> __active_spells_data { {
   {  1,    0,     71,      0, "Defensive Stance" },
   {  1,    0,     78,      0, "Heroic Strike" },
   {  1,    0,    100,      0, "Charge" },
@@ -178,6 +178,7 @@ static const std::array<active_class_spell_t, 955> __active_spells_data { {
   {  2,    0,  73630,      0, "Summon Great Exarch's Elekk" },
   {  2,    0,  82326,      0, "Divine Light" },
   {  2,    0,  82327,      0, "Holy Radiance" },
+  {  2,    0,  83968,      0, "Mass Resurrection" },
   {  2,    0,  84963,      0, "Inquisition" },
   {  2,    0,  85222,      0, "Light of Dawn" },
   {  2,    0,  85256,      0, "Templar's Verdict" },
@@ -530,6 +531,7 @@ static const std::array<active_class_spell_t, 955> __active_spells_data { {
   {  5,    0,  88685,      0, "Holy Word: Sanctuary" },
   {  5,    0,  89485,      0, "Inner Focus" },
   {  5,    0, 101062,      0, "Flash Heal" },
+  {  5,    0, 450761,      0, "Absolution" },
   {  6,    0,   3714,      0, "Path of Frost" },
   {  6,    0,  42650,      0, "Army of the Dead" },
   {  6,    0,  43265,      0, "Death and Decay" },
@@ -685,6 +687,7 @@ static const std::array<active_class_spell_t, 955> __active_spells_data { {
   {  7,    0,  87718,      0, "Totem of Tranquil Mind" },
   {  7,    0,  88767,      0, "Fulmination" },
   {  7,    0,  98008,      0, "Spirit Link Totem" },
+  {  7,    0, 450762,      0, "Ancestral Vision" },
   {  8,    0,     10,      0, "Blizzard" },
   {  8,    0,     66,      0, "Invisibility" },
   {  8,    0,    116,      0, "Frostbolt" },
@@ -847,7 +850,6 @@ static const std::array<active_class_spell_t, 955> __active_spells_data { {
   {  9,    0,  79268,      0, "Soul Harvest" },
   {  9,    0,  80240,      0, "Bane of Havoc" },
   {  9,    0,  80398,      0, "Dark Intent" },
-  {  9,    0,  83967,      0, "Have Group, Will Travel" },
   {  9,    0,  85403,      0, "Hellfire" },
   {  9,    0,  86121,      0, "Soul Swap" },
   {  9,    0,  86213,      0, "Soul Swap Exhale" },
@@ -955,9 +957,10 @@ static const std::array<active_class_spell_t, 955> __active_spells_data { {
   { 11,    0,  88747,      0, "Wild Mushroom" },
   { 11,    0,  88751,      0, "Wild Mushroom: Detonate" },
   { 11,    0,  93402,      0, "Sunfire" },
+  { 11,    0, 450759,      0, "Revitalize" },
 } };
 
-// Pet active spells, wow build 4.4.0.53863
+// Pet active spells, wow build 4.4.0.54137
 static const std::array<active_pet_spell_t, 110> __active_pet_spells_data { {
   {  3,   1742, "Cower" },
   {  3,   2649, "Growl" },

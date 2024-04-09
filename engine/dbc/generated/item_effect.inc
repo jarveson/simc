@@ -1,4 +1,4 @@
-// Item effects, wow build 4.4.0.53863
+// Item effects, wow build 4.4.0.54137
 static const std::array<item_effect_t, 4055> __item_effect_data { {
   { 100305, 17152,    647, 0, 2, 0, -1, -1 }, // Destiny
   {  97068, 5005,    724, 0, 0, 11, 0, 1000 }, // Food
@@ -3162,9 +3162,9 @@ static const std::array<item_effect_t, 4055> __item_effect_data { {
   { 175738, 79633,  58145, 0, 0, 4, 0, 60000 }, // Tol'vir Agility
   { 175739, 79634,  58146, 0, 0, 4, 0, 60000 }, // Golem's Strength
   { 175741, 79635,  58148, 0, 0, 79, 0, 3000 }, // Elixir of the Master
-  { 175751, 91811,  58180, 0, 1, 0, 0, 0 }, // Item - Proc Stacking Strength
-  { 175752, 92105,  58181, 0, 1, 0, 0, 0 }, // Item - Proc Stacking Agility
-  { 175753, 92234,  58182, 0, 1, 0, 0, 0 }, // Item - Proc Dodge Below 35%
+  { 175751, 91811,  58180, 0, 1, 0, -1, -1 }, // Item - Proc Stacking Strength
+  { 175752, 92105,  58181, 0, 1, 0, -1, -1 }, // Item - Proc Stacking Agility
+  { 175753, 92234,  58182, 0, 1, 0, -1, -1 }, // Item - Proc Dodge Below 35%
   { 175754, 91019,  58183, 0, 0, 1141, 120000, 20000 }, // Soul Power
   { 175755, 91155,  58184, 0, 0, 1141, 120000, 20000 }, // Expansive Soul
   { 175788, 17619,  58483, 1, 1, 0, -1, -1 }, // Alchemist Stone

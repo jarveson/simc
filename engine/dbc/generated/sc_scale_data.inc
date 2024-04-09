@@ -1,4 +1,4 @@
-// Hit points per stamina for level 1 - 85, wow build 4.4.0.53863
+// Hit points per stamina for level 1 - 85, wow build 4.4.0.54137
 static constexpr double __hp_per_sta[85] = {
     14,	14,	15,	16,	17,	//    5
     18,	18,	18,	18,	18,	//   10
@@ -19,7 +19,7 @@ static constexpr double __hp_per_sta[85] = {
     43,	43,	44,	46,	47,	//   85
 };
 
-// Spell scaling multipliers for levels 1 - 85, wow build 4.4.0.53863
+// Spell scaling multipliers for levels 1 - 85, wow build 4.4.0.54137
 static constexpr double __spell_scaling[][85] = {
   // 10
   {
@@ -283,7 +283,7 @@ static constexpr double __spell_scaling[][85] = {
   },
 };
 
-// Base mana points for levels 1 - 85, wow build 4.4.0.53863
+// Base mana points for levels 1 - 85, wow build 4.4.0.54137
 static constexpr double _octbasempbyclass[][85] = {
   {
     0,	0,	0,	0,	0,	//    5
@@ -526,7 +526,7 @@ static constexpr double _octbasempbyclass[][85] = {
   },
 };
 
-// Base health points for levels 1 - 85, wow build 4.4.0.53863
+// Base health points for levels 1 - 85, wow build 4.4.0.54137
 static constexpr double _octbasehpbyclass[][85] = {
   {
     0,	0,	0,	0,	0,	//    5
@@ -769,7 +769,7 @@ static constexpr double _octbasehpbyclass[][85] = {
   },
 };
 
-// Chance to Spell Crit 1 - 85, wow build 4.4.0.53863
+// Chance to Spell Crit 1 - 85, wow build 4.4.0.54137
 static constexpr double _chancetospellcrit[][85] = {
   {
     0,	0,	0,	0,	0,	//    5
@@ -1012,7 +1012,7 @@ static constexpr double _chancetospellcrit[][85] = {
   },
 };
 
-// Spell Crit Base, wow build 4.4.0.53863
+// Spell Crit Base, wow build 4.4.0.54137
 static constexpr double _chancetospellcritbase[][85] = {
   {
     0,	  },
@@ -1051,7 +1051,7 @@ static constexpr double _chancetospellcritbase[][85] = {
     0.018515,	  },
 };
 
-// Chance to Melee Crit 1 - 85, wow build 4.4.0.53863
+// Chance to Melee Crit 1 - 85, wow build 4.4.0.54137
 static constexpr double _chancetomeleecrit[][85] = {
   {
     0,	0,	0,	0,	0,	//    5
@@ -1294,7 +1294,7 @@ static constexpr double _chancetomeleecrit[][85] = {
   },
 };
 
-// Melee Crit Base, wow build 4.4.0.53863
+// Melee Crit Base, wow build 4.4.0.54137
 static constexpr double _chancetomeleecritbase[][85] = {
   {
     0,	  },
@@ -1333,7 +1333,7 @@ static constexpr double _chancetomeleecritbase[][85] = {
     0.074755,	  },
 };
 
-// Combat rating values for level 1 - 85, wow build 4.4.0.53863
+// Combat rating values for level 1 - 85, wow build 4.4.0.54137
 static constexpr double __combat_ratings[][85] = {
   // 3
   {
@@ -1657,7 +1657,7 @@ static constexpr double __combat_ratings[][85] = {
   },
 };
 
-// Combat rating multipliers for item level 1 - 450, wow build 4.4.0.53863
+// Combat rating multipliers for item level 1 - 450, wow build 4.4.0.54137
 static constexpr double __combat_ratings_mult_by_ilvl[][450] = {
   // Armor Multiplier
   {
@@ -2033,7 +2033,7 @@ static constexpr double __combat_ratings_mult_by_ilvl[][450] = {
   },
 };
 
-// Item socket costs for item levels 1 - 450, wow build 4.4.0.53863
+// Item socket costs for item levels 1 - 450, wow build 4.4.0.54137
 static constexpr double __item_socket_cost_per_level[450] = {
     0,	0,	0,	0,	0,	//    5
     0,	0,	0,	0,	0,	//   10

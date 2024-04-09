@@ -1,4 +1,4 @@
-// Gem properties, wow build 4.4.0.53863
+// Gem properties, wow build 4.4.0.54137
 static const std::array<gem_property_data_t, 903> __gem_property_data { {
   {    2, 2686, 2 }, // +8 Strength
   {    3, 2687, 8 }, // +8 Agility
