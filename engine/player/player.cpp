@@ -5586,6 +5586,12 @@ void player_t::invalidate_cache( cache_e c )
         invalidate_cache( CACHE_SPELL_POWER );
       if ( current.spell_crit_per_intellect > 0 )
         invalidate_cache( CACHE_SPELL_CRIT_CHANCE );
+      if ( current.mana_per_intellect > 0 )
+        recalculate_resource_max( RESOURCE_MANA );
+      break;
+
+    case CACHE_STAMINA:
+      recalculate_resource_max( RESOURCE_HEALTH );
       break;
 
     case CACHE_SPELL_POWER:
@@ -7235,9 +7241,21 @@ void player_t::recalculate_resource_max( resource_e resource_type, gain_t* sourc
     case RESOURCE_HEALTH:
     {
       // Calculate & set maximum health
-      resources.max[ resource_type ] += floor( stamina() ) * current.health_per_stamina;
+      double adjust =
+            ( is_pet() || is_enemy() || is_add() ) ? 0 : std::min( 20, (int)floor( stamina() ) );
+      resources.max[ resource_type ] += ( std::floor( stamina() ) - adjust ) * current.health_per_stamina + adjust;
 
       // Make sure the player starts combat with full health
+      if ( !in_combat )
+        resources.current[ resource_type ] = resources.max[ resource_type ];
+      break;
+    }
+    case RESOURCE_MANA:
+    {
+      double adjust =
+          ( is_pet() || is_enemy() || is_add() ) ? 0 : std::min( 20, (int)floor( intellect() ) );
+      resources.max[ resource_type ] += std::floor( intellect() - adjust ) * current.mana_per_intellect + adjust;
+
       if ( !in_combat )
         resources.current[ resource_type ] = resources.max[ resource_type ];
       break;
