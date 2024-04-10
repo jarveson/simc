@@ -667,12 +667,14 @@ int item_database::scaled_stat( const item_t& item, const dbc_t& dbc, size_t idx
     // the latest alpha.
     auto socket_mul = []( const dbc_item_data_t& item, size_t idx ) {
       if ( idx < item._dbc_stats_count )
-        return item._dbc_stats[ idx ].socket_mul;
-      return 0.0f;
+        return item._dbc_stats[ idx ].socket_penalty;
+      return 0;
     };
     // Socket penalty is rounded using banker's rounding (X.5 is rounded to the nearest even integer).
-    double v_socket_penalty = std::nearbyint( socket_mul( item.parsed.data, idx ) * dbc.item_socket_cost( new_ilevel ) );
-    double v_raw = item.parsed.data.stat_alloc[ idx ] * item_budget * 0.0001 - v_socket_penalty;
+    // item_socket_cost dump is wrong as of beta, but new column gives raw socket_penalty
+    //double v_socket_penalty = std::nearbyint( socket_mul( item.parsed.data, idx ) * dbc.item_socket_cost( new_ilevel ) );
+    double v_socket_penalty = socket_mul( item.parsed.data, idx );
+    double v_raw            = item.parsed.data.stat_alloc[ idx ] * item_budget * 0.0001 - v_socket_penalty;
     auto stat_type = static_cast<item_mod_type>( item.parsed.data.stat_type_e[ idx ] );
 
     if ( util::is_combat_rating( stat_type ) )

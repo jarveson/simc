@@ -18,7 +18,7 @@ struct dbc_item_data_t {
   struct stats_t {
     int16_t type_e; // item_mod_type
     int     alloc;
-    float   socket_mul;
+    int     socket_penalty;
     int16_t bonus_amount;
   };
 

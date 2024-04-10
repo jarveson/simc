@@ -924,7 +924,7 @@ class ItemDataGenerator(DataGenerator):
                 if stat_type > 0:
                     stats.append(( stat_type,
                                    getattr(item, 'stat_alloc_{}'.format(i)),
-                                   item.field('stat_socket_mul_{}'.format(i))[0],
+                                   item.field('field_4_4_0_53750_013_{}'.format(i))[0],
                                    getattr(item, 'stat_modifier_bonus_amount_{}'.format(i))))
             if len(stats):
                 items_stats_index.add(item.id, sorted(stats, key=lambda s: s[:2]))
@@ -1063,7 +1063,7 @@ class ItemDataGenerator(DataGenerator):
                     stats['type'] = type
                     stats['val'] = int(item.field('stat_val_%d' % i)[0])
                     stats['alloc'] = int(item.field('stat_alloc_%d' % i)[0])
-                    stats['socket_mul'] = float(item.field('stat_socket_mul_%d' % i)[0])
+                    stats['socket_mul'] = float(item.field('field_4_4_0_53750_013%d' % i)[0])
                     item_entry['stats'].append(stats)
 
             item_effects = item.children('ItemEffect')
