@@ -4777,7 +4777,7 @@ void druid_t::init_base_stats()
   // Energy Regen
   resources.base_regen_per_second[ RESOURCE_ENERGY ] = 10;
 
-  resources.base_multiplier[ RESOURCE_MANA ] *= 1.0 + talent.furor->effectN( 2 ).percent();
+  resources.initial_multiplier[ RESOURCE_MANA ] *= 1.0 + talent.furor->effectN( 2 ).percent();
 
   base_gcd = 1.5_s;
 }
