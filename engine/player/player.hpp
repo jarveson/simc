@@ -454,6 +454,7 @@ struct player_t : public actor_t
     buff_t* windfury_totem;
 
     // cata
+    buff_t* lifeblood;
     buff_t* unholy_frenzy;
     buff_t* mark_of_the_wild;
     buff_t* arcane_intellect;

@@ -1,5 +1,5 @@
 // Spell text, wow build 4.4.0.54137
-static const std::array<spelltext_data_t, 7600> __spelltext_data { {
+static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {     10, "Ice shards pelt the target area doing ${$42208m1*8*$<mult>} Frost damage over $10d.", "$42208s1 Frost damage every $42208t1 $lsecond:seconds;.", 0 },
   {     17, "Draws on the soul of the friendly target to shield them, absorbing $<shield> damage$?s55672[ and healing them for $55672s1% of the absorption amount][].  Lasts $d.  While the shield holds, spellcasting will not be interrupted by damage.  Once shielded, the target cannot be shielded again for $6788d.", "Absorbs $w1 damage.", 0 },
   {     53, "Backstab the target, causing $m2% weapon damage plus $m1 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.", 0, 0 },
@@ -4388,6 +4388,7 @@ static const std::array<spelltext_data_t, 7600> __spelltext_data { {
   {  55379, "Increases melee and ranged haste rating by $s1 for $d.", "Melee and range haste rating increased by $s1.", 0 },
   {  55381, "2% chance on successful spellcast to restore $32848s1 mana.", 0, 0 },
   {  55382, "Restores $s1 mana.", 0, 0 },
+  {  55428, "Uses your skill in Herbalism to absorb energy and nutrients from the earth, instantly healing minor wounds and granting $s2 haste rating for $d.  Can be used while stealthed or invisible.", "Haste rating increased by $s2.", "Rank 2" },
   {  55436, "Increases the passive mana regeneration of your Water Shield spell by $55436s1%.", 0, 0 },
   {  55437, "Increases healing done by your Chain Heal spell to targets beyond the first by $55437s2%, but decreases the amount received by the initial target by $55437s1%.", 0, 0 },
   {  55438, "Causes your Totemic Recall ability to return an additional $55438s1% of the mana cost of any recalled totems.", 0, 0 },
@@ -4410,6 +4411,11 @@ static const std::array<spelltext_data_t, 7600> __spelltext_data { {
   {  55455, "Reduces the cooldown of your Fire Elemental Totem by ${$55455m1/-60000} min.", 0, 0 },
   {  55456, "Your Healing Stream Totem also increases the Fire, Frost, and Nature resistance of party and raid members within $8185a1 yards by ${$cond($lte($PL,70),$PL,$cond($lte($PL,80),$PL+($PL-70)*5,$PL+($PL-70)*5+($PL-80)*7))}.", 0, 0 },
   {  55478, "Increases your spell penetration by $s1.", 0, 0 },
+  {  55480, "Uses your skill in Herbalism to absorb energy and nutrients from the earth, instantly healing minor wounds and granting $s2 haste rating for $d.  Can be used while stealthed or invisible.", "Haste rating increased by $s2.", "Rank 3" },
+  {  55500, "Uses your skill in Herbalism to absorb energy and nutrients from the earth, instantly healing minor wounds and granting $s2 haste rating for $d.  Can be used while stealthed or invisible.", "Haste rating increased by $s2.", "Rank 4" },
+  {  55501, "Uses your skill in Herbalism to absorb energy and nutrients from the earth, instantly healing minor wounds and granting $s2 haste rating for $d.  Can be used while stealthed or invisible.", "Haste rating increased by $s2.", "Rank 5" },
+  {  55502, "Uses your skill in Herbalism to absorb energy and nutrients from the earth, instantly healing minor wounds and granting $s2 haste rating for $d.  Can be used while stealthed or invisible.", "Haste rating increased by $s2.", "Rank 6" },
+  {  55503, "Uses your skill in Herbalism to absorb energy and nutrients from the earth, instantly healing minor wounds and granting $s2 haste rating for $d.  Can be used while stealthed or invisible.", "Haste rating increased by $s2.", "Rank 7" },
   {  55533, "Heals a friendly target.", 0, 0 },
   {  55535, "Increases the passive mana regeneration of your Water Shield spell by $55436s1%.", 0, 0 },
   {  55536, "Captures a target up to $r yards away in a net for $d.", "Rooted.", 0 },
@@ -5842,6 +5848,7 @@ static const std::array<spelltext_data_t, 7600> __spelltext_data { {
   {  74256, "Permanently enchant bracers to increase haste rating by 65.  Requires a level 300 or higher item.", 0, 0 },
   {  74434, "Consumes a Soul Shard, allowing you to use the secondary effects on some of your spells.\r\n\r\nDrain Life\r\nSummon Imp, Voidwalker, Succubus, Felhunter, Felguard\r\nDemonic Circle: Teleport\r\nSoul Fire\r\nHealthstone\r\nSearing Pain$?s86664[\r\nSeed of Corruption][]", "Secondary effects of some of your spells have been unlocked:\r\n\r\nDrain Life\r\nSummon Imp, Voidwalker, Succubus, Felhunter, Felguard\r\nDemonic Circle: Teleport\r\nSoul Fire\r\nHealthstone\r\nSearing Pain$?s86664[\r\nSeed of Corruption][]", 0 },
   {  74493, "Combine 5 savage leather scraps to create a piece of savage leather.", 0, 0 },
+  {  74497, "Uses your skill in Herbalism to absorb energy and nutrients from the earth, instantly healing minor wounds and granting $s2 haste rating for $d.  Can be used while stealthed or invisible.", "Haste rating increased by $s2.", "Rank 8" },
   {  74553, "Heals $o1 damage over $d.", "Healing $s1 damage every $t1 seconds.", "Rank 13" },
   {  74554, "Heals $o1 damage over $d.", "Healing $s1 damage every $t1 seconds.", "Rank 13" },
   {  74555, "Heals $o1 damage over $d.", "Healing $s1 damage every $t1 seconds.", "Rank 13" },
@@ -6149,6 +6156,7 @@ static const std::array<spelltext_data_t, 7600> __spelltext_data { {
   {  81661, "When you cast Smite, Holy Fire or Mind Flay you gain Evangelism. Stacks up to $81660u times. Lasts for $87117d.\r\n\r\nEvangelism (Smite, Holy Fire) - Increases the damage done by your Smite, Holy Fire, and Penance spells by $81661s1% and reduces the mana cost of those spells by $81661s2%.\r\n\r\nDark Evangelism (Mind Flay) - Increases the damage done by your Periodic Shadow spells by $87118s1%.", "Increases the damage done by your Smite, Holy Fire and Penance spells by $s1% and reduces the mana cost of those spells by $s2%.", 0 },
   {  81662, "When you cast Smite, Holy Fire or Mind Flay you gain Evangelism. Stacks up to $81660u times. Lasts for $87117d.\r\n\r\n|CFFFFFFFFEvangelism (Smite, Holy Fire)|R\r\nIncreases the damage done by your Smite, Holy Fire, and Penance spells by $81661s1% and reduces the mana cost of those spells by $81661s2%.\r\n\r\n|CFFFFFFFFDark Evangelism (Mind Flay)|R\r\nIncreases the damage done by your Periodic Shadow spells by $87118s1%.", 0, "Rank 2" },
   {  81700, "Consumes your Evangelism effects, causing an effect depending what type of Evangelism effect is consumed:\r\n\r\nArchangel (Evangelism) - Instantly restores $87152s1% of your total mana and increases your healing done by $81700s1% for each stack. Lasts for $81700d. $87151s2 sec cooldown.\r\n\r\nDark Archangel (Dark Evangelism) - Instantly restores $87153s3% of your total mana and increases the damage done by your Mind Flay, Mind Spike, Mind Blast and Shadow Word: Death by $87153s1% for each stack. Lasts for $87153d. $87151s3 sec cooldown.", "Healing increased by $w2%.", 0 },
+  {  81708, "Uses your skill in Herbalism to absorb energy and nutrients from the earth, instantly healing minor wounds and granting $s2 haste rating for $d.  Can be used while stealthed or invisible.", "Haste rating increased by $s2.", "Rank 1" },
   {  81749, "When you deal damage with Smite or Holy Fire, you instantly heal a nearby low health friendly target within $14523s2 yards from the enemy target equal to $s1% of the damage dealt.\r\n\r\nIf the Priest is healed through Atonement, the effect is reduced in half.", 0, "Rank 2" },
   {  81782, "Summons a holy barrier on the target location that reduces all damage done to friendly targets by $81782s1%$?s55680[ and increasing healing received by $55689s1%][]. While within the barrier, spellcasting will not be interrupted by damage. The barrier lasts for $62618d.", "Reduces all damage taken by $s1%, and you resist all pushback while casting spells.", 0 },
   {  81913, "Increases your parry chance by $85386s1% for $85386d whenever you are brought to 20% health or less.  This effect cannot occur more often than once every 2 min.", 0, "Rank 1" },

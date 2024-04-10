@@ -1117,6 +1117,7 @@ class SpellDataGenerator(DataGenerator):
     # without a category
     _spell_id_list = [
         (
+         81708, 55428, 55480, 55500, 55501, 55502, 55503, 74497, # Herbalism Prof Lifeblood
          134735,                    # PvP Rules Enabled
          109871, 109869,            # No'Kaled the Elements of Death - LFR
          107785, 107789,            # No'Kaled the Elements of Death - Normal

@@ -2363,6 +2363,8 @@ std::vector<std::string> player_t::get_profession_actions()
 {
   std::vector<std::string> actions;
 
+  actions.emplace_back("lifeblood");
+
   return actions;
 }
 
@@ -4138,6 +4140,20 @@ void player_t::create_buffs()
                                                                  "ferocity_of_the_frostwolf", find_spell( 274741 ) );
     buffs.ancestral_call[ 3 ] = make_buff_fallback<stat_buff_t>( race == RACE_MAGHAR_ORC, this,
                                                                  "might_of_the_blackrock", find_spell( 274742 ) );
+    auto get_lb_id = [](int skill) -> unsigned int {
+      if ( skill >= 525 ) return 74497;
+      else if ( skill >= 450 ) return 55503;
+      else if ( skill >= 375 ) return 55502;
+      else if ( skill >= 300 ) return 55501;
+      else if ( skill >= 225 ) return 55500;
+      else if ( skill >= 150 ) return 55480;
+      else if ( skill >= 75 ) return 55428;
+      else if ( skill >= 1 ) return 81708;
+      return 0;
+    };
+
+    buffs.lifeblood = make_buff_fallback<stat_buff_t>( profession[PROF_HERBALISM] > 0, this, "lifeblood", find_spell( get_lb_id( profession[PROF_HERBALISM] ) ));
+
     if ( race == RACE_DARK_IRON_DWARF )
     {
       buffs.fireblood =
@@ -8712,6 +8728,31 @@ struct racial_heal_t : public heal_t
     if ( &data() == spell_data_t::not_found() )
       background = true;
   }
+};
+
+// Lifeblood
+struct lifeblood_t : public spell_t
+{
+  lifeblood_t( player_t* p, util::string_view options_str ) :
+    spell_t( "lifeblood", p, &p->buffs.lifeblood->data() )
+  { }
+
+  void init() override
+  {
+    spell_t::init();
+    if ( &data() == spell_data_t::not_found() )
+        background = true;
+  }
+
+  void execute() override
+  {
+    spell_t::execute();
+
+    player->buffs.lifeblood->trigger();
+    
+    // todo: heal
+  }
+
 };
 
 // Shadowmeld ===============================================================
