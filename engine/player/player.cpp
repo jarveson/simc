@@ -4128,6 +4128,7 @@ void player_t::create_buffs()
             buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53121 ) );
         else
             buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53120 ) );
+        buffs.toughness->trigger();
     }
     else
       buffs.toughness = make_buff_fallback( false, this, "toughness", find_spell( 53120 ) );
@@ -4147,6 +4148,7 @@ void player_t::create_buffs()
             buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53662 ) );
       else
             buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53125 ) );
+      buffs.master_of_anatomy->trigger();
     }
     else
       buffs.master_of_anatomy = make_buff_fallback( false, this, "master_of_anatomy", find_spell( 53125 ) );

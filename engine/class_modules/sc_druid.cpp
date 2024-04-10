@@ -5696,7 +5696,7 @@ double druid_t::composite_attribute_multiplier( attribute_e attr ) const
   switch ( attr )
   {
     case ATTR_STAMINA:
-      if ( buff.bear_form->check() )
+      if ( buff.bear_form && buff.bear_form->check() )
       {
         m *= 1.0 + spec.bear_form_passive->effectN( 2 ).percent();
         m *= 1.0 + talent.heart_of_the_wild->effectN( 1 ).percent();
@@ -5718,9 +5718,9 @@ double druid_t::matching_gear_multiplier( attribute_e attr ) const
       switch ( attr )
       {
         case ATTR_AGILITY:
-          return buff.cat_form->check() ? pct : 0.0;
+          return buff.cat_form && buff.cat_form->check() ? pct : 0.0;
         case ATTR_STAMINA:
-          return buff.bear_form->check() ? pct : 0.0;
+          return buff.bear_form && buff.bear_form->check() ? pct : 0.0;
         default: return 0.0;
       }
     default:
