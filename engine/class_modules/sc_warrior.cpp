@@ -807,7 +807,7 @@ public:
   double composite_rating_multiplier( rating_e rating ) const override;
   double composite_player_multiplier( school_e school ) const override;
   double composite_player_target_multiplier( player_t* target, school_e school ) const override;
-  double composite_player_target_crit_chance( player_t* target ) const override;
+  double composite_player_target_crit_chance( player_t* target, school_e school ) const override;
   double matching_gear_multiplier( attribute_e attr ) const override;
   double composite_melee_speed() const override;
   double composite_melee_haste() const override;
@@ -2139,9 +2139,9 @@ struct mortal_strike_t : public warrior_attack_t
     }
     if ( result_is_hit( execute_state->result ) )
     {
-      if ( execute_state->target->debuffs.healing_reduc )
+      if ( execute_state->target->debuffs.mortal_wounds )
       {
-        execute_state->target->debuffs.healing_reduc->trigger();
+        execute_state->target->debuffs.mortal_wounds->trigger();
       }
     }
     if ( p()->talents.arms.exhilarating_blows->ok() && rng().roll( exhilarating_blows_chance ) )
@@ -6072,7 +6072,8 @@ struct battle_shout_t : public warrior_spell_t
   {
     warrior_spell_t::execute();
     
-    player->buffs.battle_shout->trigger();
+    if (!sim->overrides.battle_shout)
+        player->buffs.battle_shout->trigger();
   }
 
 };
@@ -8370,9 +8371,9 @@ double warrior_t::composite_player_target_multiplier( player_t* target, school_e
 
 // warrior_t::composite_player_target_crit_chance =============================
 
-double warrior_t::composite_player_target_crit_chance( player_t* target ) const
+double warrior_t::composite_player_target_crit_chance( player_t* target, school_e school ) const
 {
-  double c = player_t::composite_player_target_crit_chance( target );
+  double c = player_t::composite_player_target_crit_chance( target, school );
 
   auto td = get_target_data( target );
 

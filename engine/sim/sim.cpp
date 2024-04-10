@@ -1939,10 +1939,10 @@ void sim_t::combat_begin()
     target -> combat_begin();
 
   if ( overrides.crit_chance ) auras.crit_chance->override_buff();
-  if ( overrides.melee_attack_speed ) auras.melee_attack_speed->override_buff();
   if ( overrides.attack_power ) auras.attack_power->override_buff();
   if ( overrides.spell_haste ) auras.spell_haste->override_buff();
   if ( overrides.all_damage ) auras.all_damage->override_buff();
+  if ( overrides.major_spell_power ) auras.major_spell_damage->override_buff();
 
   for ( player_e i = PLAYER_NONE; i < PLAYER_MAX; ++i )
   {
@@ -2778,10 +2778,6 @@ void sim_t::init()
                           ->set_default_value( dbc::find_spell( this, 24932 )->effectN( 1 ).percent() )
                           ->add_invalidate( CACHE_CRIT_CHANCE );
 
-  auras.melee_attack_speed = make_buff( this, "hunting_party", dbc::find_spell( this, 53290 ) )
-                                 ->set_default_value( dbc::find_spell( this, 53290 )->effectN( 2 ).percent() )
-                                 ->add_invalidate( CACHE_ATTACK_SPEED );
-
   auras.attack_power = make_buff( this, "trueshot_aura", dbc::find_spell(this, 19506 ))
                            ->set_default_value( dbc::find_spell( this, 53290 )->effectN( 2 ).percent() )
                            ->add_invalidate(CACHE_ATTACK_POWER);
@@ -2792,6 +2788,9 @@ void sim_t::init()
 
   auras.all_damage = make_buff( this, "arcane_tactics", dbc::find_spell( this, 82930 ) )
                          ->set_default_value( dbc::find_spell( this, 82930 )->effectN( 1 ).percent() );
+
+  auras.major_spell_damage = make_buff( this, "demonic_pact", dbc::find_spell( this, 53646 ) )
+                                 ->set_default_value( dbc::find_spell( this, 53646 )->effectN( 1 ).percent() );
 
   // Fight style initialization must be performed before target creation and raid event initialization, since fight
   // styles may define/override these things.
@@ -3427,13 +3426,18 @@ void sim_t::use_optimal_buffs_and_debuffs( int value )
   overrides.crit_chance             = optimal_raid;
   overrides.melee_attack_speed      = optimal_raid;
 
-  overrides.all_damage = optimal_raid;
+  overrides.all_damage        = optimal_raid;
+  overrides.crit_chance       = optimal_raid;
+  overrides.attack_power      = optimal_raid;
+  overrides.spell_haste       = optimal_raid;
+  overrides.major_spell_power = optimal_raid;
 
   overrides.bleeding                = optimal_raid;
   overrides.bleed_dmg               = optimal_raid;
   overrides.spell_dmg_taken         = optimal_raid;
   overrides.armor_reduc             = optimal_raid;
   overrides.phys_dmg                = optimal_raid;
+  overrides.spell_crit_taken        = optimal_raid;
 
   overrides.bloodlust               = optimal_raid;
 }
@@ -3694,10 +3698,21 @@ void sim_t::create_options()
   add_option( opt_int( "override.mark_of_the_wild", overrides.mark_of_the_wild ) );
   add_option( opt_int( "override.power_word_fortitude", overrides.power_word_fortitude ) );
   add_option( opt_int( "override.windfury_totem", overrides.windfury_totem ) );
+  add_option( opt_int( "override.melee_attack_speed", overrides.melee_attack_speed ) );
+  add_option( opt_int( "override.crit_chance", overrides.crit_chance ) );
+  add_option( opt_int( "override.attack_power", overrides.attack_power ) );
+  add_option( opt_int( "override.spell_haste", overrides.spell_haste ) );
+  add_option( opt_int( "override.major_spell_power", overrides.major_spell_power ) );
+  add_option( opt_int( "override.all_damage", overrides.all_damage ) );
   add_option( opt_int( "override.chaos_brand", overrides.chaos_brand ) );
   add_option( opt_int( "override.mystic_touch", overrides.mystic_touch ) );
   add_option( opt_int( "override.mortal_wounds", overrides.mortal_wounds ) );
+  add_option( opt_int( "override.armor_reduc", overrides.armor_reduc ) );
   add_option( opt_int( "override.bleeding", overrides.bleeding ) );
+  add_option( opt_int( "override.spell_crit_taken", overrides.spell_crit_taken ) );
+  add_option( opt_int( "override.spell_dmg_taken", overrides.spell_dmg_taken ) );
+  add_option( opt_int( "override.phys_dmg", overrides.phys_dmg ) );
+  add_option( opt_int( "override.bleed_dmg", overrides.bleed_dmg ) );
   add_option( opt_func( "override.spell_data", parse_override_spell_data ) );
   add_option( opt_func( "override.target_health", parse_override_target_health ) );
   // Lag

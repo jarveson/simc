@@ -795,7 +795,7 @@ public:
   double    composite_melee_crit_chance() const override;
   double    composite_spell_crit_chance() const override;
   double    composite_melee_speed() const override;
-  double    composite_player_target_crit_chance( player_t* target ) const override;
+  double    composite_player_target_crit_chance( player_t* target, school_e school ) const override;
   double    composite_player_critical_damage_multiplier( const action_state_t* ) const override;
   double    composite_player_multiplier( school_e school ) const override;
   double    composite_player_target_multiplier( player_t* target, school_e school ) const override;
@@ -1361,9 +1361,9 @@ struct hunter_pet_t: public pet_t
     pet_t::schedule_ready( delta_time, waiting );
   }
 
-  double composite_player_target_crit_chance( player_t* target ) const override
+  double composite_player_target_crit_chance( player_t* target, school_e school ) const override
   {
-    double crit = pet_t::composite_player_target_crit_chance( target );
+    double crit = pet_t::composite_player_target_crit_chance( target, school );
 
     crit += o() -> get_target_data( target ) -> debuffs.stampede -> check_value();
 
@@ -7714,9 +7714,9 @@ double hunter_t::composite_melee_speed() const
 
 // hunter_t::composite_player_target_crit_chance ============================
 
-double hunter_t::composite_player_target_crit_chance( player_t* target ) const
+double hunter_t::composite_player_target_crit_chance( player_t* target, school_e school ) const
 {
-  double crit = player_t::composite_player_target_crit_chance( target );
+  double crit = player_t::composite_player_target_crit_chance( target, school );
 
   crit += get_target_data( target ) -> debuffs.stampede -> check_value();
 

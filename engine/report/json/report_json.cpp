@@ -1261,15 +1261,29 @@ void to_json( const ::report::json::report_configuration_t& report_configuration
   add_non_zero( overrides, "arcane_intellect", sim.overrides.arcane_intellect );
   add_non_zero( overrides, "battle_shout", sim.overrides.battle_shout );
   add_non_zero( overrides, "power_word_fortitude", sim.overrides.power_word_fortitude );
+  add_non_zero( overrides, "mark_of_the_wild", sim.overrides.mark_of_the_wild );
+  add_non_zero( overrides, "arcane_brilliance", sim.overrides.arcane_brilliance );
+  add_non_zero( overrides, "melee_attack_speed", sim.overrides.melee_attack_speed );
+  add_non_zero( overrides, "crit_chance", sim.overrides.crit_chance );
+  add_non_zero( overrides, "attack_power", sim.overrides.attack_power );
+  add_non_zero( overrides, "spell_haste", sim.overrides.spell_haste );
+
+  add_non_zero( overrides, "major_spell_power", sim.overrides.major_spell_power );
+
   add_non_zero( overrides, "chaos_brand", sim.overrides.chaos_brand );
   add_non_zero( overrides, "mystic_touch", sim.overrides.mystic_touch );
   add_non_zero( overrides, "mortal_wounds", sim.overrides.mortal_wounds );
   add_non_zero( overrides, "bleeding", sim.overrides.bleeding );
   add_non_zero( overrides, "bloodlust", sim.overrides.bloodlust );
   add_non_zero( overrides, "bleed_dmg", sim.overrides.bleed_dmg );
+
+  add_non_zero( overrides, "cast_speed", sim.overrides.cast_speed );
+  add_non_zero( overrides, "phys_output", sim.overrides.phys_output );
+
   add_non_zero( overrides, "spell_dmg_taken", sim.overrides.spell_dmg_taken );
   add_non_zero( overrides, "armor_reduc", sim.overrides.armor_reduc );
   add_non_zero( overrides, "phys_dmg_taken", sim.overrides.phys_dmg );
+  add_non_zero( overrides, "spell_crit_taken", sim.overrides.spell_crit_taken );
   if ( sim.overrides.bloodlust )
   {
     add_non_zero( overrides, "bloodlust_percent", sim.bloodlust_percent );

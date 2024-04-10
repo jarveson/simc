@@ -460,6 +460,7 @@ struct player_t : public actor_t
     buff_t* arcane_intellect;
     buff_t* battle_shout;
     buff_t* power_word_fortitude;
+    buff_t* melee_attack_speed;
 
     // Legendary meta stuff
     buff_t* courageous_primal_diamond_lucidity;
@@ -575,9 +576,9 @@ struct player_t : public actor_t
     buff_t* damage_taken;
 
     // Cata
-    buff_t* healing_reduc;
     buff_t* bleed_dmg_taken;
     buff_t* spell_dmg_taken;
+    buff_t* spell_crit_taken;
     buff_t* attack_spd_reduc;
     buff_t* phys_dmg_taken;
     buff_t* armor_reduc;
@@ -1116,7 +1117,7 @@ public:
   virtual double composite_player_absorb_multiplier( const action_state_t* s ) const;
   virtual double composite_player_pet_damage_multiplier( const action_state_t*, bool guardian ) const;
   virtual double composite_player_target_pet_damage_multiplier( player_t* target, bool guardian ) const;
-  virtual double composite_player_target_crit_chance( player_t* target ) const;
+  virtual double composite_player_target_crit_chance( player_t* target, school_e school ) const;
   virtual double composite_player_critical_damage_multiplier( const action_state_t* s ) const;
   virtual double composite_player_critical_healing_multiplier() const;
   virtual double composite_player_target_armor( player_t* target ) const;

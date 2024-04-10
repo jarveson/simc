@@ -224,6 +224,10 @@ struct sim_t : private sc_thread_t
     int attack_power;
     int spell_haste;
 
+    int major_spell_power;
+    
+    int arcane_brilliance;
+
     int all_damage;
 
     // Debuff overrides
@@ -232,9 +236,13 @@ struct sim_t : private sc_thread_t
     int spell_dmg_taken;
     int armor_reduc;
     int phys_dmg;
+    int spell_crit_taken;
+
+    int phys_output;
+    int cast_speed;
+    int mortal_wounds;
 
     int mystic_touch;
-    int mortal_wounds;
     int chaos_brand;
 
     // Misc stuff needs resolving
@@ -247,11 +255,12 @@ struct sim_t : private sc_thread_t
     buff_t* fallback; // generic global fallback buff
 
     buff_t* crit_chance;
-    buff_t* melee_attack_speed;
     buff_t* attack_power;
     buff_t* spell_haste;
 
     buff_t* all_damage;
+
+    buff_t* major_spell_damage;
 
   } auras;
 

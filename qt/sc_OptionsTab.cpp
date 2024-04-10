@@ -479,14 +479,26 @@ void SC_OptionsTab::createBuffsDebuffsTab()
   appendCheckBox( tr( "Toggle All Buffs" ), "", tr( "Toggle all buffs on/off" ), buffsLayout, buffsButtonGroup );
   appendCheckBox( tr( "Bloodlust" ), "override.bloodlust", tr( "Ancient Hysteria\nBloodlust\nHeroism\nTime Warp" ),
                   buffsLayout, buffsButtonGroup );
-  appendCheckBox( tr( "Arcane Intellect" ), "override.arcane_intellect", tr( "Arcane Intellect" ), buffsLayout,
+  appendCheckBox( tr( "Arcane Brilliance" ), "override.arcane_intellect", tr( "Arcane Brilliance\nFlametongue Totem + Felhunter" ), buffsLayout,
                   buffsButtonGroup );
-  appendCheckBox( tr( "Power Word: Fortitude" ), "override.power_word_fortitude", tr( "Power Word: Fortitude" ),
+  appendCheckBox( tr( "Power Word: Fortitude" ), "override.power_word_fortitude", tr( "Power Word: Fortitude\nCommanding Shout\nWarlock Imp" ),
                   buffsLayout, buffsButtonGroup );
-  appendCheckBox( tr( "Battle Shout" ), "override.battle_shout", tr( "Battle Shout" ), buffsLayout, buffsButtonGroup );
-  appendCheckBox( tr( "Mark of the Wild" ), "override.mark_of_the_wild", tr( "Mark of the Wild" ), buffsLayout, buffsButtonGroup );
-  appendCheckBox( tr( "Windfury Totem" ), "override.windfury_totem", tr( "Windfury Totem" ),
+  appendCheckBox( tr( "Battle Shout" ), "override.battle_shout", tr( "Battle Shout\nHorn of Winter\Strength of Earth" ), buffsLayout, buffsButtonGroup );
+  appendCheckBox( tr( "Mark of the Wild" ), "override.mark_of_the_wild", tr( "Mark of the Wild\nBlessing of Kings" ), buffsLayout, buffsButtonGroup );
+  appendCheckBox( tr( "Attack Speed" ), "override.melee_attack_speed", tr( "Windfury Totem\nIcy Talons\nHunting Party" ),
                   buffsLayout, buffsButtonGroup );
+  appendCheckBox( tr( "Crit Chance" ), "override.crit_chance", tr( "LotP\nElemental Oath\nHaT\nRampage" ),
+                  buffsLayout, buffsButtonGroup );
+  appendCheckBox( tr( "Attack Power" ), "override.attack_power", tr( "Unleashed Rage\nTrueshot Aura\nAboms Might\nBlessing of Might" ), buffsLayout,
+                  buffsButtonGroup );
+  appendCheckBox( tr( "Spell Haste" ), "override.spell_haste", tr( "Moonkin\nShadow Priest\nWrath of Air" ),
+                  buffsLayout, buffsButtonGroup );
+  appendCheckBox( tr( "Spell Power" ), "override.major_spell_power", tr( "Demonic Pact\nTotemic Wrath" ),
+                  buffsLayout, buffsButtonGroup );
+  appendCheckBox( tr( "All Damage" ), "override.all_damage", tr( "Arcane Tactics\nFerocious Inspiration\nCommunion" ),
+                  buffsLayout, buffsButtonGroup );
+
+  
   buffsLayout->addStretch( 1 );
 
   QGroupBox* buffsGroupBox = new QGroupBox( tr( "Buffs" ) );  // Buff Widget
@@ -500,12 +512,18 @@ void SC_OptionsTab::createBuffsDebuffsTab()
   appendCheckBox( tr( "Toggle All Debuffs" ), "", tr( "Toggle all debuffs on/off" ), debuffsLayout,
                   debuffsButtonGroup );
   appendCheckBox( tr( "Bleeding" ), "override.bleeding", tr( "Rip\nRupture" ), debuffsLayout, debuffsButtonGroup );
-  appendCheckBox( tr( "Mortal Wounds" ), "override.mortal_wounds", tr( "Healing Debuff" ), debuffsLayout,
+  appendCheckBox( tr( "Armor Debuff" ), "override.armor_reduc", tr( "Expose\nSunder\nFaerie" ), debuffsLayout, debuffsButtonGroup );
+  appendCheckBox( tr( "Bleed Damage" ), "override.bleed_dmg", tr( "Mangle\nHemo\nBlood Frenzy" ), debuffsLayout,
                   debuffsButtonGroup );
-  appendCheckBox( tr( "Chaos Brand" ), "override.chaos_brand", tr( "Chaos Brand\nMagic damage debuff" ), debuffsLayout,
+  appendCheckBox( tr( "Physical Damage" ), "override.phys_dmg", tr( "Savage Combat\nBrittle Bones\nBlood Frenzy" ), debuffsLayout,
                   debuffsButtonGroup );
-  appendCheckBox( tr( "Mystic Touch" ), "override.mystic_touch", tr( "Mystic Touch\nPhysical damage debuff" ),
-                  debuffsLayout, debuffsButtonGroup );
+  appendCheckBox( tr( "Spell Crit" ), "override.spell_crit_taken", tr( "Critical Mass\nShadow & Flame" ), debuffsLayout,
+                  debuffsButtonGroup );
+  appendCheckBox( tr( "Spell Damage Taken" ), "override.spell_dmg_taken", tr( "Curse of Elements\nEarth & Moon\nEbon Plague\nMaster Poisoner" ), debuffsLayout,
+                  debuffsButtonGroup );
+  //appendCheckBox( tr( "Healing Reduction" ), "override.mortal_wounds", tr( "Mortal Strike\nWound Poison" ), debuffsLayout,
+  //                debuffsButtonGroup );
+
   debuffsLayout->addStretch( 1 );
 
   QGroupBox* debuffsGroupBox = new QGroupBox( tr( "Debuffs" ) );  // Debuff Widget

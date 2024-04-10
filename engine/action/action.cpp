@@ -1580,7 +1580,7 @@ double action_t::composite_target_armor( player_t* target ) const
 
 double action_t::composite_target_crit_chance( player_t* target ) const
 {
-  return player->composite_player_target_crit_chance( target );
+  return player->composite_player_target_crit_chance( target, get_school() );
 }
 
 double action_t::composite_target_multiplier(player_t* target) const

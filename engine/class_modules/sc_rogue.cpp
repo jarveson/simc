@@ -1156,7 +1156,6 @@ public:
   double    composite_player_multiplier( school_e school ) const override;
   double    composite_player_pet_damage_multiplier( const action_state_t*, bool ) const override;
   double    composite_player_target_multiplier( player_t* target, school_e school ) const override;
-  double    composite_player_target_crit_chance( player_t* target ) const override;
   double    composite_player_target_armor( player_t* target ) const override;
   double    resource_regen_per_second( resource_e ) const override;
   double    passive_movement_modifier() const override;
@@ -8954,15 +8953,6 @@ double rogue_t::composite_player_target_multiplier( player_t* target, school_e s
   m *= 1.0 + tdata->debuffs.sting_like_a_bee->stack_value();
 
   return m;
-}
-
-// rogue_t::composite_player_target_crit_chance =============================
-
-double rogue_t::composite_player_target_crit_chance( player_t* target ) const
-{
-  double c = player_t::composite_player_target_crit_chance( target );
-
-  return c;
 }
 
 // rogue_t::composite_player_target_armor ===================================

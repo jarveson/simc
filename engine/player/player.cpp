@@ -2157,7 +2157,7 @@ void player_t::create_special_effects()
 
   unique_gear::initialize_racial_effects( this );
 
-  if ( sim->overrides.windfury_totem )
+  if ( false /* sim->overrides.windfury_totem*/ )
   {
     special_effect_t effect( this );
 
@@ -4168,6 +4168,9 @@ void player_t::create_buffs()
 
     buffs.movement = new movement_buff_t( this );
 
+    buffs.melee_attack_speed = make_buff( this, "hunting_party", dbc::find_spell( this, 53290 ) )
+                                   ->set_default_value( dbc::find_spell( this, 53290 )->effectN( 2 ).percent() )
+                                   ->add_invalidate( CACHE_ATTACK_SPEED );
     if ( !is_pet() )
     {
       if ( sim->overrides.mark_of_the_wild )
@@ -4177,14 +4180,13 @@ void player_t::create_buffs()
           buffs.arcane_intellect->trigger();
 
       if ( sim->overrides.battle_shout )
+      {
+          buffs.battle_shout->set_duration(sim->max_time * 3);
           buffs.battle_shout->trigger();
+      }
 
       if (sim->overrides.power_word_fortitude )
           buffs.power_word_fortitude->trigger();
-
-      buffs.windfury_totem = make_buff<buff_t>( this, "windfury_totem", find_spell( 327942 ) )
-        ->set_duration( sim->max_time * 3 )
-        ->set_chance( as<double>( sim->overrides.windfury_totem ) );
 
       // 9.0 class buffs
       buffs.focus_magic = make_buff( this, "focus_magic", find_spell( 54646 ) )
@@ -4200,6 +4202,9 @@ void player_t::create_buffs()
                                 ->set_default_value_from_effect( 1 )
                                 ->set_cooldown( 0_ms )
                                 ->add_invalidate( CACHE_ATTACK_HASTE );
+
+      if ( sim->overrides.melee_attack_speed )
+          buffs.melee_attack_speed->trigger();
 
       // External trinkets
       if ( external_buffs.soleahs_secret_technique )
@@ -4303,7 +4308,7 @@ void player_t::create_buffs()
     debuffs.invulnerable  = new invulnerable_debuff_t( this );
     debuffs.vulnerable    = make_buff( this, "vulnerable" )->set_max_stack( 1 );
     debuffs.flying        = make_buff( this, "flying" )->set_max_stack( 1 );
-    debuffs.healing_reduc = make_buff( this, "mortal_strike", find_spell( 65926 ) )
+    debuffs.mortal_wounds = make_buff( this, "mortal_strike", find_spell( 65926 ) )
                                 ->set_default_value( std::fabs( find_spell( 65926 )->effectN( 1 ).percent() ) );
 
     // cata
@@ -4314,6 +4319,9 @@ void player_t::create_buffs()
 
     debuffs.armor_reduc = make_buff( this, "expose_armor", find_spell( 8647 ) )->set_default_value_from_effect(1);
     debuffs.phys_dmg_taken = make_buff( this, "savage_combat", find_spell( 58683 ) )->set_default_value_from_effect(1);
+    debuffs.spell_crit_taken =
+        make_buff( this, "critical_mass", find_spell( 22959 ) )->set_default_value_from_effect( 1 );
+
   }
 
   // set up always since this can be applied by enemy actions and raid events.
@@ -4452,8 +4460,8 @@ double player_t::composite_melee_speed() const
   if ( buffs.heavens_nemesis && buffs.heavens_nemesis->data().effectN( 1 ).subtype() == A_MOD_RANGED_AND_MELEE_ATTACK_SPEED && buffs.heavens_nemesis->check() )
     h *= 1.0 / ( 1.0 + buffs.heavens_nemesis->check_stack_value() );
 
-  if (sim->auras.melee_attack_speed && sim->auras.melee_attack_speed->check())
-    h *= 1.0 / ( 1.0 + sim->auras.melee_attack_speed->check_value() );
+  if (buffs.melee_attack_speed && buffs.melee_attack_speed->check())
+    h *= 1.0 / ( 1.0 + buffs.melee_attack_speed->check_value() );
 
   h *= 1.0 / ( 1.0 + racials.time_is_money->effectN( 1 ).percent() );
 
@@ -4937,7 +4945,9 @@ double player_t::composite_spell_power_multiplier() const
 
   double spm = current.spell_power_multiplier;
 
-  if ( buffs.arcane_intellect && buffs.arcane_intellect->check() )
+  if ( sim->auras.major_spell_damage->check())
+    spm *= 1.0 + sim->auras.major_spell_damage->value();
+  else if ( buffs.arcane_intellect && buffs.arcane_intellect->check() )
     spm *= 1.0 + buffs.arcane_intellect->data().effectN(2).percent();
 
   // multiplier is rounded to 3 digits
@@ -5228,7 +5238,7 @@ double player_t::composite_player_absorb_multiplier( const action_state_t* ) con
   return 1.0;
 }
 
-double player_t::composite_player_target_crit_chance( player_t* target ) const
+double player_t::composite_player_target_crit_chance( player_t* target, school_e school ) const
 {
   double c = 0.0;
 
@@ -5243,6 +5253,9 @@ double player_t::composite_player_target_crit_chance( player_t* target ) const
     // Darkmoon Deck: Putrescence
     c += td->debuff.putrid_burst->check_stack_value();
   }
+
+  if ( target->debuffs.spell_crit_taken && target->debuffs.spell_crit_taken->has_common_school(school) )
+    c += target->debuffs.spell_crit_taken->stack_value();
 
   return c;
 }
@@ -5532,6 +5545,12 @@ double player_t::composite_player_vulnerability( school_e school ) const
   // 1% damage taken per stack, arbitrary because this buff is completely fabricated!
   if ( debuffs.damage_taken && debuffs.damage_taken->check() )
     m *= 1.0 + debuffs.damage_taken->current_stack * 0.01;
+
+  if ( debuffs.phys_dmg_taken && debuffs.phys_dmg_taken->has_common_school( school ) )
+    m *= 1.0 + debuffs.phys_dmg_taken->check_value();
+
+  if ( debuffs.spell_dmg_taken && debuffs.spell_dmg_taken->has_common_school( school ) )
+    m *= 1.0 + debuffs.spell_dmg_taken->check_value();
 
   return m;
 }
@@ -5830,7 +5849,7 @@ void player_t::combat_begin()
 
   if ( buffs.windfury_totem && sim->overrides.windfury_totem && may_benefit_from_windfury_totem() )
   {
-    buffs.windfury_totem->trigger();
+    //buffs.windfury_totem->trigger();
   }
 
   // Trigger registered combat-begin functions
@@ -6722,11 +6741,13 @@ void player_t::arise()
       debuffs.bleeding->override_buff( 1, 1.0 );
     if ( sim->overrides.mortal_wounds && debuffs.mortal_wounds )
       debuffs.mortal_wounds->override_buff();
-    if (sim->overrides.spell_dmg_taken && debuffs.spell_dmg_taken )
+    if ( sim->overrides.spell_dmg_taken && debuffs.spell_dmg_taken )
       debuffs.spell_dmg_taken->override_buff();
-    if (sim->overrides.armor_reduc && debuffs.armor_reduc)
+    if ( sim->overrides.armor_reduc && debuffs.armor_reduc )
       debuffs.armor_reduc->override_buff();
-    if (sim->overrides.phys_dmg && debuffs.phys_dmg_taken)
+    if ( sim->overrides.spell_crit_taken && debuffs.spell_crit_taken )
+      debuffs.spell_crit_taken->override_buff();
+    if ( sim->overrides.phys_dmg && debuffs.phys_dmg_taken )
       debuffs.phys_dmg_taken->override_buff();
   }
   else

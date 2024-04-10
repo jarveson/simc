@@ -7929,9 +7929,9 @@ struct windfury_totem_t : public shaman_spell_t
   {
     shaman_spell_t::execute();
 
-    if ( !sim->overrides.windfury_totem )
+    if ( p()->buffs.windfury_totem && !sim->overrides.windfury_totem )
     {
-      p()->buffs.windfury_totem->trigger();
+      //p()->buffs.windfury_totem->trigger();
     }
     else
     {
