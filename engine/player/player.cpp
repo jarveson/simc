@@ -7633,11 +7633,11 @@ void player_t::stat_loss( stat_e stat, double amount, gain_t* gain, action_t* ac
   }
 
   auto recalc_resource = [ & ]( resource_e rsc ) {
-    recalculate_resource_max( RESOURCE_HEALTH );
+    recalculate_resource_max( rsc );
     // Adjust current health to new max on stamina gains
-    double delta = resources.current[ RESOURCE_HEALTH ] - resources.max[ RESOURCE_HEALTH ];
+    double delta = resources.current[ rsc ] - resources.max[ rsc ];
     if ( delta > 0 )
-      resource_loss( RESOURCE_HEALTH, delta, gain, action );
+      resource_loss( rsc, delta, gain, action );
   };
 
   switch ( stat )
