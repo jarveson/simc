@@ -1483,7 +1483,23 @@ double dbc_t::get_armor_constant_mod( difficulty_e diff ) const
 double dbc_t::npc_armor_value( unsigned level ) const
 {
   assert( level > 0 && level <= ( MAX_SCALING_LEVEL + 3 ) );
-  return 11977;  // todo
+    // TO-DO: Fill in the blanks.
+    // For level 80+ at least it seems to pretty much follow a trend line of: armor = 280.26168*level - 12661.51713
+    switch ( level )
+    {
+    case 80: return 9729;
+    case 81: return 10034;
+    case 82: return 10338;
+    case 83: return 10643;
+    case 84: return 10880; // Need real value
+    case 85: return 11092;
+    case 86: return 11387;
+    case 87: return 11682;
+    case 88: return 11977; 
+    default:
+        return ( int ) floor ( ( level / 80.0 ) * 9729 ); // Need a better value here.
+      break;
+    }
 }
 
 /* Generic helper methods */
