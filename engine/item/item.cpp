@@ -258,9 +258,12 @@ gear_stats_t item_t::total_stats() const
       if ( stat == s.stat ) total_stats.add_stat( to, s.value );
     });
 
-    range::for_each( parsed.socket_bonus_stats, [ stat, to, &total_stats ]( const stat_pair_t& s ) {
-      if ( stat == s.stat ) total_stats.add_stat( to, s.value );
-    });
+    if ( socket_color_match() )
+    {
+      range::for_each( parsed.socket_bonus_stats, [ stat, to, &total_stats ]( const stat_pair_t& s ) {
+        if ( stat == s.stat ) total_stats.add_stat( to, s.value );
+      });
+    }
 
     range::for_each( parsed.addon_stats, [ stat, to, &total_stats ]( const stat_pair_t& s ) {
       if ( stat == s.stat ) total_stats.add_stat( to, s.value );
@@ -1893,7 +1896,7 @@ void item_t::decode_gems()
         parsed.gem_color[ i ] = enchant::initialize_gem( *this, i );
 
       // Socket bonus
-      if ( socket_color_match() && parsed.socket_bonus_stats.empty() )
+      if ( socket_color_match() && parsed.socket_bonus_stats.empty() && parsed.data.id_socket_bonus > 0 )
       {
         const item_enchantment_data_t& socket_bonus = player -> dbc->item_enchantment( parsed.data.id_socket_bonus );
         enchant::initialize_item_enchant( *this, parsed.socket_bonus_stats, SPECIAL_EFFECT_SOURCE_SOCKET_BONUS, socket_bonus );

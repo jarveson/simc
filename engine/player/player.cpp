@@ -10466,6 +10466,8 @@ action_t* player_t::create_action( util::string_view name, util::string_view opt
     return new gift_of_the_naaru( this, options_str );
   if ( name == "haymaker" )
     return new haymaker_t( this, options_str );
+  if ( name == "lifeblood" )
+    return new lifeblood_t( this, options_str );
   if ( name == "lights_judgment" )
     return new lights_judgment_t( this, options_str );
   if ( name == "rocket_barrage" )
