@@ -459,8 +459,6 @@ struct player_t : public actor_t
     buff_t* arcane_intellect;
     buff_t* battle_shout;
     buff_t* power_word_fortitude;
-    buff_t* toughness;
-    buff_t* master_of_anatomy;
 
     // Legendary meta stuff
     buff_t* courageous_primal_diamond_lucidity;

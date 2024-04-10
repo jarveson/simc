@@ -1711,6 +1711,33 @@ void player_t::init_initial_stats()
 
   initial.stats += total_gear;
 
+  auto get_mining_stam = []( int skill ) {
+      if      ( skill >= 600 ) return 480.0;
+      else if ( skill >= 525 ) return 120.0;
+      else if ( skill >= 450 ) return  60.0;
+      else if ( skill >= 375 ) return  30.0;
+      else if ( skill >= 300 ) return  10.0;
+      else if ( skill >= 225 ) return   7.0;
+      else if ( skill >= 150 ) return   5.0;
+      else if ( skill >=  75 ) return   3.0;
+      return 0.0;
+  };
+
+  auto get_skinning_crit = []( int skill ) {
+    if      ( skill >= 600 ) return 480.0;
+    else if ( skill >= 525 ) return  80.0;
+    else if ( skill >= 450 ) return  40.0;
+    else if ( skill >= 375 ) return  20.0;
+    else if ( skill >= 300 ) return  12.0;
+    else if ( skill >= 225 ) return   9.0;
+    else if ( skill >= 150 ) return   6.0;
+    else if ( skill >=  75 ) return   3.0;
+    return 0.0;
+  };
+
+  initial.stats.attribute[ ATTR_STAMINA ] += get_mining_stam(profession[ PROF_MINING ]);
+  initial.stats.crit_rating += get_skinning_crit(profession[PROF_SKINNING]);
+
   sim->print_debug( "{} generic initial stats: {}", *this, initial );
 }
 
@@ -4111,48 +4138,6 @@ void player_t::create_buffs()
                                                                  "ferocity_of_the_frostwolf", find_spell( 274741 ) );
     buffs.ancestral_call[ 3 ] = make_buff_fallback<stat_buff_t>( race == RACE_MAGHAR_ORC, this,
                                                                  "might_of_the_blackrock", find_spell( 274742 ) );
-
-
-    if (auto skill = profession[ PROF_MINING ]; skill > 0 ) {
-        if (skill >= 525)
-            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 74496 ) );
-        else if ( skill >= 450 )
-            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53040 ) );
-        else if ( skill >= 375 )
-            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53124 ) );
-        else if ( skill >= 300 )
-            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53123 ) );
-        else if ( skill >= 225 )
-            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53122 ) );
-        else if ( skill >= 150 )
-            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53121 ) );
-        else
-            buffs.toughness = make_buff<stat_buff_t>( this, "toughness", find_spell( 53120 ) );
-        buffs.toughness->trigger();
-    }
-    else
-      buffs.toughness = make_buff_fallback( false, this, "toughness", find_spell( 53120 ) );
-
-    if ( auto skill = profession[ PROF_SKINNING]; skill > 0) {
-      if ( skill >= 525 )
-            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 74495 ) );
-      else if ( skill >= 450 )
-            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53666 ) );
-      else if ( skill >= 375 )
-            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53665 ) );
-      else if ( skill >= 300 )
-            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53664 ) );
-      else if ( skill >= 225 )
-            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53663 ) );
-      else if ( skill >= 150 )
-            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53662 ) );
-      else
-            buffs.master_of_anatomy = make_buff<stat_buff_t>( this, "master_of_anatomy", find_spell( 53125 ) );
-      buffs.master_of_anatomy->trigger();
-    }
-    else
-      buffs.master_of_anatomy = make_buff_fallback( false, this, "master_of_anatomy", find_spell( 53125 ) );
-
     if ( race == RACE_DARK_IRON_DWARF )
     {
       buffs.fireblood =
