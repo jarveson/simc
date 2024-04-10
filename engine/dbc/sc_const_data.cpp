@@ -1285,7 +1285,7 @@ double dbc_t::resource_base( player_e t, unsigned level ) const
 double dbc_t::health_per_stamina( unsigned level ) const
 {
   assert( level > 0 && level <= MAX_SCALING_LEVEL );
-  return __gt_octhp_per_stamina[ level ];
+  return __gt_octhp_per_stamina[ level - 1 ];
 }
 
 double dbc_t::mana_per_intellect_by_class(player_e t) const {
