@@ -3782,6 +3782,9 @@ void generic::windfury_totem( special_effect_t& effect )
     return;
   }
 
+  // not used in cata
+  return;
+
   auto proc = new wft_proc_callback_t( effect );
 
   auto wft_buff = buff_t::find( effect.player, "windfury_totem" );
