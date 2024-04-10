@@ -80,7 +80,6 @@ endif()
 add_executable(simc engine/sc_main.cpp)
 target_link_libraries(simc engine)
 sc_common_compiler_options(simc)
-add_definitions(-D_SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING)
 
 install(TARGETS simc DESTINATION ${SIMC_INSTALL_BIN})
 
