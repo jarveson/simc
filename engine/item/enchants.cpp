@@ -449,27 +449,27 @@ unsigned enchant::initialize_meta_gem( item_t& item, unsigned gem_id, const std:
   {
     const auto& c = cond.op[ i ];
 
+    // logic cols seem to signify 'next condition valid'
+    if ( i > 0 && cond.logic[ i - 1 ] == 0 )
+      break;
+
     const auto& lt  = cond.lt_operand[ i ];
     const auto& ltt = cond.lt_operandtype[ i ];
 
     const auto& rt  = cond.rt_operand[ i ];
     const auto& rtt = cond.rt_operandtype[ i ];
 
-    if ( lt != 0 && ltt != 0 || (rt != 0 && rtt != 0))
+    if ( lt != 0 && ltt != 0 || (rt != 0 && rtt != 0) || c == 0 )
     {
       throw std::invalid_argument( fmt::format( "Invalid gem cond from id {}.", gem_id ) );
-    }
-
-    if ( c == 0 )
-    {
-      continue;
     }
 
     // 'At least x gems'
     if ( c == 5 )
     {
       if ( ltt == 0 )
-        continue;
+        throw std::invalid_argument( fmt::format( "Invalid gem cond id {}.", gem_id ) );
+
       // rt has num, ltt has gem color
       auto gem = (item_socket_color)( 1 << (ltt - 1 ));
       auto cnt =
@@ -484,7 +484,7 @@ unsigned enchant::initialize_meta_gem( item_t& item, unsigned gem_id, const std:
     else if ( c == 3 )
     {
       if ( ltt == 0 || rtt == 0 )
-        continue;
+        throw std::invalid_argument( fmt::format( "Invalid gem cond id {}.", gem_id ) );
 
       auto lgem = (item_socket_color)( 1 << (ltt - 1));
       auto rgem = (item_socket_color)( 1 << (rtt - 1));
