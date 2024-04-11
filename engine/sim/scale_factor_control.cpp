@@ -201,7 +201,9 @@ void scale_factor_control_t::init_deltas()
   if ( stats->crit_rating  == 0 ) stats->crit_rating  = default_delta;
   if ( stats->haste_rating == 0 ) stats->haste_rating = default_delta;
   if ( stats->mastery_rating == 0 ) stats->mastery_rating = default_delta;
-  if ( stats->versatility_rating == 0 ) stats->versatility_rating = default_delta;
+  //if ( stats->versatility_rating == 0 ) stats->versatility_rating = default_delta;
+  if ( stats->hit_rating == 0 ) stats->hit_rating = default_delta;
+  if ( stats->expertise_rating == 0 ) stats->expertise_rating = default_delta;
 
   // Defensive
   if ( stats->armor == 0 ) stats->armor = default_delta;
@@ -213,9 +215,9 @@ void scale_factor_control_t::init_deltas()
   if ( stats->weapon_dps            == 0 ) stats->weapon_dps            = default_delta;
   if ( stats->weapon_offhand_dps    == 0 ) stats->weapon_offhand_dps    = default_delta;
 
-  if ( stats->leech_rating          == 0 ) stats->leech_rating          = default_delta;
-  if ( stats->avoidance_rating      == 0 ) stats->avoidance_rating      = default_delta;
-  if ( stats->speed_rating          == 0 ) stats->speed_rating          = default_delta;
+  //if ( stats->leech_rating          == 0 ) stats->leech_rating          = default_delta;
+  //if ( stats->avoidance_rating      == 0 ) stats->avoidance_rating      = default_delta;
+  //if ( stats->speed_rating          == 0 ) stats->speed_rating          = default_delta;
 }
 
 // scaling_t::analyze_stats =================================================

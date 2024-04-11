@@ -3372,12 +3372,8 @@ void player_t::init_scaling()
     scaling->set( STAT_SPELL_POWER, spell );
     scaling->set( STAT_ATTACK_POWER, attack );
     scaling->set( STAT_EXPERTISE_RATING, attack );
-    scaling->set( STAT_EXPERTISE_RATING, tank );
 
-    scaling->set( STAT_HIT_RATING, attack );
-    scaling->set( STAT_HIT_RATING, tank );
-    scaling->set( STAT_HIT_RATING, spell );
-
+    scaling->enable( STAT_HIT_RATING );
     scaling->enable( STAT_CRIT_RATING );
     scaling->enable( STAT_HASTE_RATING );
     scaling->enable( STAT_MASTERY_RATING );
