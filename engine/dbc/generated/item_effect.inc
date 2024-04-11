@@ -1,4 +1,4 @@
-// Item effects, wow build 4.4.0.54137
+// Item effects, wow build 4.4.0.54217
 static const std::array<item_effect_t, 4055> __item_effect_data { {
   { 100305, 17152,    647, 0, 2, 0, -1, -1 }, // Destiny
   {  97068, 5005,    724, 0, 0, 11, 0, 1000 }, // Food

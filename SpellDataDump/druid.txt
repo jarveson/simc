@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54217 cata-BETA
 Name             : Demoralizing Roar (desc=Bear Form) (id=99) [Spell Family (7)] 
 Class            : Druid
 School           : Physical
@@ -206,7 +206,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Allow While Not Shapeshifted (caster form) (83), DoT Stacking Rule (103), Aura Never Bounces (148), Spell Haste Affects Periodic (173), Vehicle Immunity Category (218), Periodic Can Crit (265), Aura Points On Client (268), Heal Prediction (280)
 Effects          :
 #1 (id=679789)   : Apply Aura (6) | Periodic Heal (8): every 3 seconds | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 1 | SP Coefficient: 0.13400 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 1 | Scaled Value: 1307.28 (coefficient=1.325) | SP Coefficient: 0.13400 | PvP Coefficient: 1.00000 | Target: Friend (21)
 #2 (id=121850)   : Apply Aura (6) | Modify Rating (189) | Scaling Class: 11
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: 4 | Target: Friend (21)
 Description      : Heals the target for $m1 every $t1 sec for $d.
@@ -247,7 +247,7 @@ Attributes       : ....x... ........ ..x..... ........   ........ .x...... .....
                  : Is Ability (4), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Treat as Area Effect (175)
 Effects          :
 #1 (id=679251)   : School Damage (2): physical | Scaling Class: 11
-                   Base Value: 9 | Scaled Value: 929.4021 (coefficient=0.942) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 9 | Scaled Value: 929.4021 (coefficient=0.942) | SP Coefficient: 1.00000 | AP Coefficient: 0.12300 | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Target: At Caster (22) -> AOE enemy (15)
 Description      : Swipe nearby enemies, inflicting $s1 damage.  Damage increased by attack power.
 
 Name             : Travel Form (desc=Shapeshift) (id=783) [Spell Family (7)] 
@@ -578,7 +578,7 @@ Range            : 40 yards
 Cast Time        : 3.2 seconds
 GCD              : 1.5 seconds
 Stance Mask      : 0x40000002
-Affecting spells : Insect Swarm (5570 effect#2), Starlight Wrath (16814 effect#1), Starlight Wrath (16815 effect#1), Starlight Wrath (16816 effect#1), Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Clearcasting (16870 effect#1), Nature's Grace (16886 effect#1), Moonfury (16913 effects: #1, #2), Balance of Power (33592 effect#1), Balance of Power (33596 effect#1), Dreamstate (33597 effect#1), Dreamstate (33599 effect#1), Lunar Shower (33603 effect#1), Lunar Shower (33604 effect#1), Lunar Shower (33605 effect#1), Nature's Majesty (35363 effect#1), Nature's Majesty (35364 effect#1), Owlkin Frenzy (48391 effect#1), Eclipse (Lunar) (48518 effect#1), Euphoria (81061 effect#1), Euphoria (81062 effect#1), Fury of Stormrage (81093 effect#1), Celestial Focus (84738 effect#1), Nature's Torment Cooldown (93432 effect#1)
+Affecting spells : Insect Swarm (5570 effect#2), Starlight Wrath (16814 effect#1), Starlight Wrath (16815 effect#1), Starlight Wrath (16816 effect#1), Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Clearcasting (16870 effect#1), Nature's Grace (16886 effect#1), Moonfury (16913 effects: #1, #2), Balance of Power (33592 effect#1), Balance of Power (33596 effect#1), Dreamstate (33597 effect#1), Dreamstate (33599 effect#1), Lunar Shower (33603 effect#1), Lunar Shower (33604 effect#1), Lunar Shower (33605 effect#1), Nature's Majesty (35363 effect#1), Nature's Majesty (35364 effect#1), Owlkin Frenzy (48391 effect#1), Eclipse (Lunar) (48518 effect#1), Euphoria (81061 effect#1), Euphoria (81062 effects: #1, #4), Fury of Stormrage (81093 effect#1), Celestial Focus (84738 effect#1), Nature's Torment Cooldown (93432 effect#1)
 Family Flags     : 2
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -627,7 +627,7 @@ Cast Time        : 2.5 seconds
 GCD              : 1.5 seconds
 Velocity         : 20 yards/sec
 Stance Mask      : 0x40000000
-Affecting spells : Insect Swarm (5570 effect#2), Starlight Wrath (16814 effect#1), Starlight Wrath (16815 effect#1), Starlight Wrath (16816 effect#1), Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Clearcasting (16870 effect#1), Nature's Grace (16886 effect#1), Moonfury (16913 effects: #1, #2), Fury of Stormrage (17104 effect#2), Nature's Swiftness (17116 effect#1), Fury of Stormrage (24943 effect#2), Balance of Power (33592 effect#1), Balance of Power (33596 effect#1), Dreamstate (33597 effect#1), Dreamstate (33599 effect#1), Lunar Shower (33603 effect#2), Lunar Shower (33604 effect#2), Lunar Shower (33605 effect#2), Nature's Majesty (35363 effect#1), Nature's Majesty (35364 effect#1), Owlkin Frenzy (48391 effect#1), Eclipse (Solar) (48517 effect#1), Glyph of Natural Force (52084 effect#1), Glyph of Wrath (54756 effect#1), Predator's Swiftness (69369 effects: #1, #2), Euphoria (81061 effect#1), Euphoria (81062 effect#1), Celestial Focus (84738 effect#1), Nature's Torment Cooldown (93432 effect#1)
+Affecting spells : Insect Swarm (5570 effect#2), Starlight Wrath (16814 effect#1), Starlight Wrath (16815 effect#1), Starlight Wrath (16816 effect#1), Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Clearcasting (16870 effect#1), Nature's Grace (16886 effect#1), Moonfury (16913 effects: #1, #2), Fury of Stormrage (17104 effect#2), Nature's Swiftness (17116 effect#1), Fury of Stormrage (24943 effect#2), Balance of Power (33592 effect#1), Balance of Power (33596 effect#1), Dreamstate (33597 effect#1), Dreamstate (33599 effect#1), Lunar Shower (33603 effect#2), Lunar Shower (33604 effect#2), Lunar Shower (33605 effect#2), Nature's Majesty (35363 effect#1), Nature's Majesty (35364 effect#1), Owlkin Frenzy (48391 effect#1), Eclipse (Solar) (48517 effect#1), Glyph of Natural Force (52084 effect#1), Glyph of Wrath (54756 effect#1), Predator's Swiftness (69369 effects: #1, #2), Euphoria (81061 effect#1), Euphoria (81062 effects: #1, #4), Celestial Focus (84738 effect#1), Nature's Torment Cooldown (93432 effect#1)
 Family Flags     : 0
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -1060,7 +1060,7 @@ Range            : 40 yards
 GCD              : 1.5 seconds
 Duration         : 12 seconds
 Stance Mask      : 0x40000002
-Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Nature's Grace (16886 effect#1), Moonfury (16913 effects: #1, #2, #3), Balance of Power (33592 effects: #1, #2), Balance of Power (33596 effects: #1, #2), Dreamstate (33597 effect#1), Dreamstate (33599 effect#1), Owlkin Frenzy (48391 effect#1), Earth and Moon (48506 effect#2), Glyph of Moonfire (54829 effect#1), Genesis (57810 effect#3), Genesis (57811 effect#3), Genesis (57812 effect#3), Blessing of the Grove (78784 effect#2), Blessing of the Grove (78785 effect#2), Lunar Shower (81006 effects: #1, #2), Euphoria (81061 effects: #1, #2), Euphoria (81062 effects: #1, #2), Lunar Shower (81191 effects: #1, #2), Lunar Shower (81192 effects: #1, #2), Shooting Stars (93398 effect#1), Shooting Stars (93399 effect#1), Sunfire (93401 effect#1), Nature's Torment Cooldown (93432 effect#1), Improved Moonfire (352504 effect#1), Improved Moonfire (388429 effect#1)
+Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Nature's Grace (16886 effect#1), Moonfury (16913 effects: #1, #2, #3), Balance of Power (33592 effects: #1, #2), Balance of Power (33596 effects: #1, #2), Dreamstate (33597 effect#1), Dreamstate (33599 effect#1), Owlkin Frenzy (48391 effect#1), Earth and Moon (48506 effect#2), Glyph of Moonfire (54829 effect#1), Genesis (57810 effect#3), Genesis (57811 effect#3), Genesis (57812 effect#3), Blessing of the Grove (78784 effect#2), Blessing of the Grove (78785 effect#2), Lunar Shower (81006 effects: #1, #2), Euphoria (81061 effects: #1, #2), Euphoria (81062 effects: #1, #2, #4), Lunar Shower (81191 effects: #1, #2), Lunar Shower (81192 effects: #1, #2), Shooting Stars (93398 effect#1), Shooting Stars (93399 effect#1), Sunfire (93401 effect#1), Nature's Torment Cooldown (93432 effect#1), Improved Moonfire (352504 effect#1), Improved Moonfire (388429 effect#1)
 Family Flags     : 1
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -1114,9 +1114,9 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Allow While Not Shapeshifted (caster form) (83), DoT Stacking Rule (103), Aura Never Bounces (148), Spell Haste Affects Periodic (173), Vehicle Immunity Category (218), Periodic Can Crit (265), Aura Points On Client (268), Heal Prediction (280)
 Effects          :
 #1 (id=686949)   : Direct Heal (10) | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 132.4 | Points Per Level: 1.8 | SP Coefficient: 0.29360 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 1 | Scaled Value: 3579.481 (coefficient=3.628) | Points Per Level: 1.8 | SP Coefficient: 0.29360 | PvP Coefficient: 1.00000 | Target: Friend (21)
 #2 (id=686950)   : Apply Aura (6) | Periodic Heal (8): every 2 seconds | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 1 | SP Coefficient: 0.02960 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 1 | Scaled Value: 361.1053 (coefficient=0.366) | SP Coefficient: 0.02960 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Heals a friendly target for $s1 and another ${$o2*$<mult>} over $d.$?s54743[  Regrowth's duration automatically refreshes to $93036m1 sec each time it heals targets at or below $54743s1% health.][]$?s33891[
 
 |C0033AA11Tree of Life: Instant cast.|R][]
@@ -1941,7 +1941,7 @@ Effects          :
 #2 (id=909511)   : Apply Aura (6) | Dummy (4)
                    Base Value: 80 | Scaled Value: 80 | PvP Coefficient: 1.00000 | Target: Self (1)
 #3 (id=909512)   : Apply Aura (6) | Unknown(109)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Trigger Spell: 69369 | Target: Self (1)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Points Per Combo Point: 10 | Trigger Spell: 69369 | Target: Self (1)
                    Affected Spells: Rip (1079), Ferocious Bite (22568), Maim (22570), Savage Roar (52610)
                    Family Flags: 23, 39, 60
 Description      : Increases the critical strike chance of your Ravage by $s1% on targets at or above $s2% health.
@@ -1967,7 +1967,7 @@ Effects          :
 #2 (id=909513)   : Apply Aura (6) | Dummy (4)
                    Base Value: 80 | Scaled Value: 80 | PvP Coefficient: 1.00000 | Target: Self (1)
 #3 (id=909514)   : Apply Aura (6) | Unknown(109)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Trigger Spell: 69369 | Target: Self (1)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Points Per Combo Point: 20 | Trigger Spell: 69369 | Target: Self (1)
                    Affected Spells: Rip (1079), Ferocious Bite (22568), Maim (22570), Savage Roar (52610)
                    Family Flags: 23, 39, 60
 Description      : Increases the critical strike chance of your Ravage by $s1% on targets at or above $s2% health.
@@ -2623,11 +2623,11 @@ Attributes       : ....x... ........ ..x..... ........   ........ .x...... ....x
                  : Is Ability (4), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Finishing Move - Damage (52), Discount Power On Miss (59), No Level Up Toast (281)
 Effects          :
 #1 (id=700435)   : School Damage (2): physical | Scaling Class: 11
-                   Base Value: 13 | Scaled Value: 377.8779 (coefficient=0.383) | Bonus Value: 576.1899 (0.584) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 13 | Scaled Value: 377.8779 (coefficient=0.383) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=1004219)  : Dummy (3) | Scaling Class: 11
                    Base Value: 30 | Scaled Value: 30 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#3 (id=12791)    : None (0) | Scaling Class: 11
-                   Base Value: 25 | Scaled Value: 25 | PvP Coefficient: 1.00000
+#3 (id=12791)    : Dummy (3) | Scaling Class: 11
+                   Base Value: 25 | Scaled Value: 25 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Finishing move that causes damage per combo point$?s67598 [ and consumes up to 35 additional energy to increase damage by up to 100%, and heals you for $67598m1% of your total maximum health for each $67598m2 energy used.][ and consumes up to 35 additional energy to increase damage by up to 100%.]  Damage is increased by your attack power.
    1 point  : ${$m1+$b1*1*$<mult>+0.109*$AP*$<mult>}-${$M1+$b1*1*$<mult>+0.109*$AP*$<mult>} damage
    2 points: ${$m1+$b1*2*$<mult>+0.218*$AP*$<mult>}-${$M1+$b1*2*$<mult>+0.218*$AP*$<mult>} damage
@@ -3229,9 +3229,9 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Allow While Not Shapeshifted (caster form) (83), DoT Stacking Rule (103), Spell Haste Affects Periodic (173), Vehicle Immunity Category (218), Periodic Can Crit (265), Aura Points On Client (268), Heal Prediction (280)
 Effects          :
 #1 (id=852962)   : Apply Aura (6) | Periodic Heal (8): every 1 seconds | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 1 | SP Coefficient: 0.02340 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 1 | Scaled Value: 228.3054 (coefficient=0.2314) | SP Coefficient: 0.02340 | PvP Coefficient: 1.00000 | Target: Friend (21)
 #2 (id=852963)   : Apply Aura (6) | Dummy (4) | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 1 | SP Coefficient: 0.28400 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 1 | Scaled Value: 1847.872 (coefficient=1.87292) | SP Coefficient: 0.28400 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Heals the target for ${$o1*$<mult>} over $d.  When Lifebloom expires or is dispelled, the target is instantly healed for ${$m2*$<bloom>}. 
 
 This effect can stack up to $u times on the same target. $?a33891[][Lifebloom can be active only on one target at a time.]$?s33891[
@@ -3969,9 +3969,9 @@ Attributes       : ........ ........ ........ ........   ........ ........ .....
                  : Ignore Line of Sight (66), Active Threat (94), Not a Proc (105), Do Not Display Range (126), Not In Spellbook (143), Spell Haste Affects Periodic (173), Vehicle Immunity Category (218), Aura Points On Client (268), Heal Prediction (280)
 Effects          :
 #1 (id=865237)   : Direct Heal (10) | Scaling Class: 11
-                   Base Value: 351 | Scaled Value: 351 | SP Coefficient: 0.39800 | PvP Coefficient: 1.00000 | Radius: 0 - 40 yards | Target: At Caster (22) -> AOE friendly (30)
+                   Base Value: 351 | Scaled Value: 3882.375 (coefficient=3.935) | SP Coefficient: 0.39800 | PvP Coefficient: 1.00000 | Radius: 0 - 40 yards | Target: At Caster (22) -> AOE friendly (30)
 #2 (id=91926)    : Apply Aura (6) | Periodic Heal (8): every 2 seconds | Scaling Class: 11
-                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 0.06800 | PvP Coefficient: 1.00000 | Radius: 0 - 40 yards | Target: At Caster (22) -> AOE friendly (30)
+                   Base Value: 0 | Scaled Value: 343.346 (coefficient=0.348) | SP Coefficient: 0.06800 | PvP Coefficient: 1.00000 | Radius: 0 - 40 yards | Target: At Caster (22) -> AOE friendly (30)
 Description      : Heals $740s3 nearby lowest health party or raid targets within $44203A1 yards with Tranquility every $740t1 sec for $740d. 
 
 Tranquility heals for $44203s1 plus an additional $44203s2 every $44203t2 sec over $44203d. Stacks up to $44203u times. The Druid must channel to maintain the spell.
@@ -4414,7 +4414,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Allow While Not Shapeshifted (caster form) (83), DoT Stacking Rule (103), Aura Never Bounces (148), Spell Haste Affects Periodic (173), Not On Trivial (182), Vehicle Immunity Category (218), Periodic Can Crit (265), Aura Points On Client (268), Not In Spellbook Until Learned (269), Heal Prediction (280)
 Effects          :
 #1 (id=952367)   : Apply Aura (6) | Periodic Heal (8): every 1 seconds | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 1 | SP Coefficient: 0.04370 | PvP Coefficient: 1.00000 | Radius: 0 - 30 yards | Target: Unknown(63) -> AOE friendly (31)
+                   Base Value: 1 | Scaled Value: 425.236 (coefficient=0.431) | SP Coefficient: 0.04370 | PvP Coefficient: 1.00000 | Radius: 0 - 30 yards | Target: Unknown(63) -> AOE friendly (31)
 #2 (id=952368)   : Apply Aura (6) | Dummy (4) | Scaling Class: 11
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 0 - 30 yards | Target: Unknown(87) -> AOE friendly (31)
 #3 (id=1002710)  : Dummy (3) | Scaling Class: 11
@@ -6797,7 +6797,7 @@ Attributes       : ....x... ........ ........ ........   ........ ........ .....
                  : Is Ability (4), Always Hit (114), Do Not Display Range (126), Not In Spellbook (143)
 Effects          :
 #1 (id=979625)   : School Damage (2): nature | Scaling Class: 11
-                   Base Value: 10 | Scaled Value: 2950.013 (coefficient=2.99) | Points Per Level: 35 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 10 | Scaled Value: 2950.013 (coefficient=2.99) | Points Per Level: 35 | AP Coefficient: 0.10800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Decrease the armor of the target by $91565s1% for $91565d.  While affected, the target cannot stealth or turn invisible.  Stacks up to $91565u times.  Deals $m1 damage and additional threat.
 
 Name             : Earth and Moon (id=60433) [Spell Family (7)] 
@@ -8644,7 +8644,11 @@ Effects          :
                    Family Flags: 1
 #3 (id=68612)    : Apply Aura (6) | Dummy (4)
                    Base Value: 16 | Scaled Value: 16 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : While not in an Eclipse state, you have a $s1% chance to double the Solar or Lunar energy generated by your Wrath or Starfire when they deal damage.
+#4 (id=1149048)  : Apply Aura (6) | Dummy (4)
+                   Base Value: 65 | Scaled Value: 65 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+                   Affected Spells: Starfire (2912), Wrath (5176), Moonfire (8921), Sunfire (93402)
+                   Family Flags: 0, 1, 2
+Description      : While not in an Eclipse state, you have a $s1% chance to double the Solar or Lunar energy generated by your Wrath or Starfire when they deal damage. This effect cannot occur when you need less than $s4 energy to reach one end of the Eclipse bar.
 
 When you reach a Solar or Lunar eclipse, you instantly are restored $s3% of your total mana.
 
@@ -9032,6 +9036,126 @@ Effects          :
                    Family Flags: 13, 14, 21
 Description      : Increases the mana cost of all spells by $s1% for $d.
 Tooltip          : Mana cost of all spells increased by $s1%.
+
+Name             : Reinforce (desc=Rank 2) (id=83943) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84523)    : Apply Aura (6) | Unknown(338)
+                   Base Value: 20 | Scaled Value: 20 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Items take $s1% less durability loss when you die.
+
+Name             : Working Overtime (id=83949) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84533)    : Apply Aura (6) | Unknown(621)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Increases the chance to gain a skill increase on tradeskills by $s1%.
+
+Name             : For Great Justice (id=83953) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84539)    : Apply Aura (6) | Unknown(349)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 395 | Target: Self (1)
+Description      : Increases Justice points gained by $s1%.
+
+Name             : Honorable Mention (desc=Rank 2) (id=83960) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84546)    : Apply Aura (6) | Unknown(349)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 1901 | Target: Self (1)
+Description      : Increases Honor points gained by $s1%.
+
+Name             : Bartering (id=83964) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84550)    : Apply Aura (6) | Unknown(620)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Reduces the gold price of items from vendors by $s1%.
+
+Name             : Bountiful Bags (id=83966) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84552)    : Apply Aura (6) | Unknown(623)
+                   Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Misc Value: 7 | Misc Value 2: 0x12e0 | Target: Self (1)
+Description      : Sometimes increases the quantity of materials gained from Mining, Skinning, Herbalism, and Disenchanting.
 
 Name             : Aggression (desc=Passive) (id=84735) [Spell Family (6), Passive] 
 Class            : Druid
@@ -9701,7 +9825,7 @@ Range            : 40 yards
 GCD              : 1.5 seconds
 Duration         : 12 seconds
 Stance Mask      : 0x40000000
-Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Nature's Grace (16886 effect#1), Moonfury (16913 effects: #1, #2, #3), Balance of Power (33592 effects: #1, #2), Balance of Power (33596 effects: #1, #2), Dreamstate (33597 effect#1), Dreamstate (33599 effect#1), Owlkin Frenzy (48391 effect#1), Earth and Moon (48506 effect#2), Glyph of Moonfire (54829 effect#1), Genesis (57810 effect#3), Genesis (57811 effect#3), Genesis (57812 effect#3), Blessing of the Grove (78784 effect#2), Blessing of the Grove (78785 effect#2), Lunar Shower (81006 effects: #1, #2), Euphoria (81061 effects: #1, #2), Euphoria (81062 effects: #1, #2), Lunar Shower (81191 effects: #1, #2), Lunar Shower (81192 effects: #1, #2), Shooting Stars (93398 effect#1), Shooting Stars (93399 effect#1), Sunfire (93401 effect#1), Nature's Torment Cooldown (93432 effect#1), Improved Moonfire (352504 effect#1), Improved Moonfire (388429 effect#1)
+Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Nature's Grace (16886 effect#1), Moonfury (16913 effects: #1, #2, #3), Balance of Power (33592 effects: #1, #2), Balance of Power (33596 effects: #1, #2), Dreamstate (33597 effect#1), Dreamstate (33599 effect#1), Owlkin Frenzy (48391 effect#1), Earth and Moon (48506 effect#2), Glyph of Moonfire (54829 effect#1), Genesis (57810 effect#3), Genesis (57811 effect#3), Genesis (57812 effect#3), Blessing of the Grove (78784 effect#2), Blessing of the Grove (78785 effect#2), Lunar Shower (81006 effects: #1, #2), Euphoria (81061 effects: #1, #2), Euphoria (81062 effects: #1, #2, #4), Lunar Shower (81191 effects: #1, #2), Lunar Shower (81192 effects: #1, #2), Shooting Stars (93398 effect#1), Shooting Stars (93399 effect#1), Sunfire (93401 effect#1), Nature's Torment Cooldown (93432 effect#1), Improved Moonfire (352504 effect#1), Improved Moonfire (388429 effect#1)
 Family Flags     : 1
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ...x.... ........   ........ ........ ........ ........ 
@@ -10248,5 +10372,28 @@ Effects          :
 #2 (id=119088)   : Apply Aura (6) | Dummy (4)
                    Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Frenzied Regeneration also affects all raid and party members.  This effect cannot be triggered if you have been in Bear Form for less than $s2 sec.  In addition, using Tiger's Fury will also trigger your Stampede talent as if you used Feral Charge (Cat).
+
+Name             : Revitalize (id=450759) 
+Class            : Druid
+School           : Nature
+Spell Type       : Magic
+Resource         : 100% Base Mana (0) (id=306802)
+Spell Level      : 44
+Range            : 100 yards
+Cast Time        : 10 seconds
+GCD              : 1.5 seconds
+Attributes       : ........ ........ ........ ....x...   ........ ........ .x...... ........ 
+                 : ..x..... ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ x....... ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ....x...   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Not In Combat (Only Peaceful) (28), No AutoCast (AI) (49), Ignore Line of Sight (66), Not In Arena or Rated Battleground (144), Not in Battleground (284)
+Effects          :
+#1 (id=1150875)  : Unknown(172)
+                   Base Value: 35 | Scaled Value: 35 | PvP Coefficient: 1.00000 | Radius: 100 yards | Target: Unknown(119)
+Description      : Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.
 
 

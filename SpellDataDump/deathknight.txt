@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54217 cata-BETA
 Name             : Dual Wield (desc=Passive) (id=674) [Passive] 
 Class            : Warrior, Hunter, Rogue, Death Knight
 School           : Physical
@@ -472,9 +472,11 @@ Attributes       : ........ ........ ........ ........   ........ ..x..... .....
                  : ........ ........ ........ ........   
                  : No Threat (42), Don't Block Mana Regen (89)
 Effects          :
-#3 (id=979641)   : Apply Aura (6) | Unknown(512)
+#1 (id=1149179)  : Energize Power (30)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: rune | Target: Self (1)
+#2 (id=1149180)  : Apply Aura (6) | Unknown(512)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value 2: 0x3 | Target: Self (1)
-#4 (id=979642)   : Energize Power (30)
+#3 (id=979641)   : Energize Power (30)
                    Base Value: 99 | Scaled Value: 99 | PvP Coefficient: 1.00000 | Misc Value: runic_power | Target: Self (1)
 Description      : Immediately activates a Blood Rune and converts it into a Death Rune for the next $d.  Death Runes count as a Blood, Frost or Unholy Rune.
 Tooltip          : Blood Rune converted to a Death Rune.
@@ -1676,8 +1678,8 @@ Effects          :
                    Family Flags: 0, 1, 2, 4, 5, 6, 7, 9, 11, 12, 22, 23
 #3 (id=1004036)  : Dummy (3) | Scaling Class: 6
                    Base Value: 50 | Scaled Value: 50 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#4 (id=41297)    : None (0) | Scaling Class: 6
-                   Base Value: 50 | Scaled Value: 50 | PvP Coefficient: 1.00000
+#4 (id=41297)    : Dummy (3) | Scaling Class: 6
+                   Base Value: 50 | Scaled Value: 50 | PvP Coefficient: 1.00000 | Target: Enemy (6)
                    Affected Spells: Plague Strike (45462), Chains of Ice (45524), Blood Strike (45902), Plague Strike (52373), Blood Strike (52374), Desecration (55666), Desecration (55667), Blood Strike Off-Hand (66215), Plague Strike Off-Hand (66216)
                    Family Flags: 0, 2, 7, 22
 Description      : Blast the target with a frigid wind, dealing ${(($m2+$M2)/2)+($AP*0.44)} Frost damage to that foe, and ${(0.5*((($m2+$M2)/2)+($AP*0.44)))} Frost damage to all other enemies within $A2 yards$?s63335[, infecting all targets with Frost Fever][].
@@ -4828,14 +4830,14 @@ Attributes       : ....x... ........ ..x..x.. ........   ........ .x...... .....
                  : Is Ability (4), Do Not Sheath (18), No Active Defense (21), Initiates Combat (Enables Auto-Attack) (41), Discount Power On Miss (59), Requires Main-Hand Weapon (106), Combat Feedback When Usable (137)
 Effects          :
 #1 (id=981258)   : Weapon Damage (58)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | AP Coefficient: 0.10000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=981259)   : Weapon Damage% (31)
                    Base Value: 180 | Scaled Value: 1.8 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=1004070)  : Dummy (3)
-                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#4 (id=49945)    : None (0)
-                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000
-Description      : Strike the target for 180% weapon damage plus $m1.  Only usable while in Blood Presence, or for $56817d after the Death Knight dodges or parries.  This attack cannot be dodged, blocked, or parried, and causes a high amount of threat.
+                   Base Value: 10 | Scaled Value: 10 | AP Coefficient: 0.10000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+#4 (id=49945)    : Dummy (3)
+                   Base Value: 10 | Scaled Value: 10 | AP Coefficient: 0.10000 | PvP Coefficient: 1.00000
+Description      : Strike the target for $s2% weapon damage plus ${$AP*0.1*$m2/100}.  Only usable while in Blood Presence, or for $56817d after the Death Knight dodges or parries.  This attack cannot be dodged, blocked, or parried, and causes a high amount of threat.
 
 Name             : Rune Strike (id=56816) [Spell Family (15), Passive, Hidden] 
 Class            : Death Knight
@@ -7017,8 +7019,8 @@ Effects          :
                    Base Value: 80 | Scaled Value: 0.8 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=1004113)  : Dummy (3) | Scaling Class: 6
                    Base Value: 25 | Scaled Value: 25 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#4 (id=60393)    : None (0) | Scaling Class: 6
-                   Base Value: 125 | Scaled Value: 125 | PvP Coefficient: 1.00000
+#4 (id=60393)    : Dummy (3) | Scaling Class: 6
+                   Base Value: 125 | Scaled Value: 125 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Instantly strike the enemy, causing $m2% weapon damage plus a bonus. Damage is increased by ${$m3/10}.1% for each of your diseases on the target.
 
 Name             : Plague Strike Off-Hand (id=66216) [Spell Family (15)] 
@@ -7068,11 +7070,11 @@ Attributes       : ....x... ........ ..x..x.. ........   ........ ........ .....
                  : Is Ability (4), Do Not Sheath (18), No Active Defense (21), Always Hit (114), Requires Off-Hand Weapon (120), Do Not Display Range (126)
 Effects          :
 #1 (id=969828)   : Weapon Damage (58)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | AP Coefficient: 0.05000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=969829)   : Weapon Damage% (31)
                    Base Value: 180 | Scaled Value: 1.8 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=60398)    : None (0)
-                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000
+                   Base Value: 10 | Scaled Value: 10 | AP Coefficient: 0.05000 | PvP Coefficient: 1.00000
 Description      : Strike the target for $s2% offhand weapon damage plus a bonus.  Only usable after the Death Knight dodges or parries.  Can't be dodged, blocked, or parried.  This attack causes a high amount of threat.
 
 Name             : Desecration (id=68766) [Spell Family (15)] 
@@ -8095,6 +8097,126 @@ Effects          :
 #1 (id=81808)    : Parry (22)
                    Base Value: 0 | Scaled Value: 0 | Value Multiplier: 1 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 90
 Description      : Gives a chance to parry enemy melee attacks.
+
+Name             : Reinforce (desc=Rank 2) (id=83943) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84523)    : Apply Aura (6) | Unknown(338)
+                   Base Value: 20 | Scaled Value: 20 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Items take $s1% less durability loss when you die.
+
+Name             : Working Overtime (id=83949) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84533)    : Apply Aura (6) | Unknown(621)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Increases the chance to gain a skill increase on tradeskills by $s1%.
+
+Name             : For Great Justice (id=83953) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84539)    : Apply Aura (6) | Unknown(349)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 395 | Target: Self (1)
+Description      : Increases Justice points gained by $s1%.
+
+Name             : Honorable Mention (desc=Rank 2) (id=83960) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84546)    : Apply Aura (6) | Unknown(349)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 1901 | Target: Self (1)
+Description      : Increases Honor points gained by $s1%.
+
+Name             : Bartering (id=83964) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84550)    : Apply Aura (6) | Unknown(620)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Reduces the gold price of items from vendors by $s1%.
+
+Name             : Bountiful Bags (id=83966) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84552)    : Apply Aura (6) | Unknown(623)
+                   Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Misc Value: 7 | Misc Value 2: 0x12e0 | Target: Self (1)
+Description      : Sometimes increases the quantity of materials gained from Mining, Skinning, Herbalism, and Disenchanting.
 
 Name             : Hand of Doom (desc=Rank 1) (id=85793) [Spell Family (15), Passive, Hidden] 
 Class            : Death Knight

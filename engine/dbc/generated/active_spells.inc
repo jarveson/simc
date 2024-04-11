@@ -1,4 +1,4 @@
-// Active class spells, wow build 4.4.0.54137
+// Active class spells, wow build 4.4.0.54217
 static const std::array<active_class_spell_t, 958> __active_spells_data { {
   {  1,    0,     71,      0, "Defensive Stance" },
   {  1,    0,     78,      0, "Heroic Strike" },
@@ -355,7 +355,6 @@ static const std::array<active_class_spell_t, 958> __active_spells_data { {
   {  3,    0,  94022,      0, "Trick" },
   {  3,    0,  96201,      0, "Web Wrap" },
   {  3,    0,  97229,      0, "Bellowing Roar" },
-  {  3,    0, 425777,      0, "Trap Launcher: Explosive Trap" },
   {  4,    0,     53,      0, "Backstab" },
   {  4,    0,    408,      0, "Kidney Shot" },
   {  4,    0,    703,      0, "Garrote" },
@@ -523,6 +522,7 @@ static const std::array<active_class_spell_t, 958> __active_spells_data { {
   {  5,    0,  73630,      0, "Summon Great Exarch's Elekk" },
   {  5,    0,  82326,      0, "Divine Light" },
   {  5,    0,  82327,      0, "Holy Radiance" },
+  {  5,    0,  83968,      0, "Mass Resurrection" },
   {  5,    0,  85222,      0, "Light of Dawn" },
   {  5,    0,  85673,      0, "Word of Glory" },
   {  5,    0,  87151,      0, "Archangel" },
@@ -960,7 +960,7 @@ static const std::array<active_class_spell_t, 958> __active_spells_data { {
   { 11,    0, 450759,      0, "Revitalize" },
 } };
 
-// Pet active spells, wow build 4.4.0.54137
+// Pet active spells, wow build 4.4.0.54217
 static const std::array<active_pet_spell_t, 110> __active_pet_spells_data { {
   {  3,   1742, "Cower" },
   {  3,   2649, "Growl" },

@@ -1,4 +1,4 @@
-// Item armor values data from ItemArmorQuality.db2, ilevels 1-450, wow build 4.4.0.54137
+// Item armor values data from ItemArmorQuality.db2, ilevels 1-450, wow build 4.4.0.54217
 static const std::array<item_armor_quality_data_t, 450> __item_armor_quality_data { {
   {    1, { 0.900000, 0.950000, 1.000000, 1.100000, 1.370000, 1.370000, 1.370000 } },
   {    2, { 0.900000, 0.950000, 1.000000, 1.100000, 1.370000, 1.370000, 1.370000 } },
@@ -452,7 +452,7 @@ static const std::array<item_armor_quality_data_t, 450> __item_armor_quality_dat
   {  450, { 0.900000, 0.950000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000 } },
 } };
 
-// Item armor values data from ItemArmorShield.db2, ilevels 1-450, wow build 4.4.0.54137
+// Item armor values data from ItemArmorShield.db2, ilevels 1-450, wow build 4.4.0.54217
 static const std::array<item_armor_shield_data_t, 450> __item_armor_shield_data { {
   {    1, { 28.000000, 57.000000, 91.000000, 153.000000, 199.000000, 199.000000, 199.000000 } },
   {    2, { 57.000000, 86.000000, 119.000000, 181.000000, 234.000000, 234.000000, 234.000000 } },
@@ -906,7 +906,7 @@ static const std::array<item_armor_shield_data_t, 450> __item_armor_shield_data 
   {  450, { 14566.000000, 14566.000000, 14566.000000, 14566.000000, 14566.000000, 14566.000000, 14566.000000 } },
 } };
 
-// Item armor values data from ItemArmorTotal.db2, ilevels 1-450, wow build 4.4.0.54137
+// Item armor values data from ItemArmorTotal.db2, ilevels 1-450, wow build 4.4.0.54217
 static const std::array<item_armor_total_data_t, 450> __item_armor_total_data { {
   {    1, { 82.915703, 126.601997, 206.376007, 310.082001 } },
   {    2, { 97.447304, 148.789001, 242.544998, 364.425995 } },
@@ -1360,7 +1360,7 @@ static const std::array<item_armor_total_data_t, 450> __item_armor_total_data { 
   {  450, { 7025.069824, 12010.900391, 18675.099609, 28047.800781 } },
 } };
 
-// Armor location based multipliers, wow build 4.4.0.54137
+// Armor location based multipliers, wow build 4.4.0.54217
 static const std::array<item_armor_location_data_t, 0> __armor_location_data { {
 } };
 

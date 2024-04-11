@@ -1,5 +1,5 @@
-// Spell text, wow build 4.4.0.54137
-static const std::array<spelltext_data_t, 7608> __spelltext_data { {
+// Spell text, wow build 4.4.0.54217
+static const std::array<spelltext_data_t, 7606> __spelltext_data { {
   {     10, "Ice shards pelt the target area doing ${$42208m1*8*$<mult>} Frost damage over $10d.", "$42208s1 Frost damage every $42208t1 $lsecond:seconds;.", 0 },
   {     17, "Draws on the soul of the friendly target to shield them, absorbing $<shield> damage$?s55672[ and healing them for $55672s1% of the absorption amount][].  Lasts $d.  While the shield holds, spellcasting will not be interrupted by damage.  Once shielded, the target cannot be shielded again for $6788d.", "Absorbs $w1 damage.", 0 },
   {     53, "Backstab the target, causing $m2% weapon damage plus $m1 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.", 0, 0 },
@@ -98,7 +98,7 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {   1079, "Finishing move that causes Bleed damage over time.  Damage increases per combo point and by your attack power:\r\n   1 point: ${($m1+$b1*1+0.0207*$AP)*8} damage over $d.\r\n   2 points: ${($m1+$b1*2+0.0414*$AP)*8} damage over $d.\r\n   3 points: ${($m1+$b1*3+0.0621*$AP)*8} damage over $d.\r\n   4 points: ${($m1+$b1*4+0.0828*$AP)*8} damage over $d.\r\n   5 points: ${($m1+$b1*5+0.1035*$AP)*8} damage over $d.$?s54815[\r\n\r\nEach time you Shred or Mangle the target while in Cat Form the duration of your Rip on that target is extended by $s2 sec, up to a maximum of $s3 sec.][]", "Bleeding for $w1 damage every $t1 seconds.", "Cat Form" },
   {   1082, "Claw the enemy, causing $m3% of normal damage plus $m1.  Awards $s2 combo $lpoint:points;.", 0, "Cat Form" },
   {   1098, "Enslaves the target demon, forcing it to do your bidding.  While enslaved, the time between the demon's attacks is increased by $s2% and its casting speed is slowed by $s3%.  Lasts up to $d.", "Enslaved.", 0 },
-  {   1120, "Drains the soul of the target, causing $o1 Shadow damage over $d.  \r\n\r\nIf the target is at or below $s3% health, Drain Soul causes double the normal damage. \r\n\r\nIf the target dies while being drained, and yields experience or honor, the caster gains 3 Soul Shards$?s58070[ and $58068s1% of $G his:her; total mana][]. Soul Shards are required for Soulburn.", "$w1 Shadow damage every $t1 seconds.", 0 },
+  {   1120, "Drains the soul of the target, causing $o1 Shadow damage over $d.  \r\n\r\nIf the target is at or below $s2% health, Drain Soul causes double the normal damage. \r\n\r\nIf the target dies while being drained, and yields experience or honor, the caster gains 3 Soul Shards$?s58070[ and $58068s1% of $G his:her; total mana][]. Soul Shards are required for Soulburn.", "$w1 Shadow damage every $t1 seconds.", 0 },
   {   1122, "Summons a meteor from the Twisting Nether, causing $22703s1 Fire damage and stunning all enemy targets in the area for $20310d.  An Infernal rises from the crater, under the command of the caster for $d.\r\n\r\nThe Infernal deals strong area of effect damage, and will be drawn to attack targets afflicted by your Bane of Agony or Bane of Doom spells.", 0, "Guardian" },
   {   1126, "Increases the friendly target's Strength, Agility, Stamina, and Intellect by $79060s1%, and all magical resistances by ${$cond($lte($PL,70),$PL/2,$cond($lte($PL,80),$PL/2+($PL-70)/2*5,$PL/2+($PL-70)/2*5+($PL-80)/2*7))-0.5}, for $79060d.  If target is in your party or raid, all party and raid members will be affected.", 0, 0 },
   {   1127, "Restores $o1 health over $d.  Must remain seated while eating.", "Restores $/5;s1 health per second.", 0 },
@@ -1715,7 +1715,7 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {  20238, "Increases the damage of your Holy Shock and Exorcism by $s1%.", 0, "Rank 2" },
   {  20243, "Sunder the target's armor causing the Sunder Armor effect.  In addition, causes $m2% of weapon damage plus ${$s3/$u} for each application of Sunder Armor on the target.  The Sunder Armor effect can stack up to $u times.", 0, 0 },
   {  20252, "Charge an enemy, causing ${$AP*0.12} damage (based on attack power) and stunning it for $20253d.", 0, "Berserker Stance" },
-  {  20253, "Charge an enemy, causing ${1+$AP*0.12} damage (based on attack power) and stunning it for $20253d.", "Stunned.", "Rank 1" },
+  {  20253, "Charge an enemy, causing $s1 damage (based on attack power) and stunning it for $20253d.", "Stunned.", "Rank 1" },
   {  20271, "Unleashes the energy of a Seal to judge an enemy for Holy damage.", 0, 0 },
   {  20310, 0, "Stunned.", 0 },
   {  20314, "Teaches Imp Firebolt (Rank 5).", 0, "Rank 5" },
@@ -2802,7 +2802,7 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {  33060, "Speak with Mr. Pinchy and be granted a Wish!   Maybe something good...maybe something bad....Mr. Pinchy does not know!", 0, 0 },
   {  33063, "Reduces the cooldown on your Demonic Circle: Teleport spell by ${$m1/-1000} sec.", 0, 0 },
   {  33066, "Improves the range of your Fire Blast spell by $s1 yards.", 0, "Rank 1" },
-  {  33076, "Places a spell on the target that heals them for $<mending> the next time they take damage.  When the heal occurs, Prayer of Mending jumps to a party or raid member within $41635a1 yards. Jumps up to $n times and lasts $41635d after each jump. This spell can only be placed on one target at a time.", 0, 0 },
+  {  33076, "Places a spell on the target that heals them for $<mending> the next time they take damage.  When the heal occurs, Prayer of Mending jumps to a party or raid member within $351575a1 yards. Jumps up to $s2 times and lasts $41635d after each jump. This spell can only be placed on one target at a time.", 0, 0 },
   {  33077, "Increases the target's Agility by $s1 for $d.  This effect counts as a Battle Elixir.", "Agility increased by $s1.  This effect counts as a Battle Elixir.", "Rank 5" },
   {  33078, "Increases the target's Intellect by $s1 for $d.  This effect counts as a Battle Elixir.", "Intellect increased by $s1.  This effect counts as a Battle Elixir.", "Rank 5" },
   {  33079, "Increases the target's Armor by $s1 for $d.  This effect counts as a Guardian Elixir.", "Armor increased by $s1.  This effect counts as a Guardian Elixir.", "Rank 5" },
@@ -4188,8 +4188,8 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {  53556, "Grants hit rating equal to $s3% of any Spirit gained from items or effects, and increases the range of your Judgement by $s2 yards.  In addition, your Judgement instantly heals you for $87188s1.", 0, "Rank 1" },
   {  53557, "Grants hit rating equal to $s3% of any Spirit gained from items or effects, and increases the range of your Judgement by $s2 yards.  In addition, your Judgement instantly heals you for $87189s1.", 0, "Rank 2" },
   {  53563, "The target becomes a Beacon of Light to all targets within a 60 yard radius.  Your Word of Glory, Holy Shock, Flash of Light, Divine Light and Light of Dawn will also heal the Beacon for $s1% of the amount healed.  Holy Light will heal for ${$m1*2}% of the amount.  Only one target can be the Beacon of Light at a time. Lasts $d.", "Beacon of Light.", 0 },
-  {  53569, "Increases the critical effect chance of your Holy Shock by $s2%.  In addition, your Holy Shock critical effects reduce the cast time of your next Flash of Light, Holy Light, Divine Light or Holy Radiance by ${$53672m1/-1000}.2 sec.", 0, "Rank 1" },
-  {  53576, "Increases the critical effect chance of your Holy Shock by $s2%.  In addition, your Holy Shock critical effects reduce the cast time of your next Flash of Light, Holy Light, Divine Light or Holy Radiance by ${$54149m1/-1000}.2 sec.", 0, "Rank 2" },
+  {  53569, "Increases the critical effect chance of your Holy Shock by $s4%.  In addition, your Holy Shock critical effects reduce the cast time of your next Flash of Light, Holy Light, Divine Light or Holy Radiance by ${$53672m1/-1000}.2 sec.", 0, "Rank 1" },
+  {  53576, "Increases the critical effect chance of your Holy Shock by $s4%.  In addition, your Holy Shock critical effects reduce the cast time of your next Flash of Light, Holy Light, Divine Light or Holy Radiance by ${$54149m1/-1000}.2 sec.", 0, "Rank 2" },
   {  53592, "Increases your total Stamina by $s3%, increases your spell hit by $31878s3%, and increases your spell power by an amount equal to $s1% of your Strength.", 0, "Passive" },
   {  53595, "Hammer the current target for $53595s1% weapon damage, causing a wave of light that hits all targets within $88263A1 yards for $88263s1 Holy damage. Grants a charge of Holy Power.", 0, 0 },
   {  53600, "Slam the target with your shield, causing Holy damage.  Consumes all charges of Holy Power to determine damage dealt:\r\n\r\n1 Holy Power: ${$m1-1} damage\r\n2 Holy Power: ${$m1*3-3} damage\r\n3 Holy Power: ${$m1*6-6} damage", 0, 0 },
@@ -6155,7 +6155,7 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {  81660, "When you cast Smite, Holy Fire or Mind Flay you gain Evangelism. Stacks up to $81660u times. Lasts for $87117d.\r\n\r\nEvangelism (Smite) - Increasing the damage done by your Smite, Holy Fire, and Penance spells by $81660s1% and reduces the mana cost of those spells by $81660s2%.\r\n\r\nDark Evangelism (Mind Flay) - Increases the damage done by your Periodic Shadow spells by $87117s1%.", "Increases the damage done by your Smite, Holy Fire and Penance by $s1% and reduces the mana cost of those spells by $s2%.", 0 },
   {  81661, "When you cast Smite, Holy Fire or Mind Flay you gain Evangelism. Stacks up to $81660u times. Lasts for $87117d.\r\n\r\nEvangelism (Smite, Holy Fire) - Increases the damage done by your Smite, Holy Fire, and Penance spells by $81661s1% and reduces the mana cost of those spells by $81661s2%.\r\n\r\nDark Evangelism (Mind Flay) - Increases the damage done by your Periodic Shadow spells by $87118s1%.", "Increases the damage done by your Smite, Holy Fire and Penance spells by $s1% and reduces the mana cost of those spells by $s2%.", 0 },
   {  81662, "When you cast Smite, Holy Fire or Mind Flay you gain Evangelism. Stacks up to $81660u times. Lasts for $87117d.\r\n\r\n|CFFFFFFFFEvangelism (Smite, Holy Fire)|R\r\nIncreases the damage done by your Smite, Holy Fire, and Penance spells by $81661s1% and reduces the mana cost of those spells by $81661s2%.\r\n\r\n|CFFFFFFFFDark Evangelism (Mind Flay)|R\r\nIncreases the damage done by your Periodic Shadow spells by $87118s1%.", 0, "Rank 2" },
-  {  81700, "Consumes your Evangelism effects, causing an effect depending what type of Evangelism effect is consumed:\r\n\r\nArchangel (Evangelism) - Instantly restores $87152s1% of your total mana and increases your healing done by $81700s1% for each stack. Lasts for $81700d. $87151s2 sec cooldown.\r\n\r\nDark Archangel (Dark Evangelism) - Instantly restores $87153s3% of your total mana and increases the damage done by your Mind Flay, Mind Spike, Mind Blast and Shadow Word: Death by $87153s1% for each stack. Lasts for $87153d. $87151s3 sec cooldown.", "Healing increased by $w2%.", 0 },
+  {  81700, "Consumes your Evangelism effects, causing an effect depending what type of Evangelism effect is consumed:\r\n\r\nArchangel (Evangelism) - Instantly restores $87152s1% of your total mana and increases your healing done by $81700s1% for each stack. Lasts for $81700d. $87151s2 sec cooldown.\r\n\r\nDark Archangel (Dark Evangelism) - Instantly restores $87153s3% of your total mana and increases the damage done by your Mind Flay, Mind Spike, Mind Blast and Shadow Word: Death by $87153s1% for each stack. Lasts for $87153d. $87151s3 sec cooldown.", "Healing increased by $w1%.", 0 },
   {  81708, "Uses your skill in Herbalism to absorb energy and nutrients from the earth, instantly healing minor wounds and granting $s2 haste rating for $d.  Can be used while stealthed or invisible.", "Haste rating increased by $s2.", "Rank 1" },
   {  81749, "When you deal damage with Smite or Holy Fire, you instantly heal a nearby low health friendly target within $14523s2 yards from the enemy target equal to $s1% of the damage dealt.\r\n\r\nIf the Priest is healed through Atonement, the effect is reduced in half.", 0, "Rank 2" },
   {  81782, "Summons a holy barrier on the target location that reduces all damage done to friendly targets by $81782s1%$?s55680[ and increasing healing received by $55689s1%][]. While within the barrier, spellcasting will not be interrupted by damage. The barrier lasts for $62618d.", "Reduces all damage taken by $s1%, and you resist all pushback while casting spells.", 0 },
@@ -6255,11 +6255,9 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {  83560, "Reduces the cooldown of your Rapid Fire by $/60000;s1 min, and your movement speed is increased by $s2% for $83559d after you use Disengage.", 0, "Rank 2" },
   {  83619, "At the end of its duration your Flame Orb explodes, dealing $s1 Fire damage to all nearby enemies.", 0, 0 },
   {  83853, "Combines your damaging periodic Fire effects on an enemy target but does not consume them, instantly dealing $11129s2 Fire damage and creating a new periodic effect that lasts $83853d and deals damage per time equal to the sum of the combined effects.", "Suffering $w1 Fire damage every sec.", 0 },
-  {  83942, "Items take $s1% less durability loss when you die.", 0, "Rank 1" },
   {  83943, "Items take $s1% less durability loss when you die.", 0, "Rank 2" },
   {  83949, "Increases the chance to gain a skill increase on tradeskills by $s1%.", 0, 0 },
   {  83953, "Increases Justice points gained by $s1%.", 0, 0 },
-  {  83959, "Increases Honor points gained by $s1%.", 0, "Rank 1" },
   {  83960, "Increases Honor points gained by $s1%.", 0, "Rank 2" },
   {  83963, "Increases the number of flasks gained from using a guild cauldron by $s1%.", 0, 0 },
   {  83964, "Reduces the gold price of items from vendors by $s1%.", 0, 0 },
@@ -7556,6 +7554,7 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   { 351358, "Restores $o1 health and mana to party members within $A yards over $d.  Drums can be used while shapeshifted.  Cannot affect targets level 80 or higher.", "Restores $s1 health and mana every $t1 seconds.", 0 },
   { 351359, "Increases movement speed of party members within $A yards by $s1%.  Lasts $d.  Drums can be used while shapeshifted.", "Movement speed increased by $s1%.", 0 },
   { 351360, "Increases attack power by $s1 and spell damage by $s2 on party members within $A yards.  Lasts $d.  Drums can be used while shapeshifted. Cannot affect targets level 80 or higher.", "Attack power increased by $s1 and spell power by $s2.", 0 },
+  { 351575, 0, 0, "Rank 1" },
   { 352334, "Increases attack power by $s1.", 0, 0 },
   { 352338, "Increases damage and healing done by magical spells and effects by up to $s1.", 0, 0 },
   { 352340, "Restores $s1 health.", 0, 0 },
@@ -7604,17 +7603,16 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   { 414206, "Your Plague Strikes have a chance to cause the Grasp of the Dead effect for 7 yards around the target.  Targets in the area are slowed by $s1%.", "Standing upon unholy ground. \r\nMovement speed is reduced by $s1%.", 0 },
   { 414268, "Your Plague Strikes have a chance to cause the Grasp of the Dead effect for 7 yards around the target.  Targets in the area are slowed by $s1%.", "Standing upon unholy ground. \r\nMovement speed is reduced by $s1%.", 0 },
   { 414813, "Your Shattering Throw is now instant and can be used in any stance, but it no longer removes invulnerabilities and cannot be used on players or player-controlled targets.", 0, 0 },
-  { 425777, "Launch a fire trap to a nearby location where it will explode when an enemy approaches, causing ${$RAP*0.1+$49065m1} to ${$RAP*0.1+$49065M1} Fire damage and burning all enemies for ${$49065m2*10+$RAP} additional Fire damage over $49065d to all within $49065a1 yards.  Trap will exist for $d.  Only one trap can be active at a time.\r\n\r\nNot usable in Arenas or Battlegrounds.", 0, "Rank 1" },
   { 450759, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
   { 450761, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
   { 450762, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
 } };
 
-// spelltext hotfix entries, wow build 4.4.0.54137
+// spelltext hotfix entries, wow build 4.4.0.54217
 static constexpr std::array<hotfix::client_hotfix_entry_t, 0> __spelltext_hotfix_data { {
 } };
 
-// Spell description variables, wow build 4.4.0.54137
+// Spell description variables, wow build 4.4.0.54217
 static const std::array<spelldesc_vars_data_t, 83> __spelldesc_vars_data { {
   { 10, "$arctic1=$?s31674[${1.01}][${1}]\r\n$arctic2=$?s31675[${1.02}][${$<arctic1>}]\r\n$arctic3=$?s31676[${1.03}][${$<arctic2>}]\r\n$arctic4=$?s31677[${1.04}][${$<arctic3>}]\r\n$arctic5=$?s31678[${1.05}][${$<arctic4>}]\r\n$piercing1=$?s11151[${1.02}][${1}]\r\n$piercing2=$?s12952[${1.04}][${$<piercing1>}]\r\n$piercing3=$?s12953[${1.06}][${$<piercing2>}]\r\n$mult=${$<arctic5>*$<piercing3>}" },
   { 17, "$twin1=$?s47586[${1.02}][${1.00}]\r\n$twin2=$?s47587[${1.04}][${$<twin1>}]\r\n$twin3=$?s47588[${1.06}][${$<twin2>}]\r\n$ipws1=$?s14748[${1.10}][${1.00}]\r\n$ipws2=$?s14768[${1.20}][${$<ipws1>}]\r\n$mastery=$?s47540[${((100+$77484m1)/100)}][${1.00}]\r\n$spirit=$?s87336[${((100+$87336m1)/100)}][${1.00}]\r\n$shield=${((($SP*0.87)+$m1)*$<mastery>*$<spirit>*$<twin3>*$<ipws2>)}" },
@@ -7660,7 +7658,7 @@ static const std::array<spelldesc_vars_data_t, 83> __spelldesc_vars_data { {
   { 30455, 0 },
   { 31801, "$sop1=$?s20224[${105}][${100}]\r\n$sop2=$?s20225[${110}][${$<sop1>}]\r\n$sop=$?s20330[${115}][${$<sop2>}]\r\n" },
   { 32645, "$mult1=$?s14162[${1.07}][${1.00}]\r\n$mult2=$?s14163[${1.14}][${$<mult1>}]\r\n$mult3=$?s14164[${1.20}][${$<mult2>}]\r\n$mult=$?s36554[${(($<mult3>*(100+$76808m1))/100)}][${$<mult3>}]" },
-  { 33076, "$base=${$m1+($SP*0.318)}\r\n$sheal=$?s87336[${0.15}][${0}]\r\n$twin=$?s47586[${0.02}][${0}]\r\n$twin2=$?s47587[${0.04}][${$<twin>}]\r\n$twin3=$?s47588[${0.06}][${$<twin2>}]\r\n$mending=${($<base>*(1.0+($<twin3>+$<sheal>)))}" },
+  { 33076, "$base=${$m1+($SP*0.807)}\r\n$sheal=$?s87336[${0.15}][${0}]\r\n$twin=$?s47586[${0.02}][${0}]\r\n$twin2=$?s47587[${0.04}][${$<twin>}]\r\n$twin3=$?s47588[${0.06}][${$<twin2>}]\r\n$mending=${($<base>*(1.0+($<twin3>+$<sheal>)))}" },
   { 33763, "$genesis1=$?s57810[${1+0.01*$57810m1}][${1}]\r\n$genesis2=$?s57811[${1+0.01*$57811m1}][${$<genesis1>}]\r\n$genesis3=$?s57812[${1+0.01*$57812m1}][${$<genesis2>}]\r\n$mult=${$<genesis3>}\r\n$mstrshape=$?s48411[${1+0.01*$48411m1}][${1}]\r\n$gotem1=$?s51179[${1+0.01*$51179m1}][${1}]\r\n$gotem2=$?s51180[${1+0.01*$51180m1}][${$<gotem1>}]\r\n$gotem3=$?s51181[${1+0.01*$51181m1}][${$<gotem2>}]\r\n$tol=$?a5420[${1+0.01+$5420m1}][${1}]\r\n$gift=$?s87305[${1.25}][${1}]\r\n$bloom=${$<gift>*$<genesis3>*$<mstrshape>*$<gotem3>*$<tol>}" },
   { 34026, "$bmMastery=$?s76657[${1+0.01*$76657m1}][${1}]\r\n$damage=${($83381m1+($RAP*0.516))*$<bmMastery>}\r\n" },
   { 42208, "$arctic1=$?s31674[${1.01}][${1}]\r\n$arctic2=$?s31675[${1.02}][${$<arctic1>}]\r\n$arctic3=$?s31676[${1.03}][${$<arctic2>}]\r\n$arctic4=$?s31677[${1.04}][${$<arctic3>}]\r\n$arctic5=$?s31678[${1.05}][${$<arctic4>}]\r\n$piercing1=$?s11151[${1.02}][${1}]\r\n$piercing2=$?s12952[${1.04}][${$<piercing1>}]\r\n$piercing3=$?s12953[${1.06}][${$<piercing2>}]\r\n$mult=${$<arctic5>*$<piercing3>}" },
@@ -7701,7 +7699,7 @@ static const std::array<spelldesc_vars_data_t, 83> __spelldesc_vars_data { {
   { 95725, "$damage=${$95725m1+(($RAP*0.40)*0.288)}" },
 } };
 
-// spelldesc_vars hotfix entries, wow build 4.4.0.54137
+// spelldesc_vars hotfix entries, wow build 4.4.0.54217
 static constexpr std::array<hotfix::client_hotfix_entry_t, 0> __spelldesc_vars_hotfix_data { {
 } };
 

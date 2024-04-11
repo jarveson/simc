@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54217 cata-BETA
 Name             : Defensive Stance (id=71) [Spell Family (4)] 
 Class            : Warrior
 School           : Physical
@@ -781,9 +781,9 @@ Attributes       : ....x... ........ x.x..x.. ........   ...x...x ........ .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), No Active Defense (21), No Redirection (35), No Reflection (39), Treat as Area Effect (175)
 Effects          :
 #1 (id=685156)   : School Damage (2): physical | Scaling Class: 1
-                   Base Value: 15 | Scaled Value: 302.6862 (coefficient=0.269) | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 15 | Scaled Value: 15 | AP Coefficient: 0.22800 | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Target: At Caster (22) -> AOE enemy (15)
 #2 (id=2204)     : Apply Aura (6) | Modify Ranged and Melee Attack Speed% (342) | Scaling Class: 1
-                   Base Value: -20 | Scaled Value: -20 | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Mechanic: Unknown(8) | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: -20 | Scaled Value: -20 | AP Coefficient: 0.22800 | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Mechanic: Unknown(8) | Target: At Caster (22) -> AOE enemy (15)
 Description      : Blasts enemies within $6343A1 yards for $6343s1 damage, and increases the time between their attacks by $6343s2% for $6343d.  Damage increased by attack power.
 Tooltip          : Time between attacks increased by $s2%.
 
@@ -891,7 +891,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Discount Power On Miss (59), Requires Main-Hand Weapon (106), Combat Feedback When Usable (137)
 Effects          :
 #1 (id=684734)   : School Damage (2): physical | Scaling Class: 1
-                   Base Value: 88 | Scaled Value: 1798.113 (coefficient=1.598) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 88 | Scaled Value: 1798.113 (coefficient=1.598) | SP Coefficient: 1.00000 | AP Coefficient: 0.31000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Instantly counterattack an enemy for $s1 damage. Revenge is only usable after a successful block, dodge, or parry.
 
 Name             : Battle Shout (id=6673) [Spell Family (4)] 
@@ -2727,13 +2727,13 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Discount Power On Miss (59), Not In Spellbook Until Learned (269)
 Effects          :
-#1 (id=1053282)  : Dummy (3) | Scaling Class: 1
+#1 (id=1053282)  : Dummy (3)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#2 (id=698093)   : Weapon Damage% (31) | Scaling Class: 1
+#2 (id=698093)   : Weapon Damage% (31)
                    Base Value: 109 | Scaled Value: 1.5 | Points Per Level: 1 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-#3 (id=870784)   : Normalized Weapon Damage (121) | Scaling Class: 1
-                   Base Value: 58 | Scaled Value: 854.0476 (coefficient=0.759) | PvP Coefficient: 1.00000 | Target: Enemy (6)
-Description      : Sunder the target's armor causing the Sunder Armor effect.  In addition, causes $m1% of weapon damage plus $s2 for each application of Sunder Armor on the target.  The Sunder Armor effect can stack up to $u times.
+#3 (id=870784)   : Normalized Weapon Damage (121)
+                   Base Value: 58 | Scaled Value: 58 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+Description      : Sunder the target's armor causing the Sunder Armor effect.  In addition, causes $m2% of weapon damage plus ${$s3/$u} for each application of Sunder Armor on the target.  The Sunder Armor effect can stack up to $u times.
 
 Name             : Intercept (desc=Berserker Stance) (id=20252) [Spell Family (4)] 
 Class            : Warrior
@@ -2788,10 +2788,10 @@ Attributes       : ....x... ........ x.x..... ........   ...x...x .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), No Redirection (35), No Reflection (39), Initiates Combat (Enables Auto-Attack) (41), No Initial Threat (86), Active Threat (94), Not In Spellbook (143)
 Effects          :
 #1 (id=697357)   : Apply Aura (6) | Stun (12)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Stun | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | AP Coefficient: 0.12000 | PvP Coefficient: 1.00000 | Mechanic: Stun | Target: Enemy (6)
 #2 (id=697358)   : School Damage (2): physical
-                   Base Value: 1 | Scaled Value: 1 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-Description      : Charge an enemy, causing ${1+$AP*0.12} damage (based on attack power) and stunning it for $20253d.
+                   Base Value: 1 | Scaled Value: 1 | SP Coefficient: 1.00000 | AP Coefficient: 0.12000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+Description      : Charge an enemy, causing $s1 damage (based on attack power) and stunning it for $20253d.
 Tooltip          : Stunned.
 
 Name             : Executioner (desc=Rank 1) (id=20502) [Spell Family (4), Passive, Hidden] 
@@ -3158,9 +3158,9 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Discount Power On Miss (59), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=701766)   : Dispel (38) | Scaling Class: 1
-                   Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Misc Value: 1 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 1 | AP Coefficient: 0.60000 | PvP Coefficient: 1.00000 | Misc Value: 1 | Target: Enemy (6)
 #2 (id=701767)   : School Damage (2): physical | Scaling Class: 1
-                   Base Value: 293 | Scaled Value: 1919.638 (coefficient=1.706) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 293 | Scaled Value: 1919.638 (coefficient=1.706) | SP Coefficient: 1.00000 | AP Coefficient: 0.60000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Slam the target with your shield, causing $s2 damage (based on attack power) and dispelling $s1 magic effect on the target.
 
 Name             : Sweeping Strikes (id=26654) 
@@ -3766,7 +3766,7 @@ Effects          :
                    Base Value: 56 | Scaled Value: 56 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=82417)    : Direct Heal% (136)
                    Base Value: 20 | Scaled Value: 20 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Instantly attack the target causing ${$AP*$m1/100} damage and healing you for $?s84580[${$m3*1.2}]?s84579[${$m3*1.1}][${$m3}]% of your maximum health.  Can only be used within $32216d after you kill an enemy that yields experience or honor.
+Description      : Instantly attack the target causing ${$AP*$m1/100} damage and healing you for $?s84580[${$m2*1.2}]?s84579[${$m2*1.1}][${$m2}]% of your maximum health.  Can only be used within $32216d after you kill an enemy that yields experience or honor.
 
 Name             : Furious Gizmatic Goggles (id=40274) 
 Class            : Warrior, Paladin, Death Knight
@@ -4644,7 +4644,7 @@ Attributes       : ....x... ........ x.x..x.. ........   ........ ........ .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), No Active Defense (21), Not a Proc (105), Always Hit (114), Do Not Display Range (126), Not In Spellbook (143), Always AOE Line of Sight (186), Always Show Ground Texture (190)
 Effects          :
 #1 (id=44600)    : School Damage (2): physical
-                   Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
+                   Base Value: 1 | Scaled Value: 1 | AP Coefficient: 0.50000 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
 Description      : Leap through the air towards a targeted location, slamming down with destructive force to deal ${1+0.5*$AP} damage on all enemies within $52174a1 yards.
 
 Name             : Sudden Death (id=52437) [Spell Family (4)] 
@@ -5037,7 +5037,7 @@ Attributes       : ....x... ........ x.x..x.. ........   ........ .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), No Active Defense (21), Initiates Combat (Enables Auto-Attack) (41), Requires Main-Hand Weapon (106)
 Effects          :
 #1 (id=962998)   : School Damage (2): physical
-                   Base Value: 12 | Scaled Value: 12 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 12 | Scaled Value: 12 | AP Coefficient: 0.75000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Throws your weapon at the enemy causing $m1 damage (based on attack power).  This ability causes high threat$?s58357[ and applies Sunder Armor to the target][].
 
 Name             : Glyph of Battle (id=58095) [Spell Family (4), Passive, Hidden] 
@@ -6635,9 +6635,9 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Requires Main-Hand Weapon (106), No Attack Dodge (247), No Attack Parry (248), No Attack Block (256), Reset cooldown upon ending an encounter (333)
 Effects          :
 #1 (id=980846)   : School Damage (2): physical
-                   Base Value: 12 | Scaled Value: 12 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 12 | Scaled Value: 12 | AP Coefficient: 0.50000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=980847)   : Apply Aura (6) | Modify Armor% (101)
-                   Base Value: -20 | Scaled Value: -20 | PvP Coefficient: 1.00000 | Misc Value: 1 | Target: Enemy (6)
+                   Base Value: -20 | Scaled Value: -20 | AP Coefficient: 0.50000 | PvP Coefficient: 1.00000 | Misc Value: 1 | Target: Enemy (6)
 Description      : Throws your weapon at the enemy causing $64382m1 damage (based on attack power), reducing the armor on the target by $64382s2% for $64382d or removing any invulnerabilities.
 Tooltip          : Armor reduced by $s2%.
 
@@ -7198,6 +7198,126 @@ Effects          :
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Victory Rush enabled.
 Tooltip          : Victory Rush enabled.
+
+Name             : Reinforce (desc=Rank 2) (id=83943) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84523)    : Apply Aura (6) | Unknown(338)
+                   Base Value: 20 | Scaled Value: 20 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Items take $s1% less durability loss when you die.
+
+Name             : Working Overtime (id=83949) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84533)    : Apply Aura (6) | Unknown(621)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Increases the chance to gain a skill increase on tradeskills by $s1%.
+
+Name             : For Great Justice (id=83953) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84539)    : Apply Aura (6) | Unknown(349)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 395 | Target: Self (1)
+Description      : Increases Justice points gained by $s1%.
+
+Name             : Honorable Mention (desc=Rank 2) (id=83960) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84546)    : Apply Aura (6) | Unknown(349)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 1901 | Target: Self (1)
+Description      : Increases Honor points gained by $s1%.
+
+Name             : Bartering (id=83964) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84550)    : Apply Aura (6) | Unknown(620)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Reduces the gold price of items from vendors by $s1%.
+
+Name             : Bountiful Bags (id=83966) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84552)    : Apply Aura (6) | Unknown(623)
+                   Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Misc Value: 7 | Misc Value 2: 0x12e0 | Target: Self (1)
+Description      : Sometimes increases the quantity of materials gained from Mining, Skinning, Herbalism, and Disenchanting.
 
 Name             : War Academy (desc=Rank 1) (id=84570) [Spell Family (4), Passive, Hidden] 
 Class            : Warrior

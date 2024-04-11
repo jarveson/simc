@@ -1,5 +1,5 @@
-// Rank class spells, wow build 4.4.0.54137
-static const std::array<rank_class_spell_t, 1101> __rank_spells_data { {
+// Rank class spells, wow build 4.4.0.54217
+static const std::array<rank_class_spell_t, 1099> __rank_spells_data { {
   {  6,    0,  53137,      0, "Abomination's Might", "Rank 1" },
   {  6,    0,  53138,      0, "Abomination's Might", "Rank 2" },
   {  2,    0,  85446,      0, "Acts of Sacrifice", "Rank 1" },
@@ -587,7 +587,6 @@ static const std::array<rank_class_spell_t, 1101> __rank_spells_data { {
   {  8,    0,  84723,      0, "Invocation", "Rank 1" },
   {  9,    0,  18179,      0, "Jinx", "Rank 1" },
   {  9,    0,  85479,      0, "Jinx", "Rank 2" },
-  {  2,    0, 356112,      0, "Judgement of Corruption", "Rank 1" },
   {  2,    0,  53695,      0, "Judgements of the Just", "Rank 1" },
   {  2,    0,  53696,      0, "Judgements of the Just", "Rank 2" },
   {  5,    0,  53655,      0, "Judgements of the Pure", "Rank 1" },
@@ -1064,7 +1063,6 @@ static const std::array<rank_class_spell_t, 1101> __rank_spells_data { {
   {  3,    0,  82833,      0, "Toxicology", "Rank 2" },
   {  5,    0,  92295,      0, "Train of Thought", "Rank 1" },
   {  5,    0,  92297,      0, "Train of Thought", "Rank 1" },
-  {  3,    0, 425777,      0, "Trap Launcher: Explosive Trap", "Rank 1" },
   {  3,    0,  19376,      0, "Trap Mastery", "Rank 1" },
   {  3,    0,  63457,      0, "Trap Mastery", "Rank 2" },
   {  3,    0,  63458,      0, "Trap Mastery", "Rank 3" },

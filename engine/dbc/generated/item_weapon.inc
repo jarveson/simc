@@ -1,4 +1,4 @@
-// Item damage data from ItemDamageOneHand.db2, wow build 4.4.0.54137
+// Item damage data from ItemDamageOneHand.db2, wow build 4.4.0.54217
 static const std::array<item_damage_one_hand_data_t, 450> __item_damage_one_hand_data { {
   { 1, { 0.761456, 0.780158, 1.269090, 3.899070, 6.957370, 6.957370, 6.957370 } },
   { 2, { 0.991986, 1.016350, 1.653310, 4.443200, 7.401560, 7.401560, 7.401560 } },
@@ -452,7 +452,7 @@ static const std::array<item_damage_one_hand_data_t, 450> __item_damage_one_hand
   { 450, { 643.429993, 936.689026, 1079.359985, 1079.359985, 1079.359985, 1079.359985, 1079.359985 } },
 } };
 
-// Item damage data from ItemDamageOneHandCaster.db2, wow build 4.4.0.54137
+// Item damage data from ItemDamageOneHandCaster.db2, wow build 4.4.0.54217
 static const std::array<item_damage_one_hand_caster_data_t, 450> __item_damage_one_hand_caster_data { {
   { 1, { 0.380728, 0.390079, 0.634547, 1.949538, 3.478684, 3.478684, 3.478684 } },
   { 2, { 0.495993, 0.508175, 0.826655, 2.221599, 3.700778, 3.700778, 3.700778 } },
@@ -906,7 +906,7 @@ static const std::array<item_damage_one_hand_caster_data_t, 450> __item_damage_o
   { 450, { 321.715210, 468.344635, 539.677856, 539.677856, 539.677856, 539.677856, 539.677856 } },
 } };
 
-// Item damage data from ItemDamageTwoHand.db2, wow build 4.4.0.54137
+// Item damage data from ItemDamageTwoHand.db2, wow build 4.4.0.54217
 static const std::array<item_damage_two_hand_data_t, 450> __item_damage_two_hand_data { {
   { 1, { 0.989892, 1.014205, 1.649821, 5.068797, 9.044580, 9.044580, 9.044580 } },
   { 2, { 1.289582, 1.321256, 2.149303, 5.776158, 9.622025, 9.622025, 9.622025 } },
@@ -1360,7 +1360,7 @@ static const std::array<item_damage_two_hand_data_t, 450> __item_damage_two_hand
   { 450, { 888.617737, 1269.854248, 1455.320679, 1455.320679, 1455.320679, 1455.320679, 1455.320679 } },
 } };
 
-// Item damage data from ItemDamageTwoHandCaster.db2, wow build 4.4.0.54137
+// Item damage data from ItemDamageTwoHandCaster.db2, wow build 4.4.0.54217
 static const std::array<item_damage_two_hand_caster_data_t, 450> __item_damage_two_hand_caster_data { {
   { 1, { 0.380728, 0.390079, 0.634547, 1.949538, 3.478684, 3.478684, 3.478684 } },
   { 2, { 0.495993, 0.508175, 0.826655, 2.221599, 3.700778, 3.700778, 3.700778 } },

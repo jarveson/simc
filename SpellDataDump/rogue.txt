@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.53863 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54217 cata-BETA
 Name             : Backstab (id=53) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
@@ -294,11 +294,11 @@ Attributes       : ....x... ...x.... x.x.x... ........   ........ ........ ..x..
                  : Is Ability (4), Wearer Casts Proc Trigger (11), Not Shapeshifted (16), Do Not Sheath (18), Cancels Auto Attack Combat (20), Prevents Anim (50), Discount Power On Miss (59), No Proc Equip Requirement (97), Completely Blocked (99), Requires Main-Hand Weapon (106), Can Proc From Procs (122), Suppress Weapon Procs (151)
 Effects          :
 #1 (id=679725)   : School Damage (2): physical | Scaling Class: 4
-                   Base Value: 1 | Scaled Value: 117.0236 (coefficient=0.104) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 117.0236 (coefficient=0.104) | SP Coefficient: 1.00000 | AP Coefficient: 0.21000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=679726)   : Add Combo Points (328) | Scaling Class: 4
-                   Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 1 | AP Coefficient: 0.21000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=679727)   : Apply Aura (6) | Stun (12) | Scaling Class: 4
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Incapacitate | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | AP Coefficient: 0.21000 | PvP Coefficient: 1.00000 | Mechanic: Incapacitate | Target: Enemy (6)
 Description      : Causes $s1 damage, incapacitating the opponent for $d, and turns off your attack.$?s56809[][  Target must be facing you.]  Any damage caused will revive the target.  Awards $s2 combo $lpoint:points;.
 Tooltip          : Incapacitated.
 
@@ -2108,7 +2108,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ ....x
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8), Finishing Move - Damage (52)
 Effects          :
 #1 (id=691761)   : Apply Aura (6) | Unknown(109)
-                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Trigger Spell: 14181 | Target: Self (1)
+                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Points Per Combo Point: 6 | Trigger Spell: 14181 | Target: Self (1)
                    Affected Spells: Kidney Shot (408), Rupture (1943), Eviscerate (2098), Slice and Dice (5171), Expose Armor (8647), Deadly Throw (26679), Recuperate (73651)
                    Family Flags: 17, 18, 19, 20, 21, 32, 59
 Description      : Your finishing moves have a $b1% chance per combo point to restore $14181s1 Energy.
@@ -5206,7 +5206,6 @@ Name             : Relentless Strikes (desc=Rank 2) (id=58422) [Spell Family (8)
 Class            : Rogue
 School           : Physical
 Spell Type       : None
-Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ....x... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5218,7 +5217,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ ....x
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8), Finishing Move - Damage (52)
 Effects          :
 #1 (id=963795)   : Apply Aura (6) | Unknown(109)
-                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Trigger Spell: 14181 | Target: Self (1)
+                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Points Per Combo Point: 13 | Trigger Spell: 14181 | Target: Self (1)
                    Affected Spells: Kidney Shot (408), Rupture (1943), Eviscerate (2098), Slice and Dice (5171), Expose Armor (8647), Deadly Throw (26679), Recuperate (73651)
                    Family Flags: 17, 18, 19, 20, 21, 32, 59
 Description      : Your finishing moves have a $b1% chance per combo point to restore $14181s1 Energy.
@@ -5227,7 +5226,6 @@ Name             : Relentless Strikes (desc=Rank 3) (id=58423) [Spell Family (8)
 Class            : Rogue
 School           : Physical
 Spell Type       : None
-Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ....x... ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5239,7 +5237,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ ....x
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8), Finishing Move - Damage (52)
 Effects          :
 #1 (id=963866)   : Apply Aura (6) | Unknown(109)
-                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Trigger Spell: 14181 | Target: Self (1)
+                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Points Per Combo Point: 20 | Trigger Spell: 14181 | Target: Self (1)
                    Affected Spells: Kidney Shot (408), Rupture (1943), Eviscerate (2098), Slice and Dice (5171), Expose Armor (8647), Deadly Throw (26679), Recuperate (73651)
                    Family Flags: 17, 18, 19, 20, 21, 32, 59
 Description      : Your finishing moves have a $b1% chance per combo point to restore $14181s1 Energy.
@@ -6327,7 +6325,7 @@ Attributes       : ........ ........ ........ x..x....   .....x.. ........ .....
                  : Allow While Mounted (24), Allow While Sitting (27), Allow While Stealthed (37), Ignore Line of Sight (66), Allow While Invisible (78), Allow While Not Shapeshifted (caster form) (83), Always Hit (114), Do Not Display Range (126), Allow Cast While Casting (135), Allow While Stunned (163), Allow While Fleeing (177), Allow While Confused (178), Allow While Riding Vehicle (204), Allow While Charmed (261)
 Effects          :
 #1 (id=68389)    : School Damage (2): nature | Scaling Class: 4
-                   Base Value: 1 | Scaled Value: 675.1364 (coefficient=0.6) | Value Multiplier: 1 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 675.1364 (coefficient=0.6) | Value Multiplier: 1 | AP Coefficient: 0.17600 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Venom seeps into your enemies bleeding wounds, dealing $s1 Nature damage.
 
 Name             : Vendetta (id=79140) [Spell Family (8)] 
@@ -6544,6 +6542,126 @@ Effects          :
 #1 (id=81807)    : Parry (22)
                    Base Value: 0 | Scaled Value: 0 | Value Multiplier: 1 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 90
 Description      : Gives a chance to parry enemy melee attacks.
+
+Name             : Reinforce (desc=Rank 2) (id=83943) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84523)    : Apply Aura (6) | Unknown(338)
+                   Base Value: 20 | Scaled Value: 20 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Items take $s1% less durability loss when you die.
+
+Name             : Working Overtime (id=83949) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84533)    : Apply Aura (6) | Unknown(621)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Increases the chance to gain a skill increase on tradeskills by $s1%.
+
+Name             : For Great Justice (id=83953) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84539)    : Apply Aura (6) | Unknown(349)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 395 | Target: Self (1)
+Description      : Increases Justice points gained by $s1%.
+
+Name             : Honorable Mention (desc=Rank 2) (id=83960) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84546)    : Apply Aura (6) | Unknown(349)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 1901 | Target: Self (1)
+Description      : Increases Honor points gained by $s1%.
+
+Name             : Bartering (id=83964) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84550)    : Apply Aura (6) | Unknown(620)
+                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
+Description      : Reduces the gold price of items from vendors by $s1%.
+
+Name             : Bountiful Bags (id=83966) [Spell Family (3), Passive] 
+Class            : Warrior, Paladin, Hunter, Rogue, Priest, Death Knight, Shaman, Mage, Warlock, Monk, Druid, Demon Hunter, Evoker
+Race             : Human, Orc, Dwarf, Night Elf, Undead, Tauren, Gnome, Troll, Goblin, Blood Elf, Draenei, Dark Iron Dwarf, Vulpera, Mag'har Orc, Mechagnome, Dracthyr, Worgen, Pandaren, Nightborne, Highmountain Tauren, Void Elf, Lightforged Draenei, Zandalari Troll, Kul Tiran (0xffffffffffffffff)
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Passive (6)
+Effects          :
+#1 (id=84552)    : Apply Aura (6) | Unknown(623)
+                   Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Misc Value: 7 | Misc Value 2: 0x12e0 | Target: Self (1)
+Description      : Sometimes increases the quantity of materials gained from Mining, Skinning, Herbalism, and Disenchanting.
 
 Name             : Deadly Momentum (id=84590) [Spell Family (8)] 
 Class            : Rogue
