@@ -645,7 +645,11 @@ void SC_OptionsTab::createScalingTab()
                   scalingButtonGroup );
   appendCheckBox( tr( "Mastery Rating" ), "mastery", tr( "Calculate scale factors for Mastery Rating" ),
                   secondaryStatsLayout, scalingButtonGroup );
-  appendCheckBox( tr( "Versatility Rating" ), "vers", tr( "Calculate scale factors for Versatility Rating" ),
+  //appendCheckBox( tr( "Versatility Rating" ), "vers", tr( "Calculate scale factors for Versatility Rating" ),
+  //                secondaryStatsLayout, scalingButtonGroup );
+  appendCheckBox( tr( "Hit Rating" ), "hit_rating", tr( "Calculate scale factors for Hit Rating" ),
+                  secondaryStatsLayout, scalingButtonGroup );
+  appendCheckBox( tr( "Exp Rating" ), "expertise_rating", tr( "Calculate scale factors for Expertise Rating" ),
                   secondaryStatsLayout, scalingButtonGroup );
   appendCheckBox( tr( "Weapon DPS" ), "wdps", tr( "Calculate scale factors for Weapon DPS" ), miscStatsLayout,
                   scalingButtonGroup );
@@ -657,11 +661,11 @@ void SC_OptionsTab::createScalingTab()
                   scalingButtonGroup );
   // appendCheckBox( tr( "Avoidance (tertiary)"       ), "avoidance",  tr( "Calculate scale factors for Avoidance
   // (tertiary stat)"      ), miscStatsLayout, scalingButtonGroup );
-  appendCheckBox( tr( "Leech (tertiary)" ), "leech", tr( "Calculate scale factors for Leech (tertiary stat)" ),
-                  miscStatsLayout, scalingButtonGroup );
-  appendCheckBox( tr( "Movement Speed (tertiary)" ), "runspeed",
-                  tr( "Calculate scale factors for Movement Speed (tertiary stat)" ), miscStatsLayout,
-                  scalingButtonGroup );
+  //appendCheckBox( tr( "Leech (tertiary)" ), "leech", tr( "Calculate scale factors for Leech (tertiary stat)" ),
+  //                miscStatsLayout, scalingButtonGroup );
+  //appendCheckBox( tr( "Movement Speed (tertiary)" ), "runspeed",
+  //                tr( "Calculate scale factors for Movement Speed (tertiary stat)" ), miscStatsLayout,
+  //                scalingButtonGroup );
   appendCheckBox( tr( "Latency" ), "latency", tr( "Calculate scale factors for Latency" ), miscStatsLayout,
                   scalingButtonGroup );
 
@@ -759,8 +763,13 @@ void SC_OptionsTab::createPlotsTab()
                   plotsButtonGroup );
   appendCheckBox( tr( "Mastery Rating" ), "mastery", tr( "Generate Scaling curve for Mastery Rating" ),
                   plotButtonsLayout, plotsButtonGroup );
-  appendCheckBox( tr( "Versatility Rating" ), "vers", tr( "Generate Scaling curve for Versatility Rating" ),
+  //appendCheckBox( tr( "Versatility Rating" ), "vers", tr( "Generate Scaling curve for Versatility Rating" ),
+  //                plotButtonsLayout, plotsButtonGroup );
+  appendCheckBox( tr( "Hit Rating" ), "hit", tr( "Generate Scaling curve for Hit Rating" ),
                   plotButtonsLayout, plotsButtonGroup );
+  appendCheckBox( tr( "Expertise Rating" ), "exp", tr( "Generate Scaling curve for Expertise Rating" ),
+                  plotButtonsLayout, plotsButtonGroup );
+
   appendCheckBox( tr( "Weapon DPS" ), "wdps", tr( "Generate Scaling curve for Weapon DPS" ), plotButtonsLayout,
                   plotsButtonGroup );
   appendCheckBox( tr( "Weapon OH DPS" ), "wohdps", tr( "Generate Scaling curve for Weapon OH DPS" ), plotButtonsLayout,
@@ -771,11 +780,11 @@ void SC_OptionsTab::createPlotsTab()
                   plotsButtonGroup );
   // appendCheckBox( tr( "Avoidance (tertiary)"       ), "avoidance",  tr( "Generate Scaling curve for Avoidance
   // (tertiary stat)"      ), plotButtonsLayout, plotsButtonGroup );
-  appendCheckBox( tr( "Leech (tertiary)" ), "leech", tr( "Generate Scaling curve for Leech (tertiary stat)" ),
-                  plotButtonsLayout, plotsButtonGroup );
-  appendCheckBox( tr( "Movement Speed (tertiary)" ), "runspeed",
-                  tr( "Generate Scaling curve for Movement Speed (tertiary stat)" ), plotButtonsLayout,
-                  plotsButtonGroup );
+  //appendCheckBox( tr( "Leech (tertiary)" ), "leech", tr( "Generate Scaling curve for Leech (tertiary stat)" ),
+  //                plotButtonsLayout, plotsButtonGroup );
+  //appendCheckBox( tr( "Movement Speed (tertiary)" ), "runspeed",
+  //                tr( "Generate Scaling curve for Movement Speed (tertiary stat)" ), plotButtonsLayout,
+  //                plotsButtonGroup );
 
   // spacer to eat up rest of space (makes plotsButtonGroupBox look less silly)
   QSpacerItem* spacer1 = new QSpacerItem( 20, 20, QSizePolicy::Expanding, QSizePolicy::Expanding );
@@ -819,9 +828,14 @@ void SC_OptionsTab::createReforgePlotsTab()
                   tr( "Generate reforge plot data for Haste Rating" ), reforgePlotsLayout, reforgeplotsButtonGroup );
   appendCheckBox( tr( "Plot Reforge Options for Mastery Rating" ), "mastery",
                   tr( "Generate reforge plot data for Mastery Rating" ), reforgePlotsLayout, reforgeplotsButtonGroup );
-  appendCheckBox( tr( "Plot Reforge Options for Versatility Rating" ), "vers",
-                  tr( "Generate reforge plot data for Versatility Rating" ), reforgePlotsLayout,
-                  reforgeplotsButtonGroup );
+  appendCheckBox( tr( "Plot Reforge Options for Hit Rating" ), "hit",
+                  tr( "Generate reforge plot data for Hit Rating" ), reforgePlotsLayout, reforgeplotsButtonGroup );
+  appendCheckBox( tr( "Plot Reforge Options for Expertise Rating" ), "exp",
+                  tr( "Generate reforge plot data for Expertise Rating" ), reforgePlotsLayout, reforgeplotsButtonGroup );
+ 
+  //appendCheckBox( tr( "Plot Reforge Options for Versatility Rating" ), "vers",
+  //                tr( "Generate reforge plot data for Versatility Rating" ), reforgePlotsLayout,
+  //                reforgeplotsButtonGroup );
   appendCheckBox( tr( "Plot Reforge Options for Bonus Armor Rating" ), "bonusarmor",
                   tr( "Generate reforge plot data for Bonus Armor" ), reforgePlotsLayout, reforgeplotsButtonGroup );
 

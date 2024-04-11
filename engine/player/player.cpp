@@ -3371,15 +3371,22 @@ void player_t::init_scaling()
 
     scaling->set( STAT_SPELL_POWER, spell );
     scaling->set( STAT_ATTACK_POWER, attack );
+    scaling->set( STAT_EXPERTISE_RATING, attack );
+    scaling->set( STAT_EXPERTISE_RATING, tank );
+
+    scaling->set( STAT_HIT_RATING, attack );
+    scaling->set( STAT_HIT_RATING, tank );
+    scaling->set( STAT_HIT_RATING, spell );
+
     scaling->enable( STAT_CRIT_RATING );
     scaling->enable( STAT_HASTE_RATING );
     scaling->enable( STAT_MASTERY_RATING );
-    scaling->enable( STAT_VERSATILITY_RATING );
+    //scaling->enable( STAT_VERSATILITY_RATING );
 
-    scaling->set( STAT_SPEED_RATING, sim->has_raid_event( "movement" ) );
+   // scaling->set( STAT_SPEED_RATING, sim->has_raid_event( "movement" ) );
     // scaling -> set( STAT_AVOIDANCE_RATING          ] = tank; // Waste of sim time vast majority of the time. Can be
     // enabled manually.
-    scaling->set( STAT_LEECH_RATING, tank );
+    //scaling->set( STAT_LEECH_RATING, tank );
 
     scaling->set( STAT_WEAPON_DPS, attack );
 
@@ -3489,6 +3496,14 @@ void player_t::init_scaling()
 
         case STAT_BLOCK_RATING:
           add_stat( initial.stats.block_rating, v, 0 );
+          break;
+
+        case STAT_EXPERTISE_RATING:
+          add_stat( initial.stats.expertise_rating, v, 0 );
+          break;
+
+        case STAT_HIT_RATING:
+          add_stat( initial.stats.hit_rating, v, 0 );
           break;
 
         case STAT_MAX:

@@ -5234,7 +5234,7 @@ void druid_t::init_scaling()
 {
   player_t::init_scaling();
 
-  scaling->disable( STAT_STRENGTH );
+  //scaling->disable( STAT_STRENGTH );
 
   // workaround for resto dps scaling
   if ( specialization() == DRUID_RESTORATION )
