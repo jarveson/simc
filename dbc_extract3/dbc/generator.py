@@ -3750,6 +3750,28 @@ class SetBonusListGenerator(DataGenerator):
     # ====================================================================
     # NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE NOTE
     set_bonus_map = [
+        # Wotlk / Cata Tiers
+        {
+            'name': 'tier10',
+            'bonuses': [ 887, 888, 889 ],
+            'tier': 'T10',
+        },
+        {
+            'name': 'tier11',
+            'bonuses': [ 927 ],
+            'tier': 'T11',
+        },
+        {
+            'name': 'tier12',
+            'bonuses': [ 1002 ],
+            'tier': 'T12',
+        },
+        {
+            'name': 'tier13',
+            'bonuses': [ 1058 ],
+            'tier': 'T13',
+        }
+
         # Legion Dungeon, March of the Legion
         {
             'name'   : 'march_of_the_legion',
@@ -3865,26 +3887,6 @@ class SetBonusListGenerator(DataGenerator):
             'name'   : 'tier31',
             'bonuses': [ 1557, 1558, 1559, 1560, 1561, 1562, 1563, 1564, 1565, 1566, 1567, 1568, 1569 ],
             'tier'   : 'T31'
-        },
-        {
-            'name': 'tier10',
-            'bonuses': [ 887, 888, 889 ],
-            'tier': 'T10',
-        },
-        {
-            'name': 'tier11',
-            'bonuses': [ 927 ],
-            'tier': 'T11',
-        },
-        {
-            'name': 'tier12',
-            'bonuses': [ 1002 ],
-            'tier': 'T12',
-        },
-        {
-            'name': 'tier13',
-            'bonuses': [ 1058 ],
-            'tier': 'T13',
         }
     ]
 

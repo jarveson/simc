@@ -834,6 +834,11 @@ enum set_bonus_type_e
   SET_BONUS_NONE = -1,
 
   // Actual tier support in SIMC
+  T10,
+  T11,
+  T12,
+  T13,
+
   T19_MOTL,
   T19_JTT,
   T19_C,
@@ -857,11 +862,6 @@ enum set_bonus_type_e
   T30_MOTD,
   T31,
   DF4,
-
-  T10,
-  T11,
-  T12,
-  T13,
 
   SET_BONUS_MAX
 };
