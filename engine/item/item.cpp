@@ -183,7 +183,7 @@ bool item_t::socket_color_match() const
       return false;
 
     // Socket color of the gem does not match the socket color of the item
-    if ( ! ( parsed.gem_color[ i ] & parsed.data.socket_color[ i ] ) )
+    if ( ! ( parsed.gem_color[ i ] & ( 1 << ( parsed.data.socket_color[ i ] - 1 ))))
       return false;
   }
 

@@ -468,8 +468,10 @@ unsigned enchant::initialize_meta_gem( item_t& item, unsigned gem_id, const std:
     // 'At least x gems'
     if ( c == 5 )
     {
+      if ( ltt == 0 )
+        continue;
       // rt has num, ltt has gem color
-      auto gem = (item_socket_color)( 1 << ltt );
+      auto gem = (item_socket_color)( 1 << (ltt - 1 ));
       auto cnt =
           std::count_if( gem_colors.begin(), gem_colors.end(), [ gem ]( const auto& g ) { return ( g & gem ) != 0; } );
       if ( cnt < rt )
@@ -481,8 +483,11 @@ unsigned enchant::initialize_meta_gem( item_t& item, unsigned gem_id, const std:
     // 'More x than y gems'
     else if ( c == 3 )
     {
-      auto lgem = (item_socket_color)( 1 << ltt );
-      auto rgem = (item_socket_color)( 1 << rtt );
+      if ( ltt == 0 || rtt == 0 )
+        continue;
+
+      auto lgem = (item_socket_color)( 1 << (ltt - 1));
+      auto rgem = (item_socket_color)( 1 << (rtt - 1));
 
       auto lcnt = std::count_if( gem_colors.begin(), gem_colors.end(),
                                  [ lgem ]( const auto& g ) { return ( lgem & g ) != 0; } );

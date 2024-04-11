@@ -1006,19 +1006,19 @@ void download_item_data( item_t& item, cache::behavior_e caching )
         std::string color = sockets[ i ][ "type" ].GetString();
 
         if ( color == "META" )
-          item.parsed.data.socket_color[ i ] = SOCKET_COLOR_META;
+          item.parsed.data.socket_color[ i ] = 1;
         else if ( color == "RED" )
-          item.parsed.data.socket_color[ i ] = SOCKET_COLOR_RED;
+          item.parsed.data.socket_color[ i ] = 2;
         else if ( color == "YELLOW" )
-          item.parsed.data.socket_color[ i ] = SOCKET_COLOR_YELLOW;
+          item.parsed.data.socket_color[ i ] = 3;
         else if ( color == "BLUE" )
-          item.parsed.data.socket_color[ i ] = SOCKET_COLOR_BLUE;
+          item.parsed.data.socket_color[ i ] = 4;
         else if ( color == "PRISMATIC" )
-          item.parsed.data.socket_color[ i ] = SOCKET_COLOR_PRISMATIC;
+          item.parsed.data.socket_color[ i ] = 7;
         else if ( color == "COGWHEEL" )
-          item.parsed.data.socket_color[ i ] = SOCKET_COLOR_COGWHEEL;
+          item.parsed.data.socket_color[ i ] = 6;
         else if ( color == "HYDRAULIC" )
-          item.parsed.data.socket_color[ i ] = SOCKET_COLOR_HYDRAULIC;
+          item.parsed.data.socket_color[ i ] = 5;
       }
 
       if ( js[ "socketInfo" ].HasMember( "socketBonus" ) )

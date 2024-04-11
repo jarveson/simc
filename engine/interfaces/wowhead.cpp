@@ -252,7 +252,7 @@ bool wowhead::download_item_data( item_t& item, wowhead_e source, cache::behavio
       {
         std::string socket_str = fmt::format("socket{:d}", i + 1);
         if (jsonequip.HasMember(socket_str.c_str()))
-          item.parsed.data.socket_color[i] = jsonequip[socket_str.c_str()].GetUint();
+          item.parsed.data.socket_color[i] = jsonequip[socket_str.c_str()].GetUint()+1;
       }
 
       if (jsonequip.HasMember("socketbonus"))
