@@ -4179,21 +4179,6 @@ void player_t::create_buffs()
 
     if ( !is_pet() )
     {
-      if ( sim->overrides.mark_of_the_wild )
-          buffs.mark_of_the_wild->trigger();
-
-      if ( sim->overrides.arcane_intellect )
-          buffs.arcane_intellect->trigger();
-
-      if ( sim->overrides.battle_shout )
-      {
-          buffs.battle_shout->set_duration(sim->max_time * 3);
-          buffs.battle_shout->trigger();
-      }
-
-      if (sim->overrides.power_word_fortitude )
-          buffs.power_word_fortitude->trigger();
-
       // 9.0 class buffs
       buffs.focus_magic = make_buff( this, "focus_magic", find_spell( 54646 ) )
         ->set_default_value_from_effect( 1 )
@@ -4208,12 +4193,6 @@ void player_t::create_buffs()
                                 ->set_default_value_from_effect( 1 )
                                 ->set_cooldown( 0_ms )
                                 ->add_invalidate( CACHE_ATTACK_HASTE );
-
-      if ( sim->overrides.melee_attack_speed )
-          buffs.melee_attack_speed->override_buff();
-
-      if ( sim->overrides.spell_haste )
-          buffs.spell_haste->override_buff();
 
       // External trinkets
       if ( external_buffs.soleahs_secret_technique )
@@ -6758,6 +6737,8 @@ void player_t::arise()
       debuffs.spell_crit_taken->override_buff();
     if ( sim->overrides.phys_dmg && debuffs.phys_dmg_taken )
       debuffs.phys_dmg_taken->override_buff();
+    if ( sim->overrides.bleed_dmg && debuffs.bleed_dmg_taken )
+      debuffs.bleed_dmg_taken->override_buff();
   }
   else
   {
@@ -6768,6 +6749,24 @@ void player_t::arise()
     // pets) can cope with a situation, where the primary target for example is invulnerable, so
     // they need to figure out a (more valid) target to shoot spells on.
     acquire_target( retarget_source::SELF_ARISE );
+
+    if ( buffs.melee_attack_speed && sim->overrides.melee_attack_speed )
+      buffs.melee_attack_speed->trigger();
+
+    if ( buffs.spell_haste && sim->overrides.spell_haste )
+      buffs.spell_haste->trigger();
+
+    if ( buffs.mark_of_the_wild && sim->overrides.mark_of_the_wild )
+      buffs.mark_of_the_wild->trigger();
+
+    if ( buffs.arcane_intellect && sim->overrides.arcane_intellect )
+      buffs.arcane_intellect->trigger();
+
+    if ( buffs.battle_shout && sim->overrides.battle_shout )
+      buffs.battle_shout->trigger( sim->max_time * 3 );
+
+    if ( buffs.power_word_fortitude && sim->overrides.power_word_fortitude )
+      buffs.power_word_fortitude->trigger();
   }
 
   if ( has_foreground_actions( *this ) )

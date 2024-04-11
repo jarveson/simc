@@ -483,7 +483,7 @@ void SC_OptionsTab::createBuffsDebuffsTab()
                   buffsButtonGroup );
   appendCheckBox( tr( "Power Word: Fortitude" ), "override.power_word_fortitude", tr( "Power Word: Fortitude\nCommanding Shout\nWarlock Imp" ),
                   buffsLayout, buffsButtonGroup );
-  appendCheckBox( tr( "Battle Shout" ), "override.battle_shout", tr( "Battle Shout\nHorn of Winter\Strength of Earth" ), buffsLayout, buffsButtonGroup );
+  appendCheckBox( tr( "Str/Agi" ), "override.battle_shout", tr( "Battle Shout\nHorn of Winter\nStrength of Earth" ), buffsLayout, buffsButtonGroup );
   appendCheckBox( tr( "Mark of the Wild" ), "override.mark_of_the_wild", tr( "Mark of the Wild\nBlessing of Kings" ), buffsLayout, buffsButtonGroup );
   appendCheckBox( tr( "Attack Speed" ), "override.melee_attack_speed", tr( "Windfury Totem\nIcy Talons\nHunting Party" ),
                   buffsLayout, buffsButtonGroup );

@@ -1680,7 +1680,7 @@ void print_html_stats( report::sc_html_stream& os, const player_t& p )
           100 * p.composite_spell_crit_chance(),
           p.composite_spell_crit_rating() );
     }
-    if ( p.composite_melee_haste() == p.composite_spell_haste() )
+    if ( buffed_stats.attack_haste == buffed_stats.spell_haste )
     {
       os.printf(
           "<tr>\n"
@@ -1722,7 +1722,8 @@ void print_html_stats( report::sc_html_stream& os, const player_t& p )
           100 * ( 1 / p.composite_spell_haste() - 1 ),
           p.composite_spell_haste_rating() );
     }
-    if ( p.composite_spell_speed() != p.composite_spell_haste() )
+    if ( p.composite_spell_speed() != p.composite_spell_haste() ||
+         buffed_stats.spell_speed != p.composite_spell_haste() )
     {
       os.printf(
           "<tr>\n"
@@ -1737,7 +1738,8 @@ void print_html_stats( report::sc_html_stream& os, const player_t& p )
           100 * ( 1 / p.composite_spell_speed() - 1 ),
           p.composite_spell_haste_rating() );
     }
-    if ( p.composite_melee_speed() != p.composite_melee_haste() )
+    if ( p.composite_melee_speed() != p.composite_melee_haste() ||
+         buffed_stats.attack_speed != p.composite_melee_haste() )
     {
       os.printf(
           "<tr>\n"
