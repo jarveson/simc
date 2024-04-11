@@ -1940,7 +1940,6 @@ void sim_t::combat_begin()
 
   if ( overrides.crit_chance ) auras.crit_chance->override_buff();
   if ( overrides.attack_power ) auras.attack_power->override_buff();
-  if ( overrides.spell_haste ) auras.spell_haste->override_buff();
   if ( overrides.all_damage ) auras.all_damage->override_buff();
   if ( overrides.major_spell_power ) auras.major_spell_damage->override_buff();
 
@@ -2781,10 +2780,6 @@ void sim_t::init()
   auras.attack_power = make_buff( this, "trueshot_aura", dbc::find_spell(this, 19506 ))
                            ->set_default_value( dbc::find_spell( this, 53290 )->effectN( 2 ).percent() )
                            ->add_invalidate(CACHE_ATTACK_POWER);
-
-  auras.spell_haste = make_buff( this, "moonkin_aura", dbc::find_spell( this, 24907 ) )
-                          ->set_default_value( dbc::find_spell( this, 24907 )->effectN( 1 ).percent() )
-                          ->add_invalidate( CACHE_SPELL_HASTE );
 
   auras.all_damage = make_buff( this, "arcane_tactics", dbc::find_spell( this, 82930 ) )
                          ->set_default_value( dbc::find_spell( this, 82930 )->effectN( 1 ).percent() );

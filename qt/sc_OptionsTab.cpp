@@ -230,18 +230,18 @@ void load_scaling_groups( QSettings& s, const QString& groupname, QButtonGroup* 
 SC_OptionsTab::SC_OptionsTab( SC_MainWindow* parent ) : QTabWidget( parent ), mainWindow( parent )
 {
   itemSourceOptions.emplace_back( tr( "Local Item Database" ), "local", tr( "Use Simulationcraft item database" ) );
-  itemSourceOptions.emplace_back( tr( "Blizzard API" ), "bcpapi",
-                                  tr( "Remote Blizzard Community Platform API source" ) );
-  itemSourceOptions.emplace_back( tr( "Wowhead.com" ), "wowhead", tr( "Remote Wowhead.com item data source" ) );
+  //itemSourceOptions.emplace_back( tr( "Blizzard API" ), "bcpapi",
+  //                                tr( "Remote Blizzard Community Platform API source" ) );
+  //itemSourceOptions.emplace_back( tr( "Wowhead.com" ), "wowhead", tr( "Remote Wowhead.com item data source" ) );
 #if SC_USE_PTR
-  itemSourceOptions.emplace_back( tr( "Wowhead.com (PTR)" ), "ptrhead",
-                                  tr( "Remote Wowhead.com PTR item data source" ) );
-  itemSourceOptions.emplace_back( tr( "Wowhead.com (PTR2)" ), "ptr2head",
-                                  tr( "Remote Wowhead.com PTR2 item data source" ) );
+  //itemSourceOptions.emplace_back( tr( "Wowhead.com (PTR)" ), "ptrhead",
+  //                                tr( "Remote Wowhead.com PTR item data source" ) );
+  //itemSourceOptions.emplace_back( tr( "Wowhead.com (PTR2)" ), "ptr2head",
+  //                                tr( "Remote Wowhead.com PTR2 item data source" ) );
 #endif
 #if SC_BETA
-  itemSourceOptions.emplace_back( tr( "Wowhead.com (Beta)" ), SC_BETA_STR "head",
-                                  tr( "Remote Wowhead.com Beta item data source" ) );
+  //itemSourceOptions.emplace_back( tr( "Wowhead.com (Beta)" ), SC_BETA_STR "head",
+  //                                tr( "Remote Wowhead.com Beta item data source" ) );
 #endif
 
   createGlobalsTab();

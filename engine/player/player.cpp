@@ -4171,6 +4171,12 @@ void player_t::create_buffs()
     buffs.melee_attack_speed = make_buff( this, "hunting_party", dbc::find_spell( this, 53290 ) )
                                    ->set_default_value( dbc::find_spell( this, 53290 )->effectN( 2 ).percent() )
                                    ->add_invalidate( CACHE_ATTACK_SPEED );
+
+    buffs.spell_haste = make_buff( this, "moonkin_aura", dbc::find_spell( this, 24907 ) )
+                            ->set_default_value( dbc::find_spell( this, 24907 )->effectN( 1 ).percent() )
+                            ->add_invalidate( CACHE_SPELL_HASTE );
+  
+
     if ( !is_pet() )
     {
       if ( sim->overrides.mark_of_the_wild )
@@ -4204,7 +4210,10 @@ void player_t::create_buffs()
                                 ->add_invalidate( CACHE_ATTACK_HASTE );
 
       if ( sim->overrides.melee_attack_speed )
-          buffs.melee_attack_speed->trigger();
+          buffs.melee_attack_speed->override_buff();
+
+      if ( sim->overrides.spell_haste )
+          buffs.spell_haste->override_buff();
 
       // External trinkets
       if ( external_buffs.soleahs_secret_technique )
@@ -4869,7 +4878,7 @@ double player_t::composite_spell_haste() const
     if ( buffs.berserking->check() )
       h *= 1.0 / ( 1.0 + buffs.berserking->data().effectN( 1 ).percent() );
 
-    h *= 1.0 / ( 1.0 + sim->auras.spell_haste->check_value() );
+    h *= 1.0 / ( 1.0 + buffs.spell_haste->check_value() );
 
     h *= 1.0 / ( 1.0 + racials.nimble_fingers->effectN( 1 ).percent() );
     h *= 1.0 / ( 1.0 + racials.time_is_money->effectN( 1 ).percent() );

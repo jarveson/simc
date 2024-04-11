@@ -318,11 +318,11 @@ void SC_MainWindow::createOptionsTab()
   optionsTab = new SC_OptionsTab( this );
   mainTab->addTab( optionsTab, tr( "Options" ) );
 
-  connect( optionsTab, SIGNAL( armory_region_changed( const QString& ) ), newBattleNetView->widget(),
-           SLOT( armoryRegionChangedIn( const QString& ) ) );
+  //connect( optionsTab, SIGNAL( armory_region_changed( const QString& ) ), newBattleNetView->widget(),
+  //         SLOT( armoryRegionChangedIn( const QString& ) ) );
 
-  connect( newBattleNetView->widget(), SIGNAL( armoryRegionChangedOut( const QString& ) ), optionsTab,
-           SLOT( _armoryRegionChanged( const QString& ) ) );
+  //connect( newBattleNetView->widget(), SIGNAL( armoryRegionChangedOut( const QString& ) ), optionsTab,
+  //         SLOT( _armoryRegionChanged( const QString& ) ) );
 }
 
 void SC_MainWindow::createImportTab()
@@ -330,8 +330,8 @@ void SC_MainWindow::createImportTab()
   importTab = new SC_ImportTab( this );
   mainTab->addTab( importTab, tr( "Import" ) );
 
-  newBattleNetView = new BattleNetImportWindow( this, true );
-  importTab->addTab( newBattleNetView, tr( "Battle.net" ) );
+  //newBattleNetView = new BattleNetImportWindow( this, true );
+  //importTab->addTab( newBattleNetView, tr( "Battle.net" ) );
 
   importTab->addTab( importTab->addonTab, tr( "Simc Addon" ) );
 

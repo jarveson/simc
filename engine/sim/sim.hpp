@@ -256,7 +256,6 @@ struct sim_t : private sc_thread_t
 
     buff_t* crit_chance;
     buff_t* attack_power;
-    buff_t* spell_haste;
 
     buff_t* all_damage;
 
