@@ -2645,11 +2645,11 @@ void action_t::init()
     snapshot_flags |= STATE_HASTE;
 
   // WOD: Dot Snapshoting is gone
-  update_flags |= snapshot_flags;
+  // update_flags |= snapshot_flags;
 
   // WOD: Yank out persistent multiplier from update flags, so they get
   // snapshot once at the application of the spell
-  //update_flags &= ~STATE_MUL_PERSISTENT;
+  update_flags &= ~STATE_MUL_PERSISTENT;
 
   // The Rolling Periodic multiplier is only updated when the DoT is applied or refreshed
   update_flags &= ~STATE_ROLLING_TA;
