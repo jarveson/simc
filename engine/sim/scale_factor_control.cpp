@@ -202,8 +202,16 @@ void scale_factor_control_t::init_deltas()
   if ( stats->haste_rating == 0 ) stats->haste_rating = default_delta;
   if ( stats->mastery_rating == 0 ) stats->mastery_rating = default_delta;
   //if ( stats->versatility_rating == 0 ) stats->versatility_rating = default_delta;
-  if ( stats->hit_rating == 0 ) stats->hit_rating = default_delta;
-  if ( stats->expertise_rating == 0 ) stats->expertise_rating = default_delta;
+  if ( stats->hit_rating == 0 )
+  {
+    stats->hit_rating = default_delta;
+    if ( !positive_scale_delta ) stats->hit_rating *= -1;
+  }
+  if ( stats->expertise_rating == 0 )
+  {
+    stats->expertise_rating = default_delta;
+    if ( !positive_scale_delta ) stats->expertise_rating *= -1;
+  }
 
   // Defensive
   if ( stats->armor == 0 ) stats->armor = default_delta;
