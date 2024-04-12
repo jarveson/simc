@@ -1557,6 +1557,7 @@ public:
 
   double bleed_mul = 0.0;
   bool direct_bleed = false;
+  bool is_bleed     = false;
 
   druid_attack_t( std::string_view n, druid_t* player, const spell_data_t* s = spell_data_t::nil() )
     : ab( n, player, s )
@@ -1580,6 +1581,11 @@ public:
       {
         direct_bleed = true;
       }
+
+      if ( ed.mechanic() == MECHANIC_BLEED || this->data().mechanic() == MECHANIC_BLEED )
+      {
+        is_bleed = true; 
+      }
     }
   }
 
@@ -1595,7 +1601,7 @@ public:
     if ( bleed_mul && t->debuffs.bleeding->up() )
       tm *= 1.0 + bleed_mul;
 
-    if (direct_bleed && t->debuffs.bleed_dmg_taken->up())
+    if (( direct_bleed || is_bleed ) && t->debuffs.bleed_dmg_taken->up())
       tm *= 1.0 + t->debuffs.bleed_dmg_taken->check_value();
     return tm;
   }
