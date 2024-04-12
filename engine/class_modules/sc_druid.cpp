@@ -2278,7 +2278,7 @@ struct ferocious_bite_t : public cat_finisher_t
     refresh_hp = std::max(p->sets->set( DRUID_FERAL, T13, set_bonus_e::B2 )->effectN( 2 ).base_value(), p->talent.blood_in_the_water->effectN( 1 ).base_value());
 
     // tooltips broke yo
-    max_excess_energy   = 25.0;//modified_effectN( find_effect_index( this, E_DUMMY ) );
+    max_excess_energy = data().effectN( 3 ).base_value();
 
     base_dd_adder = base_dmg_per_pnt = data().effectN( 1 ).bonus( p );
     attack_power_mod.direct = base_ap_mod_per_pnt = 0.109;
