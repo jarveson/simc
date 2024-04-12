@@ -2,6 +2,7 @@
 
 #include "client_data.hpp"
 #include "util/span.hpp"
+#include "util/string_view.hpp"
 
 struct glyph_property_data_t
 {
@@ -15,6 +16,8 @@ struct glyph_property_data_t
   {
     return dbc::find<glyph_property_data_t>( id, ptr, &glyph_property_data_t::id );
   }
+
+  static const glyph_property_data_t& find_by_spellid( unsigned id, bool ptr );
 
   static const glyph_property_data_t& nil()
   {

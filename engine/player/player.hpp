@@ -1005,6 +1005,7 @@ public:
   virtual void init_target();
   virtual void init_race();
   virtual void init_talents();
+  virtual void init_glyphs();
   virtual void replace_spells();
   virtual void init_position();
   virtual void init_professions();

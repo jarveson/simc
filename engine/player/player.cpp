@@ -1493,6 +1493,7 @@ void player_t::init_character_properties()
 {
   init_race();
   init_talents();
+  init_glyphs();
   replace_spells();
   init_position();
   init_professions();
@@ -2924,8 +2925,6 @@ static void parse_wowhead_talents( const std::string& talents_str, player_t* pla
       }
       player->player_glyphs.push_back(spellId);
   }
-
-  player->create_glyphs_str();
 }
 
 static void parse_traits_hash( const std::string& talents_str, player_t* player )
@@ -3224,6 +3223,40 @@ void player_t::init_talents()
       }
     }
   }
+}
+
+void player_t::init_glyphs()
+{
+  sim->print_debug( "Initializing glyphs for {}.", *this );
+
+  if ( !is_player() )
+  {
+    sim->print_debug( "Not a player, halting further glyph initialization." );
+    return;
+  }
+
+  if ( !glyphs_str.empty() )
+  {
+    player_glyphs.clear();
+    if ( glyphs_str != "none" ) {
+      auto spl = util::string_split<util::string_view>( glyphs_str, ":/" );
+      for ( const auto& s : spl )
+      {
+        auto glyph_id = util::to_int( s );
+        // Attempt both 'glyph-id' and 'glyph-spell-id'
+        auto g        = glyph_property_data_t::find_by_spellid( glyph_id, dbc->ptr );
+        if (g.id != 0)
+          player_glyphs.push_back( glyph_id );
+        else {
+          auto g = glyph_property_data_t::find( glyph_id, dbc->ptr );
+          if ( g.id != 0 )
+            player_glyphs.push_back( glyph_id );
+        }
+      }
+    }
+  }
+
+  create_glyphs_str();
 }
 
 void player_t::init_spells()

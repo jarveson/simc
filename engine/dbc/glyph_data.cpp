@@ -14,6 +14,20 @@ util::span<const glyph_property_data_t> glyph_property_data_t::data( bool ptr )
   return SC_DBC_GET_DATA( __glyph_property_data, __ptr_glyph_property_data, ptr );
 }
 
+const glyph_property_data_t& glyph_property_data_t::find_by_spellid( unsigned id, bool ptr )
+{
+  auto _data = data( ptr );
+  auto _it   = range::find_if(
+      _data, [ id ]( const glyph_property_data_t& entry ) { return id == entry.spell_id; } );
+
+  if ( _it != _data.end() )
+  {
+    return *_it;
+  }
+
+  return nil();
+}
+
 const glyph_property_data_t* glyph_property_data_t::find( util::string_view name, bool ptr )
 {
   auto _data = data( ptr );
