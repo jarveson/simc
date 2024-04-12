@@ -2398,8 +2398,8 @@ struct savage_roar_t : public cat_finisher_t
     if ( p->talent.endless_carnage->ok() )
       tdur = p->talent.endless_carnage->effectN( 2 ).time_value();
     if ( p->glyphs.savage_roar->ok() )
-      gval = p->glyphs.savage_roar->effectN(1).base_value();
-    gval += data().effectN( 2 ).base_value() / 100;
+      gval = p->glyphs.savage_roar->effectN(1).percent();
+    gval += data().effectN( 2 ).percent();
   }
 
   void execute() override
