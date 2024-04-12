@@ -1528,7 +1528,7 @@ void item::deaths_verdict( special_effect_t& effect )
 
     void execute( action_t*, action_state_t* ) override
     {
-      static constexpr std::array<stat_e, 3> ratings = { STAT_AGILITY, STAT_STRENGTH };
+      static constexpr std::array<stat_e, 2> ratings = { STAT_AGILITY, STAT_STRENGTH };
 
       stat_e max_stat = util::highest_stat( effect.player, ratings );
       (*buffs )[ max_stat ]->trigger();

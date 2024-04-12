@@ -2782,7 +2782,8 @@ void sim_t::init()
                            ->add_invalidate(CACHE_ATTACK_POWER);
 
   auras.all_damage = make_buff( this, "arcane_tactics", dbc::find_spell( this, 82930 ) )
-                         ->set_default_value( dbc::find_spell( this, 82930 )->effectN( 1 ).percent() );
+                         ->set_default_value( dbc::find_spell( this, 82930 )->effectN( 1 ).percent() )
+                         ->add_invalidate( CACHE_PLAYER_DAMAGE_MULTIPLIER );
 
   auras.major_spell_damage = make_buff( this, "demonic_pact", dbc::find_spell( this, 53646 ) )
                                  ->set_default_value( dbc::find_spell( this, 53646 )->effectN( 1 ).percent() );

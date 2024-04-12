@@ -727,6 +727,8 @@ public:
   double composite_armor_multiplier() const override;
   double composite_melee_crit_chance() const override;
   double composite_spell_crit_chance() const override;
+  double composite_spell_power_multiplier() const override;
+  double composite_player_heal_multiplier( const action_state_t* s) const override;
   double composite_block() const override { return 0; }
   double composite_spell_hit() const override;
   double composite_crit_avoidance() const override;
@@ -1054,6 +1056,7 @@ struct bear_form_buff_t : public druid_buff_t, public swap_melee_t
     add_invalidate( CACHE_EXP );
     add_invalidate( CACHE_HIT );
     add_invalidate( CACHE_PLAYER_DAMAGE_MULTIPLIER );
+    add_invalidate( CACHE_PLAYER_HEAL_MULTIPLIER );
     add_invalidate( CACHE_STAMINA );
     add_invalidate( CACHE_WEAPON_DPS );
   }
@@ -1108,6 +1111,7 @@ struct cat_form_buff_t : public druid_buff_t, public swap_melee_t
     add_invalidate( CACHE_HIT );
     add_invalidate( CACHE_CRIT_CHANCE );
     add_invalidate( CACHE_WEAPON_DPS );
+    add_invalidate( CACHE_PLAYER_HEAL_MULTIPLIER );
   }
 
   void expire_override( int expiration_stacks, timespan_t remaining_duration ) override
@@ -1157,6 +1161,7 @@ struct moonkin_form_buff_t : public druid_buff_t
     add_invalidate( CACHE_HIT );
     add_invalidate( CACHE_PLAYER_DAMAGE_MULTIPLIER );
     add_invalidate( CACHE_SPELL_HASTE );
+    add_invalidate( CACHE_PLAYER_HEAL_MULTIPLIER );
   }
 };
 
@@ -1768,18 +1773,11 @@ public:
     base_t::consume_resource();
 
     // Treat Omen of Clarity savings like a gain for tracking purposes.
-    if ( p()->buff.clearcasting->up() )
+    if ( p()->buff.clearcasting->up() && current_resource() == RESOURCE_MANA )
     {
       p()->buff.clearcasting->decrement();
       p()->gain.clearcasting->add( RESOURCE_MANA, eff_cost );
     }
-  }
-
-  double action_multiplier() const override {
-    auto am = ab::action_multiplier(); 
-    if ( p()->talent.master_shapeshifter.ok() && p()->get_form() == MOONKIN_FORM )
-      return am * ( 1.0 + p()->talent.master_shapeshifter->effectN( 1 ).percent() );
-    return am;
   }
 };  // end druid_spell_t
 
@@ -1793,6 +1791,7 @@ struct druid_form_t : public druid_spell_t
   {
     harmful = may_autounshift = reset_melee_swing = false;
     ignore_false_positive = true;
+    gcd_type              = gcd_haste_type::NONE;
 
     form_mask = ( NO_FORM | BEAR_FORM | CAT_FORM | MOONKIN_FORM ) & ~form;
   }
@@ -1858,12 +1857,10 @@ namespace heals
 // ==========================================================================
 struct druid_heal_t : public druid_spell_base_t<heal_t>
 {
-  double master_ss_mul;   // % healing from master shapeshifter
   bool target_self = false;
 
   druid_heal_t( std::string_view n, druid_t* p, const spell_data_t* s = spell_data_t::nil() )
-    : base_t( n, p, s ),
-      master_ss_mul( p->talent.master_shapeshifter->effectN(1).percent() )
+    : base_t( n, p, s )
   {
     add_option( opt_bool( "target_self", target_self ) );
 
@@ -1877,8 +1874,6 @@ struct druid_heal_t : public druid_spell_base_t<heal_t>
   double composite_target_multiplier( player_t* t ) const override
   {
     double ctm = base_t::composite_target_multiplier( t );
-
-    ctm *= master_ss_mul;
 
     return ctm;
   }
@@ -2555,13 +2550,6 @@ struct rip_t : public cat_finisher_t
     tick_may_crit  = true;
 
     bonus_dmg_per_cp = data().effectN( 1 ).bonus( p );
-  }
-
-  timespan_t composite_dot_duration( const action_state_t* s ) const override
-  {
-    timespan_t t = base_t::composite_dot_duration( s );
-
-    return t *= cp( s ) + 1;
   }
 
   double composite_ta_multiplier( const action_state_t* s ) const override
@@ -3871,6 +3859,7 @@ struct prowl_t : public druid_spell_t
 
     form_mask = CAT_FORM;
     autoshift = p->active.shift_to_cat;
+    gcd_type  = gcd_haste_type::NONE;
   }
 
   void execute() override
@@ -3991,6 +3980,7 @@ struct mangle_proxy_t : public druid_spell_t
       mangle_cat( new cat_attacks::mangle_cat_t( p ) ),
       mangle_bear( new bear_attacks::mangle_bear_t( p ) )
   {
+    gcd_type = gcd_haste_type::NONE;
   }
 
   void parse_options( util::string_view opt ) override
@@ -4080,6 +4070,7 @@ struct faerie_fire_feral_cat_t : public druid_spell_t
 {
   DRUID_ABILITY( faerie_fire_feral_cat_t, druid_spell_t, "faerie_fire_feral", p->find_spell( 16857 ) )
   {
+      gcd_type = gcd_haste_type::NONE;
   }
 
   void impact( action_state_t* s ) override
@@ -4098,6 +4089,7 @@ struct faerie_fire_feral_bear_t : public druid_spell_t
   {
     attack_power_mod.direct = 1;
     spell_power_mod.direct  = 0;
+    gcd_type                = gcd_haste_type::NONE;
 
     cooldown->duration = p->dbc->spell( 16857 )->cooldown();
     min_gcd            = p->dbc->spell( 16857 )->gcd();
@@ -4120,6 +4112,7 @@ struct faerie_fire_feral_proxy_t : public druid_spell_t
       ff_cat( new faerie_fire_feral_cat_t( p ) ),
       ff_bear( new faerie_fire_feral_bear_t( p ) )
   {
+    gcd_type = gcd_haste_type::NONE;
   }
 
   void parse_options( util::string_view opt ) override
@@ -4206,6 +4199,7 @@ struct stampeding_roar_t : public druid_spell_t
   DRUID_ABILITY( stampeding_roar_t, druid_spell_t, "stampeding_roar", p->find_class_spell( "Stampeding Roar" ) )
   {
     harmful = false;
+    gcd_type = gcd_haste_type::NONE;
 
     form_mask = BEAR_FORM | CAT_FORM;
     autoshift = p->active.shift_to_bear;
@@ -4222,6 +4216,7 @@ struct survival_instincts_t : public druid_spell_t
 {
   DRUID_ABILITY( survival_instincts_t, druid_spell_t, "survival_instincts", p->talent.survival_instincts )
   {
+    gcd_type = gcd_haste_type::NONE;
     harmful = false;
   }
 
@@ -4245,6 +4240,7 @@ struct feral_charge_base_t : public druid_spell_t
     ignore_false_positive   = true;
     range                   = data().max_range();
     movement_directionality = movement_direction_type::TOWARDS;
+    gcd_type                = gcd_haste_type::NONE;
   }
 
   void execute() override
@@ -4310,6 +4306,7 @@ struct feral_charge_proxy_t : public druid_spell_t
       fc_cat( new feral_charge_cat_t( p ) ),
       fc_bear( new feral_charge_bear_t( p ) )
   {
+    gcd_type = gcd_haste_type::NONE;
   }
 
   void parse_options( util::string_view opt ) override
@@ -4945,8 +4942,9 @@ void druid_t::create_buffs()
       make_buff_fallback( talent.predatory_strikes.ok(), this, "predatory_swiftness", find_spell( 69369 ) );
 
   buff.tigers_fury = make_buff( this, "tigers_fury", find_class_spell( "Tiger's Fury" ) )
-                         ->set_cooldown( 0_ms )
-                         ->set_default_value_from_effect( 1 );
+                         ->set_default_value_from_effect_type( A_MOD_DAMAGE_PERCENT_DONE )
+                         ->add_invalidate( CACHE_PLAYER_DAMAGE_MULTIPLIER )
+                         ->set_period( 0_ms );
 
   buff.stampede_cat = make_buff_fallback( talent.stampede.ok(), this, "stampede_cat",
                                           find_spell( talent.stampede.rank() > 1 ? 81022 : 81021 ) )
@@ -4957,7 +4955,7 @@ void druid_t::create_buffs()
                                            find_spell( talent.stampede.rank() > 1 ? 81017 : 81016 ) )
                            ->apply_affecting_aura( glyphs.feral_charge );
 
-  buff.enrage    = make_buff( this, "enrage", find_class_spell( "Enrage" ) );
+  buff.enrage = make_buff( this, "enrage", find_class_spell( "Enrage" ) )->add_invalidate(CACHE_PLAYER_DAMAGE_MULTIPLIER);
   buff.pulverize =
       make_buff_fallback( talent.pulverize.ok(), this, "pulverize", find_spell( "Pulverize" ) )
           ->modify_duration( talent.endless_carnage->effectN( 2 ).time_value() );
@@ -5597,6 +5595,18 @@ double druid_t::composite_player_multiplier( school_e school ) const
 {
   double m = player_t::composite_player_multiplier( school );
 
+  if ( buff.tigers_fury->check() )
+    m *= 1.0 + buff.tigers_fury->check_value();
+
+  if ( buff.bear_form->check() && ( ( dbc::get_school_mask( school ) & SCHOOL_MASK_PHYSICAL ) != 0 ) )
+  {
+    if ( talent.master_shapeshifter->ok() )
+      m *= 1.0 + talent.master_shapeshifter->effectN( 1 ).percent();
+  }
+
+  if ( buff.enrage->check() && talent.king_of_the_jungle->ok() )
+    m *= 1.0 + talent.king_of_the_jungle->effectN( 1 ).percent();
+
   return m;
 }
 
@@ -5667,6 +5677,21 @@ double druid_t::composite_spell_crit_chance() const
   double scc = player_t::composite_spell_crit_chance();
   scc += talent.natures_majesty->effectN(1).percent();
   return scc;
+}
+
+double druid_t::composite_spell_power_multiplier() const
+{
+  auto spm = player_t::composite_spell_power_multiplier();
+  if ( talent.master_shapeshifter.ok() && get_form() == MOONKIN_FORM )
+    return spm * ( 1.0 + talent.master_shapeshifter->effectN( 1 ).percent() );
+  return spm;
+}
+
+double druid_t::composite_player_heal_multiplier(const action_state_t* s) const
+{
+  auto phm = player_t::composite_player_heal_multiplier(s);
+  phm *= 1.0 + talent.master_shapeshifter->effectN( 1 ).percent();
+  return phm;
 }
 
 // Defense ==================================================================
@@ -5992,6 +6017,7 @@ void druid_t::shapeshift( form_e f )
   if ( !sim->overrides.crit_chance )
     sim->auras.crit_chance->expire();
   buff.leader_of_the_pack->expire();
+  buff.tigers_fury->expire();
 
   switch ( f )
   {
