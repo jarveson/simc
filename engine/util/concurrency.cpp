@@ -255,7 +255,7 @@ void computer_process::set_priority( priority_e p )
  }
 }
 
-#elif defined(SC_OSX) || defined(__unix__)
+#elif (defined( SC_OSX ) || defined( __unix__ )) && !defined(SC_WASM)
 #include <sys/time.h>
 #include <sys/resource.h>
 

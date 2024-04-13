@@ -28,8 +28,11 @@
 #include <exception>
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
 extern "C" {
+
+void js_loaded();
 
 void js_send_progress( uint32_t iteration, uint32_t total_iterations, uint32_t phase, uint32_t total_phases,
                        const char *phase_name, const char *subphase_name );
@@ -69,7 +72,7 @@ void initialize_data()
   hotfix::apply();
 }
 
-const uint8_t *cpp_simulate( const std::string &profile )
+bool cpp_simulate( const std::string &profile )
 {
   sim_t simc;
   sim_control_t control;
@@ -77,6 +80,8 @@ const uint8_t *cpp_simulate( const std::string &profile )
   control.options.parse_text( profile );
   simc.setup( &control );
   simc.json_file_str   = "/output.json";
+  simc.html_file_str   = "/output.html";
+  simc.output_file_str = "/output.txt";
   simc.report_progress = 1;
 
   fmt::print(
@@ -89,25 +94,21 @@ const uint8_t *cpp_simulate( const std::string &profile )
   if ( !simc.execute() )
   {
     fmt::print( "Simulation was canceled.\n" );
-    return NULL;
+    return false;
   }
 
   simc.scaling->analyze();
   simc.plot->analyze();
   simc.reforge_plot->analyze();
-  report::print_json( simc );
 
-  // TODO: change simcraft to write json to RAM instead of file
-  std::ifstream file{ "/output.json", std::ifstream::ate | std::ifstream::binary };
-  const auto filesize    = file.tellg();
-  const auto string_size = filesize + static_cast<decltype( filesize )>( 1u );
-  file.seekg( 0 );
-  uint8_t *buffer = static_cast<decltype( buffer )>( malloc( string_size ) );
-  file.read( (char *)buffer, filesize );
-  buffer[ filesize ] = 0;  // null terminate
-  std::remove( "/output.json" );
+  if ( !simc.profilesets->iterate( &simc ) )
+  {
+    fmt::print( "Simulation profilesets canceled.\n" );
+    return false;
+  }
 
-  return buffer;
+  report::print_suite( &simc );
+  return true;
 }
 
 }  // namespace
@@ -122,10 +123,11 @@ EMSCRIPTEN_KEEPALIVE
 int main( int, char ** )
 {
   initialize_data();
+  js_loaded();
 }
 
 EMSCRIPTEN_KEEPALIVE
-const uint8_t *simulate( const char *profile_str )
+bool simulate( const char *profile_str )
 {
   try
   {

@@ -7,17 +7,24 @@ include(../source_files/cmake_engine.txt)
 
 # Define engine library
 if(SC_WASM)
-    set(OPTS "")
+    set(OPTS "-fwasm-exceptions")
     set(WASM_OPTS
         "-s TOTAL_MEMORY=256MB"
         "-s WASM_MEM_MAX=1024MB"
         "-s ALLOW_MEMORY_GROWTH=1"
         "-s MODULARIZE=1"
         "-s EXPORT_NAME=Simc"
-        "-s DISABLE_EXCEPTION_CATCHING=0"
-        "-s EXPORTED_RUNTIME_METHODS='[\"UTF8ToString\", \"FS\", \"stringToNewUTF8\", \"_free\"]'"
+        "-s ASSERTIONS=1"
+        "-s MALLOC=mimalloc"
+        "-s EXPORTED_RUNTIME_METHODS='[\"_free\", \"allocateUTF8\", \"FS\", \"UTF8ToString\", \"UTF8ToString\"]'"
         "--js-library ${CMAKE_CURRENT_SOURCE_DIR}/wasm/glue.js"
+        "-fwasm-exceptions"
     )
+    if (NOT SC_NO_THREADING)
+        list(APPEND OPTS "-pthread")
+        list(APPEND WASM_OPTS "-sPTHREAD_POOL_SIZE=navigator.hardwareConcurrency -pthread")
+    endif()
+
     if(CMAKE_BUILD_TYPE MATCHES Release)
         list(APPEND OPTS -O3 -flto)
         list(APPEND WASM_OPTS -O3 -flto)
@@ -42,7 +49,7 @@ if(SC_NO_NETWORKING)
 endif()
 
 # Detect pthreads
-if(NOT SC_NO_THREADING)
+if(NOT SC_NO_THREADING AND NOT SC_WASM)
     set(THREADS_PREFER_PTHREAD_FLAG ON)
     find_package(Threads REQUIRED)
     target_link_libraries(engine Threads::Threads)
