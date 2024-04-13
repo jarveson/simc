@@ -2312,7 +2312,7 @@ struct ferocious_bite_t : public cat_finisher_t
   {
     cat_finisher_t::impact( s );
 
-    if ( result_is_hit(s->result) )
+    if ( !result_is_hit(s->result) )
         return;
 
     if ( p()->glyphs.ferocious_bite->ok() )
@@ -2328,6 +2328,7 @@ struct ferocious_bite_t : public cat_finisher_t
         if ( td_d->dots.rip->is_ticking() && ( p()->talent.blood_in_the_water.rank() == 2 || p()->rng().roll( 0.5 ) ) )
         {
           td_d->dots.rip->refresh_duration();
+          p()->buff.rip_extensions = 3;
         }
       }
     }
@@ -2605,8 +2606,10 @@ struct shred_t : public cat_attack_t
 
   bool ready() override
   {
-    if ( extend_rip && p()->glyphs.bloodletting->ok())
+    if ( extend_rip)
     {
+      if ( !p()->glyphs.bloodletting->ok() )
+        return false;
       auto td_d = td( target );
       if ( p()->buff.rip_extensions == 0 || !td_d->dots.rip->is_ticking() )
         return false;
@@ -2643,6 +2646,20 @@ struct mangle_cat_t : public cat_attack_t
     energize_type     = action_energize::ON_HIT;
     energize_resource = resource_e::RESOURCE_COMBO_POINT;
     energize_amount   = 1.0;
+  }
+
+  bool ready() override
+  {
+    if ( extend_rip )
+    {
+      if ( !p()->glyphs.bloodletting->ok() )
+        return false;
+      auto td_d = td( target );
+      if ( p()->buff.rip_extensions == 0 || !td_d->dots.rip->is_ticking() )
+        return false;
+    }
+
+    return cat_attack_t::ready();
   }
 
   void impact( action_state_t* s ) override
