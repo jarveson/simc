@@ -4952,7 +4952,9 @@ void unique_gear::register_special_effects()
   register_special_effect( 71892,  item::heartpierce                    );
   register_special_effect( 71880,  item::heartpierce                    );
   register_special_effect( 72413,  "10%"                                ); /* ICC Melee Ring */
+  register_special_effect( 96910, "60cd"                                ); /* The Hungerer cd (Item has 120sec but spell has 60) */
   register_special_effect( 96976,  item::matrix_restabilizer            ); /* Matrix Restabilizer */
+  register_special_effect( 97126, "60cd"                                ); /* The Hungerer cd (Item has 120sec but spell has 60) */
   register_special_effect( 107824, "1Tick_108016Trigger_20Dur"          ); /* Kiril, Fury of Beasts */
   register_special_effect( 109862, "1Tick_109860Trigger_20Dur"          ); /* Kiril, Fury of Beasts */
   register_special_effect( 109865, "1Tick_109863Trigger_20Dur"          ); /* Kiril, Fury of Beasts */
