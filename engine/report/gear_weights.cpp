@@ -188,6 +188,10 @@ const char* pawn_stat_name( stat_e stat )
       return "OffHandDps";
     case STAT_LEECH_RATING:
       return "Leech";
+    case STAT_HIT_RATING:
+      return "HitRating";
+    case STAT_EXPERTISE_RATING:
+      return "ExpertiseRating";
     default:
       break;
   }
