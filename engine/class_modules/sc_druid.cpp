@@ -3015,6 +3015,7 @@ struct pulverize_t : public bear_attack_t
 
     if ( stacks > 0 )
     {
+      p()->buff.pulverize->expire();
       p()->buff.pulverize->trigger( stacks );
       t_td->dots.lacerate->cancel();
     }
@@ -5674,8 +5675,8 @@ double druid_t::composite_armor_multiplier() const
   if ( buff.bear_form->check() )
   {
     a *= 1.0 + buff.bear_form->data().effectN( 4 ).percent();
-    a *= 1.0 + talent.thick_hide->effectN( 2 ).percent();
   }
+  a *= 1.0 + talent.thick_hide->effectN( 2 ).percent();
 
   return a;
 }
