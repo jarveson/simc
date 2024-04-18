@@ -1144,6 +1144,7 @@ namespace profileset
 {
 profilesets_t::profilesets_t() {}
 profilesets_t::~profilesets_t() {}
+std::vector<const profile_set_t*> profilesets_t::generate_sorted_profilesets( bool ) const { return {}; }
 void create_options( sim_t* ) {}
 sim_control_t* filter_control( const sim_control_t* ) { return nullptr; }
 void profilesets_t::initialize( sim_t* ) {}

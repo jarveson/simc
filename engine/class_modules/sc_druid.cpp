@@ -6417,9 +6417,9 @@ struct druid_module_t : public module_t
                                     ->set_pct_buff_type( STAT_PCT_BUFF_STAMINA )
                                     ->set_pct_buff_type( STAT_PCT_BUFF_INTELLECT );
 
-    p->debuffs.faerie_fire =
-        make_buff( p, "faerie_fire", p->find_spell( 91565 ) )
-        ->add_invalidate( CACHE_ARMOR );
+    p->debuffs.faerie_fire = make_buff( p, "faerie_fire", p->find_spell( 91565 ) )
+                                 ->set_default_value_from_effect_type( A_MOD_RESISTANCE_PCT )
+                                 ->add_invalidate( CACHE_ARMOR );
   }
 
   void static_init() const override {}
