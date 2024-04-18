@@ -976,6 +976,8 @@ class ItemDataGenerator(DataGenerator):
                 fields += item.field('gem_props', 'socket_bonus', 'item_set', 'id_curve', 'id_artifact' )
                 if self._options.build >= dbc.WowVersion(5, 0, 0, 0):
                     fields += item2.ref('id_crafting_quality').field('tier')
+                else:
+                    fields += ['0']
 
                 self.output_record(fields)
 
@@ -3754,23 +3756,23 @@ class SetBonusListGenerator(DataGenerator):
         {
             'name': 'tier10',
             'bonuses': [ 887, 888, 889 ],
-            'tier': 'T10',
+            'tier': 'T10'
         },
         {
             'name': 'tier11',
             'bonuses': [ 927 ],
-            'tier': 'T11',
+            'tier': 'T11'
         },
         {
             'name': 'tier12',
             'bonuses': [ 1002 ],
-            'tier': 'T12',
+            'tier': 'T12'
         },
         {
             'name': 'tier13',
             'bonuses': [ 1058 ],
-            'tier': 'T13',
-        }
+            'tier': 'T13'
+        },
 
         # Legion Dungeon, March of the Legion
         {
