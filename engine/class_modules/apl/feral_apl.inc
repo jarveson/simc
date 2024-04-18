@@ -17,7 +17,7 @@ def->add_action( "auto_attack");
 def->add_action( "tigers_fury,if=((set_bonus.tier13_4pc&energy<=45)|(!set_bonus.tier13_4pc&energy<=35))&(!buff.clearcasting.react)" );
 def->add_action( "berserk,if=buff.tigers_fury.up|(target.time_to_die<buff.berserk.duration&cooldown.tigers_fury.remains>6)" );
 def->add_action( "mangle_cat,if=set_bonus.tier11_4pc&buff.strength_of_the_panther.remains<4" );
-def->add_action( "faerie_fire_feral,if=debuff.faerie_fire.stack<3|!(debuff.expose_armor.up)" );
+def->add_action( "faerie_fire_feral,if=debuff.faerie_fire.stack<3&!(debuff.expose_armor.up)" );
 def->add_action( "mangle_cat,if=debuff.mangle.remains<=2&(!debuff.mangle.up|debuff.mangle.remains>=0.0)" );
 def->add_action( "ravage,if=(buff.stampede_cat.up|buff.smokescreen.up)&(buff.stampede_cat.remains<=1|buff.smokescreen.remains<=1)" );
 

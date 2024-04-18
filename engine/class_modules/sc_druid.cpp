@@ -451,6 +451,7 @@ public:
     buff_t* stampede_bear;
     buff_t* pulverize;
     buff_t* enrage;
+    buff_t* berserk_mangle_cc;
 
     // Restoration
     buff_t* natures_swiftness;
@@ -1366,6 +1367,7 @@ public:
     // Guardian
     parse_effects( p()->buff.bear_form );
     parse_effects( p()->buff.stampede_bear );
+    parse_effects( p()->buff.berserk_mangle_cc );
     //parse_effects( p()->buff.furious_regeneration );
 
     // Restoration
@@ -1768,7 +1770,7 @@ public:
 
   void consume_resource() override
   {
-    double eff_cost = cost();
+    double eff_cost = base_cost();
 
     base_t::consume_resource();
 
@@ -2804,12 +2806,17 @@ struct bear_attack_t : public druid_attack_t<melee_attack_t>
 
   void consume_resource() override
   {
-    double eff_cost = cost();
+    double eff_cost = base_cost();
 
     base_t::consume_resource();
 
+    // Bear Zerk free mangle always gets eaten instead of clearcasting
+    if ( p()->buff.berserk_mangle_cc->up() && id == p()->spec.mangle_bear->id())
+    {
+      p()->buff.berserk_mangle_cc->decrement();
+    }
     // Treat Omen of Clarity savings like a gain for tracking purposes.
-    if ( p()->buff.clearcasting->up() )
+    else if ( p()->buff.clearcasting->up() )
     {
       p()->buff.clearcasting->decrement();
       p()->gain.clearcasting->add( RESOURCE_RAGE, eff_cost );
@@ -3072,7 +3079,7 @@ struct lacerate_t : public bear_attack_t
 
       if ( p()->talent.berserk->ok() )
       {
-        if ( p()->rng().roll( 0.5 ) )
+        if ( p()->buff.berserk_mangle_cc->trigger() )
         {
           p()->cooldown.mangle->reset( true );
         }
@@ -4947,9 +4954,12 @@ void druid_t::create_buffs()
   buff.savage_roar =
       make_buff( this, "savage_roar", find_class_spell( "Savage Roar" ) )->set_default_value_from_effect( 1 );
 
+  // Buff has wrong chance
+  buff.berserk_mangle_cc = make_buff_fallback( talent.berserk.ok(), this, "berserk", find_spell( 93622 ) )->set_chance( 0.5 );
+
   // 1.05s ICD per https://github.com/simulationcraft/simc/commit/b06d0685895adecc94e294f4e3fcdd57ac909a10
-  buff.clearcasting = make_buff( this, "clearcasting", find_spell( 16864 )->effectN(1).trigger())
-          ->set_cooldown( 1.05_s );
+  buff.clearcasting =
+      make_buff( this, "clearcasting", find_spell( 16864 )->effectN( 1 ).trigger() )->set_cooldown( 1.05_s );
 
   buff.fury_swipes =
       make_buff_fallback( talent.fury_swipes.ok(), this, "fury_swipes", find_spell( 48532 ) )
@@ -5424,7 +5434,7 @@ void druid_t::init_special_effects()
 
         void execute( action_t*, action_state_t* s ) override
         {
-        residual_action::trigger( damage, s->target, s->result_amount * mul );
+          residual_action::trigger( damage, s->target, s->result_amount * mul );
         }
       };
 
