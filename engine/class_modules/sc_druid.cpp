@@ -432,7 +432,7 @@ public:
     buff_t* fury_swipes;
     buff_t* stampede_cat;
     buff_t* feral_charge;
-    buff_t* savage_roar;
+    damage_buff_t* savage_roar;
     buff_t* leader_of_the_pack;
     buff_t* primal_fury_bear;
     buff_t* primal_fury_cat;
@@ -727,6 +727,7 @@ public:
   double composite_player_multiplier(school_e school) const override;
   double composite_armor_multiplier() const override;
   double composite_melee_crit_chance() const override;
+  double composite_melee_speed() const override;
   double composite_spell_crit_chance() const override;
   double composite_spell_power_multiplier() const override;
   double composite_player_heal_multiplier( const action_state_t* s) const override;
@@ -1366,7 +1367,6 @@ public:
 
     // Guardian
     parse_effects( p()->buff.bear_form );
-    parse_effects( p()->buff.stampede_bear );
     parse_effects( p()->buff.berserk_mangle_cc );
     //parse_effects( p()->buff.furious_regeneration );
 
@@ -2388,16 +2388,12 @@ struct maim_t : public cat_finisher_t
 struct savage_roar_t : public cat_finisher_t
 {
   timespan_t tdur{};
-  double gval{};
 
   DRUID_ABILITY( savage_roar_t, cat_finisher_t, "savage_roar", p->find_class_spell( "Savage Roar" ) )
   {
     harmful = false;
     if ( p->talent.endless_carnage->ok() )
       tdur = p->talent.endless_carnage->effectN( 2 ).time_value();
-    if ( p->glyphs.savage_roar->ok() )
-      gval = p->glyphs.savage_roar->effectN(1).percent();
-    gval += data().effectN( 2 ).percent();
   }
 
   void execute() override
@@ -2408,7 +2404,8 @@ struct savage_roar_t : public cat_finisher_t
     auto dur = s_data->duration() + ( 5_s * cps );
     dur += tdur;
 
-    p()->buff.savage_roar->trigger( 1, gval, -1.0, dur );
+    p()->buff.savage_roar->expire();
+    p()->buff.savage_roar->trigger( dur );
   }
 };
 
@@ -3023,7 +3020,7 @@ struct pulverize_t : public bear_attack_t
     if ( stacks > 0 )
     {
       p()->buff.pulverize->expire();
-      p()->buff.pulverize->trigger( stacks );
+      p()->buff.pulverize->trigger( 1, p()->buff.pulverize->default_value * stacks);
       t_td->dots.lacerate->cancel();
     }
   }
@@ -4486,14 +4483,13 @@ struct cat_melee_t : public druid_melee_t<cat_attacks::cat_attack_t>
     form_mask = form_e::CAT_FORM;
 
     snapshots.tigers_fury = true;
-  }
 
-  double composite_da_multiplier( const action_state_t* s ) const override
-  {
-    auto da = base_t::composite_da_multiplier( s );
-    if ( p()->buff.savage_roar->up() )
-      da *= 1.0 + p()->buff.savage_roar->current_value;
-    return da;
+    // Manually calculate this a bit, so its forced to show under melee
+    const auto& eff = find_effect( p->buff.savage_roar, A_MOD_AUTO_ATTACK_PCT );
+    ab::add_parse_entry( ab::da_multiplier_effects )
+        .set_buff( p->buff.savage_roar )
+        .set_value( p->buff.savage_roar->auto_attack_mod.multiplier - 1.0 )
+        .set_eff( &eff );
   }
 
   void execute() override
@@ -4951,11 +4947,12 @@ void druid_t::create_buffs()
   // Feral buffs
   buff.berserk = make_buff_fallback( talent.berserk.ok(), this, "berserk", find_talent_spell( "Berserk" ) );
   buff.feral_charge = make_buff_fallback( talent.feral_charge.ok(), this, "feral_charge_movement" );
+
   buff.savage_roar =
-      make_buff( this, "savage_roar", find_class_spell( "Savage Roar" ) )->set_default_value_from_effect( 1 );
+      make_buff<damage_buff_t>( this, "savage_roar", find_spell( 62071 ) )->apply_affecting_aura( glyphs.savage_roar );
 
   // Buff has wrong chance
-  buff.berserk_mangle_cc = make_buff_fallback( talent.berserk.ok(), this, "berserk", find_spell( 93622 ) )->set_chance( 0.5 );
+  buff.berserk_mangle_cc = make_buff_fallback( talent.berserk.ok(), this, "berserk_mangle_cc", find_spell( 93622 ) )->set_chance( 0.5 );
 
   // 1.05s ICD per https://github.com/simulationcraft/simc/commit/b06d0685895adecc94e294f4e3fcdd57ac909a10
   buff.clearcasting =
@@ -4981,12 +4978,16 @@ void druid_t::create_buffs()
 
   buff.stampede_bear = make_buff_fallback( talent.stampede.ok(), this, "stampede_bear",
                                            find_spell( talent.stampede.rank() > 1 ? 81017 : 81016 ) )
-                           ->apply_affecting_aura( glyphs.feral_charge );
+                           ->apply_affecting_aura( glyphs.feral_charge )
+                           ->set_default_value_from_effect( 1 )
+                           ->add_invalidate( CACHE_ATTACK_SPEED );
 
   buff.enrage = make_buff( this, "enrage", find_class_spell( "Enrage" ) )->add_invalidate(CACHE_PLAYER_DAMAGE_MULTIPLIER);
-  buff.pulverize =
-      make_buff_fallback( talent.pulverize.ok(), this, "pulverize", find_spell( "Pulverize" ) )
-          ->modify_duration( talent.endless_carnage->effectN( 2 ).time_value() );
+
+  buff.pulverize = make_buff_fallback( talent.pulverize.ok(), this, "pulverize", find_spell( 80951 ) )
+                       ->apply_affecting_aura( talent.endless_carnage )
+                       ->set_default_value_from_effect_type( A_MOD_ALL_CRIT_CHANCE )
+                       ->set_pct_buff_type( STAT_PCT_BUFF_CRIT );
 
   buff.primal_fury_bear = make_buff_fallback( talent.primal_fury.ok(), this, "primal_fury_bear",
                                               find_spell( talent.primal_fury->effectN( 1 ).trigger_spell_id() ) );
@@ -5698,6 +5699,13 @@ double druid_t::composite_melee_crit_chance() const
   if ( buff.cat_form->check() )
     mcc += talent.master_shapeshifter->effectN( 1 ).percent();
   return mcc;
+}
+
+double druid_t::composite_melee_speed() const
+{
+  double cms = player_t::composite_melee_speed();
+  cms *= 1.0 / ( 1.0 + buff.stampede_bear->check_value() );
+  return cms;
 }
 
 double druid_t::composite_spell_crit_chance() const
