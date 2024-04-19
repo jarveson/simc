@@ -5216,6 +5216,8 @@ void druid_t::apl_precombat()
   // Consumables
   precombat->add_action( "flask" );
   precombat->add_action( "food" );
+  if ( specialization() == DRUID_FERAL && role != ROLE_TANK )
+    precombat->add_action( "cat_form" );
   precombat->add_action( "snapshot_stats", "Snapshot raid buffed stats before combat begins and pre-potting is done." );
   precombat->add_action( "potion" );
 }
