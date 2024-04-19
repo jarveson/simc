@@ -263,6 +263,7 @@ struct player_t : public actor_t
   // Weapons
   weapon_t main_hand_weapon;
   weapon_t off_hand_weapon;
+  weapon_t ranged_weapon;
 
   // Main, offhand, and ranged attacks
   attack_t* main_hand_attack;
