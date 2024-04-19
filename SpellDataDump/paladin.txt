@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54217 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54339 cata-BETA
 Name             : Block (desc=Passive) (id=107) [Passive] 
 Class            : Warrior, Paladin, Shaman
 School           : Physical
@@ -123,7 +123,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Heal Prediction (280)
 Effects          :
 #1 (id=679053)   : Direct Heal (10) | Scaling Class: 2
-                   Base Value: 49 | Scaled Value: 4400.055 (coefficient=4.274) | Points Per Level: 0.8 | SP Coefficient: 0.43200 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 49 | Scaled Value: 4162.452 - 4637.658 (coefficient=4.274, delta coefficient=0.108) | Points Per Level: 0.8 | SP Coefficient: 0.43200 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Heals a friendly target for $s1.
 
 Name             : Divine Shield (id=642) [Spell Family (10)] 
@@ -215,7 +215,7 @@ Attributes       : ........ ........ x.x..... ........   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18), Doesn't Reset Swing Timer if Instant (217), Reset Swing Timer at spell start (239), Aura Points On Client (268)
 Effects          :
 #1 (id=679479)   : School Damage (2): holy | Scaling Class: 2
-                   Base Value: 95 | Scaled Value: 2741.541 (coefficient=2.663) | Points Per Level: 1.2 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 95 | Scaled Value: 2590.756 - 2892.326 (coefficient=2.663, delta coefficient=0.11) | Points Per Level: 1.2 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=94068)    : Apply Aura (6) | Periodic Damage (3): holy every 2 seconds | Scaling Class: 2
                    Base Value: 1 | Scaled Value: 184.2793 (coefficient=0.179) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Causes ${(($m1+$M1)/2)+(0.344*$cond($gt($SP,$AP),$SP,$AP))} Holy damage $?s54934[plus ${($m1+$M1)/2*0.0688} every $t2 sec for $d ][]to an enemy target.  If the target is Undead or Demon, it will always critically hit.
@@ -641,7 +641,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Doesn't Reset Swing Timer if Instant (217), Heal Prediction (280)
 Effects          :
 #1 (id=696600)   : Direct Heal (10) | Scaling Class: 2
-                   Base Value: 80 | Scaled Value: 7328.964 (coefficient=7.119) | Points Per Level: 1 | SP Coefficient: 0.86300 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 80 | Scaled Value: 6907.548 - 7750.379 (coefficient=7.119, delta coefficient=0.115) | Points Per Level: 1 | SP Coefficient: 0.86300 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : A quick, expensive heal that heals a friendly target for $s1.
 
 Name             : Resistance Aura (id=19891) [Spell Family (10)] 
@@ -1505,7 +1505,7 @@ Attributes       : ........ ........ x.x..x.. ........   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18), No Active Defense (21), Combat Feedback When Usable (137), No Attack Dodge (247), No Attack Parry (248)
 Effects          :
 #1 (id=702000)   : School Damage (2): holy | Scaling Class: 2
-                   Base Value: 350 | Scaled Value: 4015.024 (coefficient=3.9) | Points Per Level: 2.4 | SP Coefficient: 0.11700 | AP Coefficient: 0.39000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 350 | Scaled Value: 3814.273 - 4215.775 (coefficient=3.9, delta coefficient=0.1) | Points Per Level: 2.4 | SP Coefficient: 0.11700 | AP Coefficient: 0.39000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Hurls a hammer that strikes an enemy for $s1 Holy damage.  Only usable on enemies that have 20% or less health.
 
 Name             : Forbearance (id=25771) [Spell Family (10)] 
@@ -1597,7 +1597,7 @@ Attributes       : ........ ........ x.x..... ........   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18), Not a Proc (105), Do Not Display Range (126), No Cast Log (128), Not In Spellbook (143)
 Effects          :
 #1 (id=703627)   : School Damage (2): holy | Scaling Class: 2
-                   Base Value: 313 | Scaled Value: 1457.763 (coefficient=1.416) | SP Coefficient: 0.42900 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 313 | Scaled Value: 1399.452 - 1516.073 (coefficient=1.416, delta coefficient=0.08) | SP Coefficient: 0.42900 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=103179)   : Energize Power (30) | Scaling Class: 2
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Misc Value: holy_power | Target: Self (1)
 Description      : Blasts the target with Holy energy, causing $25912s1 Holy damage to an enemy, or $25914s1 healing to an ally, and grants a charge of Holy Power.
@@ -1621,7 +1621,7 @@ Attributes       : ........ ........ x.x..... ........   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18), Not a Proc (105), Do Not Display Range (126), No Cast Log (128), Not In Spellbook (143)
 Effects          :
 #1 (id=703629)   : Direct Heal (10) | Scaling Class: 2
-                   Base Value: 480 | Scaled Value: 2738.452 (coefficient=2.66) | SP Coefficient: 0.26900 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 480 | Scaled Value: 2628.914 - 2847.991 (coefficient=2.66, delta coefficient=0.08) | SP Coefficient: 0.26900 | PvP Coefficient: 1.00000 | Target: Friend (21)
 #2 (id=103178)   : Energize Power (30) | Scaling Class: 2
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Misc Value: holy_power | Target: Self (1)
 Description      : Blasts the target with Holy energy, causing $25912s1 Holy damage to an enemy, or $25914s1 healing to an ally, and grants a charge of Holy Power.
@@ -2363,7 +2363,7 @@ Attributes       : ........ ........ x.x..... ........   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18), Bouncy Chain Missiles (146), Do Not Chain To Crowd-Controlled Targets (200), No Attack Dodge (247), No Attack Parry (248), No Attack Block (256), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=850439)   : School Damage (2): holy | Scaling Class: 2
-                   Base Value: 439 | Scaled Value: 3113.188 (coefficient=3.024) | SP Coefficient: 0.21000 | AP Coefficient: 0.41900 | PvP Coefficient: 1.00000 | Chain Multiplier: 1 | Chain Targets: 3 | Target: Enemy (6)
+                   Base Value: 439 | Scaled Value: 2801.869 - 3424.507 (coefficient=3.024, delta coefficient=0.2) | SP Coefficient: 0.21000 | AP Coefficient: 0.41900 | PvP Coefficient: 1.00000 | Chain Multiplier: 1 | Chain Targets: 3 | Target: Enemy (6)
 #2 (id=21608)    : Interrupt Cast (68) | Scaling Class: 2
                    Base Value: 0 | Scaled Value: 0 | AP Coefficient: 0.41900 | PvP Coefficient: 1.00000 | Chain Multiplier: 1 | Mechanic: Interrupt | Chain Targets: 3 | Target: Enemy (6)
 #3 (id=89392)    : Apply Aura (6) | Silence (27) | Scaling Class: 2
@@ -5832,7 +5832,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Heal Prediction (280)
 Effects          :
 #1 (id=81809)    : Direct Heal (10) | Scaling Class: 2
-                   Base Value: 49 | Scaled Value: 11733.14 (coefficient=11.397) | Points Per Level: 0.8 | SP Coefficient: 1.15300 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 49 | Scaled Value: 11099.55 - 12366.73 (coefficient=11.397, delta coefficient=0.108) | Points Per Level: 0.8 | SP Coefficient: 1.15300 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : A large heal that heals a friendly target for $s1. Good for periods of heavy damage.
 
 Name             : Holy Radiance (id=82327) [Spell Family (10)] 
@@ -5860,7 +5860,7 @@ Effects          :
 #1 (id=81810)    : Apply Aura (6) | Periodic Dummy (226): every 1 seconds | Scaling Class: 4
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Target: Friend (21)
 #2 (id=101621)   : Direct Heal (10) | Scaling Class: 4
-                   Base Value: 48 | Scaled Value: 2914.339 (coefficient=2.59) | Points Per Level: 0.8 | SP Coefficient: 0.25900 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: Unknown(63) -> AOE friendly (31)
+                   Base Value: 48 | Scaled Value: 2622.905 - 3205.773 (coefficient=2.59, delta coefficient=0.2) | Points Per Level: 0.8 | SP Coefficient: 0.25900 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: Unknown(63) -> AOE friendly (31)
 #3 (id=110901)   : Energize Power (30) | Scaling Class: 4
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: holy_power | Target: Self (1)
 Description      : Imbues a friendly target with radiant energy, healing that target and all allies within $A2 yards for $s2 and another $86452s1 every $82327t1 sec for $d$?s84800[ and grants a charge of Holy Power]?s85511[ and grants a charge of Holy Power]?s85512[ and grants a charge of Holy Power][].  Healing effectiveness diminishes for each player target beyond 6.
@@ -6428,9 +6428,9 @@ Attributes       : ........ ........ ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
 Effects          :
 #1 (id=86331)    : Direct Heal (10) | Scaling Class: 2
-                   Base Value: 1 | Scaled Value: 640.3449 (coefficient=0.622) | SP Coefficient: 0.13200 | PvP Coefficient: 1.00000 | Radius: 30 yards | Target: Unknown(59)
+                   Base Value: 1 | Scaled Value: 605.7663 - 674.9235 (coefficient=0.622, delta coefficient=0.108) | SP Coefficient: 0.13200 | PvP Coefficient: 1.00000 | Radius: 30 yards | Target: Unknown(59)
 #2 (id=98016)    : Direct Heal (10) | Scaling Class: 2
-                   Base Value: 1 | Scaled Value: 640.3449 (coefficient=0.622) | SP Coefficient: 0.13200 | PvP Coefficient: 1.00000 | Target: Self (1)
+                   Base Value: 1 | Scaled Value: 605.7663 - 674.9235 (coefficient=0.622, delta coefficient=0.108) | SP Coefficient: 0.13200 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Consumes all Holy Power to send a wave of healing energy before you, healing up to $?s54940[4][6] of the most injured targets in your party or raid within a 30 yard frontal cone for $s1 per charge of Holy Power.
 
 Name             : Templar's Verdict (id=85256) [Spell Family (10)] 
@@ -6781,7 +6781,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Periodic Can Crit (265), Heal Prediction (280)
 Effects          :
 #1 (id=86977)    : Direct Heal (10) | Scaling Class: 2
-                   Base Value: 49 | Scaled Value: 2133.11 (coefficient=2.072) | Points Per Level: 0.8 | SP Coefficient: 0.20900 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 49 | Scaled Value: 2017.922 - 2248.298 (coefficient=2.072, delta coefficient=0.108) | Points Per Level: 0.8 | SP Coefficient: 0.20900 | PvP Coefficient: 1.00000 | Target: Friend (21)
 #2 (id=98714)    : Apply Aura (6) | Periodic Heal (8): every 2 seconds | Scaling Class: 2
                    Base Value: 1 | Scaled Value: 356.2047 (coefficient=0.346) | SP Coefficient: 0.03480 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Consumes all Holy Power to heal a friendly target for ${(($m1+$M1)/2)+0.198*$AP} $?s93466[plus ${($m1+$M1)/2} over $d ][]per charge of Holy Power.
@@ -7270,7 +7270,7 @@ Attributes       : ........ ........ ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
 Effects          :
 #1 (id=88405)    : School Damage (2): holy | Scaling Class: 2
-                   Base Value: 100 | Scaled Value: 243.5781 (coefficient=0.2366) | SP Coefficient: 0.06100 | PvP Coefficient: 1.00000 | Radius: 10 yards | Target: AOE enemy (15)
+                   Base Value: 100 | Scaled Value: 207.0414 - 280.1149 (coefficient=0.2366, delta coefficient=0.3) | SP Coefficient: 0.06100 | PvP Coefficient: 1.00000 | Radius: 10 yards | Target: AOE enemy (15)
 Description      : Unleash the fury of ancient kings, causing $s1 Holy damage per application of Ancient Fury, divided evenly among all targets within $a1 yards.
 
 Name             : The Art of War (desc=Rank 3) (id=87138) [Spell Family (10), Passive, Hidden] 
@@ -7455,7 +7455,7 @@ Attributes       : ........ ........ ........ ........   ........ ........ .....
                  : Do Not Display Range (126), Not In Spellbook (143)
 Effects          :
 #1 (id=89033)    : Direct Heal (10) | Scaling Class: 2
-                   Base Value: 0 | Scaled Value: 1334.223 (coefficient=1.296) | SP Coefficient: 0.10100 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 0 | Scaled Value: 1240.828 - 1427.619 (coefficient=1.296, delta coefficient=0.14) | SP Coefficient: 0.10100 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Your Judgement instantly heals you for $s1.
 
 Name             : Enlightened Judgements (desc=Rank 2) (id=87189) [Spell Family (10)] 
@@ -7477,7 +7477,7 @@ Attributes       : ........ ........ ........ ........   ........ ........ .....
                  : Do Not Display Range (126), Not In Spellbook (143)
 Effects          :
 #1 (id=89034)    : Direct Heal (10) | Scaling Class: 2
-                   Base Value: 0 | Scaled Value: 2667.417 (coefficient=2.591) | SP Coefficient: 0.20200 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 0 | Scaled Value: 2480.698 - 2854.137 (coefficient=2.591, delta coefficient=0.14) | SP Coefficient: 0.20200 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Your Judgement instantly heals you for $s1.
 
 Name             : Heavenly Voice (desc=Passive) (id=87430) [Spell Family (6), Passive, Hidden] 
@@ -7632,7 +7632,7 @@ Attributes       : ........ ........ x.x..... ........   ........ .x...... .....
                  : Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Not a Proc (105), Always Hit (114), Do Not Display Range (126), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=90535)    : School Damage (2): holy | Scaling Class: 2
-                   Base Value: 30 | Scaled Value: 728.8813 (coefficient=0.708) | AP Coefficient: 0.18000 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: At Enemy (53) -> AOE enemy (instant) (16)
+                   Base Value: 30 | Scaled Value: 583.1051 - 874.6576 (coefficient=0.708, delta coefficient=0.4) | AP Coefficient: 0.18000 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: At Enemy (53) -> AOE enemy (instant) (16)
 Description      : Hammer the current target for $53595s1% weapon damage, causing a wave of light that hits all targets within $88263A1 yards for $88263s1 Holy damage. Grants a charge of Holy Power.
 
 Name             : Holy Word: Chastise (id=88625) [Spell Family (6)] 
@@ -7658,7 +7658,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Not In Spellbook Until Learned (269), Spellcast Override In Spellbook (310)
 Effects          :
 #1 (id=91044)    : School Damage (2): holy | Scaling Class: 5
-                   Base Value: 1 | Scaled Value: 598.3045 (coefficient=0.633) | SP Coefficient: 0.61400 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 563.902 - 632.707 (coefficient=0.633, delta coefficient=0.115) | SP Coefficient: 0.61400 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=91045)    : Apply Aura (6) | Stun (12) | Scaling Class: 5
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Disorient | Target: Enemy (6)
 Description      : Chastise the target for $s1 Holy damage, and disorients them for $d.
@@ -7717,7 +7717,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Allow While Not Shapeshifted (caster form) (83), Not In Spellbook (143)
 Effects          :
 #1 (id=91122)    : Direct Heal (10) | Scaling Class: 5
-                   Base Value: 1 | Scaled Value: 5649.394 (coefficient=5.977) | SP Coefficient: 0.48600 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 1 | Scaled Value: 5197.442 - 6101.345 (coefficient=5.977, delta coefficient=0.16) | SP Coefficient: 0.48600 | PvP Coefficient: 1.00000 | Target: Friend (21)
 #2 (id=91123)    : Apply Aura (6) | Modify Crit Chance% from Caster's Spells (308) | Scaling Class: 5
                    Base Value: 25 | Scaled Value: 25 | PvP Coefficient: 1.00000 | Target: Friend (21)
                    Affected Spells: Prayer of Healing (596), Heal (2050), Greater Heal (2060), Flash Heal (2061), Holy Nova (23455), Prayer of Healing (30604), Binding Heal (32546), Circle of Healing (34861), Divine Hymn (64844), Flash Heal (101062)
@@ -7774,7 +7774,7 @@ Attributes       : ........ ........ x....... x..x....   ...x.x.x ........ .....
                  : Not Shapeshifted (16), Allow While Mounted (24), Allow While Sitting (27), No Redirection (35), Allow While Stealthed (37), No Reflection (39), Allow While Invisible (78), Active Threat (94), Not a Proc (105), Do Not Display Range (126), Allow Cast While Casting (135), Allow Proc While Sitting (147), Allow While Stunned (163), Allow While Fleeing (177), Allow While Confused (178), Always AOE Line of Sight (186), Allow While Riding Vehicle (204), Allow While Charmed (261)
 Effects          :
 #1 (id=91126)    : Direct Heal (10) | Scaling Class: 5
-                   Base Value: 1 | Scaled Value: 327.0353 (coefficient=0.346) | SP Coefficient: 0.04200 | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Target: Unknown(87) -> AOE friendly (31)
+                   Base Value: 1 | Scaled Value: 298.7468 - 355.3239 (coefficient=0.346, delta coefficient=0.173) | SP Coefficient: 0.04200 | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Target: Unknown(87) -> AOE friendly (31)
 Description      : Blesses the ground with divine light, healing all within it for $88686s1 every $88685t2 sec for $88685d. Only one Sanctuary can be active at a one time.
 
 Name             : Tower of Radiance (id=88852) [Spell Family (10)] 
@@ -8134,7 +8134,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Allow While Not Shapeshifted (caster form) (83), Not In Spellbook (143), Heal Prediction (280)
 Effects          :
 #1 (id=109265)   : Direct Heal (10) | Scaling Class: 5
-                   Base Value: 15 | Scaled Value: 6780.785 (coefficient=7.174) | Points Per Level: 1.9 | Value Multiplier: 1 | SP Coefficient: 0.72500 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 15 | Scaled Value: 6272.226 - 7289.344 (coefficient=7.174, delta coefficient=0.15) | Points Per Level: 1.9 | Value Multiplier: 1 | SP Coefficient: 0.72500 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Heals a friendly target for $s1.
 
 Name             : Seal of Corruption (id=348704) [Spell Family (10)] 

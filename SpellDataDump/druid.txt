@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54217 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54339 cata-BETA
 Name             : Demoralizing Roar (desc=Bear Form) (id=99) [Spell Family (7)] 
 Class            : Druid
 School           : Physical
@@ -336,7 +336,7 @@ Attributes       : ....x... ........ ..x..... ........   ........ .x...... ....x
                  : Is Ability (4), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Finishing Move - Damage (52), Discount Power On Miss (59), Taps immediately (215), Aura Points On Client (268)
 Effects          :
 #1 (id=685878)   : Apply Aura (6) | Periodic Damage (3): physical every 2 seconds | Scaling Class: 11
-                   Base Value: 3 | Scaled Value: 56.82968 (coefficient=0.0576) | Bonus Value: 160.8201 (0.163) | PvP Coefficient: 1.00000 | Mechanic: Bleed | Target: Enemy (6)
+                   Base Value: 3 | Scaled Value: 56.82968 (coefficient=0.0576) | Bonus Value: 160.8201 (0.163) | PvP Coefficient: 1.00000 | Points Per Combo Point: 4 | Mechanic: Bleed | Target: Enemy (6)
 #2 (id=117625)   : Dummy (3) | Scaling Class: 11
                    Base Value: 2 | Scaled Value: 2 | PvP Coefficient: 1.00000
 #3 (id=117626)   : Dummy (3) | Scaling Class: 11
@@ -591,7 +591,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Allow While Not Shapeshifted (caster form) (83)
 Effects          :
 #1 (id=680527)   : School Damage (2): arcane | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 1364.504 (coefficient=1.383) | SP Coefficient: 1.23100 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 1214.409 - 1514.6 (coefficient=1.383, delta coefficient=0.22) | SP Coefficient: 1.23100 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=92680)    : None (0) | Scaling Class: 11
                    Base Value: 20 | Scaled Value: 20 | PvP Coefficient: 1.00000
 Description      : Causes $s1 Arcane damage to the target$?s54845[ and increases the duration of your Moonfire effect on the target by $54845s1 sec, up to a maximum of $54845s2 additional seconds.][.]$?s78674[  Generates $s2 Solar Energy.][]
@@ -640,7 +640,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Allow While Not Shapeshifted (caster form) (83)
 Effects          :
 #1 (id=683786)   : School Damage (2): nature | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 884.0173 (coefficient=0.896) | SP Coefficient: 0.87900 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 830.9763 - 937.0583 (coefficient=0.896, delta coefficient=0.12) | SP Coefficient: 0.87900 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=92679)    : None (0) | Scaling Class: 11
                    Base Value: 13 | Scaled Value: 13 | PvP Coefficient: 1.00000
 Description      : Causes $s1 Nature damage to the target. $?s78674[Generates $s2 Lunar Energy.][]$?s33891[
@@ -669,7 +669,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Heal Prediction (280)
 Effects          :
 #1 (id=682611)   : Direct Heal (10) | Scaling Class: 11
-                   Base Value: 36 | Scaled Value: 7863.413 (coefficient=7.97) | Points Per Level: 0.8 | SP Coefficient: 0.80600 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 36 | Scaled Value: 7210.75 - 8516.076 (coefficient=7.97, delta coefficient=0.166) | Points Per Level: 0.8 | SP Coefficient: 0.80600 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Heals a friendly target for $s1$?s54825[ and reduces your remaining cooldown on Nature's Swiftness by $54825m1 sec][].
 
 Name             : Challenging Roar (desc=Bear Form) (id=5209) [Spell Family (7)] 
@@ -1075,7 +1075,7 @@ Effects          :
 #1 (id=687277)   : Apply Aura (6) | Periodic Damage (3): arcane every 2 seconds | Scaling Class: 11
                    Base Value: 1 | Scaled Value: 93.72951 (coefficient=0.095) | SP Coefficient: 0.18000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=687278)   : School Damage (2): arcane | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 218.0444 (coefficient=0.221) | SP Coefficient: 0.18000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 196.24 - 239.8489 (coefficient=0.221, delta coefficient=0.2) | SP Coefficient: 0.18000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Burns the enemy for $s2 Arcane damage and then an additional ${$m1*6} Arcane damage over $d.
 Tooltip          : Suffering $w1 Arcane damage every $t1 seconds.
 Variables        : $genesis1=$?s57810[${1+0.01*$57810m1}][${1}]
@@ -1114,7 +1114,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Allow While Not Shapeshifted (caster form) (83), DoT Stacking Rule (103), Aura Never Bounces (148), Spell Haste Affects Periodic (173), Vehicle Immunity Category (218), Periodic Can Crit (265), Aura Points On Client (268), Heal Prediction (280)
 Effects          :
 #1 (id=686949)   : Direct Heal (10) | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 3579.481 (coefficient=3.628) | Points Per Level: 1.8 | SP Coefficient: 0.29360 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: 1 | Scaled Value: 3382.609 - 3776.352 (coefficient=3.628, delta coefficient=0.11) | Points Per Level: 1.8 | SP Coefficient: 0.29360 | PvP Coefficient: 1.00000 | Target: Friend (21)
 #2 (id=686950)   : Apply Aura (6) | Periodic Heal (8): every 2 seconds | Scaling Class: 11
                    Base Value: 1 | Scaled Value: 361.1053 (coefficient=0.366) | SP Coefficient: 0.02960 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Heals a friendly target for $s1 and another ${$o2*$<mult>} over $d.$?s54743[  Regrowth's duration automatically refreshes to $93036m1 sec each time it heals targets at or below $54743s1% health.][]$?s33891[
@@ -2606,7 +2606,7 @@ Class            : Druid
 School           : Physical
 Spell Type       : Melee
 Resource         : 25 Energy (3) (id=187121)
-Spell Level      : 8
+Spell Level      : 10
 Range            : 5 yards
 GCD              : 1 seconds
 Stance Mask      : 0x00000001
@@ -2623,17 +2623,17 @@ Attributes       : ....x... ........ ..x..... ........   ........ .x...... ....x
                  : Is Ability (4), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Finishing Move - Damage (52), Discount Power On Miss (59), No Level Up Toast (281)
 Effects          :
 #1 (id=700435)   : School Damage (2): physical | Scaling Class: 11
-                   Base Value: 13 | Scaled Value: 377.8779 (coefficient=0.383) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 13 | Scaled Value: 238.0631 - 517.6928 (coefficient=0.383, delta coefficient=0.74) | Bonus Value: 576.1899 (0.584) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Points Per Combo Point: 36 | Target: Enemy (6)
 #2 (id=1004219)  : Dummy (3) | Scaling Class: 11
-                   Base Value: 30 | Scaled Value: 30 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 35 | Scaled Value: 35 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=12791)    : Dummy (3) | Scaling Class: 11
                    Base Value: 25 | Scaled Value: 25 | PvP Coefficient: 1.00000 | Target: Enemy (6)
-Description      : Finishing move that causes damage per combo point$?s67598 [ and consumes up to 35 additional energy to increase damage by up to 100%, and heals you for $67598m1% of your total maximum health for each $67598m2 energy used.][ and consumes up to 35 additional energy to increase damage by up to 100%.]  Damage is increased by your attack power.
-   1 point  : ${$m1+$b1*1*$<mult>+0.109*$AP*$<mult>}-${$M1+$b1*1*$<mult>+0.109*$AP*$<mult>} damage
-   2 points: ${$m1+$b1*2*$<mult>+0.218*$AP*$<mult>}-${$M1+$b1*2*$<mult>+0.218*$AP*$<mult>} damage
-   3 points: ${$m1+$b1*3*$<mult>+0.327*$AP*$<mult>}-${$M1+$b1*3*$<mult>+0.327*$AP*$<mult>} damage
-   4 points: ${$m1+$b1*4*$<mult>+0.436*$AP*$<mult>}-${$M1+$b1*4*$<mult>+0.436*$AP*$<mult>} damage
-   5 points: ${$m1+$b1*5*$<mult>+0.545*$AP*$<mult>}-${$M1+$b1*5*$<mult>+0.545*$AP*$<mult>} damage
+Description      : Finishing move that causes damage per combo point$?s67598 [ and consumes up to 25 additional energy to increase damage by up to 100%, and heals you for $67598m1% of your total maximum health for each $67598m2 energy used.][ and consumes up to 25 additional energy to increase damage by up to 100%.]  Damage is increased by your attack power.
+   1 point  : ${$m1+$b1*1*$<mult>+0.125*$AP*$<mult>}-${$M1+$b1*1*$<mult>+0.125*$AP*$<mult>} damage
+   2 points: ${$m1+$b1*2*$<mult>+0.250*$AP*$<mult>}-${$M1+$b1*2*$<mult>+0.250*$AP*$<mult>} damage
+   3 points: ${$m1+$b1*3*$<mult>+0.375*$AP*$<mult>}-${$M1+$b1*3*$<mult>+0.375*$AP*$<mult>} damage
+   4 points: ${$m1+$b1*4*$<mult>+0.500*$AP*$<mult>}-${$M1+$b1*4*$<mult>+0.500*$AP*$<mult>} damage
+   5 points: ${$m1+$b1*5*$<mult>+0.625*$AP*$<mult>}-${$M1+$b1*5*$<mult>+0.625*$AP*$<mult>} damage
 Variables        : $mult=$?s16859[${1.10}]?s16858[${1.05}][${1.00}]
 
 Name             : Maim (desc=Cat Form) (id=22570) [Spell Family (7)] 
@@ -2661,7 +2661,7 @@ Attributes       : ....x... ........ ..x..... ........   ........ ........ ..x.x
                  : Is Ability (4), Do Not Sheath (18), Prevents Anim (50), Finishing Move - Damage (52), Finishing Move - Duration (54), Discount Power On Miss (59), Suppress Weapon Procs (151), Can Cause Interrupt (235)
 Effects          :
 #1 (id=699795)   : Weapon Damage (58) | Scaling Class: 11
-                   Base Value: 45 | Scaled Value: 73.99698 (coefficient=0.075) | Bonus Value: 176.6061 (0.179) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 45 | Scaled Value: 73.99698 (coefficient=0.075) | Bonus Value: 176.6061 (0.179) | PvP Coefficient: 1.00000 | Points Per Combo Point: 84 | Target: Enemy (6)
 #2 (id=699796)   : Apply Aura (6) | Stun (12) | Scaling Class: 11
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Mechanic: Stun | Target: Enemy (6)
 #3 (id=100815)   : Weapon Damage% (31) | Scaling Class: 11
@@ -5035,7 +5035,7 @@ Attributes       : ........ ........ ........ ........   .......x ........ .....
                  : No Reflection (39), Ignore Line of Sight (66), Active Threat (94), PvP Enabling (96), Not a Proc (105), Allow Aura While Dead (116), Allow Cast While Casting (135), Not In Spellbook (143), Always AOE Line of Sight (186)
 Effects          :
 #1 (id=980014)   : School Damage (2): arcane | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 398.5971 (coefficient=0.404) | SP Coefficient: 0.24700 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 368.7023 - 428.4919 (coefficient=0.404, delta coefficient=0.15) | SP Coefficient: 0.24700 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : You summon a flurry of stars from the sky on all targets within $50286a yards of the caster that you're in combat with, each dealing $50288s1 Arcane damage. Maximum $48505s2 stars. Lasts $48505d.  
 
 Shapeshifting into an animal form or mounting cancels the effect. Any effect which causes you to lose control of your character will suppress the starfall effect.
@@ -5147,7 +5147,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Heal Prediction (280)
 Effects          :
 #1 (id=954942)   : Direct Heal (10) | Scaling Class: 11
-                   Base Value: -1 | Scaled Value: 2597.787 (coefficient=2.633) | Points Per Level: 9.7 | SP Coefficient: 0.26600 | PvP Coefficient: 1.00000 | Target: Friend (21)
+                   Base Value: -1 | Scaled Value: 2402.953 - 2792.622 (coefficient=2.633, delta coefficient=0.15) | Points Per Level: 9.7 | SP Coefficient: 0.26600 | PvP Coefficient: 1.00000 | Target: Friend (21)
 Description      : Heals a friendly target for $s1. Heals for an additional 20% if you have a Rejuvenation, Regrowth, Lifebloom, or Wild Growth effect active on the target.
 
 Name             : Typhoon (id=50516) [Spell Family (7)] 
@@ -7668,7 +7668,7 @@ Attributes       : ....x... ........ ..x..... ........   ........ .x...... .....
                  : Is Ability (4), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Treat as Area Effect (175), Aura Points On Client (268)
 Effects          :
 #1 (id=68168)    : School Damage (2): physical | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 1041.878 (coefficient=1.056) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Mechanic: Bleed | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 1 | Scaled Value: 932.4804 - 1151.275 (coefficient=1.056, delta coefficient=0.21) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Mechanic: Bleed | Target: At Caster (22) -> AOE enemy (15)
 #2 (id=68169)    : Apply Aura (6) | Periodic Damage (3): physical every 2 seconds | Scaling Class: 11
                    Base Value: 1 | Scaled Value: 581.123 (coefficient=0.589) | PvP Coefficient: 1.00000 | Radius: 0 - 8 yards | Mechanic: Bleed | Target: At Caster (22) -> AOE enemy (15)
 Description      : $?a48418[Deals ${($AP*0.0982+$m1)*1.04} to ${($AP*0.0982+$M1)*1.04} damage, and causes all targets within $A2 yards to bleed for ${($AP*0.0167+$m2)*1.04*3} damage over $d.][Deals ${$AP*0.0982+$m1} to ${$AP*0.0982+$M1} damage, and causes all targets within $A2 yards to bleed for ${($AP*0.0167+$m2)*3} damage over $d.]
@@ -7759,7 +7759,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Allow While Not Shapeshifted (caster form) (83), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=68268)    : School Damage (2): astral | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 1211.577 (coefficient=1.228) | SP Coefficient: 1.22800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 1017.725 - 1405.43 (coefficient=1.228, delta coefficient=0.32) | SP Coefficient: 1.22800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=68269)    : None (0) | Scaling Class: 11
                    Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Mechanic: Stun
 #3 (id=88261)    : None (0) | Scaling Class: 11
@@ -7873,7 +7873,7 @@ Attributes       : ........ ........ ........ ........   ...x...x ........ .....
                  : No Redirection (35), No Reflection (39), Ignore Line of Sight (66), Active Threat (94), No Avoidance (102), Not a Proc (105), Always Hit (114), Not In Spellbook (143), Owner Power Scaling (153), Always AOE Line of Sight (186)
 Effects          :
 #1 (id=68293)    : School Damage (2): nature | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 933.7433 (coefficient=0.9464) | SP Coefficient: 0.60320 | PvP Coefficient: 1.00000 | Radius: 0 - 6 yards | Target: Unknown(87) -> AOE enemy (instant) (16)
+                   Base Value: 1 | Scaled Value: 845.0377 - 1022.449 (coefficient=0.9464, delta coefficient=0.19) | SP Coefficient: 0.60320 | PvP Coefficient: 1.00000 | Radius: 0 - 6 yards | Target: Unknown(87) -> AOE enemy (instant) (16)
 Description      : Grow a magical Mushroom with $88747s2 Health at the target location. After $88747s3 sec, the Mushroom will become invisible. When detonated by the Druid, all Mushrooms will explode dealing $78777s1 Nature damage to all nearby enemies within $78777A1 yards. Only $88747s1 Mushrooms can be placed at one time. 
 
 Use Wild Mushroom: Detonate to detonate all Mushrooms.
@@ -9840,7 +9840,7 @@ Effects          :
 #1 (id=97908)    : Apply Aura (6) | Periodic Damage (3): nature every 2 seconds | Scaling Class: 11
                    Base Value: 1 | Scaled Value: 93.72951 (coefficient=0.095) | SP Coefficient: 0.18000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=97909)    : School Damage (2): nature | Scaling Class: 11
-                   Base Value: 1 | Scaled Value: 218.0444 (coefficient=0.221) | SP Coefficient: 0.18000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 196.24 - 239.8489 (coefficient=0.221, delta coefficient=0.2) | SP Coefficient: 0.18000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Burns the enemy for $s2 Nature damage and then an additional ${$m1*6} Nature damage over $d.
 Tooltip          : Suffering $w1 Nature damage every $t1 seconds.
 Variables        : $genesis1=$?s57810[${1+0.01*$57810m1}][${1}]
@@ -10276,7 +10276,7 @@ Attributes       : ......xx ........ ........ ........   ........ ........ .....
                  : Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7)
 Effects          :
 #1 (id=106229)   : Apply Aura (6) | Dummy (4)
-                   Base Value: 2 | Scaled Value: 2 | PvP Coefficient: 1.00000 | Misc Value: 8 | Target: Self (1)
+                   Base Value: 2 | Scaled Value: 2 | PvP Coefficient: 1.00000 | Misc Value: 8 | Points Per Combo Point: 20 | Target: Self (1)
                    Affected Spells: Rip (1079), Ferocious Bite (22568), Maim (22570), Savage Roar (52610)
                    Family Flags: 23, 39, 60
 Description      : Your finishing moves have a 20% chance per combo point to extend the duration of Berserk by $s1 sec and when your Barkskin ability expires you gain an additional $99011s1% chance to dodge for $99011d.

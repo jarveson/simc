@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54217 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54339 cata-BETA
 Name             : Dual Wield (desc=Passive) (id=674) [Passive] 
 Class            : Warrior, Hunter, Rogue, Death Knight
 School           : Physical
@@ -86,7 +86,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41)
 Effects          :
 #1 (id=694910)   : School Damage (2): physical | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 159.7823 (coefficient=0.142) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 131.8204 - 187.7442 (coefficient=0.142, delta coefficient=0.35) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Bite the enemy, causing ${$M1+(($RAP*0.40)*0.20)} damage.
 
 Name             : Blood Fury (desc=Racial) (id=20572) 
@@ -410,7 +410,7 @@ Attributes       : ........ ........ ..x..... ........   ........ .x...... .....
                  : Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Discount Power On Miss (59), Limit N (165)
 Effects          :
 #1 (id=980009)   : School Damage (2): frost | Scaling Class: 6
-                   Base Value: 126 | Scaled Value: 526.6064 (coefficient=0.468) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 126 | Scaled Value: 504.7523 - 548.4606 (coefficient=0.468, delta coefficient=0.083) | PvP Coefficient: 1.00000 | Target: Enemy (6)
                    Affected Spells: Death and Decay (43265), Plague Strike (45462), Icy Touch (45477), Chains of Ice (45524), Blood Strike (45902), Raise Dead (46584), Raise Dead (46585), Strangulate (47476), Blood Presence (48263), Death Strike (49998), Pillar of Frost (51271), Frost Vulnerability (51714), Icy Touch (52372), Plague Strike (52373), Blood Strike (52374), Desecration (55666), Desecration (55667), Blood Presence (61261), Death Strike Off-Hand (66188), Blood Strike Off-Hand (66215), Plague Strike Off-Hand (66216)
                    Family Flags: 0, 1, 2, 4, 5, 6, 7, 9, 12, 21, 22, 23
 #2 (id=980010)   : Trigger Spell (64): Frost Fever | Scaling Class: 6

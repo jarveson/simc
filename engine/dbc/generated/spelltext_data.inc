@@ -1,5 +1,5 @@
-// Spell text, wow build 4.4.0.54217
-static const std::array<spelltext_data_t, 7606> __spelltext_data { {
+// Spell text, wow build 4.4.0.54339
+static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {     10, "Ice shards pelt the target area doing ${$42208m1*8*$<mult>} Frost damage over $10d.", "$42208s1 Frost damage every $42208t1 $lsecond:seconds;.", 0 },
   {     17, "Draws on the soul of the friendly target to shield them, absorbing $<shield> damage$?s55672[ and healing them for $55672s1% of the absorption amount][].  Lasts $d.  While the shield holds, spellcasting will not be interrupted by damage.  Once shielded, the target cannot be shielded again for $6788d.", "Absorbs $w1 damage.", 0 },
   {     53, "Backstab the target, causing $m2% weapon damage plus $m1 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.", 0, 0 },
@@ -66,7 +66,7 @@ static const std::array<spelltext_data_t, 7606> __spelltext_data { {
   {    703, "Garrote the enemy, silencing them for $1330d and causing ${($m1+$AP*$<bonus>*0.07)*6} damage over $d, increased by your attack power.  Must be stealthed and behind the target.  Awards $s2 combo $lpoint:points;.", "$w1 damage every $t1 seconds.", 0 },
   {    710, "Banishes the enemy target, preventing all action but making it invulnerable for up to $d.  Only one target can be banished at a time.  Casting Banish on a banished target will cancel the spell.  Only works on Demons and Elementals.", "Invulnerable, but unable to act.", 0 },
   {    712, "Summons a Succubus under the command of the Warlock.$?s74434[\r\n\r\n|CFFE55BB0Soulburn: Instant cast.|R][]", 0, "Summon" },
-  {    713, "Summons an Incubus under the command of the Warlock.", 0, "Summon" },
+  {    713, "Summons an Incubus under the command of the Warlock.$?s74434[\r\n\r\n|CFFE55BB0Soulburn: Instant cast.|R][]\r\n", 0, "Summon" },
   {    724, "Creates a Holy Lightwell.  Friendly players can click the Lightwell to restore ${(($7001m1+($SP*.308))*3)*(1.15*$<mult>)} health over $7001d.  Attacks done to you equal to $724s2% of your total health will cancel the effect. Lightwell lasts for $d or $59907n charges.", 0, 0 },
   {    740, "Heals $740s3 nearby lowest health party or raid targets within $44203A1 yards with Tranquility every $740t1 sec for $740d. \r\n\r\nTranquility heals for $44203s1 plus an additional $44203s2 every $44203t2 sec over $44203d. Stacks up to $44203u times. The Druid must channel to maintain the spell.", "Heals nearby lowest health party or raid targets for $44203s1 plus an additional $44203s2 every $44203t2 sec over $44203d. Stacks up to $44203u times.", 0 },
   {    755, "Sacrifices $s3% of your total health to restore $s1% of your summoned Demon's total health every $t1 sec. Lasts for $d.", "Transferring Life.", 0 },
@@ -220,7 +220,7 @@ static const std::array<spelltext_data_t, 7606> __spelltext_data { {
   {   3593, "Increases your maximum health by $?s3450[${$m1+100}][$s1] for $?s3450[2 hours][$d].  Guardian Elixir.", "Health increased by $w1.  Guardian Elixir.", 0 },
   {   3594, "When applied to a melee weapon it gives a 15% chance of casting Shadow Bolt at the opponent when it hits.  Lasts 30 minutes. Cannot be applied to items higher than level 165.", 0, 0 },
   {   3595, "When applied to a melee weapon it gives a 10% chance of casting Frostbolt at the opponent when it hits.  Lasts 30 minutes. Cannot be applied to items higher than level 165.", 0, 0 },
-  {   3599, "Summons a Searing Totem with $s1 health at your feet for $d that repeatedly attacks an enemy within $3606r1 yards for $3606s1 Fire damage.  The totem will prefer to target enemies that are afflicted by your Flame Shock or Stormstrike effects.", 0, 0 },
+  {   3599, "Summons a Searing Totem with $s1 health at your feet for $d that repeatedly attacks an enemy within $3606r yards for $3606s1 Fire damage.  The totem will prefer to target enemies that are afflicted by your Flame Shock or Stormstrike effects.", 0, 0 },
   {   3600, "Reduces the movement speed of all nearby enemies by $s1%.", "Movement speed reduced by $s1%.", 0 },
   {   3606, "Deals Fire damage to the target.", 0, 0 },
   {   3674, "Fires a Black Arrow at the target, dealing $o1 Shadow damage over $d. Black Arrow shares a cooldown with other Fire Trap spells.", "$s1 Shadow damage every $t1 seconds.", 0 },
@@ -314,9 +314,10 @@ static const std::array<spelltext_data_t, 7606> __spelltext_data { {
   {   6146, "Slows the enemy's movement by $s2% and their attack speed by $s1% for $d.", "Movement speed reduced by $s2%.\r\nMelee attack speed reduced by $s1%.", "Rank 2" },
   {   6196, "Changes the caster's viewpoint to the targeted location.  Lasts $d.  Only useable outdoors.", "Cannot move while using Farsight.", 0 },
   {   6197, "Zooms in the Hunter's vision.  Only usable outdoors.  Lasts $d.", "Vision is enhanced.", 0 },
-  {   6201, "Creates a Healthstone that can be used to instantly restore $?s56224[${($basehp(9, $pl))*.45})*1.30}][${($basehp(9, $pl))*.45}] health.\r\n\r\nConjured items disappear if logged out for more than 15 minutes.", 0, 0 },
+  {   6201, "Creates a Healthstone that can be consumed to restore $6262s1% health.\r\n\r\nConjured items disappear if logged out for more than 15 minutes.", 0, 0 },
   {   6229, "Absorbs ${$M1+($SP*0.807)} shadow damage.  Lasts $d.", "Absorbs ${$M1+($SP*0.807)} Shadow damage.", 0 },
   {   6251, "Summons a cannon that will fire at enemies in front of it that are attacking you.", 0, 0 },
+  {   6262, "Instantly restores $s1% health.$?s74434[\r\n\r\n|CFFE55BB0Soulburn: Increases maximum health by $79437s1% for $79437d.|R][]", 0, 0 },
   {   6296, "Enchants a weapon to have a 15% chance to inflict $6297s1 Fire damage to all enemies within $6297a1 yards.", 0, 0 },
   {   6307, "Increases party and raid members' Stamina by $s1.", "Increases Stamina by $w1.", "Special Ability" },
   {   6343, "Blasts enemies within $6343A1 yards for $6343s1 damage, and increases the time between their attacks by $6343s2% for $6343d.  Damage increased by attack power.", "Time between attacks increased by $s2%.", "Battle, Defensive Stance" },
@@ -1925,7 +1926,7 @@ static const std::array<spelltext_data_t, 7606> __spelltext_data { {
   {  21978, "Chance on landing a direct damage spell to deal $27860s1 Shadow damage and restore $27860s2 mana to you.", 0, 0 },
   {  21991, "When struck in combat inflicts $s1 Nature damage to the attacker.", "Lightning Shield", "Rank 1" },
   {  21992, "Blasts your enemy with lightning, dealing $s2 Nature damage and then jumping to additional nearby enemies.  Each jump reduces that victim's Nature resistance by $s1. Affects $x1 targets. Your primary target is also consumed by a cyclone, slowing its attack speed by $27648s1% for $d.", "Nature resistance reduced by $s1.", 0 },
-  {  22568, "Finishing move that causes damage per combo point$?s67598 [ and consumes up to 35 additional energy to increase damage by up to 100%, and heals you for $67598m1% of your total maximum health for each $67598m2 energy used.][ and consumes up to 35 additional energy to increase damage by up to 100%.]  Damage is increased by your attack power.\r\n   1 point  : ${$m1+$b1*1*$<mult>+0.109*$AP*$<mult>}-${$M1+$b1*1*$<mult>+0.109*$AP*$<mult>} damage\r\n   2 points: ${$m1+$b1*2*$<mult>+0.218*$AP*$<mult>}-${$M1+$b1*2*$<mult>+0.218*$AP*$<mult>} damage\r\n   3 points: ${$m1+$b1*3*$<mult>+0.327*$AP*$<mult>}-${$M1+$b1*3*$<mult>+0.327*$AP*$<mult>} damage\r\n   4 points: ${$m1+$b1*4*$<mult>+0.436*$AP*$<mult>}-${$M1+$b1*4*$<mult>+0.436*$AP*$<mult>} damage\r\n   5 points: ${$m1+$b1*5*$<mult>+0.545*$AP*$<mult>}-${$M1+$b1*5*$<mult>+0.545*$AP*$<mult>} damage", 0, "Cat Form" },
+  {  22568, "Finishing move that causes damage per combo point$?s67598 [ and consumes up to 25 additional energy to increase damage by up to 100%, and heals you for $67598m1% of your total maximum health for each $67598m2 energy used.][ and consumes up to 25 additional energy to increase damage by up to 100%.]  Damage is increased by your attack power.\r\n   1 point  : ${$m1+$b1*1*$<mult>+0.125*$AP*$<mult>}-${$M1+$b1*1*$<mult>+0.125*$AP*$<mult>} damage\r\n   2 points: ${$m1+$b1*2*$<mult>+0.250*$AP*$<mult>}-${$M1+$b1*2*$<mult>+0.250*$AP*$<mult>} damage\r\n   3 points: ${$m1+$b1*3*$<mult>+0.375*$AP*$<mult>}-${$M1+$b1*3*$<mult>+0.375*$AP*$<mult>} damage\r\n   4 points: ${$m1+$b1*4*$<mult>+0.500*$AP*$<mult>}-${$M1+$b1*4*$<mult>+0.500*$AP*$<mult>} damage\r\n   5 points: ${$m1+$b1*5*$<mult>+0.625*$AP*$<mult>}-${$M1+$b1*5*$<mult>+0.625*$AP*$<mult>} damage", 0, "Cat Form" },
   {  22570, "Finishing move that causes damage and stuns the target.  Causes more damage and lasts longer per combo point:\r\n   1 point  : ${$b1*1+$m1+1.55*$mw}-${$b1*1+$M1+1.55*$MW} damage, 1 sec\r\n   2 points: ${$b1*2+$m1+1.55*$mw}-${$b1*2+$M1+1.55*$MW} damage, 2 sec\r\n   3 points: ${$b1*3+$m1+1.55*$mw}-${$b1*3+$M1+1.55*$MW} damage, 3 sec\r\n   4 points: ${$b1*4+$m1+1.55*$mw}-${$b1*4+$M1+1.55*$MW} damage, 4 sec\r\n   5 points: ${$b1*5+$m1+1.55*$mw}-${$b1*5+$M1+1.55*$MW} damage, 5 sec", "Stunned.", "Cat Form" },
   {  22593, "Permanently adds 5 Fire resistance to a shoulder slot item.\r\n\r\nEnchanting the item causes it to become soulbound.", 0, 0 },
   {  22594, "Permanently adds 5 Frost resistance to a shoulder slot item.\r\n\r\nEnchanting the item causes it to become soulbound.", 0, 0 },
@@ -2616,9 +2617,9 @@ static const std::array<spelltext_data_t, 7606> __spelltext_data { {
   {  30526, "Quickly constructs a gnomish flame turret at your feet that will nearly always attack nearby enemies.  The turret falls apart after $d.", 0, 0 },
   {  30550, "Break the seal on the book, granting your healing spells the chance to summon a ghostly ally.", "Your healing spells have a $h% chance to summon a ghostly ally for $30553d. This ally will heal your party for $30604s1.", 0 },
   {  30604, "A powerful prayer heals nearby party members for $s1.", 0, 0 },
-  {  30672, "Increases your Fire, Frost and Nature damage by $s1% and grants you spell hit rating equal to $s2% of any Spirit gained from items or effects.", 0, "Rank 1" },
-  {  30673, "Increases your Fire, Frost and Nature damage by $s1% and grants you spell hit rating equal to $s2% of any Spirit gained from items or effects.", 0, "Rank 2" },
-  {  30674, "Increases your Fire, Frost and Nature damage by $s1% and grants you spell hit rating equal to $s2% of any Spirit gained from items or effects.", 0, "Rank 3" },
+  {  30672, "Increases your Fire, Frost and Nature damage by $s1% and grants you spell hit rating equal to $s3% of any Spirit gained from items or effects.", 0, "Rank 1" },
+  {  30673, "Increases your Fire, Frost and Nature damage by $s1% and grants you spell hit rating equal to $s3% of any Spirit gained from items or effects.", 0, "Rank 2" },
+  {  30674, "Increases your Fire, Frost and Nature damage by $s1% and grants you spell hit rating equal to $s3% of any Spirit gained from items or effects.", 0, "Rank 3" },
   {  30802, "Increases your expertise by $s1, and increases all party and raid members' melee attack power by $s2% and ranged attack power by $s3% while within $a2 yards of the Shaman.", "Melee attack power increased by $s2% and ranged attack power increased by $s3%.", "Rank 1" },
   {  30808, "Increases your expertise by $s1, and increases all party and raid members' melee attack power by $s2% and ranged attack power by $s3% while within $a2 yards of the Shaman.", "Melee attack power increased by $s2% and ranged attack power by $s3%.", "Rank 2" },
   {  30814, "Your spell power is now equal to $s1% of your attack power, and you no longer benefit from other sources of spell power. Also, your instant beneficial, damaging, and totem spells cost $s3% less mana.", 0, "Passive" },
@@ -6031,6 +6032,7 @@ static const std::array<spelltext_data_t, 7606> __spelltext_data { {
   {  79152, "Empowers your Recuperate ability, causing its periodic effect to also restore $s1 Energy.", 0, "Rank 3" },
   {  79206, "Calls upon spiritual guidance, permitting movement while casting non-instant Shaman spells. This spell may be cast while casting other spells. Lasts $d.", "Able to move while casting Shaman spells that have a cast time.", 0 },
   {  79268, "You seek out nearby wandering souls, regenerating $o2% health and ${$101977m1*3} soul shards over $d.  Cannot be cast when in combat.", "Gaining $s3 soul shard and $s2% total health every $t1 sec.", 0 },
+  {  79437, "Health increased by $s1% of maximum.", "Health increased by $s1% of maximum.", 0 },
   {  79440, "Critical effect chance of your Searing Pain spell increased by $s1%.", "Critical effect chance of your Searing Pain spell increased by $s1%.", 0 },
   {  79459, "Critical strike chance of your cast time Destruction spells increased by $s1%.", "Critical strike chance of your cast time Destruction spells increased by $s1%.", 0 },
   {  79460, "Periodic shadow damage increased by $s1%.", "Periodic shadow damage increased by $s1%.", 0 },
@@ -7608,11 +7610,11 @@ static const std::array<spelltext_data_t, 7606> __spelltext_data { {
   { 450762, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
 } };
 
-// spelltext hotfix entries, wow build 4.4.0.54217
+// spelltext hotfix entries, wow build 4.4.0.54339
 static constexpr std::array<hotfix::client_hotfix_entry_t, 0> __spelltext_hotfix_data { {
 } };
 
-// Spell description variables, wow build 4.4.0.54217
+// Spell description variables, wow build 4.4.0.54339
 static const std::array<spelldesc_vars_data_t, 83> __spelldesc_vars_data { {
   { 10, "$arctic1=$?s31674[${1.01}][${1}]\r\n$arctic2=$?s31675[${1.02}][${$<arctic1>}]\r\n$arctic3=$?s31676[${1.03}][${$<arctic2>}]\r\n$arctic4=$?s31677[${1.04}][${$<arctic3>}]\r\n$arctic5=$?s31678[${1.05}][${$<arctic4>}]\r\n$piercing1=$?s11151[${1.02}][${1}]\r\n$piercing2=$?s12952[${1.04}][${$<piercing1>}]\r\n$piercing3=$?s12953[${1.06}][${$<piercing2>}]\r\n$mult=${$<arctic5>*$<piercing3>}" },
   { 17, "$twin1=$?s47586[${1.02}][${1.00}]\r\n$twin2=$?s47587[${1.04}][${$<twin1>}]\r\n$twin3=$?s47588[${1.06}][${$<twin2>}]\r\n$ipws1=$?s14748[${1.10}][${1.00}]\r\n$ipws2=$?s14768[${1.20}][${$<ipws1>}]\r\n$mastery=$?s47540[${((100+$77484m1)/100)}][${1.00}]\r\n$spirit=$?s87336[${((100+$87336m1)/100)}][${1.00}]\r\n$shield=${((($SP*0.87)+$m1)*$<mastery>*$<spirit>*$<twin3>*$<ipws2>)}" },
@@ -7699,7 +7701,7 @@ static const std::array<spelldesc_vars_data_t, 83> __spelldesc_vars_data { {
   { 95725, "$damage=${$95725m1+(($RAP*0.40)*0.288)}" },
 } };
 
-// spelldesc_vars hotfix entries, wow build 4.4.0.54217
+// spelldesc_vars hotfix entries, wow build 4.4.0.54339
 static constexpr std::array<hotfix::client_hotfix_entry_t, 0> __spelldesc_vars_hotfix_data { {
 } };
 

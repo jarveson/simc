@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54217 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54339 cata-BETA
 Name             : Eye of Kilrogg (desc=Summon) (id=126) [Spell Family (5)] 
 Class            : Warlock
 School           : Shadow
@@ -140,7 +140,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16)
 Effects          :
 #1 (id=679275)   : School Damage (2): shadow | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 596.6481 (coefficient=0.62) | SP Coefficient: 0.75400 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 563.8324 - 629.4637 (coefficient=0.62, delta coefficient=0.11) | SP Coefficient: 0.75400 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Sends a shadowy bolt at the enemy, causing $s1 Shadow damage.
 
 Name             : Demon Armor (id=687) [Spell Family (5)] 
@@ -414,7 +414,7 @@ School           : Shadow
 Spell Type       : Magic
 Resource         : 80% Base Mana (0) (id=169685)
 Spell Level      : 20
-Cast Time        : 10 seconds
+Cast Time        : 6 seconds
 GCD              : 1.5 seconds
 Duration         : Aura (infinite)
 Affecting spells : Master Summoner (18709 effects: #1, #2), Master Summoner (18710 effects: #1, #2), Metamorphosis (54879 effect#3), Soulburn (74434 effect#1), Demonic Rebirth (88448 effect#1)
@@ -431,7 +431,10 @@ Attributes       : ........ ........ x....... ........   x....... ........ .x...
 Effects          :
 #1 (id=679567)   : Summon Pet (56)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: 185317 | Target: Unknown(32)
-Description      : Summons an Incubus under the command of the Warlock.
+Description      : Summons an Incubus under the command of the Warlock.$?s74434[
+
+|CFFE55BB0Soulburn: Instant cast.|R][]
+
 
 Name             : Health Funnel (id=755) [Spell Family (5)] 
 Class            : Warlock
@@ -544,7 +547,7 @@ Attributes       : x....... ........ x....... ........   ..x..... ......x. .x...
                  : Proc Failure Burns Charge (0), Not Shapeshifted (16), Is Channelled (34), Track Target in Channel (46), No AutoCast (AI) (49), Require All Targets (58), Only Proc on Caster (123), Spell Haste Affects Periodic (173), Taps immediately (215), Aura Points On Client (268)
 Effects          :
 #1 (id=680520)   : Apply Aura (6) | Periodic Damage (3): shadow every 3 seconds | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 1 | SP Coefficient: 0.37800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 76.98685 (coefficient=0.08) | SP Coefficient: 0.37800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=399)      : Dummy (3) | Scaling Class: 9
                    Base Value: 25 | Scaled Value: 25 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Drains the soul of the target, causing $o1 Shadow damage over $d.  
@@ -728,7 +731,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16)
 Effects          :
 #1 (id=681913)   : School Damage (2): fire | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 118.3673 (coefficient=0.123) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 111.8571 - 124.8775 (coefficient=0.123, delta coefficient=0.11) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=92747)    : None (0) | Scaling Class: 9
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000
 Description      : Deals ${$<damage>*$<mult>} Fire damage to a target.
@@ -840,7 +843,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16)
 Effects          :
 #1 (id=684613)   : School Damage (2): fire | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 309.8721 (coefficient=0.322) | SP Coefficient: 0.37800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 283.5329 - 336.2112 (coefficient=0.322, delta coefficient=0.17) | SP Coefficient: 0.37800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Inflict searing pain on the enemy target, causing $s1 Fire damage.  Causes a high amount of threat.$?s74434[
 
 |CFFE55BB0Soulburn: Increases the critical effect chance of your next Searing Pain by 100%, and your subsequent Searing Pain casts by $79440s1% for $79440d.|R][]
@@ -952,7 +955,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .x...
 Effects          :
 #1 (id=684481)   : Server Side Script (77)
                    Base Value: 45 | Scaled Value: 45 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Creates a Healthstone that can be used to instantly restore $?s56224[${($basehp(9, $pl))*.45})*1.30}][${($basehp(9, $pl))*.45}] health.
+Description      : Creates a Healthstone that can be consumed to restore $6262s1% health.
 
 Conjured items disappear if logged out for more than 15 minutes.
 
@@ -985,6 +988,30 @@ Effects          :
                    Affected School(s): Shadow
 Description      : Absorbs ${$M1+($SP*0.807)} shadow damage.  Lasts $d.
 Tooltip          : Absorbs ${$M1+($SP*0.807)} Shadow damage.
+
+Name             : Healthstone (id=6262) [Spell Family (5)] 
+Class            : Warlock
+School           : Physical
+Spell Type       : Magic
+Spell Level      : 10
+Category         : 30
+Affecting spells : Metamorphosis (54879 effect#3), Glyph of Healthstone (56224 effect#1)
+Family Flags     : 16
+Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ....x... ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : Aura Points On Client (268)
+Effects          :
+#1 (id=683069)   : Direct Heal (10)
+                   Base Value: 45 | Scaled Value: 45 | PvP Coefficient: 1.00000 | Target: Self (1)
+Description      : Instantly restores $s1% health.$?s74434[
+
+|CFFE55BB0Soulburn: Increases maximum health by $79437s1% for $79437d.|R][]
 
 Name             : Blood Pact (desc=Special Ability) (id=6307) [Spell Family (5)] 
 Class            : Warlock
@@ -1033,7 +1060,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16)
 Effects          :
 #1 (id=685235)   : School Damage (2): fire | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 2447.22 (coefficient=2.543) | SP Coefficient: 0.72600 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 2171.907 - 2722.532 (coefficient=2.543, delta coefficient=0.225) | SP Coefficient: 0.72600 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Burn the enemy's soul, causing $s1 Fire damage.$?s74434[
 
 |CFFE55BB0Soulburn: Instant cast.|R][]
@@ -1086,7 +1113,7 @@ Attributes       : ........ ........ ..x..... ........   ........ ........ .....
                  : Do Not Sheath (18), Allow Client Targeting (133)
 Effects          :
 #1 (id=2216)     : School Damage (2): shadow | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 442.6744 (coefficient=0.46) | PvP Coefficient: 1.00000 | Radius: 5 yards | Target: AOE enemy (instant) (16) -> AOE enemy (instant) (16)
+                   Base Value: 1 | Scaled Value: 409.4738 - 475.875 (coefficient=0.46, delta coefficient=0.15) | PvP Coefficient: 1.00000 | Radius: 5 yards | Target: AOE enemy (instant) (16) -> AOE enemy (instant) (16)
 #2 (id=2217)     : Unknown(144) | Scaling Class: 9
                    Base Value: 40 | Scaled Value: 40 | PvP Coefficient: 1.00000 | Misc Value: 200 | Radius: 5 yards | Target: AOE enemy (instant) (16) -> AOE enemy (instant) (16)
 Description      : Deals ${$M1+(0.85*($SP*0.5))} shadow damage and instantly knocks back all enemies within $a1 yards.
@@ -1173,7 +1200,7 @@ Attributes       : ....x... ........ ..x..... ........   ........ .x...... .....
                  : Is Ability (4), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41)
 Effects          :
 #1 (id=692680)   : School Damage (2): shadow | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 193.4295 (coefficient=0.201) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 177.9551 - 208.9038 (coefficient=0.201, delta coefficient=0.16) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : An instant attack that lashes the target, causing ${$M1+(0.612*($SP*0.5))} Shadow damage.
 
 Name             : Lesser Invisibility (desc=Special Ability) (id=7870) [Spell Family (5)] 
@@ -1608,7 +1635,7 @@ Effects          :
 #1 (id=695051)   : Trigger Spell (64): Shadowburn | Scaling Class: 9
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Trigger Spell: 29341 | Target: Enemy (6)
 #2 (id=695052)   : School Damage (2): shadowflame | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 687.1076 (coefficient=0.714) | Points Per Level: 1.2 | SP Coefficient: 1.05600 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 649.3167 - 724.8986 (coefficient=0.714, delta coefficient=0.11) | Points Per Level: 1.2 | SP Coefficient: 1.05600 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Instantly blasts the target for $17877s2 Shadowflame damage.  If the target dies within $29341d of Shadowburn, and yields experience or honor, the caster gains $29341s1 Soul Shards. Only usable on enemies that have less than 20% health.
 
 Name             : Improved Searing Pain (desc=Rank 1) (id=17927) [Spell Family (5), Passive, Hidden] 
@@ -2447,7 +2474,7 @@ Attributes       : ........ ........ ........ ........   ...x...x ........ .....
                  : No Redirection (35), No Reflection (39), Not In Spellbook (143)
 Effects          :
 #1 (id=699353)   : School Damage (2): fire | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 466.7328 (coefficient=0.485) | SP Coefficient: 0.76500 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: Unknown(87) -> AOE enemy (instant) (16)
+                   Base Value: 1 | Scaled Value: 438.7288 - 494.7367 (coefficient=0.485, delta coefficient=0.12) | SP Coefficient: 0.76500 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: Unknown(87) -> AOE enemy (instant) (16)
 #2 (id=699354)   : Apply Aura (6) | Stun (12) | Scaling Class: 9
                    Base Value: 3 | Scaled Value: 3 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Mechanic: Stun | Target: Unknown(87) -> AOE enemy (instant) (16)
 Description      : An infernal falls from the sky, dealing $s1 Fire damage to all targets, stunning them for $d.
@@ -2531,7 +2558,7 @@ Attributes       : ........ ........ .......x ........   ........ ........ .....
                  : Allow Cast While Dead (23), Ignore Line of Sight (66), PvP Enabling (96), Not In Spellbook (143), Always AOE Line of Sight (186)
 Effects          :
 #1 (id=846281)   : School Damage (2): shadow | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 736.7642 (coefficient=0.7656) | SP Coefficient: 0.22920 | PvP Coefficient: 1.00000 | Radius: 15 yards | Target: AOE enemy (instant) (16)
+                   Base Value: 1 | Scaled Value: 681.5068 - 792.0215 (coefficient=0.7656, delta coefficient=0.15) | SP Coefficient: 0.22920 | PvP Coefficient: 1.00000 | Radius: 15 yards | Target: AOE enemy (instant) (16)
 Description      : Imbeds a demon seed in the enemy target, causing $27243o1 Shadow damage over $27243d.  When the target takes $27243s2 total damage or dies, the seed will inflict $27285s1 Shadow damage to all enemies within $27285a1 yards of the target.  Only one Corruption spell per Warlock can be active on any one target.
 
 Name             : Fel Armor (id=28176) [Spell Family (5)] 
@@ -2648,7 +2675,7 @@ Attributes       : ........ ........ x.x..... ........   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18)
 Effects          :
 #1 (id=847459)   : School Damage (2): fire | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 551.4183 (coefficient=0.573) | SP Coefficient: 0.53900 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 510.0619 - 592.7747 (coefficient=0.573, delta coefficient=0.15) | SP Coefficient: 0.53900 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Deals $s1 Fire damage to your target and an additional $/6;s1 Fire damage if the target is affected by an Immolate spell.
 
 Name             : Soulshatter (id=29858) 
@@ -2933,7 +2960,7 @@ Attributes       : ........ ........ x....... ........   ...x...x ........ .....
                  : Not Shapeshifted (16), No Redirection (35), No Reflection (39), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=847223)   : School Damage (2): shadow | Scaling Class: 9
-                   Base Value: 342 | Scaled Value: 753.5088 (coefficient=0.783) | Points Per Level: 1.6 | SP Coefficient: 0.21400 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
+                   Base Value: 342 | Scaled Value: 687.5768 - 819.4408 (coefficient=0.783, delta coefficient=0.175) | Points Per Level: 1.6 | SP Coefficient: 0.21400 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
 #2 (id=847224)   : Apply Aura (6) | Stun (12) | Scaling Class: 9
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 8 yards | Mechanic: Stun | Target: AOE enemy (instant) (16)
 Description      : Shadowfury is unleashed, causing $s1 Shadow damage and stunning all enemies within $a1 yds for $d.
@@ -4360,7 +4387,7 @@ Attributes       : ........ ........ ........ ........   ...x...x ........ .....
                  : No Redirection (35), No Reflection (39), Area Effects Use Target Radius (328)
 Effects          :
 #1 (id=952447)   : School Damage (2): shadow | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 699.618 (coefficient=0.727) | Points Per Level: 2 | SP Coefficient: 0.10200 | PvP Coefficient: 1.00000 | Radius: 10 yards | Target: Unknown(24)
+                   Base Value: 1 | Scaled Value: 668.1352 - 731.1008 (coefficient=0.727, delta coefficient=0.09) | Points Per Level: 2 | SP Coefficient: 0.10200 | PvP Coefficient: 1.00000 | Radius: 10 yards | Target: Unknown(24)
 Description      : Targets in a cone in front of the caster take $47897s1 Shadow damage and an additional $47960o1 Fire damage over $47960d.$?s63310[ Also reduces movement speed by $63310s1% to afflicted targets.][]
 
 Name             : Shadowflame (id=47960) [Spell Family (5)] 
@@ -4506,7 +4533,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Always Hit (114), No Partial Immunity (139), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=955364)   : School Damage (2): fire | Scaling Class: 9
-                   Base Value: 836 | Scaled Value: 1488.733 (coefficient=1.547) | Value Multiplier: 1 | SP Coefficient: 0.62800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 836 | Scaled Value: 1311.574 - 1665.892 (coefficient=1.547, delta coefficient=0.238) | Value Multiplier: 1 | SP Coefficient: 0.62800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Sends a bolt of chaotic fire at the enemy, dealing $s1 Fire damage. Chaos Bolt cannot be resisted, and pierces through all absorption effects.
 
 Name             : Demonic Pact (id=53646) [Spell Family (5)] 
@@ -4634,7 +4661,7 @@ Attributes       : ....x... ........ ..x..... ........   ........ .x...... .....
                  : Is Ability (4), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41)
 Effects          :
 #1 (id=959391)   : School Damage (2): shadow | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 121.2543 (coefficient=0.126) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 100.0348 - 142.4738 (coefficient=0.126, delta coefficient=0.35) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=1004048)  : Dummy (3) | Scaling Class: 9
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=1004049)  : Dummy (3) | Scaling Class: 9
@@ -4921,7 +4948,7 @@ Effects          :
 #1 (id=959073)   : Apply Aura (6) | Stun (12) | Scaling Class: 9
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 5 yards | Mechanic: Stun | Target: AOE enemy (instant) (16)
 #2 (id=959074)   : School Damage (2): shadow | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 2419.312 (coefficient=2.514) | SP Coefficient: 0.21400 | PvP Coefficient: 1.00000 | Radius: 5 yards | Target: AOE enemy (instant) (16)
+                   Base Value: 1 | Scaled Value: 2213.67 - 2624.953 (coefficient=2.514, delta coefficient=0.17) | SP Coefficient: 0.21400 | PvP Coefficient: 1.00000 | Radius: 5 yards | Target: AOE enemy (instant) (16)
 Description      : Leap through the air $54785A1 yards in front of you, slamming down on all enemies within $54786a1 yards of the target area, causing $54786s2 Shadow damage and stunning them for $54786d.
 Tooltip          : Stunned.
 
@@ -4974,7 +5001,7 @@ Effects          :
                    Family Flags: 26
 #3 (id=959595)   : Apply Aura (6) | Modify Stance Mask (275)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-                   Affected Spells: Eye of Kilrogg (126), Corruption (172), Immolate (348), Bane of Doom (603), Shadow Bolt (686), Demon Armor (687), Summon Imp (688), Drain Life (689), Summon Felhunter (691), Create Soulstone (693), Summon Voidwalker (697), Curse of Weakness (702), Banish (710), Summon Succubus (712), Summon Incubus (713), Health Funnel (755), Bane of Agony (980), Subjugate Demon (1098), Drain Soul (1120), Life Tap (1454), Curse of the Elements (1490), Curse of Tongues (1714), Hellfire (1949), Firebolt (3110), Howl of Terror (5484), Searing Pain (5676), Rain of Fire (5740), Fear (5782), Hellfire (5857), Create Healthstone (6201), Blood Pact (6307), Soul Fire (6353), Seduction (6358), Whiplash (6360), Death Coil (6789), Sacrifice (7812), Lash of Pain (7814), Lesser Invisibility (7870), Suffering (17735), Consume Shadows (17767), Shadowburn (17877), Conflagrate (17962), Curse of Exhaustion (18223), Summon Doomguard (18540), Soul Link (19028), Infernal Awakening (22703), Summon Voidwalker (25112), Seed of Corruption (27243), Seed of Corruption (27285), Fel Armor (28176), Incinerate (29722), Unstable Affliction (30108), Summon Felguard (30146), Shadowfury (30283), Pet Passive (DND) (35695), Pet Passive (DND) (35697), Rain of Fire (42223), Demonic Empowerment (47193), Shadowflame (47897), Shadowflame (47960), Haunt (48181), Chaos Bolt (50796), Demonic Pact (53646), Shadow Bite (54049), Empowered Imp (54278), Fel Intelligence (54424), Hand of Gul'dan (71521), Bane of Havoc (80240), Hellfire (85403), Demonic Rebirth (88448), Drain Life (89420)
+                   Affected Spells: Eye of Kilrogg (126), Corruption (172), Immolate (348), Bane of Doom (603), Shadow Bolt (686), Demon Armor (687), Summon Imp (688), Drain Life (689), Summon Felhunter (691), Create Soulstone (693), Summon Voidwalker (697), Curse of Weakness (702), Banish (710), Summon Succubus (712), Summon Incubus (713), Health Funnel (755), Bane of Agony (980), Subjugate Demon (1098), Drain Soul (1120), Life Tap (1454), Curse of the Elements (1490), Curse of Tongues (1714), Hellfire (1949), Firebolt (3110), Howl of Terror (5484), Searing Pain (5676), Rain of Fire (5740), Fear (5782), Hellfire (5857), Create Healthstone (6201), Healthstone (6262), Blood Pact (6307), Soul Fire (6353), Seduction (6358), Whiplash (6360), Death Coil (6789), Sacrifice (7812), Lash of Pain (7814), Lesser Invisibility (7870), Suffering (17735), Consume Shadows (17767), Shadowburn (17877), Conflagrate (17962), Curse of Exhaustion (18223), Summon Doomguard (18540), Soul Link (19028), Infernal Awakening (22703), Summon Voidwalker (25112), Seed of Corruption (27243), Seed of Corruption (27285), Fel Armor (28176), Incinerate (29722), Unstable Affliction (30108), Summon Felguard (30146), Shadowfury (30283), Pet Passive (DND) (35695), Pet Passive (DND) (35697), Rain of Fire (42223), Demonic Empowerment (47193), Shadowflame (47897), Shadowflame (47960), Haunt (48181), Chaos Bolt (50796), Demonic Pact (53646), Shadow Bite (54049), Empowered Imp (54278), Fel Intelligence (54424), Hand of Gul'dan (71521), Bane of Havoc (80240), Hellfire (85403), Demonic Rebirth (88448), Drain Life (89420)
                    Family Flags: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71
 
 Name             : Glyph of Howl of Terror (id=56217) [Spell Family (5), Passive, Hidden] 
@@ -5039,6 +5066,7 @@ Attributes       : ......xx ........ ........ ........   ........ ........ .....
 Effects          :
 #1 (id=961864)   : Apply Aura (6) | Add Percent Modifier (108): Spell Direct Amount (0)
                    Base Value: 30 | Scaled Value: 30 | PvP Coefficient: 1.00000 | Target: Self (1)
+                   Affected Spells: Healthstone (6262)
                    Family Flags: 16
 Description      : You receive $56224s1% more healing from using a healthstone.
 
@@ -7066,7 +7094,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), No Partial Immunity (139), Do Not Display Duration (170), No Caster Aura Icon (187), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=65178)    : School Damage (2): shadowflame | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 1533.001 (coefficient=1.593) | Value Multiplier: 1 | SP Coefficient: 0.96800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 1405.762 - 1660.24 (coefficient=1.593, delta coefficient=0.166) | Value Multiplier: 1 | SP Coefficient: 0.96800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=87440)    : Trigger Missiles (32) | Scaling Class: 9
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Trigger Spell: 86041 | Target: Enemy (6)
 Description      : Summons a falling meteor down upon the enemy target, dealing $71521s1 Shadowflame damage and erupts an aura of magic within $86000a1 yards, causing all targets within it to have a $86000s1% increased  chance to be critically hit by any Warlock demons. The aura lasts for $86041d.
@@ -7229,7 +7257,7 @@ Attributes       : ........ ........ ..x..... ........   ........ ........ .....
                  : Do Not Sheath (18)
 Effects          :
 #1 (id=68189)    : School Damage (2): shadowflame | Scaling Class: 9
-                   Base Value: 1 | Scaled Value: 238.6592 (coefficient=0.248) | SP Coefficient: 0.30200 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 220.7598 - 256.5587 (coefficient=0.248, delta coefficient=0.15) | SP Coefficient: 0.30200 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=68190)    : Server Side Script (77) | Scaling Class: 9
                    Base Value: 6 | Scaled Value: 6 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Deals $s1 Shadowflame damage to an enemy target, increasing the duration of Immolate or Unstable Affliction by $s2 sec.
@@ -7296,6 +7324,27 @@ Effects          :
                    Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000
 Description      : You seek out nearby wandering souls, regenerating $o2% health and ${$101977m1*3} soul shards over $d.  Cannot be cast when in combat.
 Tooltip          : Gaining $s3 soul shard and $s2% total health every $t1 sec.
+
+Name             : Soulburn: Healthstone (id=79437) 
+Class            : Warlock
+School           : Physical
+Spell Type       : None
+Spell Level      : 1
+Duration         : 8 seconds
+Attributes       : ........ ........ ........ ........   ........ ..x..... ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ .......x ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ ........   
+                 : No Threat (42), Not In Spellbook (143)
+Effects          :
+#1 (id=68453)    : Apply Aura (6) | Increase Health (34)
+                   Base Value: 20 | Scaled Value: 20 | PvP Coefficient: 1.00000 | Target: Self (1)
+Description      : Health increased by $s1% of maximum.
+Tooltip          : Health increased by $s1% of maximum.
 
 Name             : Soulburn: Searing Pain (id=79440) [Spell Family (5)] 
 Class            : Warlock

@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54217 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54339 cata-BETA
 Name             : Backstab (id=53) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical
@@ -492,7 +492,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... ....x
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Finishing Move - Damage (52), Discount Power On Miss (59), Requires Main-Hand Weapon (106), No Helpful Threat (131), Taps immediately (215), Periodic Can Crit (265), Aura Points On Client (268)
 Effects          :
 #1 (id=681139)   : Apply Aura (6) | Periodic Damage (3): physical every 2 seconds | Scaling Class: 4
-                   Base Value: 8 | Scaled Value: 141.7787 (coefficient=0.126) | Bonus Value: 20.25409 (0.018) | PvP Coefficient: 1.00000 | Mechanic: Bleed | Target: Enemy (6)
+                   Base Value: 8 | Scaled Value: 141.7787 (coefficient=0.126) | Bonus Value: 20.25409 (0.018) | PvP Coefficient: 1.00000 | Points Per Combo Point: 2 | Mechanic: Bleed | Target: Enemy (6)
 Description      : Finishing move that causes damage over time, increased by your attack power.  Lasts longer per combo point:
    1 point  : ${($m1+$b1*$<bonus>*1+0.015*$AP*$<bonus>)*0.5*$<dur1>} damage over $<dur1> seconds
    2 points: ${($m1+$b1*$<bonus>*2+0.024*$AP*$<bonus>)*0.5*$<dur2>} damage over $<dur2> seconds
@@ -593,7 +593,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... ....x
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Finishing Move - Damage (52), Discount Power On Miss (59), Requires Main-Hand Weapon (106), No Helpful Threat (131)
 Effects          :
 #1 (id=679923)   : School Damage (2): physical | Scaling Class: 4
-                   Base Value: 0 | Scaled Value: 366.8241 (coefficient=0.326) | Bonus Value: 535.6082 (0.476) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 183.4121 - 550.2362 (coefficient=0.326, delta coefficient=1) | Bonus Value: 535.6082 (0.476) | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Points Per Combo Point: 5 | Target: Enemy (6)
 Description      : Finishing move that causes damage per combo point:
    1 point  : ${$m1+(($b1*1)+$AP*0.091)*$<mult>}-${$M1+(($b1*1)+$AP*0.091)*$<mult>} damage
    2 points: ${$m1+(($b1*2)+$AP*0.182)*$<mult>}-${$M1+(($b1*2)+$AP*0.182)*$<mult>} damage
@@ -2108,7 +2108,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ ....x
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8), Finishing Move - Damage (52)
 Effects          :
 #1 (id=691761)   : Apply Aura (6) | Unknown(109)
-                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Points Per Combo Point: 6 | Trigger Spell: 14181 | Target: Self (1)
+                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Points Per Combo Point: 7 | Trigger Spell: 14181 | Target: Self (1)
                    Affected Spells: Kidney Shot (408), Rupture (1943), Eviscerate (2098), Slice and Dice (5171), Expose Armor (8647), Deadly Throw (26679), Recuperate (73651)
                    Family Flags: 17, 18, 19, 20, 21, 32, 59
 Description      : Your finishing moves have a $b1% chance per combo point to restore $14181s1 Energy.
@@ -2564,7 +2564,7 @@ Attributes       : .x..x... ........ x.....x. ........   ........ .x...... ....x
                  : Uses Ranged Slot (1), Is Ability (4), Not Shapeshifted (16), Track Target in Cast (Player Only) (22), Initiates Combat (Enables Auto-Attack) (41), Finishing Move - Damage (52), Discount Power On Miss (59), Ignore Combat Timer (156), Aura Points On Client (268)
 Effects          :
 #1 (id=846486)   : Weapon Damage (58) | Scaling Class: 4
-                   Base Value: 58 | Scaled Value: 160.9075 (coefficient=0.143) | Bonus Value: 249.8005 (0.222) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 58 | Scaled Value: 140.7941 - 181.021 (coefficient=0.143, delta coefficient=0.25) | Bonus Value: 249.8005 (0.222) | PvP Coefficient: 1.00000 | Points Per Combo Point: 105 | Target: Enemy (6)
 #2 (id=846487)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 4
                    Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 Description      : Finishing move that reduces the movement of the target by $s2% for $d and causes increased thrown weapon damage:
@@ -5217,7 +5217,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ ....x
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8), Finishing Move - Damage (52)
 Effects          :
 #1 (id=963795)   : Apply Aura (6) | Unknown(109)
-                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Points Per Combo Point: 13 | Trigger Spell: 14181 | Target: Self (1)
+                   Base Value: 0 | Scaled Value: 0 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Points Per Combo Point: 14 | Trigger Spell: 14181 | Target: Self (1)
                    Affected Spells: Kidney Shot (408), Rupture (1943), Eviscerate (2098), Slice and Dice (5171), Expose Armor (8647), Deadly Throw (26679), Recuperate (73651)
                    Family Flags: 17, 18, 19, 20, 21, 32, 59
 Description      : Your finishing moves have a $b1% chance per combo point to restore $14181s1 Energy.

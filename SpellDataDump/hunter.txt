@@ -1,11 +1,10 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54217 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54339 cata-BETA
 Name             : Auto Shot (id=75) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
 Spell Type       : Ranged
 Spell Level      : 1
 Range            : 40 yards
-Cast Time        : Ranged Shot
 Velocity         : 60 yards/sec
 Requires weapon  : Bow, Gun, Crossbow
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Mortal Shots (36413 effect#1), Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Owl's Focus (53515 effect#1), Focus (77442 effect#2), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Artisan Quiver (87326 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
@@ -375,7 +374,7 @@ Attributes       : .x...... ........ x....... ........   ........ .x...... .....
                  : Uses Ranged Slot (1), Not Shapeshifted (16), Initiates Combat (Enables Auto-Attack) (41), Do Not Reset Combat Timers (81), DoT Stacking Rule (103), Taps immediately (215), Do Not Auto Select Target with Initiates Combat (220), Periodic Can Crit (265), Aura Points On Client (268)
 Effects          :
 #1 (id=679708)   : Apply Aura (6) | Periodic Damage (3): nature every 3 seconds | Scaling Class: 3
-                   Base Value: 4 | Scaled Value: 4 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 4 | Scaled Value: 460.218 (coefficient=0.409) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=909257)   : Apply Aura (6) | Modify Damage Taken% from Caster's Spells (271) | Scaling Class: 3
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: 127 | Target: Enemy (6)
                    Affected Spells: Auto Shot (75), Serpent Sting (1978), Multi-Shot (2643), Raptor Strike (2973), Arcane Shot (3044), Black Arrow (3674), Concussive Shot (5116), Immolation Trap (13797), Explosive Trap (13812), Aimed Shot (19434), Scatter Shot (19503), Distracting Shot (20736), Wyvern Sting (24131), Thrill of the Hunt (34498), Chimera Shot (53209), Wild Quiver Auto Shot (53254), Explosive Shot (53301), Kill Shot (53351), Steady Shot (56641), Freezing Trap (60192), Bullheaded (63896), Cobra Shot (77767), Aimed Shot! (82928), Explosive Trap (82939), Ice Trap (82941), Immolation Trap (82945), Snake Trap (82948), Serpent Sting (88453), Serpent Sting (88466)
@@ -1033,9 +1032,9 @@ Attributes       : ........ ........ ........ ........   ...x...x ........ .....
                  : No Redirection (35), No Reflection (39), No Avoidance (102), DoT Stacking Rule (103), Not a Proc (105), Always Hit (114), Not In Spellbook (143), Aura Points On Client (268)
 Effects          :
 #1 (id=691195)   : School Damage (2): fire | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 1 | AP Coefficient: 0.54600 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 1 | Scaled Value: 194.9456 - 250.6444 (coefficient=0.198, delta coefficient=0.25) | AP Coefficient: 0.54600 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: At Caster (22) -> AOE enemy (15)
 #2 (id=691196)   : Persistent Area Aura (27) | Periodic Damage (3): fire every 2 seconds | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 1 | AP Coefficient: 0.05460 | PvP Coefficient: 1.00000 | Radius: 10 yards | Target: AOE enemy (28)
+                   Base Value: 1 | Scaled Value: 29.25591 (coefficient=0.026) | AP Coefficient: 0.05460 | PvP Coefficient: 1.00000 | Radius: 10 yards | Target: AOE enemy (28)
 Description      : Place a fire trap that explodes when an enemy approaches, causing $13812s1 Fire damage and burning all enemies for $13812o2 additional Fire damage over $13812d to all within $13812a1 yards.  Trap will exist for $13813d.
 Tooltip          : $w2 Fire damage every $t2 seconds.
 
@@ -1110,7 +1109,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41)
 Effects          :
 #1 (id=693950)   : School Damage (2): physical | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 159.7823 (coefficient=0.142) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 131.8204 - 187.7442 (coefficient=0.142, delta coefficient=0.35) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Claw the enemy, causing ${$M1+(($RAP*0.40)*0.20)} damage.
 
 Name             : Bite (desc=Basic Attack) (id=17253) [Spell Family (9)] 
@@ -1136,7 +1135,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41)
 Effects          :
 #1 (id=694910)   : School Damage (2): physical | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 159.7823 (coefficient=0.142) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 131.8204 - 187.7442 (coefficient=0.142, delta coefficient=0.35) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Bite the enemy, causing ${$M1+(($RAP*0.40)*0.20)} damage.
 
 Name             : Entrapment (desc=Rank 1) (id=19184) [Spell Family (9), Passive, Hidden] 
@@ -1585,7 +1584,7 @@ Attributes       : .x..x... ........ x....... ........   ........ ........ .....
                  : Uses Ranged Slot (1), Is Ability (4), Not Shapeshifted (16), Initiate Combat Post-Cast (Enables Auto-Attack) (84), Force Display Castbar (155), Ignore Combat Timer (156), Delay Combat Timer During Cast (211), Do Not Auto Select Target with Initiates Combat (220), Not In Spellbook Until Learned (269), Cooldown Ignores Ranged Weapon (296), Next modal spell requires same unit target (304)
 Effects          :
 #1 (id=696631)   : Normalized Weapon Damage (121) | Scaling Class: 3
-                   Base Value: 0 | Scaled Value: 821.416 (coefficient=0.73) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 776.2381 - 866.5939 (coefficient=0.73, delta coefficient=0.11) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=101526)   : Weapon Damage% (31) | Scaling Class: 3
                    Base Value: 132 | Scaled Value: 1.6 | Points Per Level: 0.4 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : A powerful aimed shot that deals $m2% ranged weapon damage plus $<damage>.
@@ -3617,7 +3616,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41)
 Effects          :
 #1 (id=954551)   : School Damage (2): physical | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 159.7823 (coefficient=0.142) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 131.8204 - 187.7442 (coefficient=0.142, delta coefficient=0.35) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Smack the enemy, causing ${$M1+(($RAP*0.40)*0.20)} damage.
 
 Name             : Pin (desc=Special Ability) (id=50245) [Spell Family (9)] 
@@ -4904,7 +4903,7 @@ Attributes       : .x...... ........ x....... ........   ........ .x...... .....
                  : Uses Ranged Slot (1), Not Shapeshifted (16), Initiates Combat (Enables Auto-Attack) (41), Do Not Reset Combat Timers (81), Extra Initial Period (169), Do Not Auto Select Target with Initiates Combat (220), Periodic Can Crit (265), Aura Points On Client (268), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=45937)    : Apply Aura (6) | Periodic Damage (3): fire every 1 seconds | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 410.708 (coefficient=0.365) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 372.3068 - 449.1092 (coefficient=0.365, delta coefficient=0.187) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : You fire an explosive charge into the enemy target, dealing $<damage> Fire damage. The charge will blast the target every second for an additional $d.
 Tooltip          : Taking $w1 Fire damage every second.
 Variables        : $damage=${$RAP*0.273+$M1}
@@ -8362,7 +8361,7 @@ Attributes       : .x..x... ........ x....... ........   ........ .x...... .....
                  : Uses Ranged Slot (1), Is Ability (4), Not Shapeshifted (16), Initiates Combat (Enables Auto-Attack) (41), Do Not Reset Combat Timers (81), Not In Spellbook (143), Force Display Castbar (155), Ignore Combat Timer (156), Do Not Auto Select Target with Initiates Combat (220), Cooldown Ignores Ranged Weapon (296)
 Effects          :
 #1 (id=83342)    : Normalized Weapon Damage (121) | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 821.416 (coefficient=0.73) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 776.2381 - 866.5939 (coefficient=0.73, delta coefficient=0.11) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=101527)   : Weapon Damage% (31) | Scaling Class: 3
                    Base Value: 132 | Scaled Value: 1.6 | Points Per Level: 0.4 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : A powerful aimed shot that deals $m2% ranged weapon damage plus $<damage>.
@@ -8687,7 +8686,7 @@ Attributes       : ....x... ........ x.x..... ........   ........ .x...... .....
                  : Is Ability (4), Not Shapeshifted (16), Do Not Sheath (18), Initiates Combat (Enables Auto-Attack) (41), Do Not Display Range (126)
 Effects          :
 #1 (id=83776)    : School Damage (2): physical | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 922.6865 (coefficient=0.82) | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1 | Scaled Value: 848.8716 - 996.5014 (coefficient=0.82, delta coefficient=0.16) | PvP Coefficient: 1.00000 | Target: Enemy (6)
 
 Name             : Termination (desc=Rank 1) (id=83489) [Spell Family (9), Passive, Hidden] 
 Class            : Hunter
@@ -9685,7 +9684,7 @@ Attributes       : ........ ........ x....... ........   ..x...xx ..x..... .x...
                  : Not Shapeshifted (16), Is Channelled (34), Is Self Channelled (38), No Reflection (39), No Threat (42), No AutoCast (AI) (49), Allow While Not Shapeshifted (caster form) (83), Spell Haste Affects Periodic (173), Taps immediately (215), Haste Affects Duration (273)
 Effects          :
 #1 (id=96379)    : Apply Aura (6) | Periodic Trigger Spell (23): Froststorm Breath every 2 seconds | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 207.0418 (coefficient=0.184) | PvP Coefficient: 1.00000 | Trigger Spell: 95725 | Radius: 7 yards | Target: Self (1)
+                   Base Value: 1 | Scaled Value: 170.8095 - 243.2742 (coefficient=0.184, delta coefficient=0.35) | PvP Coefficient: 1.00000 | Trigger Spell: 95725 | Radius: 7 yards | Target: Self (1)
 Description      : The Chimera channels a frozen breath attack, causing $<damage> Froststorm damage every $92380T1 sec for $92380d to to all enemies within $95725a1 yards.
 Tooltip          : Causing Froststorm damage to all targets within $95725A1 yards.
 Variables        : $damage=${$95725m1+(($RAP*0.40)*0.288)}
@@ -10034,7 +10033,7 @@ Attributes       : ........ ........ ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
 Effects          :
 #1 (id=101379)   : School Damage (2): nature | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 248.6753 (coefficient=0.221) | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: Custom (18) -> AOE enemy (instant) (16)
+                   Base Value: 1 | Scaled Value: 205.1571 - 292.1934 (coefficient=0.221, delta coefficient=0.35) | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: Custom (18) -> AOE enemy (instant) (16)
 Description      : The Worm burrows into the earth, shaking the ground above dealing $<damage> Nature damage over $d.
 Variables        : $damage= ${($95714m1+(($RAP*0.40)*0.288))*8}
 
@@ -10057,7 +10056,7 @@ Attributes       : ........ ........ x....... ........   .......x ........ .x...
                  : Not Shapeshifted (16), No Reflection (39), No AutoCast (AI) (49), Allow While Not Shapeshifted (caster form) (83), Active Threat (94), Taps immediately (215)
 Effects          :
 #1 (id=101401)   : School Damage (2): froststorm | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 248.6753 (coefficient=0.221) | PvP Coefficient: 1.00000 | Radius: 12 yards | Target: Cone Front (104)
+                   Base Value: 1 | Scaled Value: 205.1571 - 292.1934 (coefficient=0.221, delta coefficient=0.35) | PvP Coefficient: 1.00000 | Radius: 12 yards | Target: Cone Front (104)
 Description      : The Chimera channels a frozen breath attack, causing $<damage> Froststorm damage every $92380T1 sec for $92380d to to all enemies within $95725a1 yards.
 Variables        : $damage=${$95725m1+(($RAP*0.40)*0.288)}
 

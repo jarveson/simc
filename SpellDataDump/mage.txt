@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54217 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54339 cata-BETA
 Name             : Blizzard (id=10) [Spell Family (3)] 
 Class            : Mage
 School           : Frost
@@ -93,7 +93,7 @@ Effects          :
 #1 (id=679000)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
                    Base Value: -40 | Scaled Value: -40 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 #2 (id=679001)   : School Damage (2): frost | Scaling Class: 8
-                   Base Value: 17 | Scaled Value: 828.5998 (coefficient=0.884) | Points Per Level: 0.5 | SP Coefficient: 0.94300 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 17 | Scaled Value: 728.3392 - 928.8604 (coefficient=0.884, delta coefficient=0.242) | Points Per Level: 0.5 | SP Coefficient: 0.94300 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=909236)   : Apply Aura (6) | Modify Healing Received% (118) | Scaling Class: 8
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: 127 | Target: Enemy (6)
 Description      : Launches a bolt of frost at the enemy, causing $s2 Frost damage and slowing movement speed by $s1% for $d.
@@ -126,7 +126,7 @@ Effects          :
 #1 (id=688102)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
                    Base Value: -60 | Scaled Value: -60 | PvP Coefficient: 1.00000 | Radius: 12 yards | Mechanic: Snare | Target: Cone Front (104)
 #2 (id=688103)   : School Damage (2): frost | Scaling Class: 8
-                   Base Value: 97 | Scaled Value: 787.3573 (coefficient=0.84) | Points Per Level: 0.8 | SP Coefficient: 0.21400 | PvP Coefficient: 1.00000 | Radius: 12 yards | Target: Cone Front (104)
+                   Base Value: 97 | Scaled Value: 751.9262 - 822.7883 (coefficient=0.84, delta coefficient=0.09) | Points Per Level: 0.8 | SP Coefficient: 0.21400 | PvP Coefficient: 1.00000 | Radius: 12 yards | Target: Cone Front (104)
 #3 (id=909237)   : Apply Aura (6) | Modify Healing Received% (118) | Scaling Class: 8
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: 127 | Radius: 12 yards | Target: Cone Front (104)
 Description      : Targets in a cone in front of the caster take $s2 Frost damage and are slowed by $s1% for $d.
@@ -169,7 +169,7 @@ Attributes       : ........ ........ x....... ......x.   ...x...x ........ .....
                  : Not Shapeshifted (16), Heartbeat Resist (30), No Redirection (35), No Reflection (39), Can Proc From Procs (122), Aura Never Bounces (148), Aura Bounce Fails Spell (157)
 Effects          :
 #1 (id=679178)   : School Damage (2): frost | Scaling Class: 8
-                   Base Value: 18 | Scaled Value: 397.428 (coefficient=0.424) | Points Per Level: 0.5 | SP Coefficient: 0.19300 | PvP Coefficient: 1.00000 | Radius: 0 - 12 yards | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 18 | Scaled Value: 367.6209 - 427.2351 (coefficient=0.424, delta coefficient=0.15) | Points Per Level: 0.5 | SP Coefficient: 0.19300 | PvP Coefficient: 1.00000 | Radius: 0 - 12 yards | Target: At Caster (22) -> AOE enemy (15)
 #2 (id=679179)   : Apply Aura (6) | Root (26) | Scaling Class: 8
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 0 - 12 yards | Mechanic: Root | Target: At Caster (22) -> AOE enemy (15)
 Description      : Blasts enemies near the caster for $s1 Frost damage and freezes them in place for up to $d.  Damage caused may interrupt the effect.
@@ -208,7 +208,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16)
 Effects          :
 #1 (id=679020)   : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 13 | Scaled Value: 1124.796 (coefficient=1.2) | Points Per Level: 0.6 | SP Coefficient: 1.23600 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 13 | Scaled Value: 988.6958 - 1260.896 (coefficient=1.2, delta coefficient=0.242) | Points Per Level: 0.6 | SP Coefficient: 1.23600 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Hurls a fiery ball that causes $s1 Fire damage.
 
 Name             : Remove Curse (id=475) [Spell Family (3)] 
@@ -313,7 +313,7 @@ Attributes       : ........ ........ x....... ........   ...x...x ........ .....
                  : Not Shapeshifted (16), No Redirection (35), No Reflection (39)
 Effects          :
 #1 (id=680024)   : School Damage (2): arcane | Scaling Class: 8
-                   Base Value: 31 | Scaled Value: 344.9375 (coefficient=0.368) | Points Per Level: 0.4 | SP Coefficient: 0.18600 | PvP Coefficient: 1.00000 | Radius: 10 yards | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 31 | Scaled Value: 331.14 - 358.735 (coefficient=0.368, delta coefficient=0.08) | Points Per Level: 0.4 | SP Coefficient: 0.18600 | PvP Coefficient: 1.00000 | Radius: 10 yards | Target: At Caster (22) -> AOE enemy (15)
 Description      : Causes an explosion of arcane magic around the caster, causing $s1 Arcane damage to all targets within $a1 yards.
 
 Name             : Arcane Brilliance (id=1459) [Spell Family (3)] 
@@ -422,7 +422,7 @@ Attributes       : ........ ........ x....... ........   ...x...x ........ .....
                  : Not Shapeshifted (16), No Redirection (35), No Reflection (39), No Aura Icon (60), Always Show Ground Texture (190)
 Effects          :
 #1 (id=680622)   : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 51 | Scaled Value: 620.5125 (coefficient=0.662) | Points Per Level: 0.6 | SP Coefficient: 0.14600 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
+                   Base Value: 51 | Scaled Value: 557.8407 - 683.1843 (coefficient=0.662, delta coefficient=0.202) | Points Per Level: 0.6 | SP Coefficient: 0.14600 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
 #2 (id=680623)   : Persistent Area Aura (27) | Periodic Damage (3): fire every 2 seconds | Scaling Class: 8
                    Base Value: 12 | Scaled Value: 96.545 (coefficient=0.103) | SP Coefficient: 0.06100 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (28)
 Description      : Calls down a pillar of fire, burning all enemies within the area for $s1 Fire damage and an additional $o2 Fire damage over $d.
@@ -452,7 +452,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16)
 Effects          :
 #1 (id=681340)   : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 23 | Scaled Value: 1043.248 (coefficient=1.113) | Points Per Level: 0.6 | SP Coefficient: 0.42900 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 23 | Scaled Value: 954.5723 - 1131.924 (coefficient=1.113, delta coefficient=0.17) | Points Per Level: 0.6 | SP Coefficient: 0.42900 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Blasts the enemy for $s1 Fire damage.
 
 Name             : Counterspell (id=2139) [Spell Family (3)] 
@@ -505,7 +505,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16)
 Effects          :
 #1 (id=681289)   : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 52 | Scaled Value: 732.0548 (coefficient=0.781) | Points Per Level: 0.9 | SP Coefficient: 0.51200 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 52 | Scaled Value: 669.8301 - 794.2794 (coefficient=0.781, delta coefficient=0.17) | Points Per Level: 0.9 | SP Coefficient: 0.51200 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Scorch the enemy for $s1 Fire damage.
 
 Name             : Shoot (id=5019) 
@@ -853,7 +853,7 @@ Attributes       : ........ ........ x....... ........   ...x...x ........ .....
                  : Not Shapeshifted (16), No Redirection (35), No Reflection (39), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=687827)   : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 153 | Scaled Value: 927.0194 (coefficient=0.989) | Points Per Level: 1 | SP Coefficient: 0.14300 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
+                   Base Value: 153 | Scaled Value: 851.0039 - 1003.035 (coefficient=0.989, delta coefficient=0.164) | Points Per Level: 1 | SP Coefficient: 0.14300 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
 #2 (id=687828)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
                    Base Value: -70 | Scaled Value: -70 | PvP Coefficient: 1.00000 | Radius: 8 yards | Mechanic: Snare | Target: AOE enemy (instant) (16)
 Description      : A wave of flame radiates outward from the target location, damaging all enemies caught within the blast for $s1 Fire damage and are slowed by $s2% for $d.
@@ -949,7 +949,7 @@ Effects          :
                    Affected Spells: Fireball (133), Flamestrike (2120), Fire Blast (2136), Scorch (2948), Blast Wave (11113), Pyroblast (11366), Dragon's Breath (31661), Frostfire Bolt (44614), Flamestrike (88148), Pyroblast! (92315)
                    Family Flags: 0, 1, 2, 4, 22, 23, 38, 44
 #2 (id=95864)    : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 23 | Scaled Value: 1043.248 (coefficient=1.113) | Points Per Level: 0.6 | SP Coefficient: 0.42900 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 23 | Scaled Value: 954.5723 - 1131.924 (coefficient=1.113, delta coefficient=0.17) | Points Per Level: 0.6 | SP Coefficient: 0.42900 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Combines your damaging periodic Fire effects on an enemy target but does not consume them, instantly dealing $s2 Fire damage and creating a new periodic effect that lasts $83853d and deals damage per time equal to the sum of the combined effects.
 
 Name             : Piercing Ice (desc=Rank 1) (id=11151) [Spell Family (3), Passive, Hidden] 
@@ -1164,7 +1164,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Spell Haste Affects Periodic (173), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=688602)   : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 140 | Scaled Value: 1405.995 (coefficient=1.5) | Points Per Level: 1.9 | SP Coefficient: 1.54500 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 140 | Scaled Value: 1238.682 - 1573.309 (coefficient=1.5, delta coefficient=0.238) | Points Per Level: 1.9 | SP Coefficient: 1.54500 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=688603)   : Apply Aura (6) | Periodic Damage (3): fire every 3 seconds | Scaling Class: 8
                    Base Value: 14 | Scaled Value: 164.0328 (coefficient=0.175) | SP Coefficient: 0.18000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d.
@@ -2007,7 +2007,7 @@ Attributes       : ........ ........ ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
 Effects          :
 #1 (id=846952)   : Energize Power (30) | Scaling Class: -1
-                   Base Value: 2339 | Scaled Value: 12102.76 (coefficient=27.32) | PvP Coefficient: 1.00000 | Misc Value: mana | Target: Self (1)
+                   Base Value: 2339 | Scaled Value: 11800.19 - 12405.33 (coefficient=27.32, delta coefficient=0.05) | PvP Coefficient: 1.00000 | Misc Value: mana | Target: Self (1)
 Description      : Restores $s1 mana.
 
 Name             : Arcane Torrent (desc=Racial) (id=28730) 
@@ -2162,7 +2162,7 @@ Attributes       : ........ ........ ..x..... ........   ........ ........ .....
                  : Do Not Sheath (18)
 Effects          :
 #1 (id=847418)   : School Damage (2): arcane | Scaling Class: 8
-                   Base Value: 841 | Scaled Value: 1811.859 (coefficient=1.933) | Points Per Level: 5 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 841 | Scaled Value: 1675.97 - 1947.748 (coefficient=1.933, delta coefficient=0.15) | Points Per Level: 5 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=909753)   : Trigger Spell (64): Arcane Blast | Scaling Class: 8
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Trigger Spell: 36032 | Target: Self (1)
 Description      : Blasts the target with energy, dealing $s1 Arcane damage.  Each time you cast Arcane Blast, the damage of Arcane Blast and Arcane Explosion is increased by $36032s1%, Arcane Blast casting time is reduced by ${$36032m3/-1000}.1 sec and Arcane Blast mana cost is increased by $36032s2%.  Effect stacks up to $36032u times and lasts $36032d or until any Arcane damage spell except Arcane Blast or Arcane Explosion is cast.
@@ -2189,7 +2189,7 @@ Attributes       : ........ ........ x.x..... ........   ........ ........ .....
                  : Not Shapeshifted (16), Do Not Sheath (18)
 Effects          :
 #1 (id=847510)   : School Damage (2): frost | Scaling Class: 8
-                   Base Value: 160 | Scaled Value: 404.9266 (coefficient=0.432) | Points Per Level: 3.2 | SP Coefficient: 0.37800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 160 | Scaled Value: 355.9305 - 453.9227 (coefficient=0.432, delta coefficient=0.242) | Points Per Level: 3.2 | SP Coefficient: 0.37800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=85836)    : Dummy (3) | Scaling Class: 8
                    Base Value: 100 | Scaled Value: 100 | PvP Coefficient: 1.00000
 Description      : Deals $s1 Frost damage to an enemy target, damage doubled against frozen targets.
@@ -2550,7 +2550,7 @@ Attributes       : ........ ........ x...x... ........   ...x...x ........ .....
                  : Not Shapeshifted (16), Cancels Auto Attack Combat (20), No Redirection (35), No Reflection (39), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=849332)   : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 369 | Scaled Value: 1291.641 (coefficient=1.378) | Points Per Level: 1.5 | SP Coefficient: 0.19300 | PvP Coefficient: 1.00000 | Radius: 12 yards | Target: Cone Front (104)
+                   Base Value: 369 | Scaled Value: 1194.768 - 1388.514 (coefficient=1.378, delta coefficient=0.15) | Points Per Level: 1.5 | SP Coefficient: 0.19300 | PvP Coefficient: 1.00000 | Radius: 12 yards | Target: Cone Front (104)
 Description      : Targets in a cone in front of the caster take $s1 Fire damage and are disoriented for $d.  Any direct damaging attack will revive targets.
 Tooltip          : Disoriented and Snared.
 
@@ -2767,7 +2767,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16)
 Effects          :
 #1 (id=848692)   : School Damage (2): frost | Scaling Class: 8
-                   Base Value: 255 | Scaled Value: 379.6187 (coefficient=0.405) | Points Per Level: 11.5 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 255 | Scaled Value: 332.1663 - 427.071 (coefficient=0.405, delta coefficient=0.25) | Points Per Level: 11.5 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Deals $s1 Frost damage to the target.
 
 Name             : Invisibility (id=32612) [Spell Family (3)] 
@@ -2845,7 +2845,7 @@ Attributes       : ........ ........ x....... ......x.   ...x...x ........ .x...
                  : Not Shapeshifted (16), Heartbeat Resist (30), No Redirection (35), No Reflection (39), No AutoCast (AI) (49), Allow Client Targeting (133), Allow Cast While Casting (135), Aura Never Bounces (148)
 Effects          :
 #1 (id=851795)   : School Damage (2): frost | Scaling Class: 8
-                   Base Value: 73 | Scaled Value: 384.3053 (coefficient=0.41) | Points Per Level: 2 | SP Coefficient: 0.02900 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
+                   Base Value: 73 | Scaled Value: 355.4824 - 413.1282 (coefficient=0.41, delta coefficient=0.15) | Points Per Level: 2 | SP Coefficient: 0.02900 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
 #2 (id=851796)   : Apply Aura (6) | Root (26) | Scaling Class: 8
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Radius: 8 yards | Mechanic: Root | Target: AOE enemy (instant) (16)
 Description      : Blasts enemies in a $a1 yard radius for ${($m1+$M1)/2} Frost damage and freezes them in place for up to $d.  Damage caused may interrupt the effect.
@@ -3268,7 +3268,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Not In Spellbook Until Learned (269)
 Effects          :
 #1 (id=950372)   : School Damage (2): arcane | Scaling Class: 8
-                   Base Value: 345 | Scaled Value: 1324.447 (coefficient=1.413) | Points Per Level: 2.5 | SP Coefficient: 0.90700 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 345 | Scaled Value: 1192.003 - 1456.892 (coefficient=1.413, delta coefficient=0.2) | Points Per Level: 2.5 | SP Coefficient: 0.90700 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Launches bolts of arcane energy at the enemy target, causing $s1 Arcane damage.
 
 Name             : Hot Streak (desc=Rank 1) (id=44445) [Spell Family (3), Passive, Hidden] 
@@ -3670,7 +3670,7 @@ Effects          :
 #1 (id=976761)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
                    Base Value: -40 | Scaled Value: -40 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 #2 (id=976762)   : School Damage (2): frostfire | Scaling Class: 8
-                   Base Value: 628 | Scaled Value: 889.5262 (coefficient=0.949) | Points Per Level: 3.9 | SP Coefficient: 0.97700 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 628 | Scaled Value: 781.8936 - 997.1589 (coefficient=0.949, delta coefficient=0.242) | Points Per Level: 3.9 | SP Coefficient: 0.97700 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=976763)   : Apply Aura (6) | Periodic Damage (3): frostfire every 3 seconds | Scaling Class: 8
                    Base Value: 1 | Scaled Value: 6.67379 (coefficient=0.00712) | SP Coefficient: 0.00733 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Launches a bolt of frostfire at the enemy, causing $s2 Frostfire damage and $?s61205[${(($m2+$M2)/2)*0.03} additional damage over $d, stacking up to 3 times][slowing the target by $s1% for 9 sec].  This spell will be checked against the lower of the target's Frost and Fire resists.
@@ -5222,7 +5222,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16)
 Effects          :
 #1 (id=965356)   : School Damage (2): frost | Scaling Class: 8
-                   Base Value: 162 | Scaled Value: 220.2726 (coefficient=0.235) | SP Coefficient: 0.25000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 162 | Scaled Value: 209.2589 - 231.2862 (coefficient=0.235, delta coefficient=0.1) | SP Coefficient: 0.25000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=965357)   : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
                    Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 Description      : Inflicts Frost damage to an enemy and reduces its movement speed for $d.
@@ -5759,7 +5759,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Not a Proc (105), Not In Spellbook (143)
 Effects          :
 #1 (id=974216)   : School Damage (2): frost | Scaling Class: 8
-                   Base Value: 1468 | Scaled Value: 1304.763 (coefficient=1.392) | Points Per Level: 45 | SP Coefficient: 2.05800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 1468 | Scaled Value: 1157.978 - 1451.549 (coefficient=1.392, delta coefficient=0.225) | Points Per Level: 45 | SP Coefficient: 2.05800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Stuns the target for $44572d.  Only usable on Frozen targets.  Deals ${$71757m1*$<mult>} to ${$71757M1*$<mult>} damage to targets that are permanently immune to stuns.
 Variables        : $arctic1=$?s31674[${1.01}][${1}]
 $arctic2=$?s31675[${1.02}][${$<arctic1>}]
@@ -6105,7 +6105,7 @@ Attributes       : ........ ........ x....... ........   .......x ........ .....
                  : Not Shapeshifted (16), No Reflection (39), Active Threat (94), Do Not Display Range (126), Not In Spellbook (143)
 Effects          :
 #1 (id=83048)    : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 174 | Scaled Value: 260.5778 (coefficient=0.278) | SP Coefficient: 0.13400 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 174 | Scaled Value: 228.0055 - 293.15 (coefficient=0.278, delta coefficient=0.25) | SP Coefficient: 0.13400 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Inflicts Fire damage to an enemy.
 
 Name             : Arcane Tactics (id=82930) [Spell Family (3), Passive] 
@@ -6454,7 +6454,7 @@ Attributes       : ........ ........ ........ ........   ........ ........ .....
                  : Not In Spellbook (143)
 Effects          :
 #1 (id=84091)    : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 1000 | Scaled Value: 1235.401 (coefficient=1.318) | SP Coefficient: 0.19300 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: Unknown(87) -> AOE enemy (instant) (16)
+                   Base Value: 1000 | Scaled Value: 1134.098 - 1336.704 (coefficient=1.318, delta coefficient=0.164) | SP Coefficient: 0.19300 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: Unknown(87) -> AOE enemy (instant) (16)
                    Affected Spells: Fireball (133), Flamestrike (2120), Scorch (2948), Pyroblast (11366), Flamestrike (88148), Pyroblast! (92315)
                    Family Flags: 0, 2, 4, 22
 Description      : At the end of its duration your Flame Orb explodes, dealing $s1 Fire damage to all nearby enemies.
@@ -6784,7 +6784,7 @@ Effects          :
 #1 (id=85629)    : Apply Aura (6) | Decrease Movement Speed% (33) | Scaling Class: 8
                    Base Value: -40 | Scaled Value: -40 | PvP Coefficient: 1.00000 | Mechanic: Snare | Target: Enemy (6)
 #2 (id=87603)    : School Damage (2): frostfire | Scaling Class: 8
-                   Base Value: 174 | Scaled Value: 260.5778 (coefficient=0.278) | SP Coefficient: 0.13400 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 174 | Scaled Value: 228.0055 - 293.15 (coefficient=0.278, delta coefficient=0.25) | SP Coefficient: 0.13400 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #3 (id=99077)    : Apply Aura (6) | Modify Healing Received% (118) | Scaling Class: 8
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: 127 | Target: Enemy (6)
 Description      : Inflicts Frostfire damage to an enemy and slows movement speed by $s1% for $d.
@@ -7358,7 +7358,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16)
 Effects          :
 #1 (id=90295)    : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 13 | Scaled Value: 307.4443 (coefficient=0.328) | Points Per Level: 0.6 | SP Coefficient: 0.33800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 13 | Scaled Value: 270.2435 - 344.645 (coefficient=0.328, delta coefficient=0.242) | Points Per Level: 0.6 | SP Coefficient: 0.33800 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Hurls a fiery ball that causes ${($m1+$M1)/2} Fire damage.
 
 Name             : Arcane Blast (id=88084) [Spell Family (3)] 
@@ -7383,7 +7383,7 @@ Attributes       : ........ ........ ..x..... ........   ........ ........ .....
                  : Do Not Sheath (18)
 Effects          :
 #1 (id=90297)    : School Damage (2): arcane | Scaling Class: 8
-                   Base Value: 841 | Scaled Value: 242.7685 (coefficient=0.259) | Points Per Level: 5 | SP Coefficient: 0.27500 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 841 | Scaled Value: 224.5609 - 260.9761 (coefficient=0.259, delta coefficient=0.15) | Points Per Level: 5 | SP Coefficient: 0.27500 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=90298)    : Trigger Spell (64): Arcane Blast | Scaling Class: 8
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Trigger Spell: 36032 | Target: Self (1)
                    Affected Spells: Arcane Blast (30451), Arcane Blast (88084)
@@ -7411,7 +7411,7 @@ Attributes       : ........ ........ x....... ........   ...x...x ........ .....
                  : Not Shapeshifted (16), No Redirection (35), No Reflection (39), No Aura Icon (60), Not In Spellbook (143), Always Line of Sight (185)
 Effects          :
 #1 (id=90385)    : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 51 | Scaled Value: 620.5125 (coefficient=0.662) | Points Per Level: 0.6 | SP Coefficient: 0.14600 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
+                   Base Value: 51 | Scaled Value: 557.8407 - 683.1843 (coefficient=0.662, delta coefficient=0.202) | Points Per Level: 0.6 | SP Coefficient: 0.14600 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (instant) (16)
 #2 (id=90386)    : Persistent Area Aura (27) | Periodic Damage (3): fire every 2 seconds | Scaling Class: 8
                    Base Value: 12 | Scaled Value: 96.545 (coefficient=0.103) | SP Coefficient: 0.06100 | PvP Coefficient: 1.00000 | Radius: 8 yards | Target: AOE enemy (28)
 Description      : Calls down a pillar of fire, burning all enemies within the area for ${($m1+$M1)/2} Fire damage and an additional $o2 Fire damage over $d.
@@ -7666,7 +7666,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Not In Spellbook (143), Spell Haste Affects Periodic (173)
 Effects          :
 #1 (id=96291)    : School Damage (2): fire | Scaling Class: 8
-                   Base Value: 140 | Scaled Value: 1405.995 (coefficient=1.5) | Points Per Level: 1.9 | SP Coefficient: 1.54500 | PvP Coefficient: 1.00000 | Target: Enemy (6)
+                   Base Value: 140 | Scaled Value: 1238.682 - 1573.309 (coefficient=1.5, delta coefficient=0.238) | Points Per Level: 1.9 | SP Coefficient: 1.54500 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 #2 (id=96292)    : Apply Aura (6) | Periodic Damage (3): fire every 3 seconds | Scaling Class: 8
                    Base Value: 14 | Scaled Value: 164.0328 (coefficient=0.175) | SP Coefficient: 0.18000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
 Description      : Hurls an immense fiery boulder that causes $s1 Fire damage and an additional $o2 Fire damage over $d.
