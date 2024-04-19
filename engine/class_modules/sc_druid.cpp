@@ -2278,7 +2278,7 @@ struct ferocious_bite_t : public cat_finisher_t
     max_excess_energy = data().effectN( 3 ).base_value();
 
     base_dd_adder = base_dmg_per_pnt = data().effectN( 1 ).bonus( p );
-    attack_power_mod.direct = base_ap_mod_per_pnt = 0.109;
+    attack_power_mod.direct = base_ap_mod_per_pnt = 0.125;
   }
 
   double maximum_energy() const
