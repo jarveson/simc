@@ -155,6 +155,26 @@ double attack_t::block_chance( action_state_t* s ) const
   return block;
 }
 
+double attack_t::crit_chance( double crit, int delta_level, player_t* t ) const
+{
+  if ( t->is_enemy() || t->is_add() )
+  {
+    if ( delta_level > 2 )
+    {
+      crit -= ( 0.03 + delta_level * 0.006 );
+    }
+    else
+    {
+      crit -= ( delta_level * 0.002 );
+    }
+  }
+  else
+  {
+    crit -= delta_level * 0.002;
+  }
+  return crit;
+}
+
 double attack_t::crit_block_chance( action_state_t* s ) const
 {
   // This function is probably unnecessary, as we could just query
@@ -322,8 +342,8 @@ result_e attack_t::calculate_result( action_state_t* s ) const
   double parry = may_parry && player->position() == POSITION_FRONT
                      ? parry_chance( composite_expertise(), s->target )
                      : 0;
-  double crit = may_crit ? std::max( s->composite_crit_chance() +
-                                         s->target->cache.crit_avoidance(),
+  double crit = may_crit ? std::max( crit_chance(s->composite_crit_chance() +
+                                         s->target->cache.crit_avoidance(), delta_level, s->target),
                                      0.0 )
                          : 0;
 
