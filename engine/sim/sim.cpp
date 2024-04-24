@@ -2778,7 +2778,7 @@ void sim_t::init()
                           ->add_invalidate( CACHE_CRIT_CHANCE );
 
   auras.attack_power = make_buff( this, "trueshot_aura", dbc::find_spell(this, 19506 ))
-                           ->set_default_value( dbc::find_spell( this, 53290 )->effectN( 2 ).percent() )
+                           ->set_default_value( dbc::find_spell( this, 19506 )->effectN( 2 ).percent() )
                            ->add_invalidate(CACHE_ATTACK_POWER);
 
   auras.all_damage = make_buff( this, "arcane_tactics", dbc::find_spell( this, 82930 ) )
