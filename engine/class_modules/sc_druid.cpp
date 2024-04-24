@@ -5171,11 +5171,12 @@ std::string druid_t::default_food() const
   {
     switch ( specialization() )
     {
-      case DRUID_GUARDIAN:
-      case DRUID_FERAL:
       case DRUID_RESTORATION:
       case DRUID_BALANCE:
-            return "seafood_magnifique_feast";
+            return "severed_sagefish_head";
+      case DRUID_GUARDIAN:
+      case DRUID_FERAL:
+            return "skewered_eel";
       default:
             return "disabled";
     }
