@@ -1457,7 +1457,7 @@ double dbc_t::armor_mitigation_constant( unsigned level ) const
   assert( level > 0 && level <= ( MAX_SCALING_LEVEL + 3 ) );
   // Pulled from old cata simc
   double a, b;
-  if ( level > 80 )
+  if ( level > 83 )
   {
     a = 2167.5;
     b = -158167.5;
