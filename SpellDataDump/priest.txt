@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54339 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54377 cata-BETA
 Name             : Power Word: Shield (id=17) [Spell Family (6)] 
 Class            : Priest
 School           : Holy
@@ -2228,7 +2228,7 @@ Attributes       : ........ ........ x....... ........   ........ ........ .....
                  : Not Shapeshifted (16), Allow While Not Shapeshifted (caster form) (83), Can Proc From Procs (122), Aura Never Bounces (148), Can Proc From Suppressed Target Procs (254), Aura Points On Client (268), Allow Class Ability Procs (416)
 Effects          :
 #1 (id=852725)   : Dummy (3) | Scaling Class: 5
-                   Base Value: 800 | Scaled Value: 800 | SP Coefficient: 0.80700 | PvP Coefficient: 1.00000 | Target: Unknown(57)
+                   Base Value: 800 | Scaled Value: 2971.674 (coefficient=3.144) | SP Coefficient: 0.80700 | PvP Coefficient: 1.00000 | Target: Unknown(57)
 #2 (id=881928)   : Dummy (3) | Scaling Class: 5
                    Base Value: 5 | Scaled Value: 5 | PvP Coefficient: 1.00000 | Target: Unknown(57)
 Description      : Places a spell on the target that heals them for $<mending> the next time they take damage.  When the heal occurs, Prayer of Mending jumps to a party or raid member within $351575a1 yards. Jumps up to $s2 times and lasts $41635d after each jump. This spell can only be placed on one target at a time.

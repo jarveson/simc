@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54339 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54377 cata-BETA
 Name             : Auto Shot (id=75) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical

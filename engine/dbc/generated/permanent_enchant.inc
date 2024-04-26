@@ -1,4 +1,4 @@
-// Permanent item enchants, wow build 4.4.0.54339
+// Permanent item enchants, wow build 4.4.0.54377
 static const std::array<permanent_enchant_entry_t, 369> __permanent_enchant_data { {
   { 4214,  0, 4, 64, 30, "cardboard_assassin"                },
   { 4439,  0, 4, 128, 30, "charscale_leg_reinforcements"      },

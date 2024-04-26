@@ -1,4 +1,4 @@
-// Active class spells, wow build 4.4.0.54339
+// Active class spells, wow build 4.4.0.54377
 static const std::array<active_class_spell_t, 957> __active_spells_data { {
   {  1,    0,     71,      0, "Defensive Stance" },
   {  1,    0,     78,      0, "Heroic Strike" },
@@ -959,7 +959,7 @@ static const std::array<active_class_spell_t, 957> __active_spells_data { {
   { 11,    0, 450759,      0, "Revitalize" },
 } };
 
-// Pet active spells, wow build 4.4.0.54339
+// Pet active spells, wow build 4.4.0.54377
 static const std::array<active_pet_spell_t, 110> __active_pet_spells_data { {
   {  3,   1742, "Cower" },
   {  3,   2649, "Growl" },
