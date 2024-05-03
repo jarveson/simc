@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54377 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54500 cata-BETA
 Name             : Auto Shot (id=75) [Spell Family (9)] 
 Class            : Hunter
 School           : Physical
@@ -1032,7 +1032,7 @@ Attributes       : ........ ........ ........ ........   ...x...x ........ .....
                  : No Redirection (35), No Reflection (39), No Avoidance (102), DoT Stacking Rule (103), Not a Proc (105), Always Hit (114), Not In Spellbook (143), Aura Points On Client (268)
 Effects          :
 #1 (id=691195)   : School Damage (2): fire | Scaling Class: 3
-                   Base Value: 1 | Scaled Value: 194.9456 - 250.6444 (coefficient=0.198, delta coefficient=0.25) | AP Coefficient: 0.54600 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: At Caster (22) -> AOE enemy (15)
+                   Base Value: 1 | Scaled Value: 194.9456 - 250.6444 (coefficient=0.198, delta coefficient=0.25) | AP Coefficient: 0.05460 | PvP Coefficient: 1.00000 | Radius: 0 - 10 yards | Target: At Caster (22) -> AOE enemy (15)
 #2 (id=691196)   : Persistent Area Aura (27) | Periodic Damage (3): fire every 2 seconds | Scaling Class: 3
                    Base Value: 1 | Scaled Value: 29.25591 (coefficient=0.026) | AP Coefficient: 0.05460 | PvP Coefficient: 1.00000 | Radius: 10 yards | Target: AOE enemy (28)
 Description      : Place a fire trap that explodes when an enemy approaches, causing $13812s1 Fire damage and burning all enemies for $13812o2 additional Fire damage over $13812d to all within $13812a1 yards.  Trap will exist for $13813d.
@@ -1635,14 +1635,14 @@ Proc Flags       : ...x.x.x .x.x.x.x .x.x.... .......x   xxxxxxxx xxxxxxxx xxxxx
 Affecting spells : Serpent Sting (1978 effect#2), Freezing Trap (3355 effect#2), Ice Trap (13810 effect#2), Mortal Shots (36413 effect#1), Shot Power (37508 effect#2), Camouflage (51755 effect#3), Marked for Death (53241 effect#1), Marked for Death (53243 effect#1), Glyph of Scatter Shot (63069 effect#1), Glyph of Raptor Strike (63086 effect#1), Resistance is Futile (82893 effect#1), Resistance is Futile (82894 effect#1), Serpent Sting (88453 effect#2), Serpent Sting (88466 effect#2)
 Family Flags     : 18, 79
 Attributes       : .x...... ........ x...x... ........   ........ ........ ........ ........ 
-                 : ........ ........ .x...... ........   ........ ........ x....... ..x..... 
-                 : ........ ........ .......x ........   ........ ........ ........ ........ 
+                 : ........ ........ .x...... ........   .x...... ........ x....... ..x..... 
+                 : ........ ........ .......x ........   ........ ........ x....... ........ 
                  : ........ ........ ........ ....x...   ........ ........ ........ ......x. 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : .x...... ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   
-                 : Uses Ranged Slot (1), Not Shapeshifted (16), Cancels Auto Attack Combat (20), Do Not Reset Combat Timers (81), Suppress Caster Procs (112), Can Proc From Procs (122), Suppress Weapon Procs (151), Do Not Auto Select Target with Initiates Combat (220), Can Proc From Suppressed Target Procs (254), Can Proc from Suppressed Caster Procs (385)
+                 : Uses Ranged Slot (1), Not Shapeshifted (16), Cancels Auto Attack Combat (20), Do Not Reset Combat Timers (81), No Proc Equip Requirement (97), Suppress Caster Procs (112), Can Proc From Procs (122), Suppress Weapon Procs (151), Aura Affects Not Just Req. Equipped Item (176), Do Not Auto Select Target with Initiates Combat (220), Can Proc From Suppressed Target Procs (254), Can Proc from Suppressed Caster Procs (385)
 Effects          :
 #1 (id=696914)   : Weapon Damage% (31)
                    Base Value: 50 | Scaled Value: 0.5 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Enemy (6)
@@ -4830,7 +4830,6 @@ Name             : Point of No Escape (desc=Rank 1) (id=53298) [Spell Family (9)
 Class            : Hunter
 School           : Physical
 Spell Type       : None
-Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4845,8 +4844,8 @@ Effects          :
                    Base Value: 3 | Scaled Value: 3 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 12 | Target: Self (1)
                    Affected Spells: Freezing Trap (3355)
                    Family Flags: 3
-#2 (id=958292)   : Apply Aura (6) | Add Flat Modifier (107): Spell Effect 3 (23)
-                   Base Value: 3 | Scaled Value: 3 | PvP Coefficient: 1.00000 | Misc Value: 23 | Target: Self (1)
+#2 (id=958292)   : Apply Aura (6) | Add Flat Modifier (107): Spell Effect 2 (12)
+                   Base Value: 3 | Scaled Value: 3 | PvP Coefficient: 1.00000 | Misc Value: 12 | Target: Self (1)
                    Affected Spells: Ice Trap (13810)
                    Family Flags: 4
 Description      : Increases the ranged critical strike chance of all of your attacks on targets affected by your Ice Trap and Freezing Trap by $s1%.
@@ -4855,7 +4854,6 @@ Name             : Point of No Escape (desc=Rank 2) (id=53299) [Spell Family (9)
 Class            : Hunter
 School           : Physical
 Spell Type       : None
-Proc Chance      : 101%
 Attributes       : ....x.xx x....... ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -4870,8 +4868,8 @@ Effects          :
                    Base Value: 6 | Scaled Value: 6 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 12 | Target: Self (1)
                    Affected Spells: Freezing Trap (3355)
                    Family Flags: 3
-#2 (id=958352)   : Apply Aura (6) | Add Flat Modifier (107): Spell Effect 3 (23)
-                   Base Value: 6 | Scaled Value: 6 | PvP Coefficient: 1.00000 | Misc Value: 23 | Target: Self (1)
+#2 (id=958352)   : Apply Aura (6) | Add Flat Modifier (107): Spell Effect 2 (12)
+                   Base Value: 6 | Scaled Value: 6 | PvP Coefficient: 1.00000 | Misc Value: 12 | Target: Self (1)
                    Affected Spells: Ice Trap (13810)
                    Family Flags: 4
 Description      : Increases the ranged critical strike chance of all of your attacks on targets affected by your Ice Trap and Freezing Trap by $s1%.
@@ -7713,26 +7711,6 @@ Effects          :
 Description      : When used, your next Trap can be launched to a target location within 40 yards. Lasts for $d.
 Tooltip          : Next trap used will allow you to choose a target location to place it within 40 yards.
 
-Name             : Control Pet (desc=Passive) (id=79682) [Hidden] 
-Class            : Hunter
-School           : Physical
-Spell Type       : None
-Spell Level      : 10
-Proc Chance      : 101%
-Attributes       : .......x ........ ........ ........   ........ ........ ........ .......x 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ .......x ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Cast When Learned (63), Not In Spellbook (143)
-Effects          :
-#1 (id=68490)    : Dummy (3)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Allows you to give commands to control your pet.
-
 Name             : Arcane Torrent (desc=Racial) (id=80483) 
 Class            : Hunter
 Race             : Blood Elf (0x200)
@@ -9705,26 +9683,6 @@ Attributes       : ....x.xx x....... ..x..... ........   ........ ........ .....
 Effects          :
 #1 (id=97724)    : Apply Aura (6) | Dummy (4)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: 1 | Target: Self (1)
-
-Name             : Control Pet (desc=Passive) (id=93321) [Passive] 
-Class            : Hunter
-School           : Physical
-Spell Type       : None
-Spell Level      : 10
-Proc Chance      : 101%
-Attributes       : ......x. ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   
-                 : Passive (6)
-Effects          :
-#1 (id=97792)    : Apply Aura (6) | Dummy (4)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-Description      : Allows you to give commands to control your pet.
 
 Name             : Burrow Attack (desc=Exotic Ability) (id=93433) [Spell Family (9)] 
 Class            : Hunter

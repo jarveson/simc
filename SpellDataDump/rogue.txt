@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54377 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54500 cata-BETA
 Name             : Backstab (id=53) [Spell Family (8)] 
 Class            : Rogue
 School           : Physical

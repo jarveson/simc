@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54377 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54500 cata-BETA
 Name             : Dual Wield (desc=Passive) (id=674) [Passive] 
 Class            : Warrior, Hunter, Rogue, Death Knight
 School           : Physical
@@ -473,11 +473,11 @@ Attributes       : ........ ........ ........ ........   ........ ..x..... .....
                  : No Threat (42), Don't Block Mana Regen (89)
 Effects          :
 #1 (id=1149179)  : Energize Power (30)
-                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: rune | Target: Self (1)
+                   Base Value: 1 | Scaled Value: 1 | PvP Coefficient: 1.00000 | Misc Value: none | Target: Self (1)
 #2 (id=1149180)  : Apply Aura (6) | Unknown(512)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value 2: 0x3 | Target: Self (1)
 #3 (id=979641)   : Energize Power (30)
-                   Base Value: 99 | Scaled Value: 99 | PvP Coefficient: 1.00000 | Misc Value: runic_power | Target: Self (1)
+                   Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: runic_power | Target: Self (1)
 Description      : Immediately activates a Blood Rune and converts it into a Death Rune for the next $d.  Death Runes count as a Blood, Frost or Unholy Rune.
 Tooltip          : Blood Rune converted to a Death Rune.
 
@@ -7748,8 +7748,8 @@ Attributes       : ........ ........ ........ ........   ........ ..x..... .....
 Effects          :
 #1 (id=68696)    : Apply Aura (6) | Scale% (Stacking) (61)
                    Base Value: 20 | Scaled Value: 20 | PvP Coefficient: 1.00000 | Target: Self (1)
-#2 (id=68697)    : None (0)
-                   Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000
+#2 (id=68697)    : Dummy (3)
+                   Base Value: 5 | Scaled Value: 5 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : The Bloodworm grows engorged with the blood leeched from its enemies, giving it an increasing chance to burst, healing nearby allies.
 Tooltip          : Engorged with blood.
 May burst, healing nearby allies for $s2% of its maximum health.

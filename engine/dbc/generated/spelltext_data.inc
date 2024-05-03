@@ -1,5 +1,5 @@
-// Spell text, wow build 4.4.0.54377
-static const std::array<spelltext_data_t, 7608> __spelltext_data { {
+// Spell text, wow build 4.4.0.54500
+static const std::array<spelltext_data_t, 7599> __spelltext_data { {
   {     10, "Ice shards pelt the target area doing ${$42208m1*8*$<mult>} Frost damage over $10d.", "$42208s1 Frost damage every $42208t1 $lsecond:seconds;.", 0 },
   {     17, "Draws on the soul of the friendly target to shield them, absorbing $<shield> damage$?s55672[ and healing them for $55672s1% of the absorption amount][].  Lasts $d.  While the shield holds, spellcasting will not be interrupted by damage.  Once shielded, the target cannot be shielded again for $6788d.", "Absorbs $w1 damage.", 0 },
   {     53, "Backstab the target, causing $m2% weapon damage plus $m1 to the target.  Must be behind the target.  Requires a dagger in the main hand.  Awards $s3 combo $lpoint:points;.", 0, 0 },
@@ -6031,7 +6031,7 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {  79151, "Empowers your Recuperate ability, causing its periodic effect to also restore $s1 Energy.", 0, "Rank 2" },
   {  79152, "Empowers your Recuperate ability, causing its periodic effect to also restore $s1 Energy.", 0, "Rank 3" },
   {  79206, "Calls upon spiritual guidance, permitting movement while casting non-instant Shaman spells. This spell may be cast while casting other spells. Lasts $d.", "Able to move while casting Shaman spells that have a cast time.", 0 },
-  {  79268, "You seek out nearby wandering souls, regenerating $o2% health and ${$101977m1*3} soul shards over $d.  Cannot be cast when in combat.", "Gaining $s3 soul shard and $s2% total health every $t1 sec.", 0 },
+  {  79268, "You seek out nearby wandering souls, regenerating $o2% health and ${$101977m1*3} soul shards over $d.  Cannot be cast when in combat.", "Gaining $s1 soul shard every $s3 sec and $s2% total health every $t1 sec.", 0 },
   {  79437, "Health increased by $s1% of maximum.", "Health increased by $s1% of maximum.", 0 },
   {  79440, "Critical effect chance of your Searing Pain spell increased by $s1%.", "Critical effect chance of your Searing Pain spell increased by $s1%.", 0 },
   {  79459, "Critical strike chance of your cast time Destruction spells increased by $s1%.", "Critical strike chance of your cast time Destruction spells increased by $s1%.", 0 },
@@ -6060,7 +6060,6 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {  79635, "Increases your mastery rating by $s1 for $d.  Battle Elixir.", "Mastery rating increased by $s1.", 0 },
   {  79637, "Increases your Agility, Strength, or Intellect by $79639s1 for $79639d.  Your highest stat is always chosen.\r\n\r\nCounts as both a Battle and Guardian elixir.  Effect persists through death.", 0, 0 },
   {  79639, "Increases Agility by $s1.  Counts as both a Battle and Guardian elixir.  This effect persists through death.", "Agility increased by $s1.", 0 },
-  {  79682, "Allows you to give commands to control your pet.", 0, "Passive" },
   {  79683, "Your offensive spells have a chance to activate Arcane Missiles for $d.", "Arcane Missiles activated.", 0 },
   {  80128, "Using Devastate on a target with 20% or less health has a $h% chance to allow the use of Victory Rush but that Victory Rush only heals for $s1% of your health.", 0, "Rank 1" },
   {  80129, "Using Devastate on a target with 20% or less health has a $h% chance to allow the use of Victory Rush but that Victory Rush only heals for $s1% of your health.", 0, "Rank 2" },
@@ -6080,7 +6079,6 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {  80319, "When you Ferocious Bite a target at or below $80318s1% health, you have a 100% chance to instantly refresh the duration of your Rip on the target.", 0, 0 },
   {  80353, "Warp the flow of time, increasing melee, ranged, and spell casting speed by $s1% for all party and raid members.  Lasts $d.\r\n\r\nAllies receiving this effect will become unstuck in time, and be unable to benefit from Bloodlust, Heroism, or Time Warp again for $57724d.", "Melee, ranged, and spell casting speed increased by $s1%.", 0 },
   {  80354, "Cannot benefit from Time Warp or other similar effects.", "Cannot benefit from Time Warp or other similar effects.", 0 },
-  {  80388, "Allows you to give commands to control your pet.", 0, "Passive" },
   {  80398, "You link yourself with the targeted friendly target, increasing both of your haste by $80398s1%. \r\n\r\nWhen you or the linked target gains a critical periodic damage or healing effect, the other gains increased periodic damage and healing lasting for $85759d.  You gain $85759s1%, while the target gains ${$85759m1/3}%.  Stacks up to $85759u times. Dark Intent lasts for $85768d.", 0, 0 },
   {  80483, "Silence all enemies within $a1 yards for $d and restores $s2 of your Focus.  Non-player victim spellcasting is also interrupted for $32747d.", "Silenced.", "Racial" },
   {  80532, "Increases your Agility and critical strike rating by $s1 for $d.  Battle Elixir.", "Agility and critical strike rating increased by $s1.", 0 },
@@ -7062,14 +7060,11 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   {  93229, "Instantly heals you for $s1.", 0, 0 },
   {  93248, "Commands the spirit of Cliffwatcher Longhorn to fight for you for 30 seconds.", "Spirit of Cliffwatcher Longhorn", 0 },
   {  93282, "Escapes to the Master. Flee removes all stun and bonds.", 0, "Special Ability" },
-  {  93321, "Allows you to give commands to control your pet.", 0, "Passive" },
   {  93337, "You champion the cause of Ramkahen.  All reputation gains while in level 85 Cataclysm dungeons will be applied to your standing with them.", "All reputation gains while in level 85 Cataclysm dungeons will be applied to Ramkahen.", 0 },
   {  93339, "You champion the cause of the Earthen Ring.  All reputation gains while in level 85 Cataclysm dungeons will be applied to your standing with them.", "All reputation gains while in level 85 Cataclysm dungeons will be applied to the Earthen Ring.", 0 },
   {  93341, "You champion the cause of the Guardians of Hyjal.  All reputation gains while in level 85 Cataclysm dungeons will be applied to your standing with them.", "All reputation gains while in level 85 Cataclysm dungeons will be applied to the Guardians of Hyjal.", 0 },
   {  93347, "You champion the cause of Therazane.  All reputation gains while in level 85 Cataclysm dungeons will be applied to your standing with them.", "All reputation gains while in level 85 Cataclysm dungeons will be applied to Therazane.", 0 },
   {  93368, "You champion the cause of the Wildhammer Clan.  All reputation gains while in level 85 Cataclysm dungeons will be applied to your standing with them.", "All reputation gains while in level 85 Cataclysm dungeons will be applied to Wildhammer Clan.", 0 },
-  {  93375, "Allows you to give commands to control your demon.", 0, "Passive" },
-  {  93376, "Allows you to give commands to control your demon.", 0, "Passive" },
   {  93398, "You have a $h% chance when you deal damage with your Moonfire or Insect Swarm to instantly reset the cooldown of your Starsurge and reduce its cast time by $93400s1%. Lasts $93400d.", 0, "Rank 1" },
   {  93399, "You have a $h% chance when you deal damage with your Moonfire or Insect Swarm to instantly reset the cooldown of your Starsurge and reduce its cast time by $93400s1%. Lasts $93400d.", 0, "Rank 1" },
   {  93400, "You have a chance when you deal damage with your Moonfire or Insect Swarm to instantly reset the cooldown of your Starsurge and reduce its cast time by $93400s1%. Lasts $93400d.", "Cast time of your next Starsurge reduced by $s1%.", 0 },
@@ -7596,25 +7591,21 @@ static const std::array<spelltext_data_t, 7608> __spelltext_data { {
   { 398475, "Increases spell power by $s2 for $d.", "Spell power increased by $s2.", 0 },
   { 398478, "Increases dodge rating by $s1 for $d1.", "Increases dodge rating by $s1.", 0 },
   { 398488, "Increases attack power by $s1 for $d.", "Increases attack power by $s1.", 0 },
-  { 405003, "Your Hand of Reckoning spell no longer taunts the target and can deal damage to untauntable targets.", 0, 0 },
   { 413430, "You champion the cause of the Sons of Hodir.  All reputation gains while in level 80 dungeons will be applied to your standing with them.", "All reputation gains while in level 80 dungeons are applied to your Sons of Hodir standing.", 0 },
   { 413841, "Your critical strikes from Fire damage spells cause the target to burn for an additional percentage of your spell's damage over $12654d.", "Deals Fire damage every $t1 sec.", 0 },
   { 413843, "Your critical strikes from Fire damage spells cause the target to burn for an additional percentage of your spell's damage over $12654d.", 0, 0 },
-  { 413895, "Your Omen of Clarity talent has a $s1% chance to be triggered by successfully casting Faerie Fire (Feral). Does not trigger on players or player-controlled pets.", 0, 0 },
-  { 413898, "Your Omen of Clarity talent has a $413895s1% chance to be triggered by successfully casting Faerie Fire (Feral). Does not trigger on players or player-controlled pets.", 0, 0 },
   { 414206, "Your Plague Strikes have a chance to cause the Grasp of the Dead effect for 7 yards around the target.  Targets in the area are slowed by $s1%.", "Standing upon unholy ground. \r\nMovement speed is reduced by $s1%.", 0 },
   { 414268, "Your Plague Strikes have a chance to cause the Grasp of the Dead effect for 7 yards around the target.  Targets in the area are slowed by $s1%.", "Standing upon unholy ground. \r\nMovement speed is reduced by $s1%.", 0 },
-  { 414813, "Your Shattering Throw is now instant and can be used in any stance, but it no longer removes invulnerabilities and cannot be used on players or player-controlled targets.", 0, 0 },
   { 450759, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
   { 450761, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
   { 450762, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
 } };
 
-// spelltext hotfix entries, wow build 4.4.0.54377
+// spelltext hotfix entries, wow build 4.4.0.54500
 static constexpr std::array<hotfix::client_hotfix_entry_t, 0> __spelltext_hotfix_data { {
 } };
 
-// Spell description variables, wow build 4.4.0.54377
+// Spell description variables, wow build 4.4.0.54500
 static const std::array<spelldesc_vars_data_t, 83> __spelldesc_vars_data { {
   { 10, "$arctic1=$?s31674[${1.01}][${1}]\r\n$arctic2=$?s31675[${1.02}][${$<arctic1>}]\r\n$arctic3=$?s31676[${1.03}][${$<arctic2>}]\r\n$arctic4=$?s31677[${1.04}][${$<arctic3>}]\r\n$arctic5=$?s31678[${1.05}][${$<arctic4>}]\r\n$piercing1=$?s11151[${1.02}][${1}]\r\n$piercing2=$?s12952[${1.04}][${$<piercing1>}]\r\n$piercing3=$?s12953[${1.06}][${$<piercing2>}]\r\n$mult=${$<arctic5>*$<piercing3>}" },
   { 17, "$twin1=$?s47586[${1.02}][${1.00}]\r\n$twin2=$?s47587[${1.04}][${$<twin1>}]\r\n$twin3=$?s47588[${1.06}][${$<twin2>}]\r\n$ipws1=$?s14748[${1.10}][${1.00}]\r\n$ipws2=$?s14768[${1.20}][${$<ipws1>}]\r\n$mastery=$?s47540[${((100+$77484m1)/100)}][${1.00}]\r\n$spirit=$?s87336[${((100+$87336m1)/100)}][${1.00}]\r\n$shield=${((($SP*0.87)+$m1)*$<mastery>*$<spirit>*$<twin3>*$<ipws2>)}" },
@@ -7701,7 +7692,7 @@ static const std::array<spelldesc_vars_data_t, 83> __spelldesc_vars_data { {
   { 95725, "$damage=${$95725m1+(($RAP*0.40)*0.288)}" },
 } };
 
-// spelldesc_vars hotfix entries, wow build 4.4.0.54377
+// spelldesc_vars hotfix entries, wow build 4.4.0.54500
 static constexpr std::array<hotfix::client_hotfix_entry_t, 0> __spelldesc_vars_hotfix_data { {
 } };
 

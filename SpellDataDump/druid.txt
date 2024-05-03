@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54377 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54500 cata-BETA
 Name             : Demoralizing Roar (desc=Bear Form) (id=99) [Spell Family (7)] 
 Class            : Druid
 School           : Physical
@@ -102,8 +102,8 @@ Cooldown         : 480 seconds
 Category         : 46
 Category Cooldown: 480 seconds
 Stance Mask      : 0x00000002
-Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Celestial Focus (84738 effect#2), Malfurion's Gift (92363 effect#2), Malfurion's Gift (92364 effect#2)
-Family Flags     : 53
+Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Clearcasting (16870 effect#1), Fury of Stormrage (17104 effect#1), Nimble Healing Touch (24542 effect#2), Fury of Stormrage (24943 effect#1), Empowered Rejuvenation (33888 effect#1), Blessing of Lower City (37878 effect#1), Genesis (57810 effects: #1, #2), Genesis (57811 effects: #1, #2), Genesis (57812 effects: #1, #2), Nature's Focus (84736 effect#1), Celestial Focus (84738 effect#2), Gift of Nature (87305 effects: #1, #2), Malfurion's Gift (92363 effects: #1, #2), Malfurion's Gift (92364 effects: #1, #2), Shooting Stars (93398 effect#1), Shooting Stars (93399 effect#1), Sunfire (93401 effect#1), Disentanglement (96429 effect#1), Harmony (100977 effects: #1, #2)
+Family Flags     : 7, 53
 Attributes       : ........ ........ x....... ........   ..x...x. ..x..... ........ ....xx.. 
                  : ........ ........ ...x.... ......x.   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ .....x.. ........ ........ 
@@ -1548,8 +1548,8 @@ Attributes       : ........ ........ ..x..... ........   ........ ..x..... .....
 Effects          :
 #1 (id=695684)   : Apply Aura (6) | Add Percent Modifier (108): Spell Resource Cost (14)
                    Base Value: -100 | Scaled Value: -100 | PvP Coefficient: 1.00000 | Misc Value: 14 | Target: Self (1)
-                   Affected Spells: Demoralizing Roar (99), Entangling Roots (339), Swipe (779), Rip (1079), Claw (1082), Rake (1822), Starfire (2912), Wrath (5176), Healing Touch (5185), Bash (5211), Shred (5221), Ravage (6785), Maul (6807), Regrowth (8936), Pounce (9005), Pounce Bleed (9007), Feral Charge (16979), Entangling Roots (19975), Ferocious Bite (22568), Maim (22570), Lacerate (33745), Force of Nature (33831), Mangle (33876), Mangle (33878), Hurricane (42231), Swipe (62078), Thrash (77758), Stampeding Roar (77761), Stampeding Roar (77764), Starsurge (78674), Wild Mushroom (78777), Pulverize (80313), Pulverize (80951), Skull Bash (80964), Skull Bash (80965), Ravage! (81170), Wild Mushroom (88747), Skull Bash (93985)
-                   Family Flags: 0, 2, 3, 5, 6, 9, 11, 12, 13, 15, 16, 17, 23, 32, 38, 39, 40, 41, 42, 52, 74, 82, 86, 87, 88, 89, 91, 92
+                   Affected Spells: Demoralizing Roar (99), Entangling Roots (339), Tranquility (740), Swipe (779), Rip (1079), Claw (1082), Rake (1822), Starfire (2912), Wrath (5176), Healing Touch (5185), Bash (5211), Shred (5221), Ravage (6785), Maul (6807), Regrowth (8936), Pounce (9005), Pounce Bleed (9007), Hurricane (16914), Feral Charge (16979), Entangling Roots (19975), Ferocious Bite (22568), Maim (22570), Lacerate (33745), Force of Nature (33831), Mangle (33876), Mangle (33878), Tranquility (44203), Nourish (50464), Swipe (62078), Stampeding Roar (77761), Stampeding Roar (77764), Starsurge (78674), Wild Mushroom (78777), Pulverize (80313), Pulverize (80951), Skull Bash (80964), Skull Bash (80965), Ravage! (81170), Wild Mushroom (88747), Skull Bash (93985)
+                   Family Flags: 0, 2, 3, 5, 6, 7, 9, 11, 12, 13, 15, 16, 17, 22, 23, 32, 38, 39, 40, 41, 42, 52, 57, 74, 82, 87, 88, 89, 91, 92
 Description      : Your damage and healing spells have a small chance to cause you to enter a Clearcasting state. The Clearcasting state reduces the Mana, Rage or Energy cost of your next cast-time damaging or healing spell or offensive feral ability by $16870s1%.
 
 If specialized as a Feral Druid, Omen of Clarity will also have a chance to occur from your auto-attacks.
@@ -1643,7 +1643,7 @@ Duration         : 10 seconds
 Category         : 571
 Proc Chance      : 101%
 Stance Mask      : 0x40000002
-Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Moonfury (16913 effects: #1, #3), Owlkin Frenzy (48391 effect#1), Glyph of Hurricane (54831 effect#1), Celestial Focus (84738 effect#1), Vengeance (84840 effect#1)
+Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Clearcasting (16870 effect#1), Moonfury (16913 effects: #1, #3), Owlkin Frenzy (48391 effect#1), Glyph of Hurricane (54831 effect#1), Celestial Focus (84738 effect#1), Vengeance (84840 effect#1)
 Family Flags     : 22
 Attributes       : ........ ........ x....... ........   ..xx...x ........ ........ ........ 
                  : ........ ........ ...x..x. ........   ........ ........ ........ ........ 
@@ -2340,7 +2340,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=8795)     : Apply Aura (6) | Proc Trigger Spell (42): Fury of Stormrage
                    Base Value: 6 | Scaled Value: 6 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Trigger Spell: 81093 | Target: Self (1)
-                   Affected Spells: Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Lifebloom (33763), Tranquility (44203), Nourish (50464)
+                   Affected Spells: Tranquility (740), Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Lifebloom (33763), Tranquility (44203), Nourish (50464)
                    Family Flags: 5, 6, 7, 33, 36, 57
 #2 (id=695243)   : Apply Aura (6) | Add Percent Modifier (108): Spell Resource Cost (14)
                    Base Value: -50 | Scaled Value: -50 | PvP Coefficient: 1.00000 | Misc Value: 14 | Target: Self (1)
@@ -2578,7 +2578,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8), Not In Spellbook (143)
 Effects          :
 #1 (id=700189)   : Apply Aura (6) | Threat (10)
-                   Base Value: 47 | Scaled Value: 47 | PvP Coefficient: 1.00000 | Misc Value: 127 | Target: Self (1)
+                   Base Value: 400 | Scaled Value: 400 | PvP Coefficient: 1.00000 | Misc Value: 127 | Target: Self (1)
 #2 (id=870840)   : Apply Aura (6) | Modify Dodge% (49)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
 
@@ -2958,7 +2958,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=15165)    : Apply Aura (6) | Proc Trigger Spell (42): Fury of Stormrage
                    Base Value: 10 | Scaled Value: 10 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Trigger Spell: 81093 | Target: Self (1)
-                   Affected Spells: Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Lifebloom (33763), Tranquility (44203), Nourish (50464)
+                   Affected Spells: Tranquility (740), Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Lifebloom (33763), Tranquility (44203), Nourish (50464)
                    Family Flags: 5, 6, 7, 33, 36, 57
 #2 (id=701621)   : Apply Aura (6) | Add Percent Modifier (108): Spell Resource Cost (14)
                    Base Value: -100 | Scaled Value: -100 | PvP Coefficient: 1.00000 | Misc Value: 14 | Target: Self (1)
@@ -3555,7 +3555,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=852696)   : Apply Aura (6) | Add Percent Modifier (108): Spell Power (24)
                    Base Value: 12 | Scaled Value: 12 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 24 | Target: Self (1)
-                   Affected Spells: Rejuvenation (774), Regrowth (8936), Swiftmend (18562), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801)
+                   Affected Spells: Tranquility (740), Rejuvenation (774), Regrowth (8936), Swiftmend (18562), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801)
                    Family Flags: 4, 6, 7, 33, 36, 58
 Description      : The bonus healing effects of your healing over time spells and Swiftmend is increased by $s1%.
 
@@ -3929,7 +3929,7 @@ School           : Nature
 Spell Type       : Magic
 Spell Level      : 44
 Range            : 100 yards
-Affecting spells : Clearcasting (16870 effect#1), Gale Winds (48488 effect#1), Gale Winds (48514 effect#1), Genesis (57810 effect#2), Genesis (57811 effect#2), Genesis (57812 effect#2)
+Affecting spells : Gale Winds (48488 effect#1), Gale Winds (48514 effect#1), Genesis (57810 effect#2), Genesis (57811 effect#2), Genesis (57812 effect#2)
 Triggered by     : Hurricane (16914)
 Family Flags     : 86
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
@@ -3955,7 +3955,7 @@ Range            : 40 yards
 Duration         : 8 seconds
 Stacks           : 3 maximum
 Proc Chance      : 101%
-Affecting spells : Fury of Stormrage (17104 effect#1), Nimble Healing Touch (24542 effect#2), Fury of Stormrage (24943 effect#1), Empowered Rejuvenation (33888 effect#1), Blessing of Lower City (37878 effect#1), Genesis (57810 effects: #1, #2), Genesis (57811 effects: #1, #2), Genesis (57812 effects: #1, #2), Nature's Focus (84736 effect#1), Gift of Nature (87305 effects: #1, #2), Malfurion's Gift (92363 effect#1), Malfurion's Gift (92364 effect#1), Shooting Stars (93398 effect#1), Shooting Stars (93399 effect#1), Sunfire (93401 effect#1), Disentanglement (96429 effect#1), Harmony (100977 effects: #1, #2)
+Affecting spells : Clearcasting (16870 effect#1), Fury of Stormrage (17104 effect#1), Nimble Healing Touch (24542 effect#2), Fury of Stormrage (24943 effect#1), Empowered Rejuvenation (33888 effect#1), Blessing of Lower City (37878 effect#1), Genesis (57810 effects: #1, #2), Genesis (57811 effects: #1, #2), Genesis (57812 effects: #1, #2), Nature's Focus (84736 effect#1), Gift of Nature (87305 effects: #1, #2), Malfurion's Gift (92363 effect#1), Malfurion's Gift (92364 effect#1), Shooting Stars (93398 effect#1), Shooting Stars (93399 effect#1), Sunfire (93401 effect#1), Disentanglement (96429 effect#1), Harmony (100977 effects: #1, #2)
 Triggered by     : Tranquility (740)
 Family Flags     : 7
 Attributes       : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -5134,7 +5134,7 @@ Spell Level      : 8
 Range            : 40 yards
 Cast Time        : 3 seconds
 GCD              : 1.5 seconds
-Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Nature's Grace (16886 effect#1), Naturalist (17069 effect#1), Naturalist (17070 effect#1), Fury of Stormrage (17104 effect#1), Nature's Swiftness (17116 effects: #1, #2), Fury of Stormrage (24943 effect#1), Empowered Touch (33879 effects: #1, #2), Empowered Touch (33880 effects: #1, #2), Nature's Majesty (35363 effect#1), Nature's Majesty (35364 effect#1), Spark of Nature (48435 effect#1), Spark of Nature (48436 effect#1), Spark of Nature (48437 effect#1), Predator's Swiftness (69369 effects: #1, #2), Harmony (77495 effect#1), Nature's Focus (84736 effect#1), Gift of Nature (87305 effect#1), Malfurion's Gift (92363 effect#1), Malfurion's Gift (92364 effect#1), Nature's Torment Cooldown (93432 effect#1), Disentanglement (96429 effect#1)
+Affecting spells : Moonglow (16845 effect#1), Moonglow (16846 effect#1), Moonglow (16847 effect#1), Clearcasting (16870 effect#1), Nature's Grace (16886 effect#1), Naturalist (17069 effect#1), Naturalist (17070 effect#1), Fury of Stormrage (17104 effect#1), Nature's Swiftness (17116 effects: #1, #2), Fury of Stormrage (24943 effect#1), Empowered Touch (33879 effects: #1, #2), Empowered Touch (33880 effects: #1, #2), Nature's Majesty (35363 effect#1), Nature's Majesty (35364 effect#1), Spark of Nature (48435 effect#1), Spark of Nature (48436 effect#1), Spark of Nature (48437 effect#1), Predator's Swiftness (69369 effects: #1, #2), Harmony (77495 effect#1), Nature's Focus (84736 effect#1), Gift of Nature (87305 effect#1), Malfurion's Gift (92363 effect#1), Malfurion's Gift (92364 effect#1), Nature's Torment Cooldown (93432 effect#1), Disentanglement (96429 effect#1)
 Family Flags     : 57
 Attributes       : ........ ........ x....... ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -6280,11 +6280,11 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=977681)   : Apply Aura (6) | Add Percent Modifier (108): Spell Periodic Amount (22)
                    Base Value: 2 | Scaled Value: 2 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 22 | Target: Self (1)
-                   Affected Spells: Rejuvenation (774), Regrowth (8936), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801)
+                   Affected Spells: Tranquility (740), Rejuvenation (774), Regrowth (8936), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801)
                    Family Flags: 4, 6, 7, 36, 58
 #2 (id=977682)   : Apply Aura (6) | Add Percent Modifier (108): Spell Direct Amount (0)
                    Base Value: 2 | Scaled Value: 2 | PvP Coefficient: 1.00000 | Target: Self (1)
-                   Affected Spells: Regrowth (8936), Swiftmend (18562), Hurricane (42231), Tranquility (44203), Thrash (77758)
+                   Affected Spells: Tranquility (740), Regrowth (8936), Swiftmend (18562), Hurricane (42231), Tranquility (44203), Thrash (77758)
                    Family Flags: 6, 7, 33, 86
 #3 (id=97953)    : Apply Aura (6) | Add Flat Modifier (107): Spell Duration (1)
                    Base Value: 2000 | Scaled Value: 2000 | PvP Coefficient: 1.00000 | Misc Value: 1 | Target: Self (1)
@@ -6308,11 +6308,11 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=962931)   : Apply Aura (6) | Add Percent Modifier (108): Spell Periodic Amount (22)
                    Base Value: 4 | Scaled Value: 4 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 22 | Target: Self (1)
-                   Affected Spells: Rejuvenation (774), Regrowth (8936), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801)
+                   Affected Spells: Tranquility (740), Rejuvenation (774), Regrowth (8936), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801)
                    Family Flags: 4, 6, 7, 36, 58
 #2 (id=962932)   : Apply Aura (6) | Add Percent Modifier (108): Spell Direct Amount (0)
                    Base Value: 4 | Scaled Value: 4 | PvP Coefficient: 1.00000 | Target: Self (1)
-                   Affected Spells: Regrowth (8936), Swiftmend (18562), Hurricane (42231), Tranquility (44203), Thrash (77758)
+                   Affected Spells: Tranquility (740), Regrowth (8936), Swiftmend (18562), Hurricane (42231), Tranquility (44203), Thrash (77758)
                    Family Flags: 6, 7, 33, 86
 #3 (id=97954)    : Apply Aura (6) | Add Flat Modifier (107): Spell Duration (1)
                    Base Value: 4000 | Scaled Value: 4000 | PvP Coefficient: 1.00000 | Misc Value: 1 | Target: Self (1)
@@ -6336,11 +6336,11 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=962933)   : Apply Aura (6) | Add Percent Modifier (108): Spell Periodic Amount (22)
                    Base Value: 6 | Scaled Value: 6 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 22 | Target: Self (1)
-                   Affected Spells: Rejuvenation (774), Regrowth (8936), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801)
+                   Affected Spells: Tranquility (740), Rejuvenation (774), Regrowth (8936), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801)
                    Family Flags: 4, 6, 7, 36, 58
 #2 (id=962934)   : Apply Aura (6) | Add Percent Modifier (108): Spell Direct Amount (0)
                    Base Value: 6 | Scaled Value: 6 | PvP Coefficient: 1.00000 | Target: Self (1)
-                   Affected Spells: Regrowth (8936), Swiftmend (18562), Hurricane (42231), Tranquility (44203), Thrash (77758)
+                   Affected Spells: Tranquility (740), Regrowth (8936), Swiftmend (18562), Hurricane (42231), Tranquility (44203), Thrash (77758)
                    Family Flags: 6, 7, 33, 86
 #3 (id=97955)    : Apply Aura (6) | Add Flat Modifier (107): Spell Duration (1)
                    Base Value: 6000 | Scaled Value: 6000 | PvP Coefficient: 1.00000 | Misc Value: 1 | Target: Self (1)
@@ -7655,7 +7655,7 @@ Duration         : 6 seconds
 Cooldown         : 6 seconds
 Stance Mask      : 0x00000010
 Mechanic         : Bleed
-Affecting spells : Clearcasting (16870 effect#1), Gale Winds (48488 effect#1), Gale Winds (48514 effect#1), Genesis (57810 effect#2), Genesis (57811 effect#2), Genesis (57812 effect#2)
+Affecting spells : Gale Winds (48488 effect#1), Gale Winds (48514 effect#1), Genesis (57810 effect#2), Genesis (57811 effect#2), Genesis (57812 effect#2)
 Family Flags     : 86
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
@@ -9194,7 +9194,7 @@ Attributes       : ......xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=85648)    : Apply Aura (6) | Add Percent Modifier (108): Spell Pushback (9)
                    Base Value: 70 | Scaled Value: 70 | PvP Coefficient: 1.00000 | Misc Value: 9 | Target: Self (1)
-                   Affected Spells: Entangling Roots (339), Healing Touch (5185), Regrowth (8936), Entangling Roots (19975), Rebirth (20484), Cyclone (33786), Tranquility (44203), Nourish (50464)
+                   Affected Spells: Entangling Roots (339), Tranquility (740), Healing Touch (5185), Regrowth (8936), Entangling Roots (19975), Rebirth (20484), Cyclone (33786), Tranquility (44203), Nourish (50464)
                    Family Flags: 5, 6, 7, 9, 28, 37, 57
 Description      : Reduces the pushback suffered from damaging attacks while casting Healing Touch, Regrowth, Tranquility, Rebirth, Cyclone, Entangling Roots, and Nourish.
 
@@ -9406,11 +9406,11 @@ Attributes       : ....x.x. x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=89173)    : Apply Aura (6) | Add Percent Modifier (108): Spell Direct Amount (0)
                    Base Value: 25 | Scaled Value: 25 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Self (1)
-                   Affected Spells: Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Tranquility (44203), Wild Growth (48438), Nourish (50464)
+                   Affected Spells: Tranquility (740), Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Tranquility (44203), Wild Growth (48438), Nourish (50464)
                    Family Flags: 5, 6, 7, 33, 57, 58
 #2 (id=93260)    : Apply Aura (6) | Add Percent Modifier (108): Spell Periodic Amount (22)
                    Base Value: 25 | Scaled Value: 25 | PvP Coefficient: 1.00000 | Misc Value: 22 | Target: Self (1)
-                   Affected Spells: Rejuvenation (774), Regrowth (8936), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801)
+                   Affected Spells: Tranquility (740), Rejuvenation (774), Regrowth (8936), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801)
                    Family Flags: 4, 6, 7, 36, 58
 Description      : Healing increased by $s1%.
 
@@ -9663,7 +9663,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=96356)    : Apply Aura (6) | Proc Trigger Spell (42): Clearcasting
                    Base Value: 5 | Scaled Value: 5 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Trigger Spell: 16870 | Target: Self (1)
-                   Affected Spells: Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Lifebloom (33763), Tranquility (44203), Nourish (50464)
+                   Affected Spells: Tranquility (740), Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Lifebloom (33763), Tranquility (44203), Nourish (50464)
                    Family Flags: 5, 6, 7, 33, 36, 57
 #2 (id=104753)   : Apply Aura (6) | Add Flat Modifier (107): Spell Cooldown (11)
                    Base Value: -150000 | Scaled Value: -150000 | PvP Coefficient: 1.00000 | Misc Value: 11 | Target: Self (1)
@@ -9694,7 +9694,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=96357)    : Apply Aura (6) | Proc Trigger Spell (42): Clearcasting
                    Base Value: 5 | Scaled Value: 5 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Trigger Spell: 16870 | Target: Self (1)
-                   Affected Spells: Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Lifebloom (33763), Tranquility (44203), Nourish (50464)
+                   Affected Spells: Tranquility (740), Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Lifebloom (33763), Tranquility (44203), Nourish (50464)
                    Family Flags: 5, 6, 7, 33, 36, 57
 #2 (id=104754)   : Apply Aura (6) | Add Flat Modifier (107): Spell Cooldown (11)
                    Base Value: -300000 | Scaled Value: -300000 | PvP Coefficient: 1.00000 | Misc Value: 11 | Target: Self (1)
@@ -9744,7 +9744,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=97904)    : Apply Aura (6) | Proc Trigger Spell (42): Shooting Stars
                    Base Value: 2 | Scaled Value: 2 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 22 | Trigger Spell: 93400 | Target: Self (1)
-                   Affected Spells: Entangling Roots (339), Rejuvenation (774), Insect Swarm (5570), Moonfire (8921), Regrowth (8936), Entangling Roots (19975), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801), Sunfire (93402)
+                   Affected Spells: Entangling Roots (339), Tranquility (740), Rejuvenation (774), Insect Swarm (5570), Moonfire (8921), Regrowth (8936), Entangling Roots (19975), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801), Sunfire (93402)
                    Family Flags: 1, 4, 6, 7, 9, 21, 36, 58
 Description      : You have a $h% chance when you deal damage with your Moonfire or Insect Swarm to instantly reset the cooldown of your Starsurge and reduce its cast time by $93400s1%. Lasts $93400d.
 
@@ -9768,7 +9768,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=97905)    : Apply Aura (6) | Proc Trigger Spell (42): Shooting Stars
                    Base Value: 4 | Scaled Value: 4 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 22 | Trigger Spell: 93400 | Target: Self (1)
-                   Affected Spells: Entangling Roots (339), Rejuvenation (774), Insect Swarm (5570), Moonfire (8921), Regrowth (8936), Entangling Roots (19975), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801), Sunfire (93402)
+                   Affected Spells: Entangling Roots (339), Tranquility (740), Rejuvenation (774), Insect Swarm (5570), Moonfire (8921), Regrowth (8936), Entangling Roots (19975), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801), Sunfire (93402)
                    Family Flags: 1, 4, 6, 7, 9, 21, 36, 58
 Description      : You have a $h% chance when you deal damage with your Moonfire or Insect Swarm to instantly reset the cooldown of your Starsurge and reduce its cast time by $93400s1%. Lasts $93400d.
 
@@ -9811,7 +9811,7 @@ Attributes       : ......xx x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=97907)    : Apply Aura (6) | Dummy (4)
                    Base Value: 2 | Scaled Value: 2 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 22 | Target: Self (1)
-                   Affected Spells: Entangling Roots (339), Rejuvenation (774), Insect Swarm (5570), Moonfire (8921), Regrowth (8936), Entangling Roots (19975), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801), Sunfire (93402)
+                   Affected Spells: Entangling Roots (339), Tranquility (740), Rejuvenation (774), Insect Swarm (5570), Moonfire (8921), Regrowth (8936), Entangling Roots (19975), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801), Sunfire (93402)
                    Family Flags: 1, 4, 6, 7, 9, 21, 36, 58
 Description      : While in Solar Eclipse, your Moonfire spell will morph into Sunfire.
 
@@ -10167,7 +10167,7 @@ Attributes       : ....x.x. x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=102486)   : Apply Aura (6) | Dummy (4)
                    Base Value: 1 | Scaled Value: 1 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Self (1)
-                   Affected Spells: Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Tranquility (44203), Nourish (50464)
+                   Affected Spells: Tranquility (740), Healing Touch (5185), Regrowth (8936), Swiftmend (18562), Tranquility (44203), Nourish (50464)
                    Family Flags: 5, 6, 7, 33, 57
 Description      : Allows the druid to clear all roots when Shapeshifting in addition to snares.
 
@@ -10319,11 +10319,11 @@ Attributes       : ........ ........ ........ ........   ........ ........ .....
 Effects          :
 #1 (id=109137)   : Apply Aura (6) | Add Percent Modifier (108): Spell Periodic Amount (22)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Misc Value: 22 | Target: Self (1)
-                   Affected Spells: Rejuvenation (774), Regrowth (8936), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801), Efflorescence (81269)
+                   Affected Spells: Tranquility (740), Rejuvenation (774), Regrowth (8936), Lifebloom (33763), Tranquility (44203), Wild Growth (48438), Rejuvenation (64801), Efflorescence (81269)
                    Family Flags: 4, 6, 7, 36, 58, 65
 #2 (id=109138)   : Apply Aura (6) | Add Percent Modifier (108): Spell Direct Amount (0)
                    Base Value: 0 | Scaled Value: 0 | PvP Coefficient: 1.00000 | Target: Self (1)
-                   Affected Spells: Tranquility (44203), Efflorescence (81269)
+                   Affected Spells: Tranquility (740), Tranquility (44203), Efflorescence (81269)
                    Family Flags: 7, 65
 Description      : Casting your direct healing spells grants you a $77495s1% bonus to periodic healing for $100977d.
 Tooltip          : Periodic healing increased by $w1%.

@@ -1,4 +1,4 @@
-// Item Reforge Data, wow build 4.4.0.54377
+// Item Reforge Data, wow build 4.4.0.54500
 static const std::array<item_reforge_data_t, 56> __item_reforge_data { {
   { 113, 6, 0.400000, 13 },
   { 114, 6, 0.400000, 14 },

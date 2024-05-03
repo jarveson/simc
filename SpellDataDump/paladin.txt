@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54377 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54500 cata-BETA
 Name             : Block (desc=Passive) (id=107) [Passive] 
 Class            : Warrior, Paladin, Shaman
 School           : Physical
@@ -920,7 +920,7 @@ Spell Type       : Magic
 Spell Level      : 22
 Range            : 100 yards
 Duration         : 5 seconds
-Affecting spells : Seals of the Pure (20224 effect#1), Seals of the Pure (20225 effect#1), Judgements of the Just (53695 effect#2), Judgements of the Just (53696 effect#2), Speed of Light (85497 effect#1), Seal Cost Reduced (352580 effect#1)
+Affecting spells : Seals of the Pure (20224 effect#1), Seals of the Pure (20225 effect#1), Judgements of the Just (53695 effects: #2, #3), Judgements of the Just (53696 effects: #2, #3), Speed of Light (85497 effect#1), Seal Cost Reduced (352580 effect#1)
 Triggered by     : Seal of Justice (20164)
 Family Flags     : 9, 80
 Attributes       : ........ ........ ..x..... ..x.....   ...x...x ........ ........ ........ 
@@ -1640,7 +1640,7 @@ Attributes       : ....x.xx x....... ........ ........   ........ ........ .....
                  : ........ ........ ........ ........   
                  : Is Ability (4), Passive (6), Do Not Display (Spellbook, Aura Icon, Combat Log) (7), Do Not Log (8)
 Effects          :
-#1 (id=15880)    : Apply Aura (6) | Hasted Cooldown Duration (416)
+#1 (id=15880)    : Apply Aura (6) | Unknown(622)
                    Base Value: 100 | Scaled Value: 100 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 11 | Target: Self (1)
                    Affected Spells: Crusader Strike (35395), Divine Storm (53385)
                    Family Flags: 47, 49
@@ -2357,17 +2357,17 @@ Attributes       : ........ ........ x.x..... ........   ........ ........ .....
                  : ........ ........ ..x..... ........   ........ ........ ........ ........ 
                  : ........ x....... ........ ........   ........ ........ .......x x....... 
                  : x....... .....x.. ........ ........   ........ ........ ........ ........ 
-                 : ........ ........ ........ ........   ........ ........ ........ ........ 
+                 : ........ ........ ........ .......x   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
                  : ........ ........ ........ ........   
-                 : Not Shapeshifted (16), Do Not Sheath (18), Bouncy Chain Missiles (146), Do Not Chain To Crowd-Controlled Targets (200), No Attack Dodge (247), No Attack Parry (248), No Attack Block (256), Not In Spellbook Until Learned (269)
+                 : Not Shapeshifted (16), Do Not Sheath (18), Bouncy Chain Missiles (146), Do Not Chain To Crowd-Controlled Targets (200), No Attack Dodge (247), No Attack Parry (248), No Attack Block (256), Not In Spellbook Until Learned (269), Enforce Facing on Primary Target Only (351)
 Effects          :
 #1 (id=850439)   : School Damage (2): holy | Scaling Class: 2
                    Base Value: 439 | Scaled Value: 2801.869 - 3424.507 (coefficient=3.024, delta coefficient=0.2) | SP Coefficient: 0.21000 | AP Coefficient: 0.41900 | PvP Coefficient: 1.00000 | Chain Multiplier: 1 | Chain Targets: 3 | Target: Enemy (6)
 #2 (id=21608)    : Interrupt Cast (68) | Scaling Class: 2
                    Base Value: 0 | Scaled Value: 0 | AP Coefficient: 0.41900 | PvP Coefficient: 1.00000 | Chain Multiplier: 1 | Mechanic: Interrupt | Chain Targets: 3 | Target: Enemy (6)
 #3 (id=89392)    : Apply Aura (6) | Silence (27) | Scaling Class: 2
-                   Base Value: 0 | Scaled Value: 0 | AP Coefficient: 0.41900 | PvP Coefficient: 1.00000 | Chain Multiplier: 1 | Mechanic: Silence | Chain Targets: 3 | Target: Enemy (6)
+                   Base Value: 0 | Scaled Value: 0 | AP Coefficient: 0.41900 | PvP Coefficient: 1.00000 | Chain Multiplier: 1 | Misc Value: 127 | Mechanic: Silence | Chain Targets: 3 | Target: Enemy (6)
 Description      : Hurls a holy shield at the enemy, dealing $s1 Holy damage, $?s56414[dazing, ][]silencing and interrupting spellcasting for $d$?s54930[][, and then jumping to additional nearby enemies].  Affects $x1 total targets.
 Tooltip          : Silenced.
 
@@ -3369,7 +3369,11 @@ Effects          :
                    Base Value: -10 | Scaled Value: -10 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
                    Affected Spells: Judgements of the Just (68055)
                    Family Flags: 70
-#2 (id=977841)   : Apply Aura (6) | Add Flat Modifier (107): Spell Duration (1)
+#2 (id=977841)   : Apply Aura (6) | Dummy (4)
+                   Base Value: 500 | Scaled Value: 500 | PvP Coefficient: 1.00000 | Target: Self (1)
+                   Affected Spells: Seal of Justice (20170)
+                   Family Flags: 9
+#3 (id=1157641)  : Apply Aura (6) | Add Flat Modifier (107): Spell Duration (1)
                    Base Value: 500 | Scaled Value: 500 | PvP Coefficient: 1.00000 | Misc Value: 1 | Target: Self (1)
                    Affected Spells: Seal of Justice (20170)
                    Family Flags: 9
@@ -3396,7 +3400,11 @@ Effects          :
                    Base Value: -20 | Scaled Value: -20 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Misc Value: 3 | Target: Self (1)
                    Affected Spells: Judgements of the Just (68055)
                    Family Flags: 70
-#2 (id=979207)   : Apply Aura (6) | Add Flat Modifier (107): Spell Duration (1)
+#2 (id=979207)   : Apply Aura (6) | Dummy (4)
+                   Base Value: 1000 | Scaled Value: 1000 | PvP Coefficient: 1.00000 | Target: Self (1)
+                   Affected Spells: Seal of Justice (20170)
+                   Family Flags: 9
+#3 (id=1157640)  : Apply Aura (6) | Add Flat Modifier (107): Spell Duration (1)
                    Base Value: 1000 | Scaled Value: 1000 | PvP Coefficient: 1.00000 | Misc Value: 1 | Target: Self (1)
                    Affected Spells: Seal of Justice (20170)
                    Family Flags: 9
