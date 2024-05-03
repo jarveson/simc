@@ -1205,7 +1205,7 @@ struct tank_dummy_enemy_t : public enemy_t
     // Don't change the value if it's specified by the user - handled in enemy_t::init_base_stats()
     if ( custom_armor_coeff <= 0 )
     {
-      base.armor_coeff = armor_coefficient( sim->max_player_level, tank_dummy_enum );
+      base.armor_coeff = armor_coefficient( true_level, tank_dummy_enum );
       sim->print_debug( "Enemy {} base armor coefficient set to {}.", *this, base.armor_coeff );
     }
   }

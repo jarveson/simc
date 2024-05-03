@@ -8219,7 +8219,7 @@ void player_t::target_mitigation( school_e school, result_amount_type dmg_type, 
     if ( s->action && !s->action->ignores_armor )
     {
       double armor  = s -> target_armor;
-      double resist = armor / ( armor + s -> action -> player -> base.armor_coeff );
+      double resist = armor / ( armor + s -> action -> target -> base.armor_coeff );
       resist        = clamp( resist, 0.0, armor_cap );
       s -> result_amount *= 1.0 - resist;
     }
@@ -8229,8 +8229,8 @@ void player_t::target_mitigation( school_e school, result_amount_type dmg_type, 
       if ( s->action->ignores_armor )
         sim->print_debug( "Damage to {} after armor mitigation is {} (ignores armor)", s->target->name(), s->result_amount );
       else
-        sim->print_debug( "Damage to {} after armor mitigation is {} ({} armor, {} armor coeff)",
-                          s->target->name(), s->result_amount, s->target_armor, s->action->player->current.armor_coeff );
+        sim->print_debug( "Damage to {} after armor mitigation is {} ({} armor, {} armor coeff)", s->target->name(),
+                          s->result_amount, s->target_armor, s->action->target->current.armor_coeff );
     }
 
     double pre_block_amount = s->result_amount;

@@ -1308,7 +1308,8 @@ double action_t::calculate_weapon_damage( double attack_power ) const
     return 0;
 
   // The weapon damage roll (and its bonus damage) is affected by attak power modifiers just like regular attack power
-  double capm             = player -> composite_attack_power_multiplier();
+  //double capm             = player -> composite_attack_power_multiplier();
+  double capm = 1.0;
   double dmg              = capm * ( sim->averaged_range( weapon->min_dmg, weapon->max_dmg ) + weapon->bonus_dmg );
   timespan_t weapon_speed = normalize_weapon_speed ? weapon->get_normalized_speed() : weapon->swing_time;
   double power_damage     = weapon_speed.total_seconds() * weapon_power_mod * attack_power;

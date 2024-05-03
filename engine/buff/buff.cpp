@@ -3094,9 +3094,9 @@ stat_buff_t::stat_buff_t( actor_pair_t q, util::string_view name, const spell_da
     double amount                    = 0;
     const spelleffect_data_t& effect = data().effectN( i );
 
-    if ( item )
-      amount = effect.average( item );
-    else
+    //if ( item )
+    //  amount = effect.average( item );
+    //else
       amount = effect.average( player, std::min( MAX_LEVEL, player->level() ) );
 
     if ( effect.subtype() == A_MOD_STAT )
