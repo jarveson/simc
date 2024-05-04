@@ -62,4 +62,4 @@ cooldown->add_action( "potion,if=buff.bloodlust.react|target.time_to_die<=40" );
 cooldown->add_action( "use_items" );
 
 
-variables->add_action( "variable,name=bitewhp,op=setif,value=60,value_else=25,condition=set_bonus.tier11_4pc" );
+variables->add_action( "variable,name=bitewhp,op=setif,value=60,value_else=25,condition=set_bonus.tier13_2pc" );

@@ -5675,7 +5675,7 @@ double druid_t::composite_attack_power_multiplier() const
     ap *= 1.0 + spec.aggression->effectN(1).percent();
 
   if ( buff.strength_of_the_panther->check() )
-    ap *= 1.0 + (buff.strength_of_the_panther->current_value / 100);
+    ap *= 1.0 + ( buff.strength_of_the_panther->check_stack_value() );
 
   return ap;
 }
