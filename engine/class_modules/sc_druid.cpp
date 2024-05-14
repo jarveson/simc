@@ -6057,6 +6057,7 @@ void druid_t::shapeshift( form_e f )
     sim->auras.crit_chance->expire();
   buff.leader_of_the_pack->expire();
   buff.tigers_fury->expire();
+  buff.strength_of_the_panther->expire();
 
   switch ( f )
   {
