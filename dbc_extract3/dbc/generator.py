@@ -3475,10 +3475,10 @@ class SpellDataGenerator(DataGenerator):
             fields += [ '{ %s }' % ', '.join( effect.field('class_mask_1', 'class_mask_2', 'class_mask_3', 'class_mask_4' ) ) ]
             hotfix.add(effect, (('class_mask_1', 'class_mask_2', 'class_mask_3', 'class_mask_4'), 17))
 
-            fields += effect.field('trigger_spell', 'dmg_multiplier', 'points_per_combo_points', 'real_ppl')
+            fields += effect.field('trigger_spell', 'dmg_multiplier', 'effect_die_sides', 'points_per_combo_points', 'real_ppl')
             hotfix.add(effect, ('trigger_spell', 18), ('dmg_multiplier', 19),
                 ('points_per_combo_points', 20), ('real_ppl', 21))
-
+           
             mechanic = effect.ref('id_mechanic')
             fields += effect.field('id_mechanic')
             hotfix.add(mechanic, ('mechanic', 22))

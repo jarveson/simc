@@ -187,6 +187,9 @@ double spelleffect_data_t::average( const player_t* p, unsigned level ) const
     else
       return _base_value + ( level - _spell->level() ) * _real_ppl;
   }
+  else if (_die_sides != 0) {
+    return _base_value + _die_sides / 2;
+  }
   else
     return _base_value;
 }
@@ -220,6 +223,8 @@ double spelleffect_data_t::scaled_delta( double budget ) const
 {
   if ( _m_delta != 0 && budget > 0 )
     return _m_coeff * _m_delta * budget;
+  else if ( _die_sides != 0 )
+    return _die_sides;
   else
     return 0;
 }

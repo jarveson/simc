@@ -67,6 +67,7 @@ namespace item
   /* Misc */
   void heartpierce( special_effect_t& );
   void darkmoon_card_greatness( special_effect_t& );
+  void darkmoon_hurricane(special_effect_t&);
   void vial_of_shadows( special_effect_t& );
   void deathbringers_will( special_effect_t& );
   void deaths_verdict(special_effect_t& );
@@ -1396,14 +1397,14 @@ void item::vial_of_shadows( special_effect_t& effect )
       background = may_crit = true;
       callbacks = false;
 
-      base_dd_min = base_dd_max = effect.driver() -> effectN( 1 ).average( effect.item );
-      switch ( effect.driver() -> id() )
+      /*base_dd_min = base_dd_max = effect.driver()->effectN( 1 ).average( effect.item );
+      switch ( effect.driver()->id() )
       {
         case 109725: attack_power_mod.direct = 0.339; break;
         case 107995: attack_power_mod.direct = 0.300; break;
         case 109722: attack_power_mod.direct = 0.266; break;
         default: assert( false ); break;
-      }
+      }*/
     }
   };
 
@@ -1420,6 +1421,42 @@ void item::vial_of_shadows( special_effect_t& effect )
   }
 
   effect.execute_action = action;
+
+  new dbc_proc_callback_t( effect.player, effect );
+}
+
+
+void item::darkmoon_hurricane( special_effect_t& effect )
+{
+  // TODO: Verify this scales by item level correctly.
+  struct lightning_strike_t : public attack_t
+  {
+    lightning_strike_t( const special_effect_t& effect )
+      : attack_t( "lightning_strike_dmc", effect.player, effect.player->find_spell( 89087 ) )
+    {
+      background = true;
+      may_crit = false;
+      may_miss              = false;
+      may_dodge             = false;
+      callbacks             = false;
+    }
+  };
+
+  action_t* action = effect.player->find_action( "lightning_strike_dmc" );
+  if ( !action )
+  {
+    action = effect.player->create_proc_action( "lightning_strike_dmc", effect );
+  }
+
+  if ( !action )
+  {
+    action = new lightning_strike_t( effect );
+  }
+
+  effect.ppm_           = 1.0;
+  effect.execute_action = action;
+  effect.proc_flags_    = PF_MELEE | PF_MELEE_ABILITY | PF_RANGED | PF_RANGED_ABILITY;
+  effect.proc_flags2_   = PF2_ALL_HIT;
 
   new dbc_proc_callback_t( effect.player, effect );
 }
@@ -4952,6 +4989,7 @@ void unique_gear::register_special_effects()
   register_special_effect( 71892,  item::heartpierce                    );
   register_special_effect( 71880,  item::heartpierce                    );
   register_special_effect( 72413,  "10%"                                ); /* ICC Melee Ring */
+  register_special_effect( 89086,  item::darkmoon_hurricane             ); /* DMC Hurricane */
   register_special_effect( 96910, "60cd"                                ); /* The Hungerer cd (Item has 120sec but spell has 60) */
   register_special_effect( 96976,  item::matrix_restabilizer            ); /* Matrix Restabilizer */
   register_special_effect( 97126, "60cd"                                ); /* The Hungerer cd (Item has 120sec but spell has 60) */

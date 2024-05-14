@@ -168,6 +168,7 @@ struct spelleffect_data_t
   unsigned         _class_flags[NUM_CLASS_FAMILY_FLAGS]; // Class family flags
   unsigned         _trigger_spell_id;// Effect triggers this spell id
   double           _m_chain;         // Effect chain multiplier
+  double           _die_sides;       // Effect die sides
   double           _pp_combo_points; // Effect points per combo points
   double           _real_ppl;        // Effect real points per level
   unsigned         _mechanic;        // Effect Mechanic
