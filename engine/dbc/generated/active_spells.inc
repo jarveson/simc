@@ -1,5 +1,5 @@
-// Active class spells, wow build 4.4.0.54500
-static const std::array<active_class_spell_t, 955> __active_spells_data { {
+// Active class spells, wow build 4.4.0.54558
+static const std::array<active_class_spell_t, 957> __active_spells_data { {
   {  1,    0,     71,      0, "Defensive Stance" },
   {  1,    0,     78,      0, "Heroic Strike" },
   {  1,    0,    100,      0, "Charge" },
@@ -185,6 +185,7 @@ static const std::array<active_class_spell_t, 955> __active_spells_data { {
   {  2,    0,  85673,      0, "Word of Glory" },
   {  2,    0,  85696,      0, "Zealotry" },
   {  2,    0,  86150,      0, "Guardian of Ancient Kings" },
+  {  2,    0,  88625,      0, "Holy Word: Chastise" },
   {  2,    0,  88684,      0, "Holy Word: Serenity" },
   {  2,    0,  88685,      0, "Holy Word: Sanctuary" },
   {  2,    0,  96231,      0, "Rebuke" },
@@ -457,6 +458,7 @@ static const std::array<active_class_spell_t, 955> __active_spells_data { {
   {  5,    0,  19750,      0, "Flash of Light" },
   {  5,    0,  20165,      0, "Seal of Insight" },
   {  5,    0,  20187,      0, "Judgement of Righteousness" },
+  {  5,    0,  20473,      0, "Holy Shock" },
   {  5,    0,  21562,      0, "Power Word: Fortitude" },
   {  5,    0,  23214,      0, "Summon Charger" },
   {  5,    0,  23455,      0, "Holy Nova" },
@@ -957,7 +959,7 @@ static const std::array<active_class_spell_t, 955> __active_spells_data { {
   { 11,    0, 450759,      0, "Revitalize" },
 } };
 
-// Pet active spells, wow build 4.4.0.54500
+// Pet active spells, wow build 4.4.0.54558
 static const std::array<active_pet_spell_t, 110> __active_pet_spells_data { {
   {  3,   1742, "Cower" },
   {  3,   2649, "Growl" },

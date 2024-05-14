@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54500 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54558 cata-BETA
 Name             : Eye of Kilrogg (desc=Summon) (id=126) [Spell Family (5)] 
 Class            : Warlock
 School           : Shadow

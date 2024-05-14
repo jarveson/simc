@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54500 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54558 cata-BETA
 Name             : Dual Wield (desc=Passive) (id=674) [Passive] 
 Class            : Warrior, Hunter, Rogue, Death Knight
 School           : Physical
@@ -2652,7 +2652,7 @@ Range            : 5 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Category         : 1196
-Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Improved Icy Talons (55610 effect#3), Improved Death Strike (62905 effects: #1, #2, #4), Improved Death Strike (62908 effects: #1, #2, #4), Improved Death Strike (81138 effects: #1, #2, #3), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
+Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Improved Icy Talons (55610 effect#3), Improved Death Strike (62905 effects: #1, #2, #3), Improved Death Strike (62908 effects: #1, #2, #3), Improved Death Strike (81138 effects: #1, #2, #3), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 4
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ........ 
                  : ........ ........ ........ ........   ........ ..x..... ........ ........ 
@@ -6577,12 +6577,12 @@ Effects          :
                    Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 7 | Target: Self (1)
                    Affected Spells: Death Strike (49998), Death Strike Off-Hand (66188)
                    Family Flags: 4
-#3 (id=1004091)  : Dummy (3)
-                   Base Value: 25 | Scaled Value: 25 | PvP Coefficient: 1.00000 | Target: Self (1)
-#4 (id=56990)    : Apply Aura (6) | Dummy (4)
+#3 (id=1004091)  : Apply Aura (6) | Dummy (4)
                    Base Value: 15 | Scaled Value: 15 | PvP Coefficient: 1.00000 | Target: Self (1)
                    Affected Spells: Death Strike (49998), Death Strike Off-Hand (66188)
                    Family Flags: 4
+#4 (id=56990)    : Dummy (3)
+                   Base Value: 25 | Scaled Value: 25 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Increases the damage done by your Death Strike by $s1%, its critical strike chance by $s2%, and its amount healed by $s3%.
 
 Name             : Improved Death Strike (desc=Rank 2) (id=62908) [Spell Family (15), Passive, Hidden] 
@@ -6608,12 +6608,12 @@ Effects          :
                    Base Value: 20 | Scaled Value: 20 | PvP Coefficient: 1.00000 | Misc Value: 7 | Target: Self (1)
                    Affected Spells: Death Strike (49998), Death Strike Off-Hand (66188)
                    Family Flags: 4
-#3 (id=1004092)  : Dummy (3)
-                   Base Value: 50 | Scaled Value: 50 | PvP Coefficient: 1.00000 | Target: Self (1)
-#4 (id=56997)    : Apply Aura (6) | Dummy (4)
+#3 (id=1004092)  : Apply Aura (6) | Dummy (4)
                    Base Value: 30 | Scaled Value: 30 | PvP Coefficient: 1.00000 | Target: Self (1)
                    Affected Spells: Death Strike (49998), Death Strike Off-Hand (66188)
                    Family Flags: 4
+#4 (id=56997)    : Dummy (3)
+                   Base Value: 50 | Scaled Value: 50 | PvP Coefficient: 1.00000 | Target: Self (1)
 Description      : Increases the damage done by your Death Strike by $s1%, its critical strike chance by $s2%, and its amount healed by $s3%.
 
 Name             : Glyph of Dancing Rune Weapon (id=63330) [Spell Family (15), Passive, Hidden] 
@@ -6877,7 +6877,7 @@ Range            : 100 yards
 GCD              : 1.5 seconds
 Requires weapon  : One-handed Axe, Two-handed Axe, One-handed Mace, Two-handed Mace, Polearm, One-handed Sword, Two-handed Sword, Staff, Fist Weapon, Dagger, Spear
 Category         : 1196
-Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Improved Icy Talons (55610 effect#3), Improved Death Strike (62905 effects: #1, #2, #4), Improved Death Strike (62908 effects: #1, #2, #4), Improved Death Strike (81138 effects: #1, #2, #3), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
+Affecting spells : Icy Touch (45477 effects: #1, #2), Unholy Presence (48265 effects: #2, #3), Blade Barrier (49182 effects: #1, #2), Howling Blast (49184 effects: #1, #2), Blade Barrier (49500 effects: #1, #2), Blade Barrier (49501 effects: #1, #2), Icy Touch (52372 effects: #1, #2), Improved Icy Talons (55610 effect#3), Improved Death Strike (62905 effects: #1, #2, #3), Improved Death Strike (62908 effects: #1, #2, #3), Improved Death Strike (81138 effects: #1, #2, #3), Might of the Frozen Wastes (81330 effect#3), Might of the Frozen Wastes (81332 effect#3), Might of the Frozen Wastes (81333 effect#3)
 Family Flags     : 4
 Attributes       : ....x... ........ ..x..x.. ........   ........ ........ ........ ...x.... 
                  : ........ ........ ........ ........   ........ ........ ..x..... x.....x. 

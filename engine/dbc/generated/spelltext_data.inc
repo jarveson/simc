@@ -1,4 +1,4 @@
-// Spell text, wow build 4.4.0.54500
+// Spell text, wow build 4.4.0.54558
 static const std::array<spelltext_data_t, 7599> __spelltext_data { {
   {     10, "Ice shards pelt the target area doing ${$42208m1*8*$<mult>} Frost damage over $10d.", "$42208s1 Frost damage every $42208t1 $lsecond:seconds;.", 0 },
   {     17, "Draws on the soul of the friendly target to shield them, absorbing $<shield> damage$?s55672[ and healing them for $55672s1% of the absorption amount][].  Lasts $d.  While the shield holds, spellcasting will not be interrupted by damage.  Once shielded, the target cannot be shielded again for $6788d.", "Absorbs $w1 damage.", 0 },
@@ -7601,11 +7601,11 @@ static const std::array<spelltext_data_t, 7599> __spelltext_data { {
   { 450762, "Brings all dead party and raid members back to life with $s1% health and $s1% mana. Cannot be cast in combat or while in a battleground or arena.", 0, 0 },
 } };
 
-// spelltext hotfix entries, wow build 4.4.0.54500
+// spelltext hotfix entries, wow build 4.4.0.54558
 static constexpr std::array<hotfix::client_hotfix_entry_t, 0> __spelltext_hotfix_data { {
 } };
 
-// Spell description variables, wow build 4.4.0.54500
+// Spell description variables, wow build 4.4.0.54558
 static const std::array<spelldesc_vars_data_t, 83> __spelldesc_vars_data { {
   { 10, "$arctic1=$?s31674[${1.01}][${1}]\r\n$arctic2=$?s31675[${1.02}][${$<arctic1>}]\r\n$arctic3=$?s31676[${1.03}][${$<arctic2>}]\r\n$arctic4=$?s31677[${1.04}][${$<arctic3>}]\r\n$arctic5=$?s31678[${1.05}][${$<arctic4>}]\r\n$piercing1=$?s11151[${1.02}][${1}]\r\n$piercing2=$?s12952[${1.04}][${$<piercing1>}]\r\n$piercing3=$?s12953[${1.06}][${$<piercing2>}]\r\n$mult=${$<arctic5>*$<piercing3>}" },
   { 17, "$twin1=$?s47586[${1.02}][${1.00}]\r\n$twin2=$?s47587[${1.04}][${$<twin1>}]\r\n$twin3=$?s47588[${1.06}][${$<twin2>}]\r\n$ipws1=$?s14748[${1.10}][${1.00}]\r\n$ipws2=$?s14768[${1.20}][${$<ipws1>}]\r\n$mastery=$?s47540[${((100+$77484m1)/100)}][${1.00}]\r\n$spirit=$?s87336[${((100+$87336m1)/100)}][${1.00}]\r\n$shield=${((($SP*0.87)+$m1)*$<mastery>*$<spirit>*$<twin3>*$<ipws2>)}" },
@@ -7692,7 +7692,7 @@ static const std::array<spelldesc_vars_data_t, 83> __spelldesc_vars_data { {
   { 95725, "$damage=${$95725m1+(($RAP*0.40)*0.288)}" },
 } };
 
-// spelldesc_vars hotfix entries, wow build 4.4.0.54500
+// spelldesc_vars hotfix entries, wow build 4.4.0.54558
 static constexpr std::array<hotfix::client_hotfix_entry_t, 0> __spelldesc_vars_hotfix_data { {
 } };
 

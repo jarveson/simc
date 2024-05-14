@@ -1,4 +1,4 @@
-// Racial abilities, wow build 4.4.0.54500
+// Racial abilities, wow build 4.4.0.54558
 static const std::array<racial_spell_entry_t, 88> __racial_spell_data { {
   { 0x0000000000000001, 0,  20599, "Diplomacy" },
   { 0x0000000000000001, 0,  20864, "Mace Specialization" },

@@ -1,4 +1,4 @@
-// Glyph Properties, wow build 4.4.0.54500
+// Glyph Properties, wow build 4.4.0.54558
 static const std::array<glyph_property_data_t, 345> __glyph_property_data { {
   { "Glyph of Frenzied Regeneration", 161, 54810, 0 },
   { "Glyph of Maul", 162, 54811, 0 },

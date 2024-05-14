@@ -1,5 +1,5 @@
-// Rank class spells, wow build 4.4.0.54500
-static const std::array<rank_class_spell_t, 1098> __rank_spells_data { {
+// Rank class spells, wow build 4.4.0.54558
+static const std::array<rank_class_spell_t, 1099> __rank_spells_data { {
   {  6,    0,  53137,      0, "Abomination's Might", "Rank 1" },
   {  6,    0,  53138,      0, "Abomination's Might", "Rank 2" },
   {  2,    0,  85446,      0, "Acts of Sacrifice", "Rank 1" },
@@ -644,6 +644,7 @@ static const std::array<rank_class_spell_t, 1098> __rank_spells_data { {
   { 11,    0,  92364,      0, "Malfurion's Gift", "Rank 1" },
   {  9,    0,  30326,      0, "Mana Feed", "Rank 1" },
   {  9,    0,  85175,      0, "Mana Feed", "Rank 2" },
+  { 11,    0,  33917,      0, "Mangle", "Rank 1" },
   {  3,    0,  53241,      0, "Marked for Death", "Rank 1" },
   {  3,    0,  53243,      0, "Marked for Death", "Rank 2" },
   {  3,    0,  34485,      0, "Master Marksman", "Rank 1" },

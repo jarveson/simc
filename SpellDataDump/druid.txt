@@ -1,4 +1,4 @@
-SimulationCraft 440-0 for World of Warcraft 4.4.0.54500 cata-BETA
+SimulationCraft 440-0 for World of Warcraft 4.4.0.54558 cata-BETA
 Name             : Demoralizing Roar (desc=Bear Form) (id=99) [Spell Family (7)] 
 Class            : Druid
 School           : Physical
@@ -1617,16 +1617,16 @@ Attributes       : ....x.x. x....... ........ ........   ........ ........ .....
 Effects          :
 #1 (id=695209)   : Apply Aura (6) | Add Percent Modifier (108): Spell Direct Amount (0)
                    Base Value: 10 | Scaled Value: 10 | SP Coefficient: 1.00000 | PvP Coefficient: 1.00000 | Target: Self (1)
-                   Affected Spells: Entangling Roots (339), Faerie Fire (770), Starfire (2912), Wrath (5176), Insect Swarm (5570), Moonfire (8921), Faerie Fire (Feral) (16857), Hurricane (16914), Entangling Roots (19975), Force of Nature (33831), Starfall (48505), Starfall (50288), Typhoon (50516), Faerie Fire (Feral) (60089), Typhoon (61391), Starsurge (78674), Wild Mushroom (78777), Wild Mushroom (88747), Faerie Fire (91565), Sunfire (93402)
-                   Family Flags: 0, 1, 2, 9, 10, 21, 22, 41, 55, 56, 88, 89
+                   Affected Spells: Entangling Roots (339), Faerie Fire (770), Starfire (2912), Wrath (5176), Insect Swarm (5570), Moonfire (8921), Faerie Fire (Feral) (16857), Hurricane (16914), Entangling Roots (19975), Force of Nature (33831), Hurricane (42231), Starfall (48505), Starfall (50288), Typhoon (50516), Faerie Fire (Feral) (60089), Typhoon (61391), Thrash (77758), Starsurge (78674), Wild Mushroom (78777), Wild Mushroom (88747), Faerie Fire (91565), Sunfire (93402)
+                   Family Flags: 0, 1, 2, 9, 10, 21, 22, 41, 55, 56, 86, 88, 89
 #2 (id=90748)    : Apply Aura (6) | Add Percent Modifier (108): Spell Critical Damage (15)
                    Base Value: 100 | Scaled Value: 100 | PvP Coefficient: 1.00000 | Misc Value: 15
                    Affected Spells: Starfire (2912), Wrath (5176), Insect Swarm (5570), Moonfire (8921), Starfall (48505), Starfall (50288), Starsurge (78674), Sunfire (93402)
                    Family Flags: 0, 1, 2, 21, 55, 89
 #3 (id=97380)    : Apply Aura (6) | Add Percent Modifier (108): Spell Periodic Amount (22)
                    Base Value: 10 | Scaled Value: 10 | PvP Coefficient: 1.00000 | Misc Value: 22 | Target: Self (1)
-                   Affected Spells: Insect Swarm (5570), Moonfire (8921), Hurricane (16914), Sunfire (93402)
-                   Family Flags: 1, 21, 22
+                   Affected Spells: Insect Swarm (5570), Moonfire (8921), Hurricane (16914), Hurricane (42231), Thrash (77758), Sunfire (93402)
+                   Family Flags: 1, 21, 22, 86
 Description      : Arcane and Nature spell damage increased by $s1%.
 
 Increases the critical strike damage bonus of your Wrath, Moonfire, Starfire, Starsurge, Insect Swarm and Starfall spells by $s2%.
@@ -3929,7 +3929,7 @@ School           : Nature
 Spell Type       : Magic
 Spell Level      : 44
 Range            : 100 yards
-Affecting spells : Gale Winds (48488 effect#1), Gale Winds (48514 effect#1), Genesis (57810 effect#2), Genesis (57811 effect#2), Genesis (57812 effect#2)
+Affecting spells : Moonfury (16913 effects: #1, #3), Gale Winds (48488 effect#1), Gale Winds (48514 effect#1), Genesis (57810 effect#2), Genesis (57811 effect#2), Genesis (57812 effect#2)
 Triggered by     : Hurricane (16914)
 Family Flags     : 86
 Attributes       : ........ ........ ........ ........   ...x...x ........ ........ ........ 
@@ -7655,7 +7655,7 @@ Duration         : 6 seconds
 Cooldown         : 6 seconds
 Stance Mask      : 0x00000010
 Mechanic         : Bleed
-Affecting spells : Gale Winds (48488 effect#1), Gale Winds (48514 effect#1), Genesis (57810 effect#2), Genesis (57811 effect#2), Genesis (57812 effect#2)
+Affecting spells : Moonfury (16913 effects: #1, #3), Gale Winds (48488 effect#1), Gale Winds (48514 effect#1), Genesis (57810 effect#2), Genesis (57811 effect#2), Genesis (57812 effect#2)
 Family Flags     : 86
 Attributes       : ....x... ........ ..x..... ........   ........ .x...... ........ ........ 
                  : ........ ........ ........ ........   ........ ........ ........ ........ 
